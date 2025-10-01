@@ -149,6 +149,12 @@ MCPClientTool: Any
 MCPAutoLoaderTool: Any
 ADMETAITool: Any
 AlphaFoldRESTTool: Any
+ODPHPMyHealthfinder: Any
+ODPHPItemList: Any
+ODPHPTopicSearch: Any
+ODPHPOutlinkFetch: Any
+EuHealthTopicSearchTool: Any
+EuHealthDeepDiveTool: Any
 ComposeTool: Any
 if not LAZY_LOADING_ENABLED:
     # Import all tool classes immediately (old behavior) with warning suppression  # noqa: E501
@@ -197,8 +203,8 @@ if not LAZY_LOADING_ENABLED:
         from .tool_finder_embedding import ToolFinderEmbedding
         from .tool_finder_keyword import ToolFinderKeyword
         from .tool_finder_llm import ToolFinderLLM
-        from .embedding_database import EmbeddingDatabase
-        from .embedding_sync import EmbeddingSync
+        from .database_setup.embedding_database import EmbeddingDatabase
+        from .database_setup.embedding_sync import EmbeddingSync
         from .rcsb_pdb_tool import RCSBTool
         from .gwas_tool import (
             GWASAssociationSearch,
@@ -224,6 +230,8 @@ if not LAZY_LOADING_ENABLED:
         ODPHPTopicSearch,
         ODPHPOutlinkFetch,
     )
+    from .euhealth.euhealth_tool import EuHealthTopicSearchTool, EuHealthDeepDiveTool
+
 else:
     # With lazy loading, create lazy import proxies that import modules only when accessed
     MonarchTool = _LazyImportProxy("restful_tool", "MonarchTool")
@@ -305,6 +313,8 @@ else:
     ODPHPMyHealthfinder = _LazyImportProxy("odphp_tool", "ODHPHPMyHealthfinder")
     ODPHPTopicSearch = _LazyImportProxy("odphp_tool", "ODPHPTopicSearch")
     ODPHPOutlinkFetch = _LazyImportProxy("odphp_tool", "ODPHPOutlinkFetch")
+    EuHealthTopicSearchTool = _LazyImportProxy("euhealth_tool", "EuHealthTopicSearchTool")
+    EuHealthDeepDiveTool = _LazyImportProxy("euhealth_tool", "EuHealthDeepDiveTool")
 
 __all__ = [
     "__version__",
@@ -376,4 +386,6 @@ __all__ = [
     "ODPHPItemList",
     "ODPHPTopicSearch",
     "ODPHPOutlinkFetch",
+    "EuHealthTopicSearchTool",
+    "EuHealthDeepDiveTool",
 ]

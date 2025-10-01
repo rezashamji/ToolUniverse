@@ -37,7 +37,9 @@ dependencies = [
     "faiss-cpu>=1.12.0",
     "flask>=2.0.0",
     "chemprop==1.6.1",
-    "aiohttp"
+    "aiohttp",
+    "beautifulsoup4>=4.12.0",
+    "python-dotenv>=1.0.0"
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -70,6 +72,7 @@ embedding = [
     "sentence-transformers>=5.1.0",
     "faiss-cpu>=1.12.0",
     "huggingface_hub>=0.34.0",
+    "faiss-cpu>=1.12.0",
 ]
 graph = [
     "flask>=2.0.0",
@@ -98,6 +101,7 @@ generate-mcp-tools = "tooluniverse.generate_mcp_tools:run_generate"
 # Human Expert Feedback System
 tooluniverse-expert-feedback = "tooluniverse.remote.expert_feedback.human_expert_mcp_tools:main"
 tooluniverse-expert-feedback-web = "tooluniverse.remote.expert_feedback.start_web_interface:main"
+tu-datastore = "tooluniverse.database_setup.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
