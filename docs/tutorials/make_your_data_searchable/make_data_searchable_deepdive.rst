@@ -13,7 +13,7 @@ What you’ll do
 5. Search it — and (optional) use it from a Tool or back it up online
 
 
-0) Terms (30 seconds)
+Helpful Terms
 ---------------------
 
 * **Collection** = a named library of your texts (e.g., ``toy``, ``articles``).
