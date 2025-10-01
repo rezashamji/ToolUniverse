@@ -179,19 +179,45 @@ If you’re wiring this into a ToolUniverse agent:
 (Optional) Back up or share online (Hugging Face)
 -------------------------------------------------
 
-Why: quick cloud backup/share so you can restore elsewhere.
+Note: Uploading requires a Hugging Face *write token* tied to your account. 
+Downloading from public repos does not require a token.
+
+You have two options for saving and sharing your datastore:
+
+**1. Use your *own* Hugging Face repo**
+
+You control your repo and can sync your collections locally.
 
 .. code-block:: bash
 
-   export HF_TOKEN=YOUR_TOKEN
+   export HF_TOKEN=YOUR_WRITE_TOKEN   # get from https://huggingface.co/settings/tokens
    export HF_REPO=your-username/tooluniverse-datastores
 
    # upload (db + index)
-   tu-datastore sync-hf upload --collection toy --repo "$HF_REPO" --private
+   tu-datastore sync-hf upload --collection toy --repo "$HF_REPO"
 
    # download later into data/embeddings as <local>.db/.faiss
    tu-datastore sync-hf download --repo "$HF_REPO" --local toy --overwrite
 
+
+**2. Contribute to the shared AgenticX repo (advanced, community contribution)**
+
+If you’d like your collection included in the official
+``agenticx/tooluniverse-datastores`` repo, request collaborator access
+(e.g. open an issue or contact the maintainers). Once added, you can upload
+using the same command but with the AgenticX repo name:
+
+.. code-block:: bash
+
+   export HF_TOKEN=YOUR_WRITE_TOKEN   # must have write access to AgenticX
+   tu-datastore sync-hf upload \
+     --collection toy \
+     --repo agenticx/tooluniverse-datastores
+
+   # download (works for everyone, no special rights needed)
+   tu-datastore sync-hf download \
+     --repo agenticx/tooluniverse-datastores \
+     --local toy --overwrite
 
 Mini FAQ
 --------

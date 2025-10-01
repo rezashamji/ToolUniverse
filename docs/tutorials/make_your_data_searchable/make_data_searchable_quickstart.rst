@@ -70,6 +70,7 @@ Tiny Troubleshooting
 Learn More (Optional)
 ---------------------
 
+* Deep dive into this quickstart: ``docs/tutorials/make_your_data_searchable/make_data_searchable_deepdive.rst``
 * Internals: ``src/tooluniverse/database_setup/`` (each file has clear docstrings).
 * Hugging Face sync: ``src/tooluniverse/database_setup/hf/sync_hf.py``.
 * Tool configs: ``tooluniverse/data/embedding_tools.json``, ``tooluniverse/data/generic_embedding_tool.json``.
