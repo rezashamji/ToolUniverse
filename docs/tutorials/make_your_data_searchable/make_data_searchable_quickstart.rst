@@ -1,4 +1,4 @@
-Make Your Data Searchable — do it in minutes
+Make Your Data Searchable: do it in minutes
 ============================================
 
 1) Quick Demo

@@ -1,4 +1,4 @@
-ToolUniverse Datastore — the 5-step guide to make your data searchable and incorporated as ToolUniverse tool
+ToolUniverse Datastore: the 5-step guide to make your data searchable and incorporated as ToolUniverse tool
 ==========================================================================================================
 
 Make your own text searchable (by exact words, by meaning, or both) and use it from tools.
@@ -10,7 +10,7 @@ What you’ll do
 2. Tell us which embedding service to use
 3. Save your data (JSON)
 4. Build a “collection” (your searchable library)
-5. Search it — and (optional) use it from a Tool or back it up online
+5. Search it, and (optional) use it from a Tool or back it up online
 
 
 Helpful Terms

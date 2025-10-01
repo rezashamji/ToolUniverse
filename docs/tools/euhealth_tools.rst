@@ -1,4 +1,4 @@
-EUHealth tools — find EU public-health datasets fast
+EUHealth tools: find EU public-health datasets fast
 ====================================================
 
 Use these tools to:
