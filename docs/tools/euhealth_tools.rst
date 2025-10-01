@@ -13,7 +13,6 @@ The tools read from a local library (a small database + index)::
   data/embeddings/euhealth.db
   data/embeddings/euhealth.faiss
 
----
 
 Quick start (recommended): use the prebuilt library
 ---------------------------------------------------
@@ -35,7 +34,6 @@ That’s it. The files land in ``data/embeddings/`` where the tools expect them.
 
   Don’t have a token or prefer not to make an account? Skip to “Build it yourself” below.
 
----
 
 Use it
 ------
@@ -56,7 +54,6 @@ Behind the scenes, the agent uses the tools defined in:
 ``src/tooluniverse/data/euhealth_tools.json``
 (20 topics are pre-wired; you don’t have to touch this.)
 
----
 
 Optional: quick terminal “smoke test”
 -------------------------------------
@@ -76,7 +73,6 @@ If you want to sanity-check from Terminal (no coding):
 You should see a few JSON results (uuid, title, landing_page, etc.).
 (Inside the agent you’ll get nicely formatted results—this is just a quick check.)
 
----
 
 Build it yourself (only if you can’t use the prebuilt)
 ------------------------------------------------------
@@ -104,7 +100,6 @@ Re-running is safe; it adds new items and skips duplicates.
 
   You never need to figure out any “embedding dimension.” The builder detects what it needs.
 
----
 
 What each tool returns
 ----------------------
@@ -144,7 +139,6 @@ What each tool returns
      ]
    }
 
----
 
 Common questions
 ----------------
@@ -166,7 +160,6 @@ Common questions
 
   If not, use the **Quick start** download or the **Build it yourself** step.
 
----
 
 (Optional, for maintainers) Keep it fresh weekly
 ------------------------------------------------
@@ -187,7 +180,6 @@ We include a GitHub Actions workflow that rebuilds and uploads the library each 
 
 Most users can ignore this; it’s just for keeping the dataset library up to date.
 
----
 
 You’re set
 ----------

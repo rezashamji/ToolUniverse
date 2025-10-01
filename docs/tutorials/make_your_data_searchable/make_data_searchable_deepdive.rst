@@ -12,7 +12,6 @@ What you’ll do
 4. Build a “collection” (your searchable library)
 5. Search it — and (optional) use it from a Tool or back it up online
 
----
 
 0) Terms (30 seconds)
 ---------------------
@@ -25,7 +24,6 @@ What you’ll do
 
   Tip: ``doc_key`` must be **unique inside a collection**.
 
----
 
 1) Install
 ----------
@@ -36,7 +34,6 @@ What you’ll do
    python -m venv .venv && source .venv/bin/activate
    pip install -e .
 
----
 
 2) Choose ONE embedding service
 -------------------------------
@@ -73,7 +70,6 @@ Create a file named **.env** in the repo root. Pick one block below, then:
    HF_TOKEN=YOUR_TOKEN
    EMBED_MODEL=sentence-transformers/all-MiniLM-L6-v2 #example
 
----
 
 3) Put your data in a JSON file
 -------------------------------
@@ -89,7 +85,6 @@ Save as ``my.json``. Use objects with ``doc_key``, ``text``, and optional ``meta
 
   CSV isn’t a CLI input at the moment. If your data is a spreadsheet, export to CSV and convert to the JSON shape above (keep it simple: ``doc_key``, ``text``, and optional ``metadata``).
 
----
 
 4) Build your collection
 ------------------------
@@ -125,7 +120,6 @@ What this does: creates a small database (``toy.db``) and a FAISS index (``toy.f
 
   It auto-detects the correct dimension and builds ``data/embeddings/toy.db`` + ``toy.faiss``.
 
----
 
 5) Search your collection
 -------------------------
@@ -162,7 +156,6 @@ Pick one (you can try all three):
      }
    ]
 
----
 
 (Optional) Use your data from a Tool
 ------------------------------------
@@ -182,7 +175,6 @@ If you’re wiring this into a ToolUniverse agent:
    )
    tool.run({"query": "glucose", "method": "hybrid", "top_k": 5})
 
----
 
 (Optional) Back up or share online (Hugging Face)
 -------------------------------------------------
@@ -200,7 +192,6 @@ Why: quick cloud backup/share so you can restore elsewhere.
    # download later into data/embeddings as <local>.db/.faiss
    tu-datastore sync-hf download --repo "$HF_REPO" --local toy --overwrite
 
----
 
 Mini FAQ
 --------
@@ -211,7 +202,6 @@ Mini FAQ
 * **Changed model?** Create a new collection name (simplest), or delete ``toy.faiss`` before rebuilding so dimensions match.
 * **Re-running build:** Safe. Duplicates (same ``doc_key``) are ignored; new text is added.
 
----
 
 Want to dig deeper?
 -------------------

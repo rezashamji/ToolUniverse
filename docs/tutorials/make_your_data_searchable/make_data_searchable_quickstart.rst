@@ -25,7 +25,6 @@ Make Your Data Searchable — do it in minutes
      --query "pain relief" --method hybrid \
      --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL"
 
----
 
 2) Use a folder of files (no JSON needed)
 -----------------------------------------
@@ -38,7 +37,6 @@ Put ``.txt`` or ``.md`` files in a folder:
    tu-datastore search --db data/embeddings/notes.db --collection notes \
      --query "project timeline" --method hybrid
 
----
 
 3) Plug into a Tool
 -------------------
@@ -59,7 +57,6 @@ Configure your tool:
    )
    print(tool.run({"query":"timeline", "method":"hybrid", "top_k":5}))
 
----
 
 Tiny Troubleshooting
 --------------------
@@ -69,7 +66,6 @@ Tiny Troubleshooting
 * **Changed models** → Use a new collection name, or delete the existing ``.faiss`` file before rebuilding so dimensions match.
 * **Add more data** → Append to your JSON and re-run the same ``build`` command (same collection name).
 
----
 
 Learn More (Optional)
 ---------------------
@@ -82,4 +78,3 @@ Learn More (Optional)
 For most users: stick to the steps above.  
 For devs/researchers: peek at ``search.py`` and ``pipeline.py`` to see how it’s wired.
 
----
