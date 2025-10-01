@@ -26,7 +26,7 @@ Quick start (recommended): use the prebuilt library
 
    export HF_TOKEN=YOUR_HF_TOKEN
    tu-datastore sync-hf download \
-     --repo rshamji/tooluniverse-datastores \
+     --repo agenticx/tooluniverse-datastores \
      --local euhealth \
      --overwrite
 
@@ -173,7 +173,7 @@ We include a GitHub Actions workflow that rebuilds and uploads the library each 
 
    tu-datastore sync-hf upload \
      --collection euhealth \
-     --repo rshamji/tooluniverse-datastores \
+     --repo agenticx/tooluniverse-datastores \
      --private
 
 * You’ll need to add secrets for your chosen provider (e.g., ``OPENAI_API_KEY``) and ``HF_TOKEN``.

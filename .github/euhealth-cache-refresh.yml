@@ -50,5 +50,5 @@ jobs:
         run: |
           tu-datastore sync-hf upload \
             --collection euhealth \
-            --repo rshamji/tooluniverse-datastores \
-            --private
+            --repo agenticx/tooluniverse-datastores
+
