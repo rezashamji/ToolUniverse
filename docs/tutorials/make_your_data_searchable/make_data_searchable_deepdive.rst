@@ -116,13 +116,18 @@ Now build:
 
 What this does: creates a small database (``toy.db``) and a FAISS index (``toy.faiss``) so your texts can be found by words and by meaning.
 
-  Alternative (no JSON): put ``.txt``/``.md`` files in a folder and run:
+  Alternative (no JSON): put `.txt`/`.md` files in a folder and run:
 
   .. code-block:: bash
 
+     # uses EMBED_PROVIDER and EMBED_MODEL from your .env
      tu-datastore quickbuild --name toy --from-folder ./my_texts
 
-  It auto-detects the correct dimension and builds ``data/embeddings/toy.db`` + ``toy.faiss``.
+     # or override explicitly
+     tu-datastore quickbuild --name toy --from-folder ./my_texts \
+       --provider azure --model text-embedding-3-small
+
+  It auto-detects the correct dimension and builds `data/embeddings/toy.db` + `toy.faiss`.
 
 
 5) Search your collection
@@ -161,10 +166,10 @@ Pick one (you can try all three):
    ]
 
 
-(Optional) Use your data from a Tool
+Plug your data into a Tool
 ------------------------------------
 
-If you’re wiring this into a ToolUniverse agent:
+If you’re wiring this into a ToolUniverse agent, configure your tool:
 
 * **Tool name**: ``EmbeddingCollectionSearchTool``
 * **fields.collection**: ``toy``
@@ -243,7 +248,8 @@ Mini FAQ
 * **Azure tip:** ``EMBED_MODEL`` is your **deployment name**.
 * **Changed model?** Create a new collection name (simplest), or delete ``toy.faiss`` before rebuilding so dimensions match.
 * **Re-running build:** Safe. Duplicates (same ``doc_key``) are ignored; new text is added.
-
+* **“No results”** → Try `--method keyword` for exact terms; confirm `--collection` matches what you built.
+* **Add more data** → Append to your JSON and re-run the same `build` command (same collection name).
 
 Want to dig deeper?
 -------------------
@@ -261,3 +267,5 @@ These are the exact files that implement what you just used:
 * ``src/tooluniverse/generic_embedding_search_tool.py`` — ToolUniverse-facing search tool
 * Tool configs: ``tooluniverse/data/embedding_tools.json``, ``tooluniverse/data/generic_embedding_tool.json``
 * Tests: ``src/test/tests_database_setup/`` — run with ``pytest -q -m api``
+
+For devs/researchers: peek at `search.py and pipeline.py to see how it’s wired.

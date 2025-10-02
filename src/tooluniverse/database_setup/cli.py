@@ -22,6 +22,7 @@ Exit codes
 
 import argparse
 import json
+import os
 from .pipeline import build_collection
 from .pipeline import search
 from .hf.sync_hf import upload as sync_upload
@@ -147,14 +148,19 @@ def main():
         docs = pack_folder(args.from_folder)
         if not docs:
             raise SystemExit("No supported files found. Put .txt or .md in the folder.")
+        
+        # Fall back to environment if args not provided
+        provider = args.provider or os.getenv("EMBED_PROVIDER")
+        model = args.model or os.getenv("EMBED_MODEL")
+            
         # Derive dim automatically
-        dim = get_model_dim(provider=args.provider, model=args.model)
+        dim = get_model_dim(provider=provider, model=model)
         build_collection(
             db_path="data/embeddings/{}.db".format(args.name),
             collection=args.name,
             docs=docs,
-            embed_provider=args.provider or "",
-            embed_model=args.model or "",
+            embed_provider=args.provider,
+            embed_model=args.model,
             embed_dim=dim,
         )
         print(f"Built collection '{args.name}' with {len(docs)} docs.")
