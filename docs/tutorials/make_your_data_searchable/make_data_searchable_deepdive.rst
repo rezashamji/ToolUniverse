@@ -192,17 +192,29 @@ You have two options for saving and sharing your datastore:
 
 You control your repo and can sync your collections locally.
 
+Add these lines to your existing **.env** (the same one you sourced before):
+
 .. code-block:: bash
 
-   export HF_TOKEN=YOUR_WRITE_TOKEN   # get from https://huggingface.co/settings/tokens
-   export HF_REPO=your-username/tooluniverse-datastores
+   HF_TOKEN=YOUR_WRITE_TOKEN        # get from https://huggingface.co/settings/tokens
+   HF_REPO=your-username/tooluniverse-datastores
+
+Then reload once:
+
+.. code-block:: bash
+
+   source .env
+
+Now you can upload/download:
+
+.. code-block:: bash
 
    # upload (db + index)
    tu-datastore sync-hf upload --collection toy --repo "$HF_REPO"
 
-   # download later into data/embeddings as <collection>.db/.faiss
-   tu-datastore sync-hf download --repo "$HF_REPO" --collection toy --overwrite
-
+   # download into data/embeddings as <collection>.db/.faiss
+   # (use --overwrite to replace existing files; or choose a new collection name, e.g. "toy2")
+   tu-datastore sync-hf download --repo "$HF_REPO" --collection toy --overwrite # overwrite to overwrite existing files, otherwise can be a new collection name such as toy2
 
 **2. Contribute to the shared AgenticX repo (advanced, community contribution)**
 
