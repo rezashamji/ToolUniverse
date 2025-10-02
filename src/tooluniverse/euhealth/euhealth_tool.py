@@ -24,8 +24,8 @@ Notes
 """
 
 from typing import Dict, Any, List, Optional
-from src.tooluniverse.base_tool import BaseTool
-from src.tooluniverse.tool_registry import register_tool
+from tooluniverse.base_tool import BaseTool
+from tooluniverse.tool_registry import register_tool
 
 # Import the runtime surface (topic functions + deep dive).
 from tooluniverse.euhealth import tools_runtime as rt
