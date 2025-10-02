@@ -91,7 +91,7 @@ def main():
 
     down = sh_sub.add_parser("download", help="Download collection artifacts from HF")
     down.add_argument("--repo", required=True)
-    down.add_argument("--local", required=True)
+    down.add_argument("--collection", required=True)
     down.add_argument("--overwrite", action="store_true")
 
     args = p.parse_args()
@@ -139,7 +139,7 @@ def main():
         elif args.action == "download":
             sync_download(
                 repo=args.repo,
-                local_collection_name=args.local,
+                collection=args.collection,
                 overwrite=args.overwrite,
             )
 

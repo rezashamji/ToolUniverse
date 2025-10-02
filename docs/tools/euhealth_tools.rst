@@ -27,7 +27,7 @@ Quick start (recommended): use the prebuilt library
    export HF_TOKEN=YOUR_HF_TOKEN
    tu-datastore sync-hf download \
      --repo agenticx/tooluniverse-datastores \
-     --local euhealth \
+     --collection euhealth \
      --overwrite
 
 That’s it. The files land in ``data/embeddings/`` where the tools expect them.

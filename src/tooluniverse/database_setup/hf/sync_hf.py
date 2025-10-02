@@ -14,9 +14,9 @@ db_path_for_collection(collection) -> Path
 upload(collection, repo, private=True, commit_message="Update")
     Create/ensure a HF dataset repo and upload <collection>.db/.faiss.
 
-download(repo, local_collection_name, overwrite=False)
+download(repo, collection, overwrite=False)
     Download *.db/*.faiss from a HF dataset repo snapshot and restore them
-    under ./data/embeddings as <local_collection_name>.db/.faiss.
+    under ./data/embeddings as <collection>.db/.faiss.
 
 Notes
 -----
@@ -133,14 +133,14 @@ def upload(
 # Download
 # ---------------------------
 
-def download(repo: str, local_collection_name: str, overwrite: bool = False):
+def download(repo: str, collection: str, overwrite: bool = False):
     """Download *.db/*.faiss from a HF dataset repo and restore them locally.
 
     Parameters
     ----------
     repo : str
         Dataset repo ID to pull from (e.g., "org/name").
-    local_collection_name : str
+    collection : str
         Base name to save as: produces <name>.db and <name>.faiss under DATA_DIR.
     overwrite : bool, default False
         Replace local files if they already exist.
@@ -163,8 +163,8 @@ def download(repo: str, local_collection_name: str, overwrite: bool = False):
     db_candidates = sorted(snap.glob("*.db"))
     faiss_candidates = sorted(snap.glob("*.faiss"))
 
-    dest_db = db_path_for_collection(local_collection_name)
-    dest_faiss = DATA_DIR / f"{local_collection_name}.faiss"
+    dest_db = db_path_for_collection(collection)
+    dest_faiss = DATA_DIR / f"{collection}.faiss"
 
     if db_candidates:
         src_db = db_candidates[0]
@@ -186,7 +186,7 @@ def download(repo: str, local_collection_name: str, overwrite: bool = False):
     else:
         print(" No FAISS index found in HF repo snapshot")
 
-    print(f" Download complete for {local_collection_name} from {repo}")
+    print(f" Download complete for {collection} from {repo}")
 
 
 # ---------------------------
@@ -216,7 +216,7 @@ if __name__ == "__main__":
     down = subparsers.add_parser("download", help="Download a collection from HF Hub")
     down.add_argument("--repo", required=True, help="HF dataset repo ID")
     down.add_argument(
-        "--local_collection_name",
+        "--collection",
         required=True,
         help="Local collection name (e.g., euhealth, demo)",
     )
@@ -236,7 +236,7 @@ if __name__ == "__main__":
     elif args.command == "download":
         download(
             repo=args.repo,
-            local_collection_name=args.local_collection_name,
+            collection=args.collection,
             overwrite=args.overwrite,
         )
     else:

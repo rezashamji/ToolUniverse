@@ -196,8 +196,8 @@ You control your repo and can sync your collections locally.
    # upload (db + index)
    tu-datastore sync-hf upload --collection toy --repo "$HF_REPO"
 
-   # download later into data/embeddings as <local>.db/.faiss
-   tu-datastore sync-hf download --repo "$HF_REPO" --local toy --overwrite
+   # download later into data/embeddings as <collection>.db/.faiss
+   tu-datastore sync-hf download --repo "$HF_REPO" --collection toy --overwrite
 
 
 **2. Contribute to the shared AgenticX repo (advanced, community contribution)**
@@ -217,7 +217,7 @@ using the same command but with the AgenticX repo name:
    # download (works for everyone, no special rights needed)
    tu-datastore sync-hf download \
      --repo agenticx/tooluniverse-datastores \
-     --local toy --overwrite
+     --collection toy --overwrite
 
 Mini FAQ
 --------

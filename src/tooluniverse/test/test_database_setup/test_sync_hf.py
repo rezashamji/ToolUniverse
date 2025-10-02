@@ -33,5 +33,5 @@ def test_hf_upload_download(tmp_path):
     Path(db_path).unlink(missing_ok=True)
     (data_dir / "demo.faiss").unlink(missing_ok=True)
 
-    download(repo=repo, local_collection_name="demo", dest_dir=str(data_dir))
+    download(repo=repo, collection="demo", dest_dir=str(data_dir))
     assert Path(db_path).exists()
