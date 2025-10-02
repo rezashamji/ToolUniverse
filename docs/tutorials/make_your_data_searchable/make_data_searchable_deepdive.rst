@@ -32,7 +32,9 @@ Helpful Terms
 
    # from the repo root
    python -m venv .venv && source .venv/bin/activate
-   pip install -e .
+   pip install tooluniverse
+
+If you’re developing locally, use pip install -e . instead.
 
 
 2) Choose ONE embedding service
@@ -93,9 +95,9 @@ You’ll pass the **embedding dimension** once. If you don’t know it, run this
 
 .. code-block:: bash
 
-   DIM=$(python -m tooluniverse.database_setup.embed_utils get_model_dim \
-     --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL")
-   echo "Embedding dimension: $DIM"
+    DIM=$(python -m tooluniverse.database_setup.embed_utils \
+    --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL")
+    echo "Embedding dimension: $DIM"
 
 Now build:
 
