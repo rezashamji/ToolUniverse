@@ -40,7 +40,7 @@ If you’re developing locally, use pip install -e . instead.
 2) Choose ONE embedding service
 -------------------------------
 
-Create a file named **.env** in the repo root. Pick one block below, then:
+Create a file named **.env** in the repo root. Pick one block below (or multiple if planning to use several services), then:
 
 .. code-block:: bash
 
