@@ -57,3 +57,14 @@ def get_model_dim(provider: Optional[str] = None, model: Optional[str] = None) -
     """
     v = embed_texts(["_dim_probe_"], provider=provider, model=model, normalize=False)
     return int(v.shape[1])
+
+if __name__ == "__main__":
+    import argparse
+
+    p = argparse.ArgumentParser(description="Probe embedding model dimension")
+    p.add_argument("--provider", required=True, help="Embedding provider (openai|azure|huggingface|local)")
+    p.add_argument("--model", required=True, help="Embedding model/deployment name")
+    args = p.parse_args()
+
+    dim = get_model_dim(provider=args.provider, model=args.model)
+    print(dim)
