@@ -13,7 +13,7 @@ Make Your Data Searchable: do it in minutes
    echo '[{"doc_key":"1","text":"Aspirin reduces pain.","metadata":{"tag":"drug"}}, {"doc_key":"2","text":"Ibuprofen is an NSAID.","metadata":{"tag":"drug"}}]' > demo.json
 
    # 2) Build (creates data/embeddings/meds.db + meds.faiss + we auto-detect the dimension for you)
-   DIM=$(python -m tooluniverse.database_setup.embed_utils \ --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL")
+   DIM=$(python -m tooluniverse.database_setup.embed_utils --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL")
 
    tu-datastore build --db data/embeddings/demo.db --collection meds \
      --docs-json demo.json --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL" --dim $DIM
