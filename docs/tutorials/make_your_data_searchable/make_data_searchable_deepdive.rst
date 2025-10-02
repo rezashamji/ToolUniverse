@@ -76,7 +76,9 @@ Create a file named **.env** in the repo root. Pick one block below (or multiple
 3) Put your data in a JSON file
 -------------------------------
 
-Save as ``my.json``. Use objects with ``doc_key``, ``text``, and optional ``metadata``.
+Save as .json file. Use objects with ``doc_key``, ``text``, and optional ``metadata``.
+
+Here is an example, ``my.json``:
 
 .. code-block:: json
 
@@ -170,13 +172,13 @@ If you’re wiring this into a ToolUniverse agent:
 
 .. code-block:: python
 
-   from tooluniverse.generic_embedding_search_tool import EmbeddingCollectionSearchTool
+   from tooluniverse.database_setup.generic_embedding_search_tool import EmbeddingCollectionSearchTool
 
    tool = EmbeddingCollectionSearchTool(
      tool_config={"fields": {"collection": "toy", "db_path": "data/embeddings/toy.db"}}
    )
-   tool.run({"query": "glucose", "method": "hybrid", "top_k": 5})
-
+   results = tool.run({"query": "glucose", "method": "hybrid", "top_k": 5})
+   print(results)
 
 (Optional) Back up or share online (Hugging Face)
 -------------------------------------------------
