@@ -159,8 +159,8 @@ def main():
             db_path="data/embeddings/{}.db".format(args.name),
             collection=args.name,
             docs=docs,
-            embed_provider=args.provider,
-            embed_model=args.model,
+            embed_provider=provider,
+            embed_model=model,
             embed_dim=dim,
         )
         print(f"Built collection '{args.name}' with {len(docs)} docs.")
