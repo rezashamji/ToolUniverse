@@ -119,9 +119,6 @@ class Embedder:
         texts = [t.decode("utf-8") if isinstance(t, bytes) else str(t) for t in texts]
 
         all_vectors: List[List[float]] = []
-        # rest of function unchanged...
-
-        all_vectors: List[List[float]] = []
 
         for start in range(0, len(texts), self.batch_size):
             batch = texts[start : start + self.batch_size]

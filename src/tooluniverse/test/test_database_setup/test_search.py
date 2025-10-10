@@ -39,15 +39,8 @@ def test_search_engine_embedding(tmp_path):
     vs.load_index("demo", dim, reset=True)
     vecs = vecs / (np.linalg.norm(vecs, axis=1, keepdims=True) + 1e-12)
     vs.add_embeddings("demo", ids, vecs, dim=dim)
-    
-    # 🔍 Debugging
-    index = vs.load_index("demo", dim=dim)
-    print("Added vecs:", vecs.shape, "Index size:", index.ntotal)
-
-
     engine = SearchEngine(db_path=db)
     res = engine.embedding_search("demo", "hypertension", top_k=5)
-    print("Results:", res, "Index size after search:", index.ntotal)
 
     assert isinstance(res, list) and len(res) >= 1
 

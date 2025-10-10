@@ -145,7 +145,7 @@ class EmbeddingSync(BaseTool):
 
         try:
             hf_download(
-                repo=repo, local_collection_name=local_name, overwrite=overwrite
+                repo=repo, collection=local_name, overwrite=overwrite
             )
         except Exception as e:
             return {"error": f"Failed to download: {e}"}

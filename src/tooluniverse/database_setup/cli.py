@@ -152,7 +152,13 @@ def main():
         # Fall back to environment if args not provided
         provider = args.provider or os.getenv("EMBED_PROVIDER")
         model = args.model or os.getenv("EMBED_MODEL")
-            
+        
+        if not provider or not model:
+            raise SystemExit(
+                "Missing embedding provider or model. Please specify --provider and --model, "
+                "or set EMBED_PROVIDER and EMBED_MODEL environment variables."
+            )
+
         # Derive dim automatically
         dim = get_model_dim(provider=provider, model=model)
         build_collection(

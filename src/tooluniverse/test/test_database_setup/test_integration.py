@@ -41,11 +41,6 @@ def test_end_to_end_local(tmp_path):
     vs.load_index("integration_demo", dim, reset=True)
     vecs = vecs / (np.linalg.norm(vecs, axis=1, keepdims=True) + 1e-12)
     vs.add_embeddings("integration_demo", ids, vecs, dim=dim)
-    
-    # 🔍 Debugging
-    index = vs.load_index("integration_demo", dim=dim)
-    print("Added vecs:", vecs.shape, "Index size:", index.ntotal)
-
     se = SearchEngine(db_path=db_path)
 
     k = se.keyword_search("integration_demo", "hypertension")
