@@ -1,0 +1,429 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:2
+#: eb4df01a3c4b4d668c58d649f348f6ae
+msgid "Remote Tool Registration"
+msgstr "远程工具注册"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:4
+#: 898e163f4d1746c784f214afd1c1fa0e
+msgid ""
+"Learn how to integrate external services, APIs, and tools running on "
+"different servers with ToolUniverse. This Tutorial covers MCP "
+"integration, REST API wrappers, and advanced remote tool patterns."
+msgstr ""
+"学习如何将外部服务、API 和在不同服务器上运行的工具与 ToolUniverse 集成。本教程涵盖 MCP 集成、REST API 包装器和高级远程工具模式。"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:7
+#: b6b04a465ba643be9e33af788741261a
+msgid "Overview"
+msgstr "概述"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:9
+#: 4537cc4f3aa14adc98fc3a83412de012
+msgid ""
+"Remote tools allow you to integrate external services, APIs, or tools "
+"running on different servers. This is useful for:"
+msgstr ""
+"远程工具允许您集成外部服务、API 或在不同服务器上运行的工具。这对于以下情况很有用："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:11
+#: a643908c5a1543e7af54126eda90ea45
+msgid "Integrating with existing microservices"
+msgstr "与现有微服务集成"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:12
+#: d7b8a20a21c9491299a9bd82d1a7ef1e
+msgid "Using tools that require specific environments"
+msgstr "使用需要特定环境的工具"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:13
+#: d8b7bdd11da647aca60ee1e34e2e8b23
+msgid "Scaling computationally intensive operations"
+msgstr "扩展计算密集型操作"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:14
+#: 2eb702829c144c61a830f864556ff87f
+msgid "Connecting to proprietary systems"
+msgstr "连接到专有系统"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:15
+#: dc517f0655ed4a4aa6104dfc50a85534
+msgid "Leveraging cloud-based AI services"
+msgstr "利用基于云的 AI 服务"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:17
+#: d7f3b49744ad49ce8f06dac2a1826ffa
+msgid ""
+"**Key Benefits:** - ✅ **Scalability**: Offload heavy computation to "
+"dedicated servers - ✅ **Integration**: Connect with existing systems and "
+"services - ✅ **Flexibility**: Use tools in different programming "
+"languages - ✅ **Isolation**: Keep sensitive operations separate - ✅ "
+"**Performance**: Optimize for specific hardware requirements"
+msgstr ""
+"**主要优势：** - ✅ **可扩展性**：将繁重计算卸载到专用服务器 - ✅ **集成**：与现有系统和服务连接 - ✅ **灵活性**：使用不同编程语言的工具 - ✅ **隔离**：保持敏感操作分离 - ✅ **性能**：针对特定硬件需求进行优化"
+"**主要优势：** - ✅ **可扩展性**：将繁重计算卸载到专用服务器 - ✅ **集成**：与现有系统和服务连接 - ✅ **灵活性**：使用不同编程语言的工具 - ✅ **隔离**：保持敏感操作分离 - ✅ **性能**：针对特定硬件需求进行优化"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:25
+#: 3c5562ad0f9f4c839cee0dd9f8576a5d
+msgid "Quick Start"
+msgstr "快速开始"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:27
+#: 16bd315afd1840a0b337aec5b0cb0d08
+msgid ""
+"Here's the fastest way to integrate a remote tool using MCP (Model "
+"Context Protocol):"
+msgstr ""
+"以下是使用 MCP（模型上下文协议）集成远程工具的最快方法："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:52
+#: 5601ca610b1f4c0799520c31e8ccaeac
+msgid "MCP (Model Context Protocol) Integration"
+msgstr "MCP（模型上下文协议）集成"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:54
+#: 64fdceedaeb044a4bab85c55a61fdf49
+msgid ""
+"MCP is the recommended way to integrate remote tools with ToolUniverse. "
+"It provides a standardized protocol for tool communication."
+msgstr ""
+"MCP 是将远程工具与 ToolUniverse 集成的推荐方式。它提供了工具通信的标准化协议。"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:57
+#: 5d736307aa9041429733c1dcc4d59867
+msgid "Setting up an MCP Server"
+msgstr "设置 MCP 服务器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:59
+#: 216a8b707df5431eba7b2cb0b855a499
+msgid "Create a simple MCP server:"
+msgstr "创建一个简单的 MCP 服务器："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:95
+#: f1f5153cbabc438994bd28eed239c437
+msgid "Advanced MCP Server with Authentication"
+msgstr "带有身份验证的高级 MCP 服务器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:125
+#: 125f305dffda4d06b0ca8ab96999fa7e
+msgid "Connecting to MCP Servers"
+msgstr "连接到 MCP 服务器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:127
+#: d305b86905c14ba583dae19fd4e19e70
+msgid "Connect to remote MCP servers from ToolUniverse:"
+msgstr "从 ToolUniverse 连接到远程 MCP 服务器："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:164
+#: 6b9f46c8e76e46989f411070f4bba6e8
+msgid "REST API Integration"
+msgstr "REST API 集成"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:166
+#: 75a1c3807b754285b13dc1c2d1fc6991
+msgid "For simple REST API integration, create wrapper tools:"
+msgstr "对于简单的 REST API 集成，创建包装器工具："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:169
+#: 4f2fda6a4fad45c39bad231ee81cd834
+msgid "Basic REST API Wrapper"
+msgstr "基本 REST API 包装器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:231
+#: c47160d13bc44adb9d95f3968fc74758
+msgid "Advanced REST API Wrapper with Retry Logic"
+msgstr "带有重试逻辑的高级 REST API 包装器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:257
+#: 00bdb9cb176048098402c00fcbf70c5d
+msgid "Specialized API Wrappers"
+msgstr "专用 API 包装器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:260
+#: 74bcc8f31461462a9f49dafb610c8cec
+msgid "OpenAI API Wrapper"
+msgstr "OpenAI API 包装器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:312
+#: 6b96d48307b3430b9cb099d4805b1242
+msgid "Weather API Wrapper"
+msgstr "天气 API 包装器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:372
+#: 7bc7610acab34a0cb925b738b8afd0f6
+msgid "Database Connection Wrapper"
+msgstr "数据库连接包装器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:435
+#: c63e586eb86c4258a6695449b3564f5c
+msgid "Microservice Integration"
+msgstr "微服务集成"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:438
+#: a12e49a9c0d24f36aba01ccb7bf18c8f
+msgid "Service Discovery"
+msgstr "服务发现"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:440
+#: dba9e47d64ae4f44863131a9c0cac3c8
+msgid "Integrate with microservices using service discovery:"
+msgstr "使用服务发现与微服务集成："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:509
+#: dc32b2cf7a5247e3b62518facca03758
+msgid "Circuit Breaker Pattern"
+msgstr "断路器模式"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:511
+#: d641563d06d94e2497de249f6944aa6c
+msgid "Implement circuit breaker for resilient remote calls:"
+msgstr "为弹性远程调用实现断路器："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:564
+#: 374790de1b124265afc226f3c46a5532
+msgid "Load Balancing"
+msgstr "负载均衡"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:566
+#: f122a3ee5c2d413c8045d627f64b20cb
+msgid "Implement load balancing for multiple service instances:"
+msgstr "为多个服务实例实现负载均衡："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:618
+#: a0797e065cce484f8d09beafdd8db8fa
+msgid "Authentication and Security"
+msgstr "身份验证和安全"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:621
+#: ecbc6595a88d43368c11bcad9a98112a
+msgid "API Key Authentication"
+msgstr "API 密钥身份验证"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:639
+#: bf15149a80aa47b38c4e7dd774032356
+msgid "OAuth 2.0 Integration"
+msgstr "OAuth 2.0 集成"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:672
+#: a6e8bb3d79b547188664883abe3f84ce
+msgid "Testing Remote Tools"
+msgstr "测试远程工具"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:675
+#: 4238fca0dbad4bca90bc622438a4d34e
+msgid "Unit Testing"
+msgstr "单元测试"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:677
+#: b6856fa9cd4c45a482cdbd555d068031
+msgid "Test remote tools with mocked responses:"
+msgstr "使用模拟响应测试远程工具："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:709
+#: 3ae9ac7af226496fb833591e4dffdfae
+msgid "Integration Testing"
+msgstr "集成测试"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:711
+#: 0d1fe2d7dd3e4b6888ed27806c155e55
+msgid "Test with actual remote services:"
+msgstr "使用实际远程服务进行测试："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:724
+#: d67ed9aa79724196a48e82c1e0b94a01
+msgid "Performance Testing"
+msgstr "性能测试"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:726
+#: d2d1cb654dd549a191908f4066e28fc2
+msgid "Test performance and reliability:"
+msgstr "测试性能和可靠性："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:749
+#: 41d39c79d59a4ddfa9ca4acf4fd71d35
+msgid "Best Practices"
+msgstr "最佳实践"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:752
+#: 07f929ff33dd409e8619dc5355559e91
+msgid "Error Handling"
+msgstr "错误处理"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:754
+#: dd8527bdc02d478a85c9545bfb27aa52
+msgid "Implement comprehensive error handling:"
+msgstr "实施全面的错误处理："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:780
+#: 5a5136d9424b43d2a2d24762532489c9
+msgid "Monitoring and Logging"
+msgstr "监控和日志记录"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:782
+#: 73599dbb96ee44e0bb3f09a770f7ed74
+msgid "Add comprehensive logging:"
+msgstr "添加全面的日志记录："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:810
+#: eb3b754139ab4feabdc45bdee7f65938
+msgid "Configuration Management"
+msgstr "配置管理"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:812
+#: a7e53fb0d718462cb0ee1a6f5b57cfd8
+msgid "Use environment variables and configuration files:"
+msgstr "使用环境变量和配置文件："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:839
+#: a0afd1415ee24e63a69f91b78b497aa1
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:842
+#: cd4792f2a1d544b0818ab17727ac1ceb
+msgid "Common Issues"
+msgstr "常见问题"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:848
+#: b65c51a8c44b4e5ba6e1367be03a44a7
+msgid "Problem"
+msgstr "问题"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:849
+#: 1455beec4f604074920a182a04075b45
+msgid "Solution"
+msgstr "解决方案"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:850
+#: 94c3feef9a7349a2b3b29d70670183dc
+msgid "Connection timeout"
+msgstr "连接超时"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:851
+#: 758578c509684b52bbc19f293efdeb1a
+msgid "Increase timeout setting, check network connectivity"
+msgstr "增加超时设置，检查网络连接"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:852
+#: 8c51669ca28d486b8f6e1806b8cd55d7
+msgid "Authentication failed"
+msgstr "身份验证失败"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:853
+#: f85676c8a27f4e34ba63dfbcc9b9d7c6
+msgid "Verify API keys and authentication headers"
+msgstr "验证 API 密钥和身份验证标头"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:854
+#: 27c8184e9774448bb608541a948d3523
+msgid "Service unavailable"
+msgstr "服务不可用"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:855
+#: bee265f1db7f4904bb2f894edb9aa5b5
+msgid "Implement retry logic and circuit breaker"
+msgstr "实施重试逻辑和断路器"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:856
+#: 228671db502743daa38a8b428bc719c8
+msgid "Rate limiting"
+msgstr "速率限制"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:857
+#: 5642b69748ea456c8f9d14572c625351
+msgid "Add rate limiting and exponential backoff"
+msgstr "添加速率限制和指数退避"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:858
+#: ef72617b51a2444e95057e295779bc28
+msgid "SSL certificate errors"
+msgstr "SSL 证书错误"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:859
+#: 12632e25ca9c4264a8f56cffa5c5eae5
+msgid "Update certificates or disable SSL verification for testing"
+msgstr "更新证书或为测试禁用 SSL 验证"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:862
+#: a85169bc6a204624938f65d326983408
+msgid "Debugging Tools"
+msgstr "调试工具"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:864
+#: 5f581f05c34d4e7889ae8e28eeb1b116
+msgid "Enable detailed logging:"
+msgstr "启用详细日志记录："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:881
+#: 383371a894754bec826be96e5b7dcc65
+msgid "Next Steps"
+msgstr "下一步"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:883
+#: 287004921788460c97692bb44237fe82
+msgid "Now that you can integrate remote tools:"
+msgstr "现在您可以集成远程工具："
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:885
+#: 2b12beed32604d1e9a03c0b816cad4a4
+msgid ""
+"🏠 **Local Tools**: :doc:`local_tool_registration` - Learn about local "
+"tool development"
+msgstr ""
+"🏠 **本地工具**：:doc:`local_tool_registration` - 了解本地工具开发"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:886
+#: 057120dc80a04b4b85fd2568bfb66de5
+msgid ""
+"📤 **Contributing**: :doc:`contributing_tools` - Submit your tools to "
+"ToolUniverse"
+msgstr ""
+"📤 **贡献**：:doc:`contributing_tools` - 将您的工具提交到 ToolUniverse"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:887
+#: d5236303051245639e9a074fccc1fbac
+msgid ""
+"🔧 **Advanced Patterns**: :doc:`../advanced/custom_tools` - Advanced "
+"development patterns"
+msgstr ""
+"🔧 **高级模式**：:doc:`../advanced/custom_tools` - 高级开发模式"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:888
+#: 5dbd7dda58a14e8eae31ce29e9514028
+msgid ""
+"🤖 **AI Integration**: "
+":doc:`../guide/building_ai_scientists/mcp_integration` - Connect with AI "
+"assistants"
+msgstr ""
+"🤖 **AI 集成**：:doc:`../guide/building_ai_scientists/mcp_integration` - 与 AI 助手连接"
+
+#: ../../expand_tooluniverse/remote_tool_registration.rst:891
+#: 7010a9f6783c4714990b321701ea8d0f
+msgid ""
+"**Integration tip**: Start with simple REST API wrappers, then move to "
+"MCP for more complex integrations. Always implement proper error handling"
+" and monitoring!"
+msgstr ""
+"**集成提示**：从简单的 REST API 包装器开始，然后转向 MCP 以进行更复杂的集成。始终实施适当的错误处理和监控！"
+

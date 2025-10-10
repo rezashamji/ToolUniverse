@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../guide/index.rst:2 9fbddf452d4b42b588ed123d31399b62
+msgid "Tutorial Navigation"
+msgstr "教程导航"
+
+#: ../../guide/index.rst:5 72e95b444f6549be93011e1b596bad2b
+msgid ""
+"This comprehensive tutorial takes you from basic concepts to advanced AI "
+"scientist workflows, with everything you need to democratize AI agents for "
+"scientific discovery."
+msgstr "这个综合教程将带您从基本概念到高级AI科学家工作流程，包含您需要的一切来民主化AI智能体进行科学发现。"
+
+#: ../../guide/index.rst:7 d81c78b5283c4fe8b05e6e304d36d56b
+msgid "Choose the section that matches your current needs:"
+msgstr "选择符合您当前需求的章节："
+
+#: ../../guide/index.rst:9 3b42fb7876e649b29df621f2fd269ecc
+msgid ""
+"💡 **For Python API documentation**, see the dedicated :doc:`../api/index` "
+"section."
+msgstr "💡 **Python API文档**，请参阅专门的 :doc:`../api/index` 章节。"
+
+#: ../../guide/index.rst:11 62bae19d21814da1890ac48313b16620
+msgid ""
+"💡 **For MCP integration and server setup**, see the comprehensive "
+":doc:`mcp_support` guide."
+msgstr "💡 **有关 MCP 集成和服务器设置**，请参阅完整的 :doc:`mcp_support` 指南。"
+
+#: ../../guide/index.rst:14 df94c928c2354bff817a0be9f89be4a7
+msgid "Core Concepts"
+msgstr "核心概念"
+
+#: ../../guide/index.rst:16 7c29ff2986a84ca782f0e335e6bde169
+msgid ""
+"**⚙️ Loading Tools** → :doc:`loading_tools` - Complete tutorial to loading "
+"tools with Python API and MCP terminal commands"
+msgstr "**⚙️ 加载工具** → :doc:`loading_tools` - 使用Python API和MCP终端命令加载工具的完整教程"
+
+#: ../../guide/index.rst:17 1bec4d7524a945fbb1eb5965b925389b
+msgid ""
+"**📋 Listing Tools** → :doc:`listing_tools` - Discover and filter tools by "
+"capability, domain, and IO"
+msgstr "**📋 列出工具** → :doc:`listing_tools` - 按功能、领域和IO发现和过滤工具"
+
+#: ../../guide/index.rst:18 0f8f355649644952abfe08449847e238
+msgid ""
+"**🔧 Tool Caller** → :doc:`tool_caller` - Primary execution engine with "
+"dynamic loading, validation, and MCP server integration"
+msgstr "**🔧 工具调用器** → :doc:`tool_caller` - 具有动态加载、验证和MCP服务器集成的主要执行引擎"
+
+#: ../../guide/index.rst:19 f7e971ed20a3444dba70aa1bd353ca25
+msgid ""
+"**🔗 Tool Composition** → :doc:`tool_composition` - Chain ToolUniverse's 600+"
+" tools into powerful scientific workflows using Tool Composer"
+msgstr ""
+"**🔗 工具组合** → :doc:`tool_composition` - "
+"使用工具组合器将ToolUniverse的600+工具链接成强大的科学工作流程"
+
+#: ../../guide/index.rst:20 b4386e7174cc40eca06c84773ffe627d
+msgid ""
+"**🔬 Scientific Workflows** → :doc:`scientific_workflows` - Real-world "
+"research scenarios: drug discovery, safety analysis, literature review"
+msgstr "**🔬 科学工作流程** → :doc:`scientific_workflows` - 真实世界研究场景：药物发现、安全分析、文献综述"
+
+#: ../../guide/index.rst:21 17190560673e4d849677088b07e6174b
+msgid ""
+"**📡 MCP Support** → :doc:`mcp_support` - Model Context Protocol integration "
+"and server setup"
+msgstr "**📡 MCP支持** → :doc:`mcp_support` - 模型上下文协议集成和服务器设置"
+
+#: ../../guide/index.rst:22 287fffd3f92245edbfe8fea6a2462efc
+msgid ""
+"**🔊 Streaming Tools** → :doc:`streaming_tools` - Real-time streaming output "
+"and custom tool integration"
+msgstr "**🔊 流式工具** → :doc:`streaming_tools` - 实时流式输出和自定义工具集成"
+
+#: ../../guide/index.rst:23 50f340585b3c4940bb26d3f20a48fd8c
+msgid ""
+"**📝 Logging** → :doc:`logging` - Comprehensive logging configuration and "
+"debugging"
+msgstr "**📝 日志记录** → :doc:`logging` - 全面的日志配置和调试"
+
+#: ../../guide/index.rst:24 b1d67116f0244039a3d25478929e7d97
+msgid ""
+"**🔗 Interaction Protocol** → :doc:`interaction_protocol` - Understanding "
+"tool interaction patterns"
+msgstr "**🔗 交互协议** → :doc:`interaction_protocol` - 理解工具交互模式"
+
+#: ../../guide/index.rst:27 20c7527c0a5b4af9a6814a602688b011
+msgid "Tool Discovery & Usage"
+msgstr "工具发现与使用"
+
+#: ../../guide/index.rst:29 5f2a4dab750f4d919a1b7af69572807e
+msgid ""
+"**🔍 Tool Discovery** → :doc:`../tutorials/finding_tools` - Tutorial to "
+"ToolUniverse's three tool finder methods: keyword, LLM, and embedding search"
+msgstr ""
+"**🔍 工具发现** → :doc:`../tutorials/finding_tools` - "
+"ToolUniverse三种工具查找方法教程：关键词、LLM和嵌入搜索"
+
+#: ../../guide/index.rst:30 34eb0e616ca24ea6af60fd31b5d04ad6
+msgid ""
+"**📚 Tools Overview** → :doc:`tools` - Comprehensive overview of all "
+"available tools"
+msgstr "**📚 工具概览** → :doc:`tools` - 所有可用工具的综合概览"
+
+#: ../../guide/index.rst:33 b61f696ed4944b6db99425cbe00d4e05
+msgid "Tool Collections"
+msgstr "工具集合"
+
+#: ../../guide/index.rst:35 ee06a57c0e584aaeb48ed623d1fef0d8
+msgid "Specialized tool collections for specific research domains:"
+msgstr "专为特定研究领域设计的专业工具集合："
+
+#: ../../guide/index.rst:37 ef241dc957024491a80dd0941dc0f398
+msgid ""
+"**🏥 Clinical Guidelines** → :doc:`clinical_guidelines_tools` - Search and "
+"extract clinical practice guidelines from NICE, WHO, PubMed, and 5 other "
+"authoritative sources"
+msgstr ""
+"**🏥 临床指南** → :doc:`clinical_guidelines_tools` - "
+"搜索并提取来自NICE、WHO、PubMed及其他5个权威来源的临床实践指南"
+
+#: ../../guide/index.rst:38 fd701b714c3a4e3c98a275d2f93e408f
+msgid ""
+"**📖 Literature Search** → "
+":doc:`../tutorials/literature_search_tools_tutorial` - Comprehensive "
+"literature search across PubMed, arXiv, bioRxiv, and academic databases"
+msgstr ""
+"**📖 文献检索** → :doc:`../tutorials/literature_search_tools_tutorial` - "
+"全面检索PubMed、arXiv、bioRxiv及学术数据库的文献"
+
+#: ../../guide/index.rst:41 2355b37fd2dc4b3a88ad44414541d8a6
+msgid "Building AI Scientists"
+msgstr "构建AI科学家"
+
+#: ../../guide/index.rst:43 6984e43709bb499d9fffbf7a0929f340
+msgid ""
+"**🤖 Building AI Scientists** → :doc:`building_ai_scientists/index` - Create "
+"AI research assistants from LLMs, reasoning models, and agentic systems"
+msgstr ""
+"**🤖 构建AI科学家** → :doc:`building_ai_scientists/index` - "
+"从LLM、推理模型和智能体系统创建AI研究助手"
+
+#: ../../guide/index.rst:45 dd2ef84d38744c38af8bffa8e16a5023
+msgid ""
+"**🖥️ Claude Desktop** → :doc:`building_ai_scientists/claude_desktop` - "
+"Integrate ToolUniverse with Claude Desktop App through MCP"
+msgstr ""
+"**🖥️ Claude Desktop** → :doc:`building_ai_scientists/claude_desktop` - "
+"通过MCP将ToolUniverse与Claude Desktop App集成"
+
+#: ../../guide/index.rst:46 447e984c51f84eb98f4dc155e97de13e
+msgid ""
+"**💻 Claude Code** → :doc:`building_ai_scientists/claude_code` - Build AI "
+"scientists using Claude Code environment"
+msgstr ""
+"**💻 Claude Code** → :doc:`building_ai_scientists/claude_code` - 使用Claude "
+"Code环境构建AI科学家"
+
+#: ../../guide/index.rst:47 685aae381cca46468536edb71340852d
+msgid ""
+"**🔮 Gemini CLI** → :doc:`building_ai_scientists/gemini_cli` - Command-line "
+"based scientific research with Gemini CLI"
+msgstr ""
+"**🔮 Gemini CLI** → :doc:`building_ai_scientists/gemini_cli` - 使用Gemini "
+"CLI进行基于命令行的科学研究"
+
+#: ../../guide/index.rst:48 dc1d70641d5c463f86a08cc783531eb8
+msgid ""
+"**🧠 Qwen Code** → :doc:`building_ai_scientists/qwen_code` - AI scientist "
+"integration with Qwen Code environment"
+msgstr ""
+"**🧠 Qwen Code** → :doc:`building_ai_scientists/qwen_code` - 与Qwen "
+"Code环境集成的AI科学家"
+
+#: ../../guide/index.rst:49 6b4c99c20a8d44e2a04f7d01ef3ef396
+msgid ""
+"**⚡ Codex CLI** → :doc:`building_ai_scientists/codex_cli` - Terminal-based "
+"AI scientist with Codex CLI"
+msgstr ""
+"**⚡ Codex CLI** → :doc:`building_ai_scientists/codex_cli` - 使用Codex "
+"CLI的基于终端的AI科学家"
+
+#: ../../guide/index.rst:50 ffbd83013a5e45a68fe840e78ee8ce72
+msgid ""
+"**🎯 ChatGPT API** → :doc:`building_ai_scientists/chatgpt_api` - Programmatic"
+" scientific research with ChatGPT function calling"
+msgstr ""
+"**🎯 ChatGPT API** → :doc:`building_ai_scientists/chatgpt_api` - "
+"使用ChatGPT函数调用的程序化科学研究"
+
+#: ../../guide/index.rst:53 d5b8c4f303a54f6f98bb6e3d48ac4ba1
+msgid "Advanced Features"
+msgstr "高级功能"
+
+#: ../../guide/index.rst:55 421c2ec18e34418998dbac65985d6a2d
+msgid ""
+"**🔗 Hooks System** → :doc:`hooks/index` - Intelligent output processing with"
+" AI-powered hooks"
+msgstr "**🔗 钩子系统** → :doc:`hooks/index` - 使用AI驱动的钩子进行智能输出处理"
+
+#: ../../guide/index.rst:57 ede2bb8c63354e9bb9a6fe06d76461b4
+msgid ""
+"**🤖 SummarizationHook** → :doc:`hooks/summarization_hook` - AI-powered "
+"output summarization"
+msgstr "**🤖 摘要钩子** → :doc:`hooks/summarization_hook` - AI驱动的输出摘要"
+
+#: ../../guide/index.rst:58 07d7d55f8cd643cb8afac6b53621b087
+msgid ""
+"**💾 FileSaveHook** → :doc:`hooks/file_save_hook` - File-based output "
+"processing and archiving"
+msgstr "**💾 文件保存钩子** → :doc:`hooks/file_save_hook` - 基于文件的输出处理和归档"
+
+#: ../../guide/index.rst:59 1ccf97de6fb94f1d922aee55fd5a4a03
+msgid ""
+"**⚙️ Hook Configuration** → :doc:`hooks/hook_configuration` - Advanced "
+"configuration and customization"
+msgstr "**⚙️ 钩子配置** → :doc:`hooks/hook_configuration` - 高级配置和自定义"
+
+#: ../../guide/index.rst:60 b08bd44ae2b944998e917eccce090811
+msgid ""
+"**🖥️ Server & Stdio Hooks** → :doc:`hooks/server_stdio_hooks` - Using hooks "
+"with server and stdio interfaces"
+msgstr ""
+"**🖥️ 服务器和标准IO钩子** → :doc:`hooks/server_stdio_hooks` - 在服务器和标准IO接口中使用钩子"
+
+#: ../../guide/index.rst:63 48b2f2eb8d9048bf87e96df5740d712f
+msgid ""
+"**New to ToolUniverse?** Start with the :doc:`../quickstart` Tutorial for a "
+"5-minute introduction, then come back here for in-depth learning."
+msgstr "**ToolUniverse新手？** 从 :doc:`../quickstart` 教程开始，5分钟快速入门，然后回到这里深入学习。"

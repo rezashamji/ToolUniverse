@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.base_tool.rst:2 6b0db125c9ac4c8a8d493b60cf33e171
+msgid "tooluniverse.base\\_tool module"
+msgstr "tooluniverse.base_tool 模块"
+
+#: 8beac21301e84187968a3fb52d4a71bc 9320cd15f06d4767b96011687d4aa8f2
+#: a3be4f6a540948d0b784dc22639e16ff f543fc72f0c7410aae9cb845925221fe of
+#: tooluniverse.base_tool.AuthenticationError:1
+#: tooluniverse.base_tool.RateLimitError:1
+#: tooluniverse.base_tool.ToolExecutionError:1
+#: tooluniverse.base_tool.ValidationError:1
+msgid "Bases: :py:class:`Exception`"
+msgstr "基类：:py:class:`Exception`"
+
+#: 7eaaaaaba12347f19f12fb43504b39ee of
+#: tooluniverse.base_tool.ToolExecutionError:1
+msgid "Base exception for tool execution errors."
+msgstr "工具执行错误的基础异常。"
+
+#: a179cd9d21a84189afdaab3f9e560fc8 of
+#: tooluniverse.base_tool.ValidationError:1
+msgid "Exception raised when input validation fails."
+msgstr "输入验证失败时引发的异常。"
+
+#: 1f042c44548c4810ab2674451cdf6196 of
+#: tooluniverse.base_tool.AuthenticationError:1
+msgid "Exception raised when authentication fails."
+msgstr "认证失败时引发的异常。"
+
+#: d39c31704aa84af6bf44d725d32ae338 of tooluniverse.base_tool.RateLimitError:1
+msgid "Exception raised when API rate limit is exceeded."
+msgstr "当超过API速率限制时引发的异常。"
+
+#: 49532406fbc34be4bc5dd7b7cad58fbb of tooluniverse.base_tool.BaseTool:1
+msgid "Bases: :py:class:`object`"
+msgstr "基类：:py:class:`object`"
+
+#: c3bc01bc54a445478fbdc7d08c5dc104 of
+#: tooluniverse.base_tool.BaseTool.get_default_config_file:1
+msgid "Get the path to the default configuration file for this tool type."
+msgstr "获取此工具类型的默认配置文件路径。"
+
+#: ed3674df5d6440ff9b8b62d5a8473f0f of
+#: tooluniverse.base_tool.BaseTool.get_default_config_file:3
+msgid ""
+"This method uses a robust path resolution strategy that works across "
+"different installation scenarios:"
+msgstr "该方法采用了一种稳健的路径解析策略，适用于不同的安装场景："
+
+#: d4512aec1d654aae85a3495a556f0072 of
+#: tooluniverse.base_tool.BaseTool.get_default_config_file:6
+msgid ""
+"Installed packages: Uses importlib.resources for proper package resource "
+"access"
+msgstr "已安装的软件包：使用 importlib.resources 以实现正确的软件包资源访问"
+
+#: a4b61ed1559246f4ab2c45fbbb0a79c1 of
+#: tooluniverse.base_tool.BaseTool.get_default_config_file:8
+msgid "Development mode: Falls back to file-based path resolution"
+msgstr "开发模式：回退到基于文件的路径解析"
+
+#: 6855a68d4d9e4d569fe4044d6418f663 of
+#: tooluniverse.base_tool.BaseTool.get_default_config_file:9
+msgid "Legacy Python: Handles importlib.resources and importlib_resources"
+msgstr "遗留版 Python：处理 importlib.resources 和 importlib_resources"
+
+#: a092bfb408464810ad0f19e71bea9920 of
+#: tooluniverse.base_tool.BaseTool.get_default_config_file:11
+msgid "Override this method in subclasses to specify a custom defaults file."
+msgstr "在子类中重写此方法以指定自定义默认值文件。"
+
+#: ../../api/tooluniverse.base_tool.rst 58e558cb49764a0fab125079fcb63666
+msgid "Returns"
+msgstr "退货"
+
+#: 7eda91f3654c4151ac53d44ef568b7f6 of
+#: tooluniverse.base_tool.BaseTool.get_default_config_file:13
+msgid "Path or resource object pointing to the defaults file"
+msgstr "指向默认文件的路径或资源对象"
+
+#: f395432b64bf4071a51e307fdbb03231 of
+#: tooluniverse.base_tool.BaseTool.load_defaults_from_file:1
+msgid "Load defaults from the configuration file"
+msgstr "从配置文件加载默认设置"
+
+#: 400993b3e52c4697af5265bef1f8dda6 of
+#: tooluniverse.base_tool.BaseTool._apply_defaults:1
+msgid "Apply default configuration to the tool config"
+msgstr "将默认配置应用于工具配置"
+
+#: 42061cb3ae144d2f870e9f90ed0329ae of tooluniverse.base_tool.BaseTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 110c2b2feb2549ac861b570c7b9073a3 of tooluniverse.base_tool.BaseTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以便与大多数具体工具实现保持一致，这些工具通常期望输入为字典形式。"
+
+#: b496c4ce384c4d1d83f1a02f5d823c92 of
+#: tooluniverse.base_tool.BaseTool.get_required_parameters:1
+msgid ""
+"Retrieve required parameters from the endpoint definition. Returns: list: "
+"List of required parameters for the given endpoint."
+msgstr ""
+"从端点定义中获取所需参数。  \n"
+"返回值：  \n"
+"list：给定端点所需参数的列表。"

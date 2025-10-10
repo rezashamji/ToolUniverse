@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/chembl_tools.rst:2 e4d86c8798df49a6907360a2ab6478e5
+msgid "Chembl Tools"
+msgstr "Chembl 工具"
+
+#: ../../tools/chembl_tools.rst:4 36e382c06e3a4c7b9ecc6b17183ebb8a
+msgid ""
+"**Configuration File**: ``chembl_tools.json`` **Tool Type**: Local **Tools "
+"Count**: 1"
+msgstr ""
+"**配置文件**：``chembl_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：1"
+
+#: ../../tools/chembl_tools.rst:8 0aed5111f9bc4740b69b5ccaf3c45fdd
+msgid ""
+"This page contains all tools defined in the ``chembl_tools.json`` "
+"configuration file."
+msgstr "此页面包含在 ``chembl_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/chembl_tools.rst:11 750755d9fa5c4954a26bcc671d68aa03
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/chembl_tools.rst:14 17c63a3f6cb442e38b179f3e746c9dbf
+msgid "**ChEMBL_search_similar_molecules** (Type: ChEMBLTool)"
+msgstr "**ChEMBL_search_similar_molecules**（类型：ChEMBL工具）"
+
+#: ../../tools/chembl_tools.rst:16 a4f5b7c2287240a886862ef9bc117fed
+msgid ""
+"Search for molecules similar to a given SMILES, chembl_id, or compound or "
+"drug name, using the Ch..."
+msgstr "使用 Ch... 搜索与给定的 SMILES、chembl_id 或化合物/药物名称相似的分子。"
+
+#: ../../tools/chembl_tools.rst a1c5819c0fcd46f69b5e07cec237c21c
+msgid "ChEMBL_search_similar_molecules tool specification"
+msgstr "ChEMBL_search_similar_molecules 工具规格说明"
+
+#: ../../tools/chembl_tools.rst:20 878f796e9ac04c82b372ac859a8931a2
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/chembl_tools.rst:22 40ca76a45a364e57bc30cd1e8a64d227
+msgid "**Name**: ``ChEMBL_search_similar_molecules``"
+msgstr "**名称**：``ChEMBL_search_similar_molecules``"
+
+#: ../../tools/chembl_tools.rst:23 d9cb639c9df74760857b566dbccc9d2e
+msgid "**Type**: ``ChEMBLTool``"
+msgstr "**类型**：``ChEMBLTool``"
+
+#: ../../tools/chembl_tools.rst:24 6aab4bea27654b33b22be7a07654bd39
+msgid ""
+"**Description**: Search for molecules similar to a given SMILES, chembl_id, "
+"or compound or drug name, using the ChEMBL Web Services."
+msgstr "**描述**：使用ChEMBL Web服务，根据给定的SMILES、chembl_id或化合物或药物名称搜索相似的分子。"
+
+#: ../../tools/chembl_tools.rst:26 3c84432c360d4e4fadb8297c8b71221b
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/chembl_tools.rst:28 0d281b40c5834999bae124f637fba323
+msgid ""
+"``query`` (string) (required) SMILES string, chembl_id, or compound or drug "
+"name."
+msgstr "``query``（字符串）（必填）SMILES字符串、chembl_id、化合物名称或药物名称。"
+
+#: ../../tools/chembl_tools.rst:31 1fe50c86111349ad88c66abf187a39e0
+msgid ""
+"``similarity_threshold`` (integer) (optional) Similarity threshold (0–100)."
+msgstr "``similarity_threshold``（整数）（可选）相似度阈值（0–100）。"
+
+#: ../../tools/chembl_tools.rst:34 44c4833a371e49b88bd3f76b945c4aa1
+msgid ""
+"``max_results`` (integer) (optional) Maximum number of results to return."
+msgstr "``max_results``（整数）（可选）返回结果的最大数量。"
+
+#: ../../tools/chembl_tools.rst:37 56c09194ab01489ca248505e2c10fab9
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/chembl_tools.rst:51 79f9a45f4826454d926054278ecbde7f
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/chembl_tools.rst:53 f30ed47811024ffeb7001f1ac33b3f7a
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/chembl_tools.rst:54 d0755940692248da8d09d76afc37567e
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

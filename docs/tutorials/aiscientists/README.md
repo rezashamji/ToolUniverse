@@ -44,7 +44,7 @@ Model Context Protocol (MCP) 是一个开放的协议，用于连接 AI 应用�
 |---------|------|----------|
 | **MCPClientTool** | 通用 MCP 客户端 | 需要完整 MCP 功能 |
 | **MCPAutoLoaderTool** | 自动工具发现器 | 批量集成工具集 |
-| **MCPProxyTool** | 单工具代理 | 透明工具转发 |
+| **MCPProxyTool** | 单工具智能体 | 透明工具转发 |
 
 ## 示例配置预览
 
@@ -59,7 +59,7 @@ Model Context Protocol (MCP) 是一个开放的协议，用于连接 AI 应用�
 }
 ```
 
-### 专用工具代理
+### 专用工具智能体
 ```json
 {
     "name": "mcp_calculator",

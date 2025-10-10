@@ -3,6 +3,6 @@ tooluniverse.graphql\_tool module
 
 .. automodule:: tooluniverse.graphql_tool
    :members:
-   :private-members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
+   :private-members:

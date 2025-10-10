@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.crossref_tool.rst:2 a0c0d63ffa7b4207a4f2053381d07e22
+msgid "tooluniverse.crossref\\_tool module"
+msgstr "tooluniverse.crossref_tool 模块"
+
+#: 463e1f98f71047fba19eb957c5dc566b of
+#: tooluniverse.crossref_tool.CrossrefTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: b12faf3510f443eda9beafd5995993fa of
+#: tooluniverse.crossref_tool.CrossrefTool:1
+msgid "Search Crossref Works API for articles by keyword."
+msgstr "通过关键词搜索 Crossref Works API 中的文章。"
+
+#: a3744ff57f56497eb60cd1b56b20c081 of
+#: tooluniverse.crossref_tool.CrossrefTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 52691e8273e94fc0b28a39ae603a542d of
+#: tooluniverse.crossref_tool.CrossrefTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现对输入字典的要求。"

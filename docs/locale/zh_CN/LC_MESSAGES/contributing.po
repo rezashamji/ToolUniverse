@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contributing.rst:2 f0d17666db0e4090b4bf9aa82026495f
+msgid "Contributing to ToolUniverse"
+msgstr "为ToolUniverse做贡献"
+
+#: ../../contributing.rst:4 82af43f691e349c6a09814f91ac942c0
+msgid ""
+"We welcome contributions to ToolUniverse! This guide covers both general "
+"contributions and specialized tool contributions."
+msgstr ""
+"我们欢迎为ToolUniverse做贡献！本指南涵盖一般贡献和专门的工具贡献。"
+
+#: ../../contributing.rst:7 b05873461317492592a25033c9e7a5c0
+msgid "Quick Start"
+msgstr "快速开始"
+
+#: ../../contributing.rst:9 85e34b7fadf64938af7517d59ca826a2
+msgid "Fork and clone the repository"
+msgstr "Fork并克隆仓库"
+
+#: ../../contributing.rst:10 9f35ebeb8dcc44e786f2a681b823c156
+msgid "Set up development environment:"
+msgstr "设置开发环境："
+
+#: ../../contributing.rst:19 4c0c12851762415f91e9170e1e352eae
+msgid "Make your changes and test:"
+msgstr "进行修改并测试："
+
+#: ../../contributing.rst:27 e283cb90088745ff8c7fe21fe69720cc
+msgid "Submit a pull request"
+msgstr "提交拉取请求"
+
+#: ../../contributing.rst:30 479bc3a99237407b904d05140a1427d5
+msgid "Development Standards"
+msgstr "开发标准"
+
+#: ../../contributing.rst:33 1682744808b54ec794a0593abf1bc9f3
+msgid "Code Style"
+msgstr "代码风格"
+
+#: ../../contributing.rst:35 86ce64934e62474b9b27a65b08bd8192
+msgid "Use Black for formatting: ``black src/tooluniverse/``"
+msgstr "使用Black进行格式化：``black src/tooluniverse/``"
+
+#: ../../contributing.rst:36 023244f27a26465d901d7959c86d509c
+msgid "Follow PEP 8 guidelines"
+msgstr "遵循PEP 8指南"
+
+#: ../../contributing.rst:37 7405e70cca0b4f809d5f21db5469482b
+msgid "Include type hints for all new code"
+msgstr "为所有新代码包含类型提示"
+
+#: ../../contributing.rst:38 a3fa8244b6bf4a84963c88388360b912
+msgid "Write comprehensive docstrings"
+msgstr "编写全面的文档字符串"
+
+#: ../../contributing.rst:41 88cb280d5191407e8169c16175ebd6e3
+msgid "Testing"
+msgstr "测试"
+
+#: ../../contributing.rst:43 b5ef57ac28244e9a9291d2a12fb5f133
+msgid "Write tests for all new functionality"
+msgstr "为所有新功能编写测试"
+
+#: ../../contributing.rst:44 d346964c5a334a35a2aa3122d3123378
+msgid "Aim for >90% test coverage"
+msgstr "目标测试覆盖率>90%"
+
+#: ../../contributing.rst:45 bb9f3da82afc4ebbb5e9619fabf6cf02
+msgid "Run tests with: ``pytest --cov=tooluniverse``"
+msgstr "使用以下命令运行测试：``pytest --cov=tooluniverse``"
+
+#: ../../contributing.rst:48 ../../contributing.rst:212
+#: 909643fba4844c8cb8b7b5dbbd332faf 90ef6eaf53e7470cbe6d2ed5fdeaff2d
+msgid "Documentation"
+msgstr "文档"
+
+#: ../../contributing.rst:50 4d588a5f4afb44709266b01c26bbc9ab
+msgid "Document all public APIs"
+msgstr "记录所有公共API"
+
+#: ../../contributing.rst:51 d937910394e642efac7a121a4f7df94c
+msgid "Include usage examples"
+msgstr "包含使用示例"
+
+#: ../../contributing.rst:52 154614ab4f904bf7a057438f51eccadd
+msgid "Update guides for new features"
+msgstr "为新功能更新指南"
+
+#: ../../contributing.rst:53 1cf3bb5a3554468bb79d7d6752c7ebd2
+msgid "Use Google-style docstrings"
+msgstr "使用Google风格的文档字符串"
+
+#: ../../contributing.rst:56 1baa5413f08a48c886e4f6e67052ac2f
+msgid "Tool Contributions"
+msgstr "工具贡献"
+
+#: ../../contributing.rst:59 56515c50620b47f79ebd5a4aa9ce7b30
+msgid "Adding New Tools"
+msgstr "添加新工具"
+
+#: ../../contributing.rst:61 e0d68a176527485386b638979a9e7211
+msgid ""
+"ToolUniverse supports both local and remote tools. Here's how to add a "
+"new tool:"
+msgstr ""
+"ToolUniverse支持本地和远程工具。以下是如何添加新工具："
+
+#: ../../contributing.rst:64 73cf3666c3954ca59742e8b445715142
+msgid "Local Tool Example"
+msgstr "本地工具示例"
+
+#: ../../contributing.rst:117 114ccaa4d0dd4bd9983360e2d1be36bb
+msgid "Remote Tool Example"
+msgstr "远程工具示例"
+
+#: ../../contributing.rst:119 7a6140f82bb34cba8f0b818a42d53773
+msgid "For remote tools, create an MCP server:"
+msgstr "对于远程工具，创建MCP服务器："
+
+#: ../../contributing.rst:152 0636ae9b158b40e1a17803c0c6ff5a64
+msgid "Then create a client configuration file:"
+msgstr "然后创建客户端配置文件："
+
+#: ../../contributing.rst:186 3845400a56034ff9bbd8554010d1a8ec
+msgid "Testing Your Tool"
+msgstr "测试您的工具"
+
+#: ../../contributing.rst:188 698616a4c9e04e9b89428453dfdb8af9
+msgid "Create tests for your tool:"
+msgstr "为您的工具创建测试："
+
+#: ../../contributing.rst:214 4b89bf57dc7145be9677f80e3cb15121
+msgid "Create documentation for your tool:"
+msgstr "为您的工具创建文档："
+
+#: ../../contributing.rst:244 b2bcf3bba16441918df21f44d19f1064
+msgid "Contributing Workflow"
+msgstr "贡献工作流程"
+
+#: ../../contributing.rst:246 91a5721d7e534afbb7c048e2da320f7e
+msgid "Create a feature branch:"
+msgstr "创建功能分支："
+
+#: ../../contributing.rst:252 e350602cdb6249f3b4d06d92131bc6c0
+msgid "Make your changes and commit:"
+msgstr "进行修改并提交："
+
+#: ../../contributing.rst:263 b62cda0efe69440590fbe357d525e803
+msgid "Push and create a pull request:"
+msgstr "推送并创建拉取请求："
+
+#: ../../contributing.rst:270 6641c282aa0c4235b4441c0f245fb1c6
+msgid "Commit Types"
+msgstr "提交类型"
+
+#: ../../contributing.rst:272 156725d492c54e64a35327c0f78f59ef
+msgid "``feat``: New features"
+msgstr "``feat``: 新功能"
+
+#: ../../contributing.rst:273 7a64b8fa08fb41cdbf213ace7dead832
+msgid "``fix``: Bug fixes"
+msgstr "``fix``: 错误修复"
+
+#: ../../contributing.rst:274 8dda3bfd8f1a4550950cb024ef62977e
+msgid "``docs``: Documentation updates"
+msgstr "``docs``: 文档更新"
+
+#: ../../contributing.rst:275 cd38cdc7ff7b4958988a0b0f2c21df55
+msgid "``test``: Test additions or modifications"
+msgstr "``test``: 测试添加或修改"
+
+#: ../../contributing.rst:276 2334a201f5104a5782fd0d9348643eaf
+msgid "``refactor``: Code refactoring"
+msgstr "``refactor``: 代码重构"
+
+#: ../../contributing.rst:277 4467669fe7ea4865b4d9105835857c36
+msgid "``style``: Code style changes"
+msgstr "``style``: 代码风格更改"
+
+#: ../../contributing.rst:278 a2af26eb440d47e08f7e1483ae34115a
+msgid "``chore``: Build/maintenance tasks"
+msgstr "``chore``: 构建/维护任务"
+
+#: ../../contributing.rst:281 246e258eaf964dcf8146f22e0555cd38
+msgid "Review Process"
+msgstr "审查流程"
+
+#: ../../contributing.rst:283 fac1ef4e02b74e149e8c716b7604b81c
+msgid "All contributions go through:"
+msgstr "所有贡献都要经过："
+
+#: ../../contributing.rst:285 f14323b7a80143b3af8d39c204332fe3
+msgid "**Automated Checks**: CI runs tests, linting, and type checking"
+msgstr "**自动化检查**：CI运行测试、代码检查和类型检查"
+
+#: ../../contributing.rst:286 a799cb0679854eaea88b44b4d252c854
+msgid "**Manual Review**: Maintainers review code quality and design"
+msgstr "**手动审查**：维护者审查代码质量和设计"
+
+#: ../../contributing.rst:287 6c2310f15b9c4d72adcfd30fc091fb29
+msgid "**Documentation Review**: Ensure docs are clear and complete"
+msgstr "**文档审查**：确保文档清晰完整"
+
+#: ../../contributing.rst:288 bc40f4ec3b5b4d09a2560167a5b6a6fd
+msgid "**Testing**: Verify functionality works as expected"
+msgstr "**测试**：验证功能按预期工作"
+
+#: ../../contributing.rst:291 436574628257493a9d1cb87d03218834
+msgid "Getting Help"
+msgstr "获取帮助"
+
+#: ../../contributing.rst:293 8deb95ed05564ed09e8da87ffbb45bf9
+msgid "**GitHub Issues**: Bug reports and feature requests"
+msgstr "**GitHub Issues**：错误报告和功能请求"
+
+#: ../../contributing.rst:294 2436132b06ff467bbbff16cbfe2af6aa
+msgid "**GitHub Discussions**: General questions and ideas"
+msgstr "**GitHub Discussions**：一般问题和想法"
+
+#: ../../contributing.rst:295 1fe18b693efc45578bb426015374f8df
+msgid "**Email**: shanghuagao@gmail.com"
+msgstr "**邮箱**：shanghuagao@gmail.com"
+
+#: ../../contributing.rst:298 19edcaf01c024a3996aa7668884d0153
+msgid "Types of Contributions"
+msgstr "贡献类型"
+
+#: ../../contributing.rst:301 f2e90222f4fc4f2ea31b58ed3fb3c235
+msgid "Bug Reports"
+msgstr "错误报告"
+
+#: ../../contributing.rst:303 05b66abc6353465dbf7d4d12ecbb3f4d
+msgid ""
+"Include: - Python version and OS - ToolUniverse version - Minimal code to"
+" reproduce - Full error traceback - Expected vs actual behavior"
+msgstr ""
+"包含：- Python版本和操作系统 - ToolUniverse版本 - 重现的最小代码 - 完整的错误回溯 - 预期与实际行为"
+
+#: ../../contributing.rst:311 f5854ff09e044caa81936cd9d9a09bdf
+msgid "Feature Requests"
+msgstr "功能请求"
+
+#: ../../contributing.rst:313 51b96a9f216145c59427e99819434c78
+msgid ""
+"Provide: - Clear use case description - Proposed API design - "
+"Implementation suggestions - Impact on existing code"
+msgstr ""
+"提供：- 清晰的用例描述 - 提议的API设计 - 实现建议 - 对现有代码的影响"
+
+#: ../../contributing.rst:320 167151cdb70c4b67ae1642f26bb3d168
+msgid "Documentation Improvements"
+msgstr "文档改进"
+
+#: ../../contributing.rst:322 f4081a670cb740d1a48c2660030e5d79
+msgid ""
+"Help by: - Fixing typos and grammar - Adding missing examples - "
+"Clarifying confusing sections - Translating to other languages"
+msgstr ""
+"帮助：- 修复拼写和语法错误 - 添加缺失的示例 - 澄清令人困惑的部分 - 翻译成其他语言"
+
+#: ../../contributing.rst:328 350147ea5aa2420d8572d405f72dee1d
+msgid "Thank you for contributing to ToolUniverse! 🧬🔬"
+msgstr "感谢您为ToolUniverse做贡献！🧬🔬"
+

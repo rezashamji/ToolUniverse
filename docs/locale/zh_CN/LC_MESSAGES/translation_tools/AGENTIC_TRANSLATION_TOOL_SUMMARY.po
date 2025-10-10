@@ -1,0 +1,535 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:40-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:1
+#: 127e7bbd947e426194db87c2d5564b2e
+msgid "Agentic Translation Tool 实现总结"
+msgstr "Agentic 翻译工具实现总结"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:3
+#: 3d1bf790af904a4ea4af1640dfd06cf1
+msgid "概述"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:5
+#: f291e79149844d78ac15cf44248d6408
+msgid ""
+"我们成功创建了一个基于 ToolUniverse AgenticTool 框架的翻译工具，用于批量翻译 .po "
+"文件，**无需修改任何源代码**。这个解决方案完全在 `docs` 目录下实现，展示了如何利用 ToolUniverse 的 AgenticTool "
+"功能来构建强大的翻译工具。"
+msgstr ""
+"我们成功创建了一个基于 ToolUniverse AgenticTool 框架的翻译工具，用于批量翻译 .po "
+"文件，**无需修改任何源代码**。该解决方案完全实现于 `docs` 目录下，展示了如何利用 ToolUniverse 的 AgenticTool "
+"功能构建强大的翻译工具。"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:7
+#: 81bddd9c34b34da6878542e187df91ad
+msgid "实现的功能"
+msgstr "Implemented Features"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:9
+#: b85d345f0f184574b5518b62bcea84b2
+msgid "1. 核心翻译工具"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:11
+#: a299498ea6d248d4a1f9a3faa833634e
+msgid "`translation_agentic_tool.py`"
+msgstr "translation_agentic_tool.py"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:12
+#: 8a4b20dc2291414a88af2fb75c9ada7c
+msgid "**功能**：完整的演示脚本，展示如何使用 AgenticTool"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:13
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:21
+#: b3a9432700534e2ab4171d3050c8776a b9b67a2b1bb7485a87db233c32700931
+msgid "**特点**："
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:14
+#: 7628ff80705140d89b8480eece1d095e
+msgid "使用 ToolUniverse 的 AgenticTool 框架"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:15
+#: eb3f73db62904483a72b7d57ff920da1
+msgid "智能翻译，保持技术术语一致性"
+msgstr "智能翻译，确保技术术语的一致性"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:16
+#: 6edff6c7362d4fc3905ed92e1ae7098b
+msgid "支持上下文感知翻译"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:17
+#: d2b6ead6a4374c98baaef505115462c5
+msgid "完整的错误处理和日志记录"
+msgstr "完整的错误处理与日志记录"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:19
+#: fc52b487d6ab449aade1742fbc309baf
+msgid "`batch_translate_po.py`"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:20
+#: ef2a12b292be4292b9d2aeee5d2d23ef
+msgid "**功能**：简化的批量翻译脚本，专门用于 .po 文件翻译"
+msgstr "**功能**：专为 .po 文件翻译设计的简化批量翻译脚本"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:22
+#: 5c99f953e0fc4f93a11361bbe5b47993
+msgid "命令行界面，易于使用"
+msgstr "命令行界面，操作简便"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:23
+#: a3f2e395467f46d9a91cec523f90b5d7
+msgid "支持单个文件和批量翻译"
+msgstr "支持单个文件及批量翻译"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:24
+#: d4e36d22d0e04feda90feaa47773f7b3
+msgid "翻译状态查看和统计"
+msgstr "翻译状态查看与统计"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:25
+#: 75723e5b22ef4a4c9dacf4f6f3bd9019
+msgid "可配置的翻译参数"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:27
+#: c47a02d760e74eb88cdfce915e205ce0
+msgid "2. 核心功能特性"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:29
+#: 1180baaf27494284a3dc14f071f5253d
+msgid "✅ 智能翻译"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:30
+#: 6103e4e03dab456d9418158c6ce2321d
+msgid "使用 LLM 进行上下文感知的翻译"
+msgstr "使用大型语言模型（LLM）进行上下文感知翻译"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:31
+#: aae5bf999a1c480d9d29f4d0a154355b
+msgid "保持技术术语一致性"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:32
+#: d0722b7208b14b879320608bfc7e8bc1
+msgid "支持专业文档翻译"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:34
+#: 57b7f74d3dd84294a6b2673fc27b06bb
+msgid "✅ 批量处理"
+msgstr "✅ Batch Processing"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:35
+#: f1324a54fb254fe980d03b7826fe15e3
+msgid "支持目录级别的批量翻译"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:36
+#: ca40059087f6470b8a70bc55fd31d044
+msgid "可限制每个文件的翻译条目数量"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:37
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:142
+#: 17cba8505135442a9be2e5d695d377a2 69eb0578b0c94260af12e779aadfa81f
+msgid "实时进度显示"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:39
+#: cacadacfa96b4bb9b72f4b73409eed68
+msgid "✅ 状态管理"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:40
+#: fdf589adf2994ce38ebcd63f6061b4ed
+msgid "详细的翻译完成度统计"
+msgstr "Detailed translation completion statistics"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:41
+#: 3811fcba887149428d51927d2fda955b
+msgid "实时状态查看"
+msgstr "实时状态监控"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:42
+#: 34d8910530354a34bb58fdb0292b15f1
+msgid "支持断点续传"
+msgstr "Supports resume capability"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:44
+#: 47b94efd6e6b4a838792aa3069342d80
+msgid "✅ 错误处理"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:45
+#: dd44c8155e954bf4b0da08e314410a5d
+msgid "优雅处理翻译失败的情况"
+msgstr "优雅地处理翻译失败的情况"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:46
+#: 2de1dd86998d43419c8ff9fe1f1774c6
+msgid "保留原文以防翻译失败"
+msgstr "原文已是中文，无需翻译。"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:47
+#: a44e0c9a95994bd79709db69a7688064
+msgid "详细的错误日志"
+msgstr "Detailed error logs"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:49
+#: 5fad66580eec4db39b07e149f774b7a3
+msgid "技术实现"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:51
+#: 8228f74cf94e45baafd25bf0861c3336
+msgid "AgenticTool 配置"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:78
+#: 702f4409c1364b938d93ebd131f897db
+msgid "关键实现细节"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:80
+#: b4f6cea2871147d794eba9f830991103
+msgid "**正确的 AgenticTool 调用**："
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:85
+#: 82fd19bb8b4d4cf6a6971718d3b8c390
+msgid "**返回格式处理**："
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:91
+#: de47ffab4d414e82a847b2418dd6af1f
+msgid "**.po 文件处理**："
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:92
+#: 07e8b94d66ed454399650b21ae11b603
+msgid "使用 `polib` 库解析和更新 .po 文件"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:93
+#: 358c69b3cc25489cb2c3975c98d7cd45
+msgid "支持查找未翻译条目"
+msgstr "支持查找未翻译的条目"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:94
+#: d9270c84afd147748ee36c52d9dbe32f
+msgid "批量更新翻译内容"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:96
+#: 97305600a5fb4ff7af225b85eef8fcf3
+msgid "使用方法"
+msgstr "使用说明"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:98
+#: abdaf0a7171a480fa88b14c7db7efbfd
+msgid "基本用法"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:114
+#: 6c224bef04ec4c7ab1be0b120436aa42
+msgid "高级选项"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:126
+#: 091b2422223b4d69b05952cb8c301f9e
+msgid "测试结果"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:128
+#: c6fb9922a67b40f5b8b66f2bea851ff6
+msgid "功能测试"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:129
+#: e16edd4613274eb3876f52f2ca32069b
+msgid "✅ 翻译工具初始化成功"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:130
+#: 0794dfe33f96416b8ad5ebedbb733637
+msgid "✅ 单个文本翻译正常工作"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:131
+#: 0de720e13a5e4f3487e0d7849cadbeab
+msgid "✅ .po 文件状态查看正常"
+msgstr "✅ .po 文件状态检查正常"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:132
+#: ff04888de09e46858bdb470a8ed494f7
+msgid "✅ 批量翻译功能正常"
+msgstr "✅ 批量翻译功能运行正常"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:133
+#: bc1de24ae2c04956a8dbb15ab78d0691
+msgid "✅ 错误处理机制有效"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:135
+#: 3a2c76b91d8e4bb59fb62e83b936a509
+msgid "翻译质量"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:136
+#: 486a5d4a11244aff9a1166a988bb2309
+msgid "测试翻译：\"Hello World\" → \"你好，世界\""
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:137
+#: 95e8eff18a044148ae89ebb76b90f2fa
+msgid "技术文档翻译质量良好"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:138
+#: 2caaed0671ae4d548f41ba8fc266ec2f
+msgid "保持术语一致性"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:140
+#: bdf0c985d7b14cc596e9c1cbe06727ce
+msgid "性能表现"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:141
+#: 80cb8b4111cf45669fa9c99d79661ad6
+msgid "支持大规模批量翻译（229个.po文件）"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:143
+#: dbe47c9af2974143859c9604f14ed078
+msgid "内存使用合理"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:145
+#: 675cd463bf0e4269995d531ee7825d26
+msgid "文件结构"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:159
+#: 2d2efc052d58494bb2d907b87a355ba5
+msgid "优势特点"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:161
+#: 1e10eb5e81864f7cb9908ef86a1fb037
+msgid "1. 无需修改源代码"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:162
+#: 7f1834c3f92c4f2c9226f484b11f5587
+msgid "完全在 `docs` 目录下实现"
+msgstr "完全在 `docs` 目录中实现"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:163
+#: 33c593f445ab48e596d59dd6b02eb0b4
+msgid "不修改 ToolUniverse 核心代码"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:164
+#: 656d344342974757a13b7e44883a1f72
+msgid "易于维护和更新"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:166
+#: 7bc4bb6b1f8e4805b0d46188463b2bf9
+msgid "2. 利用现有框架"
+msgstr "2. 使用现有框架"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:167
+#: b8428992e7dc4cf6a74831ff139b56b1
+msgid "充分利用 ToolUniverse 的 AgenticTool 功能"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:168
+#: b61008dbddaf4c60861ff28e9dd49518
+msgid "遵循框架设计原则"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:169
+#: ed1a6cb9c5ec470585aa809f7fe1fb58
+msgid "易于扩展和定制"
+msgstr "易于扩展和自定义"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:171
+#: 9ab19c6232ba49e2b824c28e86cbe5fd
+msgid "3. 生产就绪"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:172
+#: 54d410a83a074e17a8526f1eb25efdd3
+msgid "完整的错误处理"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:173
+#: 49e9c29f26f1484e9848323096eefb53
+msgid "详细的日志记录"
+msgstr "Detailed logging"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:174
+#: 25ab35f7c31b43379971ecb1ba480f5e
+msgid "支持大规模批量处理"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:176
+#: 287ccfce1645425e9dfe863498d701f5
+msgid "4. 用户友好"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:177
+#: 082d80f092a04f16a8f86df989de2777
+msgid "简单的命令行界面"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:178
+#: 212aaa06389e48669967281492ce3400
+msgid "详细的帮助信息"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:179
+#: 3a07988e75ae4caa993c5bfbb7ae96e3
+msgid "实时进度反馈"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:181
+#: 4452c5bbee7b4b8491ed1cde6fbb1cc6
+msgid "扩展可能性"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:183
+#: 1756d7921c6142e1909de1620fdaede0
+msgid "1. 支持更多语言"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:184
+#: 9c078d0f35df406c996fbff8a6800d5c
+msgid "修改 prompt 模板支持其他目标语言"
+msgstr "修改 prompt 模板以支持其他目标语言"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:185
+#: 529811721a7c4f8c87976e3df4926df8
+msgid "添加语言检测功能"
+msgstr "添加语言识别功能"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:186
+#: 340d0320aa4e49708d7e5afe8e7546b3
+msgid "支持多语言并行翻译"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:188
+#: 6c21cb7a47a04df2856f0ff913ae16ca
+msgid "2. 增强翻译质量"
+msgstr "2. 提升翻译质量"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:189
+#: 5cacd77262be467892a12252f7b9ed38
+msgid "添加术语词典支持"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:190
+#: d6e8d93d30354b64b49f251f72487ee5
+msgid "实现翻译记忆功能"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:191
+#: b0e366a478cd40f19890c25b747abf8b
+msgid "支持人工审核流程"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:193
+#: 7a474ae7200c4e0197208b3485145cad
+msgid "3. 集成更多功能"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:194
+#: fbe6cd1f731d48cca1dca04dfcdb191a
+msgid "支持其他文档格式（.rst, .md等）"
+msgstr "支持其他文档格式（.rst、.md 等）"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:195
+#: f076f680e5d048538af18e9a62ad8f2c
+msgid "添加翻译质量评估"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:196
+#: 44886304d5ed48b1a78e676017585ee1
+msgid "实现自动翻译工作流"
+msgstr "实现自动化翻译工作流程"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:198
+#: deae4658280b4f10b47811f035848676
+msgid "总结"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:200
+#: 9005286c0b614bf087511b78a3deeded
+msgid ""
+"这个基于 AgenticTool 的翻译工具成功展示了如何在不修改源代码的情况下，利用 ToolUniverse 框架构建强大的翻译工具。它提供了："
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:202
+#: f9cde4ab8c644fc6a1dac20e115694d6
+msgid "🚀 **简单易用**：命令行界面，无需编程知识"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:203
+#: 02d8d0b3989047f58147720fafe74a99
+msgid "🔧 **高度可配置**：支持多种参数和选项"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:204
+#: 4fb746526b704ee3bb16b76e9d614672
+msgid "📊 **详细统计**：完整的翻译进度和状态信息"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:205
+#: 7b61ade9f7824096a5f70fd1753f3aa4
+msgid "🛡️ **错误处理**：优雅处理各种异常情况"
+msgstr "🛡️ **错误处理**：优雅地处理各种异常情况"
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:206
+#: 1f338060717d4b79b6095db9725f46ae
+msgid "🔄 **批量处理**：支持大规模翻译任务"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:207
+#: 56d5eceb253c42729f4bfd79986b54a9
+msgid "🎯 **智能翻译**：使用 LLM 进行高质量翻译"
+msgstr ""
+
+#: ../../translation_tools/AGENTIC_TRANSLATION_TOOL_SUMMARY.md:209
+#: 48e8a5f33d9a474493fb5014890c9db7
+msgid "这个实现为 ToolUniverse 社区提供了一个很好的示例，展示了如何利用框架的 AgenticTool 功能来解决实际的翻译需求。"
+msgstr "这个实现为 ToolUniverse 社区提供了一个极佳的示例，展示了如何利用框架的 AgenticTool 功能来解决实际的翻译需求。"

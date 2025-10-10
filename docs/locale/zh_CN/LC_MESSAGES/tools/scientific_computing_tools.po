@@ -1,0 +1,673 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/scientific_computing_tools.rst:2
+#: 59b379b13c7b419d92d8db0121d25b7c
+msgid "Scientific Computing Tools"
+msgstr "科学计算工具"
+
+#: ../../tools/scientific_computing_tools.rst:4
+#: aec3649e871345cfba76f9bf4c62c2ee
+msgid ""
+"**Configuration File**: ``packages/scientific_computing_tools.json`` **Tool "
+"Type**: Local **Tools Count**: 16"
+msgstr ""
+"**配置文件**：``packages/scientific_computing_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：16"
+
+#: ../../tools/scientific_computing_tools.rst:8
+#: 872800f48faa468495f68011d4a9e96d
+msgid ""
+"This page contains all tools defined in the "
+"``scientific_computing_tools.json`` configuration file."
+msgstr "此页面包含在 ``scientific_computing_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/scientific_computing_tools.rst:11
+#: 05ac61894fe64563a96352efee6be706
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/scientific_computing_tools.rst:14
+#: ad1f123c4230416b8df796ae21091620
+msgid "**get_cooler_info** (Type: PackageTool)"
+msgstr "**get_cooler_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:16
+#: e5dc6ccee6b944eb91e1a3548bba56a9
+msgid ""
+"Get comprehensive information about Cooler – sparse Hi-C contact matrix "
+"storage"
+msgstr "获取有关 Cooler —— 稀疏 Hi-C 联系矩阵存储的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst e9a63960b9bc4e578df35f85b63afa09
+msgid "get_cooler_info tool specification"
+msgstr "get_cooler_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:20
+#: ../../tools/scientific_computing_tools.rst:50
+#: ../../tools/scientific_computing_tools.rst:79
+#: ../../tools/scientific_computing_tools.rst:108
+#: ../../tools/scientific_computing_tools.rst:139
+#: ../../tools/scientific_computing_tools.rst:169
+#: ../../tools/scientific_computing_tools.rst:198
+#: ../../tools/scientific_computing_tools.rst:228
+#: ../../tools/scientific_computing_tools.rst:259
+#: ../../tools/scientific_computing_tools.rst:289
+#: ../../tools/scientific_computing_tools.rst:318
+#: ../../tools/scientific_computing_tools.rst:349
+#: ../../tools/scientific_computing_tools.rst:380
+#: ../../tools/scientific_computing_tools.rst:411
+#: ../../tools/scientific_computing_tools.rst:441
+#: ../../tools/scientific_computing_tools.rst:470
+#: 002fe583354e4ace990fc253d88b597e 0927780f89104e99bfe9db312ad18590
+#: 19de5426fbb94572adf9ba97e395143b 46675f232da14c31ba374741cd981ee2
+#: 494e03d000b640d5b815a1927bf8329d 6ed945d39c5242d8a79628020ef7f801
+#: 778e7971de1c4c709872605ab4e8ce84 98b9168c64504997865741d2febdeebc
+#: 98d6553f75f14544b3e7d5ccbc8ba6d1 9ab9dbdcc33743fe80885b11b5c7fbef
+#: 9b5511fe023e4334a151af306d876158 bfd6bcddcdb34ade98989b807daedbea
+#: c9dcd33d1a3546cdaf18dc5e68260c05 e885e1c0058145629bb5a373b350d538
+#: eb3642af0e5d4a4287c17757e078e6bd fcfd1a166a854232ae775c72b9e4803a
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/scientific_computing_tools.rst:22
+#: 18f0f5772b674299951800f0e02b0f12
+msgid "**Name**: ``get_cooler_info``"
+msgstr "**名称**：``get_cooler_info``"
+
+#: ../../tools/scientific_computing_tools.rst:23
+#: ../../tools/scientific_computing_tools.rst:53
+#: ../../tools/scientific_computing_tools.rst:82
+#: ../../tools/scientific_computing_tools.rst:111
+#: ../../tools/scientific_computing_tools.rst:142
+#: ../../tools/scientific_computing_tools.rst:172
+#: ../../tools/scientific_computing_tools.rst:201
+#: ../../tools/scientific_computing_tools.rst:231
+#: ../../tools/scientific_computing_tools.rst:262
+#: ../../tools/scientific_computing_tools.rst:292
+#: ../../tools/scientific_computing_tools.rst:321
+#: ../../tools/scientific_computing_tools.rst:352
+#: ../../tools/scientific_computing_tools.rst:383
+#: ../../tools/scientific_computing_tools.rst:414
+#: ../../tools/scientific_computing_tools.rst:444
+#: ../../tools/scientific_computing_tools.rst:473
+#: 019ceb3f53e74dc7970acd7f05394aee 06a96211018543538c669fc64554e6c3
+#: 0c77abd5488a4237b2b61024ac25286c 0cf00bd545594131abbc71cc6943595a
+#: 2720155528ec40cc9da40a41fac24ab7 2dc7dfb877fc49de8e0fdbe0948f6e45
+#: 30807904fa48479abea9f9db0b66d535 64b0d0a0675247acbbe0fb0b71c6457e
+#: 80815b113a6a449d90ddd373cdc4932c 85c0499a0afc414897f0130a5520d91b
+#: 966a71b962294d008f43a90e322acd6b a0ca04cf54de4ee4a5458f2ff4c152db
+#: c7241a4499f14707a105dc19b6b162a4 c74ca14f420a4116a8681305bbcde65f
+#: c812e2af97224bbaac55c1ca36df4918 e3c1c7077bc240a5a33893e0ce6687c7
+msgid "**Type**: ``PackageTool``"
+msgstr "**类型**：``PackageTool``"
+
+#: ../../tools/scientific_computing_tools.rst:24
+#: 100306f1588847c08171374f8aabac8e
+msgid ""
+"**Description**: Get comprehensive information about Cooler – sparse Hi-C "
+"contact matrix storage"
+msgstr "**描述**：获取有关Cooler——稀疏Hi-C接触矩阵存储的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst:26
+#: ../../tools/scientific_computing_tools.rst:56
+#: ../../tools/scientific_computing_tools.rst:85
+#: ../../tools/scientific_computing_tools.rst:114
+#: ../../tools/scientific_computing_tools.rst:145
+#: ../../tools/scientific_computing_tools.rst:175
+#: ../../tools/scientific_computing_tools.rst:204
+#: ../../tools/scientific_computing_tools.rst:234
+#: ../../tools/scientific_computing_tools.rst:265
+#: ../../tools/scientific_computing_tools.rst:295
+#: ../../tools/scientific_computing_tools.rst:324
+#: ../../tools/scientific_computing_tools.rst:355
+#: ../../tools/scientific_computing_tools.rst:386
+#: ../../tools/scientific_computing_tools.rst:417
+#: ../../tools/scientific_computing_tools.rst:447
+#: ../../tools/scientific_computing_tools.rst:476
+#: 0d7458ec5326405d991f491ac35f6ad1 1e85d0aa9d5143a29bb823ba24c7e16b
+#: 1fb6a016e8d245f5a3b33ffe0f43634f 2ad539d6cded497caaa0f0be0675ce56
+#: 339f79340ceb487288f2e23c329d85f7 4879896e84c54b129b21a73229d6b038
+#: 5d37b86bf4704f3cb3fcaa75ab227cef 5e333e3ece794365b66eca07393e0607
+#: 76f87bded4df468ca082dbd73dd97506 7a7bcd75289a42bd857919279a0aad69
+#: 92c66ab121b243ac9c13857acdc312ca c34e2f2cc52c40aeb9603b335aff7cb7
+#: daf3cc78d7754e69930a8d428088a55d ecd8b973a36b47638cd24820c270d33d
+#: f1f654b7f57d4fcb9e71fa90705c5995 f8c3c5d9f6d641bb803be56f6e573895
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/scientific_computing_tools.rst:28
+#: ../../tools/scientific_computing_tools.rst:147
+#: ../../tools/scientific_computing_tools.rst:206
+#: ../../tools/scientific_computing_tools.rst:267
+#: ../../tools/scientific_computing_tools.rst:419
+#: 44bd587948ae42a6b8d3765880dbbed9 63d466789de04f8c8d2a183b2c4fc278
+#: 8560fc116d78446486b749318fe5bc48 bed71a1425ea4d38a559c07f3d126169
+#: fd2edecd729040418c485b731e11dbf0
+msgid ""
+"``include_examples`` (boolean) (optional) Whether to include usage examples "
+"and quick start guide"
+msgstr "``include_examples``（布尔值）（可选）是否包含使用示例和快速入门指南"
+
+#: ../../tools/scientific_computing_tools.rst:31
+#: ../../tools/scientific_computing_tools.rst:60
+#: ../../tools/scientific_computing_tools.rst:89
+#: ../../tools/scientific_computing_tools.rst:119
+#: ../../tools/scientific_computing_tools.rst:150
+#: ../../tools/scientific_computing_tools.rst:179
+#: ../../tools/scientific_computing_tools.rst:209
+#: ../../tools/scientific_computing_tools.rst:239
+#: ../../tools/scientific_computing_tools.rst:270
+#: ../../tools/scientific_computing_tools.rst:299
+#: ../../tools/scientific_computing_tools.rst:329
+#: ../../tools/scientific_computing_tools.rst:360
+#: ../../tools/scientific_computing_tools.rst:391
+#: ../../tools/scientific_computing_tools.rst:422
+#: ../../tools/scientific_computing_tools.rst:451
+#: ../../tools/scientific_computing_tools.rst:480
+#: 01390b567a17490297441bb08f204705 0452f6daad13415f926719b12631e809
+#: 0aeb3d580f9742da91bbfa3a34d9fa84 2fffbd650a2f436f8465243cf0a5df8f
+#: 3c714460cc7b44d8a8f7ed8b4ac49fac 528e5b5eef6d48e891551d8e487a98ee
+#: 566b6dd4a70149b3872c9ddde89cfda7 8a7987806e3d49978f0ebde2636cd8af
+#: 99d9d50111f948a58e8cb64db34c1336 9d62027214a54f6aaad59c589ddfa484
+#: b1f035de65904201b671f15c116fb9fc b319913a031e444db4447a1267b97447
+#: b7530ce766a648b08187bb19c9c3c3ec d136fc83bea94bd888e392f7d9ed4178
+#: e651c7494c784c928310f5e27eeec0e0 e8f549caacb94f54a9c2b6dc07a3e1a2
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/scientific_computing_tools.rst:44
+#: 356de423395c4fea8f2c744805a27d6b
+msgid "**get_cupy_info** (Type: PackageTool)"
+msgstr "**get_cupy_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:46
+#: 8b7b62ed29bd4f4bac91a1069d19489d
+msgid ""
+"Get information about the cupy package. NumPy-compatible array library "
+"accelerated with CUDA"
+msgstr "获取有关cupy包的信息。与NumPy兼容的数组库，使用CUDA加速。"
+
+#: ../../tools/scientific_computing_tools.rst faa5decce207480187effe03c149016d
+msgid "get_cupy_info tool specification"
+msgstr "get_cupy_info 工具规范"
+
+#: ../../tools/scientific_computing_tools.rst:52
+#: 4bb7ba04bf7d4df985d5b462da8b5843
+msgid "**Name**: ``get_cupy_info``"
+msgstr "**名称**: ``get_cupy_info``"
+
+#: ../../tools/scientific_computing_tools.rst:54
+#: d76818eb58974dfeb12b5bfe2dbe61c1
+msgid ""
+"**Description**: Get information about the cupy package. NumPy-compatible "
+"array library accelerated with CUDA"
+msgstr "**描述**：获取有关 cupy 包的信息。兼容 NumPy 的数组库，并通过 CUDA 加速"
+
+#: ../../tools/scientific_computing_tools.rst:58
+#: ../../tools/scientific_computing_tools.rst:87
+#: ../../tools/scientific_computing_tools.rst:177
+#: ../../tools/scientific_computing_tools.rst:297
+#: ../../tools/scientific_computing_tools.rst:449
+#: ../../tools/scientific_computing_tools.rst:478
+#: 189926cc23334eaaaea76c4a8999e6d6 6dc27fb15b6b473da3b50c76354e0650
+#: 8c11701bd2864d3ba4f959963d12ab45 c08c421f917e49d9a058ffe0e5ec0e5e
+#: d4da61a55f0045e0bdb6279a4480073e d72fe668715a43aba509e7daacadce28
+msgid "No parameters required."
+msgstr "无需参数。"
+
+#: ../../tools/scientific_computing_tools.rst:73
+#: c39e5f11b8974b7c980e8d6040da0061
+msgid "**get_dask_info** (Type: PackageTool)"
+msgstr "**get_dask_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:75
+#: 7097b257d3f74253841b90e7f78433fb
+msgid ""
+"Get information about the dask package. Parallel computing with task "
+"scheduling"
+msgstr "获取有关 dask 包的信息。通过任务调度实现并行计算"
+
+#: ../../tools/scientific_computing_tools.rst 22e1d2fb32894f0face6eb0ad82068a0
+msgid "get_dask_info tool specification"
+msgstr "get_dask_info 工具规范"
+
+#: ../../tools/scientific_computing_tools.rst:81
+#: c9d271b8d92e43fcbdef661e5d74eb27
+msgid "**Name**: ``get_dask_info``"
+msgstr "**名称**: ``get_dask_info``"
+
+#: ../../tools/scientific_computing_tools.rst:83
+#: 7de5ac9393524c4cb1aefea64be458bb
+msgid ""
+"**Description**: Get information about the dask package. Parallel computing "
+"with task scheduling"
+msgstr "**描述**：获取有关 dask 包的信息。通过任务调度实现并行计算"
+
+#: ../../tools/scientific_computing_tools.rst:102
+#: ffce5a50f06a43d3aea57f5b235d1944
+msgid "**get_flowutils_info** (Type: PackageTool)"
+msgstr "**get_flowutils_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:104
+#: 510aadce141c4794b328f084e3d3eda7
+msgid ""
+"Get comprehensive information about FlowUtils – flow cytometry utilities and"
+" algorithms"
+msgstr "获取关于 FlowUtils 的全面信息——流式细胞术工具和算法"
+
+#: ../../tools/scientific_computing_tools.rst a14fa0a7d7f8499c97f76f39214118f8
+msgid "get_flowutils_info tool specification"
+msgstr "get_flowutils_info 工具规范"
+
+#: ../../tools/scientific_computing_tools.rst:110
+#: 71386978e1584c03bc81d31b0f2d5bab
+msgid "**Name**: ``get_flowutils_info``"
+msgstr "**名称**: ``get_flowutils_info``"
+
+#: ../../tools/scientific_computing_tools.rst:112
+#: 5dd5e7c97fdc46fca748042cbae5cec9
+msgid ""
+"**Description**: Get comprehensive information about FlowUtils – flow "
+"cytometry utilities and algorithms"
+msgstr "**描述**：获取有关 FlowUtils 的全面信息——流式细胞术工具和算法"
+
+#: ../../tools/scientific_computing_tools.rst:116
+#: dc02266ad8134c29b5d5f96c12a346a0
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"FlowUtils"
+msgstr "``info_type``（字符串）（必填）要检索的关于 FlowUtils 的信息类型"
+
+#: ../../tools/scientific_computing_tools.rst:133
+#: fd852dc7a0ec4ecd94a12bf55832af8d
+msgid "**get_h5py_info** (Type: PackageTool)"
+msgstr "**get_h5py_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:135
+#: e84ed9d2100e4f13bb2ab77ba83efbea
+msgid "Get comprehensive information about h5py – HDF5 for Python"
+msgstr "获取关于 h5py —— Python 的 HDF5 的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst 62d4389e50ec435c9b0214918d6b2b72
+msgid "get_h5py_info tool specification"
+msgstr "get_h5py_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:141
+#: 812a84ab11524cbba1cfe7c5028f7303
+msgid "**Name**: ``get_h5py_info``"
+msgstr "**名称**：``get_h5py_info``"
+
+#: ../../tools/scientific_computing_tools.rst:143
+#: 33ea808e9ba541aebe8b509fbad40ac4
+msgid ""
+"**Description**: Get comprehensive information about h5py – HDF5 for Python"
+msgstr "**描述**：获取关于 h5py —— Python 的 HDF5 的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst:163
+#: b5723eebd530498b9b9f71b33313d59c
+msgid "**get_joblib_info** (Type: PackageTool)"
+msgstr "**get_joblib_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:165
+#: f7dec1eabab6457bbdd9eb893a30d613
+msgid ""
+"Get information about the joblib package. Lightweight pipelining with Python"
+" functions"
+msgstr "获取有关 joblib 包的信息。使用 Python 函数实现轻量级流水线处理"
+
+#: ../../tools/scientific_computing_tools.rst eea250a2198a42d9b634a7971658ef9d
+msgid "get_joblib_info tool specification"
+msgstr "get_joblib_info 工具规范"
+
+#: ../../tools/scientific_computing_tools.rst:171
+#: 8a92a6f14a404f00a0ef50d83c00da40
+msgid "**Name**: ``get_joblib_info``"
+msgstr "**名称**：``get_joblib_info``"
+
+#: ../../tools/scientific_computing_tools.rst:173
+#: 9494ecececcc407db8a8a40a50b19513
+msgid ""
+"**Description**: Get information about the joblib package. Lightweight "
+"pipelining with Python functions"
+msgstr "**描述**：获取有关 joblib 包的信息。使用 Python 函数实现轻量级流水线处理"
+
+#: ../../tools/scientific_computing_tools.rst:192
+#: efc5736de30f4f4dbad742df7c989510
+msgid "**get_numpy_info** (Type: PackageTool)"
+msgstr "**get_numpy_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:194
+#: e72547c18671412e9c52d37a9aa24996
+msgid ""
+"Get comprehensive information about NumPy - the fundamental package for "
+"scientific computing with..."
+msgstr "获取有关 NumPy 的全面信息——科学计算的基础包，包含..."
+
+#: ../../tools/scientific_computing_tools.rst 9a1c8c28760146dba7a02e6debb26697
+msgid "get_numpy_info tool specification"
+msgstr "get_numpy_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:200
+#: 11351898ed3245f59b16e69880e0bb92
+msgid "**Name**: ``get_numpy_info``"
+msgstr "**名称**：``get_numpy_info``"
+
+#: ../../tools/scientific_computing_tools.rst:202
+#: abfd2a16f5f344e690cbfe1b91f67e8c
+msgid ""
+"**Description**: Get comprehensive information about NumPy - the fundamental"
+" package for scientific computing with Python"
+msgstr "**描述**：获取关于 NumPy 的全面信息——Python 科学计算的基础包"
+
+#: ../../tools/scientific_computing_tools.rst:222
+#: 7a1eb1ca626b4600a0186dace4fbaba1
+msgid "**get_optlang_info** (Type: PackageTool)"
+msgstr "**get_optlang_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:224
+#: 452142e021204537b9e9fa3d353fbae0
+msgid ""
+"Get comprehensive information about optlang – optimization language for "
+"mathematical programming"
+msgstr "获取关于 optlang —— 数学规划优化语言的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst ace4edd78e654df08f9b454550e9dd00
+msgid "get_optlang_info tool specification"
+msgstr "get_optlang_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:230
+#: 9a3b74dfba514747ab7465998065d201
+msgid "**Name**: ``get_optlang_info``"
+msgstr "**名称**：``get_optlang_info``"
+
+#: ../../tools/scientific_computing_tools.rst:232
+#: b908dfed8b5a4986b4be8c1895b31f53
+msgid ""
+"**Description**: Get comprehensive information about optlang – optimization "
+"language for mathematical programming"
+msgstr "**描述**：获取关于 optlang —— 数学规划优化语言的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst:236
+#: 38b142f9523c433898efbae9c62020fb
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"optlang"
+msgstr "``info_type``（字符串）（必填）要检索的关于 optlang 的信息类型"
+
+#: ../../tools/scientific_computing_tools.rst:253
+#: 89ab0b4bafa04478b95abc372b228bac
+msgid "**get_pandas_info** (Type: PackageTool)"
+msgstr "**get_pandas_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:255
+#: eb79b58d8a3e4d969bf3949d07b54467
+msgid ""
+"Get comprehensive information about pandas - powerful data structures and "
+"data analysis tools for..."
+msgstr "获取关于 pandas 的全面信息——强大的数据结构和数据分析工具，用于..."
+
+#: ../../tools/scientific_computing_tools.rst 60411f97f2594cf1a859cf7a24b8de3d
+msgid "get_pandas_info tool specification"
+msgstr "get_pandas_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:261
+#: aff314a8a29b4efd9c5d207835c5a5a6
+msgid "**Name**: ``get_pandas_info``"
+msgstr "**名称**：``get_pandas_info``"
+
+#: ../../tools/scientific_computing_tools.rst:263
+#: 96edd68384c34cb0b775043e4d5cd412
+msgid ""
+"**Description**: Get comprehensive information about pandas - powerful data "
+"structures and data analysis tools for Python"
+msgstr "**描述**：获取有关 pandas 的全面信息——Python 强大的数据结构和数据分析工具"
+
+#: ../../tools/scientific_computing_tools.rst:283
+#: f3b45a157055466bb985fc79fb33a8a0
+msgid "**get_patsy_info** (Type: PackageTool)"
+msgstr "**get_patsy_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:285
+#: b3939934dbfc476aa70be58e0c7a1cbd
+msgid ""
+"Get information about the patsy package. Python library for describing "
+"statistical models"
+msgstr "获取有关 patsy 包的信息。用于描述统计模型的 Python 库"
+
+#: ../../tools/scientific_computing_tools.rst cf626ef83b61420284deb62578b73023
+msgid "get_patsy_info tool specification"
+msgstr "get_patsy_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:291
+#: 9f63747d4d9042f0b72b057bcf4788a6
+msgid "**Name**: ``get_patsy_info``"
+msgstr "**名称**：``get_patsy_info``"
+
+#: ../../tools/scientific_computing_tools.rst:293
+#: db0f2a6612bc4798b5e0cebcbe589c4a
+msgid ""
+"**Description**: Get information about the patsy package. Python library for"
+" describing statistical models"
+msgstr "**描述**：获取有关 patsy 包的信息。用于描述统计模型的 Python 库"
+
+#: ../../tools/scientific_computing_tools.rst:312
+#: fcd43d573dd84d2cb05028eb44bdedf9
+msgid "**get_scipy_info** (Type: PackageTool)"
+msgstr "**get_scipy_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:314
+#: 08a9c6ef094d4a469faf1561f9eecc38
+msgid ""
+"Get comprehensive information about SciPy – fundamental algorithms for "
+"scientific computing"
+msgstr "获取关于 SciPy 的全面信息——科学计算的基础算法"
+
+#: ../../tools/scientific_computing_tools.rst 2a4e5921a0ad445c803495df3f0cd35d
+msgid "get_scipy_info tool specification"
+msgstr "get_scipy_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:320
+#: 784f144c914f40cead4c75ddd33d8950
+msgid "**Name**: ``get_scipy_info``"
+msgstr "**名称**：``get_scipy_info``"
+
+#: ../../tools/scientific_computing_tools.rst:322
+#: 3bae94eda4a0488e9df95f74e40b98ef
+msgid ""
+"**Description**: Get comprehensive information about SciPy – fundamental "
+"algorithms for scientific computing"
+msgstr "**描述**：获取关于 SciPy 的全面信息——科学计算的基础算法"
+
+#: ../../tools/scientific_computing_tools.rst:326
+#: 7a982c9e74ae44f6857c74be61f11d23
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"SciPy"
+msgstr "``info_type``（字符串）（必填）要检索的关于 SciPy 的信息类型"
+
+#: ../../tools/scientific_computing_tools.rst:343
+#: a4aa34c50d2e4e618b11c1ee803354d2
+msgid "**get_sympy_info** (Type: PackageTool)"
+msgstr "**get_sympy_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:345
+#: 267988890a634da8994fe40180b3f27a
+msgid ""
+"Get comprehensive information about SymPy – symbolic mathematics library"
+msgstr "获取关于 SymPy —— 符号数学库的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst d94b68f1510b485d980142617fb3a3db
+msgid "get_sympy_info tool specification"
+msgstr "get_sympy_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:351
+#: 5c3d6e636686402581cba9ae9700953c
+msgid "**Name**: ``get_sympy_info``"
+msgstr "**名称**：``get_sympy_info``"
+
+#: ../../tools/scientific_computing_tools.rst:353
+#: a8fa6a563e354546b0d91273c6b4b283
+msgid ""
+"**Description**: Get comprehensive information about SymPy – symbolic "
+"mathematics library"
+msgstr "**描述**：获取关于 SymPy —— 符号数学库的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst:357
+#: c2d551c02a684f4a8ba2f6354e383b7e
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"SymPy"
+msgstr "``info_type``（字符串）（必填）要检索的关于 SymPy 的信息类型"
+
+#: ../../tools/scientific_computing_tools.rst:374
+#: ad3a48c1e42448f9b41459a2f798f344
+msgid "**get_tiledb_info** (Type: PackageTool)"
+msgstr "**get_tiledb_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:376
+#: 3dd05ab52e6a4376aeebdcd3fbaf9bdc
+msgid ""
+"Get comprehensive information about TileDB – modern database for array data"
+msgstr "获取关于 TileDB —— 现代数组数据数据库的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst 479e9ab6b16b4f29a10bec5d9ea0ab19
+msgid "get_tiledb_info tool specification"
+msgstr "get_tiledb_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:382
+#: f322d65673464323935ef271e6d4dc3b
+msgid "**Name**: ``get_tiledb_info``"
+msgstr "**名称**：``get_tiledb_info``"
+
+#: ../../tools/scientific_computing_tools.rst:384
+#: ac9f6477923243bdba192a74811e23c1
+msgid ""
+"**Description**: Get comprehensive information about TileDB – modern "
+"database for array data"
+msgstr "**描述**：获取关于 TileDB —— 现代数组数据数据库的全面信息"
+
+#: ../../tools/scientific_computing_tools.rst:388
+#: 340ae629880f4ddea8283b0d36cc33e8
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"TileDB"
+msgstr "``info_type``（字符串）（必填）要检索的关于 TileDB 的信息类型"
+
+#: ../../tools/scientific_computing_tools.rst:405
+#: 8291c61de6bd4de7bbf4dbf237daabbf
+msgid "**get_tqdm_info** (Type: PackageTool)"
+msgstr "**get_tqdm_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:407
+#: 2ee05505a5ad41c6a615c1d6296a3e22
+msgid ""
+"Get comprehensive information about tqdm – fast progress bars for Python"
+msgstr "获取有关 tqdm 的全面信息——适用于 Python 的快速进度条工具"
+
+#: ../../tools/scientific_computing_tools.rst 630424ebe16f4189969e18076b952f47
+msgid "get_tqdm_info tool specification"
+msgstr "get_tqdm_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:413
+#: 08c30ff051b643d3ae4cf972b2b3c9dd
+msgid "**Name**: ``get_tqdm_info``"
+msgstr "**名称**：``get_tqdm_info``"
+
+#: ../../tools/scientific_computing_tools.rst:415
+#: fb0ee16f0f0c4b9db170db8a75c6b64f
+msgid ""
+"**Description**: Get comprehensive information about tqdm – fast progress "
+"bars for Python"
+msgstr "**描述**：获取关于 tqdm 的全面信息——适用于 Python 的快速进度条工具"
+
+#: ../../tools/scientific_computing_tools.rst:435
+#: 2042aa5f72c3421e882fc7c26609102c
+msgid "**get_xarray_info** (Type: PackageTool)"
+msgstr "**get_xarray_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:437
+#: 962e8b06322d4753927b2c16aa52989c
+msgid ""
+"Get information about the xarray package. N-D labeled arrays and datasets in"
+" Python"
+msgstr "获取有关 xarray 包的信息。Python 中的 N 维带标签数组和数据集"
+
+#: ../../tools/scientific_computing_tools.rst 7306dce374084a179503e144fe8c585c
+msgid "get_xarray_info tool specification"
+msgstr "get_xarray_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:443
+#: c0de7fafc051496e941f5ae5735b8049
+msgid "**Name**: ``get_xarray_info``"
+msgstr "**名称**：``get_xarray_info``"
+
+#: ../../tools/scientific_computing_tools.rst:445
+#: c629d0cfb317401b80654a1ebafa0ff8
+msgid ""
+"**Description**: Get information about the xarray package. N-D labeled "
+"arrays and datasets in Python"
+msgstr "**描述**：获取有关 xarray 包的信息。Python 中的多维带标签数组和数据集"
+
+#: ../../tools/scientific_computing_tools.rst:464
+#: a8f29ff0ce7d41b98b72f67af29219b7
+msgid "**get_zarr_info** (Type: PackageTool)"
+msgstr "**get_zarr_info**（类型：PackageTool）"
+
+#: ../../tools/scientific_computing_tools.rst:466
+#: c5423c9d35e34edb9f346661a7a26ec1
+msgid ""
+"Get information about the zarr package. Chunked, compressed, N-dimensional "
+"arrays"
+msgstr "获取有关 zarr 包的信息。分块、压缩的 N 维数组"
+
+#: ../../tools/scientific_computing_tools.rst a7cb8490ac144617930e22f530f5f30b
+msgid "get_zarr_info tool specification"
+msgstr "get_zarr_info 工具规格说明"
+
+#: ../../tools/scientific_computing_tools.rst:472
+#: e8ead593e7c04e5787b4ce70e9248860
+msgid "**Name**: ``get_zarr_info``"
+msgstr "**名称**：``get_zarr_info``"
+
+#: ../../tools/scientific_computing_tools.rst:474
+#: 52c07d6655a04a78810cf83b9e7a81ae
+msgid ""
+"**Description**: Get information about the zarr package. Chunked, "
+"compressed, N-dimensional arrays"
+msgstr "**描述**：获取有关 zarr 包的信息。分块、压缩的 N 维数组"
+
+#: ../../tools/scientific_computing_tools.rst:493
+#: 9544d29e97e4456f9116424eb00824d0
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/scientific_computing_tools.rst:495
+#: fe156b5137664cfaa48ec927f724662b
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/scientific_computing_tools.rst:496
+#: 938dc6aa13a04c6499b3d325ec9436f2
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

@@ -1,0 +1,251 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/gene_ontology_tools.rst:2 274e2948c06f4498ad453b47801f355c
+msgid "Gene Ontology Tools"
+msgstr "基因本体工具"
+
+#: ../../tools/gene_ontology_tools.rst:4 9635d5522871420a847a90b37bb3c7a8
+msgid ""
+"**Configuration File**: ``gene_ontology_tools.json`` **Tool Type**: Local "
+"**Tools Count**: 5"
+msgstr ""
+"**配置文件**：``gene_ontology_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：5"
+
+#: ../../tools/gene_ontology_tools.rst:8 22317cfa37334fff80f44a5e3b649e9c
+msgid ""
+"This page contains all tools defined in the ``gene_ontology_tools.json`` "
+"configuration file."
+msgstr "此页面包含在 ``gene_ontology_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/gene_ontology_tools.rst:11 21f5df95617f405283a3cb422d7a5d26
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/gene_ontology_tools.rst:14 209a493b809f47bdb0b9113ddb2d4865
+msgid "**GO_get_annotations_for_gene** (Type: GeneOntologyTool)"
+msgstr "**GO_get_annotations_for_gene**（类型：GeneOntologyTool）"
+
+#: ../../tools/gene_ontology_tools.rst:16 b70d75ee5b114156b6a3b4f5992c57dc
+msgid ""
+"Finds all GO annotations for a specific gene/protein using GOlr search."
+msgstr "使用 GOlr 搜索查找特定基因/蛋白质的所有 GO 注释。"
+
+#: ../../tools/gene_ontology_tools.rst 8d3c6c3ae8cc433c800135a649556620
+msgid "GO_get_annotations_for_gene tool specification"
+msgstr "GO_get_annotations_for_gene 工具规范"
+
+#: ../../tools/gene_ontology_tools.rst:20
+#: ../../tools/gene_ontology_tools.rst:51
+#: ../../tools/gene_ontology_tools.rst:88
+#: ../../tools/gene_ontology_tools.rst:119
+#: ../../tools/gene_ontology_tools.rst:150 2cabbe3d7e164e1aae079b7888ca1ee0
+#: 5d615f21d08847838349e7a26bd393f4 6c51077cdd71415fa9240a032b526a33
+#: 8818eaf3251849fa8eb64a013c84f861 d6841e9d442c41b499755ceaef9695c5
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/gene_ontology_tools.rst:22 4dbba285b0b04a5a95a8b74026cbcf33
+msgid "**Name**: ``GO_get_annotations_for_gene``"
+msgstr "**名称**：``GO_get_annotations_for_gene``"
+
+#: ../../tools/gene_ontology_tools.rst:23
+#: ../../tools/gene_ontology_tools.rst:54
+#: ../../tools/gene_ontology_tools.rst:91
+#: ../../tools/gene_ontology_tools.rst:122
+#: ../../tools/gene_ontology_tools.rst:153 5b849ce3ce9c4bca9529a20295b0aec9
+#: 99dc21eb3a7a4348a4dcc328389b0a86 d075ba142e0147ceb326095ca02be787
+#: da2777043a224031ba5db4bd9f7c8e0a ecf3d3426fe24a14ae3d6d3fa9b1465f
+msgid "**Type**: ``GeneOntologyTool``"
+msgstr "**类型**：``GeneOntologyTool``"
+
+#: ../../tools/gene_ontology_tools.rst:24 9a4713526bda41d0851d7525a2cce017
+msgid ""
+"**Description**: Finds all GO annotations for a specific gene/protein using "
+"GOlr search."
+msgstr "**描述**：使用GOlr搜索查找特定基因/蛋白质的所有GO注释。"
+
+#: ../../tools/gene_ontology_tools.rst:26
+#: ../../tools/gene_ontology_tools.rst:57
+#: ../../tools/gene_ontology_tools.rst:94
+#: ../../tools/gene_ontology_tools.rst:125
+#: ../../tools/gene_ontology_tools.rst:156 29e1271d5a28499db00e49238b3d64c0
+#: 7894a05052a044f6ad5ff0efa7554ac0 9afe4852dfb748d9a8e9596a65c4e677
+#: a46b46af2fdd4b1286829c6534085c23 ea53b525148e4ab8bda7ac0ef7122113
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/gene_ontology_tools.rst:28 e98884fb285647be8a302c579ada928e
+msgid ""
+"``gene_id`` (string) (required) A gene identifier such as gene symbol (e.g.,"
+" 'TP53') or database ID."
+msgstr "``gene_id``（字符串）（必填）基因标识符，例如基因符号（如：'TP53'）或数据库ID。"
+
+#: ../../tools/gene_ontology_tools.rst:31
+#: ../../tools/gene_ontology_tools.rst:68
+#: ../../tools/gene_ontology_tools.rst:99
+#: ../../tools/gene_ontology_tools.rst:130
+#: ../../tools/gene_ontology_tools.rst:161 b408d8200e874ff6bb611e98228a9ce2
+#: b462c1fa987d4057addae0852d5b8374 d1570eafd4794f1397374eaf663f57c1
+#: e378f9ba1fc14c9c91b6b16fd3a7531b ee92b9c8aea94c0c9dafbca23ef1b659
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/gene_ontology_tools.rst:45 b95ab2b0118946519246301e9ddbafb3
+msgid "**GO_get_genes_for_term** (Type: GeneOntologyTool)"
+msgstr "**GO_get_genes_for_term**（类型：GeneOntologyTool）"
+
+#: ../../tools/gene_ontology_tools.rst:47 79c5c07c01e842f9b816e70b164f807c
+msgid ""
+"Finds all genes/proteins associated with a specific Gene Ontology term using"
+" the Biolink API."
+msgstr "使用 Biolink API 查找与特定 Gene Ontology 术语相关的所有基因/蛋白质。"
+
+#: ../../tools/gene_ontology_tools.rst b21df23a4af441c697baebed8d8491bd
+msgid "GO_get_genes_for_term tool specification"
+msgstr "GO_get_genes_for_term 工具规范"
+
+#: ../../tools/gene_ontology_tools.rst:53 3bd008957f4e48f69db24f9776dc5de7
+msgid "**Name**: ``GO_get_genes_for_term``"
+msgstr "**名称**: ``GO_get_genes_for_term``"
+
+#: ../../tools/gene_ontology_tools.rst:55 8e2e695628db4295a5c7d9eb9b2b464d
+msgid ""
+"**Description**: Finds all genes/proteins associated with a specific Gene "
+"Ontology term using the Biolink API."
+msgstr "**描述**：使用 Biolink API 查找与特定基因本体（Gene Ontology）术语相关的所有基因/蛋白质。"
+
+#: ../../tools/gene_ontology_tools.rst:59 65f3c767f42c4198adb40809bf601090
+msgid ""
+"``id`` (string) (required) The standard GO term ID, e.g., 'GO:0006915'."
+msgstr "``id``（字符串）（必填）标准的GO术语ID，例如：'GO:0006915'。"
+
+#: ../../tools/gene_ontology_tools.rst:62 c4b7b62c819440eea5fdac9115f84fe0
+msgid ""
+"``taxon`` (string) (optional) Optional species filter using a NCBI taxon ID."
+" For example, Human is 'NCBITaxon:9606', and Mouse is 'NCBITaxon:10090'."
+msgstr ""
+"``taxon``（字符串）（可选）使用 NCBI 分类单元 ID "
+"的可选物种过滤器。例如，人类为“NCBITaxon:9606”，小鼠为“NCBITaxon:10090”。"
+
+#: ../../tools/gene_ontology_tools.rst:65 a4e76c6f5bec4519883e44faccea6010
+msgid ""
+"``rows`` (integer) (optional) The number of genes to return. Default is 100."
+msgstr "``rows``（整数）（可选）返回的基因数量。默认值为100。"
+
+#: ../../tools/gene_ontology_tools.rst:82 d6f391f79daa40a8aeadcae317cdd9db
+msgid "**GO_get_term_by_id** (Type: GeneOntologyTool)"
+msgstr "**GO_get_term_by_id**（类型：GeneOntologyTool）"
+
+#: ../../tools/gene_ontology_tools.rst:84 76b0eb0c07644862831c2ad4c07619b3
+msgid "Retrieves basic GO term information by ID using GOlr search."
+msgstr "通过使用GOlr搜索，根据ID检索基本的GO术语信息。"
+
+#: ../../tools/gene_ontology_tools.rst ec7a783a1dab47cb8e8ed265982fdb1f
+msgid "GO_get_term_by_id tool specification"
+msgstr "GO_get_term_by_id 工具规范"
+
+#: ../../tools/gene_ontology_tools.rst:90 93c20fc03a8f452d8e1167f8419c8203
+msgid "**Name**: ``GO_get_term_by_id``"
+msgstr "**名称**: ``GO_get_term_by_id``"
+
+#: ../../tools/gene_ontology_tools.rst:92 b32da2ebc7324d21b6fe63fe8a99ceee
+msgid ""
+"**Description**: Retrieves basic GO term information by ID using GOlr "
+"search."
+msgstr "**描述**：通过使用GOlr搜索，根据ID检索基本的GO术语信息。"
+
+#: ../../tools/gene_ontology_tools.rst:96
+#: ../../tools/gene_ontology_tools.rst:127 1807e99b73954668a8c0c499ee6d6e30
+#: 4cade7fac02b4dfa994cce2319222879
+msgid ""
+"``id`` (string) (required) The standard GO term ID, e.g., 'GO:0006915' for "
+"apoptotic process."
+msgstr "``id``（字符串）（必填）标准的GO术语ID，例如“GO:0006915”表示凋亡过程。"
+
+#: ../../tools/gene_ontology_tools.rst:113 e88b5d96bf804b0eb773331c398e0efb
+msgid "**GO_get_term_details** (Type: GeneOntologyTool)"
+msgstr "**GO_get_term_details**（类型：GeneOntologyTool）"
+
+#: ../../tools/gene_ontology_tools.rst:115 facb126e13804968bc031b3735cdccc1
+msgid ""
+"Retrieves detailed information for a specific GO ID using the Biolink API, "
+"including definition, ..."
+msgstr "使用 Biolink API 检索特定 GO ID 的详细信息，包括定义，..."
+
+#: ../../tools/gene_ontology_tools.rst ae6ec47dcd4146ff856b1d1931a99b0d
+msgid "GO_get_term_details tool specification"
+msgstr "GO_get_term_details 工具规格说明"
+
+#: ../../tools/gene_ontology_tools.rst:121 e9513136c621414abd0d9df72d7a72b1
+msgid "**Name**: ``GO_get_term_details``"
+msgstr "**名称**：``GO_get_term_details``"
+
+#: ../../tools/gene_ontology_tools.rst:123 e597e87ca33f4ca39bde7ffcec433014
+msgid ""
+"**Description**: Retrieves detailed information for a specific GO ID using "
+"the Biolink API, including definition, synonyms, and annotations."
+msgstr "**描述**：使用 Biolink API 检索特定 GO ID 的详细信息，包括定义、同义词和注释。"
+
+#: ../../tools/gene_ontology_tools.rst:144 bfae3b41fee74f94b29bd7a7839ec495
+msgid "**GO_search_terms** (Type: GeneOntologyTool)"
+msgstr "**GO_search_terms**（类型：GeneOntologyTool）"
+
+#: ../../tools/gene_ontology_tools.rst:146 441df813c7244188adaaadc5ec8d6ae6
+msgid ""
+"Searches for Gene Ontology (GO) terms by a keyword using the GOlr search "
+"engine. Returns GO terms..."
+msgstr "使用 GOlr 搜索引擎通过关键词搜索基因本体（GO）术语。返回 GO 术语..."
+
+#: ../../tools/gene_ontology_tools.rst ca9099be248240fd9de7fd892dc66154
+msgid "GO_search_terms tool specification"
+msgstr "GO_search_terms 工具规格说明"
+
+#: ../../tools/gene_ontology_tools.rst:152 7aa60414f9b34d6ea2b711ac9a59846a
+msgid "**Name**: ``GO_search_terms``"
+msgstr "**名称**：``GO_search_terms``"
+
+#: ../../tools/gene_ontology_tools.rst:154 0b9b1fd8b08447a68aaea4f59f465886
+msgid ""
+"**Description**: Searches for Gene Ontology (GO) terms by a keyword using "
+"the GOlr search engine. Returns GO terms and related biological entities."
+msgstr "**描述**：使用 GOlr 搜索引擎通过关键词搜索基因本体（GO）术语。返回 GO 术语及相关生物实体。"
+
+#: ../../tools/gene_ontology_tools.rst:158 17e22941660a4381ad8d53c6e8092c88
+msgid ""
+"``query`` (string) (required) The keyword to search for, e.g., 'apoptosis' "
+"or 'kinase activity'."
+msgstr "``query``（字符串）（必填）用于搜索的关键词，例如“细胞凋亡”或“激酶活性”。"
+
+#: ../../tools/gene_ontology_tools.rst:175 7b1be1477109435b8b932594ddf4c703
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/gene_ontology_tools.rst:177 d037aa8fa0014852992648dca8f2066d
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/gene_ontology_tools.rst:178 f4b60664d6e3423e8488d8f7c1c1b755
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

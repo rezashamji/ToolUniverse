@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/url_fetch_tools.rst:2 e5f9224fee0d4918a250495a700dd352
+msgid "Url Fetch Tools"
+msgstr "URL 获取工具"
+
+#: ../../tools/url_fetch_tools.rst:4 d8e36bef6b884cabb4221fe8c489dfa3
+msgid ""
+"**Configuration File**: ``url_fetch_tools.json`` **Tool Type**: Local "
+"**Tools Count**: 2"
+msgstr ""
+"**配置文件**：``url_fetch_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：2"
+
+#: ../../tools/url_fetch_tools.rst:8 4946f456707e44a0a367e23150fcc8ed
+msgid ""
+"This page contains all tools defined in the ``url_fetch_tools.json`` "
+"configuration file."
+msgstr "此页面包含在 ``url_fetch_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/url_fetch_tools.rst:11 8ab942b4b8fe411d8ba6baf0d239111d
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/url_fetch_tools.rst:14 62bcee12d7af448d83d3a8952c3f4e12
+msgid "**get_webpage_text_from_url** (Type: URLToPDFTextTool)"
+msgstr "**get_webpage_text_from_url**（类型：URLToPDFTextTool）"
+
+#: ../../tools/url_fetch_tools.rst:16 8e89388952454f71897f8294713797eb
+msgid "Render a URL as PDF and extract its text (JavaScript supported)."
+msgstr "将 URL 渲染为 PDF 并提取其文本（支持 JavaScript）。"
+
+#: ../../tools/url_fetch_tools.rst 3960b53d355449b6a86e4a57195ceaea
+msgid "get_webpage_text_from_url tool specification"
+msgstr "get_webpage_text_from_url 工具规范"
+
+#: ../../tools/url_fetch_tools.rst:20 ../../tools/url_fetch_tools.rst:54
+#: a716e2e5b0724d6f9fbb27943e59bcb5 d7e15ad0b9b14b29a4290313e8c1500e
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/url_fetch_tools.rst:22 5dd8153729524fc4a927212edc3a6d6f
+msgid "**Name**: ``get_webpage_text_from_url``"
+msgstr "**名称**：``get_webpage_text_from_url``"
+
+#: ../../tools/url_fetch_tools.rst:23 df0358f342ab44b7a0bd99d2cf98137e
+msgid "**Type**: ``URLToPDFTextTool``"
+msgstr "**类型**：``URLToPDFTextTool``"
+
+#: ../../tools/url_fetch_tools.rst:24 30aef9376af9441b8dc49077c1f531fc
+msgid ""
+"**Description**: Render a URL as PDF and extract its text (JavaScript "
+"supported)."
+msgstr "**描述**：将 URL 渲染为 PDF 并提取其文本（支持 JavaScript）。"
+
+#: ../../tools/url_fetch_tools.rst:26 ../../tools/url_fetch_tools.rst:60
+#: 4ff31d85c7324e0c8e93f05cdb6f0dde d064751906cb4c918427e4f2fcd88835
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/url_fetch_tools.rst:28 a35cce878c1e4f90a3b6bec318efbb8b
+msgid "``url`` (string) (required) Webpage URL to fetch and render"
+msgstr "``url``（字符串）（必填）要获取和渲染的网页 URL"
+
+#: ../../tools/url_fetch_tools.rst:31 ../../tools/url_fetch_tools.rst:65
+#: b99a9267686947eb847a03c15d1efafd d7aa0f3d257f41b185f7b04f4787e756
+msgid "``timeout`` (integer) (optional) Request timeout in seconds"
+msgstr "``timeout``（整数）（可选）请求超时时间（单位：秒）"
+
+#: ../../tools/url_fetch_tools.rst:34 ../../tools/url_fetch_tools.rst:68
+#: 0c5fbad780f549eb8aa72e5092eab805 96eaf677cc6244fb8d3add0657e76bbb
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/url_fetch_tools.rst:48 323ca87662014094a9e9da66a2b71840
+msgid "**get_webpage_title** (Type: URLHTMLTagTool)"
+msgstr "**get_webpage_title**（类型：URLHTMLTagTool）"
+
+#: ../../tools/url_fetch_tools.rst:50 62474435bc404a4b9e65694a06460875
+msgid "Fetch a webpage and return the content of its <title> tag."
+msgstr "获取网页并返回其<title>标签的内容。"
+
+#: ../../tools/url_fetch_tools.rst 39bd18071ed14d84aafaa50cd80af940
+msgid "get_webpage_title tool specification"
+msgstr "get_webpage_title 工具规范"
+
+#: ../../tools/url_fetch_tools.rst:56 369f847ab0604228b5750f30bb52b9cf
+msgid "**Name**: ``get_webpage_title``"
+msgstr "**名称**: ``get_webpage_title``"
+
+#: ../../tools/url_fetch_tools.rst:57 0c25664405a048d880eb05f912e84f42
+msgid "**Type**: ``URLHTMLTagTool``"
+msgstr "**类型**: ``URLHTMLTagTool``"
+
+#: ../../tools/url_fetch_tools.rst:58 7f8169180eb24349b80c642f8c465bd1
+msgid ""
+"**Description**: Fetch a webpage and return the content of its <title> tag."
+msgstr "**描述**：获取网页并返回其<title>标签的内容。"
+
+#: ../../tools/url_fetch_tools.rst:62 3b375d5f68764392bf03fb29b6cfe0b0
+msgid ""
+"``url`` (string) (required) HTTP or HTTPS URL to fetch (e.g. "
+"https://www.example.com)"
+msgstr "``url``（字符串）（必填）要获取的 HTTP 或 HTTPS URL（例如：https://www.example.com）"
+
+#: ../../tools/url_fetch_tools.rst:82 573b75249b494edeae17be2208d95a21
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/url_fetch_tools.rst:84 83cc9649cd6f45acaec9df823a1faca3
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/url_fetch_tools.rst:85 3ec7df04b6f44ed4ad2d4007993d3c2b
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

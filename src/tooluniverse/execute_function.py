@@ -25,6 +25,7 @@ Constants:
 """
 
 import copy
+import inspect
 import json
 import random
 import string
@@ -1638,7 +1639,14 @@ class ToolUniverse:
         """
         return "".join(random.choices(string.ascii_letters + string.digits, k=9))
 
-    def run(self, fcall_str, return_message=False, verbose=True, format="llama"):
+    def run(
+        self,
+        fcall_str,
+        return_message=False,
+        verbose=True,
+        format="llama",
+        stream_callback=None,
+    ):
         """
         Execute function calls from input string or data.
 
@@ -1671,7 +1679,9 @@ class ToolUniverse:
                 # return the function call+result message with call id.
                 call_results = []
                 for i in range(len(function_call_json)):
-                    call_result = self.run_one_function(function_call_json[i])
+                    call_result = self.run_one_function(
+                        function_call_json[i], stream_callback=stream_callback
+                    )
                     call_id = self.call_id_gen()
                     function_call_json[i]["call_id"] = call_id
                     call_results.append(
@@ -1691,12 +1701,14 @@ class ToolUniverse:
                 ] + call_results
                 return revised_messages
             else:
-                return self.run_one_function(function_call_json)
+                return self.run_one_function(
+                    function_call_json, stream_callback=stream_callback
+                )
         else:
             error("Not a function call")
             return None
 
-    def run_one_function(self, function_call_json):
+    def run_one_function(self, function_call_json, stream_callback=None):
         """
         Execute a single function call.
 
@@ -1719,8 +1731,13 @@ class ToolUniverse:
         arguments = function_call_json["arguments"]
 
         # Execute the tool
+        tool_instance = None
+        tool_arguments = arguments
         if function_name in self.callable_functions:
-            result = self.callable_functions[function_name].run(arguments)
+            tool_instance = self.callable_functions[function_name]
+            result, tool_arguments = self._execute_tool_with_stream(
+                tool_instance, arguments, stream_callback
+            )
         else:
             if function_name in self.all_tool_dict:
                 self.logger.debug(
@@ -1729,7 +1746,10 @@ class ToolUniverse:
                 tool = self.init_tool(
                     self.all_tool_dict[function_name], add_to_cache=True
                 )
-                result = tool.run(arguments)
+                tool_instance = tool
+                result, tool_arguments = self._execute_tool_with_stream(
+                    tool_instance, arguments, stream_callback
+                )
             else:
                 return f"Tool '{function_name}' not found"
 
@@ -1738,16 +1758,57 @@ class ToolUniverse:
             context = {
                 "tool_name": function_name,
                 "tool_type": (
-                    tool.__class__.__name__ if "tool" in locals() else "unknown"
+                    tool_instance.__class__.__name__
+                    if tool_instance is not None
+                    else "unknown"
                 ),
                 "execution_time": time.time(),
-                "arguments": arguments,
+                "arguments": tool_arguments,
             }
             result = self.hook_manager.apply_hooks(
-                result, function_name, arguments, context
+                result, function_name, tool_arguments, context
             )
 
         return result
+
+    def _execute_tool_with_stream(self, tool_instance, arguments, stream_callback):
+        """Invoke a tool, forwarding stream callbacks when supported."""
+
+        tool_arguments = arguments
+        stream_flag_key = (
+            getattr(tool_instance, "STREAM_FLAG_KEY", None)
+            if stream_callback
+            else None
+        )
+
+        if isinstance(arguments, dict):
+            tool_arguments = dict(arguments)
+
+            if (
+                stream_callback
+                and stream_flag_key
+                and stream_flag_key not in tool_arguments
+            ):
+                tool_arguments[stream_flag_key] = True
+
+        if stream_callback is None:
+            return tool_instance.run(tool_arguments), tool_arguments
+
+        try:
+            signature = inspect.signature(tool_instance.run)
+            if "stream_callback" in signature.parameters:
+                return (
+                    tool_instance.run(
+                        tool_arguments, stream_callback=stream_callback
+                    ),
+                    tool_arguments,
+                )
+        except (ValueError, TypeError):
+            # If inspection fails, fall back to best-effort execution
+            pass
+
+        # Tool doesn't support streaming yet; execute normally
+        return tool_instance.run(tool_arguments), tool_arguments
 
     def toggle_hooks(self, enabled: bool):
         """

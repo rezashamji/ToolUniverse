@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/pubchem_tools.rst:2 1b5d5a719acb4364bdc2d360576ce356
+msgid "Pubchem Tools"
+msgstr "PubChem 工具"
+
+#: ../../tools/pubchem_tools.rst:4 0cec58f7fa3441948b69f3ea6f285a78
+msgid ""
+"**Configuration File**: ``pubchem_tools.json`` **Tool Type**: Local **Tools "
+"Count**: 9"
+msgstr "**配置文件**: ``pubchem_tools.json`` **工具类型**: 本地 **工具数量**: 9"
+
+#: ../../tools/pubchem_tools.rst:8 85ffdb7ca69e44068f5d32d759c00ec5
+msgid ""
+"This page contains all tools defined in the ``pubchem_tools.json`` "
+"configuration file."
+msgstr "本页面包含在``pubchem_tools.json``配置文件中定义的所有工具。"
+
+#: ../../tools/pubchem_tools.rst:11 0b4c49f1ab944571b7f6507c9578adb7
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/pubchem_tools.rst:14 f30728374de649f9af84514316b840c4
+msgid "**PubChem_get_CID_by_SMILES** (Type: PubChemRESTTool)"
+msgstr "**PubChem_get_CID_by_SMILES**（类型：PubChemRESTTool）"
+
+#: ../../tools/pubchem_tools.rst:16 2806534e4c784b8d8dd364b19de15bdc
+msgid "Retrieve corresponding CID list by SMILES string."
+msgstr "通过SMILES字符串检索对应的CID列表。"
+
+#: ../../tools/pubchem_tools.rst 58c65f681e454fa8be376c4849134d8e
+msgid "PubChem_get_CID_by_SMILES tool specification"
+msgstr "PubChem_get_CID_by_SMILES 工具规范"
+
+#: ../../tools/pubchem_tools.rst:20 ../../tools/pubchem_tools.rst:51
+#: ../../tools/pubchem_tools.rst:82 ../../tools/pubchem_tools.rst:113
+#: ../../tools/pubchem_tools.rst:147 ../../tools/pubchem_tools.rst:178
+#: ../../tools/pubchem_tools.rst:209 ../../tools/pubchem_tools.rst:244
+#: ../../tools/pubchem_tools.rst:278 0ea262f2b436476d89b9da888e75c966
+#: 1e53a416cecb447a9f93280a8d11abbd 3e3665c6ea30455fa7fd45117ef578eb
+#: 4c1831ec498d44c2af1b81c301e6b192 5a842b5e8eef43e295abe3eb2b97e2fa
+#: 7d032748553e4862b50821da4a88f59f b3a49e36e6cb4edb97bbc82a616a6e74
+#: d57fb8c739824bbbb99e3fa8a302ebaf ea205a43380f480fa9f139d6c72f014a
+msgid "**Tool Information:**"
+msgstr ""
+"**工具信息：**\n"
+"\n"
+"Context: 文档"
+
+#: ../../tools/pubchem_tools.rst:22 5f81cd72664b4c48abf4a59a9daeef00
+msgid "**Name**: ``PubChem_get_CID_by_SMILES``"
+msgstr "**名称**: ``PubChem_get_CID_by_SMILES``"
+
+#: ../../tools/pubchem_tools.rst:23 ../../tools/pubchem_tools.rst:54
+#: ../../tools/pubchem_tools.rst:85 ../../tools/pubchem_tools.rst:116
+#: ../../tools/pubchem_tools.rst:150 ../../tools/pubchem_tools.rst:181
+#: ../../tools/pubchem_tools.rst:212 ../../tools/pubchem_tools.rst:247
+#: ../../tools/pubchem_tools.rst:281 08eb6ee655e047c482919c8a81568f01
+#: 16451f06fb3d4b7cb23242c8783912dc 38985421424a411793bdb9fed8b65523
+#: 56987cec103745a9a023a7f248d00b6a 6cbdb3da52124458ae7bfd881d6fe45a
+#: a3c55c50a8ff4aae9f346190bf358670 c5a221fd5dec42dba9a9e0cf5a13ca7f
+#: e7dd2dbd196f425a80132af8083e2eb4 f8b10589647b4b2eb08d301084f74f78
+msgid "**Type**: ``PubChemRESTTool``"
+msgstr "**类型**: ``PubChemRESTTool``"
+
+#: ../../tools/pubchem_tools.rst:24 cb47dc673587406c82ce1ef5bcbca45c
+msgid "**Description**: Retrieve corresponding CID list by SMILES string."
+msgstr "**描述**：通过SMILES字符串检索对应的CID列表。"
+
+#: ../../tools/pubchem_tools.rst:26 ../../tools/pubchem_tools.rst:57
+#: ../../tools/pubchem_tools.rst:88 ../../tools/pubchem_tools.rst:119
+#: ../../tools/pubchem_tools.rst:153 ../../tools/pubchem_tools.rst:184
+#: ../../tools/pubchem_tools.rst:215 ../../tools/pubchem_tools.rst:250
+#: ../../tools/pubchem_tools.rst:284 7c1bea15ea2944cc9b64bb303403a67f
+#: 804456a3f2a945fe934462f043b100fb 8338e846c07e48878aa5d8cd6ef91cbf
+#: 90ed9aef75254849bb38b7e4d50826fc a1b3ebc5a5794326b432ca44c97b4067
+#: a5247f55eba346b9a04e869929476552 b7b5064c09834d6abb5b6ca0bc78789b
+#: d13e96f4eb2a4f71a163e37639bbda8c eea260be3580413a95e420f21d27f845
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/pubchem_tools.rst:28 6afece18b414404cbf8a65680f83671d
+msgid ""
+"``smiles`` (string) (required) SMILES expression (e.g., "
+"\"CC(=O)OC1=CC=CC=C1C(=O)O\" corresponds to aspirin)."
+msgstr "``smiles``（字符串）（必填）SMILES 表达式（例如：\"CC(=O)OC1=CC=CC=C1C(=O)O\" 对应于阿司匹林）。"
+
+#: ../../tools/pubchem_tools.rst:31 ../../tools/pubchem_tools.rst:62
+#: ../../tools/pubchem_tools.rst:93 ../../tools/pubchem_tools.rst:127
+#: ../../tools/pubchem_tools.rst:158 ../../tools/pubchem_tools.rst:189
+#: ../../tools/pubchem_tools.rst:223 ../../tools/pubchem_tools.rst:258
+#: ../../tools/pubchem_tools.rst:289 29548e961ca947a29557c7636d3c5104
+#: 3d9e5d79842141e8bb50760cc26e9298 499c4a7ff56a4eee9500abc05bc34fcb
+#: 7def03047af549b788c70bcf843650a8 85de4b42c46343d8ab6ec87a82817000
+#: a914fdcbbccf48acaf8adc98895b18cb d2eb44d1809f4064918f9b9a29f68546
+#: ee14ebc367cb4bcb8a5a47d66aa6827d fd4880b45920423699d8e441c2f5f54f
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/pubchem_tools.rst:45 f9413a4e6b494cd38ae15435ed23f728
+msgid "**PubChem_get_CID_by_compound_name** (Type: PubChemRESTTool)"
+msgstr "**PubChem_get_CID_by_compound_name**（类型：PubChemRESTTool）"
+
+#: ../../tools/pubchem_tools.rst:47 7c2e15a42b3d4d2a90dccd75048cdfef
+msgid "Retrieve corresponding CID list (IdentifierList) by chemical name."
+msgstr "通过化学名称检索对应的CID列表（IdentifierList）。"
+
+#: ../../tools/pubchem_tools.rst 79a4ce62e05c4332b27bbff62ce8cd77
+msgid "PubChem_get_CID_by_compound_name tool specification"
+msgstr "PubChem_get_CID_by_compound_name 工具规范"
+
+#: ../../tools/pubchem_tools.rst:53 552af02c978648a59ecc755248aa8284
+msgid "**Name**: ``PubChem_get_CID_by_compound_name``"
+msgstr "**名称**: ``PubChem_get_CID_by_compound_name``"
+
+#: ../../tools/pubchem_tools.rst:55 74f0ac3e454043c593f4fc59c901ed7d
+msgid ""
+"**Description**: Retrieve corresponding CID list (IdentifierList) by "
+"chemical name."
+msgstr "**描述**：通过化学名称获取对应的CID列表（IdentifierList）。"
+
+#: ../../tools/pubchem_tools.rst:59 d9c65d41503541e4a960ec76d8d91bcc
+msgid ""
+"``name`` (string) (required) Chemical name (e.g., \"Aspirin\" or IUPAC "
+"name)."
+msgstr "``name``（字符串）（必填）化学名称（例如：“阿司匹林”或IUPAC名称）。"
+
+#: ../../tools/pubchem_tools.rst:76 a774c71d96834f3f8b0b57fb96d86a6c
+msgid "**PubChem_get_associated_patents_by_CID** (Type: PubChemRESTTool)"
+msgstr "**PubChem_get_associated_patents_by_CID**（类型：PubChemRESTTool）"
+
+#: ../../tools/pubchem_tools.rst:78 3cebbc60178748beb7e0583d8e7691bf
+msgid "Get a list of patents associated with a specific compound CID."
+msgstr "获取与特定化合物CID相关的专利列表。"
+
+#: ../../tools/pubchem_tools.rst aaa66ae579d64444867dc119086db317
+msgid "PubChem_get_associated_patents_by_CID tool specification"
+msgstr "PubChem_get_associated_patents_by_CID 工具规格说明"
+
+#: ../../tools/pubchem_tools.rst:84 b1301d13a2b84c49ba515c62f5ced679
+msgid "**Name**: ``PubChem_get_associated_patents_by_CID``"
+msgstr "**名称**：``PubChem_get_associated_patents_by_CID``"
+
+#: ../../tools/pubchem_tools.rst:86 427891e1f5b9440d81d956ac19f820c4
+msgid ""
+"**Description**: Get a list of patents associated with a specific compound "
+"CID."
+msgstr "**描述**：获取与特定化合物CID相关的专利列表。"
+
+#: ../../tools/pubchem_tools.rst:90 ../../tools/pubchem_tools.rst:155
+#: 799d30592e7149dcbffc1f8118b5df07 b7f2db20b307478fb3f966e179e03b0d
+msgid ""
+"``cid`` (integer) (required) PubChem compound ID to query, e.g., 2244 "
+"(Aspirin)."
+msgstr "``cid``（整数）（必填）用于查询的PubChem化合物ID，例如2244（阿司匹林）。"
+
+#: ../../tools/pubchem_tools.rst:107 299975bd266b4b4a945e50c52bd970d8
+msgid "**PubChem_get_compound_2D_image_by_CID** (Type: PubChemRESTTool)"
+msgstr "**PubChem_get_compound_2D_image_by_CID**（类型：PubChemRESTTool）"
+
+#: ../../tools/pubchem_tools.rst:109 1c2e560c90614a0994e45ce867f75bee
+msgid "Get 2D structure image (PNG format) of compound by CID."
+msgstr "通过CID获取化合物的二维结构图像（PNG格式）。"
+
+#: ../../tools/pubchem_tools.rst f8d5fc3f5f924fd2b86cabf9ee3dd2bd
+msgid "PubChem_get_compound_2D_image_by_CID tool specification"
+msgstr "PubChem_get_compound_2D_image_by_CID 工具规格说明"
+
+#: ../../tools/pubchem_tools.rst:115 6a01623b0a664c01af685616bba117d2
+msgid "**Name**: ``PubChem_get_compound_2D_image_by_CID``"
+msgstr "**名称**：``PubChem_get_compound_2D_image_by_CID``"
+
+#: ../../tools/pubchem_tools.rst:117 c281466719464be7a2a8898f18cf5cbc
+msgid ""
+"**Description**: Get 2D structure image (PNG format) of compound by CID."
+msgstr "**描述**：通过CID获取化合物的二维结构图像（PNG格式）。"
+
+#: ../../tools/pubchem_tools.rst:121 731cc9b7d96140569685bbb7840c8be4
+msgid "``cid`` (integer) (required) Compound ID to get image for, e.g., 2244."
+msgstr "``cid``（整数）（必填）用于获取图像的化合物ID，例如 2244。"
+
+#: ../../tools/pubchem_tools.rst:124 159367b1dfc745b9a5677441681fb19d
+msgid ""
+"``image_size`` (string) (optional) Optional parameter, image size, like "
+"\"200x200\" (default)."
+msgstr "``image_size``（字符串）（可选）可选参数，图像尺寸，例如 \"200x200\"（默认值）。"
+
+#: ../../tools/pubchem_tools.rst:141 bdc4f5bc90a34177824155901355f567
+msgid "**PubChem_get_compound_properties_by_CID** (Type: PubChemRESTTool)"
+msgstr "**PubChem_get_compound_properties_by_CID**（类型：PubChemRESTTool）"
+
+#: ../../tools/pubchem_tools.rst:143 07a8d0c749734f3b93f135ec8594d6c6
+msgid ""
+"Get a set of specified molecular properties through CID (Compound ID), such "
+"as molecular weight, ..."
+msgstr "通过 CID（化合物 ID）获取一组指定的分子属性，例如分子量，..."
+
+#: ../../tools/pubchem_tools.rst def4819f92b245e298af8dfc78c06510
+msgid "PubChem_get_compound_properties_by_CID tool specification"
+msgstr "PubChem_get_compound_properties_by_CID 工具规范"
+
+#: ../../tools/pubchem_tools.rst:149 fef19d9fad214bc0b186a890953aad68
+msgid "**Name**: ``PubChem_get_compound_properties_by_CID``"
+msgstr "**名称**: ``PubChem_get_compound_properties_by_CID``"
+
+#: ../../tools/pubchem_tools.rst:151 e24e0d5f2cb345aebed8cd22a6f0eaf8
+msgid ""
+"**Description**: Get a set of specified molecular properties through CID "
+"(Compound ID), such as molecular weight, IUPAC name, Canonical SMILES."
+msgstr "**描述**：通过CID（化合物ID）获取一组指定的分子属性，例如分子量、IUPAC名称、规范SMILES。"
+
+#: ../../tools/pubchem_tools.rst:172 3f7e616307c544eb8dbb7952317b0715
+msgid "**PubChem_get_compound_synonyms_by_CID** (Type: PubChemRESTTool)"
+msgstr "**PubChem_get_compound_synonyms_by_CID**（类型：PubChemREST工具）"
+
+#: ../../tools/pubchem_tools.rst:174 81365e6a23f5449195b9154ee3f2c485
+msgid "Get complete list of synonyms for compound by CID."
+msgstr "获取基于CID的化合物完整同义词列表。"
+
+#: ../../tools/pubchem_tools.rst 0e5be20c01054fd99a83b7a996c0f485
+msgid "PubChem_get_compound_synonyms_by_CID tool specification"
+msgstr "PubChem_get_compound_synonyms_by_CID 工具规范"
+
+#: ../../tools/pubchem_tools.rst:180 f12235cafa8849e8acef14361d25b2bb
+msgid "**Name**: ``PubChem_get_compound_synonyms_by_CID``"
+msgstr "**名称**: ``PubChem_get_compound_synonyms_by_CID``"
+
+#: ../../tools/pubchem_tools.rst:182 93169fc2891e4491abea4f72c8876758
+msgid "**Description**: Get complete list of synonyms for compound by CID."
+msgstr "**描述**：获取化合物CID的完整同义词列表。"
+
+#: ../../tools/pubchem_tools.rst:186 39b113beda414a34960db09d5781854c
+msgid ""
+"``cid`` (integer) (required) Compound ID to query synonyms for, e.g., 2244."
+msgstr "``cid``（整数）（必填）用于查询化合物的同义词，例如 2244。"
+
+#: ../../tools/pubchem_tools.rst:203 c3354247f859415287e655e3c3dcce62
+msgid "**PubChem_get_compound_xrefs_by_CID** (Type: PubChemRESTTool)"
+msgstr "**PubChem_get_compound_xrefs_by_CID**（类型：PubChemREST工具）"
+
+#: ../../tools/pubchem_tools.rst:205 d2d3035bc5164c9c9330afd7898a36e5
+msgid ""
+"Get external references (XRefs) for compound by CID, including links to "
+"ChEBI, DrugBank, KEGG, etc."
+msgstr "通过CID获取化合物的外部参考（XRefs），包括指向ChEBI、DrugBank、KEGG等的链接。"
+
+#: ../../tools/pubchem_tools.rst 0e5487a3255e421a92160ffe1588e9c9
+msgid "PubChem_get_compound_xrefs_by_CID tool specification"
+msgstr "PubChem_get_compound_xrefs_by_CID 工具规范"
+
+#: ../../tools/pubchem_tools.rst:211 37bdcd796ed94b7cae579f88276a09fb
+msgid "**Name**: ``PubChem_get_compound_xrefs_by_CID``"
+msgstr "**名称**: ``PubChem_get_compound_xrefs_by_CID``"
+
+#: ../../tools/pubchem_tools.rst:213 41a250f57f5140c88663d4c2dd79616a
+msgid ""
+"**Description**: Get external references (XRefs) for compound by CID, "
+"including links to ChEBI, DrugBank, KEGG, etc."
+msgstr "**描述**：通过CID获取化合物的外部参考（XRefs），包括链接到ChEBI、DrugBank、KEGG等。"
+
+#: ../../tools/pubchem_tools.rst:217 398d8a52346b492d86a678634f6edf7a
+msgid ""
+"``cid`` (integer) (required) Compound ID to query external references for, "
+"e.g., 2244."
+msgstr "``cid``（整数）（必填）用于查询外部引用的化合物ID，例如：2244。"
+
+#: ../../tools/pubchem_tools.rst:220 e9fc569137be483b9968ed15006354b6
+msgid ""
+"``xref_types`` (array) (required) List of external database types to query, "
+"e.g., [\"RegistryID\", \"RN\", \"PubMedID\"]."
+msgstr "``xref_types``（数组）（必填）要查询的外部数据库类型列表，例如：[\"RegistryID\", \"RN\", \"PubMedID\"]。"
+
+#: ../../tools/pubchem_tools.rst:238 ce35bfa4b6dc466ba36aa196db33103b
+msgid "**PubChem_search_compounds_by_similarity** (Type: PubChemRESTTool)"
+msgstr "**PubChem_search_compounds_by_similarity**（类型：PubChemRESTTool）"
+
+#: ../../tools/pubchem_tools.rst:240 d8d77f53c22441dd9463c00604034cda
+msgid ""
+"Search by similarity (Tanimoto coefficient), returns CID list of compounds "
+"with similarity above ..."
+msgstr "按相似度搜索（Tanimoto系数），返回相似度高于…的化合物CID列表"
+
+#: ../../tools/pubchem_tools.rst cd22fe07d566468888edc4aae699fc41
+msgid "PubChem_search_compounds_by_similarity tool specification"
+msgstr "PubChem_search_compounds_by_similarity 工具规格说明"
+
+#: ../../tools/pubchem_tools.rst:246 bd188c6b43f94b458e2cca31033d249a
+msgid "**Name**: ``PubChem_search_compounds_by_similarity``"
+msgstr "**名称**：``PubChem_search_compounds_by_similarity``"
+
+#: ../../tools/pubchem_tools.rst:248 7307faab926d48b88f34054e0b5185a0
+msgid ""
+"**Description**: Search by similarity (Tanimoto coefficient), returns CID "
+"list of compounds with similarity above threshold to given SMILES molecule, "
+"returns no more than 10 CIDs (MaxRecords=10)"
+msgstr ""
+"**描述**：通过相似度（Tanimoto系数）进行搜索，返回与给定SMILES分子相似度高于阈值的化合物CID列表，最多返回10个CID（MaxRecords=10）"
+
+#: ../../tools/pubchem_tools.rst:252 4e59bc3ad0c74066b51c6325c9b4dcf7
+msgid "``smiles`` (string) (required) SMILES expression of target molecule."
+msgstr "``smiles``（字符串）（必填）目标分子的SMILES表达式。"
+
+#: ../../tools/pubchem_tools.rst:255 4e544711f0d4431997006c6bc7522461
+#, python-format
+msgid ""
+"``threshold`` (number) (optional) Similarity threshold (between 0 and 1), "
+"e.g., 0.9 means 90% similarity."
+msgstr "``threshold``（数字）（可选）相似度阈值（介于0和1之间），例如，0.9表示90%的相似度。"
+
+#: ../../tools/pubchem_tools.rst:272 48024118ee6245b395436537e583b86a
+msgid "**PubChem_search_compounds_by_substructure** (Type: PubChemRESTTool)"
+msgstr "**PubChem_按子结构搜索化合物**（类型：PubChemRESTTool）"
+
+#: ../../tools/pubchem_tools.rst:274 ef835edd0cbb40159fccc452e1ad0599
+msgid ""
+"Search for all CIDs in PubChem that contain the given substructure (SMILES)."
+msgstr "在PubChem中搜索包含指定子结构（SMILES）的所有CID。"
+
+#: ../../tools/pubchem_tools.rst 353d903fce1e4020b434839a974122e8
+msgid "PubChem_search_compounds_by_substructure tool specification"
+msgstr "PubChem_按子结构搜索化合物 工具规范"
+
+#: ../../tools/pubchem_tools.rst:280 ab6607301e86447898e536374286ccbd
+msgid "**Name**: ``PubChem_search_compounds_by_substructure``"
+msgstr "**名称**：``PubChem_search_compounds_by_substructure``"
+
+#: ../../tools/pubchem_tools.rst:282 2af417c714a44cb993221d1ba5082602
+msgid ""
+"**Description**: Search for all CIDs in PubChem that contain the given "
+"substructure (SMILES)."
+msgstr "**描述**：在PubChem中搜索包含指定子结构（SMILES）的所有CID。"
+
+#: ../../tools/pubchem_tools.rst:286 094a08260ad8451294a9c87eabcb9f46
+msgid ""
+"``smiles`` (string) (required) SMILES of substructure (e.g., \"c1ccccc1\" "
+"corresponds to benzene ring)."
+msgstr "``smiles``（字符串）（必填）子结构的SMILES表示（例如，“c1ccccc1”对应苯环）。"
+
+#: ../../tools/pubchem_tools.rst:303 3cf060266d1d413887e96803cf269a75
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/pubchem_tools.rst:305 550e0bbc53ea4a79875323d4f6697f7b
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/pubchem_tools.rst:306 9428ac72031d4ccb9a5d298816f6be3d
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

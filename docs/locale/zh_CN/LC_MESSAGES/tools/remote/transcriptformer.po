@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/remote/transcriptformer.md:1 7fda147e485d45daa6fdd73b68df658d
+msgid "Transcriptformer Gene Embedding Tool"
+msgstr "Transcriptformer基因嵌入工具"
+
+#: ../../tools/remote/transcriptformer.md:3 114ae789cd04429790311d0a2cfd2432
+msgid "Overview"
+msgstr "概述"
+
+#: ../../tools/remote/transcriptformer.md:5 3991d848d24b4c72bb9e5d7585079a39
+msgid ""
+"The [Transcriptformer](https://github.com/czi-ai/transcriptformer) tool "
+"provides access to contextualized gene embeddings learned from single-cell "
+"RNA sequencing data. Transcriptformer uses transformer architecture to "
+"capture cell-type-specific and disease-state-specific gene expression "
+"patterns, enabling precise analysis of gene behavior in relevant biological "
+"contexts. In Prism ToolSpace, we pre-inferenced the transcriptformer CGE "
+"(contextualized gene embeddings) across 5 single-cell disease atlas, while "
+"can be ealisy access and retrivel via this tool."
+msgstr ""
+"[Transcriptformer](https://github.com/czi-ai/transcriptformer) "
+"工具提供了从单细胞RNA测序数据中学习到的上下文化基因嵌入。Transcriptformer 使用 Transformer "
+"架构捕捉细胞类型特异性和疾病状态特异性的基因表达模式，实现对相关生物学环境中基因行为的精准分析。在 Prism ToolSpace 中，我们预先推断了 "
+"Transcriptformer CGE（上下文化基因嵌入）在 5 个单细胞疾病图谱中的数据，用户可以通过该工具轻松访问和检索。"
+
+#: ../../tools/remote/transcriptformer.md:7 c472084ba4f14ce6b23602fe70514c17
+msgid "Data Acquisition"
+msgstr "数据采集"
+
+#: ../../tools/remote/transcriptformer.md:9 798c70776a22470c9678211965698ec7
+msgid "1. Download Transcriptformer Embeddings"
+msgstr "1. 下载 Transcriptformer 嵌入向量"
+
+#: ../../tools/remote/transcriptformer.md:11 61bbe796362b4e37875b1754ea34e984
+msgid ""
+"The Transcriptformer embeddings are hosted on Hugging Face at: "
+"https://huggingface.co/datasets/mims-harvard/ToolSpace"
+msgstr ""
+"Transcriptformer 嵌入向量托管于 Hugging "
+"Face，链接地址为：https://huggingface.co/datasets/mims-harvard/ToolSpace"
+
+#: ../../tools/remote/transcriptformer.md:13 3cf357486c46424db34f10c7fd493dae
+msgid ""
+"Use the following shell commands to download only the Transcriptformer files"
+" from the `transcriptformer_cge` directory:"
+msgstr "使用以下 shell 命令仅从 `transcriptformer_cge` 目录下载 Transcriptformer 文件："
+
+#: ../../tools/remote/transcriptformer.md:26 81be8ece638641a99f47f464b7b6f0dc
+msgid "File Structure"
+msgstr "文件结构"
+
+#: ../../tools/remote/transcriptformer.md:28 2d42e79f93424d02b7258da72713a1d3
+msgid ""
+"The Transcriptformer directory contains disease-specific embedding stores:"
+msgstr "Transcriptformer 目录包含针对特定疾病的嵌入存储："
+
+#: ../../tools/remote/transcriptformer.md:45 5dea00e7af9944e5a54571d23271fbc0
+msgid "2. Set Environment Variable"
+msgstr "2. 设置环境变量"
+
+#: ../../tools/remote/transcriptformer.md:47 3977971cf5944010ae4a128810173652
+msgid ""
+"After downloading, set the `TRANSCRIPTFORMER_DATA_PATH` environment "
+"variable:"
+msgstr "下载完成后，设置 `TRANSCRIPTFORMER_DATA_PATH` 环境变量："
+
+#: ../../tools/remote/transcriptformer.md:54 ba72a02414f74b1ebf0a08d645cf7cce
+msgid "Tool Input and Output"
+msgstr "工具输入与输出"
+
+#: ../../tools/remote/transcriptformer.md:56 e2ff24e98f5e405d89312897ac96d293
+msgid "Input Parameters"
+msgstr "输入参数"
+
+#: ../../tools/remote/transcriptformer.md 423ecb90e95d4c6b863410ad513e9321
+msgid "Parameter"
+msgstr "参数"
+
+#: ../../tools/remote/transcriptformer.md d945170911634e3aabcd2a687d69a733
+msgid "Type"
+msgstr "类型"
+
+#: ../../tools/remote/transcriptformer.md 6539570b945343a09097bb6254148d4a
+msgid "Required"
+msgstr "需要"
+
+#: ../../tools/remote/transcriptformer.md cc4912eca2964fb69a8750528ca3c674
+msgid "Description"
+msgstr "描述"
+
+#: ../../tools/remote/transcriptformer.md 4d7a0055f31f47ee9bd0e39b87c2b7c6
+msgid "`disease`"
+msgstr "疾病"
+
+#: ../../tools/remote/transcriptformer.md 0b27307a080542958caf519821d79883
+#: 4392f263a63e44aa819b0b03a1b7d4ae 8522f68996de438d93d514c04203ea7a
+msgid "string"
+msgstr "字符串"
+
+#: ../../tools/remote/transcriptformer.md 84ff16306d894c35bfa3e4ac4391eeba
+#: 855238ac4bce42be83c7845c6feca814 ac7506c2add44d9081b9f8df00a0d26d
+#: edec0ada73d546b391192547c08cef9e
+msgid "Yes"
+msgstr "是"
+
+#: ../../tools/remote/transcriptformer.md c5b9c6352d4d49aeadc3e612c78058fb
+msgid "Disease/dataset identifier (e.g., \"follicular_lymphoma\")"
+msgstr "疾病/数据集标识符（例如：“follicular_lymphoma”）"
+
+#: ../../tools/remote/transcriptformer.md f1ba452074074aff818f9fa1cf969308
+msgid "`state`"
+msgstr "`状态`"
+
+#: ../../tools/remote/transcriptformer.md d00eea8b0d5c412a8a22e0c82b70728b
+msgid "Disease state context (\"normal\", \"disease_name\", etc.)"
+msgstr "疾病状态上下文（“正常”、“疾病名称”等）"
+
+#: ../../tools/remote/transcriptformer.md bcfb405a5f0f42c4a27a0f199e0419ef
+msgid "`cell_type`"
+msgstr "`单元类型`"
+
+#: ../../tools/remote/transcriptformer.md ac2ba63f847e49aca0f6c051ea684958
+msgid "Cell type context for embeddings"
+msgstr "嵌入的单元类型上下文"
+
+#: ../../tools/remote/transcriptformer.md c3e0880324fb404ebce6f795efc97618
+msgid "`gene_names`"
+msgstr "`基因名称`"
+
+#: ../../tools/remote/transcriptformer.md 442c4f15a5d74094a491f262020626df
+msgid "List[str]"
+msgstr "列表[str]"
+
+#: ../../tools/remote/transcriptformer.md 46cda1a3d334482ea4803d14cb6c71ca
+msgid "Gene identifiers (symbols or Ensembl IDs)"
+msgstr "基因标识符（符号或Ensembl ID）"
+
+#: ../../tools/remote/transcriptformer.md:65 0c57d44e709e426da1377b5024d75ab7
+msgid "Supported Disease Contexts"
+msgstr "支持的疾病上下文"
+
+#: ../../tools/remote/transcriptformer.md:66 290172a4dd004277915aff6dedba6c5b
+msgid "Available disease datasets include:"
+msgstr "可用的疾病数据集包括："
+
+#: ../../tools/remote/transcriptformer.md:67 57fbf355a70b4b48a6cba1298c9d47a7
+msgid "`follicular_lymphoma` - Follicular lymphoma vs normal tissue"
+msgstr "`follicular_lymphoma` - 滤泡性淋巴瘤与正常组织对比"
+
+#: ../../tools/remote/transcriptformer.md:68 8a64542629764d30bc515ed74627cb02
+msgid "`rheumatoid_arthritis` - Rheumatoid arthritis vs healthy controls"
+msgstr "`rheumatoid_arthritis` - 类风湿关节炎与健康对照组比较"
+
+#: ../../tools/remote/transcriptformer.md:69 8c3944108d1d4c7eb68debf97f1feac2
+msgid ""
+"`type_1_diabetes_mellitus` - Type 1 diabetes vs normal pancreatic tissue"
+msgstr "`type_1_diabetes_mellitus` - 1 型糖尿病与正常胰腺组织对比"
+
+#: ../../tools/remote/transcriptformer.md:70 6557e8cfe7c04f2ca41d4dcc31b514f1
+msgid "`sjogren_syndrome` - Sjögren's syndrome vs healthy controls"
+msgstr "`sjogren_syndrome` - 干燥综合征与健康对照组比较"
+
+#: ../../tools/remote/transcriptformer.md:71 6c1c9fff0478466dbf1c6ce4c0053660
+msgid "`hepatoblastoma` - Hepatoblastoma vs normal liver tissue"
+msgstr "`hepatoblastoma` - 肝母细胞瘤与正常肝组织对比"
+
+#: ../../tools/remote/transcriptformer.md:73 f092226c3f764b079a5c82648528172a
+msgid "Disease State Options"
+msgstr "疾病状态选项"
+
+#: ../../tools/remote/transcriptformer.md:74 38bb9a4cacc14c3eae3d2ed15d830223
+msgid "`normal` - Healthy/control condition"
+msgstr "`normal` - 正常/对照状态"
+
+#: ../../tools/remote/transcriptformer.md:75 2d490f67e88c49aeb748994e8c442f37
+msgid ""
+"`[disease_name]` - Disease-affected state (matches the disease identifier)"
+msgstr "`[disease_name]` - 疾病影响状态（对应疾病标识符）"
+
+#: ../../tools/remote/transcriptformer.md:78 e9b866ed898742f1b1456e8d09871bbf
+msgid "Gene Identifier Formats"
+msgstr "基因标识符格式"
+
+#: ../../tools/remote/transcriptformer.md:79 0f1600765585459cb8adc04dd5808b04
+msgid "**Gene symbols**: `[\"TP53\", \"BRCA1\", \"EGFR\", \"MYC\"]`"
+msgstr "**基因符号**：`[\"TP53\", \"BRCA1\", \"EGFR\", \"MYC\"]`"
+
+#: ../../tools/remote/transcriptformer.md:80 3380a083a81442d4b2b7039d976a3a5d
+msgid "**Ensembl IDs**: `[\"ENSG00000141510\", \"ENSG00000139618\"]`"
+msgstr "**Ensembl ID**：`[\"ENSG00000141510\", \"ENSG00000139618\"]`"
+
+#: ../../tools/remote/transcriptformer.md:81 9166e4bde34a49d780ef7f5979581ab5
+msgid "**Mixed formats**: Supported in the same request"
+msgstr "**混合格式**：支持在同一请求中使用"
+
+#: ../../tools/remote/transcriptformer.md:82 8b4c80f65c8c4e3db7cc6fad20894324
+msgid "**Empty list**: Retrieves all available genes"
+msgstr "**空列表**：检索所有可用基因"
+
+#: ../../tools/remote/transcriptformer.md:84 a6c77486f47f446e8d4c1847b1e1f3df
+msgid "Output Format"
+msgstr "输出格式"
+
+#: ../../tools/remote/transcriptformer.md:86 6769cb0ad42d4087bd76d4bec67d3428
+msgid "The tool returns a JSON object with the following structure:"
+msgstr "该工具返回一个具有以下结构的 JSON 对象："
+
+#: ../../tools/remote/transcriptformer.md:88 5807ebc46757449fa4a1076c791d08e9
+msgid "Successful Response"
+msgstr "成功响应"
+
+#: ../../tools/remote/transcriptformer.md:105 81b185db238b4bf08ec6cd28452057f1
+msgid "Error Response"
+msgstr "错误响应"
+
+#: ../../tools/remote/transcriptformer.md:116 2375a7b63d4847a0b8c3d1d33567c826
+msgid "Embedding Properties"
+msgstr "嵌入属性"
+
+#: ../../tools/remote/transcriptformer.md:118 2c2665476bc445ec9093a096757906c1
+msgid "**Dimensionality**: 512-dimensional vectors per gene"
+msgstr "**维度**：每个基因512维向量"
+
+#: ../../tools/remote/transcriptformer.md:119 3167f983d3774ca9ba19a915780a618b
+msgid "**Format**: Dense numerical vectors (list of float32 values)"
+msgstr "**格式**：密集数值向量（float32 值列表）"
+
+#: ../../tools/remote/transcriptformer.md:120 7ceb563abe0c49b7b72ac92db58a842a
+msgid "**Context-specific**: Embeddings vary by cell type and disease state"
+msgstr "**特定上下文**：嵌入表示因细胞类型和疾病状态而异"
+
+#: ../../tools/remote/transcriptformer.md:121 f4fa3710a24642ef8a5b11e55aa78c77
+msgid "**Precision**: Float32 for optimal balance of accuracy and efficiency"
+msgstr "**精度**：使用 Float32 实现准确性与效率的最佳平衡"
+
+#: ../../tools/remote/transcriptformer.md:123 089fd2df06e54a4abfd8935061a94489
+msgid "MCP Server Setup"
+msgstr "MCP 服务器设置"
+
+#: ../../tools/remote/transcriptformer.md:125 ea5a8474a98e4a7b9d991f0873c787e8
+msgid "Prerequisites"
+msgstr "先决条件"
+
+#: ../../tools/remote/transcriptformer.md:134 1979eb8ec09740acb27ea0d300d4c92a
+msgid "Configuration"
+msgstr "配置"
+
+#: ../../tools/remote/transcriptformer.md:136 c48e66855158487a95d5b42912cb3594
+msgid "**Set up the environment**:"
+msgstr "**设置环境**："
+
+#: ../../tools/remote/transcriptformer.md:142 fcbb24e507e74114a4cd77997d03c3a7
+msgid "**Verify embedding files exist**:"
+msgstr "**验证嵌入文件是否存在**："
+
+#: ../../tools/remote/transcriptformer.md:148 ca3a1f63792e4e9d90131f983dfe7d94
+msgid "Running the MCP Server"
+msgstr "运行 MCP 服务器"
+
+#: ../../tools/remote/transcriptformer.md:155 d57a3f85c8834f07b46aa33d977c8a7c
+msgid "Server Configuration"
+msgstr "服务器配置"
+
+#: ../../tools/remote/transcriptformer.md:157 6afc2776d6a04214b1f357eee5e7ae4c
+msgid "**Host**: `0.0.0.0` (accepts connections from any IP)"
+msgstr "**主机**：`0.0.0.0`（接受来自任何 IP 的连接）"
+
+#: ../../tools/remote/transcriptformer.md:158 91d3c6422c8348ae8f761e3881d4f780
+msgid "**Port**: `7002` (configured to avoid conflicts with other tools)"
+msgstr "**端口**：`7002`（配置以避免与其他工具冲突）"
+
+#: ../../tools/remote/transcriptformer.md:159 8a2b8c14103f426b9df56030d19b33a0
+msgid "**Transport**: `streamable-http`"
+msgstr "**传输**：`streamable-http`"
+
+#: ../../tools/remote/transcriptformer.md:160 628a10d3e5a346bab50ac957c8019eec
+msgid "**Mode**: Stateless HTTP for scalability"
+msgstr "**模式**：无状态 HTTP 以实现可扩展性"

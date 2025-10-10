@@ -327,13 +327,12 @@ def _start_server_for_port(port: int, **kwargs):
 
     print(f"🚀 Starting MCP server on port {port} with {len(tools)} tools...")
 
-    # Create SMCP server with stateless mode for compatibility
+    # Create SMCP server for compatibility
     server = _get_smcp()(
         name=config["server_name"],
         auto_expose_tools=False,  # We'll add tools manually
         search_enabled=True,
         max_workers=config.get("max_workers", 5),
-        stateless_http=True,  # Enable stateless mode for MCPAutoLoaderTool compatibility
         **kwargs,
     )
 
@@ -347,8 +346,9 @@ def _start_server_for_port(port: int, **kwargs):
     # Start server in background thread
     def run_server():
         try:
+            # Enable stateless mode for MCPAutoLoaderTool compatibility
             server.run_simple(
-                transport=config["transport"], host=config["host"], port=port
+                transport=config["transport"], host=config["host"], port=port, stateless_http=True
             )
         except Exception as e:
             print(f"❌ Error running MCP server on port {port}: {e}")

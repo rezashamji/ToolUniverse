@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/alphafold_tools.rst:2 ebc884115001421dbec9821b81294e8f
+msgid "Alphafold Tools"
+msgstr "Alphafold 工具"
+
+#: ../../tools/alphafold_tools.rst:4 6e3630e9b86340a5b6a31bc67aa6d099
+msgid ""
+"**Configuration File**: ``alphafold_tools.json`` **Tool Type**: Local "
+"**Tools Count**: 3"
+msgstr ""
+"**配置文件**：``alphafold_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：3"
+
+#: ../../tools/alphafold_tools.rst:8 a0944510f46248b684ad8270b7e14beb
+msgid ""
+"This page contains all tools defined in the ``alphafold_tools.json`` "
+"configuration file."
+msgstr "此页面包含在 ``alphafold_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/alphafold_tools.rst:11 4ec774be9e0d41ca8dd3b775e2e82e48
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/alphafold_tools.rst:14 a7a631ea261c40409a11af38329d379b
+msgid "**alphafold_get_annotations** (Type: AlphaFoldRESTTool)"
+msgstr "**alphafold_get_annotations**（类型：AlphaFoldRESTTool）"
+
+#: ../../tools/alphafold_tools.rst:16 34c39a226ff44d3eabab35530faeb7d1
+msgid ""
+"Retrieve AlphaFold variant annotations (e.g., missense mutations) for a "
+"given UniProt accession (..."
+msgstr "检索指定 UniProt 访问号的 AlphaFold 变体注释（例如，错义突变）..."
+
+#: ../../tools/alphafold_tools.rst 3e81d711e14b48d599e139b11d055cb8
+msgid "alphafold_get_annotations tool specification"
+msgstr "alphafold_get_annotations 工具规格说明"
+
+#: ../../tools/alphafold_tools.rst:20 ../../tools/alphafold_tools.rst:55
+#: ../../tools/alphafold_tools.rst:89 3f0d4ab7644248dea1b7af2fc0081aa3
+#: 9c877e03075c44e68a83b9d54fd18063 ce56e3b0d4f143e5bd5dee8a9d32f1be
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/alphafold_tools.rst:22 22248275bb0545ea8dda22e34b3aa2b1
+msgid "**Name**: ``alphafold_get_annotations``"
+msgstr "**名称**：``alphafold_get_annotations``"
+
+#: ../../tools/alphafold_tools.rst:23 ../../tools/alphafold_tools.rst:58
+#: ../../tools/alphafold_tools.rst:92 3e02f5859cc449718f3e8ac32be6d192
+#: 7638da61544b4d1e975efefdcebde2a1 be44e36e6f4e4aa9850c5dcf58f3ef0a
+msgid "**Type**: ``AlphaFoldRESTTool``"
+msgstr "**类型**：``AlphaFoldRESTTool``"
+
+#: ../../tools/alphafold_tools.rst:24 ccf52493799b48daa7c61fbb2f3ffd0e
+msgid ""
+"**Description**: Retrieve AlphaFold variant annotations (e.g., missense "
+"mutations) for a given UniProt accession (e.g., 'P69905'). Input must be a "
+"UniProt accession, entry name, or CRC64 checksum, along with an annotation "
+"type (currently only 'MUTAGEN'). Use this tool to explore predicted "
+"pathogenicity or functional effects of substitutions. If you only have a "
+"protein/gene name, resolve it with `uniprot_search`. For experimentally "
+"curated variants, use `UniProt_get_disease_variants_by_accession`. To view "
+"the full 3D structure, call `alphafold_get_prediction`; for overall model "
+"metadata, use `alphafold_get_summary`."
+msgstr ""
+"**描述**：检索指定UniProt登录号（例如“P69905”）的AlphaFold变体注释（例如错义突变）。输入必须是UniProt登录号、条目名称或CRC64校验和，并指定注释类型（目前仅支持“MUTAGEN”）。使用此工具可探索替代的预测致病性或功能影响。如果您只有蛋白质/基因名称，可使用`uniprot_search`进行解析。对于实验性整理的变体，请使用`UniProt_get_disease_variants_by_accession`。要查看完整的三维结构，请调用`alphafold_get_prediction`；如需整体模型元数据，请使用`alphafold_get_summary`。"
+
+#: ../../tools/alphafold_tools.rst:26 ../../tools/alphafold_tools.rst:61
+#: ../../tools/alphafold_tools.rst:95 25f1cb6d88f043bf993025fa52ca8d96
+#: 49d4c2e2ee8149fbadde28b4fb1c36e1 f0bac43ce43240569ae209602b26f6cb
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/alphafold_tools.rst:28 ../../tools/alphafold_tools.rst:97
+#: 14aaf0fe0cb646c492fbfc2c0e3c19f1 4da83b664c9e4a198efdbed9b7afd5d1
+msgid ""
+"``qualifier`` (string) (required) Protein identifier: UniProt accession, "
+"entry name, or CRC64 checksum."
+msgstr "``qualifier``（字符串）（必填）蛋白质标识符：UniProt登录号、条目名称或CRC64校验和。"
+
+#: ../../tools/alphafold_tools.rst:31 efff6ceb0ffa4228a1739ce38cf1e706
+msgid ""
+"``type`` (string) (required) Annotation type (currently only 'MUTAGEN' is "
+"supported)."
+msgstr "``type``（字符串）（必填）注释类型（目前仅支持“MUTAGEN”）。"
+
+#: ../../tools/alphafold_tools.rst:34 ../../tools/alphafold_tools.rst:69
+#: ../../tools/alphafold_tools.rst:100 1024d257e91140bfbf34d31efff95248
+#: 23b6779e94ed49e7afe9387538ffff15 3fd66b0409b74413a50fcbc952926013
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/alphafold_tools.rst:49 917db67b2e8f4c63b72a0c6d9d26646d
+msgid "**alphafold_get_prediction** (Type: AlphaFoldRESTTool)"
+msgstr "**alphafold_get_prediction**（类型：AlphaFoldRESTTool）"
+
+#: ../../tools/alphafold_tools.rst:51 c348012c483447868fd0aa1ca4edf656
+msgid ""
+"Retrieve full AlphaFold 3D structure predictions for a given protein. Input "
+"must be a UniProt acc..."
+msgstr "获取指定蛋白质的完整AlphaFold三维结构预测。输入必须为UniProt访问号..."
+
+#: ../../tools/alphafold_tools.rst 71b286c322144343b9f0aca0c8f0a191
+msgid "alphafold_get_prediction tool specification"
+msgstr "alphafold_get_prediction 工具规范"
+
+#: ../../tools/alphafold_tools.rst:57 301417c3a2d9462691d72cde15360155
+msgid "**Name**: ``alphafold_get_prediction``"
+msgstr "**名称**: ``alphafold_get_prediction``"
+
+#: ../../tools/alphafold_tools.rst:59 b990c3b141a34c36884bbca67a139f26
+msgid ""
+"**Description**: Retrieve full AlphaFold 3D structure predictions for a "
+"given protein. Input must be a UniProt accession (e.g., 'P69905'), UniProt "
+"entry name (e.g., 'HBA_HUMAN'), or CRC64 checksum. Returns residue-level "
+"metadata including sequence, per-residue confidence scores (pLDDT), and "
+"structure download links (PDB, CIF, PAE). If you do not know the accession, "
+"first call `uniprot_search` to resolve it from a protein/gene name, or "
+"`UniProt_get_entry_by_accession` if you already have the accession and want "
+"UniProt details. For a quick overview, use `alphafold_get_summary`. For "
+"mutation/variant impact, see `alphafold_get_annotations."
+msgstr ""
+"**描述**：检索给定蛋白质的完整AlphaFold "
+"3D结构预测。输入必须是UniProt登录号（例如：'P69905'）、UniProt条目名称（例如：'HBA_HUMAN'）或CRC64校验和。返回的结果包括残基级别的元数据，如序列、每个残基的置信评分（pLDDT）以及结构下载链接（PDB、CIF、PAE）。如果您不知道登录号，请先调用`uniprot_search`通过蛋白质/基因名称解析登录号；如果您已有登录号并需要UniProt详细信息，请调用`UniProt_get_entry_by_accession`。若需快速概览，请使用`alphafold_get_summary`。关于突变/变异影响，请参见`alphafold_get_annotations`。"
+
+#: ../../tools/alphafold_tools.rst:63 7a8127fa185446d7adf47328c36ec055
+msgid ""
+"``qualifier`` (string) (required) Protein identifier: UniProt accession "
+"(e.g., 'P69905'), entry name (e.g., 'HBA_HUMAN'), or CRC64 checksum."
+msgstr ""
+"``qualifier``（字符串）（必填）蛋白质标识符：UniProt登录号（例如：'P69905'）、条目名称（例如：'HBA_HUMAN'）或CRC64校验和。"
+
+#: ../../tools/alphafold_tools.rst:66 69b891a1e3e043d889d130ecce8edf04
+msgid ""
+"``sequence_checksum`` (string) (optional) Optional CRC64 checksum of the "
+"UniProt sequence."
+msgstr "``sequence_checksum``（字符串）（可选）UniProt序列的可选CRC64校验和。"
+
+#: ../../tools/alphafold_tools.rst:83 96d4d13669fb480a912943ab6d92c211
+msgid "**alphafold_get_summary** (Type: AlphaFoldRESTTool)"
+msgstr "**alphafold_get_summary**（类型：AlphaFoldRESTTool）"
+
+#: ../../tools/alphafold_tools.rst:85 782065fc81ae4e62bdbb6ef8eb7b24dc
+msgid ""
+"Retrieve summary details of AlphaFold 3D models for a given protein. Input "
+"must be a UniProt acce..."
+msgstr "获取特定蛋白质的AlphaFold三维模型摘要信息。输入必须为UniProt访问号。"
+
+#: ../../tools/alphafold_tools.rst c719c34329f74d8e9dfbda6aac15b315
+msgid "alphafold_get_summary tool specification"
+msgstr "alphafold_get_summary 工具规范"
+
+#: ../../tools/alphafold_tools.rst:91 2f45d264937549bbbd38a4ab71ecee74
+msgid "**Name**: ``alphafold_get_summary``"
+msgstr "**名称**: ``alphafold_get_summary``"
+
+#: ../../tools/alphafold_tools.rst:93 e9251153fe02411cb8ff48f0e5b623b4
+msgid ""
+"**Description**: Retrieve summary details of AlphaFold 3D models for a given"
+" protein. Input must be a UniProt accession, entry name, or CRC64 checksum. "
+"Returns lightweight information such as sequence length, coverage, "
+"confidence scores, experimental method, resolution, oligomeric state, and "
+"structural entities. If you only know the protein/gene name, first use "
+"`uniprot_search` to find the accession. For full residue-level 3D "
+"predictions with downloadable coordinates, call `alphafold_get_prediction`. "
+"For curated variants, see `UniProt_get_disease_variants_by_accession`; for "
+"predicted mutation effects, use `alphafold_get_annotations`."
+msgstr ""
+"**描述**：检索给定蛋白的AlphaFold "
+"3D模型的摘要信息。输入必须是UniProt登录号、条目名称或CRC64校验和。返回的信息包括序列长度、覆盖率、置信分数、实验方法、分辨率、寡聚状态和结构实体等简要信息。如果您仅知道蛋白/基因名称，请先使用`uniprot_search`查找登录号。若需获取包含可下载坐标的完整残基级3D预测，请调用`alphafold_get_prediction`。对于经过整理的变体，请参阅`UniProt_get_disease_variants_by_accession`；若需预测突变效应，请使用`alphafold_get_annotations`。"
+
+#: ../../tools/alphafold_tools.rst:114 04f26daaa3444cdd9547fee7de19fd9d
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/alphafold_tools.rst:116 7f076cd21cd04f8e8bd2ddc437c20b0f
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/alphafold_tools.rst:117 d35e0e38b8b24bac98569bc0efaac446
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/literature_search_tools.rst:2 79c989e6491341aea1ed17124303fdb3
+msgid "Literature Search Tools"
+msgstr "文献检索工具"
+
+#: ../../tools/literature_search_tools.rst:4 fc52ea0cae22437ba2fa6a5b54d62f90
+msgid ""
+"**Configuration File**: ``literature_search_tools.json`` **Tool Type**: "
+"Local **Tools Count**: 6"
+msgstr "**配置文件**: ``literature_search_tools.json`` **工具类型**: 本地 **工具数量**: 6"
+
+#: ../../tools/literature_search_tools.rst:8 e5ec12870a984e7d9d499a5d4ff575c7
+msgid ""
+"This page contains all tools defined in the ``literature_search_tools.json``"
+" configuration file."
+msgstr "此页面包含在``literature_search_tools.json``配置文件中定义的所有工具。"
+
+#: ../../tools/literature_search_tools.rst:11 b176e9d4f84841018a8f749cbf599961
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/literature_search_tools.rst:14 d0b82320801e408084512920e3b69766
+msgid "**IntentAnalyzerAgent** (Type: AgenticTool)"
+msgstr "**IntentAnalyzerAgent**（类型：AgenticTool）"
+
+#: ../../tools/literature_search_tools.rst:16 b08dfe3a655b4c389977c6090d9fce6c
+msgid ""
+"AI agent that analyzes user research intent and creates comprehensive search"
+" plans"
+msgstr "用于分析用户研究意图并生成全面搜索计划的AI代理"
+
+#: ../../tools/literature_search_tools.rst 5abd600778474467b69cf80cec8535e6
+msgid "IntentAnalyzerAgent tool specification"
+msgstr "IntentAnalyzerAgent 工具规范"
+
+#: ../../tools/literature_search_tools.rst:20
+#: ../../tools/literature_search_tools.rst:54
+#: ../../tools/literature_search_tools.rst:96
+#: ../../tools/literature_search_tools.rst:133
+#: ../../tools/literature_search_tools.rst:187
+#: ../../tools/literature_search_tools.rst:221
+#: 04f5748124b9400f9fdf715e37e26383 601200dee7194034bd11ac17e30a2a8b
+#: 83ca0b83b5964b3f93d32f4ae071904d d2cac62693204627ad33ee079a011dc1
+#: e30bfbfa6ce5495a992ed6438a289c58 e7ef4537898e449d89157f9ef0c27517
+msgid "**Tool Information:**"
+msgstr ""
+"**工具信息：**  \n"
+"\n"
+"Context: 文档"
+
+#: ../../tools/literature_search_tools.rst:22 cd90ca3e8c1e4e648689225d01e57e75
+msgid "**Name**: ``IntentAnalyzerAgent``"
+msgstr "**名称**: ``IntentAnalyzerAgent``"
+
+#: ../../tools/literature_search_tools.rst:23
+#: ../../tools/literature_search_tools.rst:57
+#: ../../tools/literature_search_tools.rst:136
+#: ../../tools/literature_search_tools.rst:190
+#: ../../tools/literature_search_tools.rst:224
+#: 10eedea8412d43339e69bf5d43215e99 17360897574a4b0bb4d9599a33195b63
+#: 43b00432e3034207b6e8e24a6aa01777 463e34ed225342a99017943224b5130e
+#: 5623bc409b024164b71c879b5313b149
+msgid "**Type**: ``AgenticTool``"
+msgstr "**类型**: ``AgenticTool``"
+
+#: ../../tools/literature_search_tools.rst:24 052d2dfb621e4016852d252e7eb8f86e
+msgid ""
+"**Description**: AI agent that analyzes user research intent and creates "
+"comprehensive search plans"
+msgstr "**描述**：分析用户研究意图并生成全面搜索计划的AI代理"
+
+#: ../../tools/literature_search_tools.rst:26
+#: ../../tools/literature_search_tools.rst:60
+#: ../../tools/literature_search_tools.rst:102
+#: ../../tools/literature_search_tools.rst:139
+#: ../../tools/literature_search_tools.rst:193
+#: ../../tools/literature_search_tools.rst:227
+#: 2318f5fe539b4da2937a5711982efc2c 3849b5ecbe6448d9b3539516e6ecb34e
+#: 69d30b48730d4606a34662c74c38d046 72600adcc13a4991a4f007e379fd9d9b
+#: c51ff1f5bc704607929de728fb2204c9 ce17451935dd4343b0cb19fdd9c2c4ab
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/literature_search_tools.rst:28 fd057a0ef56d43ce946979bd3aca854e
+msgid "``user_query`` (string) (required) The research query to analyze"
+msgstr "``user_query``（字符串）（必填）要分析的研究查询"
+
+#: ../../tools/literature_search_tools.rst:31
+#: ../../tools/literature_search_tools.rst:71
+#: ../../tools/literature_search_tools.rst:159
+#: ../../tools/literature_search_tools.rst:198
+#: ../../tools/literature_search_tools.rst:241
+#: 659e6d8e561047dead7cfffed0c8f8e6 771fa175b14640d6aa06bcee97f9fcae
+#: ad5e47927d694c6ab8067cb704d8f9ea d836b45a708a4adea75b428e82ae7029
+#: fc27bfa015d74d07b7594f1025a602ae
+msgid ""
+"``context`` (string) (optional) Context information from previous steps"
+msgstr "``context``（字符串）（可选）来自前序步骤的上下文信息"
+
+#: ../../tools/literature_search_tools.rst:34
+#: ../../tools/literature_search_tools.rst:74
+#: ../../tools/literature_search_tools.rst:113
+#: ../../tools/literature_search_tools.rst:162
+#: ../../tools/literature_search_tools.rst:201
+#: ../../tools/literature_search_tools.rst:244
+#: 27037cc0320e4eaeb954ee54728b2048 2ec7028a6a0148f1829514ffdb754b3f
+#: 3d8d66f7a78a4114a9661401a2cb85e3 81140c6448db4d368630239bee4b56dd
+#: f0f35ac60c1a4bee9f20573d61669f64 ff54d9d0553644fb854b0c053cd8ae08
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/literature_search_tools.rst:48 bae5447ca90944a4bac69b34540dadf3
+msgid "**KeywordExtractorAgent** (Type: AgenticTool)"
+msgstr "**KeywordExtractorAgent**（类型：AgenticTool）"
+
+#: ../../tools/literature_search_tools.rst:50 da69b04ab8c54b478d5a2b051d4fa752
+msgid "AI agent that extracts and refines search keywords for research plans"
+msgstr "用于提取和优化研究计划搜索关键词的AI代理"
+
+#: ../../tools/literature_search_tools.rst 16bc2af7529e475bb27be2a4cf61f98c
+msgid "KeywordExtractorAgent tool specification"
+msgstr "KeywordExtractorAgent 工具规范"
+
+#: ../../tools/literature_search_tools.rst:56 15c713b10d094ea9b738f73e5a6f4146
+msgid "**Name**: ``KeywordExtractorAgent``"
+msgstr "**名称**: ``KeywordExtractorAgent``"
+
+#: ../../tools/literature_search_tools.rst:58 4e597e3127b54f60a22c06adff80aaae
+msgid ""
+"**Description**: AI agent that extracts and refines search keywords for "
+"research plans"
+msgstr "**描述**：用于提取和优化研究计划搜索关键词的AI代理"
+
+#: ../../tools/literature_search_tools.rst:62
+#: ../../tools/literature_search_tools.rst:229
+#: 0e88061ee7ff435c92570aea77f39c7f cae01f64cc184c9f954ebef414c6cb7c
+msgid "``plan_title`` (string) (required) The title of the search plan"
+msgstr "``plan_title``（字符串）（必填）搜索计划的标题"
+
+#: ../../tools/literature_search_tools.rst:65
+#: ../../tools/literature_search_tools.rst:232
+#: 4016654ddf244588b57e1805e21a7d7d 8a27a72631dd4e95b9bbfc67db29ff99
+msgid ""
+"``plan_description`` (string) (required) The description of the search plan"
+msgstr "``plan_description``（字符串）（必填）搜索计划的描述"
+
+#: ../../tools/literature_search_tools.rst:68 589ff8366cd648148fcf9db1aa8d9084
+msgid ""
+"``current_keywords`` (string) (required) Current keywords for the plan "
+"(comma-separated)"
+msgstr "``current_keywords``（字符串）（必填）计划的当前关键词（以逗号分隔）"
+
+#: ../../tools/literature_search_tools.rst:90 e84e577313754150864c23c86e45f82c
+msgid "**MultiAgentLiteratureSearch** (Type: ComposeTool)"
+msgstr "**MultiAgentLiteratureSearch**（类型：ComposeTool）"
+
+#: ../../tools/literature_search_tools.rst:92 049eaf0574a141eb98840ebd04defc6c
+msgid ""
+"Multi-agent literature search system that uses AI agents to analyze intent, "
+"extract keywords, exe..."
+msgstr "多代理文献检索系统，利用AI代理分析意图、提取关键词、执行..."
+
+#: ../../tools/literature_search_tools.rst bb12d4afb15b4ecdaa69efbe8e78da30
+msgid "MultiAgentLiteratureSearch tool specification"
+msgstr "MultiAgentLiteratureSearch 工具规范"
+
+#: ../../tools/literature_search_tools.rst:98 039aab21a3674357840679b49e073ca4
+msgid "**Name**: ``MultiAgentLiteratureSearch``"
+msgstr "**名称**: ``MultiAgentLiteratureSearch``"
+
+#: ../../tools/literature_search_tools.rst:99 9582afd931c644179651ffdf4981ab05
+msgid "**Type**: ``ComposeTool``"
+msgstr "**类型**：``ComposeTool``"
+
+#: ../../tools/literature_search_tools.rst:100
+#: 26a29a2cbffe4514852ec805a68a803a
+msgid ""
+"**Description**: Multi-agent literature search system that uses AI agents to"
+" analyze intent, extract keywords, execute parallel searches, summarize "
+"results, and check quality iteratively"
+msgstr "**描述**：多代理文献检索系统，利用AI代理分析意图、提取关键词、执行并行检索、汇总结果，并迭代检查质量"
+
+#: ../../tools/literature_search_tools.rst:104
+#: c64f98927009445aab8b76429e9c3a88
+msgid "``query`` (string) (required) The research query to search for"
+msgstr "``query``（字符串）（必填）用于搜索的研究查询"
+
+#: ../../tools/literature_search_tools.rst:107
+#: 06b4213f04bf4cfea3df2122c725c5c4
+msgid ""
+"``max_iterations`` (integer) (optional) Maximum number of iterations "
+"(default: 3)"
+msgstr "``max_iterations``（整数）（可选）最大迭代次数（默认值：3）"
+
+#: ../../tools/literature_search_tools.rst:110
+#: b428284073104249907d2ce712c70683
+msgid ""
+"``quality_threshold`` (number) (optional) Quality threshold for completion "
+"(default: 0.7)"
+msgstr "``quality_threshold``（数字）（可选）完成的质量阈值（默认值：0.7）"
+
+#: ../../tools/literature_search_tools.rst:127
+#: b9c263714a8d405f8f35020132ff283b
+msgid "**OverallSummaryAgent** (Type: AgenticTool)"
+msgstr "**OverallSummaryAgent**（类型：AgenticTool）"
+
+#: ../../tools/literature_search_tools.rst:129
+#: 076ba96741274aa0a2408d550ee92079
+msgid ""
+"AI agent that generates comprehensive overall summary of multi-agent search "
+"results"
+msgstr "生成多智能体搜索结果综合概述的AI代理"
+
+#: ../../tools/literature_search_tools.rst 92643eac243d46148cae4c1823fc6a5e
+msgid "OverallSummaryAgent tool specification"
+msgstr "总体摘要代理工具规范"
+
+#: ../../tools/literature_search_tools.rst:135
+#: 1c83300c52a342de8dcd7a3b684aa5c3
+msgid "**Name**: ``OverallSummaryAgent``"
+msgstr "**名称**: ``OverallSummaryAgent``"
+
+#: ../../tools/literature_search_tools.rst:137
+#: bb30b264d666403ea2fdb4b06ebd0f25
+msgid ""
+"**Description**: AI agent that generates comprehensive overall summary of "
+"multi-agent search results"
+msgstr "**描述**：生成多代理搜索结果综合总结的AI代理"
+
+#: ../../tools/literature_search_tools.rst:141
+#: 3c42cc7b4f354a0ab88f3544db29daf3
+msgid "``user_query`` (string) (required) The original research query"
+msgstr "``user_query``（字符串）（必填）原始研究查询"
+
+#: ../../tools/literature_search_tools.rst:144
+#: ab1843cb77ab41f6984a4bd2c090123c
+msgid "``user_intent`` (string) (required) The analyzed user intent"
+msgstr "``user_intent``（字符串）（必填）分析后的用户意图"
+
+#: ../../tools/literature_search_tools.rst:147
+#: c4820076477a4275b5bc8b5d74ed5c1d
+msgid "``total_papers`` (string) (required) Total number of papers found"
+msgstr "``total_papers``（字符串）（必填）找到的论文总数"
+
+#: ../../tools/literature_search_tools.rst:150
+#: c9a96eea59f248e9b75406e12295e9bd
+msgid ""
+"``total_plans`` (string) (required) Total number of search plans executed"
+msgstr "``total_plans``（字符串）（必填）执行的搜索计划总数"
+
+#: ../../tools/literature_search_tools.rst:153
+#: 8e757e40c3a34583a67c2648d0d7495d
+msgid "``iterations`` (string) (required) Number of iterations performed"
+msgstr "``iterations``（字符串）（必填）执行的迭代次数"
+
+#: ../../tools/literature_search_tools.rst:156
+#: 61fca27a1fe74625ac6f6af9f71fa95d
+msgid "``plan_summaries`` (string) (required) Summaries of all search plans"
+msgstr "``plan_summaries``（字符串）（必填）所有搜索计划的摘要"
+
+#: ../../tools/literature_search_tools.rst:181
+#: c9b4a49e7dd0424c953ff9cd0d7347bb
+msgid "**QualityCheckerAgent** (Type: AgenticTool)"
+msgstr "**QualityCheckerAgent**（类型：AgenticTool）"
+
+#: ../../tools/literature_search_tools.rst:183
+#: a1e60a08d3084612aecdfa34d4a635c8
+msgid "AI agent that checks search result quality and suggests improvements"
+msgstr "用于检查搜索结果质量并提出改进建议的AI代理"
+
+#: ../../tools/literature_search_tools.rst 3805a8cefb9048e284bf730d1339efc2
+msgid "QualityCheckerAgent tool specification"
+msgstr "QualityCheckerAgent 工具规范"
+
+#: ../../tools/literature_search_tools.rst:189
+#: 881f4929816f44c684e99ddc85ea9c88
+msgid "**Name**: ``QualityCheckerAgent``"
+msgstr "**名称**: ``QualityCheckerAgent``"
+
+#: ../../tools/literature_search_tools.rst:191
+#: e921563d14d749a19fbaa86a95df2629
+msgid ""
+"**Description**: AI agent that checks search result quality and suggests "
+"improvements"
+msgstr "**描述**：检查搜索结果质量并提出改进建议的AI代理"
+
+#: ../../tools/literature_search_tools.rst:195
+#: b4796f9163de46138b65f5ef9a9e7d73
+msgid ""
+"``plans_analysis`` (string) (required) Analysis of current search plans and "
+"their quality scores"
+msgstr "``plans_analysis``（字符串）（必填）当前搜索计划及其质量评分的分析"
+
+#: ../../tools/literature_search_tools.rst:215
+#: 45c6cf5ae69a4dc483fd8f21667e145c
+msgid "**ResultSummarizerAgent** (Type: AgenticTool)"
+msgstr "**ResultSummarizerAgent**（类型：AgenticTool）"
+
+#: ../../tools/literature_search_tools.rst:217
+#: 857769d4c7cb4799b42c12ab16763fef
+msgid "AI agent that summarizes search results for research plans"
+msgstr "用于研究计划的搜索结果摘要生成AI代理"
+
+#: ../../tools/literature_search_tools.rst 1a1c19191377452dbe342d6e6056584c
+msgid "ResultSummarizerAgent tool specification"
+msgstr "ResultSummarizerAgent 工具规格说明"
+
+#: ../../tools/literature_search_tools.rst:223
+#: 8fa52e430c5e4216b75bfef6583b0971
+msgid "**Name**: ``ResultSummarizerAgent``"
+msgstr "**名称**: ``ResultSummarizerAgent``"
+
+#: ../../tools/literature_search_tools.rst:225
+#: 22bf46f53b0f4409a428e1e6e9d73779
+msgid ""
+"**Description**: AI agent that summarizes search results for research plans"
+msgstr "**描述**：用于汇总搜索结果以制定研究计划的AI代理"
+
+#: ../../tools/literature_search_tools.rst:235
+#: 62b4f26d77fc4a8d86440ace9ebee70a
+msgid "``paper_count`` (string) (required) Number of papers found"
+msgstr "``paper_count``（字符串）（必填）找到的文件数量"
+
+#: ../../tools/literature_search_tools.rst:238
+#: 84363a891be145b3b79a5e079a06673a
+msgid ""
+"``papers_text`` (string) (required) Formatted text of the papers to "
+"summarize"
+msgstr "``papers_text``（字符串）（必填）要总结的论文的格式化文本"
+
+#: ../../tools/literature_search_tools.rst:261
+#: 128604fdfffd495aa98cd75c9602072c
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/literature_search_tools.rst:263
+#: 669f8badc9b7499388f0a310dc35e75b
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/literature_search_tools.rst:264
+#: 9831f95e47a94938be4dc6e29450225e
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

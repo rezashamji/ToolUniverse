@@ -1,0 +1,513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tutorials/finding_tools.rst:3 2b45769e08e946abbfb6e1ac80c79a4c
+msgid "Tool Finder Tutorial"
+msgstr "工具查找器教程"
+
+#: ../../tutorials/finding_tools.rst:5 8955853e615245eb9e2a77459b169427
+msgid ""
+"**Complete Tutorial to using ToolUniverse's three built-in tool discovery "
+"methods**"
+msgstr "**使用ToolUniverse三种内置工具发现方法的完整教程**"
+
+#: ../../tutorials/finding_tools.rst:8 17b2a98d44fe46c9a26dfb347197d4ca
+msgid "Introduction"
+msgstr "简介"
+
+#: ../../tutorials/finding_tools.rst:10 34aba4e2ab1d43ad95a9516eb78f3fe6
+msgid ""
+"ToolUniverse contains a vast repository of over 600+ scientific tools. To "
+"help you quickly find the right tools for your research tasks, ToolUniverse "
+"provides three sophisticated tool finder methods, each optimized for "
+"different use cases and computational requirements."
+msgstr ""
+"ToolUniverse 包含超过 600 种科学工具的庞大资源库。为了帮助您快速找到适合研究任务的工具，ToolUniverse "
+"提供了三种先进的工具查找方法，每种方法均针对不同的使用场景和计算需求进行了优化。"
+
+#: ../../tutorials/finding_tools.rst:13 3c5708183f194815b2988ada4ebfbeb3
+msgid "Why Use Tool Finders?"
+msgstr "为什么使用刀具查找器？"
+
+#: ../../tutorials/finding_tools.rst:15 b7dad5bc423b46c1816286f5303b829b
+msgid ""
+"**The Challenge**: With hundreds of available tools across domains like "
+"bioinformatics, chemistry, literature search, and data analysis, manually "
+"browsing through tool lists is time-consuming and inefficient."
+msgstr "**挑战**：在生物信息学、化学、文献检索和数据分析等多个领域中，数百种可用工具的手动浏览既耗时又低效。"
+
+#: ../../tutorials/finding_tools.rst:17 404398be69a7415fa174d9dcd9d51289
+msgid ""
+"**The Solution**: ToolUniverse's tool finders allow you to describe your "
+"research task in natural language and automatically discover the most "
+"relevant tools."
+msgstr "**解决方案**：ToolUniverse 的工具查找器允许您使用自然语言描述您的研究任务，并自动发现最相关的工具。"
+
+#: ../../tutorials/finding_tools.rst:19 d097f259f4764e7491a67196f6f63bd5
+msgid ""
+"**Three Approaches**: - **Keyword Search**: Fast, precise, resource-"
+"efficient - **LLM Search**: Intelligent, context-aware, handles complex "
+"queries - **Embedding Search**: Semantic understanding, scalable, "
+"similarity-based"
+msgstr ""
+"**三种方法**：  \n"
+"- **关键词搜索**：快速、精准、资源高效  \n"
+"- **大模型搜索**：智能、具备上下文感知能力、处理复杂查询  \n"
+"- **向量搜索**：语义理解、可扩展、基于相似度"
+
+#: ../../tutorials/finding_tools.rst:25 03630513783a44099e9834941ea5c1e3
+msgid "Overview of Tool Finder Methods"
+msgstr "工具查找方法概述"
+
+#: ../../tutorials/finding_tools.rst:28 d7c8a33020ee442a910bc7ae9877bfc9
+msgid "Strategic Trade-offs"
+msgstr "战略权衡"
+
+#: ../../tutorials/finding_tools.rst:30 43684a4e25d147bf92d7b58a54f9f46b
+msgid "Each method offers different advantages:"
+msgstr "每种方法各有不同的优势："
+
+#: ../../tutorials/finding_tools.rst:32 07d5c85d34db44689dfdbbecfa38c08a
+msgid "Tool Finder Comparison"
+msgstr "工具查找器比较"
+
+#: ../../tutorials/finding_tools.rst:36 95d6a78024df454bb27e87ca50131411
+msgid "Method"
+msgstr "方法"
+
+#: ../../tutorials/finding_tools.rst:37 d0b0ece383fc4bec94cced8a467f462a
+msgid "Speed"
+msgstr "速度"
+
+#: ../../tutorials/finding_tools.rst:38 e2ead21d611c44bda53a49f7325852be
+msgid "Semantic Understanding"
+msgstr "语义理解"
+
+#: ../../tutorials/finding_tools.rst:39 7ce4d4b1d2364d4688b29623e0b69df6
+msgid "Resource Usage"
+msgstr "资源使用"
+
+#: ../../tutorials/finding_tools.rst:40 711e775ade964171b015eef8297da7e3
+msgid "**Keyword Search**"
+msgstr "**关键词搜索**"
+
+#: ../../tutorials/finding_tools.rst:41 b6d037d93bc044db912fefe60de78f86
+msgid "Very Fast"
+msgstr "非常快速"
+
+#: ../../tutorials/finding_tools.rst:42 7fa0718fc3674dfd9ca1bd83744b80cc
+msgid "Basic"
+msgstr "基础"
+
+#: ../../tutorials/finding_tools.rst:43 148eabd4f3c24b0cbdbe133acb469c4c
+msgid "Very Low"
+msgstr "非常低"
+
+#: ../../tutorials/finding_tools.rst:44 8dfa9e01da554b618ca62584fa52e38e
+msgid "**LLM Search**"
+msgstr "**LLM 搜索**"
+
+#: ../../tutorials/finding_tools.rst:45 ../../tutorials/finding_tools.rst:51
+#: 0a5ff2036b8045539d9dc77fcab90d28 bfe047a0ab974aa7a2c9dd6b9021a5af
+msgid "Moderate"
+msgstr "适中"
+
+#: ../../tutorials/finding_tools.rst:46 e7852d6d05e44cb9aea516e5d0dcb3a4
+msgid "Excellent"
+msgstr "优秀"
+
+#: ../../tutorials/finding_tools.rst:47 006e6a5d06c64134abdc8bccbb129613
+msgid "High"
+msgstr "高"
+
+#: ../../tutorials/finding_tools.rst:48 fd3d7074d82e429ab127b780af6458d7
+msgid "**Embedding Search**"
+msgstr "**嵌入式搜索**"
+
+#: ../../tutorials/finding_tools.rst:49 faae2761ab914a0eb3e5f5276acdbe3d
+msgid "Fast"
+msgstr "快速"
+
+#: ../../tutorials/finding_tools.rst:50 3f536808167b443d87c9307dd49dac20
+msgid "Good"
+msgstr "好"
+
+#: ../../tutorials/finding_tools.rst:54 38ebf605d21e4b6284716731fbc2e958
+msgid "When to Use Each Method"
+msgstr "何时使用每种方法"
+
+#: ../../tutorials/finding_tools.rst:56 f1116225a21d460581e339dd9618d734
+msgid ""
+"**🔍 Keyword Search** - Use when: - You know specific technical terms - You "
+"need fast results - Working with limited computational resources - Looking "
+"for tools with specific names or exact terminology"
+msgstr ""
+"**🔍 关键词搜索** - 使用场景：  \n"
+"- 您已知具体的技术术语  \n"
+"- 您需要快速获取结果  \n"
+"- 您在计算资源有限的情况下工作  \n"
+"- 您正在查找具有特定名称或精确术语的工具"
+
+#: ../../tutorials/finding_tools.rst:62 285d828b43044f7c94ea58502b79175d
+msgid ""
+"**🧠 LLM Search** - Use when: - You have complex, multi-step research "
+"questions - Need intelligent interpretation of abstract goals - Want tool "
+"sequence recommendations - Have access to LLM APIs"
+msgstr ""
+"**🧠 LLM搜索** - 使用场景： - 您有复杂的多步骤研究问题 - 需要智能解读抽象目标 - 希望获得工具使用顺序的推荐 - 拥有LLM "
+"API的访问权限"
+
+#: ../../tutorials/finding_tools.rst:68 9d06b8d00ed04bab98eac9a3ecda53d4
+msgid ""
+"**🎯 Embedding Search** - Use when: - You want semantic similarity matching -"
+" Need scalable search across large tool sets - Looking for conceptually "
+"similar tools - Want to find tools based on research intent rather than "
+"exact keywords"
+msgstr ""
+"**🎯 嵌入式搜索**  \n"
+"使用场景：  \n"
+"- 需要语义相似性匹配  \n"
+"- 需要在大型工具集上实现可扩展搜索  \n"
+"- 寻找概念上相似的工具  \n"
+"- 希望根据研究意图而非精确关键词查找工具"
+
+#: ../../tutorials/finding_tools.rst:75 79ea06e740f049dfbb26b9588e06f08a
+msgid "Method 1: Keyword Search"
+msgstr "方法一：关键词搜索"
+
+#: ../../tutorials/finding_tools.rst:78 406af950487b4a2c821492c2352ce94b
+msgid "How Keyword Search Works"
+msgstr "关键词搜索的工作原理"
+
+#: ../../tutorials/finding_tools.rst:80 46fc7dc36e194e3fb7075a4e76a7200c
+msgid "Keyword search uses a sophisticated text processing pipeline:"
+msgstr "关键词搜索采用了复杂的文本处理流程："
+
+#: ../../tutorials/finding_tools.rst:82 56d63bce399a4333b380cae33f016d42
+msgid ""
+"**Query Processing**: - Tokenization via regular expressions - Removal of "
+"45+ common English stop words - Suffix-based stemming using 20 morphological"
+" rules - Generation of n-grams (bigrams and trigrams)"
+msgstr ""
+"**查询处理**：  \n"
+"- 通过正则表达式进行分词  \n"
+"- 去除45个以上常见英文停用词  \n"
+"- 基于20条形态规则的后缀词干提取  \n"
+"- 生成n-gram（双词组和三词组）"
+
+#: ../../tutorials/finding_tools.rst:88 3638c4be163f4e648e49fdef7365ad87
+msgid "**Relevance Scoring**:"
+msgstr "**相关性评分**："
+
+#: ../../tutorials/finding_tools.rst:90 fa6f5aa7a3b14a559419e47cb3530483
+msgid "Uses TF-IDF (Term Frequency-Inverse Document Frequency)"
+msgstr "使用 TF-IDF（词频-逆文档频率）"
+
+#: ../../tutorials/finding_tools.rst:91 28c24c6c40f949a39804debe4897b5e9
+msgid "Formula: ``Relevance = TF × IDF × log(1 + QueryFrequency)``"
+msgstr "公式：``相关度 = 词频（TF）× 逆文档频率（IDF）× log(1 + 查询频率)``"
+
+#: ../../tutorials/finding_tools.rst:92 082e95548dfa4056976f315b43eb3d77
+msgid "Hierarchical bonus structure:"
+msgstr "分层奖金结构："
+
+#: ../../tutorials/finding_tools.rst:94 09c69d0eca354fd0b5360fa59c6eb785
+msgid "Tool name matches: 2.0× multiplier"
+msgstr "工具名称匹配：2.0× 倍数"
+
+#: ../../tutorials/finding_tools.rst:95 bcaadd157f9a455da5b051e6b523fd15
+msgid "Exact phrase matches: 1.5× multiplier"
+msgstr "完全匹配短语：1.5× 倍数"
+
+#: ../../tutorials/finding_tools.rst:97 2bf16e3c7f0341f7a04e269a73ab3484
+msgid ""
+"**Fast Matching**: Pre-built index ensures rapid search without ML "
+"dependencies"
+msgstr "**快速匹配**：预构建索引确保无需依赖机器学习即可实现快速搜索"
+
+#: ../../tutorials/finding_tools.rst:100 f947bd9ec9724ca0903abedc973a1e0a
+msgid "Using Keyword Search"
+msgstr "使用关键词搜索"
+
+#: ../../tutorials/finding_tools.rst:103 ../../tutorials/finding_tools.rst:173
+#: ../../tutorials/finding_tools.rst:289 15da57a1cdf24752adc61e522a6d402b
+#: 478c15554f124bbfb753b05198583884 8a2b47b8602e4009a3d51dcfd3189068
+msgid "Basic Usage"
+msgstr "基本用法"
+
+#: ../../tutorials/finding_tools.rst:127 c1894cb5a23540c1979210f173275776
+msgid "Advanced Usage with Filters"
+msgstr "高级用法与过滤器"
+
+#: ../../tutorials/finding_tools.rst:149 2f5825770aae47a6be471ce694dd361d
+msgid "Keyword Search Best Practices"
+msgstr "关键词搜索最佳实践"
+
+#: ../../tutorials/finding_tools.rst:151 c355134f494341df91633e5e9d29ab83
+msgid ""
+"**Effective Queries**: - Use specific scientific terminology: \"CRISPR gene "
+"editing\", \"molecular docking\", \"phylogenetic analysis\" - Include "
+"domain-specific keywords: \"protein\", \"drug\", \"genomic\", \"clinical\" -"
+" Use technical abbreviations: \"PCR\", \"BLAST\", \"PDB\""
+msgstr ""
+"**有效查询**：  \n"
+"- 使用具体的科学术语：“CRISPR基因编辑”、“分子对接”、“系统发育分析”  \n"
+"- 包含领域特定关键词：“蛋白质”、“药物”、“基因组”、“临床”  \n"
+"- 使用技术缩写：“PCR”、“BLAST”、“PDB”"
+
+#: ../../tutorials/finding_tools.rst:157 995f1fd356b34cc6894a510df5e54de2
+msgid "Method 2: LLM Search"
+msgstr "方法二：LLM 搜索"
+
+#: ../../tutorials/finding_tools.rst:160 3ea1f3e23e2a4bf2a61146182806a6bb
+msgid "How LLM Search Works"
+msgstr "LLM 搜索的工作原理"
+
+#: ../../tutorials/finding_tools.rst:162 3b890907fc8c466cb985029583189ace
+msgid ""
+"LLM search leverages Large Language Models for intelligent tool discovery:"
+msgstr "LLM 搜索利用大型语言模型实现智能工具发现："
+
+#: ../../tutorials/finding_tools.rst:164 313ccce992e642ec8b9507c157e2b025
+msgid ""
+"**Context Construction**: Creates detailed prompts combining user queries "
+"with tool specifications"
+msgstr "**上下文构建**：结合用户查询与工具规格，创建详细的提示信息"
+
+#: ../../tutorials/finding_tools.rst:165 b2860bae74c04b23a10624af655d4e13
+msgid ""
+"**Intelligent Reasoning**: LLM analyzes context to infer optimal tools or "
+"tool sequences"
+msgstr "**智能推理**：大型语言模型分析上下文以推断最佳工具或工具序列"
+
+#: ../../tutorials/finding_tools.rst:166 df038fb755f143228f60aa76f4da0682
+msgid ""
+"**Complex Query Handling**: Excels at multi-step, abstract, or complex "
+"research questions"
+msgstr "**复杂查询处理**：擅长多步骤、抽象或复杂的研究问题"
+
+#: ../../tutorials/finding_tools.rst:167 d7d8de8fa9234538b5864cdb232c2206
+msgid "**Agentic Implementation**: Uses ToolUniverse's agentic tool framework"
+msgstr "**自主执行**：使用 ToolUniverse 的自主工具框架"
+
+#: ../../tutorials/finding_tools.rst:170 75681b84e3944652a629dde4ddc74c11
+msgid "Using LLM Search"
+msgstr "使用大型语言模型搜索"
+
+#: ../../tutorials/finding_tools.rst:200 24be72ebc4904b7a9386175bf57e1b37
+msgid "Complex Multi-Step Queries"
+msgstr "复杂的多步骤查询"
+
+#: ../../tutorials/finding_tools.rst:232 c165bb384e2e4b079d696bdbd3f303eb
+msgid "Abstract Goal Interpretation"
+msgstr "摘要 目标解释"
+
+#: ../../tutorials/finding_tools.rst:264 7644267b7fab4139a011a0bf1dc32fc8
+msgid "LLM Search Best Practices"
+msgstr "LLM 搜索最佳实践"
+
+#: ../../tutorials/finding_tools.rst:266 c00514564c0b4914b77894f59b7d65ae
+msgid ""
+"**Effective Strategies**: - Describe your research context and goals clearly"
+" - Mention specific diseases, molecules, or research areas - Include "
+"workflow steps if you have a multi-step process - Ask for reasoning to "
+"understand why tools were recommended"
+msgstr ""
+"**有效策略**：  \n"
+"- 清晰描述您的研究背景和目标  \n"
+"- 指明具体的疾病、分子或研究领域  \n"
+"- 如果有多步骤流程，请包含各个工作步骤  \n"
+"- 询问推荐工具的理由，以便理解推荐原因"
+
+#: ../../tutorials/finding_tools.rst:273 6d7abc691e344ad3bd417040d0067e01
+msgid "Method 3: Embedding Search"
+msgstr "方法三：嵌入式搜索"
+
+#: ../../tutorials/finding_tools.rst:276 d25ce36ff5284a40b0dfba3e35692e3e
+msgid "How Embedding Search Works"
+msgstr "嵌入式搜索的工作原理"
+
+#: ../../tutorials/finding_tools.rst:278 046fab1973d747389723b5abacbdf98c
+msgid "Embedding search uses semantic similarity for tool discovery:"
+msgstr "嵌入式搜索使用语义相似度进行工具发现："
+
+#: ../../tutorials/finding_tools.rst:280 c788048f2a9c4dc8a3ef0e7e4cd194a0
+msgid ""
+"**Model Training**: Fine-tuned embedding model on synthetic query-tool pairs"
+msgstr "**模型训练**：在合成查询-工具对上微调的嵌入模型"
+
+#: ../../tutorials/finding_tools.rst:281 b01e4df1bf4943a69db01938317b7982
+msgid ""
+"**Offline Indexing**: Tool specifications converted to semantic vectors and "
+"stored in vector database"
+msgstr "**离线索引**：工具规格转换为语义向量并存储于向量数据库中"
+
+#: ../../tutorials/finding_tools.rst:282 0aed9e2632f04e649af549509163109b
+msgid ""
+"**Online Querying**: User queries converted to vectors and matched via "
+"cosine similarity"
+msgstr "**在线查询**：用户查询转换为向量，并通过余弦相似度进行匹配"
+
+#: ../../tutorials/finding_tools.rst:283 6166194276ae498c9547303d973671d7
+msgid ""
+"**Semantic Understanding**: Captures conceptual relationships beyond keyword"
+" matching"
+msgstr "**语义理解**：捕捉超越关键词匹配的概念关系"
+
+#: ../../tutorials/finding_tools.rst:286 cf58352f1e2c42e4ab93e8391b0136b7
+msgid "Using Embedding Search"
+msgstr "使用嵌入式搜索"
+
+#: ../../tutorials/finding_tools.rst:312 3c7d0f07166b4548a700ce2afc604bfb
+msgid "Semantic Similarity Examples"
+msgstr "语义相似性示例"
+
+#: ../../tutorials/finding_tools.rst:347 f8df01ac10d24870aa995384f9ac3bfb
+msgid "Advanced Embedding Search"
+msgstr "高级嵌入式搜索"
+
+#: ../../tutorials/finding_tools.rst:370 37b04df8142a4d9eac1565cb6d6ab7ce
+msgid "Comparing Search Methods"
+msgstr "比较搜索方法"
+
+#: ../../tutorials/finding_tools.rst:373 ea09185bf054487a9e3498005300372a
+msgid "Practical Comparison"
+msgstr "实际对比"
+
+#: ../../tutorials/finding_tools.rst:375 37a32a665e504297a7ef54f1326432ce
+msgid "Let's compare all three methods on the same query:"
+msgstr "让我们在同一查询上比较这三种方法："
+
+#: ../../tutorials/finding_tools.rst:417 ec088e8eedbe47b5844a8191dc645b67
+msgid "Performance Analysis"
+msgstr "性能分析"
+
+#: ../../tutorials/finding_tools.rst:419 3d3ec20d135545a2b88aa6ea68650156
+msgid "Measure and compare performance:"
+msgstr "测量并比较性能："
+
+#: ../../tutorials/finding_tools.rst:470 af4b5e225a9d46bda06591cc13169920
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../tutorials/finding_tools.rst:473 e15018a148f845e78e72e2c36e9fbd31
+msgid "Common Issues and Solutions"
+msgstr "常见问题及解决方案"
+
+#: ../../tutorials/finding_tools.rst:475 d586743caafc44b4af96e90de30b98eb
+msgid "**Issue**: LLM search fails"
+msgstr "**问题**：大型语言模型搜索失败"
+
+#: ../../tutorials/finding_tools.rst:495 88ea308b746e462d812836f3879eeee9
+msgid "Conclusion"
+msgstr "结论"
+
+#: ../../tutorials/finding_tools.rst:497 bad1ad6bf5fa44c88128044f713697a4
+msgid ""
+"ToolUniverse's three tool finder methods provide powerful and flexible "
+"approaches to discovering the right tools for your research:"
+msgstr "ToolUniverse的三种工具查找方法为您提供强大且灵活的途径，助您发现适合研究的工具："
+
+#: ../../tutorials/finding_tools.rst:499 1cb344baa1bd459890abfc02db799b69
+msgid ""
+"**🔍 Keyword Search**: Perfect for precise, fast searches with technical "
+"terminology"
+msgstr "**🔍 关键词搜索**：适用于使用技术术语进行精准快速的搜索"
+
+#: ../../tutorials/finding_tools.rst:501 05c0b00ad6954b2daefb45bc52ee89ca
+msgid ""
+"**🧠 LLM Search**: Ideal for complex, multi-step research workflows requiring"
+" intelligence"
+msgstr "**🧠 大型语言模型搜索**：适用于需要智能支持的复杂多步骤研究工作流程"
+
+#: ../../tutorials/finding_tools.rst:503 1fd1c479fa664825a4559509e672dc69
+msgid ""
+"**🎯 Embedding Search**: Excellent for semantic similarity and conceptual "
+"tool discovery"
+msgstr "**🎯 嵌入式搜索**：非常适合语义相似性和概念工具的发现"
+
+#: ../../tutorials/finding_tools.rst:505 7184b897c8f84cb18b01f629e86c957d
+msgid "**Key Takeaways**:"
+msgstr "**主要要点**："
+
+#: ../../tutorials/finding_tools.rst:507 22c24512d26b4f1e859a9b3b4044b4b6
+msgid ""
+"**Choose the right method** for your specific use case and computational "
+"constraints"
+msgstr "**根据您的具体使用场景和计算限制选择合适的方法**"
+
+#: ../../tutorials/finding_tools.rst:508 f9cb4e0f284d4ca3b14e932fc9c9220f
+msgid "**Combine methods** for comprehensive tool discovery"
+msgstr "**结合多种方法**实现全面的工具发现"
+
+#: ../../tutorials/finding_tools.rst:509 ec374db3e64e447a9f5d8827ef88bae5
+msgid "**Optimize queries** based on the search method's strengths"
+msgstr "根据搜索方法的优势**优化查询**"
+
+#: ../../tutorials/finding_tools.rst:510 215d1dd729044065aa4fd92a5d668091
+msgid "**Use fallback strategies** when initial searches don't yield results"
+msgstr "**当初始搜索未能获得结果时，使用备用策略**"
+
+#: ../../tutorials/finding_tools.rst:512 10a4389864cb4ac5b49f42d56a3a1082
+msgid "Happy tool hunting! 🔬"
+msgstr "祝您工具搜索顺利！🔬"
+
+#: ../../tutorials/finding_tools.rst:515 e24cd53d96f348c2b21f0053a95ff224
+msgid "Further Resources"
+msgstr "更多资源"
+
+#: ../../tutorials/finding_tools.rst:517 550ae5be33c6479e960b41fa20553fc3
+msgid ""
+"**Related Documentation**: - :doc:`../guide/tools` - Overview of all "
+"ToolUniverse tools - :doc:`../guide/examples` - Practical usage examples - "
+":doc:`custom_tools` - Creating your own tools"
+msgstr ""
+"**相关文档**：  \n"
+"- :doc:`../guide/tools` - ToolUniverse 工具总览  \n"
+"- :doc:`../guide/examples` - 实用使用示例  \n"
+"- :doc:`custom_tools` - 自定义工具创建指南"
+
+#: ../../tutorials/finding_tools.rst:522 ca3875c943534413b9392172e261d99b
+msgid ""
+"**API References**: - :doc:`api_comprehensive` - Complete API documentation "
+"- :doc:`../reference/tool_categories` - Tool categories and descriptions"
+msgstr ""
+"**API 参考**：  \n"
+"- :doc:`api_comprehensive` - 完整的 API 文档  \n"
+"- :doc:`../reference/tool_categories` - 工具类别及说明"
+
+#: ../../tutorials/finding_tools.rst:526 91b9b33649b844cb81af9b310b31749a
+msgid ""
+"**Need Help?**: - :doc:`../help/troubleshooting` - Common issues and "
+"solutions - :doc:`../help/faq` - Frequently asked questions"
+msgstr ""
+"**需要帮助？**: - :doc:`../help/troubleshooting` - 常见问题及解决方案 - :doc:`../help/faq`"
+" - 常见问答"
+
+#~ msgid ""
+#~ "**API References**: - :doc:`../api_comprehensive` - Complete API "
+#~ "documentation - :doc:`../reference/tool_categories` - Tool categories and "
+#~ "descriptions"
+#~ msgstr ""
+#~ "**API 参考**：  \n"
+#~ "- :doc:`../api_comprehensive` - 完整的 API 文档  \n"
+#~ "- :doc:`../reference/tool_categories` - 工具类别及说明"

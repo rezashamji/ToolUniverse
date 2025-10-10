@@ -1,0 +1,767 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/machine_learning_tools.rst:2 b239d35604514defb25d5972637608f0
+msgid "Machine Learning Tools"
+msgstr "机器学习工具"
+
+#: ../../tools/machine_learning_tools.rst:4 bb7f9114c8104f22956c7ba5174ad5ba
+msgid ""
+"**Configuration File**: ``packages/machine_learning_tools.json`` **Tool "
+"Type**: Local **Tools Count**: 21"
+msgstr ""
+"**配置文件**：``packages/machine_learning_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：21"
+
+#: ../../tools/machine_learning_tools.rst:8 4bc1960b30864d56b77baa01b8e73fce
+msgid ""
+"This page contains all tools defined in the ``machine_learning_tools.json`` "
+"configuration file."
+msgstr "此页面包含在 ``machine_learning_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/machine_learning_tools.rst:11 60d0741e399340e6b733e880b8963e81
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/machine_learning_tools.rst:14 275afde82d5f41acbc55c9c73baae90e
+msgid "**get_catboost_info** (Type: PackageTool)"
+msgstr "**get_catboost_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:16 1b8dc941788b484f96a11eb066d36209
+msgid ""
+"Get information about the catboost package. High-performance gradient "
+"boosting library"
+msgstr "获取有关 catboost 包的信息。高性能梯度提升库"
+
+#: ../../tools/machine_learning_tools.rst a1f837c5e32e4dfb980abdc87533c700
+msgid "get_catboost_info tool specification"
+msgstr "get_catboost_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:20
+#: ../../tools/machine_learning_tools.rst:49
+#: ../../tools/machine_learning_tools.rst:80
+#: ../../tools/machine_learning_tools.rst:111
+#: ../../tools/machine_learning_tools.rst:141
+#: ../../tools/machine_learning_tools.rst:171
+#: ../../tools/machine_learning_tools.rst:202
+#: ../../tools/machine_learning_tools.rst:233
+#: ../../tools/machine_learning_tools.rst:263
+#: ../../tools/machine_learning_tools.rst:292
+#: ../../tools/machine_learning_tools.rst:321
+#: ../../tools/machine_learning_tools.rst:350
+#: ../../tools/machine_learning_tools.rst:381
+#: ../../tools/machine_learning_tools.rst:412
+#: ../../tools/machine_learning_tools.rst:442
+#: ../../tools/machine_learning_tools.rst:472
+#: ../../tools/machine_learning_tools.rst:502
+#: ../../tools/machine_learning_tools.rst:531
+#: ../../tools/machine_learning_tools.rst:561
+#: ../../tools/machine_learning_tools.rst:591
+#: ../../tools/machine_learning_tools.rst:621 05bcae56c41643d8b705f007b3e3b1b1
+#: 23f84b8902a6404b9f4c0b148323aa19 50cea68e9bcc4589a60e3eee1830e302
+#: 53ca751ff60f4ad880d6628ab98b3628 541d06ca3c264ffe8ece2bb92b0fd4cf
+#: 5ad442dda0414fddb3f5c9bd7fb889d7 5f2c53b4c4c646ab8bf8c4adbd71df8d
+#: 60d944ad5b124fd293da43f9b26f9be6 71a925a243d44916b2a00ed5ef6b934a
+#: 7a9553d84abd49dc8192f78dbc494c81 8a29aec1c6ad4dbc8af228af01bb9cc5
+#: 8b9d2459c97b48fc8489525a07a16581 90bb5f2393a741958734d38ae5df4c64
+#: 93d278197b564dc58877aa826b2960a9 aef4f7eeb15d4348885c6ddae0981751
+#: b29e172850874a17baaef1b6420c5a3a bb4c1ccc2a464034aa59f06848e5d0f7
+#: c192ae50e3b241b4a9c4ac031794d3dc c8209523dc51439696c996f732564fa3
+#: ca658d47d925443586ef9cc605e92850 d7c3490e3bc04818abdacb85fa12be51
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/machine_learning_tools.rst:22 4a668f807f954ebc8e2b13b18eed7697
+msgid "**Name**: ``get_catboost_info``"
+msgstr "**名称**：``get_catboost_info``"
+
+#: ../../tools/machine_learning_tools.rst:23
+#: ../../tools/machine_learning_tools.rst:52
+#: ../../tools/machine_learning_tools.rst:83
+#: ../../tools/machine_learning_tools.rst:114
+#: ../../tools/machine_learning_tools.rst:144
+#: ../../tools/machine_learning_tools.rst:174
+#: ../../tools/machine_learning_tools.rst:205
+#: ../../tools/machine_learning_tools.rst:236
+#: ../../tools/machine_learning_tools.rst:266
+#: ../../tools/machine_learning_tools.rst:295
+#: ../../tools/machine_learning_tools.rst:324
+#: ../../tools/machine_learning_tools.rst:353
+#: ../../tools/machine_learning_tools.rst:384
+#: ../../tools/machine_learning_tools.rst:415
+#: ../../tools/machine_learning_tools.rst:445
+#: ../../tools/machine_learning_tools.rst:475
+#: ../../tools/machine_learning_tools.rst:505
+#: ../../tools/machine_learning_tools.rst:534
+#: ../../tools/machine_learning_tools.rst:564
+#: ../../tools/machine_learning_tools.rst:594
+#: ../../tools/machine_learning_tools.rst:624 06263a4077ac46b188581d4dc59f7140
+#: 234b1a2f837b496ba99bf3ea1d947bf5 2b16ec058f0c48feaee80a94c762aef3
+#: 35ff57b082bc4d629b40bdd3ec3a3a38 3cae759568c74c07a2bb130370e036bc
+#: 41f4a078121a432fa95b926e3e663608 5f81c41098fe4483a3249fa703a456c3
+#: 6a75f124638c4a1ab3d7d530b682d573 73d3585371b247e18e79d76d1838560c
+#: 844cff24fecc46699298f4deb7498a1d 9abdb9f13be448418b520bfc1b440d70
+#: 9e221f56607f48c6bcb3c53e046f6648 9e2bf70c8f234b54bb18ff48df21e928
+#: a4b483064585459e97de477d6b4ebd70 b8118a3a39094d919dd32ed064bcccb6
+#: cb3a5e43d5ab4029a0ac67b851394b3d da5371aabc0344eca4ba69529e55e2ca
+#: e53ba22402884fe783396e7414c96ad8 ec224740d90a45c1a9e748342bfddde3
+#: f60a5067b4634bb991d854af7258d817 fff11739e70747d587eb505407c7abab
+msgid "**Type**: ``PackageTool``"
+msgstr "**类型**：``PackageTool``"
+
+#: ../../tools/machine_learning_tools.rst:24 d2963400c4614bf293d4c8fb4253a9c5
+msgid ""
+"**Description**: Get information about the catboost package. High-"
+"performance gradient boosting library"
+msgstr "**描述**：获取有关catboost库的信息。高性能梯度提升库"
+
+#: ../../tools/machine_learning_tools.rst:26
+#: ../../tools/machine_learning_tools.rst:55
+#: ../../tools/machine_learning_tools.rst:86
+#: ../../tools/machine_learning_tools.rst:117
+#: ../../tools/machine_learning_tools.rst:147
+#: ../../tools/machine_learning_tools.rst:177
+#: ../../tools/machine_learning_tools.rst:208
+#: ../../tools/machine_learning_tools.rst:239
+#: ../../tools/machine_learning_tools.rst:269
+#: ../../tools/machine_learning_tools.rst:298
+#: ../../tools/machine_learning_tools.rst:327
+#: ../../tools/machine_learning_tools.rst:356
+#: ../../tools/machine_learning_tools.rst:387
+#: ../../tools/machine_learning_tools.rst:418
+#: ../../tools/machine_learning_tools.rst:448
+#: ../../tools/machine_learning_tools.rst:478
+#: ../../tools/machine_learning_tools.rst:508
+#: ../../tools/machine_learning_tools.rst:537
+#: ../../tools/machine_learning_tools.rst:567
+#: ../../tools/machine_learning_tools.rst:597
+#: ../../tools/machine_learning_tools.rst:627 0795c9b4d2ae4a4fbf0d0b9d010b99b1
+#: 089e81f17f9242d890f697ba6de4132f 0f5c6dc17947489ab2ce36dda09fe2a5
+#: 2c431f82b35f401593b566a2822c47d2 2e7f9089efa34be09790574c9c515a59
+#: 459c02fd5cec4e8090b2c32440522f79 6821d81ba0c54961bd909afd59f6753c
+#: 7003754acc2b470087ded4282a166776 75c1cbd8cee24fed80df34e47ae2904c
+#: 816a1b25e2e643a09c9a42acc4a6f02f 85c05b81524c48d3a4c5d43819b79ee0
+#: 89fc399269ff4482853ae5a439802d2a 97520b6c200541c59e84b78eb0792064
+#: a6adaf3557614852bab429ec75e8221a bcbb9a3c7af548b0b1f8ad0f8fca2e1b
+#: d7f0b91d2b1741fd9e6997e4a75348dc e03b10f5e4d94b4d9f8569747ed636cc
+#: e779006cd7ff4442a2a3ddafb35c6790 f5daef76c70f476eb5df8c4cf1b5413f
+#: f6482bc093ab4c48b598a858317934bb f6847a3774e04834a9259ff736f5b29d
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/machine_learning_tools.rst:28
+#: ../../tools/machine_learning_tools.rst:271
+#: ../../tools/machine_learning_tools.rst:300
+#: ../../tools/machine_learning_tools.rst:329
+#: ../../tools/machine_learning_tools.rst:510
+#: ../../tools/machine_learning_tools.rst:629 832dd7343b974ea196677a1149459a31
+#: aedc557b80f14598aad0011143528b3d c006a83e878547c28bb8c5384d7d852d
+#: d79f83418aa24bc6aaa4a0d9fa9537e3 e6b0cafcd8464871af53d9b9c905fec4
+#: ec5d664143174aa2b6d66e140a6a067d
+msgid "No parameters required."
+msgstr "无需参数。"
+
+#: ../../tools/machine_learning_tools.rst:30
+#: ../../tools/machine_learning_tools.rst:60
+#: ../../tools/machine_learning_tools.rst:91
+#: ../../tools/machine_learning_tools.rst:122
+#: ../../tools/machine_learning_tools.rst:152
+#: ../../tools/machine_learning_tools.rst:182
+#: ../../tools/machine_learning_tools.rst:213
+#: ../../tools/machine_learning_tools.rst:244
+#: ../../tools/machine_learning_tools.rst:273
+#: ../../tools/machine_learning_tools.rst:302
+#: ../../tools/machine_learning_tools.rst:331
+#: ../../tools/machine_learning_tools.rst:361
+#: ../../tools/machine_learning_tools.rst:392
+#: ../../tools/machine_learning_tools.rst:423
+#: ../../tools/machine_learning_tools.rst:453
+#: ../../tools/machine_learning_tools.rst:483
+#: ../../tools/machine_learning_tools.rst:512
+#: ../../tools/machine_learning_tools.rst:542
+#: ../../tools/machine_learning_tools.rst:572
+#: ../../tools/machine_learning_tools.rst:602
+#: ../../tools/machine_learning_tools.rst:631 05d9cd7249b44263871f80d8b0fca105
+#: 0c5a1012369f4c08bd7b53ba92030614 11b7ca80f41a43cb9500df32d9b994f3
+#: 11bf9105f74447c8abdec47122346a5d 11fb2ac6371146dfb42323536c8a0521
+#: 1c5f8833bb4f4180b7ef6a87f6852834 27d273048a3444bcaa05d2f00a5dfa7c
+#: 694bf05a5c0c430cb39be9942cdbf3da 7affe8b19d12432489e69d9a2fbf1455
+#: 84b647ac2bd7483cab6fcbb74584ec10 889526f6ae42427e90a1b5819b6c9996
+#: 8e65a3e5a90c4e1096472421d72cb723 91755abb7fff4bef8a2fd2a3809597a4
+#: a7d16aff265849ed817eaab8aedf675f af0050b74c1b4c129cd338048a6ab4e1
+#: bbe318d54a26485fbf8612fe9628c789 c40ae15c3f5340489317107954f3578d
+#: cdd300f1da4241d0a9790ba8acda843b cfdc3ef9933945e08bd1f3511994974e
+#: ef084c7ebaaf4ee8bbaea085817a6c62 f53312127f3743c8a9a6b0f29043455a
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/machine_learning_tools.rst:43 29e9761002154267aa7c0bf35358aa4c
+msgid "**get_cobrapy_info** (Type: PackageTool)"
+msgstr "**get_cobrapy_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:45 88f3aa7ec5da486fa45ea9832a3298cd
+msgid ""
+"Get comprehensive information about COBRApy – constraint-based metabolic "
+"modeling"
+msgstr "获取有关COBRApy的全面信息——基于约束的代谢建模"
+
+#: ../../tools/machine_learning_tools.rst 6314df11b301428c88034f889ab9f06e
+msgid "get_cobrapy_info tool specification"
+msgstr "get_cobrapy_info 工具规范"
+
+#: ../../tools/machine_learning_tools.rst:51 f1a67d1c5605474792750587c5e6a9c6
+msgid "**Name**: ``get_cobrapy_info``"
+msgstr "**名称**: ``get_cobrapy_info``"
+
+#: ../../tools/machine_learning_tools.rst:53 5330fac2941e4df49ded96f01d382949
+msgid ""
+"**Description**: Get comprehensive information about COBRApy – constraint-"
+"based metabolic modeling"
+msgstr "**描述**：获取关于COBRApy的全面信息——基于约束的代谢建模"
+
+#: ../../tools/machine_learning_tools.rst:57 d382a2076604469db93bf2c1cae7cf63
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"COBRApy"
+msgstr "``info_type``（字符串）（必填）检索有关 COBRApy 信息的类型"
+
+#: ../../tools/machine_learning_tools.rst:74 088543c8652747228da5ec56db66decc
+msgid "**get_deeppurpose_info** (Type: PackageTool)"
+msgstr "**get_deeppurpose_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:76 e5dc9d49f526472fac42a8db671fadba
+msgid ""
+"Get comprehensive information about DeepPurpose – deep learning toolkit for "
+"drug discovery"
+msgstr "获取有关DeepPurpose的全面信息——用于药物发现的深度学习工具包"
+
+#: ../../tools/machine_learning_tools.rst 94a5db92867547e1a63afb4d4dba44f0
+msgid "get_deeppurpose_info tool specification"
+msgstr "get_deeppurpose_info 工具规范"
+
+#: ../../tools/machine_learning_tools.rst:82 2170a249ec8b4c9c8e5c722b58b89554
+msgid "**Name**: ``get_deeppurpose_info``"
+msgstr "**名称**: ``get_deeppurpose_info``"
+
+#: ../../tools/machine_learning_tools.rst:84 61670ea3b1e0462c903086c4214def84
+msgid ""
+"**Description**: Get comprehensive information about DeepPurpose – deep "
+"learning toolkit for drug discovery"
+msgstr "**描述**：获取有关 DeepPurpose 的全面信息——用于药物发现的深度学习工具包"
+
+#: ../../tools/machine_learning_tools.rst:88 8fd196cc043747aca0605deb796d4a1b
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"DeepPurpose"
+msgstr "``info_type``（字符串）（必填）要检索的有关 DeepPurpose 的信息类型"
+
+#: ../../tools/machine_learning_tools.rst:105 ed106861317442a9960a8c8f182d5528
+msgid "**get_deepxde_info** (Type: PackageTool)"
+msgstr "**get_deepxde_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:107 250724b75d484f8ea66836be77238f61
+msgid ""
+"Get comprehensive information about DeepXDE – a library for physics-informed"
+" neural networks (PIN..."
+msgstr "获取有关 DeepXDE 的全面信息——这是一个用于物理信息神经网络（PINN）的库..."
+
+#: ../../tools/machine_learning_tools.rst 569d602ce0bc482cabe8780020c0843a
+msgid "get_deepxde_info tool specification"
+msgstr "get_deepxde_info 工具规范"
+
+#: ../../tools/machine_learning_tools.rst:113 1b20300cd0d74986b9702fbb67122bbf
+msgid "**Name**: ``get_deepxde_info``"
+msgstr "**名称**: ``get_deepxde_info``"
+
+#: ../../tools/machine_learning_tools.rst:115 003e8f1c7acb4a73a976c1d8367029e6
+msgid ""
+"**Description**: Get comprehensive information about DeepXDE – a library for"
+" physics-informed neural networks (PINNs) solving PDEs and inverse problems."
+msgstr "**描述**：获取关于 DeepXDE 的全面信息——一个用于求解偏微分方程（PDEs）和逆问题的物理信息神经网络（PINNs）库。"
+
+#: ../../tools/machine_learning_tools.rst:119
+#: ../../tools/machine_learning_tools.rst:450 3f28599d53774068b4cca32c1b39067c
+#: a6a94fa371e149b690466f0e8d61bae4
+msgid ""
+"``include_examples`` (boolean) (optional) Whether to include usage examples "
+"and a quick-start guide"
+msgstr "``include_examples``（布尔值）（可选）是否包含使用示例和快速入门指南"
+
+#: ../../tools/machine_learning_tools.rst:135 d77c53c8714f47d483f35018893bea23
+msgid "**get_faiss_info** (Type: PackageTool)"
+msgstr "**get_faiss_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:137 4796d6e8080b44cc9f26c17f02e72550
+msgid ""
+"Get comprehensive information about Faiss – efficient similarity search and "
+"clustering"
+msgstr "获取关于 Faiss —— 高效相似性搜索与聚类的全面信息"
+
+#: ../../tools/machine_learning_tools.rst f27582c61e7240f19026c48644d4c069
+msgid "get_faiss_info tool specification"
+msgstr "get_faiss_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:143 89dfef3663bc4bd5a445cd65469aa989
+msgid "**Name**: ``get_faiss_info``"
+msgstr "**名称**：``get_faiss_info``"
+
+#: ../../tools/machine_learning_tools.rst:145 799c0de5e234482d86639da847791535
+msgid ""
+"**Description**: Get comprehensive information about Faiss – efficient "
+"similarity search and clustering"
+msgstr "**描述**：获取关于 Faiss —— 高效相似度搜索与聚类的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:149
+#: ../../tools/machine_learning_tools.rst:241
+#: ../../tools/machine_learning_tools.rst:420
+#: ../../tools/machine_learning_tools.rst:480
+#: ../../tools/machine_learning_tools.rst:539
+#: ../../tools/machine_learning_tools.rst:569
+#: ../../tools/machine_learning_tools.rst:599 21942c09fd31433b89ff34c0000da656
+#: 743047887fd343e59c327575d9e4d371 772f790ae70649f89bde2520f61b29dc
+#: 847f1de944674658b09a175f3f98e970 ab728d71c4464c8eb14b1cf665375ebc
+#: e30e3d2194f34745ba2cff2cc6ee6166 f88eaf89d7d444a4b2cb1a94e76e0bb3
+msgid ""
+"``include_examples`` (boolean) (optional) Whether to include usage examples "
+"and quick start guide"
+msgstr "``include_examples``（布尔值）（可选）是否包含使用示例和快速入门指南"
+
+#: ../../tools/machine_learning_tools.rst:165 1fdc92b9dda94b2988e8471f0b31c39a
+msgid "**get_harmony_pytorch_info** (Type: PackageTool)"
+msgstr "**get_harmony_pytorch_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:167 6cc19941698c4a19bef0792187652533
+msgid ""
+"Get comprehensive information about harmony-pytorch – single-cell data "
+"integration"
+msgstr "获取关于 harmony-pytorch —— 单细胞数据整合的全面信息"
+
+#: ../../tools/machine_learning_tools.rst f181f1b9e60846c4aa0299663bdf2e21
+msgid "get_harmony_pytorch_info tool specification"
+msgstr "get_harmony_pytorch_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:173 9988d8efaf6c4ba88a7ff8cbb1e0c0cf
+msgid "**Name**: ``get_harmony_pytorch_info``"
+msgstr "**名称**：``get_harmony_pytorch_info``"
+
+#: ../../tools/machine_learning_tools.rst:175 360a270cc3604b3887956878d68ff77a
+msgid ""
+"**Description**: Get comprehensive information about harmony-pytorch – "
+"single-cell data integration"
+msgstr "**描述**：获取关于 harmony-pytorch —— 单细胞数据整合的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:179 b26ce0a6a0bc40d18a88cce79166881b
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"harmony-pytorch"
+msgstr "``info_type``（字符串）（必填） 要检索的关于 harmony-pytorch 的信息类型"
+
+#: ../../tools/machine_learning_tools.rst:196 05090b6f6a34491389ca485f62eb47b6
+msgid "**get_hmmlearn_info** (Type: PackageTool)"
+msgstr "**get_hmmlearn_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:198 da8aba301f784787a7a6cdb1f7021e92
+msgid ""
+"Get comprehensive information about hmmlearn – Hidden Markov Models in "
+"Python"
+msgstr "获取有关 hmmlearn —— Python 中隐马尔可夫模型的全面信息"
+
+#: ../../tools/machine_learning_tools.rst 157865a9cdf3484ba1bad9525e65db5f
+msgid "get_hmmlearn_info tool specification"
+msgstr "get_hmmlearn_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:204 86dc90ab2e9e43ffaa982384ff0afc85
+msgid "**Name**: ``get_hmmlearn_info``"
+msgstr "**名称**：``get_hmmlearn_info``"
+
+#: ../../tools/machine_learning_tools.rst:206 dc4fea1db5bf408586ddbe63d813c97b
+msgid ""
+"**Description**: Get comprehensive information about hmmlearn – Hidden "
+"Markov Models in Python"
+msgstr "**描述**：获取有关 hmmlearn —— Python 中的隐马尔可夫模型的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:210 d67558fd77c9473ab71ae0fecd6e8332
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"hmmlearn"
+msgstr "``info_type``（字符串）（必填） 要检索的关于 hmmlearn 的信息类型"
+
+#: ../../tools/machine_learning_tools.rst:227 36e88e039ddc4ff799559d79de3ad87d
+msgid "**get_hyperopt_info** (Type: PackageTool)"
+msgstr "**get_hyperopt_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:229 a053ff3f22ce4973bcbbf5a38516cca3
+msgid ""
+"Get comprehensive information about Hyperopt – distributed hyperparameter "
+"optimization"
+msgstr "获取关于 Hyperopt —— 分布式超参数优化的全面信息"
+
+#: ../../tools/machine_learning_tools.rst 1b3dc1ce22f349558240f4a74f0cda7c
+msgid "get_hyperopt_info tool specification"
+msgstr "get_hyperopt_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:235 54fcde6ec02049f4864ed0142b393377
+msgid "**Name**: ``get_hyperopt_info``"
+msgstr "**名称**：``get_hyperopt_info``"
+
+#: ../../tools/machine_learning_tools.rst:237 5279f8eacc6c4323bddc12df911dc53b
+msgid ""
+"**Description**: Get comprehensive information about Hyperopt – distributed "
+"hyperparameter optimization"
+msgstr "**描述**：获取关于 Hyperopt —— 分布式超参数优化的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:257 24becce8feb14596973ea2a7882bd125
+msgid "**get_imbalanced_learn_info** (Type: PackageTool)"
+msgstr "**get_imbalanced_learn_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:259 2901aae2376240e4b5ab7516857a8c04
+msgid ""
+"Get information about the imbalanced-learn package. Python toolbox for "
+"imbalanced dataset learning"
+msgstr "获取有关 imbalanced-learn 包的信息。用于不平衡数据集学习的 Python 工具箱"
+
+#: ../../tools/machine_learning_tools.rst 7578584cba0646768f9b2a92b6338751
+msgid "get_imbalanced_learn_info tool specification"
+msgstr "get_imbalanced_learn_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:265 8fe90bfedc6a4993ae6ac1c70c3d26b8
+msgid "**Name**: ``get_imbalanced_learn_info``"
+msgstr "**名称**：``get_imbalanced_learn_info``"
+
+#: ../../tools/machine_learning_tools.rst:267 44fc9ec2133c4b849a8fa9ef2cc6edfb
+msgid ""
+"**Description**: Get information about the imbalanced-learn package. Python "
+"toolbox for imbalanced dataset learning"
+msgstr "**描述**：获取有关 imbalanced-learn 包的信息。用于不平衡数据集学习的 Python 工具箱"
+
+#: ../../tools/machine_learning_tools.rst:286 421aecaaed544433921c51e1ad7f250d
+msgid "**get_lightgbm_info** (Type: PackageTool)"
+msgstr "**get_lightgbm_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:288 4a226469f4ce4909b788244fb42a9a81
+msgid ""
+"Get information about the lightgbm package. Fast gradient boosting framework"
+msgstr "获取有关 lightgbm 包的信息。快速梯度提升框架"
+
+#: ../../tools/machine_learning_tools.rst f71326db6a52472eb1003f7af8188919
+msgid "get_lightgbm_info tool specification"
+msgstr "get_lightgbm_info 工具规范"
+
+#: ../../tools/machine_learning_tools.rst:294 ac8e6800fbd240bcb6c9a2480727a0c3
+msgid "**Name**: ``get_lightgbm_info``"
+msgstr "**名称**：``get_lightgbm_info``"
+
+#: ../../tools/machine_learning_tools.rst:296 86db2bd52cea4126bf40c7bd4670563f
+msgid ""
+"**Description**: Get information about the lightgbm package. Fast gradient "
+"boosting framework"
+msgstr "**描述**：获取有关 lightgbm 包的信息。快速梯度提升框架"
+
+#: ../../tools/machine_learning_tools.rst:315 8aeb0165f8904ba08f9d288045a02a6c
+msgid "**get_optuna_info** (Type: PackageTool)"
+msgstr "**get_optuna_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:317 487558d6652c4015a5cf7546e0ca62fe
+msgid ""
+"Get information about the optuna package. Hyperparameter optimization "
+"framework"
+msgstr "获取有关 optuna 包的信息。超参数优化框架"
+
+#: ../../tools/machine_learning_tools.rst 7366e276c7f24ccbb091a6eb32d27c10
+msgid "get_optuna_info tool specification"
+msgstr "get_optuna_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:323 950f4593e75848d4aaf26a27b1dc5b75
+msgid "**Name**: ``get_optuna_info``"
+msgstr "**名称**：``get_optuna_info``"
+
+#: ../../tools/machine_learning_tools.rst:325 6d13b940dff24f49b6feb289c0ec9e4a
+msgid ""
+"**Description**: Get information about the optuna package. Hyperparameter "
+"optimization framework"
+msgstr "**描述**：获取有关 optuna 包的信息。超参数优化框架"
+
+#: ../../tools/machine_learning_tools.rst:344 263e7b251c5e4941b4c2c8171af1e3b6
+msgid "**get_pymzml_info** (Type: PackageTool)"
+msgstr "**get_pymzml_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:346 62da17afbc9646d295b6ad1abc69e6d8
+msgid ""
+"Get comprehensive information about pymzML – mzML file parser for mass "
+"spectrometry"
+msgstr "获取有关 pymzML —— 质谱数据 mzML 文件解析器的全面信息"
+
+#: ../../tools/machine_learning_tools.rst 44f29374408f4e8f93a42ff68efb1cf2
+msgid "get_pymzml_info tool specification"
+msgstr "get_pymzml_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:352 34079d0cb7fa43b7b7758aefa996953a
+msgid "**Name**: ``get_pymzml_info``"
+msgstr "**名称**：``get_pymzml_info``"
+
+#: ../../tools/machine_learning_tools.rst:354 d19318e3fdbd4b6fa1385629afac4131
+msgid ""
+"**Description**: Get comprehensive information about pymzML – mzML file "
+"parser for mass spectrometry"
+msgstr "**描述**：获取有关 pymzML —— 质谱数据 mzML 文件解析器的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:358 4a938c85f86a45d2b6b89dc973a09ef9
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"pymzML"
+msgstr "``info_type``（字符串）（必填）要检索的关于 pymzML 的信息类型"
+
+#: ../../tools/machine_learning_tools.rst:375 5806227d33c843bf9f16fa1adb137464
+msgid "**get_python_libsbml_info** (Type: PackageTool)"
+msgstr "**get_python_libsbml_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:377 8532106e0b3c4668a57e8cf54ed8adba
+msgid ""
+"Get comprehensive information about python-libsbml – SBML (Systems Biology "
+"Markup Language) support"
+msgstr "获取有关 python-libsbml —— SBML（系统生物学标记语言）支持的全面信息"
+
+#: ../../tools/machine_learning_tools.rst ecd7b6f500c2424ab6ee1e9b6034cc7a
+msgid "get_python_libsbml_info tool specification"
+msgstr "get_python_libsbml_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:383 2dd2e02ad9f447e5ae38f459e700f9d1
+msgid "**Name**: ``get_python_libsbml_info``"
+msgstr "**名称**：``get_python_libsbml_info``"
+
+#: ../../tools/machine_learning_tools.rst:385 b480b53ec7c34f1da6f15e6ad21a2052
+msgid ""
+"**Description**: Get comprehensive information about python-libsbml – SBML "
+"(Systems Biology Markup Language) support"
+msgstr "**描述**：获取有关 python-libsbml —— SBML（系统生物学标记语言）支持的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:389 40973e5a1cbd40b5aa7ec91d487065f1
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"python-libsbml"
+msgstr "``info_type``（字符串）（必填）要检索的关于 python-libsbml 的信息类型"
+
+#: ../../tools/machine_learning_tools.rst:406 160ad962ecd3480c913b90bf86f3fa9a
+msgid "**get_pytorch_info** (Type: PackageTool)"
+msgstr "**get_pytorch_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:408 c58fdb675d3e469ba364a5ea0d431eee
+msgid ""
+"Get comprehensive information about PyTorch – an open source machine "
+"learning framework"
+msgstr "获取有关 PyTorch —— 一个开源机器学习框架的全面信息"
+
+#: ../../tools/machine_learning_tools.rst 68ad35e83e4b441db024f0750a441d2a
+msgid "get_pytorch_info tool specification"
+msgstr "get_pytorch_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:414 854dd19f08b74cbf892c0b034539f98f
+msgid "**Name**: ``get_pytorch_info``"
+msgstr "**名称**：``get_pytorch_info``"
+
+#: ../../tools/machine_learning_tools.rst:416 2ca55d4c9e134388af98e68e3da53430
+msgid ""
+"**Description**: Get comprehensive information about PyTorch – an open "
+"source machine learning framework"
+msgstr "**描述**：获取关于 PyTorch —— 一个开源机器学习框架的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:436 3971c69b4b2244d3907e566095c2f8e9
+msgid "**get_schnetpack_info** (Type: PackageTool)"
+msgstr "**get_schnetpack_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:438 f4332171ccbb497a8eb39b314cdfade5
+msgid ""
+"Get comprehensive information about SchNetPack – a deep-learning toolbox for"
+" molecules and materi..."
+msgstr "获取关于 SchNetPack 的全面信息——一个用于分子和材料的深度学习工具箱..."
+
+#: ../../tools/machine_learning_tools.rst 120b3aa51d5e4fee8bf2ffe6083790e6
+msgid "get_schnetpack_info tool specification"
+msgstr "get_schnetpack_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:444 28120a97c52e4e3a8c7185310ace902c
+msgid "**Name**: ``get_schnetpack_info``"
+msgstr "**名称**：``get_schnetpack_info``"
+
+#: ../../tools/machine_learning_tools.rst:446 e0f29a185a8641b2af7d7b4d12e08666
+msgid ""
+"**Description**: Get comprehensive information about SchNetPack – a deep-"
+"learning toolbox for molecules and materials built on PyTorch."
+msgstr "**描述**：获取关于 SchNetPack 的全面信息——一个基于 PyTorch 构建的用于分子和材料的深度学习工具箱。"
+
+#: ../../tools/machine_learning_tools.rst:466 1a898908193348628b6fa46662429441
+msgid "**get_scikit_learn_info** (Type: PackageTool)"
+msgstr "**get_scikit_learn_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:468 4604456abdf84865b300f5cb573a20d4
+msgid ""
+"Get comprehensive information about scikit-learn – simple and efficient "
+"tools for predictive data..."
+msgstr "获取关于 scikit-learn 的全面信息——用于预测数据的简单高效工具..."
+
+#: ../../tools/machine_learning_tools.rst 17111081dbf84c808a841565ea2f8b40
+msgid "get_scikit_learn_info tool specification"
+msgstr "get_scikit_learn_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:474 26ed2f5263ba42f2944e13692fad4760
+msgid "**Name**: ``get_scikit_learn_info``"
+msgstr "**名称**：``get_scikit_learn_info``"
+
+#: ../../tools/machine_learning_tools.rst:476 af4bd92ad0ea49f480e7872c4098f8d1
+msgid ""
+"**Description**: Get comprehensive information about scikit-learn – simple "
+"and efficient tools for predictive data analysis"
+msgstr "**描述**：获取关于 scikit-learn 的全面信息——用于预测性数据分析的简单高效工具"
+
+#: ../../tools/machine_learning_tools.rst:496 2fda7c350dc34a9bb990a2721c1e4cd0
+msgid "**get_skopt_info** (Type: PackageTool)"
+msgstr "**get_skopt_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:498 cada66d77e40421f95801cf2637e0946
+msgid ""
+"Get information about the skopt package. Scikit-Optimize: sequential model-"
+"based optimization"
+msgstr "获取有关 skopt 包的信息。Scikit-Optimize：基于序贯模型的优化"
+
+#: ../../tools/machine_learning_tools.rst 4d0d01bbd34c41a0b69de4d2b053d154
+msgid "get_skopt_info tool specification"
+msgstr "get_skopt_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:504 3a4c01d1d79347139d7aa3c48ab5d0cb
+msgid "**Name**: ``get_skopt_info``"
+msgstr "**名称**：``get_skopt_info``"
+
+#: ../../tools/machine_learning_tools.rst:506 97a6aeaa6c12492bad67283565661474
+msgid ""
+"**Description**: Get information about the skopt package. Scikit-Optimize: "
+"sequential model-based optimization"
+msgstr "**描述**：获取有关 skopt 包的信息。Scikit-Optimize：基于序列模型的优化方法"
+
+#: ../../tools/machine_learning_tools.rst:525 225e95471f8c4a59bf235a9658e71415
+msgid "**get_statsmodels_info** (Type: PackageTool)"
+msgstr "**get_statsmodels_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:527 a9e32305e6cf4650857478345b4a996b
+msgid ""
+"Get comprehensive information about statsmodels – statistical modeling and "
+"econometrics"
+msgstr "获取关于 statsmodels —— 统计建模与计量经济学的全面信息"
+
+#: ../../tools/machine_learning_tools.rst c557d302311f4e9398cbcd57a11ad427
+msgid "get_statsmodels_info tool specification"
+msgstr "get_statsmodels_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:533 a1f9912f22f94e27affa3373716560b5
+msgid "**Name**: ``get_statsmodels_info``"
+msgstr "**名称**：``get_statsmodels_info``"
+
+#: ../../tools/machine_learning_tools.rst:535 c5dc9a9094fd4605ac9be4f676122b8f
+msgid ""
+"**Description**: Get comprehensive information about statsmodels – "
+"statistical modeling and econometrics"
+msgstr "**描述**：获取关于statsmodels——统计建模与计量经济学的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:555 75b9e985e5ca43a192fbad835cf203ca
+msgid "**get_torch_geometric_info** (Type: PackageTool)"
+msgstr "**get_torch_geometric_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:557 dbfcfb7abd0e4ae69d687f57866d1a6b
+msgid ""
+"Get comprehensive information about PyTorch Geometric – a high-performance "
+"library for graph neur..."
+msgstr "获取有关 PyTorch Geometric 的全面信息——一个高性能的图神经网络库..."
+
+#: ../../tools/machine_learning_tools.rst c28548b718254a69a89c2111e27461a6
+msgid "get_torch_geometric_info tool specification"
+msgstr "get_torch_geometric_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:563 7f141639a04544e8aa8a77948453e9a2
+msgid "**Name**: ``get_torch_geometric_info``"
+msgstr "**名称**：``get_torch_geometric_info``"
+
+#: ../../tools/machine_learning_tools.rst:565 8378a30934cd4e46b4c2c0aff8783d1e
+msgid ""
+"**Description**: Get comprehensive information about PyTorch Geometric – a "
+"high-performance library for graph neural networks widely used in molecular "
+"and materials science."
+msgstr "**描述**：获取关于 PyTorch Geometric 的全面信息——这是一款高性能的图神经网络库，广泛应用于分子科学和材料科学领域。"
+
+#: ../../tools/machine_learning_tools.rst:585 8805c9fa4c8a45758d46d0524f58f86a
+msgid "**get_umap_learn_info** (Type: PackageTool)"
+msgstr "**get_umap_learn_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:587 9f2b027a480c49de96c5f52a0f67ed0e
+msgid ""
+"Get comprehensive information about UMAP-learn – dimensionality reduction "
+"technique"
+msgstr "获取关于 UMAP-learn —— 降维技术的全面信息"
+
+#: ../../tools/machine_learning_tools.rst 923395022bbb458db3f079affb340240
+msgid "get_umap_learn_info tool specification"
+msgstr "get_umap_learn_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:593 98c50e5cd3294cf0a9d61ead7c8cfcbf
+msgid "**Name**: ``get_umap_learn_info``"
+msgstr "**名称**：``get_umap_learn_info``"
+
+#: ../../tools/machine_learning_tools.rst:595 d27e7110ac024f54bbe8167e7b83caa4
+msgid ""
+"**Description**: Get comprehensive information about UMAP-learn – "
+"dimensionality reduction technique"
+msgstr "**描述**：获取关于 UMAP-learn —— 一种降维技术的全面信息"
+
+#: ../../tools/machine_learning_tools.rst:615 3c103c888ebd459ba4f1b438cbb7dcd9
+msgid "**get_xgboost_info** (Type: PackageTool)"
+msgstr "**get_xgboost_info**（类型：PackageTool）"
+
+#: ../../tools/machine_learning_tools.rst:617 5b8a57e540de478c84fe7779dc211e12
+msgid ""
+"Get information about the xgboost package. Optimized gradient boosting "
+"framework"
+msgstr "获取有关 xgboost 包的信息。优化的梯度提升框架"
+
+#: ../../tools/machine_learning_tools.rst 5712297ad9b74c0aa0cddb174b23bc84
+msgid "get_xgboost_info tool specification"
+msgstr "get_xgboost_info 工具规格说明"
+
+#: ../../tools/machine_learning_tools.rst:623 bc5b4a94a58a4562a1f490c4b25a1546
+msgid "**Name**: ``get_xgboost_info``"
+msgstr "**名称**：``get_xgboost_info``"
+
+#: ../../tools/machine_learning_tools.rst:625 f1c17576bcb3430fa7a5c30d9663b8ef
+msgid ""
+"**Description**: Get information about the xgboost package. Optimized "
+"gradient boosting framework"
+msgstr "**描述**：获取有关 xgboost 包的信息。优化的梯度提升框架"
+
+#: ../../tools/machine_learning_tools.rst:644 017e04cc4d7e4f78973e52b669ad3be0
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/machine_learning_tools.rst:646 5502a053ae16465faa1d4d2ef3511ba2
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/machine_learning_tools.rst:647 d11e2188bf7042f39f4f9bed273807e7
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

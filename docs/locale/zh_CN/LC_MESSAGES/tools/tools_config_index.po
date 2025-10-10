@@ -1,0 +1,4449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/tools_config_index.rst:55
+msgid "Bioinformatics Core Tools"
+msgstr "生物信息学核心工具"
+
+#: ../../tools/tools_config_index.rst:60
+msgid "Cheminformatics Tools"
+msgstr "化学信息学工具"
+
+#: ../../tools/tools_config_index.rst:65
+msgid "Earth Sciences Tools"
+msgstr "地球科学工具"
+
+#: ../../tools/tools_config_index.rst:70
+msgid "Genomics Tools"
+msgstr "基因组学工具"
+
+#: ../../tools/tools_config_index.rst:75
+msgid "Image Processing Tools"
+msgstr "图像处理工具"
+
+#: ../../tools/tools_config_index.rst:80
+msgid "Machine Learning Tools"
+msgstr "机器学习工具"
+
+#: ../../tools/tools_config_index.rst:85
+msgid "Neuroscience Tools"
+msgstr "神经科学工具"
+
+#: ../../tools/tools_config_index.rst:90
+msgid "Physics Astronomy Tools"
+msgstr "物理天文工具"
+
+#: ../../tools/tools_config_index.rst:95
+msgid "Scientific Computing Tools"
+msgstr "科学计算工具"
+
+#: ../../tools/tools_config_index.rst:100
+msgid "Single Cell Tools"
+msgstr "单细胞工具"
+
+#: ../../tools/tools_config_index.rst:105
+msgid "Structural Biology Tools"
+msgstr "结构生物学工具"
+
+#: ../../tools/tools_config_index.rst:110
+msgid "Visualization Tools"
+msgstr "可视化工具"
+
+#: ../../tools/tools_config_index.rst:118
+msgid "Admetai Tools"
+msgstr "阿德迈泰工具"
+
+#: ../../tools/tools_config_index.rst:123
+msgid "Adverse Event Tools"
+msgstr "不良事件工具"
+
+#: ../../tools/tools_config_index.rst:128
+msgid "Agentic Tools"
+msgstr "智能体工具"
+
+#: ../../tools/tools_config_index.rst:133
+msgid "Alphafold Tools"
+msgstr "Alphafold 工具"
+
+#: ../../tools/tools_config_index.rst:138
+#, fuzzy
+msgid "Arxiv Tools"
+msgstr "Xml 工具"
+
+#: ../../tools/tools_config_index.rst:143
+#, fuzzy
+msgid "Biorxiv Tools"
+msgstr "Pubtator 工具"
+
+#: ../../tools/tools_config_index.rst:148
+#: ../../tools/tools_config_index.rst:437
+msgid "Boltz Tools"
+msgstr "博尔兹工具"
+
+#: ../../tools/tools_config_index.rst:153
+msgid "Chembl Tools"
+msgstr "Chembl 工具"
+
+#: ../../tools/tools_config_index.rst:158
+msgid "Clinicaltrials Gov Tools"
+msgstr "Clinicaltrials Gov 工具"
+
+#: ../../tools/tools_config_index.rst:163
+msgid "Compose Tools"
+msgstr "撰写工具"
+
+#: ../../tools/tools_config_index.rst:168
+#, fuzzy
+msgid "Core Tools"
+msgstr "撰写工具"
+
+#: ../../tools/tools_config_index.rst:173
+#, fuzzy
+msgid "Crossref Tools"
+msgstr "撰写工具"
+
+#: ../../tools/tools_config_index.rst:178
+msgid "Dailymed Tools"
+msgstr "Dailymed 工具"
+
+#: ../../tools/tools_config_index.rst:183
+msgid "Dataset Tools"
+msgstr "数据集工具"
+
+#: ../../tools/tools_config_index.rst:188
+#, fuzzy
+msgid "Dblp Tools"
+msgstr "Odphp 工具"
+
+#: ../../tools/tools_config_index.rst:193
+msgid "Disease Target Score Tools"
+msgstr "疾病靶点评分工具"
+
+#: ../../tools/tools_config_index.rst:198
+#, fuzzy
+msgid "Doaj Tools"
+msgstr "本地工具"
+
+#: ../../tools/tools_config_index.rst:203
+msgid "Efo Tools"
+msgstr "Efo 工具"
+
+#: ../../tools/tools_config_index.rst:208
+msgid "Embedding Tools"
+msgstr "嵌入工具"
+
+#: ../../tools/tools_config_index.rst:213
+msgid "Enrichr Tools"
+msgstr "Enrichr 工具"
+
+#: ../../tools/tools_config_index.rst:218
+msgid "Europe Pmc Tools"
+msgstr "欧洲PMC工具"
+
+#: ../../tools/tools_config_index.rst:223
+#: ../../tools/tools_config_index.rst:437
+msgid "Expert Feedback Tools"
+msgstr "专家反馈工具"
+
+#: ../../tools/tools_config_index.rst:228
+#, fuzzy
+msgid "Fatcat Tools"
+msgstr "数据集工具"
+
+#: ../../tools/tools_config_index.rst:233
+msgid "Fda Drug Adverse Event Tools"
+msgstr "FDA药物不良事件工具"
+
+#: ../../tools/tools_config_index.rst:238
+msgid "Fda Drug Labeling Tools"
+msgstr "FDA药品标签工具"
+
+#: ../../tools/tools_config_index.rst:243
+msgid "Finder Tools"
+msgstr "查找器工具"
+
+#: ../../tools/tools_config_index.rst:248
+msgid "Gene Ontology Tools"
+msgstr "基因本体工具"
+
+#: ../../tools/tools_config_index.rst:253
+msgid "Gwas Tools"
+msgstr "Gwas 工具"
+
+#: ../../tools/tools_config_index.rst:258
+#, fuzzy
+msgid "Hal Tools"
+msgstr "Hpa 工具"
+
+#: ../../tools/tools_config_index.rst:263
+msgid "Hpa Tools"
+msgstr "Hpa 工具"
+
+#: ../../tools/tools_config_index.rst:268
+msgid "Humanbase Tools"
+msgstr "Humanbase 工具"
+
+#: ../../tools/tools_config_index.rst:273
+msgid "Idmap Tools"
+msgstr "Idmap 工具"
+
+#: ../../tools/tools_config_index.rst:278
+#, fuzzy
+msgid "Literature Search Tools"
+msgstr "URL 获取工具"
+
+#: ../../tools/tools_config_index.rst:283
+msgid "Mcp Client Tools Example"
+msgstr "MCP 客户端工具示例"
+
+#: ../../tools/tools_config_index.rst:288
+msgid "Medlineplus Tools"
+msgstr "Medlineplus 工具"
+
+#: ../../tools/tools_config_index.rst:293
+#, fuzzy
+msgid "Medrxiv Tools"
+msgstr "嵌入工具"
+
+#: ../../tools/tools_config_index.rst:298
+msgid "Monarch Tools"
+msgstr "Monarch 工具"
+
+#: ../../tools/tools_config_index.rst:303
+msgid "Odphp Tools"
+msgstr "Odphp 工具"
+
+#: ../../tools/tools_config_index.rst:308
+#, fuzzy
+msgid "Openaire Tools"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:313
+msgid "Openalex Tools"
+msgstr "Openalex 工具"
+
+#: ../../tools/tools_config_index.rst:318
+msgid "Opentarget Tools"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:323
+#, fuzzy
+msgid "Osf Preprints Tools"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:328
+msgid "Output Summarization Tools"
+msgstr "输出汇总工具"
+
+#: ../../tools/tools_config_index.rst:333
+#, fuzzy
+msgid "Pmc Tools"
+msgstr "Xml 工具"
+
+#: ../../tools/tools_config_index.rst:338
+msgid "Pubchem Tools"
+msgstr "PubChem 工具"
+
+#: ../../tools/tools_config_index.rst:343
+#, fuzzy
+msgid "Pubmed Tools"
+msgstr "PubChem 工具"
+
+#: ../../tools/tools_config_index.rst:348
+msgid "Pubtator Tools"
+msgstr "Pubtator 工具"
+
+#: ../../tools/tools_config_index.rst:353
+msgid "Rcsb Pdb Tools"
+msgstr "Rcsb Pdb 工具集"
+
+#: ../../tools/tools_config_index.rst:358
+msgid "Reactome Tools"
+msgstr "Reactome 工具"
+
+#: ../../tools/tools_config_index.rst:363
+msgid "Semantic Scholar Tools"
+msgstr "语义学者工具"
+
+#: ../../tools/tools_config_index.rst:368
+msgid "Special Tools"
+msgstr "专用工具"
+
+#: ../../tools/tools_config_index.rst:373
+msgid "Tool Composition Tools"
+msgstr "工具组成工具"
+
+#: ../../tools/tools_config_index.rst:378
+msgid "Txagent Client Tools"
+msgstr "Txagent 客户端工具"
+
+#: ../../tools/tools_config_index.rst:383
+#, fuzzy
+msgid "Unified Guideline Tools"
+msgstr "内置工具"
+
+#: ../../tools/tools_config_index.rst:388
+msgid "Uniprot Tools"
+msgstr "Uniprot 工具"
+
+#: ../../tools/tools_config_index.rst:393
+#, fuzzy
+msgid "Unpaywall Tools"
+msgstr "Hpa 工具"
+
+#: ../../tools/tools_config_index.rst:398
+msgid "Url Fetch Tools"
+msgstr "URL 获取工具"
+
+#: ../../tools/tools_config_index.rst:403
+#: ../../tools/tools_config_index.rst:437
+msgid "Uspto Downloader Tools"
+msgstr "USPTO 下载工具"
+
+#: ../../tools/tools_config_index.rst:408
+msgid "Uspto Tools"
+msgstr "USPTO 工具"
+
+#: ../../tools/tools_config_index.rst:413
+#, fuzzy
+msgid "Wikidata Sparql Tools"
+msgstr "数据集工具"
+
+#: ../../tools/tools_config_index.rst:418
+msgid "Xml Tools"
+msgstr "Xml 工具"
+
+#: ../../tools/tools_config_index.rst:423
+#, fuzzy
+msgid "Zenodo Tools"
+msgstr "Efo 工具"
+
+#: ../../tools/tools_config_index.rst:437
+msgid "Depmap Tools"
+msgstr "Depmap 工具"
+
+#: ../../tools/tools_config_index.rst:437
+msgid "Immune Compass Tools"
+msgstr "免疫指南工具"
+
+#: ../../tools/tools_config_index.rst:437
+msgid "Pinnacle Tools"
+msgstr "巅峰工具"
+
+#: ../../tools/tools_config_index.rst:437
+msgid "Transcriptformer Tools"
+msgstr "Transcriptformer 工具"
+
+#: ../../tools/tools_config_index.rst:2 3907e0233e764ebc986d63e1a8d44611
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/tools_config_index.rst:4 b3087f0f37af4464827fb019f6df49cb
+msgid ""
+"ToolUniverse provides over 600 scientific tools organized into local and "
+"remote categories. This overview helps you discover and navigate the "
+"available tools for your research needs."
+msgstr "ToolUniverse 提供了超过600种科学工具，分为本地和远程两大类。本概览帮助您发现并导航适合您研究需求的可用工具。"
+
+#: ../../tools/tools_config_index.rst:7 b5b9225c9b584724ab4ee65a00598059
+msgid "Tool Registry"
+msgstr "工具注册表"
+
+#: ../../tools/tools_config_index.rst:10 ../../tools/tools_config_index.rst:47
+#: 088fa63c852f4744a7e1be7f30544b1a 71f1633b9eb945c488d516bb7a1cec70
+msgid "Local Tools"
+msgstr "本地工具"
+
+#: ../../tools/tools_config_index.rst:12 8ec6775b711c4bbea8490a63856b6148
+msgid ""
+"Local tools are Python classes that run within the ToolUniverse process, "
+"providing high performance and seamless integration."
+msgstr "本地工具是运行在 ToolUniverse 进程内的 Python 类，提供高性能和无缝集成。"
+
+#: ../../tools/tools_config_index.rst:14 855fec05c9274bcab940939f9002a080
+msgid ""
+"**Key Features:** - High performance with no network overhead - Automatic "
+"discovery and registration - Full access to ToolUniverse features - Easy "
+"development and testing"
+msgstr ""
+"**主要特性：**  \n"
+"- 高性能且无网络开销  \n"
+"- 自动发现与注册  \n"
+"- 完全支持 ToolUniverse 功能  \n"
+"- 便捷的开发与测试"
+
+#: ../../tools/tools_config_index.rst:22
+#: ../../tools/tools_config_index.rst:430 460ed36fca3d4bd495ee4ff8de678965
+#: becbc2ad586246ee87e4c100b2739f37
+msgid "Remote Tools"
+msgstr "远程工具"
+
+#: ../../tools/tools_config_index.rst:24 41f687f25c784fc5b66d6e545fce8e76
+msgid ""
+"Remote tools integrate external services, APIs, and specialized systems "
+"running on different servers."
+msgstr "远程工具集成运行于不同服务器上的外部服务、API 及专用系统。"
+
+#: ../../tools/tools_config_index.rst:26 a4f25b7a406c4e75b0d310c788951c62
+msgid ""
+"**Key Features:** - Integration with external APIs and services - Scalable "
+"computation offloading - Support for different programming languages - "
+"Secure isolation of sensitive operations"
+msgstr ""
+"**主要功能：**  \n"
+"- 与外部API和服务的集成  \n"
+"- 可扩展的计算卸载  \n"
+"- 支持多种编程语言  \n"
+"- 敏感操作的安全隔离"
+
+#: ../../tools/tools_config_index.rst:33 5c744de465db4a228205e2480d5fc56c
+msgid "**Discover Available Tools:**"
+msgstr "**发现可用工具：**"
+
+#: ../../tools/tools_config_index.rst:35 70a60ca946b74c76b4ee2b95e3f8a94b
+msgid ""
+":doc:`../guide/listing_tools` - Browse tools by category and explore the "
+"full catalog"
+msgstr ":doc:`../guide/listing_tools` - 按类别浏览工具并探索完整目录"
+
+#: ../../tools/tools_config_index.rst:36 4c616066fcc848e4b9b55bf59c7d35e5
+msgid ""
+":doc:`../tutorials/finding_tools` - Learn advanced search techniques and "
+"filters"
+msgstr ":doc:`../tutorials/finding_tools` - 学习高级搜索技巧和筛选方法"
+
+#: ../../tools/tools_config_index.rst:37 8d8ef5f605914c8fbf9806d9ed94f497
+msgid ":doc:`../tools/remote_tools` - Set up remote tool integrations"
+msgstr ":doc:`../tools/remote_tools` - 设置远程工具集成"
+
+#: ../../tools/tools_config_index.rst:38 ce37d0bcdbca4015bbcc4866bb0f026b
+msgid ":doc:`../guide/loading_tools` - Load and configure local tools"
+msgstr ":doc:`../guide/loading_tools` - 加载并配置本地工具"
+
+#: ../../tools/tools_config_index.rst:41 61693210fdfd48dcaebc8ca3e28258b0
+msgid "Overview"
+msgstr "概述"
+
+#: ../../tools/tools_config_index.rst:43 d21a6295e8ef419aa46d9b4b425006b4
+#, fuzzy
+msgid "**Total Configuration Files**: 81"
+msgstr "**配置文件总数**：79"
+
+#: ../../tools/tools_config_index.rst:44 47c572c22d9c4879a14261c4f06af3a0
+#, fuzzy
+msgid "**Total Tools**: 682"
+msgstr "**工具总数**：667"
+
+#: ../../tools/tools_config_index.rst:50 51cfa0ed9e774e5eba8ae0b30599821a
+msgid "Tools running within the ToolUniverse process"
+msgstr "在 ToolUniverse 进程中运行的工具"
+
+#: ../../tools/tools_config_index.rst:53 dee579f93f874adabac479307ff7d071
+msgid "Packages Tools"
+msgstr "软件包工具"
+
+#: ../../tools/tools_config_index.rst:116 e8ad3be9959e454fb4e177be49ddc286
+msgid "Builtin Tools"
+msgstr "内置工具"
+
+#: ../../tools/tools_config_index.rst:433 8d21b792ee1145efb3ae68ceed7ffac5
+msgid "Tools registered in with remote registry"
+msgstr "工具已在远程注册表中注册"
+
+#: ../../tools/tools_config_index.rst:450 d8428bc58b7b4aba811851d35c0092d2
+msgid "Tools by Type"
+msgstr "按类型分类的工具"
+
+#: ../../tools/tools_config_index.rst:453 190833ae26434485b3838ed501c385cc
+msgid "**ADMETAITool** (9 tools)"
+msgstr "**ADMETAITool**（9 个工具）"
+
+#: ../../tools/tools_config_index.rst:455
+#: ../../tools/tools_config_index.rst:469
+#: ../../tools/tools_config_index.rst:517
+#: ../../tools/tools_config_index.rst:525
+#: ../../tools/tools_config_index.rst:531
+#: ../../tools/tools_config_index.rst:537
+#: ../../tools/tools_config_index.rst:543
+#: ../../tools/tools_config_index.rst:557
+#: ../../tools/tools_config_index.rst:563
+#: ../../tools/tools_config_index.rst:580
+#: ../../tools/tools_config_index.rst:586
+#: ../../tools/tools_config_index.rst:592
+#: ../../tools/tools_config_index.rst:598
+#: ../../tools/tools_config_index.rst:604
+#: ../../tools/tools_config_index.rst:616
+#: ../../tools/tools_config_index.rst:631
+#: ../../tools/tools_config_index.rst:637
+#: ../../tools/tools_config_index.rst:646
+#: ../../tools/tools_config_index.rst:653
+#: ../../tools/tools_config_index.rst:659
+#: ../../tools/tools_config_index.rst:665
+#: ../../tools/tools_config_index.rst:671
+#: ../../tools/tools_config_index.rst:682
+#: ../../tools/tools_config_index.rst:696
+#: ../../tools/tools_config_index.rst:856
+#: ../../tools/tools_config_index.rst:862
+#: ../../tools/tools_config_index.rst:868
+#: ../../tools/tools_config_index.rst:874
+#: ../../tools/tools_config_index.rst:880
+#: ../../tools/tools_config_index.rst:886
+#: ../../tools/tools_config_index.rst:892
+#: ../../tools/tools_config_index.rst:898
+#: ../../tools/tools_config_index.rst:904
+#: ../../tools/tools_config_index.rst:910
+#: ../../tools/tools_config_index.rst:916
+#: ../../tools/tools_config_index.rst:922
+#: ../../tools/tools_config_index.rst:928
+#: ../../tools/tools_config_index.rst:934
+#: ../../tools/tools_config_index.rst:940
+#: ../../tools/tools_config_index.rst:950
+#: ../../tools/tools_config_index.rst:956
+#: ../../tools/tools_config_index.rst:962
+#: ../../tools/tools_config_index.rst:968
+#: ../../tools/tools_config_index.rst:974
+#: ../../tools/tools_config_index.rst:980
+#: ../../tools/tools_config_index.rst:986
+#: ../../tools/tools_config_index.rst:992
+#: ../../tools/tools_config_index.rst:998
+#: ../../tools/tools_config_index.rst:1004
+#: ../../tools/tools_config_index.rst:1010
+#: ../../tools/tools_config_index.rst:1016
+#: ../../tools/tools_config_index.rst:1022
+#: ../../tools/tools_config_index.rst:1028
+#: ../../tools/tools_config_index.rst:1034
+#: ../../tools/tools_config_index.rst:1040
+#: ../../tools/tools_config_index.rst:1046
+#: ../../tools/tools_config_index.rst:1056
+#: ../../tools/tools_config_index.rst:1062
+#: ../../tools/tools_config_index.rst:1069
+#: ../../tools/tools_config_index.rst:1075
+#: ../../tools/tools_config_index.rst:1085
+#: ../../tools/tools_config_index.rst:1092
+#: ../../tools/tools_config_index.rst:1098
+#: ../../tools/tools_config_index.rst:1104
+#: ../../tools/tools_config_index.rst:1110
+#: ../../tools/tools_config_index.rst:1116
+#: ../../tools/tools_config_index.rst:1122
+#: ../../tools/tools_config_index.rst:1128
+#: ../../tools/tools_config_index.rst:1134
+#: ../../tools/tools_config_index.rst:1140
+#: ../../tools/tools_config_index.rst:1146
+#: ../../tools/tools_config_index.rst:1152
+#: ../../tools/tools_config_index.rst:1158
+#: ../../tools/tools_config_index.rst:1217
+#: ../../tools/tools_config_index.rst:1224
+#: ../../tools/tools_config_index.rst:1230
+#: ../../tools/tools_config_index.rst:1399
+#: ../../tools/tools_config_index.rst:1413
+#: ../../tools/tools_config_index.rst:1419
+#: ../../tools/tools_config_index.rst:1425
+#: ../../tools/tools_config_index.rst:1432
+#: ../../tools/tools_config_index.rst:1476
+#: ../../tools/tools_config_index.rst:1501
+#: ../../tools/tools_config_index.rst:1507
+#: ../../tools/tools_config_index.rst:1513
+#: ../../tools/tools_config_index.rst:1520
+#: ../../tools/tools_config_index.rst:1526
+#: ../../tools/tools_config_index.rst:1533
+#: ../../tools/tools_config_index.rst:1539
+#: ../../tools/tools_config_index.rst:1545
+#: ../../tools/tools_config_index.rst:1551
+#: ../../tools/tools_config_index.rst:1557
+#: ../../tools/tools_config_index.rst:1568
+#: ../../tools/tools_config_index.rst:1583
+#: ../../tools/tools_config_index.rst:1589
+#: ../../tools/tools_config_index.rst:1595
+#: ../../tools/tools_config_index.rst:1601
+#: ../../tools/tools_config_index.rst:1607
+#: ../../tools/tools_config_index.rst:1631 0007c4dc01384cd89e7a17ae73d6ae16
+#: 0266b02ca63944eead5154c6bc61e0fe 04137d659c50471da9b4fa7a23a6c6c0
+#: 0434a664e8f649f2821b5b1504fa8ef8 058b6eba59204356870a9fc4c80577cd
+#: 0841319897c8424e9256f406d684a822 091a5a739ec146b9ad737816fad5dc1f
+#: 09e9d011c424459a8af954c068d6ba63 0a284bd4aa484a10a532bebb7228620f
+#: 0e75e323b7bc4eac9aa3d12214f8631d 13455d2e84c24fe3bcccad286789ae81
+#: 13c37b8abc144d19b81fc5dd5764b126 164e561ed08b4c4c96a4ce7bafba9dc5
+#: 168bdc3b653e492d9d18c6bf48e11f28 193f535899b14567b33cc40d5fc55f1a
+#: 196ef7454cf344f0b5c824e78af2e34d 1b882cdaa37e4f49a4ec01cc0923efcb
+#: 1d83c11f72d14c1b9f0d7cf33f527c75 254bfc6accee47abab685ac58f3fccbb
+#: 25f5303595684663893d3bc67ca4dc21 28671c8f16b942df88bfcc66e66461b0
+#: 29685bc522d34ea98ac3263a420ce7b1 2bc68da4300c4beea7d4252d6261ef27
+#: 2c38f26ea6fc43cd9e2ca7b01b4c9136 2ccd513520e34a5a8759e13721bfa11c
+#: 3031f0001baa4aa3b5beb21bb3ac5190 32b3cd408dae4fd4b770b4ea746b2950
+#: 334dc612c7f7470691a65eca769747e2 3750e338b56f491eb99d1aaf1b6426b7
+#: 3acfb5f5dbc9445faed54da7b4a9a840 3e753e369d3e4c59aebae51133516c13
+#: 3ec52fb16b1042a99d6d6d28737ca7d7 3f380a311cb5476e8aaa015b0a350058
+#: 3f412c98b6274724a55a5af275d0125a 4246141d5ff441e0a6fe6c7332292106
+#: 4427bf8e958d48bd99b166dfadc441d0 4a2f25ca768e48fc9bdd74a1301d33ea
+#: 51ebaacedefa47d7834e38d7bf700f30 526e424a26304c719184716a150dda4b
+#: 5453308af5694ba79256f448fff2d7f6 54955d79cbfb4c489a72992d605e9320
+#: 55b00ce9071845aca0d4fb12e7016cc9 5a7f0619915a4a03b7ea001bc1945f6d
+#: 5c0ac87d05cf4d09bd23da49ace7ccaa 614cec320fb44eddbf36b33c3186f136
+#: 6586217c66ca40a193390c61e1b577f1 73105f4775134e8c9382b84eb90dd9fe
+#: 7776e3c738e54e4a877adb5cb5852819 7ce0ebab666d4b3e85874a1145a81ef4
+#: 8103f93aa27d4cbb944d90ac473d3375 819b8800296e4970a382f1d5346214e9
+#: 8285538a7a634ca284ba007b9ab700e7 85d61280cb8c4908b9197c3a2160b169
+#: 8794021b17ee431f91e732cf971b5e2b 89bfbb1027e746b99d23bb5e87e6c270
+#: 8acaad7ff8be4c918877e3e5287ec6ac 8cab79c272ef443ea1c7404aa83086c5
+#: 8ef34bafce9c4a548178bd0105b8030b 9023b94642af4f88b1c7e8c869b379ad
+#: 911b86d47666497baf7795764c7a9888 92e974a500f846d3aa3cacaa2865c7bd
+#: 93ae4df1d9f5463b8e029887fee1f9ea 94bd57b7b1134460b6e1fdfc8b5c028c
+#: a2806a90ecdf43ce9b63add4e1791343 a45dc9df74e849a0a0613af41a69ee8e
+#: a9309cd4207744b687fd8d2c6245d1bd aadf7a909eca421da6fd1a51d4c01be1
+#: abe435fd1b9c4a0e9abd77f3006c84d4 ae9efa0301e1497281ab4178861a8bbb
+#: b11676d7142e4e509cd9db09c611f094 b2757b55d5374ef19238d89052bb61ac
+#: b4be9347f1d5409282129e408660e75b bfec2b69d53d45e0b4156d32b3550399
+#: c371cbe44f5448f9bdc510b04ca0b2cf c6a0a7440b7d4f74bc73868f617142d0
+#: c89e3f6a6641478f84c6a23a2ca60618 c9257acf2fcf4ae388c3d4a768626d69
+#: cb5c1a56e04943ea8e1dce3eb3ca76e3 cb7ecff656a64534b4dff2d0337c6da3
+#: cb8179638427422ca8eab7edacc0dd76 cefed06afb2047d09780d587a44b09f7
+#: cfaf26c57e0c40e1b0ed1c0f748a7e0a d070df2df3964a10baacd6377fe68514
+#: d2335b2d89d6405da4e3f66e0645c5ea d2c2bf5247a048dca84b604917848ac2
+#: d5bbb62697ae4c769cfe22793d3889da d64abb0ce9dd4a249cdafbe3014e4036
+#: d6536e9d478b41d0a4d6f3addf779acf df6026ed00ce4d9681b67068262addbd
+#: e0340b4321214f829badd7d151c667ed e108955785ad45e48d8dc84a70c34ada
+#: e3acbb8bc35047bc85ce0b068dcf4c2a e440e8f7f08846329b713ed7b1e23c1c
+#: e4e3a989fb4d423bb1b512d49a3c3710 ea1ff33d28b244ffb62b33fa8aac0ad2
+#: eacc02f4b22048b9b69df0ba62ae1fb8 f9a21351dd2f4408840d363dafbfdfe8
+#: faa42c344f3e45739a692caaa12d2b19 fc13fd2550d44d7cba0364a3e116d5ef
+msgid "*Local Tools:*"
+msgstr "*本地工具：*"
+
+#: ../../tools/tools_config_index.rst:456 621462cd182c4067be1494f377c73964
+msgid "ADMETAI_predict_BBB_penetrance (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_BBB_penetrance（来自：:doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:457 a39c82a72620460098c643ff2cd7a6de
+msgid "ADMETAI_predict_CYP_interactions (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_CYP_interactions（来自：:doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:458 4e9439364587487db73122d971fa7ffa
+msgid "ADMETAI_predict_bioavailability (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_bioavailability（来自 :doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:459 52badcb98d164a84bcaea84b31c68b35
+msgid "ADMETAI_predict_clearance_distribution (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_clearance_distribution（来自：:doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:460 6b88d50e4e7640babed810dcba038509
+msgid "ADMETAI_predict_nuclear_receptor_activity (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_nuclear_receptor_activity（来自 :doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:461 c1488bebbd244fde9ca1c56246b1e8c7
+msgid "ADMETAI_predict_physicochemical_properties (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_physicochemical_properties（来自：:doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:462 f766998854ac4c51b930aa33c0051268
+msgid ""
+"ADMETAI_predict_solubility_lipophilicity_hydration (from "
+":doc:`admetai_tools`)"
+msgstr ""
+"ADMETAI_predict_solubility_lipophilicity_hydration（来自：:doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:463 715be9b5f10e4347a56f29acfa51d767
+msgid "ADMETAI_predict_stress_response (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_stress_response（来自：:doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:464 542f7022240c4e09b8e232640f063325
+msgid "ADMETAI_predict_toxicity (from :doc:`admetai_tools`)"
+msgstr "ADMETAI_predict_toxicity（来自：:doc:`admetai_tools`）"
+
+#: ../../tools/tools_config_index.rst:467 98dde93084e04d6eb3350cb1ae03ec88
+#, fuzzy
+msgid "**AgenticTool** (43 tools)"
+msgstr "**AgenticTool**（38 个工具）"
+
+#: ../../tools/tools_config_index.rst:470 cab26000479a42cb8c3addd8b2df1d37
+msgid "AdvancedCodeQualityAnalyzer (from :doc:`agentic_tools`)"
+msgstr "AdvancedCodeQualityAnalyzer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:471 ba057e72348e48c1aa03bfcfddf8b990
+msgid "AdverseEventICDMapper (from :doc:`adverse_event_tools`)"
+msgstr "AdverseEventICDMapper（来自 :doc:`adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:472 a48018f9511c457bb035528439b6ef41
+msgid ""
+"AdverseEventPredictionQuestionGenerator (from :doc:`adverse_event_tools`)"
+msgstr ""
+"AdverseEventPredictionQuestionGenerator（来自：:doc:`adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:473 bb77e5588d604b9eafc34ea526b65513
+msgid ""
+"AdverseEventPredictionQuestionGeneratorWithContext (from "
+":doc:`adverse_event_tools`)"
+msgstr ""
+"带上下文的AdverseEventPredictionQuestionGenerator（来自：:doc:`adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:474 1898c5d72c0b4c5fb993a2ef95f1715a
+msgid "ArgumentDescriptionOptimizer (from :doc:`agentic_tools`)"
+msgstr "ArgumentDescriptionOptimizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:475 c2432a2dc3fd4e8cb5fb9d8b58de6939
+msgid "CodeOptimizer (from :doc:`agentic_tools`)"
+msgstr "CodeOptimizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:476 2376bf042afd4716b30e326d6997063a
+msgid "CodeQualityAnalyzer (from :doc:`agentic_tools`)"
+msgstr "CodeQualityAnalyzer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:477 155596b9ca594a4bbe348e985311f214
+msgid "DataAnalysisValidityReviewer (from :doc:`agentic_tools`)"
+msgstr "DataAnalysisValidityReviewer（来自：:doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:478 0ff5479bedcb4434b23784f7a42ba3c8
+msgid "DescriptionAnalyzer (from :doc:`agentic_tools`)"
+msgstr "DescriptionAnalyzer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:479 eafa60a9f5db43f098c21a464feb3da6
+msgid "DescriptionQualityEvaluator (from :doc:`agentic_tools`)"
+msgstr "DescriptionQualityEvaluator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:480 028513e1d7304e779910e6c6062b6616
+msgid "DomainExpertValidator (from :doc:`agentic_tools`)"
+msgstr "DomainExpertValidator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:481 5f0814f809aa4c598e3cba4c873822ff
+msgid "EthicalComplianceReviewer (from :doc:`agentic_tools`)"
+msgstr "EthicalComplianceReviewer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:482 953d5fcda5a44396b21d3e2003df5678
+msgid "ExperimentalDesignScorer (from :doc:`agentic_tools`)"
+msgstr "ExperimentalDesignScorer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:483 c05490dae24149b38a857556a62547d0
+msgid "HypothesisGenerator (from :doc:`agentic_tools`)"
+msgstr "HypothesisGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:484 d8afc5ae8aeb4cf08567cbfa832c8b1a
+#, fuzzy
+msgid "IntentAnalyzerAgent (from :doc:`literature_search_tools`)"
+msgstr "DescriptionAnalyzer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:485 4654c86ec88645feb942bbdd450fa55b
+#, fuzzy
+msgid "KeywordExtractorAgent (from :doc:`literature_search_tools`)"
+msgstr "TestCaseGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:486 3cd5d4cf6d214415a2aba36a205936ad
+msgid "LabelGenerator (from :doc:`agentic_tools`)"
+msgstr "LabelGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:487 4e8798c84bef45a58ce94bb11141cd7e
+msgid "LiteratureContextReviewer (from :doc:`agentic_tools`)"
+msgstr "LiteratureContextReviewer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:488 952111c4621d4f058d8b2c4ae72c9613
+msgid "MedicalLiteratureReviewer (from :doc:`agentic_tools`)"
+msgstr "MedicalLiteratureReviewer（来自：:doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:489 d25da2ea467f452a80b54bf472b3e637
+msgid "MedicalTermNormalizer (from :doc:`agentic_tools`)"
+msgstr "MedicalTermNormalizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:490 8468484df1364d74b8d6a44b3b1bf9b2
+msgid "MethodologyRigorReviewer (from :doc:`agentic_tools`)"
+msgstr "MethodologyRigorReviewer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:491 d04e60b9d4e647cdb893283399b6b634
+msgid "NoveltySignificanceReviewer (from :doc:`agentic_tools`)"
+msgstr "NoveltySignificanceReviewer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:492 b0d31b4bf6214fc6b732c220e49616d0
+#, fuzzy
+msgid "OverallSummaryAgent (from :doc:`literature_search_tools`)"
+msgstr "ToolMetadataGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:493 76fdc612737c459696fad560a03dc6f6
+msgid "ProtocolOptimizer (from :doc:`agentic_tools`)"
+msgstr "ProtocolOptimizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:494 828dbc7f326d4e60b7c1f35600d40163
+#, fuzzy
+msgid "QualityCheckerAgent (from :doc:`literature_search_tools`)"
+msgstr "ToolQualityEvaluator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:495 ed1be5ff6c154d66bc82d8ae5a9bc3d2
+msgid "QuestionRephraser (from :doc:`agentic_tools`)"
+msgstr "QuestionRephraser（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:496 f2a954ecf77c457cb80408752a41fbe3
+msgid "ReproducibilityTransparencyReviewer (from :doc:`agentic_tools`)"
+msgstr "可复现性透明度审查员（来源：:doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:497 71e09b39d2bd4b70ac91abaa4b7be1bc
+#, fuzzy
+msgid "ResultSummarizerAgent (from :doc:`literature_search_tools`)"
+msgstr "ScientificTextSummarizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:498 4f3a1bb3a12348c1a9fa4f55976ddf47
+msgid "ResultsInterpretationReviewer (from :doc:`agentic_tools`)"
+msgstr "结果解释审阅者（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:499 b4d275dbaee34043809f015435fe07bf
+msgid "ScientificTextSummarizer (from :doc:`agentic_tools`)"
+msgstr "ScientificTextSummarizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:500 6d962918983b4d1f9a08d9b2a4d6a2a6
+msgid "TestCaseGenerator (from :doc:`agentic_tools`)"
+msgstr "TestCaseGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:501 afa3a9cea05c4592b4baa7036d932a85
+msgid "ToolCompatibilityAnalyzer (from :doc:`tool_composition_tools`)"
+msgstr "ToolCompatibilityAnalyzer（来自 :doc:`tool_composition_tools`）"
+
+#: ../../tools/tools_config_index.rst:502 8040cbcce2534ab89007c2456cb4e81e
+msgid "ToolImplementationGenerator (from :doc:`agentic_tools`)"
+msgstr "ToolImplementationGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:503 43a25ae53b754d4281147e232c43c4c5
+msgid "ToolMetadataGenerator (from :doc:`agentic_tools`)"
+msgstr "ToolMetadataGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:504 9b4b0e49efd1444392a8e839f6a5cfe8
+msgid "ToolMetadataStandardizer (from :doc:`agentic_tools`)"
+msgstr "ToolMetadataStandardizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:505 753e40433e2645b5b6d3e0a300604e43
+msgid "ToolOptimizer (from :doc:`agentic_tools`)"
+msgstr "ToolOptimizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:506 4ba6ae6d359f4147a82101b41d9bc88b
+msgid "ToolOutputSummarizer (from :doc:`output_summarization_tools`)"
+msgstr "ToolOutputSummarizer（来自 :doc:`output_summarization_tools`）"
+
+#: ../../tools/tools_config_index.rst:507 b81017d6836e4d5bae14ba9b59295532
+msgid "ToolQualityEvaluator (from :doc:`agentic_tools`)"
+msgstr "ToolQualityEvaluator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:508 2d17d7919c9642e69b03e520584caa7b
+msgid "ToolRelationshipDetector (from :doc:`agentic_tools`)"
+msgstr "ToolRelationshipDetector（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:509 c62b62b9702142d5bdc044f76a50a0d5
+msgid "ToolSpecificationGenerator (from :doc:`agentic_tools`)"
+msgstr "ToolSpecificationGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:510 d618c73330d14342b0e8e8fd5706f173
+msgid "ToolSpecificationOptimizer (from :doc:`agentic_tools`)"
+msgstr "ToolSpecificationOptimizer（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:511 7276eb75b16049b9bcbae3e462ec9379
+msgid "WritingPresentationReviewer (from :doc:`agentic_tools`)"
+msgstr "WritingPresentationReviewer（来源于 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:512 cc052e1617904b7a8fa7007674676539
+msgid "call_agentic_human (from :doc:`agentic_tools`)"
+msgstr "call_agentic_human（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:515 6b0ec33fb5af48beafe84cc447d66385
+msgid "**AlphaFoldRESTTool** (3 tools)"
+msgstr "**AlphaFoldRESTTool**（3 个工具）"
+
+#: ../../tools/tools_config_index.rst:518 b7329e1f1b4945cc94922812575f9c51
+msgid "alphafold_get_annotations (from :doc:`alphafold_tools`)"
+msgstr "alphafold_get_annotations（来自 :doc:`alphafold_tools`）"
+
+#: ../../tools/tools_config_index.rst:519 02869cd5c3cd4313865a8298ace23b32
+msgid "alphafold_get_prediction (from :doc:`alphafold_tools`)"
+msgstr "alphafold_get_prediction（来自 :doc:`alphafold_tools`）"
+
+#: ../../tools/tools_config_index.rst:520 a2b176649aeb410b93da96aae2295c36
+msgid "alphafold_get_summary (from :doc:`alphafold_tools`)"
+msgstr "alphafold_get_summary（来源：:doc:`alphafold_tools`）"
+
+#: ../../tools/tools_config_index.rst:523 9ddff7bc63ec4c51994f427b95ece5e9
+msgid "**ArXivTool** (1 tools)"
+msgstr "**ArXivTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:526 fbdc35e1603248b4a6228710c2941b47
+msgid "ArXiv_search_papers (from :doc:`arxiv_tools`)"
+msgstr "ArXiv_search_papers（来源：:doc:`arxiv_tools`）"
+
+#: ../../tools/tools_config_index.rst:529 c9f6f089d9eb454f824001a420a0a927
+msgid "**BioRxivTool** (1 tools)"
+msgstr "**BioRxivTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:532 cdd5a2ec13384b20955857c9dc23d4b8
+msgid "BioRxiv_search_preprints (from :doc:`biorxiv_tools`)"
+msgstr "BioRxiv_search_preprints（来自：:doc:`biorxiv_tools`）"
+
+#: ../../tools/tools_config_index.rst:535 2f406415279f40488d33d6d96b74b342
+msgid "**ChEMBLTool** (1 tools)"
+msgstr "**ChEMBLTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:538 8bebdd0100574e42ac4b41a86764696a
+msgid "ChEMBL_search_similar_molecules (from :doc:`chembl_tools`)"
+msgstr "ChEMBL_search_similar_molecules（来自 :doc:`chembl_tools`）"
+
+#: ../../tools/tools_config_index.rst:541 c4b4a47315334129b465c79c34d53642
+msgid "**ClinicalTrialsDetailsTool** (9 tools)"
+msgstr "**ClinicalTrialsDetailsTool**（9 个工具）"
+
+#: ../../tools/tools_config_index.rst:544 695b1fa92c6441aa9c6f4d686e4c42b6
+msgid ""
+"extract_clinical_trial_adverse_events (from :doc:`clinicaltrials_gov_tools`)"
+msgstr ""
+"extract_clinical_trial_adverse_events（来源：:doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:545 97c32ca2608448fd94ae823e49a9cba8
+msgid "extract_clinical_trial_outcomes (from :doc:`clinicaltrials_gov_tools`)"
+msgstr "extract_clinical_trial_outcomes（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:546 e9843142cb064577b993b2a01102d962
+msgid ""
+"get_clinical_trial_conditions_and_interventions (from "
+":doc:`clinicaltrials_gov_tools`)"
+msgstr ""
+"get_clinical_trial_conditions_and_interventions（来源：:doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:547 7e7698305138499083e31f6a8b5e2876
+msgid "get_clinical_trial_descriptions (from :doc:`clinicaltrials_gov_tools`)"
+msgstr "get_clinical_trial_descriptions（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:548 db9b9ce48c96401bb078ecf759f2e689
+msgid ""
+"get_clinical_trial_eligibility_criteria (from "
+":doc:`clinicaltrials_gov_tools`)"
+msgstr ""
+"get_clinical_trial_eligibility_criteria（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:549 f1489276e3f047ba88b29b44de5b441c
+msgid "get_clinical_trial_locations (from :doc:`clinicaltrials_gov_tools`)"
+msgstr "get_clinical_trial_locations（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:550 4629e32648ad4cdc931e24ad37a6eb8b
+msgid ""
+"get_clinical_trial_outcome_measures (from :doc:`clinicaltrials_gov_tools`)"
+msgstr ""
+"get_clinical_trial_outcome_measures（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:551 275026b2959744f6b102d97afc491d49
+msgid "get_clinical_trial_references (from :doc:`clinicaltrials_gov_tools`)"
+msgstr "get_clinical_trial_references（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:552 537cbebf8c9841c59a15c2988ea18ab8
+msgid ""
+"get_clinical_trial_status_and_dates (from :doc:`clinicaltrials_gov_tools`)"
+msgstr ""
+"get_clinical_trial_status_and_dates（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:555 1b9e8f68073841068a85c0a7db011baf
+msgid "**ClinicalTrialsSearchTool** (1 tools)"
+msgstr "**ClinicalTrialsSearchTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:558 8a2c5e9ee39d40ffb60e82222cb316c2
+msgid "search_clinical_trials (from :doc:`clinicaltrials_gov_tools`)"
+msgstr "search_clinical_trials（来自 :doc:`clinicaltrials_gov_tools`）"
+
+#: ../../tools/tools_config_index.rst:561 e7de69360fab440aba80f0eb77b7aba1
+#, fuzzy
+msgid "**ComposeTool** (12 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:564 621b35a365484e3db3f2c1feb6bf7468
+msgid "BiomarkerDiscoveryWorkflow (from :doc:`compose_tools`)"
+msgstr "BiomarkerDiscoveryWorkflow（来自：:doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:565 25173aa3971f4fedbe5e87c43cfe85e1
+msgid "ComprehensiveDrugDiscoveryPipeline (from :doc:`compose_tools`)"
+msgstr "ComprehensiveDrugDiscoveryPipeline（来自 :doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:566 0922330af69a45b79ec4f1ff91978f67
+msgid "DrugSafetyAnalyzer (from :doc:`compose_tools`)"
+msgstr "DrugSafetyAnalyzer（来自 :doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:567 61dab4257a9142488a81f4f4f08d102a
+msgid "LiteratureSearchTool (from :doc:`compose_tools`)"
+msgstr "LiteratureSearchTool（来自 :doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:568 f6bc4e0268ed4e31953ee68561d354db
+#, fuzzy
+msgid "MultiAgentLiteratureSearch (from :doc:`compose_tools`)"
+msgstr "LabelGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:569 0a443086efe84e45bfea6d83e7cb1c80
+#, fuzzy
+msgid "MultiAgentLiteratureSearch (from :doc:`literature_search_tools`)"
+msgstr "LabelGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:570 04d5d0a052f545f19e5dc181e8f6533f
+msgid "OutputSummarizationComposer (from :doc:`output_summarization_tools`)"
+msgstr "OutputSummarizationComposer（来自 :doc:`output_summarization_tools`）"
+
+#: ../../tools/tools_config_index.rst:571 36af29aa0b7548eda28d326f4f27de54
+msgid "ToolDescriptionOptimizer (from :doc:`compose_tools`)"
+msgstr "ToolDescriptionOptimizer（来自 :doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:572 9123306cb424454aa50966abb59138c0
+msgid "ToolDiscover (from :doc:`compose_tools`)"
+msgstr "ToolDiscover（来源：:doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:573 d39de09fcaf744f69dd64e5c9b8bcac9
+msgid "ToolGraphComposer (from :doc:`tool_composition_tools`)"
+msgstr "ToolGraphComposer（来自 :doc:`tool_composition_tools`）"
+
+#: ../../tools/tools_config_index.rst:574 c7e9771adf06473a86f79b7eab4de4b2
+msgid "ToolGraphGenerationPipeline (from :doc:`compose_tools`)"
+msgstr "ToolGraphGenerationPipeline（来自 :doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:575 daffc91d13014d5d847c32c9417e24bc
+msgid "ToolMetadataGenerationPipeline (from :doc:`compose_tools`)"
+msgstr "ToolMetadataGenerationPipeline（来自 :doc:`compose_tools`）"
+
+#: ../../tools/tools_config_index.rst:578 dc15993d86854cbabad2cd1bdac608d3
+msgid "**CoreTool** (1 tools)"
+msgstr "**CoreTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:581 79fe6a4e4e634bcebcadddf5e9b27427
+msgid "CORE_search_papers (from :doc:`core_tools`)"
+msgstr "CORE_search_papers（来自：:doc:`core_tools`）"
+
+#: ../../tools/tools_config_index.rst:584 0ae1c7d9591e4aedad375f93c3dcb767
+msgid "**CrossrefTool** (1 tools)"
+msgstr "**CrossrefTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:587 26e61c32a51441548ddc0268f9f03356
+msgid "Crossref_search_works (from :doc:`crossref_tools`)"
+msgstr "Crossref_search_works（来源：:doc:`crossref_tools`）"
+
+#: ../../tools/tools_config_index.rst:590 a53a2bf7ff0d48ff91646dd871f3dd02
+msgid "**DBLPTool** (1 tools)"
+msgstr "**DBLPTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:593 a1d7e83e661f40c086f5abbfb9ee2b4b
+msgid "DBLP_search_publications (from :doc:`dblp_tools`)"
+msgstr "DBLP_search_publications（来自 :doc:`dblp_tools`）"
+
+#: ../../tools/tools_config_index.rst:596 da6cc15eed5c489485b93a9aa1d5fcd6
+msgid "**DOAJTool** (1 tools)"
+msgstr "**DOAJTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:599 ae1bd65e687e4312bed48f0b690240ec
+msgid "DOAJ_search_articles (from :doc:`doaj_tools`)"
+msgstr "DOAJ_search_articles（来源：:doc:`doaj_tools`）"
+
+#: ../../tools/tools_config_index.rst:602 98f26b2df9664a4182dc9e2c0d9f4508
+msgid "**DatasetTool** (7 tools)"
+msgstr "**DatasetTool**（7 个工具）"
+
+#: ../../tools/tools_config_index.rst:605 aba393a9bca34ae0996b27ccbf4ea4c3
+msgid "dict_search (from :doc:`dataset_tools`)"
+msgstr "dict_search（来自 :doc:`dataset_tools`）"
+
+#: ../../tools/tools_config_index.rst:606 e2bd5b0898bc4e64a7e146cebe13c8bb
+msgid "dili_search (from :doc:`dataset_tools`)"
+msgstr "dili_search（来自 :doc:`dataset_tools`）"
+
+#: ../../tools/tools_config_index.rst:607 9c3f5dc58e014fe3aea36cf7a3b2e965
+msgid "diqt_search (from :doc:`dataset_tools`)"
+msgstr "diqt_search（来自 :doc:`dataset_tools`）"
+
+#: ../../tools/tools_config_index.rst:608 332bfc36477948a1a5e3e744e516e564
+msgid "drugbank_full_search (from :doc:`dataset_tools`)"
+msgstr "drugbank_full_search（来自：:doc:`dataset_tools`）"
+
+#: ../../tools/tools_config_index.rst:609 339ce75de31148408b888b29a140511e
+msgid "drugbank_links_search (from :doc:`dataset_tools`)"
+msgstr "drugbank_links_search（来自 :doc:`dataset_tools`）"
+
+#: ../../tools/tools_config_index.rst:610 c1dfd4a3a797499bab421c61910f9c4b
+msgid "drugbank_vocab_filter (from :doc:`dataset_tools`)"
+msgstr "drugbank_vocab_filter（来自 :doc:`dataset_tools`）"
+
+#: ../../tools/tools_config_index.rst:611 edf2de7af3ad4290b484ea1c1e4d6fa2
+msgid "drugbank_vocab_search (from :doc:`dataset_tools`)"
+msgstr "drugbank_vocab_search（来自 :doc:`dataset_tools`）"
+
+#: ../../tools/tools_config_index.rst:614 fb29f7eff70348ff90ede5fbdcf5c21e
+msgid "**DiseaseTargetScoreTool** (10 tools)"
+msgstr "**疾病靶点评分工具**（10个工具）"
+
+#: ../../tools/tools_config_index.rst:617 8028164b30ca4b2784a583787dc3438e
+msgid ""
+"cancer_biomarkers_disease_target_score (from "
+":doc:`disease_target_score_tools`)"
+msgstr "癌症_生物标志物_疾病_靶点_评分（来自 :doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:618 a1b883fa43124c57b55c67062305df93
+msgid ""
+"cancer_gene_census_disease_target_score (from "
+":doc:`disease_target_score_tools`)"
+msgstr ""
+"cancer_gene_census_disease_target_score（来源：:doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:619 a44374c9e29a4f15829252225356f452
+msgid "chembl_disease_target_score (from :doc:`disease_target_score_tools`)"
+msgstr "chembl_disease_target_score（来自 :doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:620 4bdbddd41a5c41f2b114ad757f6e8a85
+msgid "disease_target_score (from :doc:`disease_target_score_tools`)"
+msgstr "disease_target_score（来自 :doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:621 4bed5acecbd544d68773347e00116bd4
+msgid ""
+"europepmc_disease_target_score (from :doc:`disease_target_score_tools`)"
+msgstr "europepmc_disease_target_score（来源：:doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:622 372fcd12aa144664ba1f25b01a88ba3f
+msgid "eva_disease_target_score (from :doc:`disease_target_score_tools`)"
+msgstr "eva_disease_target_score（来自：:doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:623 de073dfac8f6479685661727924a933c
+msgid ""
+"eva_somatic_disease_target_score (from :doc:`disease_target_score_tools`)"
+msgstr ""
+"eva_somatic_disease_target_score（来源：:doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:624 cc080a3296ce4e22b885ca88e486fdf2
+msgid ""
+"expression_atlas_disease_target_score (from "
+":doc:`disease_target_score_tools`)"
+msgstr ""
+"expression_atlas_disease_target_score（来自 :doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:625 f94ed325bfde40ad944dba3d42a6df44
+msgid ""
+"genomics_england_disease_target_score (from "
+":doc:`disease_target_score_tools`)"
+msgstr ""
+"genomics_england_disease_target_score（来自：:doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:626 01fd6796a3c14af0aea982274c02786f
+msgid "reactome_disease_target_score (from :doc:`disease_target_score_tools`)"
+msgstr "reactome_disease_target_score（来自：:doc:`disease_target_score_tools`）"
+
+#: ../../tools/tools_config_index.rst:629 645def198db649b69a12a805e16bddb8
+msgid "**EFOTool** (1 tools)"
+msgstr "**EFOTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:632 6fd74bde251e472bb8aee7b556c20893
+msgid "OSL_get_efo_id_by_disease_name (from :doc:`efo_tools`)"
+msgstr "OSL_get_efo_id_by_disease_name（来源：:doc:`efo_tools`）"
+
+#: ../../tools/tools_config_index.rst:635 c44db6fdcb334a25b51ef08f6ce8307c
+msgid "**EmbeddingDatabase** (4 tools)"
+msgstr "**嵌入式数据库**（4个工具）"
+
+#: ../../tools/tools_config_index.rst:638 9a8107d457cf45458c2f0b1840752caa
+msgid "embedding_database_add (from :doc:`embedding_tools`)"
+msgstr "embedding_database_add（来自：:doc:`embedding_tools`）"
+
+#: ../../tools/tools_config_index.rst:639 477b8ca19e3644299da02bf06f7c208e
+msgid "embedding_database_create (from :doc:`embedding_tools`)"
+msgstr "embedding_database_create（来源：:doc:`embedding_tools`）"
+
+#: ../../tools/tools_config_index.rst:640 441ca124767d4c06b06933972feb9a77
+msgid "embedding_database_load (from :doc:`embedding_tools`)"
+msgstr "embedding_database_load（来自 :doc:`embedding_tools`）"
+
+#: ../../tools/tools_config_index.rst:641 82733084f2f1483f890373973c190df8
+msgid "embedding_database_search (from :doc:`embedding_tools`)"
+msgstr "embedding_database_search（来自：:doc:`embedding_tools`）"
+
+#: ../../tools/tools_config_index.rst:644 eed15f2b235a490cb9fdfef5b80d063a
+msgid "**EmbeddingSync** (2 tools)"
+msgstr "**EmbeddingSync**（2 个工具）"
+
+#: ../../tools/tools_config_index.rst:647 383b0462265845d28760e4c2163d40be
+msgid "embedding_sync_download (from :doc:`embedding_tools`)"
+msgstr "embedding_sync_download（来源：:doc:`embedding_tools`）"
+
+#: ../../tools/tools_config_index.rst:648 92088bae1d514aceb6e21e1303512d48
+msgid "embedding_sync_upload (from :doc:`embedding_tools`)"
+msgstr "embedding_sync_upload（来自：:doc:`embedding_tools`）"
+
+#: ../../tools/tools_config_index.rst:651 4a754c84ddc64340a31ca54f928a09e4
+msgid "**EnrichrTool** (1 tools)"
+msgstr "**EnrichrTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:654 adca538804a24410b67826402edf90b5
+msgid "enrichr_gene_enrichment_analysis (from :doc:`enrichr_tools`)"
+msgstr "enrichr_gene_enrichment_analysis（来自 :doc:`enrichr_tools`）"
+
+#: ../../tools/tools_config_index.rst:657 f714217d2f9647588c6b100d7863639b
+#, fuzzy
+msgid "**EuropePMCGuidelinesTool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:660 a278e1bb3b3c4b248ea4b8d733fc7d4e
+msgid "EuropePMC_Guidelines_Search (from :doc:`unified_guideline_tools`)"
+msgstr "EuropePMC_Guidelines_Search（来源：:doc:`unified_guideline_tools`）"
+
+#: ../../tools/tools_config_index.rst:663 6dd8d2984d7c4f22b9a9753115ac0d23
+msgid "**EuropePMCTool** (1 tools)"
+msgstr "**EuropePMCTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:666 019635029174463da5197c9dfd3329fa
+msgid "EuropePMC_search_articles (from :doc:`europe_pmc_tools`)"
+msgstr "EuropePMC_search_articles（来源：:doc:`europe_pmc_tools`）"
+
+#: ../../tools/tools_config_index.rst:669 177a4255ca6d42b7b29262ff28b1a1ef
+msgid "**FDACountAdditiveReactionsTool** (6 tools)"
+msgstr "**FDACountAdditiveReactionsTool**（6 个工具）"
+
+#: ../../tools/tools_config_index.rst:672 638f1123372b40d5ad0e68c3d9704b36
+msgid ""
+"FAERS_count_additive_administration_routes (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_additive_administration_routes（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:673 ac52457155054c8eb61ad944f23159f2
+msgid ""
+"FAERS_count_additive_adverse_reactions (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_additive_adverse_reactions（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:674 c7afc5d6dee84978b8ae683db95a4a3b
+msgid ""
+"FAERS_count_additive_event_reports_by_country (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_additive_event_reports_by_country（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:675 8f4e47d7c4ea42d3b4595d82f703bb3f
+msgid ""
+"FAERS_count_additive_reaction_outcomes (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_additive_reaction_outcomes（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:676 6dfaade815b549bd83964d9d74b5240f
+msgid ""
+"FAERS_count_additive_reports_by_reporter_country (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_additive_reports_by_reporter_country（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:677 3dc4bfaf276b4300a1b2dd64ec589dc9
+msgid ""
+"FAERS_count_additive_seriousness_classification (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_additive_seriousness_classification（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:680 6275ee9f323a422b9dc746c2a692ed2b
+msgid "**FDADrugAdverseEventTool** (9 tools)"
+msgstr "**FDADrugAdverseEventTool**（9 个工具）"
+
+#: ../../tools/tools_config_index.rst:683 072a0e101f2b4a71b8ad5484fbf34dde
+msgid ""
+"FAERS_count_country_by_drug_event (from :doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_country_by_drug_event（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:684 cd73f4340ce847589edacefd0dc5c695
+msgid ""
+"FAERS_count_death_related_by_drug (from :doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_death_related_by_drug（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:685 1064ded127b84bfb9b7521264c878271
+msgid ""
+"FAERS_count_drug_routes_by_event (from :doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_drug_routes_by_event（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:686 9a8e959f455a409a9d4ae625dc49ab0c
+msgid ""
+"FAERS_count_drugs_by_drug_event (from :doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_drugs_by_drug_event（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:687 b30f272a58e240f3bcc18a0e91628aab
+msgid ""
+"FAERS_count_outcomes_by_drug_event (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_outcomes_by_drug_event（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:688 98141558c4524c57910e8d79f0dc568a
+msgid ""
+"FAERS_count_patient_age_distribution (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_patient_age_distribution（来自 :doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:689 d91dfa31c0f947eda1292f2d4f074660
+msgid ""
+"FAERS_count_reactions_by_drug_event (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_reactions_by_drug_event（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:690 bdb81d28c44a4ece9bf4d7027f2d2364
+msgid ""
+"FAERS_count_reportercountry_by_drug_event (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_reportercountry_by_drug_event（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:691 5342f7443f5841d0b4313720bf3a9067
+msgid ""
+"FAERS_count_seriousness_by_drug_event (from "
+":doc:`fda_drug_adverse_event_tools`)"
+msgstr ""
+"FAERS_count_seriousness_by_drug_event（来源：:doc:`fda_drug_adverse_event_tools`）"
+
+#: ../../tools/tools_config_index.rst:694 898bc73a94a74eba8bc29736fccb4bd1
+msgid "**FDADrugLabel** (155 tools)"
+msgstr "**FDADrugLabel**（155种工具）"
+
+#: ../../tools/tools_config_index.rst:697 6ae7b157c44e4e25924b077e6e53de92
+msgid ""
+"FDA_get_abuse_dependence_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_abuse_dependence_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:698 61444a10ac0d48c29ed7a3aa79d508d7
+msgid "FDA_get_abuse_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_abuse_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:699 e68e6175e663402e8b284e3056f99a33
+msgid ""
+"FDA_get_accessories_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_accessories_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:700 34341a6ecc1449f397442aef9083dab8
+msgid ""
+"FDA_get_active_ingredient_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_active_ingredient_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:701 42d76884825748c4b7977c9451ea9e66
+msgid ""
+"FDA_get_adverse_reactions_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_adverse_reactions_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:702 55aad726fc1a4630ad6a32d1523da9e0
+msgid "FDA_get_alarms_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_alarms_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:703 76954c3c42664311bcd5c606e14fd2f0
+msgid ""
+"FDA_get_animal_pharmacology_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_animal_pharmacology_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:704 48428ab7969f4bf49911f60d696a1e54
+msgid ""
+"FDA_get_assembly_installation_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_assembly_installation_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:705 780ce66fda33474d9ffad891ddc670dd
+msgid ""
+"FDA_get_boxed_warning_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_boxed_warning_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:706 080118ff4dd647f6b8e363c349683720
+msgid "FDA_get_brand_name_generic_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_brand_name_generic_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:707 cabdfd945e304efc85a21c7eb8432444
+msgid ""
+"FDA_get_calibration_instructions_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_calibration_instructions_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:708 25e9fa8616d844b5a7406c98e66ccf22
+msgid ""
+"FDA_get_carcinogenic_mutagenic_fertility_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_carcinogenic_mutagenic_fertility_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:709 0f0159342f30455991400c7342faf26d
+msgid ""
+"FDA_get_child_safety_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_child_safety_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:710 e3c1eba8d4ea4488bcdb96b7deadeb30
+msgid ""
+"FDA_get_clinical_pharmacology_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_clinical_pharmacology_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:711 f5af88bd4d764d06aca967aaf4b12c09
+msgid ""
+"FDA_get_clinical_studies_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_clinical_studies_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:712 4b19a4a5639e4d1ca38364e847b0e738
+msgid ""
+"FDA_get_contact_for_questions_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_contact_for_questions_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:713 aacd559c0222437f87120f318531da39
+msgid ""
+"FDA_get_contraindications_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_contraindications_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:714 db086f77c43e43879d7929c30cb9540a
+msgid ""
+"FDA_get_controlled_substance_DEA_schedule_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_controlled_substance_DEA_schedule_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:715 215e255f2e3a41e4a65d563ddd5f5725
+msgid ""
+"FDA_get_dear_health_care_provider_letter_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_dear_health_care_provider_letter_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:716 d07075b44553433d98351ac60d15c718
+msgid ""
+"FDA_get_dependence_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_dependence_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:717 4a04ba7fb5cf47b58901c86bb003960d
+msgid ""
+"FDA_get_disposal_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_disposal_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:718 a0868f4358be4630b42a8a77aa0a251a
+msgid ""
+"FDA_get_do_not_use_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_do_not_use_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:719 2be6373d367840b9b021b7028db04d24
+msgid "FDA_get_document_id_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_document_id_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:720 17e7a96fa3694088817613eb1cecdde2
+msgid ""
+"FDA_get_dosage_and_storage_information_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_dosage_and_storage_information_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:721 2dae52cdb0554525918c167698f8fb28
+msgid ""
+"FDA_get_dosage_forms_and_strengths_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_dosage_forms_and_strengths_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:722 b337bb2f639e41d3a726d5bf0f2c1348
+msgid ""
+"FDA_get_drug_interactions_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_interactions_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:723 28e6690922e249f0a404e8628b1c53d6
+msgid "FDA_get_drug_name_by_SPL_ID (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_SPL_ID（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:724 5c63cc3ac89347c197dc5b1b31ac5fe1
+msgid ""
+"FDA_get_drug_name_by_adverse_reaction (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_adverse_reaction（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:725 1095aef28bc547b1813bf8ffbb2c16c9
+msgid ""
+"FDA_get_drug_name_by_calibration_instructions (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_calibration_instructions（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:726 1781c283f7434ff88b17117c27b03360
+msgid ""
+"FDA_get_drug_name_by_dependence_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_dependence_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:727 6c301c81e2fa4c2c8f17d7482ab6f2f8
+msgid "FDA_get_drug_name_by_document_id (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_document_id（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:728 5ebfa180daaf4df6834637a2ec95bf54
+msgid "FDA_get_drug_name_by_dosage_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_dosage_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:729 c0a7732608d84e6b80cc6230971e5155
+msgid ""
+"FDA_get_drug_name_by_environmental_warning (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_environmental_warning（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:730 20de8362966f4fb1b65fc08953e41da4
+msgid ""
+"FDA_get_drug_name_by_inactive_ingredient (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_inactive_ingredient（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:731 7961eaf4131d46f58977176b26636a58
+msgid ""
+"FDA_get_drug_name_by_info_on_conditions_for_doctor_consultation (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_info_on_conditions_for_doctor_consultation（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:732 5b6d76592c264e9f99adee277bd0b8f3
+msgid ""
+"FDA_get_drug_name_by_labor_and_delivery_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_labor_and_delivery_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:733 a331b9f2556545b1a6846590512b3f0f
+msgid ""
+"FDA_get_drug_name_by_microbiology (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_microbiology（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:734 9c79484564c74447b6192c8e6840ad00
+msgid ""
+"FDA_get_drug_name_by_other_safety_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_other_safety_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:735 4ac87c14cf314207b2f1f9b307f26181
+msgid ""
+"FDA_get_drug_name_by_pharmacodynamics (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_pharmacodynamics（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:736 1dbd5f28a3af4f679bd7203bb7da38d3
+msgid ""
+"FDA_get_drug_name_by_pharmacogenomics (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_pharmacogenomics（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:737 496128ea03f246b49c4417b3a3b12b5e
+msgid "FDA_get_drug_name_by_precautions (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_precautions（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:738 6f857c658b234391b91ef889985e176f
+msgid ""
+"FDA_get_drug_name_by_pregnancy_or_breastfeeding_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_pregnancy_or_breastfeeding_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:739 b30ed05602d74a3ea2217489fe65e984
+msgid ""
+"FDA_get_drug_name_by_principal_display_panel (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_principal_display_panel（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:740 a351900c02d047be86495e836ae0e3c2
+msgid "FDA_get_drug_name_by_reference (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_reference（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:741 0495b1f1c3ef417b8a3d2a9c78768540
+msgid "FDA_get_drug_name_by_set_id (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_set_id（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:742 f253a1cb77134c7eb048500b505eb471
+msgid ""
+"FDA_get_drug_name_by_stop_use_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_stop_use_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:743 873f4ee141bd49fca9044f35b91d5e86
+msgid ""
+"FDA_get_drug_name_by_storage_and_handling_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_by_storage_and_handling_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:744 f5c3052cd25a49e1bb4b1cbbddee0323
+msgid "FDA_get_drug_name_by_warnings (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_name_by_warnings（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:745 86ff5fa9af604dc0a1ccd9d2372d3367
+msgid ""
+"FDA_get_drug_name_from_patient_package_insert (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_name_from_patient_package_insert（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:746 ea85e43a78e14580ae4691a5a8eb75ef
+msgid ""
+"FDA_get_drug_names_by_abuse_dependence_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_abuse_dependence_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:747 6304f88023974990bb86a208b5f2cd55
+msgid "FDA_get_drug_names_by_abuse_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_abuse_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:748 1ab66f6b7015440eb0481c373579a7b5
+msgid ""
+"FDA_get_drug_names_by_accessories (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_accessories（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:749 051d6f38dd7a420e8cb2bb2e80043116
+msgid ""
+"FDA_get_drug_names_by_active_ingredient (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_active_ingredient（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:750 e17c2d1f2d944808b1fbd79125e9caa6
+msgid "FDA_get_drug_names_by_alarm (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_alarm（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:751 06a272a4641643dda3b652fbe4910e6c
+msgid ""
+"FDA_get_drug_names_by_animal_pharmacology_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_animal_pharmacology_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:752 75f69e13d69b4490b5b3ecf9aea744ef
+msgid ""
+"FDA_get_drug_names_by_application_number_NDC_number (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_application_number_NDC_number（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:753 4c8938128ca4446d83507eb746d35a8e
+msgid ""
+"FDA_get_drug_names_by_assembly_installation_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_assembly_installation_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:754 731e4fac017f4a209f5543003929ec9f
+msgid ""
+"FDA_get_drug_names_by_boxed_warning (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_boxed_warning（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:755 18c2712f666a4c75a5f90505674d0895
+msgid ""
+"FDA_get_drug_names_by_child_safety_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_child_safety_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:756 9bd1bb7b44dd449f967e5226e1da24f8
+msgid ""
+"FDA_get_drug_names_by_clinical_pharmacology (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_clinical_pharmacology（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:757 6492439cad9d45adaa5a33070f101e97
+msgid ""
+"FDA_get_drug_names_by_clinical_studies (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_clinical_studies（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:758 7bb241c8a90e47849ca712fca723abb4
+msgid ""
+"FDA_get_drug_names_by_consulting_doctor_pharmacist_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_consulting_doctor_pharmacist_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:759 6f5e08fb86b643b18402baf6f84c27b2
+msgid ""
+"FDA_get_drug_names_by_contraindications (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_contraindications（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:760 c2057064c73f47ba86ff6b0e458d747b
+msgid ""
+"FDA_get_drug_names_by_controlled_substance_DEA_schedule (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_controlled_substance_DEA_schedule（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:761 b1e2880a129b435c8af303b2ff1423a3
+msgid ""
+"FDA_get_drug_names_by_dear_health_care_provider_letter_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_dear_health_care_provider_letter_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:762 c086519f440349ab857c96183ebbb3e2
+msgid ""
+"FDA_get_drug_names_by_disposal_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_disposal_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:763 d07cac58c3804e85b66ccff6443102f9
+msgid ""
+"FDA_get_drug_names_by_dosage_forms_and_strengths_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_dosage_forms_and_strengths_info（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:764 0928e4faa09e4bc285179cdf2e25cb59
+msgid ""
+"FDA_get_drug_names_by_drug_interactions (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_drug_interactions（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:765 87f63e57c5e44eeb9f2507630044c1aa
+msgid ""
+"FDA_get_drug_names_by_effective_time (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_effective_time（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:766 3df503a8d3b44aca817acd9767bac671
+msgid ""
+"FDA_get_drug_names_by_food_safety_warnings (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_food_safety_warnings（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:767 6af0e6bba6d5448d9df28a4e0ef06bd7
+msgid ""
+"FDA_get_drug_names_by_general_precautions (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_general_precautions（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:768 2f5429fcae414ca3952c446774ab5426
+msgid ""
+"FDA_get_drug_names_by_geriatric_use (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_geriatric_use（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:769 74137b1f36874f10b86df0291b90a2ae
+msgid ""
+"FDA_get_drug_names_by_health_claim (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_health_claim（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:770 9a80f19d07634cef88ead10bba5deb7c
+msgid "FDA_get_drug_names_by_indication (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_indication（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:771 f42856e0e785436494623591a2e1f276
+msgid ""
+"FDA_get_drug_names_by_info_for_nursing_mothers (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_info_for_nursing_mothers（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:772 07b3f2ee4b014fdfb44220b790d6dcef
+msgid ""
+"FDA_get_drug_names_by_information_for_owners_or_caregivers (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_information_for_owners_or_caregivers（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:773 8df8ce8da02a4b9899e34711dbba418a
+msgid "FDA_get_drug_names_by_ingredient (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_ingredient（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:774 fdf0b652e1d945528b4a671c5e289f49
+msgid ""
+"FDA_get_drug_names_by_instructions_for_use (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_instructions_for_use（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:775 4646ad0108fe40b1af4c2fe3259c91cc
+msgid ""
+"FDA_get_drug_names_by_lab_test_interference (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_lab_test_interference（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:776 d4fd03a63942420299596e1733d93c80
+msgid "FDA_get_drug_names_by_lab_tests (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_lab_tests（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:777 12b0c586b5d2423e80bb87ca8612e575
+msgid ""
+"FDA_get_drug_names_by_mechanism_of_action (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_mechanism_of_action（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:778 e45b7ce8de4e4006958d9c9daf0fa843
+msgid ""
+"FDA_get_drug_names_by_medication_guide (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_medication_guide（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:779 ec2b2c7242df4332b0e9736430d7d9c8
+msgid ""
+"FDA_get_drug_names_by_nonclinical_toxicology_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_nonclinical_toxicology_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:780 0504fb84ecd6418bb6352d90f970d393
+msgid ""
+"FDA_get_drug_names_by_nonteratogenic_effects (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_nonteratogenic_effects（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:781 c73efda33bdb4e21b81be12e1ee61167
+msgid ""
+"FDA_get_drug_names_by_overdosage_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_overdosage_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:782 7507bda53f5443fbb56d94360c06aa6d
+msgid ""
+"FDA_get_drug_names_by_pediatric_use (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_pediatric_use（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:783 3fb07195820f4501bf92e1863658dba2
+msgid ""
+"FDA_get_drug_names_by_pharmacokinetics (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_pharmacokinetics（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:784 53608226014d4f919ef5f55ac4a7b60c
+msgid ""
+"FDA_get_drug_names_by_population_use (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_population_use（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:785 5461cfb631dc47c09a3f2988725fb7af
+msgid ""
+"FDA_get_drug_names_by_pregnancy_effects_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_pregnancy_effects_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:786 0bdb2fc7a43742e89f811f6422c89053
+msgid ""
+"FDA_get_drug_names_by_residue_warning (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_residue_warning（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:787 da9271a24dfe40b39bfc9526d63fa1d0
+msgid "FDA_get_drug_names_by_risk (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_risk（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:788 28dac7da595248f5ac673b28bd7d2622
+msgid "FDA_get_drug_names_by_route (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_names_by_route（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:789 e468918202904fd784313b986425d83f
+msgid ""
+"FDA_get_drug_names_by_safe_handling_warning (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_safe_handling_warning（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:790 6d2cdb47effc4dffa220b52ed2e2da73
+msgid ""
+"FDA_get_drug_names_by_safety_summary (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_safety_summary（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:791 67e7b53ca3f942cbb4420f758a0a13f0
+msgid ""
+"FDA_get_drug_names_by_spl_indexing_data_elements (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_spl_indexing_data_elements（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:792 4f31e90afafe441f85efb9d732eff356
+msgid ""
+"FDA_get_drug_names_by_teratogenic_effects (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_teratogenic_effects（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:793 b7738584517d4ca0a35118070d3b85b3
+msgid ""
+"FDA_get_drug_names_by_user_safety_warning (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_user_safety_warning（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:794 a5b8824e9ba842cfa6e9695e4d0ef79a
+msgid ""
+"FDA_get_drug_names_by_warnings_and_cautions (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drug_names_by_warnings_and_cautions（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:795 7aee3e10533f4ac3ad9f1b49525f47bd
+msgid ""
+"FDA_get_drugs_by_carcinogenic_mutagenic_fertility (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_drugs_by_carcinogenic_mutagenic_fertility（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:796 38e2737e5e86498d98fcc820051c20f7
+msgid ""
+"FDA_get_effective_time_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_effective_time_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:797 045cc3db45514a9eb3039f3002aebbcb
+msgid ""
+"FDA_get_environmental_warning_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_environmental_warning_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:798 f687c10498ff43d3832e0e93e4effaa0
+msgid ""
+"FDA_get_general_precautions_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_general_precautions_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:799 e3f2b42cded743cf9a1289446e10a278
+msgid ""
+"FDA_get_geriatric_use_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_geriatric_use_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:800 1c49b2eba2184231be2961e9c954e18e
+msgid ""
+"FDA_get_health_claims_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_health_claims_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:801 b5b3bc6a9ce34d349a8eb58774752628
+msgid ""
+"FDA_get_inactive_ingredient_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_inactive_ingredient_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:802 864139a0af86493a8c7f9fd97b1de4f5
+msgid "FDA_get_indications_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_indications_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:803 4f49a31bda85416084bff4866d1d30fb
+msgid ""
+"FDA_get_info_for_nursing_mothers_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_info_for_nursing_mothers_by_drug_name（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:804 9890a1e1037b4c7c956e895b0a7b9b71
+msgid ""
+"FDA_get_info_for_patients_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_info_for_patients_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:805 286a9ed55b5846f08aa839ab551eaf86
+msgid ""
+"FDA_get_info_on_conditions_for_doctor_consultation_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_info_on_conditions_for_doctor_consultation_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:806 6a5f06804a374db09925b8ffc2ec616e
+msgid ""
+"FDA_get_info_on_consulting_doctor_pharmacist_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_info_on_consulting_doctor_pharmacist_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:807 0061e389e1b74bbc91012c0603d91581
+msgid ""
+"FDA_get_information_for_owners_or_caregivers_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_information_for_owners_or_caregivers_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:808 d06771cbb27348e6945d45fb946335e8
+msgid "FDA_get_ingredients_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_ingredients_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:809 9f9642d6ca3944309d71af4d1189fd6e
+msgid ""
+"FDA_get_instructions_for_use_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_instructions_for_use_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:810 6c886706ab89448f9a6a715cb9d8d74b
+msgid ""
+"FDA_get_lab_test_interference_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_lab_test_interference_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:811 fef4632015044b81a8531290875d27db
+msgid "FDA_get_lab_tests_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_lab_tests_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:812 66d7ece5b94d41ecbaf3b0a8ae7463b9
+msgid ""
+"FDA_get_labor_and_delivery_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_labor_and_delivery_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:813 5d69c3c4398949359f356fe0484dca03
+msgid ""
+"FDA_get_manufacturer_name_NDC_number_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_manufacturer_name_NDC_number_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:814 4f9939a3fd4d423f9864de83ae94a4c5
+msgid ""
+"FDA_get_mechanism_of_action_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_mechanism_of_action_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:815 2afec841c1774a8c98dc62c1e0a1bf55
+msgid ""
+"FDA_get_medication_guide_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_medication_guide_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:816 d0637803069c4d66ba7c61001f2c637b
+msgid ""
+"FDA_get_microbiology_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_microbiology_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:817 14439e3ab1954a93bae0fdd8f4eba9d8
+msgid ""
+"FDA_get_nonclinical_toxicology_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_nonclinical_toxicology_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:818 9f76da75a0de470fbab6ef8c62522ef4
+msgid ""
+"FDA_get_nonteratogenic_effects_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_nonteratogenic_effects_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:819 4b88db03e475454c91ed4a65591f21b1
+msgid ""
+"FDA_get_other_safety_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_other_safety_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:820 3cb8aba18e9549b19f117b0ab3afdd18
+msgid ""
+"FDA_get_overdosage_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_overdosage_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:821 f9bde877015b4f3482d7e1e12ae3eddc
+msgid ""
+"FDA_get_patient_package_insert_from_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_patient_package_insert_from_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:822 1e53a7d5249447fcbff65a0322fa4d4a
+msgid ""
+"FDA_get_pediatric_use_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_pediatric_use_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:823 6bf0f4ad7a2b4c6fad7b187031af6658
+msgid ""
+"FDA_get_pharmacodynamics_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_pharmacodynamics_by_drug_name（来自 :doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:824 21f18b9af1694ee9894462e2505daedc
+msgid ""
+"FDA_get_pharmacogenomics_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_pharmacogenomics_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:825 bfe743494ad545ea980350e79224a63d
+msgid ""
+"FDA_get_pharmacokinetics_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_pharmacokinetics_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:826 346e779504374a648b92697512fd9d58
+msgid ""
+"FDA_get_population_use_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_population_use_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:827 9fed06a14e6a449cb4ec895a4b4656f1
+msgid "FDA_get_precautions_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_precautions_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:828 f07a0d56999a4210939ce35430d0b953
+msgid ""
+"FDA_get_pregnancy_effects_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_pregnancy_effects_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:829 23036b4219dc48a6ac39b46ab072b492
+msgid ""
+"FDA_get_pregnancy_or_breastfeeding_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_pregnancy_or_breastfeeding_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:830 a6e7c49ed75040c8a6b0a126c53501fd
+msgid ""
+"FDA_get_principal_display_panel_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_principal_display_panel_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:831 df9c6942baf94e1bb6e5e4277e6138fb
+msgid ""
+"FDA_get_purpose_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_purpose_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:832 1394d3a64de547e4ad76c8c230815fd0
+msgid ""
+"FDA_get_recent_changes_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_recent_changes_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:833 a44052ea82124738a59ae6516ed4334c
+msgid ""
+"FDA_get_reference_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_reference_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:834 d8514ed7fd56416abb25a0c43375ec7e
+msgid ""
+"FDA_get_residue_warning_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_residue_warning_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:835 773455ae3db4421fa469d5643e836829
+msgid "FDA_get_risk_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_risk_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:836 3e94eaaddbbc4af5a179c2fc6d6b455d
+msgid "FDA_get_route_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_route_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:837 cfad7587592841d6ace898f5cfda5eaa
+msgid ""
+"FDA_get_safe_handling_warnings_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_safe_handling_warnings_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:838 59267e70afc84f3a9383cdf1e2db4f91
+msgid ""
+"FDA_get_safety_summary_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_safety_summary_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:839 d7876da58e684f2c9b37e6d8fdd65c75
+msgid ""
+"FDA_get_spl_indexing_data_elements_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_spl_indexing_data_elements_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:840 32e885e5f3fc45a08ded22d94417f97f
+msgid ""
+"FDA_get_spl_unclassified_section_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_spl_unclassified_section_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:841 0731c063c8924d3e950043f1024075b7
+msgid ""
+"FDA_get_stop_use_info_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_stop_use_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:842 1e4ff368ef524de3834e94e04636e2da
+msgid ""
+"FDA_get_storage_and_handling_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_storage_and_handling_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:843 f777ceb2217c4cecae8ab7441b2fe999
+msgid ""
+"FDA_get_teratogenic_effects_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_teratogenic_effects_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:844 2a48bfaeacbf4428bd1322df39311b9b
+msgid ""
+"FDA_get_user_safety_warning_by_drug_names (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_user_safety_warning_by_drug_names（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:845 793579dc77cb403c9ce43f89a0bf06ec
+msgid ""
+"FDA_get_warnings_and_cautions_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_get_warnings_and_cautions_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:846 8a4bf025a5824188ad52655f204466b3
+msgid "FDA_get_warnings_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_warnings_by_drug_name（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:847 772207708e5b4fa48199e14df05af654
+msgid "FDA_get_when_using_info (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_when_using_info（来自：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:848 e9544cca127a4c0b8ffa14a97c0d6957
+msgid ""
+"FDA_retrieve_device_use_by_drug_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_retrieve_device_use_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:849 bd173e4ec0804b6ea380cedc53ab9425
+msgid ""
+"FDA_retrieve_drug_name_by_device_use (from :doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_retrieve_drug_name_by_device_use（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:850 6fccb951d32e47df8e9d99d6fa611a22
+msgid ""
+"FDA_retrieve_drug_names_by_patient_medication_info (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_retrieve_drug_names_by_patient_medication_info（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:851 54ddf4d51bcf42639a29c65cdf0c13cb
+msgid ""
+"FDA_retrieve_patient_medication_info_by_drug_name (from "
+":doc:`fda_drug_labeling_tools`)"
+msgstr ""
+"FDA_retrieve_patient_medication_info_by_drug_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:854 2ac1557136ea43679b2dcbac7b5eb85c
+msgid "**FDADrugLabelGetDrugGenericNameTool** (1 tools)"
+msgstr "**FDADrugLabelGetDrugGenericNameTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:857 1791d34ce0b7400cadcb27811edd6313
+msgid "FDA_get_drug_generic_name (from :doc:`fda_drug_labeling_tools`)"
+msgstr "FDA_get_drug_generic_name（来源：:doc:`fda_drug_labeling_tools`）"
+
+#: ../../tools/tools_config_index.rst:860 f8ab2b3785154e698c25d1cea4a0aa52
+#, fuzzy
+msgid "**FatcatScholarTool** (1 tools)"
+msgstr "语义学者工具"
+
+#: ../../tools/tools_config_index.rst:863 388d2a9c101e494b97b917c6444583bc
+msgid "Fatcat_search_scholar (from :doc:`fatcat_tools`)"
+msgstr "Fatcat_search_scholar（来自 :doc:`fatcat_tools`）"
+
+#: ../../tools/tools_config_index.rst:866 548755b2fc114e848112fd5dd6f1fc36
+msgid "**GWASAssociationByID** (1 tools)"
+msgstr "**GWASAssociationByID**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:869 7063842621cb4acda050d04f7a0e6879
+msgid "gwas_get_association_by_id (from :doc:`gwas_tools`)"
+msgstr "gwas_get_association_by_id（来源：:doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:872 6dc34c0ba87345de91c5e6f156c4f49d
+msgid "**GWASAssociationSearch** (1 tools)"
+msgstr "**GWASAssociationSearch**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:875 9387d6bc84c948129f166025cb20bec6
+msgid "gwas_search_associations (from :doc:`gwas_tools`)"
+msgstr "gwas_search_associations（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:878 bcc3cffca6544ad9b5fdff500b5237bb
+msgid "**GWASAssociationsForSNP** (1 tools)"
+msgstr "**GWASAssociationsForSNP**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:881 583fe3b3e5b5434eae414d4082ef139f
+msgid "gwas_get_associations_for_snp (from :doc:`gwas_tools`)"
+msgstr "gwas_get_associations_for_snp（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:884 ae6078ff02f148a5982456834f65cb1b
+msgid "**GWASAssociationsForStudy** (1 tools)"
+msgstr "**GWASAssociationsForStudy**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:887 a0efea4684bd4ad79a8e195ffb70ca74
+msgid "gwas_get_associations_for_study (from :doc:`gwas_tools`)"
+msgstr "gwas_get_associations_for_study（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:890 a07d846f345c40cf8ee6caa79715b87a
+msgid "**GWASAssociationsForTrait** (1 tools)"
+msgstr "**GWASAssociationsForTrait**（1个工具）"
+
+#: ../../tools/tools_config_index.rst:893 81f17a14f7964a71a2ae5ef0ceac23fd
+msgid "gwas_get_associations_for_trait (from :doc:`gwas_tools`)"
+msgstr "gwas_get_associations_for_trait（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:896 a02a9900e4214d16b36e752f768a081e
+msgid "**GWASSNPByID** (1 tools)"
+msgstr "**GWASSNPByID**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:899 2314468697504c2c8075ba295c3bf8a3
+msgid "gwas_get_snp_by_id (from :doc:`gwas_tools`)"
+msgstr "gwas_get_snp_by_id（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:902 6057736454944216aed871f673e9ad91
+msgid "**GWASSNPSearch** (1 tools)"
+msgstr "**GWASSNPSearch**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:905 b9885dbe8af14cb1833547b20be06919
+msgid "gwas_search_snps (from :doc:`gwas_tools`)"
+msgstr "gwas_search_snps（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:908 462007565e574630a53b12502a361631
+msgid "**GWASSNPsForGene** (1 tools)"
+msgstr "**GWASSNPsForGene**（1个工具）"
+
+#: ../../tools/tools_config_index.rst:911 4af24423b39f49ce803b20a83726c1fa
+msgid "gwas_get_snps_for_gene (from :doc:`gwas_tools`)"
+msgstr "gwas_get_snps_for_gene（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:914 eab1fd84604248ef99cbd6c0d8b48736
+msgid "**GWASStudiesForTrait** (1 tools)"
+msgstr "**GWASStudiesForTrait**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:917 1b90447cd55941bf8be8157bfcb185e1
+msgid "gwas_get_studies_for_trait (from :doc:`gwas_tools`)"
+msgstr "gwas_get_studies_for_trait（来源：:doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:920 64d3845f0e354ef1abb8882f5f842ee0
+msgid "**GWASStudyByID** (1 tools)"
+msgstr "**GWASStudyByID**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:923 67c5576ac99c4b27abd654c4616a97c0
+msgid "gwas_get_study_by_id (from :doc:`gwas_tools`)"
+msgstr "gwas_get_study_by_id（来源：:doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:926 3832199e075c45bd8aebcecc35686602
+msgid "**GWASStudySearch** (1 tools)"
+msgstr "**GWASStudySearch**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:929 3cb9ce132d8a40fd989c3be1544435e9
+msgid "gwas_search_studies (from :doc:`gwas_tools`)"
+msgstr "gwas_search_studies（来源：:doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:932 4ad4b8a84d254d3a837d94548cced1bb
+msgid "**GWASVariantsForTrait** (1 tools)"
+msgstr "**GWASVariantsForTrait**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:935 d0fb14c96ffe4840b15a96f555d7c256
+msgid "gwas_get_variants_for_trait (from :doc:`gwas_tools`)"
+msgstr "gwas_get_variants_for_trait（来自 :doc:`gwas_tools`）"
+
+#: ../../tools/tools_config_index.rst:938 6ae75e89428149a2a9ef49a720d194a9
+msgid "**GeneOntologyTool** (5 tools)"
+msgstr "**GeneOntologyTool**（5 个工具）"
+
+#: ../../tools/tools_config_index.rst:941 be0afd0aa71b46c380936ac112008053
+msgid "GO_get_annotations_for_gene (from :doc:`gene_ontology_tools`)"
+msgstr "GO_get_annotations_for_gene（来自 :doc:`gene_ontology_tools`）"
+
+#: ../../tools/tools_config_index.rst:942 c8a43b229b3845ddbd35b8e53b241b78
+msgid "GO_get_genes_for_term (from :doc:`gene_ontology_tools`)"
+msgstr "GO_get_genes_for_term（来自 :doc:`gene_ontology_tools`）"
+
+#: ../../tools/tools_config_index.rst:943 90af6388dc714f7a942aa405071e8cd9
+msgid "GO_get_term_by_id (from :doc:`gene_ontology_tools`)"
+msgstr "GO_get_term_by_id（来源：:doc:`gene_ontology_tools`）"
+
+#: ../../tools/tools_config_index.rst:944 2b702fa3520c45a281ce59141e288c4c
+msgid "GO_get_term_details (from :doc:`gene_ontology_tools`)"
+msgstr "GO_get_term_details（来自 :doc:`gene_ontology_tools`）"
+
+#: ../../tools/tools_config_index.rst:945 f6da0558826243b0af9d6602a38fe7d8
+msgid "GO_search_terms (from :doc:`gene_ontology_tools`)"
+msgstr "GO_search_terms（来自 :doc:`gene_ontology_tools`）"
+
+#: ../../tools/tools_config_index.rst:948 826e730e4dc440a8b53b32d0da7f66aa
+msgid "**GetSPLBySetIDTool** (1 tools)"
+msgstr "**GetSPLBySetIDTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:951 12f1d480bfc54044b2950709ce94ae6b
+msgid "DailyMed_get_spl_by_setid (from :doc:`dailymed_tools`)"
+msgstr "DailyMed_get_spl_by_setid（来源：:doc:`dailymed_tools`）"
+
+#: ../../tools/tools_config_index.rst:954 92585ec120804b209289c5c5de0f2774
+msgid "**HALTool** (1 tools)"
+msgstr "**HALTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:957 d3ab3d0962e74a41b5c9616781978c46
+msgid "HAL_search_archive (from :doc:`hal_tools`)"
+msgstr "HAL_search_archive（来源：:doc:`hal_tools`）"
+
+#: ../../tools/tools_config_index.rst:960 dde00513986a4e58850bf9f35cca9744
+msgid "**HPAGetBiologicalProcessTool** (1 tools)"
+msgstr "**HPAGetBiologicalProcessTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:963 daeaff5e64aa49a791a5038f87c312cf
+msgid "HPA_get_biological_processes_by_gene (from :doc:`hpa_tools`)"
+msgstr "HPA_get_biological_processes_by_gene（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:966 673bac40652243b1bd26bf8c05d8bc4f
+msgid "**HPAGetCancerPrognosticsTool** (1 tools)"
+msgstr "**HPAGetCancerPrognosticsTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:969 8af74ec6f547430aa40820f7fe68dd28
+msgid "HPA_get_cancer_prognostics_by_gene (from :doc:`hpa_tools`)"
+msgstr "HPA_get_cancer_prognostics_by_gene（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:972 bfc26438a3c94e16804c43e92e766527
+msgid "**HPAGetComparativeExpressionTool** (1 tools)"
+msgstr "**HPAGetComparativeExpressionTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:975 e6ab390cb4f2409082efca60d85b8bfe
+msgid ""
+"HPA_get_comparative_expression_by_gene_and_cellline (from :doc:`hpa_tools`)"
+msgstr ""
+"HPA_get_comparative_expression_by_gene_and_cellline（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:978 3acaa73bc1bd4315875fad0aa1764ffd
+msgid "**HPAGetContextualBiologicalProcessTool** (1 tools)"
+msgstr "**HPAGetContextualBiologicalProcessTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:981 a955237cf0494d9d876068a49dc5eebd
+msgid "HPA_get_contextual_biological_process_analysis (from :doc:`hpa_tools`)"
+msgstr "HPA_get_contextual_biological_process_analysis（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:984 d5058cbce01347aa8a9432b7162663a9
+msgid "**HPAGetDiseaseExpressionTool** (1 tools)"
+msgstr "**HPAGetDiseaseExpressionTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:987 ade49ad2d7e240f18e769025a188a88e
+msgid ""
+"HPA_get_disease_expression_by_gene_tissue_disease (from :doc:`hpa_tools`)"
+msgstr ""
+"HPA_get_disease_expression_by_gene_tissue_disease（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:990 426da719b3ce434bbb53f142bad1aa6d
+msgid "**HPAGetGeneJSONTool** (1 tools)"
+msgstr "**HPAGetGeneJSONTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:993 7db1c2b048a745d8b580622dc4580a90
+msgid "HPA_get_gene_basic_info_by_ensembl_id (from :doc:`hpa_tools`)"
+msgstr "HPA_get_gene_basic_info_by_ensembl_id（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:996 550657b4495e4a4fb6175351e81af640
+msgid "**HPAGetGenePageDetailsTool** (1 tools)"
+msgstr "**HPAGetGenePageDetailsTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:999 c8d098c32a33427fb578e046e9130603
+msgid ""
+"HPA_get_comprehensive_gene_details_by_ensembl_id (from :doc:`hpa_tools`)"
+msgstr "HPA_get_comprehensive_gene_details_by_ensembl_id（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:1002 8e4f20664ff9411d9ed7bbcf76a2bfe3
+msgid "**HPAGetGeneXMLTool** (1 tools)"
+msgstr "**HPAGetGeneXMLTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1005 75800e4c857e460fb06883ab53265b5c
+msgid "HPA_get_gene_tsv_data_by_ensembl_id (from :doc:`hpa_tools`)"
+msgstr "HPA_get_gene_tsv_data_by_ensembl_id（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:1008 4c91e43ba1ac4032b0193d1015724942
+msgid "**HPAGetProteinInteractionsTool** (1 tools)"
+msgstr "**HPAGetProteinInteractionsTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1011 8823dc962c32493e9661155fc5933b3b
+msgid "HPA_get_protein_interactions_by_gene (from :doc:`hpa_tools`)"
+msgstr "HPA_get_protein_interactions_by_gene（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:1014 67514e1e3adc4fbeb48d5ac9bb8f4ffb
+msgid "**HPAGetRnaExpressionBySourceTool** (1 tools)"
+msgstr "**HPAGetRnaExpressionBySourceTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1017 3635811693e74e8c801f753f7cd0c3d1
+msgid "HPA_get_rna_expression_by_source (from :doc:`hpa_tools`)"
+msgstr "HPA_get_rna_expression_by_source（来源于 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:1020 2cc93c5e59614211ae55373d36160d41
+msgid "**HPAGetRnaExpressionByTissueTool** (1 tools)"
+msgstr "**HPAGetRnaExpressionByTissueTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1023 23fdbeef84ce42b78a1e94459eef69be
+msgid "HPA_get_rna_expression_in_specific_tissues (from :doc:`hpa_tools`)"
+msgstr "HPA_get_rna_expression_in_specific_tissues（来源：:doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:1026 99d033c2958c4af2992592334c85d495
+msgid "**HPAGetSubcellularLocationTool** (1 tools)"
+msgstr "**HPAGetSubcellularLocationTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1029 723fdcb6ade1479e848361aa38b7a72e
+msgid "HPA_get_subcellular_location (from :doc:`hpa_tools`)"
+msgstr "HPA_get_subcellular_location（来自 :doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:1032 136667f184254eba92f96115beb93bdb
+msgid "**HPASearchGenesTool** (1 tools)"
+msgstr "**HPASearchGenesTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1035 e995afeaf22c46c494cf69666aabd00c
+msgid "HPA_search_genes_by_query (from :doc:`hpa_tools`)"
+msgstr "HPA_search_genes_by_query（来源：:doc:`hpa_tools`）"
+
+#: ../../tools/tools_config_index.rst:1038 23fdb8e40063451e8c6619b5835c624b
+msgid "**HumanBaseTool** (1 tools)"
+msgstr "**HumanBaseTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1041 3f5e4d2ca00f49d08c0a621136f2e416
+msgid "humanbase_ppi_analysis (from :doc:`humanbase_tools`)"
+msgstr "humanbase_ppi_analysis（来自：:doc:`humanbase_tools`）"
+
+#: ../../tools/tools_config_index.rst:1044 aacf6b02e5564601933230256940f803
+msgid "**MCPAutoLoaderTool** (5 tools)"
+msgstr "**MCPAutoLoaderTool**（5 个工具）"
+
+#: ../../tools/tools_config_index.rst:1047 9793b26d7e8d40d18004c35796286880
+msgid "mcp_auto_loader_boltz (from :doc:`boltz_tools`)"
+msgstr "mcp_auto_loader_boltz（来自 :doc:`boltz_tools`）"
+
+#: ../../tools/tools_config_index.rst:1048 cc1163a41c1649a689fade793191f8ed
+msgid "mcp_auto_loader_expert_feedback (from :doc:`expert_feedback_tools`)"
+msgstr "mcp_auto_loader_expert_feedback（来自：:doc:`expert_feedback_tools`）"
+
+#: ../../tools/tools_config_index.rst:1049 dbce1b6419ef4a84808604bc415a5e4a
+msgid "mcp_auto_loader_server1 (from :doc:`mcp_client_tools_example`)"
+msgstr "mcp_auto_loader_server1（来源：:doc:`mcp_client_tools_example`）"
+
+#: ../../tools/tools_config_index.rst:1050 8da93948c58d4e29b5207bcb6fde13dc
+msgid "mcp_auto_loader_txagent (from :doc:`txagent_client_tools`)"
+msgstr "mcp_auto_loader_txagent（来源：:doc:`txagent_client_tools`）"
+
+#: ../../tools/tools_config_index.rst:1051 2c033c6ef0d24d10942fed6e19e53556
+msgid "mcp_auto_loader_uspto_downloader (from :doc:`uspto_downloader_tools`)"
+msgstr "mcp_auto_loader_uspto_downloader（来源：:doc:`uspto_downloader_tools`）"
+
+#: ../../tools/tools_config_index.rst:1054 1e5e9aa8d0f24ae5be8ac73b945f141e
+msgid "**MCPClientTool** (1 tools)"
+msgstr "**MCPClientTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1057 e321fe71f9d04e8d83bbf5481f58eb47
+msgid "mcp_client_example (from :doc:`mcp_client_tools_example`)"
+msgstr "mcp_client_example（来源：:doc:`mcp_client_tools_example`）"
+
+#: ../../tools/tools_config_index.rst:1060 808f37acbb3a49218ddfae264cc29cb7
+msgid "**MCPProxyTool** (2 tools)"
+msgstr "**MCPProxyTool**（2 个工具）"
+
+#: ../../tools/tools_config_index.rst:1063 6e4760401dba48acb29a0b9e193dbd75
+msgid "mcp_mock_calculator (from :doc:`mcp_client_tools_example`)"
+msgstr "mcp_mock_calculator（来源：:doc:`mcp_client_tools_example`）"
+
+#: ../../tools/tools_config_index.rst:1064 e44b10b1eb7e47b787fff2ea7d74b05b
+msgid "mcp_mock_greeter (from :doc:`mcp_client_tools_example`)"
+msgstr "mcp_mock_greeter（来自：:doc:`mcp_client_tools_example`）"
+
+#: ../../tools/tools_config_index.rst:1067 9faa1962030241beb3d2c2ee74ea2ea3
+msgid "**MedRxivTool** (1 tools)"
+msgstr "**MedRxivTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1070 88082e161d1145899c60ac5d1740e6c7
+msgid "MedRxiv_search_preprints (from :doc:`medrxiv_tools`)"
+msgstr "MedRxiv_search_preprints（来自 :doc:`medrxiv_tools`）"
+
+#: ../../tools/tools_config_index.rst:1073 3e94b439ca2544caaf6a586adc216586
+msgid "**MedlinePlusRESTTool** (5 tools)"
+msgstr "**MedlinePlusRESTTool**（5个工具）"
+
+#: ../../tools/tools_config_index.rst:1076 b67970eb91cd46058459cb91830894aa
+msgid "MedlinePlus_connect_lookup_by_code (from :doc:`medlineplus_tools`)"
+msgstr "MedlinePlus_connect_lookup_by_code（来自：:doc:`medlineplus_tools`）"
+
+#: ../../tools/tools_config_index.rst:1077 473f2be65370461bbf85c71506eff621
+msgid ""
+"MedlinePlus_get_genetics_condition_by_name (from :doc:`medlineplus_tools`)"
+msgstr ""
+"MedlinePlus_get_genetics_condition_by_name（来自：:doc:`medlineplus_tools`）"
+
+#: ../../tools/tools_config_index.rst:1078 8c7dac630fe14d5b915d5353fd0ac467
+msgid "MedlinePlus_get_genetics_gene_by_name (from :doc:`medlineplus_tools`)"
+msgstr "MedlinePlus_get_genetics_gene_by_name（来源：:doc:`medlineplus_tools`）"
+
+#: ../../tools/tools_config_index.rst:1079 9496ff7084604c22a9bc6e2a989e1c67
+msgid "MedlinePlus_get_genetics_index (from :doc:`medlineplus_tools`)"
+msgstr "MedlinePlus_get_genetics_index（来源：:doc:`medlineplus_tools`）"
+
+#: ../../tools/tools_config_index.rst:1080 3caf71e240cc4c0c9486f866a5dd9037
+msgid "MedlinePlus_search_topics_by_keyword (from :doc:`medlineplus_tools`)"
+msgstr "MedlinePlus_按关键词搜索主题（来源：:doc:`medlineplus_tools`）"
+
+#: ../../tools/tools_config_index.rst:1083 f606f4672ebd487bb2c899341b751149
+msgid "**Monarch** (2 tools)"
+msgstr "**Monarch**（2 个工具）"
+
+#: ../../tools/tools_config_index.rst:1086 d321c35446634da0b8d514a892008c3f
+msgid "get_HPO_ID_by_phenotype (from :doc:`monarch_tools`)"
+msgstr "get_HPO_ID_by_phenotype（来自 :doc:`monarch_tools`）"
+
+#: ../../tools/tools_config_index.rst:1087 5610deed833d464e9f398220d9b0d880
+msgid "get_phenotype_by_HPO_ID (from :doc:`monarch_tools`)"
+msgstr "get_phenotype_by_HPO_ID（来自 :doc:`monarch_tools`）"
+
+#: ../../tools/tools_config_index.rst:1090 f102f45ddd1c4fc3afb3f9c704ca8157
+msgid "**MonarchDiseasesForMultiplePheno** (1 tools)"
+msgstr "**MonarchDiseasesForMultiplePheno**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1093 737eab9400894735911ca7bee400f03b
+msgid ""
+"get_joint_associated_diseases_by_HPO_ID_list (from :doc:`monarch_tools`)"
+msgstr "get_joint_associated_diseases_by_HPO_ID_list（来自 :doc:`monarch_tools`）"
+
+#: ../../tools/tools_config_index.rst:1096 8e04f1807577433ba075d8f7a48001b6
+#, fuzzy
+msgid "**NICEGuidelineFullTextTool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:1099 4348c1c6f4a245828a226466926f12cc
+msgid "NICE_Guideline_Full_Text (from :doc:`unified_guideline_tools`)"
+msgstr "NICE_Guideline_Full_Text（来源：:doc:`unified_guideline_tools`）"
+
+#: ../../tools/tools_config_index.rst:1102 eecf96f64e01454083f67ac8d1a5f0dd
+#, fuzzy
+msgid "**NICEWebScrapingTool** (1 tools)"
+msgstr "语义学者工具"
+
+#: ../../tools/tools_config_index.rst:1105 251513505e384d1d81a5541b45421d4b
+msgid "NICE_Clinical_Guidelines_Search (from :doc:`unified_guideline_tools`)"
+msgstr "NICE_临床指南_搜索（来源：:doc:`unified_guideline_tools`）"
+
+#: ../../tools/tools_config_index.rst:1108 5dc371be1d4a4476a67d20c71bd8787e
+msgid "**ODPHPItemList** (1 tools)"
+msgstr "**ODPHPItemList**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1111 698a3c0ccadc44219dcf16e6ca629658
+msgid "odphp_itemlist (from :doc:`odphp_tools`)"
+msgstr "odphp_itemlist（来源：:doc:`odphp_tools`）"
+
+#: ../../tools/tools_config_index.rst:1114 7a03fbde82ae4709a6a5d532561e8a40
+msgid "**ODPHPMyHealthfinder** (1 tools)"
+msgstr "**ODPHPMyHealthfinder**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1117 5b13201aa2414d0192b7075398e42c63
+msgid "odphp_myhealthfinder (from :doc:`odphp_tools`)"
+msgstr "odphp_myhealthfinder（来自 :doc:`odphp_tools`）"
+
+#: ../../tools/tools_config_index.rst:1120 5e6cced5d35b418ebaaa0f4f4982d9a4
+msgid "**ODPHPOutlinkFetch** (1 tools)"
+msgstr "**ODPHPOutlinkFetch**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1123 a48307c9deeb4a499a2da9cedbb4dec7
+msgid "odphp_outlink_fetch (from :doc:`odphp_tools`)"
+msgstr "odphp_outlink_fetch（来自 :doc:`odphp_tools`）"
+
+#: ../../tools/tools_config_index.rst:1126 fa39a9baa25549c5aec842c1931ae5fb
+msgid "**ODPHPTopicSearch** (1 tools)"
+msgstr "**ODPHPTopicSearch**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1129 a23eccb1d53b447597726e0be1d3df9a
+msgid "odphp_topicsearch (from :doc:`odphp_tools`)"
+msgstr "odphp_topicsearch（来自 :doc:`odphp_tools`）"
+
+#: ../../tools/tools_config_index.rst:1132 49c5bfab533d4d28bab4be722727c7c7
+msgid "**OSFPreprintsTool** (1 tools)"
+msgstr "**OSFPreprintsTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1135 bfb7e7455ad04acebade68f61b7d62b8
+msgid "OSF_search_preprints (from :doc:`osf_preprints_tools`)"
+msgstr "OSF_search_preprints（来自：:doc:`osf_preprints_tools`）"
+
+#: ../../tools/tools_config_index.rst:1138 1ae94db1f3aa46bbb9bbfd1291fe2ecd
+#, fuzzy
+msgid "**OpenAIRETool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:1141 2ca3f7a5a4794796be036885e46b6a98
+msgid "OpenAIRE_search_publications (from :doc:`openaire_tools`)"
+msgstr "OpenAIRE_search_publications（来自 :doc:`openaire_tools`）"
+
+#: ../../tools/tools_config_index.rst:1144 9752df13d4e146cd900f0c869925c3e7
+#, fuzzy
+msgid "**OpenAlexGuidelinesTool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:1147 03ac12322dc749de8c466123bb6f08a3
+msgid "OpenAlex_Guidelines_Search (from :doc:`unified_guideline_tools`)"
+msgstr "OpenAlex_Guidelines_Search（来源：:doc:`unified_guideline_tools`）"
+
+#: ../../tools/tools_config_index.rst:1150 29f27ba06cf7417b82e2ec21e76ecf8f
+msgid "**OpenAlexTool** (1 tools)"
+msgstr "**OpenAlexTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1153 7ff9748936854760bd6d192a8d33464e
+msgid "openalex_literature_search (from :doc:`openalex_tools`)"
+msgstr "openalex_literature_search（来自 :doc:`openalex_tools`）"
+
+#: ../../tools/tools_config_index.rst:1156 528d59a7b61d40f7a2b6aa77eebd8b50
+msgid "**OpenTarget** (54 tools)"
+msgstr "**OpenTarget**（54 个工具）"
+
+#: ../../tools/tools_config_index.rst:1159 c09f100040f54b7393ca207579824de7
+msgid "OpenTargets_drug_pharmacogenomics_data (from :doc:`opentarget_tools`)"
+msgstr "OpenTargets_drug_pharmacogenomics_data（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1160 da6288532e2847daa96a919460626412
+msgid ""
+"OpenTargets_get_approved_indications_by_drug_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_approved_indications_by_drug_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1161 9800ea355d5c4e06b3704c2f4b52e716
+msgid ""
+"OpenTargets_get_associated_diseases_by_drug_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_associated_diseases_by_drug_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1162 c50aeb4a5b364c51b8fb96f6f064577e
+msgid ""
+"OpenTargets_get_associated_drugs_by_disease_efoId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_associated_drugs_by_disease_efoId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1163 b18f127b85954146951d99dd43db9cab
+msgid ""
+"OpenTargets_get_associated_drugs_by_target_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_associated_drugs_by_target_ensemblID（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1164 90124414f4384df2ab6efd055d3388af
+msgid ""
+"OpenTargets_get_associated_phenotypes_by_disease_efoId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_associated_phenotypes_by_disease_efoId（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1165 239287af653846c6b9b910465c43aab0
+msgid ""
+"OpenTargets_get_associated_targets_by_disease_efoId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_associated_targets_by_disease_efoId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1166 1b2dea999d33403ba57b129f720ddc40
+msgid ""
+"OpenTargets_get_associated_targets_by_drug_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_associated_targets_by_drug_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1167 1fedddab4b1c4de7b2734f2b6de9278d
+msgid ""
+"OpenTargets_get_biological_mouse_models_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_biological_mouse_models_by_ensemblID（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1168 0b4a95d48a6e4e878e9fb53404e7a24c
+msgid ""
+"OpenTargets_get_chemical_probes_by_target_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_chemical_probes_by_target_ensemblID（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1169 f4b54dbb7cb2417eb827752466cfb517
+msgid ""
+"OpenTargets_get_disease_ancestors_parents_by_efoId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_disease_ancestors_parents_by_efoId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1170 a9b64c42538e40a7941f19ef86f3fde1
+msgid ""
+"OpenTargets_get_disease_descendants_children_by_efoId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_disease_descendants_children_by_efoId（来自：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1171 ba0b750adee4449098fc91d9f14d2662
+msgid ""
+"OpenTargets_get_disease_description_by_efoId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_disease_description_by_efoId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1172 5001ea3ba38544718fc73c6598e40ed3
+msgid ""
+"OpenTargets_get_disease_id_description_by_name (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_disease_id_description_by_name（来自：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1173 d9b09011fc0645999d8189c4e5acdb92
+msgid "OpenTargets_get_disease_ids_by_efoId (from :doc:`idmap_tools`)"
+msgstr "OpenTargets_get_disease_ids_by_efoId（来源：:doc:`idmap_tools`）"
+
+#: ../../tools/tools_config_index.rst:1174 873e5a6aefee49c2b1b19eccaaf62372
+msgid "OpenTargets_get_disease_ids_by_name (from :doc:`idmap_tools`)"
+msgstr "OpenTargets_get_disease_ids_by_name（来自 :doc:`idmap_tools`）"
+
+#: ../../tools/tools_config_index.rst:1175 e6adb341399c4b939eed153b47b10c67
+msgid ""
+"OpenTargets_get_disease_locations_by_efoId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_disease_locations_by_efoId（来自：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1176 d33099687eb543fabb9a68ae9142f4b3
+msgid ""
+"OpenTargets_get_disease_synonyms_by_efoId (from :doc:`opentarget_tools`)"
+msgstr "OpenTargets_get_disease_synonyms_by_efoId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1177 533d85203a914b28999f55f4927bd320
+msgid ""
+"OpenTargets_get_disease_therapeutic_areas_by_efoId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_disease_therapeutic_areas_by_efoId（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1178 209ccae6351b4fab8fc5f53496dcb6ba
+msgid ""
+"OpenTargets_get_diseases_phenotypes_by_target_ensembl (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_diseases_phenotypes_by_target_ensembl（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1179 726974aa9ad74a2cbc58df181853043a
+msgid ""
+"OpenTargets_get_drug_adverse_events_by_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_adverse_events_by_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1180 2160db2d65184dfb8df3016f948ec1d2
+msgid ""
+"OpenTargets_get_drug_approval_status_by_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_approval_status_by_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1181 a062ba75a9e34841a087c56680180914
+msgid ""
+"OpenTargets_get_drug_description_by_chemblId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_description_by_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1182 01801699b2114fa4b2b6b92224bb2496
+msgid ""
+"OpenTargets_get_drug_indications_by_chemblId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_indications_by_chemblId（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1183 713e626d6cb74944bf44958be69ac69f
+msgid ""
+"OpenTargets_get_drug_mechanisms_of_action_by_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_mechanisms_of_action_by_chemblId（来自：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1184 d5870d6891da405491657059d65acce8
+msgid ""
+"OpenTargets_get_drug_synonyms_by_chemblId (from :doc:`opentarget_tools`)"
+msgstr "OpenTargets_get_drug_synonyms_by_chemblId（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1185 9a469ff12d444fcc9198b2bbf4dc3d68
+msgid ""
+"OpenTargets_get_drug_trade_names_by_chemblId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_trade_names_by_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1186 806b0c75292c4f6fbf9b5c14eaafb282
+msgid ""
+"OpenTargets_get_drug_warnings_by_chemblId (from :doc:`opentarget_tools`)"
+msgstr "OpenTargets_get_drug_warnings_by_chemblId（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1187 53e590085450440ab26b636f70984065
+msgid ""
+"OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId（来自：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1188 591166cc7cb5478292ae6c7d86e1ded8
+msgid ""
+"OpenTargets_get_gene_ontology_terms_by_goID (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_gene_ontology_terms_by_goID（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1189 2d3a223938e5445c837adefddbbf0434
+msgid ""
+"OpenTargets_get_known_drugs_by_drug_chemblId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_known_drugs_by_drug_chemblId（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1190 93407a6e3e684ebcbc7ccc95bc676180
+msgid ""
+"OpenTargets_get_parent_child_molecules_by_drug_chembl_ID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_parent_child_molecules_by_drug_chembl_ID（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1191 93fe17771d554aa4960cf5cbf289e94a
+msgid ""
+"OpenTargets_get_publications_by_disease_efoId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_publications_by_disease_efoId（来自：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1192 9ba6b59969344f1e898cca81b6a67e4d
+msgid ""
+"OpenTargets_get_publications_by_drug_chemblId (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_publications_by_drug_chemblId（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1193 672df04245134f4ca575fbd2b62b72c6
+msgid ""
+"OpenTargets_get_publications_by_target_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_publications_by_target_ensemblID（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1194 2e0e6e9e7c954eafa15ecea3f078fe32
+msgid ""
+"OpenTargets_get_similar_entities_by_disease_efoId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_similar_entities_by_disease_efoId（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1195 5ba3b970631d41d09fdcc3cad52bf4f9
+msgid ""
+"OpenTargets_get_similar_entities_by_drug_chemblId (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_similar_entities_by_drug_chemblId（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1196 3f3f038ac2724f71989c6fe013be5974
+msgid ""
+"OpenTargets_get_similar_entities_by_target_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_similar_entities_by_target_ensemblID（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1197 c24bd6bf71e24129ba09b22c55be32b9
+msgid ""
+"OpenTargets_get_target_classes_by_ensemblID (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_classes_by_ensemblID（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1198 2045dd42e32e4587bf8035ab597ead45
+msgid ""
+"OpenTargets_get_target_constraint_info_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_constraint_info_by_ensemblID（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1199 a0f7a1cb6214461bb795b58fa177f6f2
+msgid ""
+"OpenTargets_get_target_enabling_packages_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_enabling_packages_by_ensemblID（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1200 c536861108fb49729ca23c00e6c855b8
+msgid ""
+"OpenTargets_get_target_gene_ontology_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_gene_ontology_by_ensemblID（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1201 023eaa2822dd472dbc3c097d0c88434f
+msgid ""
+"OpenTargets_get_target_genomic_location_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_genomic_location_by_ensemblID（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1202 3f7d9b611e2944109be96ddeee7fa2f1
+msgid ""
+"OpenTargets_get_target_homologues_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_homologues_by_ensemblID（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1203 5e8abb2c1d464df5b0c8e5e1a235e024
+msgid ""
+"OpenTargets_get_target_id_description_by_name (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_id_description_by_name（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1204 1e5b4c304f224652910a1f0ef6a70d62
+msgid ""
+"OpenTargets_get_target_interactions_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_interactions_by_ensemblID（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1205 a4de467f1e06421780df6c7db2101281
+msgid ""
+"OpenTargets_get_target_safety_profile_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_safety_profile_by_ensemblID（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1206 b4b407b57fe049e1819c8c50f9507cda
+msgid ""
+"OpenTargets_get_target_subcellular_locations_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_subcellular_locations_by_ensemblID（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1207 25f4a2ac173e42eb9d61422b0ba47b52
+msgid ""
+"OpenTargets_get_target_synonyms_by_ensemblID (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_synonyms_by_ensemblID（来自：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1208 88db624f5c20451aad4d68c51d55ee67
+msgid ""
+"OpenTargets_get_target_tractability_by_ensemblID (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_target_tractability_by_ensemblID（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1209 c2b9703bbd654a3b90645ca7e4ab269a
+msgid ""
+"OpenTargets_map_any_disease_id_to_all_other_ids (from :doc:`idmap_tools`)"
+msgstr ""
+"OpenTargets_map_any_disease_id_to_all_other_ids（来自 :doc:`idmap_tools`）"
+
+#: ../../tools/tools_config_index.rst:1210 375e55e845d14bef827e45f5085ebc87
+msgid ""
+"OpenTargets_multi_entity_search_by_query_string (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_multi_entity_search_by_query_string（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1211 b7a4a458dbf24f8fbf8ad28fef2be1f5
+msgid ""
+"OpenTargets_search_category_counts_by_query_string (from "
+":doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_search_category_counts_by_query_string（来自 "
+":doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1212 dcff4e21811749d4a7355156054acc9e
+msgid "OpenTargets_target_disease_evidence (from :doc:`opentarget_tools`)"
+msgstr "OpenTargets_target_disease_evidence（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1215 46b41d255d36455ba5ee762397a397dc
+msgid "**OpentargetToolDrugNameMatch** (2 tools)"
+msgstr "**OpentargetToolDrugNameMatch**（2 个工具）"
+
+#: ../../tools/tools_config_index.rst:1218 4ea99861e3764f5b909872819e247601
+msgid ""
+"OpenTargets_get_drug_chembId_by_generic_name (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_chembId_by_generic_name（来源：:doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1219 3e7b898b9a5a43a1953e8804fe87d066
+msgid ""
+"OpenTargets_get_drug_id_description_by_name (from :doc:`opentarget_tools`)"
+msgstr ""
+"OpenTargets_get_drug_id_description_by_name（来自 :doc:`opentarget_tools`）"
+
+#: ../../tools/tools_config_index.rst:1222 1e84fc4a2b2c4157a0db470ce6340a09
+msgid "**PMCTool** (1 tools)"
+msgstr "**PMCTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1225 8be8c3d555bc475bb84d3b2edd9e031b
+msgid "PMC_search_papers (from :doc:`pmc_tools`)"
+msgstr "PMC_search_papers（来源：:doc:`pmc_tools`）"
+
+#: ../../tools/tools_config_index.rst:1228 00873df9b6cb42dc94cdc968d43da04e
+msgid "**PackageTool** (164 tools)"
+msgstr "**PackageTool**（164 个工具）"
+
+#: ../../tools/tools_config_index.rst:1231 ecf5532c97434f43a46e3b4837ae2678
+msgid "get_albumentations_info (from :doc:`image_processing_tools`)"
+msgstr "get_albumentations_info（来自 :doc:`image_processing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1232 c08af09520b8469ebe91d4ff8875ef32
+msgid "get_altair_info (from :doc:`visualization_tools`)"
+msgstr "get_altair_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1233 27369d2a23c546559367393217c7361f
+msgid "get_anndata_info (from :doc:`single_cell_tools`)"
+msgstr "get_anndata_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1234 43994122aa53411bbf760210519466c6
+msgid "get_arboreto_info (from :doc:`genomics_tools`)"
+msgstr "get_arboreto_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1235 54109487874649a3a1cea8523c0e0ea0
+msgid "get_arxiv_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_arxiv_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1236 dfb55c67e2f445ab866a46985630f8b2
+msgid "get_ase_info (from :doc:`structural_biology_tools`)"
+msgstr "get_ase_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1237 d582b7ebe068474bbde189e4dfb2090a
+msgid "get_astropy_info (from :doc:`physics_astronomy_tools`)"
+msgstr "get_astropy_info（来自 :doc:`physics_astronomy_tools`）"
+
+#: ../../tools/tools_config_index.rst:1238 62616345cee94eb4850595bdbecde7bc
+msgid "get_biopandas_info (from :doc:`structural_biology_tools`)"
+msgstr "get_biopandas_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1239 b0b17c28ce2b4797906cdb0fad7089b8
+msgid "get_biopython_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_biopython_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1240 b9686aa013c74df48daf6ec00c2ca4c5
+msgid "get_bioservices_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_bioservices_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1241 2051bf8d1a764c6e8257913781fd7ed1
+msgid "get_biotite_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_biotite_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1242 4a1ed95894e64ab3ae3aaa7cd2b0e425
+msgid "get_bokeh_info (from :doc:`visualization_tools`)"
+msgstr "get_bokeh_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1243 ce0a436d688148ec8ae6e3f5b0a842b3
+msgid "get_brian2_info (from :doc:`neuroscience_tools`)"
+msgstr "get_brian2_info（来自 :doc:`neuroscience_tools`）"
+
+#: ../../tools/tools_config_index.rst:1244 eac043b1aec6403bb513f520f139077a
+msgid "get_cartopy_info (from :doc:`earth_sciences_tools`)"
+msgstr "get_cartopy_info（来自 :doc:`earth_sciences_tools`）"
+
+#: ../../tools/tools_config_index.rst:1245 f9b2ac821bd1444f8eb1e35b8e471a49
+msgid "get_catboost_info (from :doc:`machine_learning_tools`)"
+msgstr "get_catboost_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1246 9d8caddcc8674357afe674ee297d58a9
+msgid "get_cellpose_info (from :doc:`visualization_tools`)"
+msgstr "get_cellpose_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1247 967d3037291a445588584c467ad865c6
+msgid "get_cellrank_info (from :doc:`single_cell_tools`)"
+msgstr "get_cellrank_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1248 adf04770c6ba4c7aba1957ececd15616
+msgid "get_cellxgene_census_info (from :doc:`genomics_tools`)"
+msgstr "get_cellxgene_census_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1249 553d03112f1749199004780f04f994ae
+msgid "get_cftime_info (from :doc:`earth_sciences_tools`)"
+msgstr "get_cftime_info（来自 :doc:`earth_sciences_tools`）"
+
+#: ../../tools/tools_config_index.rst:1250 35ad68b5f7934bab9f23785ff0159ea2
+msgid "get_chembl_webresource_client_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_chembl_webresource_client_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1251 5dac30cd597b45e681e59bbbada009f1
+msgid "get_clair3_info (from :doc:`genomics_tools`)"
+msgstr "get_clair3_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1252 e910cd3b46774f0aa5b95b7b184e9c98
+msgid "get_cobra_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_cobra_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1253 765cc70c634a434e96f56abc0f0ea443
+msgid "get_cobrapy_info (from :doc:`machine_learning_tools`)"
+msgstr "get_cobrapy_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1254 949270ed0313448a9b85011695dc0711
+msgid "get_cooler_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_cooler_info（来源：:doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1255 a6ba3eeda4de4b06af47d76afd8339b4
+msgid "get_cryosparc_tools_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_cryosparc_tools_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1256 369f6efdbe5f4ebf849ae248be8f77a0
+msgid "get_cupy_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_cupy_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1257 008f3ac7c19c4fa68381c273926ac518
+msgid "get_cyvcf2_info (from :doc:`genomics_tools`)"
+msgstr "get_cyvcf2_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1258 5c61248067524d60a48d463dc38874c9
+msgid "get_dask_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_dask_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1259 119e097c45dc48e7839ca9fc8ae5c978
+msgid "get_datamol_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_datamol_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1260 f985530004334623a1e66c0937d40239
+msgid "get_datashader_info (from :doc:`visualization_tools`)"
+msgstr "get_datashader_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1261 0c5f94b48ab642a499144b1a85cdf8b1
+msgid "get_deepchem_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_deepchem_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1262 a0daeeafa1ad443595b6f4f9194e4ff4
+msgid "get_deeppurpose_info (from :doc:`machine_learning_tools`)"
+msgstr "get_deeppurpose_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1263 bbb24c7ee1f942abb74f5915b5c4a295
+msgid "get_deeptools_info (from :doc:`genomics_tools`)"
+msgstr "get_deeptools_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1264 e8cf773892684232aae5299075459d5d
+msgid "get_deepxde_info (from :doc:`machine_learning_tools`)"
+msgstr "get_deepxde_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1265 09cba43a14e34dbaa4aa536c18657ab0
+msgid "get_dendropy_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_dendropy_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1266 dd6f445a3da84f74ae75516f3239a1ed
+msgid "get_descriptastorus_info (from :doc:`structural_biology_tools`)"
+msgstr "get_descriptastorus_info（来自：:doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1267 6195922f23e84193b48087089920330a
+msgid "get_diffdock_info (from :doc:`structural_biology_tools`)"
+msgstr "get_diffdock_info（来自：:doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1268 6f02e1e350fd4f1290c277f673118832
+msgid "get_dscribe_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_dscribe_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1269 9f7e5e00db7e4e01ad2756b0b09e53be
+msgid "get_elephant_info (from :doc:`neuroscience_tools`)"
+msgstr "get_elephant_info（来自 :doc:`neuroscience_tools`）"
+
+#: ../../tools/tools_config_index.rst:1270 62e8c06a48024cddba7d97341c294de1
+msgid "get_episcanpy_info (from :doc:`single_cell_tools`)"
+msgstr "get_episcanpy_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1271 baed9793e7cb46a796eb21f45f702a57
+msgid "get_ete3_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_ete3_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1272 f928f1a3da8d4cf18663dee43ce85010
+msgid "get_faiss_info (from :doc:`machine_learning_tools`)"
+msgstr "get_faiss_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1273 ead4d7a1c77a448e90befa6664786b85
+msgid "get_fanc_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_fanc_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1274 fe65bbbf0b8943948bfc02b9b28c691b
+msgid "get_flask_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_flask_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1275 a4cec5ec004e4f1cb2a7261811be9515
+msgid "get_flowio_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_flowio_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1276 3faefc10cd1a41e0b14d1e36582108ce
+msgid "get_flowkit_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_flowkit_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1277 e4b03e7deb8943a89f5dce262dcb5c46
+msgid "get_flowutils_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_flowutils_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1278 e53bb8016b5549e781e6366ecec9f606
+msgid "get_freesasa_info (from :doc:`structural_biology_tools`)"
+msgstr "get_freesasa_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1279 27bd2323c8624718bf953317ef2d0e78
+msgid "get_galpy_info (from :doc:`physics_astronomy_tools`)"
+msgstr "get_galpy_info（来自 :doc:`physics_astronomy_tools`）"
+
+#: ../../tools/tools_config_index.rst:1280 488acba39e1a403489b0facb1fb92860
+msgid "get_geopandas_info (from :doc:`earth_sciences_tools`)"
+msgstr "get_geopandas_info（来自 :doc:`earth_sciences_tools`）"
+
+#: ../../tools/tools_config_index.rst:1281 83a653464fa442bea104ab83e06fd738
+msgid "get_gget_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_gget_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1282 ba5693ec6067422e9f6d8d4bf2b7841d
+msgid "get_googlesearch_python_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_googlesearch_python_info（来源：:doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1283 e1e1542720654665bac30e05431b4c4e
+msgid "get_gseapy_info (from :doc:`genomics_tools`)"
+msgstr "get_gseapy_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1284 f92d5df038954fb6a2bc104cbf75d84c
+msgid "get_h5py_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_h5py_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1285 dd39d58db6754cb989897e3776eb0f44
+msgid "get_harmony_pytorch_info (from :doc:`machine_learning_tools`)"
+msgstr "get_harmony_pytorch_info（来源：:doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1286 ea9cd8ccbc3043c6b36ba83d1c5f6bc2
+msgid "get_hmmlearn_info (from :doc:`machine_learning_tools`)"
+msgstr "get_hmmlearn_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1287 1a4efc1988724e429a4a10ff1562f780
+msgid "get_holoviews_info (from :doc:`visualization_tools`)"
+msgstr "get_holoviews_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1288 0d531d5514bf48ab8b0225905eeeec0b
+msgid "get_htmd_info (from :doc:`structural_biology_tools`)"
+msgstr "get_htmd_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1289 a81f4be42eb640b68b00784b1b767776
+msgid "get_hyperopt_info (from :doc:`machine_learning_tools`)"
+msgstr "get_hyperopt_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1290 aab41d4ee39b45d8be6f7baae331de37
+msgid "get_igraph_info (from :doc:`visualization_tools`)"
+msgstr "get_igraph_info（来自：:doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1291 88b465c612304d019cbc447597e8e8a7
+msgid "get_imageio_info (from :doc:`image_processing_tools`)"
+msgstr "get_imageio_info（来自 :doc:`image_processing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1292 6bcfabce64734574887adb3ce208b65e
+msgid "get_imbalanced_learn_info (from :doc:`machine_learning_tools`)"
+msgstr "get_imbalanced_learn_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1293 c1ca87875f7f4f1a948efba901eebcad
+msgid "get_jcvi_info (from :doc:`genomics_tools`)"
+msgstr "get_jcvi_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1294 e18260dc4e064bcf86e4d6a48c01e358
+msgid "get_joblib_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_joblib_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1295 5237c7b9c500426bafe21530e6e7c67d
+msgid "get_khmer_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_khmer_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1296 eecc8282b257491098ee82ea86184eaf
+msgid "get_kipoiseq_info (from :doc:`genomics_tools`)"
+msgstr "get_kipoiseq_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1297 8e109353c2ee4e0dabf00c11f8c5b090
+msgid "get_lifelines_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_lifelines_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1298 5a3fa2b288594ada9a0bd3f609bc0f05
+msgid "get_lightgbm_info (from :doc:`machine_learning_tools`)"
+msgstr "get_lightgbm_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1299 1622d6d10b0a43d3b814c731f775abbb
+msgid "get_loompy_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_loompy_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1300 5730acab8c5b4d45bf95a061cecbfd80
+msgid "get_mageck_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_mageck_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1301 b9af938fcdb74366bf8938d218a0eca4
+msgid "get_matplotlib_info (from :doc:`visualization_tools`)"
+msgstr "get_matplotlib_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1302 104ba583b5e64427bc2b1daca621af1d
+msgid "get_mdanalysis_info (from :doc:`structural_biology_tools`)"
+msgstr "get_mdanalysis_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1303 9813372d223e401bbe4bad6d0dbc977a
+msgid "get_mdtraj_info (from :doc:`structural_biology_tools`)"
+msgstr "get_mdtraj_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1304 88dbcd3dea384425ac070cc0457c3157
+msgid "get_mne_info (from :doc:`neuroscience_tools`)"
+msgstr "get_mne_info（来自 :doc:`neuroscience_tools`）"
+
+#: ../../tools/tools_config_index.rst:1305 abfc39ac90824506884c346a4adcce31
+msgid "get_molfeat_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_molfeat_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1306 300a98df62864a6ea040b107626d7515
+msgid "get_molvs_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_molvs_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1307 4b8e35ecb7f84411bb6c44953f7658d1
+msgid "get_mordred_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_mordred_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1308 0d9f663e885541018c95f659dc592b48
+msgid "get_msprime_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_msprime_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1309 8c1f0f3af696438080082beac4cf97ca
+msgid "get_mudata_info (from :doc:`single_cell_tools`)"
+msgstr "get_mudata_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1310 cfbb3c8eb2f24f978ec69896450f4706
+msgid "get_neo_info (from :doc:`neuroscience_tools`)"
+msgstr "get_neo_info（来自 :doc:`neuroscience_tools`）"
+
+#: ../../tools/tools_config_index.rst:1311 395773cce7f54b7caeedfc0c1ed7fbb2
+msgid "get_netcdf4_info (from :doc:`earth_sciences_tools`)"
+msgstr "get_netcdf4_info（来自 :doc:`earth_sciences_tools`）"
+
+#: ../../tools/tools_config_index.rst:1312 fd545e57743a4db28938e2fa60369148
+msgid "get_networkx_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_networkx_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1313 0fd7bb60ddea4edc993dc06bc7f02ab7
+msgid "get_nglview_info (from :doc:`structural_biology_tools`)"
+msgstr "get_nglview_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1314 cba16e7752ba4f7aa13235bb7f9748ba
+msgid "get_nilearn_info (from :doc:`neuroscience_tools`)"
+msgstr "get_nilearn_info（来自 :doc:`neuroscience_tools`）"
+
+#: ../../tools/tools_config_index.rst:1315 b8648496d9bc4d4e9ea16bcb4f8826fc
+msgid "get_numba_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_numba_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1316 ae1a42bba530498e8ded7beaee49ecb7
+msgid "get_numpy_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_numpy_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1317 2122ce7b3b084c09b1130519fcdb4379
+msgid "get_openbabel_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_openbabel_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1318 4434ee5ced1543218dd80cce93323ed5
+msgid "get_openchem_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_openchem_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1319 054403b6247f476db767e03b74059960
+msgid "get_opencv_info (from :doc:`visualization_tools`)"
+msgstr "get_opencv_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1320 a2cc9e73b3954a6d9e3710ef996537b9
+msgid "get_openmm_info (from :doc:`structural_biology_tools`)"
+msgstr "get_openmm_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1321 3f8aaa0f7bf449a1872d2a7eaa9f9051
+msgid "get_optlang_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_optlang_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1322 9feab6c7a1374f849d9d17a8cbdefbf9
+msgid "get_optuna_info (from :doc:`machine_learning_tools`)"
+msgstr "get_optuna_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1323 32e7dc8aba2948d5877fc814d41676ab
+msgid "get_palantir_info (from :doc:`single_cell_tools`)"
+msgstr "get_palantir_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1324 e07e895033794c0e88f386b3d436e29f
+msgid "get_pandas_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_pandas_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1325 633e906f391f41f79881711f4675c96e
+msgid "get_patsy_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_patsy_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1326 affb9917658648168ab1a7504094bb4e
+msgid "get_pdbfixer_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pdbfixer_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1327 726cd2ab04174096977004d31e78fad9
+msgid "get_pillow_info (from :doc:`image_processing_tools`)"
+msgstr "get_pillow_info（来自 :doc:`image_processing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1328 ac911bcaee7a4020ab0f04bfd05b97d3
+msgid "get_plantcv_info (from :doc:`visualization_tools`)"
+msgstr "get_plantcv_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1329 bcbd98aaf12a47a08297da33ef3e2942
+msgid "get_plip_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_plip_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1330 d56ce15d1dbf4894a4383398ef0ac3e1
+msgid "get_plotly_info (from :doc:`visualization_tools`)"
+msgstr "get_plotly_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1331 f2bb8a917bd64d37b5e7541a012302fb
+msgid "get_poliastro_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_poliastro_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1332 186698d7bdc548c29d101d16448dc529
+msgid "get_poretools_info (from :doc:`genomics_tools`)"
+msgstr "get_poretools_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1333 bd3e96e9366b47b2bcaa64a5bc4660ae
+msgid "get_prody_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_prody_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1334 2248c18bd14e4142aa77d795188507f3
+msgid "get_pubchempy_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_pubchempy_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1335 e581d90077d4432b9fe386e88c55bc3c
+msgid "get_pybedtools_info (from :doc:`genomics_tools`)"
+msgstr "get_pybedtools_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1336 1448eae4d1fc4c61beb68d8f5bdc4d28
+msgid "get_pybigwig_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pybigwig_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1337 beeac44a30f44a5d88dd3f14734527b3
+msgid "get_pydeseq2_info (from :doc:`genomics_tools`)"
+msgstr "get_pydeseq2_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1338 fd974ab1f9bd4ce1996645c9dcd1f482
+msgid "get_pyensembl_info (from :doc:`genomics_tools`)"
+msgstr "get_pyensembl_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1339 efc4a912ec84499385b69c849d859b9d
+msgid "get_pyephem_info (from :doc:`physics_astronomy_tools`)"
+msgstr "get_pyephem_info（来自：:doc:`physics_astronomy_tools`）"
+
+#: ../../tools/tools_config_index.rst:1340 c78cb7c4008449bbb4866fad503e58c0
+msgid "get_pyfaidx_info (from :doc:`genomics_tools`)"
+msgstr "get_pyfaidx_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1341 1dda2c44542d4c8ca67409d8c80064e9
+msgid "get_pyfasta_info (from :doc:`genomics_tools`)"
+msgstr "get_pyfasta_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1342 5db18885cafa415ab91848d23ce5450d
+msgid "get_pykalman_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pykalman_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1343 c5ca906c1a624aa1a4645d5cf2c79504
+msgid "get_pyliftover_info (from :doc:`genomics_tools`)"
+msgstr "get_pyliftover_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1344 dd0bcbdce1e04c67ae6da1a183dc69e1
+msgid "get_pymassspec_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pymassspec_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1345 eeeb29a79c924164ba1161b3e61914a8
+msgid "get_pymed_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pymed_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1346 05ab337fddc2447cb94019716e4e5c6b
+msgid "get_pymzml_info (from :doc:`machine_learning_tools`)"
+msgstr "get_pymzml_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1347 aff21144e2ca43f796615d1c43666e61
+msgid "get_pypdf2_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pypdf2_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1348 46f5d4be7ed44bf1b77e094a716df409
+msgid "get_pyranges_info (from :doc:`genomics_tools`)"
+msgstr "get_pyranges_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1349 be5d5a6b84204168b4ae4ce9b0b40378
+msgid "get_pyrosetta_info (from :doc:`structural_biology_tools`)"
+msgstr "get_pyrosetta_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1350 eef654642b604e3484cedc2e59f3aeea
+msgid "get_pysam_info (from :doc:`genomics_tools`)"
+msgstr "get_pysam_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1351 67ad0f35ac454d4e8865832da16135a3
+msgid "get_pyscenic_info (from :doc:`single_cell_tools`)"
+msgstr "get_pyscenic_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1352 5f982eb1ee00414e93d0865ac0e31853
+msgid "get_pyscf_info (from :doc:`structural_biology_tools`)"
+msgstr "get_pyscf_info（来自 :doc:`structural_biology_tools`）"
+
+#: ../../tools/tools_config_index.rst:1353 6156f217d4ae40c494add0a4ebf59b33
+msgid "get_pyscreener_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pyscreener_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1354 30b1a0190b464de68f095ae2df9d2188
+msgid "get_pytdc_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_pytdc_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1355 6169a775ef784871bfd4ba1d2bf7c7a5
+msgid "get_python_libsbml_info (from :doc:`machine_learning_tools`)"
+msgstr "get_python_libsbml_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1356 f3a17b2dde9f4eba93a3d91d59b736da
+msgid "get_pytorch_info (from :doc:`machine_learning_tools`)"
+msgstr "get_pytorch_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1357 5d84526563ab4dbc9285136e143196ec
+msgid "get_pyvcf_info (from :doc:`genomics_tools`)"
+msgstr "get_pyvcf_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1358 36ab4b53edb946c5bc4b134f0986935f
+msgid "get_pyvis_info (from :doc:`visualization_tools`)"
+msgstr "get_pyvis_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1359 552a07a498a4462d918206b8b36d0d21
+msgid "get_qutip_info (from :doc:`physics_astronomy_tools`)"
+msgstr "get_qutip_info（来自 :doc:`physics_astronomy_tools`）"
+
+#: ../../tools/tools_config_index.rst:1360 d1fbb7d4be6d4de9a2882d5eec724ce3
+msgid "get_rasterio_info (from :doc:`earth_sciences_tools`)"
+msgstr "get_rasterio_info（来源：:doc:`earth_sciences_tools`）"
+
+#: ../../tools/tools_config_index.rst:1361 e7fac96b19524a79999c09f9f00c932b
+msgid "get_rdkit_info (from :doc:`cheminformatics_tools`)"
+msgstr "get_rdkit_info（来自 :doc:`cheminformatics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1362 24c38b101d504e83afe3d35aeae2cb3d
+msgid "get_reportlab_info (from :doc:`genomics_tools`)"
+msgstr "get_reportlab_info（来源：:doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1363 6b1b57db8d26494ba0804837b988ce78
+msgid "get_requests_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_requests_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1364 ea0f59a6a354451a9786ae7467d8d47f
+msgid "get_ruptures_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_ruptures_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1365 21444f83a107439aab410c5137308735
+msgid "get_scanorama_info (from :doc:`single_cell_tools`)"
+msgstr "get_scanorama_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1366 1a540ac037b24d23a11eb40fa7a10b57
+msgid "get_scanpy_info (from :doc:`single_cell_tools`)"
+msgstr "get_scanpy_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1367 72c570c754e84d7d88b79fe677d71811
+msgid "get_schnetpack_info (from :doc:`machine_learning_tools`)"
+msgstr "get_schnetpack_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1368 c6e5d27bcf614acab59852dc822531dc
+msgid "get_scholarly_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_scholarly_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1369 e69d1c1025e344d38d3a2b076f07e2ea
+msgid "get_scikit_bio_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_scikit_bio_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1370 9b8fc32d48a44df2832b881182ff1ad7
+msgid "get_scikit_image_info (from :doc:`visualization_tools`)"
+msgstr "get_scikit_image_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1371 4dc823ba7f1d4256915ea32b6726391e
+msgid "get_scikit_learn_info (from :doc:`machine_learning_tools`)"
+msgstr "get_scikit_learn_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1372 971143091fed4801836364f16d6ca5ac
+msgid "get_scipy_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_scipy_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1373 470075e740524d45a3396073d908eb66
+msgid "get_scrublet_info (from :doc:`single_cell_tools`)"
+msgstr "get_scrublet_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1374 f1056bfc712c45c89267ddcaf236c644
+msgid "get_scvelo_info (from :doc:`single_cell_tools`)"
+msgstr "get_scvelo_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1375 9fedcd138fee4df1885e2e8a47001fc0
+msgid "get_scvi_tools_info (from :doc:`single_cell_tools`)"
+msgstr "get_scvi_tools_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1376 09d7ac0d7b1e46f38aa39eeaaf340498
+msgid "get_seaborn_info (from :doc:`visualization_tools`)"
+msgstr "get_seaborn_info（来自 :doc:`visualization_tools`）"
+
+#: ../../tools/tools_config_index.rst:1377 3b6da70a79114e188a2106812589e83c
+msgid "get_skopt_info (from :doc:`machine_learning_tools`)"
+msgstr "get_skopt_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1378 0938e18659414ad7b95b437a01585cb6
+msgid "get_souporcell_info (from :doc:`single_cell_tools`)"
+msgstr "get_souporcell_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1379 5b16d801b15c47b4ae26ef4285e232c9
+msgid "get_statsmodels_info (from :doc:`machine_learning_tools`)"
+msgstr "get_statsmodels_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1380 de8745325253419ea40d1bfdd9584801
+msgid "get_sunpy_info (from :doc:`physics_astronomy_tools`)"
+msgstr "get_sunpy_info（来自：:doc:`physics_astronomy_tools`）"
+
+#: ../../tools/tools_config_index.rst:1381 036bb92afb0145d480194e4f17b6350c
+msgid "get_sympy_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_sympy_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1382 43dcb6ddc3a541009bf734b54f4d4314
+msgid "get_tiledb_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_tiledb_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1383 f3f2b30b200a4ccea250c9a0f40601a4
+msgid "get_tiledbsoma_info (from :doc:`single_cell_tools`)"
+msgstr "get_tiledbsoma_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1384 f67b0858ec6f4a38a7ee49e79a9aaf3f
+msgid "get_torch_geometric_info (from :doc:`machine_learning_tools`)"
+msgstr "get_torch_geometric_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1385 e63c7b5e8da448a3a22c33ed8996f727
+msgid "get_tqdm_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_tqdm_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1386 759e48058c434ba594d52e52381cccf2
+msgid "get_trackpy_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_trackpy_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1387 f8dc4a44fc2c4c60b6f320483db32ec8
+msgid "get_tskit_info (from :doc:`bioinformatics_core_tools`)"
+msgstr "get_tskit_info（来自 :doc:`bioinformatics_core_tools`）"
+
+#: ../../tools/tools_config_index.rst:1388 c366c58b96fd47488d380d1b2820757c
+msgid "get_umap_learn_info (from :doc:`machine_learning_tools`)"
+msgstr "get_umap_learn_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1389 030be0ee63c14fcf99b98ce71b072ad4
+msgid "get_velocyto_info (from :doc:`single_cell_tools`)"
+msgstr "get_velocyto_info（来自 :doc:`single_cell_tools`）"
+
+#: ../../tools/tools_config_index.rst:1390 e828b9e9c9954ad1a8416c792d9834e0
+msgid "get_viennarna_info (from :doc:`genomics_tools`)"
+msgstr "get_viennarna_info（来自 :doc:`genomics_tools`）"
+
+#: ../../tools/tools_config_index.rst:1391 5fdcc8007cae46bd840a89d70063c990
+msgid "get_xarray_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_xarray_info（来自 :doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1392 876e21a3f19e43578ef9717c6da78058
+msgid "get_xesmf_info (from :doc:`earth_sciences_tools`)"
+msgstr "get_xesmf_info（来自 :doc:`earth_sciences_tools`）"
+
+#: ../../tools/tools_config_index.rst:1393 e813cd2b7a1348bab42a3d6535305620
+msgid "get_xgboost_info (from :doc:`machine_learning_tools`)"
+msgstr "get_xgboost_info（来自 :doc:`machine_learning_tools`）"
+
+#: ../../tools/tools_config_index.rst:1394 45ab41a101944744b9f1507360c22625
+msgid "get_zarr_info (from :doc:`scientific_computing_tools`)"
+msgstr "get_zarr_info（来自：:doc:`scientific_computing_tools`）"
+
+#: ../../tools/tools_config_index.rst:1397 e4908b0edfc0412f8fba12807400bc80
+msgid "**PubChemRESTTool** (9 tools)"
+msgstr "**PubChemRESTTool**（9 个工具）"
+
+#: ../../tools/tools_config_index.rst:1400 a3b72c25920949618f654fb94570537c
+msgid "PubChem_get_CID_by_SMILES (from :doc:`pubchem_tools`)"
+msgstr "PubChem_get_CID_by_SMILES（来自 :doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1401 8c264d28f2764af0b35e38c9136d6eb7
+msgid "PubChem_get_CID_by_compound_name (from :doc:`pubchem_tools`)"
+msgstr "PubChem_get_CID_by_compound_name（来源：:doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1402 0d32479fdd304c908fca0b6fd86273b9
+msgid "PubChem_get_associated_patents_by_CID (from :doc:`pubchem_tools`)"
+msgstr "PubChem_get_associated_patents_by_CID（来源：:doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1403 00393b4cb42a4ac19832179ce2e88ea8
+msgid "PubChem_get_compound_2D_image_by_CID (from :doc:`pubchem_tools`)"
+msgstr "PubChem_get_compound_2D_image_by_CID（来自 :doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1404 57231994cba745ebb95fadbe994f353d
+msgid "PubChem_get_compound_properties_by_CID (from :doc:`pubchem_tools`)"
+msgstr "PubChem_get_compound_properties_by_CID（来源：:doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1405 0f1491993a2149c5885d20ecda0a1d30
+msgid "PubChem_get_compound_synonyms_by_CID (from :doc:`pubchem_tools`)"
+msgstr "PubChem_get_compound_synonyms_by_CID（来源：:doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1406 6896c1748eab49d9ab7bd16aae7c8edc
+msgid "PubChem_get_compound_xrefs_by_CID (from :doc:`pubchem_tools`)"
+msgstr "PubChem_get_compound_xrefs_by_CID（来源：:doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1407 16d2700d484e4110a0526a1cd90f932b
+msgid "PubChem_search_compounds_by_similarity (from :doc:`pubchem_tools`)"
+msgstr "PubChem_search_compounds_by_similarity（来自 :doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1408 72b7137115e944ec954d5dc673f5c4d5
+msgid "PubChem_search_compounds_by_substructure (from :doc:`pubchem_tools`)"
+msgstr "PubChem_search_compounds_by_substructure（来源：:doc:`pubchem_tools`）"
+
+#: ../../tools/tools_config_index.rst:1411 a71e4d2acfc84db5ade0dd5f00c85a08
+#, fuzzy
+msgid "**PubMedGuidelinesTool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:1414 01b4818b6f514366869f9a214db188d1
+msgid "PubMed_Guidelines_Search (from :doc:`unified_guideline_tools`)"
+msgstr "PubMed_Guidelines_Search（来源：:doc:`unified_guideline_tools`）"
+
+#: ../../tools/tools_config_index.rst:1417 397a3cc11d9342da80b953c8cac23646
+msgid "**PubMedTool** (1 tools)"
+msgstr "**PubMedTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1420 e42571abc61e4446ac9cfd8ef75ac426
+msgid "PubMed_search_articles (from :doc:`pubmed_tools`)"
+msgstr "PubMed_search_articles（来自 :doc:`pubmed_tools`）"
+
+#: ../../tools/tools_config_index.rst:1423 74e6bc10ee04470fb27b9aff14d51141
+msgid "**PubTatorTool** (2 tools)"
+msgstr "**PubTatorTool**（2 个工具）"
+
+#: ../../tools/tools_config_index.rst:1426 076ddac8f8424359ab0dfcd7173960a0
+msgid "PubTator3_EntityAutocomplete (from :doc:`pubtator_tools`)"
+msgstr "PubTator3_EntityAutocomplete（来自 :doc:`pubtator_tools`）"
+
+#: ../../tools/tools_config_index.rst:1427 ec8d38efe3994ed2b7f5fbf2fc78a9a5
+msgid "PubTator3_LiteratureSearch (from :doc:`pubtator_tools`)"
+msgstr "PubTator3_LiteratureSearch（来源：:doc:`pubtator_tools`）"
+
+#: ../../tools/tools_config_index.rst:1430 260dea1194414bcea34db2d9f1b9d57e
+msgid "**RCSBTool** (39 tools)"
+msgstr "**RCSBTool**（39个工具）"
+
+#: ../../tools/tools_config_index.rst:1433 3a8e0b1d95024d678a1dd007808e22b5
+msgid "get_assembly_info_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_assembly_info_by_pdb_id（来自：:doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1434 e8737019dc91493ba0a70af9e8bde082
+msgid "get_assembly_summary (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_assembly_summary（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1435 175e4b149b9b429a8bd17080080b3fcf
+msgid "get_binding_affinity_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_binding_affinity_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1436 3b460ad04200452cb68d449d8adeb064
+msgid "get_chem_comp_audit_info (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_chem_comp_audit_info（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1437 485d956cc2ca4010bacdac6293885bd5
+msgid "get_chem_comp_charge_and_ambiguity (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_chem_comp_charge_and_ambiguity（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1438 c496261fbd5b4c83894153241a5cd6ef
+msgid "get_citation_info_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_citation_info_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1439 36573a604fbf41ddadc9d21b3e59971e
+msgid "get_core_refinement_statistics (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_core_refinement_statistics（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1440 d0c9b00afd63478db91155ca6f454ed9
+msgid "get_crystal_growth_conditions_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_crystal_growth_conditions_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1441 2d0061ff2f2a4c2c8073f6f483c1c1b5
+msgid "get_crystallization_ph_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_crystallization_ph_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1442 cd446304381f4e71895d36b7f342bf48
+msgid "get_crystallographic_properties_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_crystallographic_properties_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1443 6ff46115f4e9486aad76bf9c81fcd43d
+msgid "get_ec_number_by_entity_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_ec_number_by_entity_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1444 7e59e675bcc34cc293244c9a832281e0
+msgid ""
+"get_em_3d_fitting_and_reconstruction_details (from :doc:`rcsb_pdb_tools`)"
+msgstr ""
+"get_em_3d_fitting_and_reconstruction_details（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1445 f58ee4dab780415087697084134c8101
+msgid "get_emdb_ids_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_emdb_ids_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1446 3a0b1c4fa7e74c6c97466d076b755bb5
+msgid "get_gene_name_by_entity_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_gene_name_by_entity_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1447 68f916b070a243efaa8ac5d3a7303580
+msgid "get_host_organism_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_host_organism_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1448 325f8c5fca124f7a8b9c682a7249bb32
+msgid "get_ligand_bond_count_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_ligand_bond_count_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1449 fceb2a3f2c36488fabb23a8b09f477ad
+msgid "get_ligand_smiles_by_chem_comp_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_ligand_smiles_by_chem_comp_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1450 93b9aab916e640b199c10ec9db5ac2ec
+msgid "get_mutation_annotations_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_mutation_annotations_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1451 ada42cf470be489fb47dd95521c39100
+msgid ""
+"get_oligosaccharide_descriptors_by_entity_id (from :doc:`rcsb_pdb_tools`)"
+msgstr ""
+"get_oligosaccharide_descriptors_by_entity_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1452 3246346b153042cb8af63454ba6a29b9
+msgid "get_polymer_entity_annotations (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_polymer_entity_annotations（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1453 5bd9a23c53c448fabad1e865d017dbc8
+msgid "get_polymer_entity_count_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_polymer_entity_count_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1454 859761ac74d44008a32f661b0a7b0620
+msgid "get_polymer_entity_ids_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_polymer_entity_ids_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1455 c73fb04e4e8b49c384013d677bb994c1
+msgid "get_polymer_entity_type_by_entity_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_polymer_entity_type_by_entity_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1456 dc294f8f70164d0ba66f215e2b061c5d
+msgid "get_polymer_molecular_weight_by_entity_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_polymer_molecular_weight_by_entity_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1457 b695e1eb6ef64d909ecafd25c63f95a6
+msgid "get_protein_classification_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_protein_classification_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1458 8d167957f86c4f9a995b9a7fe904476d
+msgid "get_protein_metadata_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_protein_metadata_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1459 85e6324462694e3fb741e8c29a4de4c1
+msgid "get_refinement_resolution_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_refinement_resolution_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1460 c763665e0b434a9d91e9f924fa06fd63
+msgid "get_release_deposit_dates_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_release_deposit_dates_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1461 a9b4f80508a742b5ba6020c6d1467130
+msgid "get_sequence_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_sequence_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1462 658d673b58e14e52a1abf42862a6442b
+msgid "get_sequence_lengths_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_sequence_lengths_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1463 71054f6e903f4d60baa5f83226bb1b0b
+msgid ""
+"get_sequence_positional_features_by_instance_id (from :doc:`rcsb_pdb_tools`)"
+msgstr ""
+"get_sequence_positional_features_by_instance_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1464 5c5687343abd470c8294483f692bb51e
+msgid "get_source_organism_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_source_organism_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1465 303fd63159ca4039bd9db556126793d1
+msgid "get_space_group_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_space_group_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1466 0e6e88c8d3bc40aea29c501a1c68b218
+msgid ""
+"get_structure_determination_software_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr ""
+"get_structure_determination_software_by_pdb_id（来自：:doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1467 d40381ce2b83412ca0099b13a3f3d82e
+msgid "get_structure_title_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_structure_title_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1468 ac1058242ad04e08bcba41067f137c81
+msgid ""
+"get_structure_validation_metrics_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_structure_validation_metrics_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1469 2d5fd992a0c245d49cacd5c8a93b1f08
+msgid "get_target_cofactor_info (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_target_cofactor_info（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1470 d328b28d6b9f4a39b47aed07f1cdbd93
+msgid "get_taxonomy_by_pdb_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_taxonomy_by_pdb_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1471 6444b160f12b42fbbb826ac8ab74a23d
+msgid "get_uniprot_accession_by_entity_id (from :doc:`rcsb_pdb_tools`)"
+msgstr "get_uniprot_accession_by_entity_id（来自 :doc:`rcsb_pdb_tools`）"
+
+#: ../../tools/tools_config_index.rst:1474 d13373ee262844c799f92be12cb6b710
+msgid "**ReactomeRESTTool** (1 tools)"
+msgstr "**ReactomeRESTTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1477 53bb11281a7f4608b5632ce343d5f8b0
+msgid "Reactome_get_pathway_reactions (from :doc:`reactome_tools`)"
+msgstr "Reactome_get_pathway_reactions（来自 :doc:`reactome_tools`）"
+
+#: ../../tools/tools_config_index.rst:1480 34f5835763ed4319ae1cf76516075bfd
+msgid "**RemoteTool** (14 tools)"
+msgstr "**RemoteTool**（14 个工具）"
+
+#: ../../tools/tools_config_index.rst:1482 b50b9340b9964c619f3a76eab6f5204c
+msgid "*Remote Tools:*"
+msgstr "*远程工具：*"
+
+#: ../../tools/tools_config_index.rst:1483 c0002286632340c98edcd56637cc39ca
+msgid "boltz2_docking (from :doc:`boltz_tools`)"
+msgstr "boltz2_docking（来自：:doc:`boltz_tools`）"
+
+#: ../../tools/tools_config_index.rst:1484 453fbeaded154793ae163405f2cd4ee4
+msgid "compute_depmap24q2_gene_correlations (from :doc:`depmap_tools`)"
+msgstr "compute_depmap24q2_gene_correlations（来自：:doc:`depmap_tools`）"
+
+#: ../../tools/tools_config_index.rst:1485 79d4fc937963447e926d2223f08ea1ea
+msgid "consult_human_expert (from :doc:`expert_feedback_tools`)"
+msgstr "consult_human_expert（来自：:doc:`expert_feedback_tools`）"
+
+#: ../../tools/tools_config_index.rst:1486 c8766f26d68b4348982b9e8e5513b3b9
+msgid ""
+"get_abstract_from_patent_app_number (from :doc:`uspto_downloader_tools`)"
+msgstr "get_abstract_from_patent_app_number（来自 :doc:`uspto_downloader_tools`）"
+
+#: ../../tools/tools_config_index.rst:1487 305b8459a372489aa44bc8ab688b7910
+msgid "get_claims_from_patent_app_number (from :doc:`uspto_downloader_tools`)"
+msgstr "get_claims_from_patent_app_number（来自 :doc:`uspto_downloader_tools`）"
+
+#: ../../tools/tools_config_index.rst:1488 121c1b1918dd4088b5c42d318f39f5cb
+msgid "get_expert_response (from :doc:`expert_feedback_tools`)"
+msgstr "get_expert_response（来自 :doc:`expert_feedback_tools`）"
+
+#: ../../tools/tools_config_index.rst:1489 e2c9ab06b66d4fc485ec51b5953b965b
+msgid "get_expert_status (from :doc:`expert_feedback_tools`)"
+msgstr "get_expert_status（来自 :doc:`expert_feedback_tools`）"
+
+#: ../../tools/tools_config_index.rst:1490 6cc3586b77e64f6995da346a8d9c5cb4
+msgid ""
+"get_full_text_from_patent_app_number (from :doc:`uspto_downloader_tools`)"
+msgstr ""
+"get_full_text_from_patent_app_number（来自 :doc:`uspto_downloader_tools`）"
+
+#: ../../tools/tools_config_index.rst:1491 6ddca25f3cdc495592b94f66ebcdb13d
+msgid "list_pending_expert_requests (from :doc:`expert_feedback_tools`)"
+msgstr "list_pending_expert_requests（来自 :doc:`expert_feedback_tools`）"
+
+#: ../../tools/tools_config_index.rst:1492 5ac5176dffc54060b13f54396aa62baf
+msgid "mcp_auto_loader_human_expert (from :doc:`expert_feedback_tools`)"
+msgstr "mcp_auto_loader_human_expert（来自 :doc:`expert_feedback_tools`）"
+
+#: ../../tools/tools_config_index.rst:1493 611339af01d54644842a084981ff7079
+msgid "run_compass_prediction (from :doc:`immune_compass_tools`)"
+msgstr "run_compass_prediction（来自 :doc:`immune_compass_tools`）"
+
+#: ../../tools/tools_config_index.rst:1494 43790be71f8f4025b5b6b5961749b093
+msgid "run_pinnacle_ppi_retrieval (from :doc:`pinnacle_tools`)"
+msgstr "run_pinnacle_ppi_retrieval（来源：:doc:`pinnacle_tools`）"
+
+#: ../../tools/tools_config_index.rst:1495 64e94b6f9c8b40909002ea9bf14665df
+msgid ""
+"run_transcriptformer_embedding_retrieval (from "
+":doc:`transcriptformer_tools`)"
+msgstr ""
+"run_transcriptformer_embedding_retrieval（来自 :doc:`transcriptformer_tools`）"
+
+#: ../../tools/tools_config_index.rst:1496 440b6663a122404f9e3fc3296b4dfcb0
+msgid "submit_expert_response (from :doc:`expert_feedback_tools`)"
+msgstr "submit_expert_response（来自 :doc:`expert_feedback_tools`）"
+
+#: ../../tools/tools_config_index.rst:1499 fbe222f99d89499e907f223688b635b9
+msgid "**SearchSPLTool** (1 tools)"
+msgstr "**SearchSPLTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1502 83f73eb1fcbc40b9b7ab5bcf5b1d8214
+msgid "DailyMed_search_spls (from :doc:`dailymed_tools`)"
+msgstr "DailyMed_search_spls（来源：:doc:`dailymed_tools`）"
+
+#: ../../tools/tools_config_index.rst:1505 8433cb4d86a64306ab781f68a4fed595
+msgid "**SemanticScholarTool** (1 tools)"
+msgstr "**SemanticScholarTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1508 96e83edced3345e6ad007a0afff64034
+msgid "SemanticScholar_search_papers (from :doc:`semantic_scholar_tools`)"
+msgstr "SemanticScholar_search_papers（来源：:doc:`semantic_scholar_tools`）"
+
+#: ../../tools/tools_config_index.rst:1511 38528c4b80e64c11b580749b8cfe72d5
+msgid "**SpecialTool** (2 tools)"
+msgstr "**SpecialTool**（2 个工具）"
+
+#: ../../tools/tools_config_index.rst:1514 23e20a58b58f4d439af7903d7b1f8757
+msgid "CallAgent (from :doc:`special_tools`)"
+msgstr "CallAgent（来自 :doc:`special_tools`）"
+
+#: ../../tools/tools_config_index.rst:1515 78b43d68bbd44d2ab349170fcd6f7e7f
+msgid "Finish (from :doc:`special_tools`)"
+msgstr "完成（来自 :doc:`special_tools`）"
+
+#: ../../tools/tools_config_index.rst:1518 3221dbe3ebda47fbbc6da5d53ec6fd7f
+#, fuzzy
+msgid "**TRIPDatabaseTool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:1521 4c3886de17a7457db364ae7e8e24f817
+msgid "TRIP_Database_Guidelines_Search (from :doc:`unified_guideline_tools`)"
+msgstr "TRIP_Database_Guidelines_Search（来源：:doc:`unified_guideline_tools`）"
+
+#: ../../tools/tools_config_index.rst:1524 9b1be4861d4645da81590a56af3766c0
+msgid "**ToolFinderEmbedding** (2 tools)"
+msgstr "**ToolFinderEmbedding**（2 个工具）"
+
+#: ../../tools/tools_config_index.rst:1527 75dbb82992334e79acbdf60dd2d59118
+msgid "Tool_Finder (from :doc:`finder_tools`)"
+msgstr "Tool_Finder（来源：:doc:`finder_tools`）"
+
+#: ../../tools/tools_config_index.rst:1528 c5639ff3a39b4126bed289d521e0b36f
+msgid "Tool_RAG (from :doc:`finder_tools`)"
+msgstr "Tool_RAG（来自 :doc:`finder_tools`）"
+
+#: ../../tools/tools_config_index.rst:1531 334660717c5d4438915ced8b89b9b795
+msgid "**ToolFinderKeyword** (1 tools)"
+msgstr "**ToolFinderKeyword**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1534 8a2f77fbacda4073957778be15022190
+msgid "Tool_Finder_Keyword (from :doc:`finder_tools`)"
+msgstr "Tool_Finder_Keyword（来自 :doc:`finder_tools`）"
+
+#: ../../tools/tools_config_index.rst:1537 3d5fb67556a94621b610d0d41c74735c
+msgid "**ToolFinderLLM** (1 tools)"
+msgstr "**ToolFinderLLM**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1540 e5efafc644c547978dda0f91e34c84cb
+msgid "Tool_Finder_LLM (from :doc:`finder_tools`)"
+msgstr "Tool_Finder_LLM（来源：:doc:`finder_tools`）"
+
+#: ../../tools/tools_config_index.rst:1543 41409818e0b74ff3a42eb8a9fd673f23
+msgid "**URLHTMLTagTool** (1 tools)"
+msgstr "**URLHTMLTagTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1546 3d6b817a8cab43cfa28d95e70bd8fa52
+msgid "get_webpage_title (from :doc:`url_fetch_tools`)"
+msgstr "get_webpage_title（来自 :doc:`url_fetch_tools`）"
+
+#: ../../tools/tools_config_index.rst:1549 78e0d3b2775045bd86481cfdba661146
+msgid "**URLToPDFTextTool** (1 tools)"
+msgstr "**URLToPDFTextTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1552 0653176e73dd4d1185626e8808dd1f1f
+msgid "get_webpage_text_from_url (from :doc:`url_fetch_tools`)"
+msgstr "get_webpage_text_from_url（来自 :doc:`url_fetch_tools`）"
+
+#: ../../tools/tools_config_index.rst:1555 9da8dd99c0764fb293eaac81123da8e6
+msgid "**USPTOOpenDataPortalTool** (6 tools)"
+msgstr "**USPTOOpenDataPortalTool**（6个工具）"
+
+#: ../../tools/tools_config_index.rst:1558 c7de6fae15b740758cd106b3a0afd925
+msgid "get_associated_documents_metadata (from :doc:`uspto_tools`)"
+msgstr "get_associated_documents_metadata（来自 :doc:`uspto_tools`）"
+
+#: ../../tools/tools_config_index.rst:1559 ddfccd4294a94532a66f713612cd691d
+msgid "get_patent_application_metadata (from :doc:`uspto_tools`)"
+msgstr "get_patent_application_metadata（来自 :doc:`uspto_tools`）"
+
+#: ../../tools/tools_config_index.rst:1560 6d54c6a9c1b840a1bbef9d105f477b98
+msgid "get_patent_continuity_data (from :doc:`uspto_tools`)"
+msgstr "get_patent_continuity_data（来自 :doc:`uspto_tools`）"
+
+#: ../../tools/tools_config_index.rst:1561 82e7cadd283e44dd879af7042713e400
+msgid "get_patent_foreign_priority_data (from :doc:`uspto_tools`)"
+msgstr "get_patent_foreign_priority_data（来自：:doc:`uspto_tools`）"
+
+#: ../../tools/tools_config_index.rst:1562 7b6ae18ce651481aa2ff983aff126356
+msgid "get_patent_overview_by_text_query (from :doc:`uspto_tools`)"
+msgstr "get_patent_overview_by_text_query（来自 :doc:`uspto_tools`）"
+
+#: ../../tools/tools_config_index.rst:1563 fcc9801549d049ba94737d52e973b812
+msgid "get_patent_term_adjustment_data (from :doc:`uspto_tools`)"
+msgstr "get_patent_term_adjustment_data（来自 :doc:`uspto_tools`）"
+
+#: ../../tools/tools_config_index.rst:1566 f713c679919d471ab81dc72d64688a61
+msgid "**UniProtRESTTool** (10 tools)"
+msgstr "**UniProtRESTTool**（10 个工具）"
+
+#: ../../tools/tools_config_index.rst:1569 819e962fcb5846e1ab41d70d30b49a92
+msgid "UniProt_get_alternative_names_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_alternative_names_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1570 a89ed3d3fa0a45dc9485d43771051cef
+msgid "UniProt_get_disease_variants_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_disease_variants_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1571 35c831bb5e0d4654b5c4d5d39997eeb7
+msgid "UniProt_get_entry_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_entry_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1572 b8dcc308d7b1403d8458754a8565adbf
+msgid "UniProt_get_function_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_function_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1573 6547c0a677884152bc6e3b24c963e0aa
+msgid "UniProt_get_isoform_ids_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_isoform_ids_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1574 006a5fe18eae41f895b7892f904c6a6e
+msgid "UniProt_get_organism_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_organism_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1575 79a6c63515cf443e908629888a4c64fb
+msgid "UniProt_get_ptm_processing_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_ptm_processing_by_accession（来源：:doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1576 13b365a55c614ccf90fc5d08a78e7523
+msgid "UniProt_get_recommended_name_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_recommended_name_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1577 b2bee25ab19a4697931d2576e316216f
+msgid "UniProt_get_sequence_by_accession (from :doc:`uniprot_tools`)"
+msgstr "UniProt_get_sequence_by_accession（来自 :doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1578 58827d01d3954b2e89c268ca03096384
+msgid ""
+"UniProt_get_subcellular_location_by_accession (from :doc:`uniprot_tools`)"
+msgstr ""
+"UniProt_get_subcellular_location_by_accession（来源：:doc:`uniprot_tools`）"
+
+#: ../../tools/tools_config_index.rst:1581 28b5f18b7cc4486c84c19d3f7ac21fa1
+msgid "**UnpaywallTool** (1 tools)"
+msgstr "**UnpaywallTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1584 7eed2d8b5780424ab67e623c1e0214dd
+msgid "Unpaywall_check_oa_status (from :doc:`unpaywall_tools`)"
+msgstr "Unpaywall_check_oa_status（来自 :doc:`unpaywall_tools`）"
+
+#: ../../tools/tools_config_index.rst:1587 13c966f37a3a42ec95d0ba6ddb2b557f
+#, fuzzy
+msgid "**WHOGuidelineFullTextTool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:1590 fe6930c0a7f04398b6020150598cbdaf
+msgid "WHO_Guideline_Full_Text (from :doc:`unified_guideline_tools`)"
+msgstr "WHO_指南_全文 (来源：:doc:`unified_guideline_tools`)"
+
+#: ../../tools/tools_config_index.rst:1593 1b5d110735ee48a5bbd82d5c4c1de2c5
+#, fuzzy
+msgid "**WHOGuidelinesTool** (1 tools)"
+msgstr "Opentarget 工具"
+
+#: ../../tools/tools_config_index.rst:1596 aafe06f388174c67a3364d030cb8c3e7
+#, fuzzy
+msgid "WHO_Guidelines_Search (from :doc:`unified_guideline_tools`)"
+msgstr "LabelGenerator（来自 :doc:`agentic_tools`）"
+
+#: ../../tools/tools_config_index.rst:1599 c5668daf28964e2580e1c5b88be7ef70
+msgid "**WikidataSPARQLTool** (1 tools)"
+msgstr "**WikidataSPARQLTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1602 7bcde6c51dc747079b9e0c44af1953e9
+msgid "Wikidata_SPARQL_query (from :doc:`wikidata_sparql_tools`)"
+msgstr "Wikidata_SPARQL_query（来自 :doc:`wikidata_sparql_tools`）"
+
+#: ../../tools/tools_config_index.rst:1605 250a678cd3964513adec422630f91751
+msgid "**XMLTool** (19 tools)"
+msgstr "**XML工具**（19个工具）"
+
+#: ../../tools/tools_config_index.rst:1608 890277309fd44d149afd90234d501c45
+msgid "drugbank_filter_drugs_by_name (from :doc:`xml_tools`)"
+msgstr "drugbank_filter_drugs_by_name（来自 :doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1609 b59e966e9bb548688a1c3d01d0281d44
+msgid ""
+"drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1610 f332f619a1ea43eeab7d4d2792f35c7f
+msgid ""
+"drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1611 c53dcbc8d7d0403e8c6a15060f242d90
+msgid ""
+"drugbank_get_drug_interactions_by_drug_name_or_drugbank_id (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_interactions_by_drug_name_or_drugbank_id（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1612 6dcebcc2e7e249b7b4a158f227e8feba
+msgid ""
+"drugbank_get_drug_name_and_description_by_indication (from :doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_name_and_description_by_indication（来自：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1613 59568545f4984ed1b38f5fec9f9c6616
+msgid ""
+"drugbank_get_drug_name_and_description_by_pathway_name (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_name_and_description_by_pathway_name（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1614 b1f5e0f2c76d4f6884ba99605cc8e7b4
+msgid ""
+"drugbank_get_drug_name_and_description_by_target_name (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_name_and_description_by_target_name（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1615 ebe73a4097f24b1c9d2dcde473636e5c
+msgid ""
+"drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action (from"
+" :doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1616 f10bba05af58480ba23929715bd22daa
+msgid ""
+"drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1617 7d18fb484cc54e3092ba050068b9dc65
+msgid ""
+"drugbank_get_drug_products_by_name_or_drugbank_id (from :doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_products_by_name_or_drugbank_id（来自：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1618 e60fdbb2b07648de8c695d4e7e947b56
+msgid ""
+"drugbank_get_drug_references_by_drug_name_or_drugbank_id (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_drug_references_by_drug_name_or_drugbank_id（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1619 161c24da10bc4ddf8b24359d6a61a52c
+msgid ""
+"drugbank_get_indications_by_drug_name_or_drugbank_id (from :doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_indications_by_drug_name_or_drugbank_id（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1620 e0b5734727f44d9bbed3714ce660cec9
+msgid ""
+"drugbank_get_pharmacology_by_drug_name_or_drugbank_id (from "
+":doc:`xml_tools`)"
+msgstr ""
+"drugbank_get_pharmacology_by_drug_name_or_drugbank_id（来自：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1621 2299e10288b847fe9c4591e2db53b1d3
+msgid ""
+"drugbank_get_safety_by_drug_name_or_drugbank_id (from :doc:`xml_tools`)"
+msgstr "drugbank_get_safety_by_drug_name_or_drugbank_id（来源：:doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1622 7f368b5bfabf40e7a92ca76160a9582e
+msgid ""
+"drugbank_get_targets_by_drug_name_or_drugbank_id (from :doc:`xml_tools`)"
+msgstr "drugbank_get_targets_by_drug_name_or_drugbank_id（来自 :doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1623 633a71c9b1c2425496bec6188835b05a
+msgid "mesh_get_subjects_by_pharmacological_action (from :doc:`xml_tools`)"
+msgstr "mesh_get_subjects_by_pharmacological_action（来自 :doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1624 b4c027c9b09243ca9d54cba95e5a2e17
+msgid "mesh_get_subjects_by_subject_id (from :doc:`xml_tools`)"
+msgstr "mesh_get_subjects_by_subject_id（来自 :doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1625 b354b8181f564553814d7bca7fc54f84
+msgid "mesh_get_subjects_by_subject_name (from :doc:`xml_tools`)"
+msgstr "mesh_get_subjects_by_subject_name（来自 :doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1626 630074117734405ebe85042af5c35e2a
+msgid ""
+"mesh_get_subjects_by_subject_scope_or_definition (from :doc:`xml_tools`)"
+msgstr "mesh_get_subjects_by_subject_scope_or_definition（来自 :doc:`xml_tools`）"
+
+#: ../../tools/tools_config_index.rst:1629 4ca54d80df4045b18cd46c411772ab0b
+msgid "**ZenodoTool** (1 tools)"
+msgstr "**ZenodoTool**（1 个工具）"
+
+#: ../../tools/tools_config_index.rst:1632 c6ee10587f9b403786b20502ef814d6f
+msgid "Zenodo_search_records (from :doc:`zenodo_tools`)"
+msgstr "Zenodo_search_records（来源：:doc:`zenodo_tools`）"
+
+#: ../../tools/tools_config_index.rst:1636 f2abe7cbd24244cab9d47e60696a76e8
+msgid "Quick Tool Search"
+msgstr "快速工具搜索"
+
+#: ../../tools/tools_config_index.rst:1638 a7a230bbac514d8da2e0bd22c94eaa22
+msgid "Use your browser's search function (Ctrl+F / Cmd+F) to quickly find:"
+msgstr "使用浏览器的搜索功能（Ctrl+F / Cmd+F）快速查找："
+
+#: ../../tools/tools_config_index.rst:1640 11555fb9835a4c5a94767d1e9acfc7af
+msgid "**Tool Name**: Search for the exact tool name"
+msgstr "**工具名称**：搜索准确的工具名称"
+
+#: ../../tools/tools_config_index.rst:1641 6971eeaf8d774419ba0cb08d18916ad7
+msgid ""
+"**File Path**: Search for ``filename.json`` to find all tools in that file"
+msgstr "**文件路径**：搜索 ``filename.json`` 以查找该文件中的所有工具"
+
+#: ../../tools/tools_config_index.rst:1642 6f0109b04442424ca7d1543aaa32e104
+msgid ""
+"**Tool Type**: Search for specific tool types like \"AgenticTool\", "
+"\"OpenTarget\", etc."
+msgstr "**工具类型**：搜索特定的工具类型，例如“AgenticTool”、“OpenTarget”等。"
+
+#: ../../tools/tools_config_index.rst:1645 b04d0a92e2d54537b104bf38261b41e4
+msgid ""
+"Each configuration file has its own dedicated page with detailed tool "
+"information and collapsible sections."
+msgstr "每个配置文件都有其专属页面，包含详细的工具信息和可折叠的部分。"
+
+#~ msgid "**Total Configuration Files**: 63"
+#~ msgstr "**配置文件总数**：63"
+
+#~ msgid "**Total Tools**: 651"
+#~ msgstr "**总工具数**：651"
+
+#~ msgid "**ComposeTool** (10 tools)"
+#~ msgstr "**ComposeTool**（10 个工具）"
+
+#~ msgid "Multi Agent Tools"
+#~ msgstr "内置工具"
+
+#~ msgid "IntentAnalyzerAgent (from :doc:`multi_agent_tools`)"
+#~ msgstr "DescriptionAnalyzer（来自 :doc:`agentic_tools`）"
+
+#~ msgid "KeywordExtractorAgent (from :doc:`multi_agent_tools`)"
+#~ msgstr "TestCaseGenerator（来自 :doc:`agentic_tools`）"
+
+#~ msgid "OverallSummaryAgent (from :doc:`multi_agent_tools`)"
+#~ msgstr "ToolMetadataGenerator（来自 :doc:`agentic_tools`）"
+
+#~ msgid "QualityCheckerAgent (from :doc:`multi_agent_tools`)"
+#~ msgstr "ToolQualityEvaluator（来自 :doc:`agentic_tools`）"
+
+#~ msgid "ResultSummarizerAgent (from :doc:`multi_agent_tools`)"
+#~ msgstr "ScientificTextSummarizer（来自 :doc:`agentic_tools`）"

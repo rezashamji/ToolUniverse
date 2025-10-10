@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.chem_tool.rst:2 7f70dfb2e5b34794ad73f20adebdcd37
+msgid "tooluniverse.chem\\_tool module"
+msgstr "tooluniverse.chem_tool 模块"
+
+#: cd6bf6a747334e3ab70239dba1a5f8a0 of tooluniverse.chem_tool.ChEMBLTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 1fe2339f555044d6a323cb11a67b84a6 of tooluniverse.chem_tool.ChEMBLTool:1
+msgid ""
+"Tool to search for molecules similar to a given compound name or SMILES "
+"using the ChEMBL Web Services API."
+msgstr "使用 ChEMBL Web Services API，根据给定的化合物名称或 SMILES 搜索相似分子的工具。"
+
+#: 81822ddaee314f8eb405fc67282e3a43 of tooluniverse.chem_tool.ChEMBLTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 37466a3b1a914d7b9695882a35d43d76 of tooluniverse.chem_tool.ChEMBLTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现所期望的输入字典。"
+
+#: 043bfeafcb5c4b3ea7e67220afde93a3 of
+#: tooluniverse.chem_tool.ChEMBLTool.get_chembl_id_by_name:1
+msgid ""
+"Search ChEMBL for a compound by name and return the ChEMBL ID of the first "
+"match."
+msgstr "通过名称在 ChEMBL 中搜索化合物，并返回第一个匹配项的 ChEMBL ID。"
+
+#: ffb12075d9bf4540b3b5a20136379c2c of
+#: tooluniverse.chem_tool.ChEMBLTool.get_smiles_pref_name_by_chembl_id:1
+msgid ""
+"Given a ChEMBL ID, return a dict with canonical SMILES and preferred name."
+msgstr "给定一个 ChEMBL ID，返回包含规范 SMILES 和首选名称的字典。"
+
+#: ce942cd6188c415e8059d7e563fb0e04 of
+#: tooluniverse.chem_tool.ChEMBLTool.get_chembl_smiles_pref_name_id_by_name:1
+msgid ""
+"Search ChEMBL for a compound by name and return a list of dicts with ChEMBL "
+"ID, canonical SMILES, and preferred name for the top 5 matches."
+msgstr "通过名称在 ChEMBL 中搜索化合物，并返回前五个匹配项的字典列表，包含 ChEMBL ID、规范 SMILES 及首选名称。"

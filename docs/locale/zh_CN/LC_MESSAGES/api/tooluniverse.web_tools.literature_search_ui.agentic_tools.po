@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.agentic_tools.rst:2
+#: cbd95afb397c4169a11786e3042c62ed
+msgid "tooluniverse.web\\_tools.literature\\_search\\_ui.agentic\\_tools module"
+msgstr "tooluniverse.web_tools.literature_search_ui.agentic_tools 模块"
+
+#: f6f1a5d2fb6741368c35b5e0684aae48 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools:1
+msgid ""
+"Advanced Agentic Tools for Literature Search Web UI Specialized tools for "
+"intelligent literature analysis and summarization"
+msgstr "高级智能体工具用于文献检索 Web UI 专用工具，支持智能文献分析与摘要生成"
+
+#: 76bdfea7a39d4447a511361901e2ac56 d0ebdacaa46848d79b5617511199bcb1
+#: d75003a2c3d74184987b1e7549746eb4 d87393e2e5da432d9eeedfdd856ca9b8
+#: eb98f533a98349749bd40d2d08b489b1 f8b6da3ed082414da9d96a9b1b66cf7a of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ContributionAnalyzer:1
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer:1
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ResearchGapAnalyzer:1
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TemporalAnalyzer:1
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ThematicAnalyzer:1
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TrendAnalyzer:1
+msgid "Bases: :py:class:`object`"
+msgstr "基类：:py:class:`object`"
+
+#: 2f3c7f1074554318afe7d0e66773a4e1 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer:1
+msgid "Main analyzer that coordinates different analysis tools"
+msgstr "主要分析器，负责协调不同的分析工具"
+
+#: d1c7d7b30a36422fb2c5a3777dd6391b of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer.generate_comprehensive_summary:1
+msgid "Generate comprehensive literature review summary"
+msgstr "生成全面的文献综述摘要"
+
+#: 6dd5b6461444424fbe3fca182f757c8e of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer._extract_papers:1
+msgid "Extract papers from search results"
+msgstr "从搜索结果中提取论文"
+
+#: 751b1b3b4cfc45579dd6f6dc7596fb33 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer._extract_authors:1
+msgid "Extract author names from various formats"
+msgstr "从多种格式中提取作者姓名"
+
+#: a036431225f54e05b5d6b00c71f98ab3 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer._extract_year:1
+msgid "Extract year from various formats"
+msgstr "从各种格式中提取年份"
+
+#: 6fed58dd3ed04b6eba35566026c5b72e of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer._generate_overview:1
+msgid "Generate research overview section"
+msgstr "生成研究概述部分"
+
+#: 59d4aee13a574d99ba2bfd4528dc0557 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer._generate_methodology_note:1
+msgid "Generate methodology note"
+msgstr "生成方法说明"
+
+#: 07dfb2ad9fcf46d8a909b6647b9a0f89 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.LiteratureAnalyzer._generate_no_results_summary:1
+msgid "Generate summary when no results are found"
+msgstr "未找到结果时生成摘要"
+
+#: cca4d5e0f43043e4870013f2a280d034 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TemporalAnalyzer:1
+msgid "Analyzes temporal patterns in literature"
+msgstr "分析文献中的时间模式"
+
+#: 004c4c9ec59e4f92b483fad67fa0db8a of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TemporalAnalyzer.analyze_timeline:1
+msgid "Generate temporal analysis of research trends"
+msgstr "生成研究趋势的时间分析"
+
+#: 4ee2fb0244474dcfbd2263e6d0c6283b of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ThematicAnalyzer:1
+msgid "Analyzes research themes and topics"
+msgstr "分析研究主题和课题"
+
+#: 38acbc5cea7545689c17ee0bc0da4eb9 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ThematicAnalyzer.analyze_themes:1
+msgid "Generate thematic analysis of research topics"
+msgstr "生成研究主题的主题分析"
+
+#: 2033b36cf06b482eb816019cbf16398c of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ThematicAnalyzer._extract_themes:1
+msgid "Extract research themes from papers"
+msgstr "从论文中提取研究主题"
+
+#: 7d951040c2284053b0a5817a2057b65d of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ThematicAnalyzer._extract_methods:1
+msgid "Extract methodological approaches from papers"
+msgstr "从论文中提取方法论方法"
+
+#: 2a5276c0bed2432d9b907f1a3116cd8f of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ContributionAnalyzer:1
+msgid "Analyzes key contributions and important papers"
+msgstr "分析关键贡献和重要论文"
+
+#: 4b32524f56614832a86e0452d0fda11b of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ContributionAnalyzer.identify_key_contributions:1
+msgid "Generate key contributions section"
+msgstr "生成主要贡献部分"
+
+#: e1b75e04582a470daa78d294f252be7b of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ContributionAnalyzer._identify_important_papers:1
+msgid "Identify important papers based on various criteria"
+msgstr "根据多种标准识别重要论文"
+
+#: f74c0b056a05402a98776667df6564ef of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TrendAnalyzer:1
+msgid "Analyzes research trends and patterns"
+msgstr "分析研究趋势和模式"
+
+#: 4972bdffa9d94c97ab940b0c19c90728 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TrendAnalyzer.analyze_trends:1
+msgid "Analyze research trends and patterns"
+msgstr "分析研究趋势与模式"
+
+#: 8ec2e7cd9d534d6fa18fd49fcbca3af0 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TrendAnalyzer._extract_recent_themes:1
+msgid "Extract themes from recent papers"
+msgstr "从近期论文中提取主题"
+
+#: d8817fc099d14dd492d8ebb7292d777a of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.TrendAnalyzer._analyze_collaboration:1
+msgid "Analyze collaboration patterns"
+msgstr "分析协作模式"
+
+#: 7f458df5629445c6a306ce8468340ae5 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ResearchGapAnalyzer:1
+msgid "Identifies research gaps and future opportunities"
+msgstr "识别研究空白与未来机遇"
+
+#: fea0647af3bf416ea3a3449862d8e80a of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ResearchGapAnalyzer.identify_gaps_and_opportunities:1
+msgid "Generate research gaps and future directions"
+msgstr "生成研究空白与未来方向"
+
+#: 6747eeabd18d42d199cb44072282be62 of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ResearchGapAnalyzer._identify_specific_gaps:1
+msgid "Identify specific research gaps"
+msgstr "识别具体的研究空白"
+
+#: d46d345c4b424716ae5b585a5440728b of
+#: tooluniverse.web_tools.literature_search_ui.agentic_tools.ResearchGapAnalyzer._identify_opportunities:1
+msgid "Identify future research opportunities"
+msgstr "确定未来的研究机会"

@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.start.rst:2
+#: fbfac5ee05284383945d1e6a5acfb4b3
+msgid "tooluniverse.web\\_tools.literature\\_search\\_ui.start module"
+msgstr "tooluniverse.web_tools.literature_search_ui.start 模块"
+
+#: c03c1e5fe3da4e90ac750330d3836ccd of
+#: tooluniverse.web_tools.literature_search_ui.start:1
+msgid "Simple startup script for ToolUniverse Literature Search Web UI"
+msgstr "ToolUniverse 文献检索 Web 界面的简单启动脚本"
+
+#: 2b63e209fa2f4b20921d7e6f8424cae2 of
+#: tooluniverse.web_tools.literature_search_ui.start.main:1
+msgid "Main entry point"
+msgstr "主入口点"

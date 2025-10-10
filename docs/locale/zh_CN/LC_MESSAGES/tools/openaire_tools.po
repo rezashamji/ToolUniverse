@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:40-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/openaire_tools.rst:2 5a94cc5e7bbf444f911f5bf37a5e9815
+msgid "Openaire Tools"
+msgstr "Openaire 工具"
+
+#: ../../tools/openaire_tools.rst:4 e254a56e3e2b442db2c292aa2c205606
+msgid ""
+"**Configuration File**: ``openaire_tools.json`` **Tool Type**: Local **Tools"
+" Count**: 1"
+msgstr ""
+"**配置文件**：``openaire_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：1"
+
+#: ../../tools/openaire_tools.rst:8 8708aee691984176bb64432ea617b051
+msgid ""
+"This page contains all tools defined in the ``openaire_tools.json`` "
+"configuration file."
+msgstr "此页面包含 ``openaire_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/openaire_tools.rst:11 50148cad58e74fb7815e1de52fff4d48
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/openaire_tools.rst:14 43fecf78a0c84ed4ad74b81c955f7ac3
+msgid "**OpenAIRE_search_publications** (Type: OpenAIRETool)"
+msgstr "**OpenAIRE_search_publications**（类型：OpenAIRE工具）"
+
+#: ../../tools/openaire_tools.rst:16 157698c95f85401483407bf6b32a83e5
+msgid ""
+"Search OpenAIRE Explore for research products including publications, "
+"datasets, and software. Ope..."
+msgstr "在 OpenAIRE Explore 中搜索研究成果，包括出版物、数据集和软件。 Ope..."
+
+#: ../../tools/openaire_tools.rst cc05c7e2aee24458b325901c642fe557
+msgid "OpenAIRE_search_publications tool specification"
+msgstr "OpenAIRE_search_publications 工具规范"
+
+#: ../../tools/openaire_tools.rst:20 a28438b2a60f4fcb8c069a7c5dc9b596
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/openaire_tools.rst:22 8cad49c0ab814caf831776de6f185534
+msgid "**Name**: ``OpenAIRE_search_publications``"
+msgstr "**名称**：``OpenAIRE_search_publications``"
+
+#: ../../tools/openaire_tools.rst:23 a9cfb5a04781471b850938e84ea8c893
+msgid "**Type**: ``OpenAIRETool``"
+msgstr "**类型**：``OpenAIRETool``"
+
+#: ../../tools/openaire_tools.rst:24 18a91447560e4829bdee1fe695269922
+msgid ""
+"**Description**: Search OpenAIRE Explore for research products including "
+"publications, datasets, and software. OpenAIRE is the European open science "
+"platform that provides access to research outputs from EU-funded projects."
+msgstr ""
+"**描述**：在 OpenAIRE Explore 中搜索研究成果，包括出版物、数据集和软件。OpenAIRE "
+"是欧洲开放科学平台，提供欧盟资助项目的研究成果访问。"
+
+#: ../../tools/openaire_tools.rst:26 29b8d20ac73e456eaa0130ab65456c08
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/openaire_tools.rst:28 d428d51662cb4855a5dbc8ecc74eec14
+msgid ""
+"``query`` (string) (required) Search query for OpenAIRE research products. "
+"Use keywords to search across titles, abstracts, and metadata."
+msgstr "``query``（字符串）（必填）用于搜索OpenAIRE研究产品的查询条件。使用关键词在标题、摘要和元数据中进行搜索。"
+
+#: ../../tools/openaire_tools.rst:31 93fee0ac8a2049f3891d069f0d0d7d3c
+msgid ""
+"``max_results`` (integer) (optional) Maximum number of results to return. "
+"Default is 10, maximum is 100."
+msgstr "``max_results``（整数）（可选）返回结果的最大数量。默认值为10，最大值为100。"
+
+#: ../../tools/openaire_tools.rst:34 b2570b34627b4852b1661cf93bb3e695
+msgid ""
+"``type`` (string) (optional) Type of research product to search: "
+"'publications', 'datasets', or 'software'. Default is 'publications'."
+msgstr ""
+"``type``（字符串）（可选）要搜索的研究产品类型：‘publications’、‘datasets’ 或 ‘software’。默认值为 "
+"‘publications’。"
+
+#: ../../tools/openaire_tools.rst:37 198c76bdb32645e3a22f1a2c5445cc17
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/openaire_tools.rst:51 91a7e8ecc54043d6a7c8a707f7b3a262
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/openaire_tools.rst:53 11e3a142348c4f60b6f1fbca1873bb93
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具总览"
+
+#: ../../tools/openaire_tools.rst:54 df5d4d551bc649858ea358a792b47b61
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

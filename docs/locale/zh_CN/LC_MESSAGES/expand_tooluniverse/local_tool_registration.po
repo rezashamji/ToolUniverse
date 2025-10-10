@@ -1,0 +1,704 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:2
+#: 6f8eae49b0bf4f7e878aba6390297ed8
+msgid "Local Tool Registration"
+msgstr "本地工具注册"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:4
+#: 082686fb39054b5fbfc9e19d53358478
+msgid ""
+"Learn how to create, register, and use custom tools locally within "
+"ToolUniverse. This Tutorial covers everything from basic tool creation to"
+" advanced patterns and best practices."
+msgstr ""
+"学习如何在 ToolUniverse 中本地创建、注册和使用自定义工具。本教程涵盖从基本工具创建到"
+"高级模式和最佳实践的所有内容。"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:7
+#: 7eebfac6118c4c3085ab420fd867b57c
+msgid "Overview"
+msgstr "概述"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:9
+#: 95f685f1b5b14128b1a28943df0f1595
+msgid ""
+"Local tools are Python classes that run within the same process as "
+"ToolUniverse. They provide the most efficient way to extend ToolUniverse "
+"functionality for your specific research needs."
+msgstr ""
+"本地工具是在与 ToolUniverse 相同进程中运行的 Python 类。它们提供扩展 ToolUniverse "
+"功能的最有效方式，以满足您的特定研究需求。"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:12
+#: 84a5f7e183444acabc749fbbea41ac5d
+msgid "Quick Start"
+msgstr "快速开始"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:14
+#: 0ea003a406ab4d98a9a780505c182141
+msgid "Here's the fastest way to create and register a local tool:"
+msgstr "以下是创建和注册本地工具的最快方法："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:95
+#: 56a7df8152b445d5b43013fe14730aee
+msgid "Step-by-Step Tool Creation"
+msgstr "逐步工具创建"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:97
+#: 8e1cfef930844535b45546e63b1089be
+msgid "**Important: Inherit from BaseTool**"
+msgstr "**重要：继承 BaseTool**"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:99
+#: 9da701b03ac14d42bbe8615e77da673e
+msgid ""
+"All ToolUniverse tools should inherit from the ``BaseTool`` class. This "
+"provides:"
+msgstr ""
+"所有 ToolUniverse 工具都应该继承 ``BaseTool`` 类。这提供："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:103
+#: 94ff532ec63147b095ced0aafccd71ec
+msgid "BaseTool Class"
+msgstr "BaseTool 类"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:105
+#: 75abc68aa0de45f3930c3de9112664f0
+msgid ""
+"ToolUniverse provides the ``BaseTool`` class as the foundation for all "
+"custom tools. Inheriting from ``BaseTool`` ensures your tools follow "
+"ToolUniverse standards and provides several benefits:"
+msgstr ""
+"ToolUniverse 提供 ``BaseTool`` 类作为所有自定义工具的基础。继承 ``BaseTool`` 确保您的工具遵循 "
+"ToolUniverse 标准，并提供几个好处："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:107
+#: baa5e7a711fa417eabd896c8457258e5
+msgid ""
+"**Core Features:** - **Standardized Interface**: All tools use the same "
+"``execute()`` method signature - **Built-in Validation**: Automatic input"
+" validation framework via ``validate_input()`` - **Configuration "
+"Management**: Built-in handling of tool configuration - **Error "
+"Handling**: Consistent error handling patterns - **Logging Support**: "
+"Integrated logging capabilities - **Type Safety**: Better IDE support "
+"with type hints"
+msgstr ""
+"**核心功能：** - **标准化接口**：所有工具使用相同的 "
+"``execute()`` 方法签名 - **内置验证**：通过 ``validate_input()`` 自动输入"
+"验证框架 - **配置管理**：内置工具配置处理 - **错误处理**：一致的错误处理模式 - **日志支持**： "
+"集成的日志功能 - **类型安全**：使用类型提示提供更好的 IDE 支持"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:115
+#: 16617af17d3b49709719accdf1ce89e2
+msgid "**BaseTool Structure:** .. code-block:: python"
+msgstr "**BaseTool 结构：** .. code-block:: python"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:118
+#: 598c3faf6443408182a28f487c21a6ab
+msgid "from tooluniverse.base_tool import BaseTool from typing import Dict, Any"
+msgstr "from tooluniverse.base_tool import BaseTool from typing import Dict, Any"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:121
+#: 1f417de169064ff4bcf55e5775258d55
+msgid "class MyTool(BaseTool):"
+msgstr "class MyTool(BaseTool):"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:122
+#: a9eb13a6d07647b78c403cdb98cec2d5
+msgid "def __init__(self, tool_config: Dict[str, Any] = None):"
+msgstr "def __init__(self, tool_config: Dict[str, Any] = None):"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:123
+#: b565cb1b1ba84f589ef7f567b3ec6419
+msgid "super().__init__(tool_config) # Initialize your tool here"
+msgstr "super().__init__(tool_config) # 在这里初始化您的工具"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:126
+#: 6928f2e0ccd5458fa2f950690786df25
+msgid ""
+"def execute(self, param1: str, param2: int = 10, **kwargs) -> Dict[str, "
+"Any]:"
+msgstr ""
+"def execute(self, param1: str, param2: int = 10, **kwargs) -> Dict[str, "
+"Any]:"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:127
+#: 533c7f15c50243299f90c7e2dbc26cea
+msgid ""
+"\"\"\"Main execution method - implement your tool logic here.\"\"\" # "
+"Validate inputs self.validate_input(param1=param1, param2=param2)"
+msgstr ""
+"\"\"\"主要执行方法 - 在这里实现您的工具逻辑。\"\"\" # "
+"验证输入 self.validate_input(param1=param1, param2=param2)"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:131
+#: 7bcab04381ad4c0aa76acb4b422aabe2
+msgid "# Your tool logic here result = self._process_data(param1, param2)"
+msgstr "# 在这里实现您的工具逻辑 result = self._process_data(param1, param2)"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:134
+#: 58eebe809ffa4678a27fd96b327922ca
+#, python-brace-format
+msgid "return {\"result\": result, \"success\": True}"
+msgstr "return {\"result\": result, \"success\": True}"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:136
+#: caa3a20b59ca44dc9f849f39ccca0af8
+msgid "def validate_input(self, **kwargs) -> None:"
+msgstr "def validate_input(self, **kwargs) -> None:"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:137
+#: 3138f1c36b134673b2bb7e5df2dd03ca
+msgid ""
+"\"\"\"Validate input parameters.\"\"\" param1 = kwargs.get('param1') "
+"param2 = kwargs.get('param2', 10)"
+msgstr ""
+"\"\"\"验证输入参数。\"\"\" param1 = kwargs.get('param1') "
+"param2 = kwargs.get('param2', 10)"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:141
+#: 9900264ab5384eeabf567019695be2e2
+msgid "if not param1 or not isinstance(param1, str):"
+msgstr "if not param1 or not isinstance(param1, str):"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:142
+#: 64ad17491b6646e49345ee11281338c3
+msgid "raise ValueError(\"param1 must be a non-empty string\")"
+msgstr "raise ValueError(\"param1 必须是非空字符串\")"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:144
+#: 0860165604f44238a2122ab6001288f8
+msgid "if not isinstance(param2, int) or param2 < 0:"
+msgstr "if not isinstance(param2, int) or param2 < 0:"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:145
+#: 8f986088c7534bf79fa6e7acb2080470
+msgid "raise ValueError(\"param2 must be a non-negative integer\")"
+msgstr "raise ValueError(\"param2 必须是非负整数\")"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:147
+#: d680f7e8356947dda43b792a970ba673
+msgid ""
+"**Key Methods:** - ``__init__(tool_config)``: Initialize tool with "
+"configuration - ``execute(**kwargs)``: Main execution method (required) -"
+" ``validate_input(**kwargs)``: Input validation (recommended) - "
+"``config``: Access to tool configuration - ``logger``: Built-in logging "
+"instance"
+msgstr ""
+"**关键方法：** - ``__init__(tool_config)``：使用配置初始化工具 - ``execute(**kwargs)``：主要执行方法（必需） -"
+" ``validate_input(**kwargs)``：输入验证（推荐） - "
+"``config``：访问工具配置 - ``logger``：内置日志实例"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:155
+#: 9ccf58a8916a45fabb120d5e2d189c0c
+msgid "**Standardized Interface**: Consistent ``execute()`` method signature"
+msgstr "**标准化接口**：一致的 ``execute()`` 方法签名"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:156
+#: e90fc92b5777495c9ecb4630384f1f68
+msgid "**Built-in Validation**: Automatic input validation framework"
+msgstr "**内置验证**：自动输入验证框架"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:157
+#: 367d70bacd47488dbd677a3d2a5d26eb
+msgid "**Error Handling**: Standardized error handling patterns"
+msgstr "**错误处理**：标准化的错误处理模式"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:158
+#: 8ea3d6ee6aea497dbf9bfbc4b470cb6c
+msgid "**Configuration Management**: Built-in configuration handling"
+msgstr "**配置管理**：内置配置处理"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:159
+#: 4e586e5274394df69f78cb73f90ba6c1
+msgid "**Logging Support**: Integrated logging capabilities"
+msgstr "**日志支持**：集成的日志功能"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:160
+#: ab72e95d16d14477aaebbfac4634ba81
+msgid "**Type Hints**: Better IDE support and code clarity"
+msgstr "**类型提示**：更好的 IDE 支持和代码清晰度"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:162
+#: 1cd48e7cbbdb467d94d40a02c30867d7
+msgid "**Create Your Tool File**"
+msgstr "**创建您的工具文件**"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:164
+#: b797044b8fe04036a334f6c45dc47918
+msgid "Create a new Python file:"
+msgstr "创建一个新的 Python 文件："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:236
+#: 437065a4e2ee46c4ba2a4e669a460d54
+msgid "**Test Your Tool**"
+msgstr "**测试您的工具**"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:253
+#: 333e3964c6ee4556b56d353396969407
+msgid "Tool Registration Methods"
+msgstr "工具注册方法"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:256
+#: 56f1ff0eb1454fbe9b268fbdfd24d6a0
+msgid "Method 1: Decorator Registration (Recommended)"
+msgstr "方法1：装饰器注册（推荐）"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:258
+#: 1c3dcdba4fa84199bef7fe1e14b2ea42
+msgid "Use the ``@register_tool`` decorator for automatic registration:"
+msgstr "使用 ``@register_tool`` 装饰器进行自动注册："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:283
+#: 7c67381c095047069ccff8d715da1b81
+msgid "Method 2: Manual Registration"
+msgstr "方法2：手动注册"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:285
+#: 83bf90ec3d88414aa756b48dbc3e44b8
+msgid "Register tools manually for more control:"
+msgstr "手动注册工具以获得更多控制："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:313
+#: b386fbc572bf453bb5467eb3655dc326
+msgid "Method 3: Configuration File Registration"
+msgstr "方法3：配置文件注册"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:315
+#: 80fb00d1076449df8618c3991d521afd
+msgid "Create a JSON configuration file:"
+msgstr "创建一个 JSON 配置文件："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:338
+#: 99335dc3e59647209c94e8560a5408ea
+msgid "Load configuration file:"
+msgstr "加载配置文件："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:349
+#: c3265e246028402cb621111cb48cddd0
+msgid "Common Tool Patterns"
+msgstr "常见工具模式"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:352
+#: 60173be98e524aabbb08f39960c30bc2
+msgid "API Wrapper Tool"
+msgstr "API 包装器工具"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:403
+#: f1181566c52449578a90a7d3014b5da2
+msgid "File Processor Tool"
+msgstr "文件处理器工具"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:465
+#: b1eb2479a6514a6fb816423cef375f9e
+msgid "Database Tool"
+msgstr "数据库工具"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:529
+#: 5fd405590e8c40618e3138ea89b154ec
+msgid "Advanced Tool Features"
+msgstr "高级工具功能"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:532
+#: 61fd88393b844027b0b5271e8e2f725a
+msgid "Adding Caching"
+msgstr "添加缓存"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:586
+#: 3c2887f078da48d7979db6d16beb22c1
+msgid "Rate Limiting"
+msgstr "速率限制"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:619
+#: fca092c333674d02be8e441a2a9a4fc7
+msgid "Error Handling and Retries"
+msgstr "错误处理和重试"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:650
+#: f001ba221d674482a09ce3c20ea4e9d0
+msgid "Tool Configuration"
+msgstr "工具配置"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:653
+#: 241105259b884efcb0ea1a51c88bf1ee
+msgid "Configuration Schema"
+msgstr "配置模式"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:655
+#: ddd4215dc8274d4eaa3da4d0b0bde6fd
+msgid "All tools require a configuration that follows this schema:"
+msgstr "所有工具都需要遵循此模式的配置："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:679
+#: 706854813d3d49ee81ce21c5e714d61c
+msgid "Environment Variables"
+msgstr "环境变量"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:681
+#: 413ee7d51aba4408b66778a78ac6a7ba
+msgid "Use environment variables for sensitive configuration:"
+msgstr "对敏感配置使用环境变量："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:691
+#: 5375ba55f92e4155870cb67972aaf5c5
+msgid "Set these in your environment:"
+msgstr "在您的环境中设置这些："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:700
+#: 3038095bef50470188f772a5583b7fb9
+msgid "Parameter Validation"
+msgstr "参数验证"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:702
+#: ee12d496330448ad97557aaaf61e9d45
+msgid "Use JSON Schema to define and validate parameters:"
+msgstr "使用 JSON Schema 定义和验证参数："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:733
+#: 397489def39042bb81147b3a470e0beb
+msgid "Best Practices"
+msgstr "最佳实践"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:736
+#: 86ddeba03c534a5189d8a948e3de44ac
+msgid "BaseTool Inheritance"
+msgstr "BaseTool 继承"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:738
+#: 08d428e02966476eb8b0ccbff0bf443f
+msgid "**Always inherit from BaseTool:**"
+msgstr "**始终继承 BaseTool：**"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:762
+#: 0692f9bcedb84c61a0cf9c628c6dddd2
+msgid ""
+"**Benefits of BaseTool inheritance:** - Consistent interface across all "
+"tools - Built-in validation framework - Standardized error handling - "
+"Configuration management - Logging support - Type safety"
+msgstr ""
+"**BaseTool 继承的好处：** - 所有工具的一致接口 - 内置验证框架 - 标准化的错误处理 - "
+"配置管理 - 日志支持 - 类型安全"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:771
+#: 4d3028b255cf468f87ba1c0e0c024159
+msgid "Error Handling"
+msgstr "错误处理"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:773
+#: 5db2f5e0a1ea4331ba279aabdac4de58
+msgid "Always implement proper error handling:"
+msgstr "始终实现适当的错误处理："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:798
+#: 34fd29974bb848399295ac5b6dd13b3c
+msgid "Input Validation"
+msgstr "输入验证"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:800
+#: d9a0c52c790d410e902af198271efe09
+msgid "Validate inputs before processing:"
+msgstr "在处理之前验证输入："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:824
+#: cb2a7243b09e4eada7eab6b9d3a355be
+msgid "Consistent Return Format"
+msgstr "一致的返回格式"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:826
+#: 66fa9223ab354fb191f0c7358debee6f
+msgid "Always return a dictionary with consistent structure:"
+msgstr "始终返回具有一致结构的字典："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:845
+#: bd90a29d2da94ca893a9112f46ac2d1e
+msgid "Logging"
+msgstr "日志记录"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:847
+#: cc84e13318164c298760f9a90006d99d
+msgid "Add logging for debugging and monitoring:"
+msgstr "添加日志记录以进行调试和监控："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:883
+#: 80582487e31148c2ae319b2c11628504
+msgid "Testing Your Tools"
+msgstr "测试您的工具"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:886
+#: c63e12e6afc64bf1a03a15e630235622
+msgid "Unit Testing"
+msgstr "单元测试"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:888
+#: ea2971faf35846c0aa44d3151ad9dc65
+msgid "Create unit tests for your tools:"
+msgstr "为您的工具创建单元测试："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:913
+#: 755388e493624b208d927ea4d4f618c2
+msgid "Integration Testing"
+msgstr "集成测试"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:915
+#: e04c4f5275904c5da0d9c54fa30442aa
+msgid "Test with ToolUniverse integration:"
+msgstr "使用 ToolUniverse 集成进行测试："
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:933
+#: cb0ae19c1bbe40ebb60770ea67299d54
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:936
+#: 67ac2c08f5fc4ea2a0f81b792d536f9d
+msgid "Common Issues"
+msgstr "常见问题"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:942
+#: bb5e6bdfbfe64aac99e75c792b650fed
+msgid "Problem"
+msgstr "问题"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:943
+#: 8782a399f42f47a08840eb7cecd154f6
+msgid "Solution"
+msgstr "解决方案"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:944
+#: 80b149ea8b064bc29023ee369fd352e9
+msgid "Tool not found"
+msgstr "未找到工具"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:945
+#: dee0f52c9a4645af84f3699ca2d26321
+msgid "Check file name ends with ``_tool.py`` and is in ``src/tooluniverse/``"
+msgstr "检查文件名以 ``_tool.py`` 结尾并位于 ``src/tooluniverse/`` 中"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:946
+#: bd796399979d4bedb440787b95157649
+msgid "Import error"
+msgstr "导入错误"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:947
+#: b41670773e0449ada907b2521cc10f70
+msgid "Test: ``python -c \"from tooluniverse.your_tool import YourTool\"``"
+msgstr "测试：``python -c \"from tooluniverse.your_tool import YourTool\"``"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:948
+#: f5d23f73fa6442ac960c09b956829fa1
+msgid "Config error"
+msgstr "配置错误"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:949
+#: 6068cfc02d714bc8a68678f7497700e6
+msgid "Validate JSON: ``json.loads(json.dumps(config))``"
+msgstr "验证 JSON: ``json.loads(json.dumps(config))``"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:950
+#: 7b2e91568c064e2a80a00479d2567e85
+msgid "Runtime error"
+msgstr "运行时错误"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:951
+#: 6f5061445966429f9db8ad089b9e8dbf
+#, python-brace-format
+msgid "Add try/catch, return ``{\"error\": str(e), \"success\": False}``"
+msgstr "添加 try/catch，返回 ``{\"error\": str(e), \"success\": False}``"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:952
+#: 57a8c50e11db4da99fc8f54b0d824e17
+msgid "Wrong parameters"
+msgstr "参数错误"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:953
+#: 8a0d7e15efa14d1a8351a0f1368e7024
+msgid "Check parameter schema matches your ``execute()`` method"
+msgstr "检查参数模式是否与您的 ``execute()`` 方法匹配"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:954
+#: 23ae9cf4a01748459dd890b27f3b71ba
+msgid "BaseTool inheritance issues"
+msgstr "BaseTool 继承问题"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:955
+#: 78990ec6ecc74d839d02753768658ccb
+msgid ""
+"Ensure your class inherits from ``BaseTool`` and calls "
+"``super().__init__()``"
+msgstr ""
+"确保您的类继承自 ``BaseTool`` 并调用 "
+"``super().__init__()``"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:956
+#: db0d39dfe26e457990e7d1da24844984
+msgid "Validation errors"
+msgstr "验证错误"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:957
+#: 0130278661dc4d85bbb936ebf31816e3
+msgid "Implement ``validate_input()`` method for proper input validation"
+msgstr "实现 ``validate_input()`` 方法以进行正确的输入验证"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:960
+#: 933f920404b84b62928040e977b91c4c
+msgid "Debugging Tools"
+msgstr "调试工具"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:962
+#: 08fe19946503409ab4f178f27353e2ef
+msgid "Enable debug logging:"
+msgstr "启用调试日志:"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:973
+#: 8781baf7c0a84a59bfaf202ed54df6c4
+msgid "Check tool registration:"
+msgstr "检查工具注册:"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:985
+#: eb9b84ce7948455eb243b01c7491d5b4
+msgid "Testing Checklist"
+msgstr "测试清单"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:987
+#: 511d52c44e7942bcae0e62de92430e3e
+msgid "Before deploying your tool, verify:"
+msgstr "在部署工具之前，请验证:"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:989
+#: 6d746f1ee3e14ee1bb62ddd4bfecbf74
+msgid "[ ] File ends with ``_tool.py``"
+msgstr "[ ] 文件以 ``_tool.py`` 结尾"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:990
+#: f4148fc0b7014e7ab84104dc37b61748
+msgid "[ ] Placed in ``src/tooluniverse/``"
+msgstr "[ ] 放置在 ``src/tooluniverse/`` 中"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:991
+#: 3ca2f2a5c63a48dfb2257202879468ff
+msgid "[ ] Class inherits from ``BaseTool``"
+msgstr "[ ] 类继承自 ``BaseTool``"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:992
+#: 5a253001a4c640b1a13c449a3dfd8461
+msgid "[ ] Class has ``__init__(self, tool_config: Dict[str, Any] = None)``"
+msgstr "[ ] 类有 ``__init__(self, tool_config: Dict[str, Any] = None)``"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:993
+#: e40a57fd1dc8426184d27a57bfc5214b
+msgid "[ ] Class has ``execute(self, **kwargs) -> Dict[str, Any]`` method"
+msgstr "[ ] 类有 ``execute(self, **kwargs) -> Dict[str, Any]`` 方法"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:994
+#: 87b2990d666d449899ee0f0e7beef8a5
+msgid "[ ] Class has ``validate_input(self, **kwargs) -> None`` method"
+msgstr "[ ] 类有 ``validate_input(self, **kwargs) -> None`` 方法"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:995
+#: fb9279ea11d74902a7aee0b5e62b279c
+msgid ""
+"[ ] Config has all required fields (``name``, ``type``, ``description``, "
+"``parameter``)"
+msgstr ""
+"[ ] 配置包含所有必需字段 (``name``, ``type``, ``description``, "
+"``parameter``)"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:996
+#: fcc5616cb2b04eecaeaad34b554e1cce
+msgid "[ ] Returns consistent format (``success: True/False``)"
+msgstr "[ ] 返回一致格式 (``success: True/False``)"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:997
+#: f0f61699083a4c8f89e572604fd85a38
+msgid "[ ] Error handling implemented"
+msgstr "[ ] 错误处理已实现"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:998
+#: c08913b6416c42de9e312603cdb07f52
+msgid "[ ] Unit tests written"
+msgstr "[ ] 单元测试已编写"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:999
+#: ef20c08051fc4e5c934ec491fcd6e7e8
+msgid "[ ] Integration test works"
+msgstr "[ ] 集成测试正常工作"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:1002
+#: 6dbac21e9ee84d249c1dcb632ed3242d
+msgid "Next Steps"
+msgstr "下一步"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:1004
+#: a7176fbadb7442a79bc739c0382f0ebd
+msgid "Now that you can create local tools:"
+msgstr "现在您可以创建本地工具:"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:1006
+#: f08e191e18fd48d68dea3d6e8a062053
+msgid ""
+"🔗 **Remote Tools**: :doc:`remote_tool_registration` - Learn about remote "
+"tool integration"
+msgstr ""
+"🔗 **远程工具**： :doc:`remote_tool_registration` - 了解远程工具集成"
+"🔗 **远程工具**： :doc:`remote_tool_registration` - 了解远程工具集成"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:1007
+#: e729b8ebf70549baa1a50a50d35bae36
+msgid ""
+"📤 **Contributing**: :doc:`contributing_tools` - Submit your tools to "
+"ToolUniverse"
+msgstr ""
+"📤 **贡献**： :doc:`contributing_tools` - 将您的工具提交到 ToolUniverse"
+"📤 **贡献**： :doc:`contributing_tools` - 将您的工具提交到 ToolUniverse"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:1008
+#: 4e9f65424b5446168424cf9a5e1705bf
+msgid ""
+"🤖 **AI Integration**: "
+":doc:`../guide/building_ai_scientists/mcp_integration` - Connect your "
+"tools with AI assistants"
+msgstr ""
+"🤖 **AI 集成**： "
+":doc:`../guide/building_ai_scientists/mcp_integration` - 将您的工具与 AI 助手连接"
+"🤖 **AI 集成**： "
+":doc:`../guide/building_ai_scientists/mcp_integration` - 将您的工具与 AI 助手连接"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:1009
+#: 1519142b585b42e88107603bffd6b27f
+msgid ""
+"🔬 **Scientific Workflows**: :doc:`../guide/scientific_workflows` - Build "
+"research pipelines"
+msgstr ""
+"🔬 **科学工作流程**： :doc:`../guide/scientific_workflows` - 构建研究管道"
+"🔬 **科学工作流程**： :doc:`../guide/scientific_workflows` - 构建研究管道"
+
+#: ../../expand_tooluniverse/local_tool_registration.rst:1012
+#: eb580c668405469899ce49c33eb5acd5
+msgid ""
+"**Development tip**: Start simple, test thoroughly, and gradually add "
+"complexity. The ToolUniverse community is here to help if you get stuck!"
+msgstr ""
+"**开发提示**：从简单开始，彻底测试，并逐渐增加复杂性。如果您遇到困难，ToolUniverse 社区会在这里帮助您！"
+"**开发提示**：从简单开始，彻底测试，并逐渐增加复杂性。如果您遇到困难，ToolUniverse 社区会在这里帮助您！"
+

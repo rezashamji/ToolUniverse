@@ -86,9 +86,11 @@ Keyword search uses a sophisticated text processing pipeline:
    - Generation of n-grams (bigrams and trigrams)
 
 2. **Relevance Scoring**:
+
    - Uses TF-IDF (Term Frequency-Inverse Document Frequency)
    - Formula: ``Relevance = TF × IDF × log(1 + QueryFrequency)``
    - Hierarchical bonus structure:
+
      - Tool name matches: 2.0× multiplier
      - Exact phrase matches: 1.5× multiplier
 
@@ -518,7 +520,7 @@ Further Resources
 - :doc:`custom_tools` - Creating your own tools
 
 **API References**:
-- :doc:`../api_comprehensive` - Complete API documentation
+- :doc:`api_comprehensive` - Complete API documentation
 - :doc:`../reference/tool_categories` - Tool categories and descriptions
 
 **Need Help?**:

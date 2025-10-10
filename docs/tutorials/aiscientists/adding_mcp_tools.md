@@ -7,7 +7,7 @@
 1. [MCP 工具类型概述](#mcp-工具类型概述)
 2. [配置 MCP 客户端工具](#配置-mcp-客户端工具)
 3. [使用自动加载器](#使用自动加载器)
-4. [代理工具配置](#代理工具配置)
+4. [智能体工具配置](#智能体工具配置)
 5. [高级配置选项](#高级配置选项)
 6. [故障排除](#故障排除)
 
@@ -26,7 +26,7 @@ ToolUniverse 支持三种主要的 MCP 工具类型：
 - **适用场景**: 快速集成整个 MCP 服务器的工具集
 
 ### 3. MCPProxyTool
-- **用途**: 为特定的 MCP 工具创建直接代理
+- **用途**: 为特定的 MCP 工具创建直接智能体
 - **特点**: 一对一映射，透明转发
 - **适用场景**: 将单个 MCP 工具集成为 ToolUniverse 工具
 
@@ -151,7 +151,7 @@ discovered = tu.run_tool("mcp_auto_loader", {
     "operation": "discover"
 })
 
-# 生成代理工具配置
+# 生成智能体工具配置
 configs = tu.run_tool("mcp_auto_loader", {
     "operation": "generate_configs"
 })
@@ -164,9 +164,9 @@ result = tu.run_tool("mcp_auto_loader", {
 })
 ```
 
-## 代理工具配置
+## 智能体工具配置
 
-### 手动创建代理工具
+### 手动创建智能体工具
 
 ```json
 {
@@ -189,9 +189,9 @@ result = tu.run_tool("mcp_auto_loader", {
 }
 ```
 
-### 批量创建代理工具
+### 批量创建智能体工具
 
-使用 `MCPServerDiscovery` 类批量发现和创建代理工具：
+使用 `MCPServerDiscovery` 类批量发现和创建智能体工具：
 
 ```python
 from tooluniverse.mcp_client_tool import MCPServerDiscovery
@@ -466,7 +466,7 @@ print("工具列表:", discovery_result["tools"])
 1. ✅ 理解三种 MCP 工具类型的用途和特点
 2. ✅ 配置和使用 MCPClientTool 进行通用 MCP 操作
 3. ✅ 使用 MCPAutoLoaderTool 自动发现和加载工具
-4. ✅ 创建 MCPProxyTool 进行直接工具代理
+4. ✅ 创建 MCPProxyTool 进行直接工具智能体
 5. ✅ 处理常见问题和故障排除
 6. ✅ 应用最佳实践确保安全和性能
 

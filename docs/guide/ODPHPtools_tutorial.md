@@ -71,7 +71,7 @@ The tools are designed to be chained:
    * Input: demographics (age, sex, pregnant) + language.
    * Output: resources with metadata and AccessibleVersion links.
 
-   ```json
+   ```javascript
    {
      "Total": 24,
      "MyHFHeading": "Here are important ways for a woman age 35 to stay healthy...",
@@ -97,7 +97,7 @@ The tools are designed to be chained:
    * Input: 1–3 URLs from AccessibleVersion or RelatedItems.
    * Output: cleaned article text, with metadata and PDF detection.
 
-   ```json
+   ```javascript
    {
      "results": [
        {

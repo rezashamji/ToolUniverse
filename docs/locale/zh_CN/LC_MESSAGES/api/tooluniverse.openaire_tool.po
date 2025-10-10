@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.openaire_tool.rst:2 5296df79a27a4c5cb3937cb4174425ce
+msgid "tooluniverse.openaire\\_tool module"
+msgstr "tooluniverse.openaire_tool 模块"
+
+#: 6942653a91994000b754f229b727d579 of
+#: tooluniverse.openaire_tool.OpenAIRETool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 3a6165f3f23d4cd3a3330567adf7b01f of
+#: tooluniverse.openaire_tool.OpenAIRETool:1
+msgid ""
+"Search OpenAIRE Explore for research products (publications by default)."
+msgstr "在 OpenAIRE Explore 中搜索研究成果（默认显示出版物）。"
+
+#: 36fc4fa7ca814ac1978dd05947782676 of
+#: tooluniverse.openaire_tool.OpenAIRETool:3
+msgid "Parameters (arguments):"
+msgstr "参数（参数列表）："
+
+#: 3d1f3e9b585e49bc9ad10b67f1f32d90 of
+#: tooluniverse.openaire_tool.OpenAIRETool:4
+msgid ""
+"query (str): Query string max_results (int): Max number of results (default "
+"10, max 100) type (str): product type filter: publications | datasets | "
+"software"
+msgstr ""
+"query (str)：查询字符串  \n"
+"max_results (int)：最大结果数（默认值为10，最大值为100）  \n"
+"type (str)：产品类型过滤器：publications | datasets | software"
+
+#: 5b947a16fe35472183535ccc3885bf31 of
+#: tooluniverse.openaire_tool.OpenAIRETool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 3aa0b8eaf2ef458c915fcd3f1e312619 of
+#: tooluniverse.openaire_tool.OpenAIRETool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以适应大多数具体工具实现所期望的输入字典。"

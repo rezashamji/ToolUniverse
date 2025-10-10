@@ -21,6 +21,35 @@
                 }
             },
             "required": ["query"]
+        },
+        "return_schema": {
+            "type": "array",
+            "description": "List of papers from Semantic Scholar matching the search query",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "Title of the paper"
+                    },
+                    "abstract": {
+                        "type": "string",
+                        "description": "Abstract of the paper"
+                    },
+                    "journal": {
+                        "type": "string",
+                        "description": "Journal or venue name"
+                    },
+                    "year": {
+                        "type": "integer",
+                        "description": "Publication year"
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "URL to the paper on Semantic Scholar"
+                    }
+                }
+            }
         }
     }
 ]

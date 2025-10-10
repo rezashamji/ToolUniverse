@@ -1,0 +1,816 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:2
+#: 4e775cad024743b98296f3e4349d052b
+msgid "Fda Drug Adverse Event Tools"
+msgstr "FDA 药品不良事件工具"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:4
+#: 767254af16214401b2b58bdd10b8142e
+msgid ""
+"**Configuration File**: ``fda_drug_adverse_event_tools.json`` **Tool Type**:"
+" Local **Tools Count**: 15"
+msgstr ""
+"**配置文件**：``fda_drug_adverse_event_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：15"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:8
+#: 023953a0b18943779d85e8712df20fc7
+msgid ""
+"This page contains all tools defined in the "
+"``fda_drug_adverse_event_tools.json`` configuration file."
+msgstr "此页面包含 ``fda_drug_adverse_event_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:11
+#: 2d2bf2859b9c4374baf6077f7f90145f
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:14
+#: 9056c02ebaf943f78386a359e8de56f6
+msgid ""
+"**FAERS_count_additive_administration_routes** (Type: "
+"FDACountAdditiveReactionsTool)"
+msgstr ""
+"**FAERS_count_additive_administration_routes**（类型：FDACountAdditiveReactionsTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:16
+#: 2ae1ea0b7e73462e8dbcb7e75f210ee1
+msgid ""
+"Additive multi-drug data: Enumerate and count administration routes for "
+"adverse events across spe..."
+msgstr "多重药物添加数据：枚举并统计不良事件中各给药途径的情况，涵盖特定..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: d0483a1d5cb74592a10b85af04ab33a4
+msgid "FAERS_count_additive_administration_routes tool specification"
+msgstr "FAERS_count_additive_administration_routes 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:20
+#: ../../tools/fda_drug_adverse_event_tools.rst:54
+#: ../../tools/fda_drug_adverse_event_tools.rst:100
+#: ../../tools/fda_drug_adverse_event_tools.rst:140
+#: ../../tools/fda_drug_adverse_event_tools.rst:180
+#: ../../tools/fda_drug_adverse_event_tools.rst:220
+#: ../../tools/fda_drug_adverse_event_tools.rst:260
+#: ../../tools/fda_drug_adverse_event_tools.rst:299
+#: ../../tools/fda_drug_adverse_event_tools.rst:330
+#: ../../tools/fda_drug_adverse_event_tools.rst:364
+#: ../../tools/fda_drug_adverse_event_tools.rst:403
+#: ../../tools/fda_drug_adverse_event_tools.rst:443
+#: ../../tools/fda_drug_adverse_event_tools.rst:474
+#: ../../tools/fda_drug_adverse_event_tools.rst:520
+#: ../../tools/fda_drug_adverse_event_tools.rst:559
+#: 0cc0d7a848d94ec7912bbc315fb00a6b 193e174b7e9b4531aaf33a94faf25dc6
+#: 1a81ff74fc984c999ebdfe2fb2a11bf9 22bfe46b25ee4f59bd29313568570c39
+#: 2ab5e6a49b80462782bc1bd840144fa7 5bdad4702b7b41c3a834fd1fa0d1deac
+#: 6fcee31aa69e4d43aaa3e0e8a96059b6 76cfb5b866cd46268926836fee692683
+#: 8cfea681dd2542868f45aab394b6e2c6 91d283d99dec46369443fcd81ad74495
+#: 9c452f09c34747a28b86bdca7bb298bb 9e7c2fd0b13343408c337bca52692a33
+#: ac1599af2b7a4eea8ae6635060bf0acd bb13dc334bd14d9899ad28a0a91afdd7
+#: c19e529900ff45178d7bad3cf356edfd
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:22
+#: 401af72f19c44442bc2217431a7fa6de
+msgid "**Name**: ``FAERS_count_additive_administration_routes``"
+msgstr "**名称**：``FAERS_count_additive_administration_routes``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:23
+#: ../../tools/fda_drug_adverse_event_tools.rst:57
+#: ../../tools/fda_drug_adverse_event_tools.rst:103
+#: ../../tools/fda_drug_adverse_event_tools.rst:143
+#: ../../tools/fda_drug_adverse_event_tools.rst:183
+#: ../../tools/fda_drug_adverse_event_tools.rst:223
+#: 0e633ee5ab714d14854505c2e6e9faf6 0ea64a67c755406da9b263432738b4f8
+#: 56fd673ea06843818f43410b07f4548f 6d557d0c1f39439998e9217864b71695
+#: 8630ebb684034c08b222b21f01001cc7 c9089b59bacc4e72ad8a9740774bb88d
+msgid "**Type**: ``FDACountAdditiveReactionsTool``"
+msgstr "**类型**：``FDACountAdditiveReactionsTool``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:24
+#: 7fad071a85cc43c59ef9d1ab62360598
+msgid ""
+"**Description**: Additive multi-drug data: Enumerate and count "
+"administration routes for adverse events across specified medicinal "
+"products, using standardized route codes. Data source: FDA Adverse Event "
+"Reporting System (FAERS)."
+msgstr "**描述**：添加多药数据：列举并统计指定药品的不良事件给药途径，使用标准化的途径代码。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:26
+#: ../../tools/fda_drug_adverse_event_tools.rst:60
+#: ../../tools/fda_drug_adverse_event_tools.rst:106
+#: ../../tools/fda_drug_adverse_event_tools.rst:146
+#: ../../tools/fda_drug_adverse_event_tools.rst:186
+#: ../../tools/fda_drug_adverse_event_tools.rst:226
+#: ../../tools/fda_drug_adverse_event_tools.rst:266
+#: ../../tools/fda_drug_adverse_event_tools.rst:305
+#: ../../tools/fda_drug_adverse_event_tools.rst:336
+#: ../../tools/fda_drug_adverse_event_tools.rst:370
+#: ../../tools/fda_drug_adverse_event_tools.rst:409
+#: ../../tools/fda_drug_adverse_event_tools.rst:449
+#: ../../tools/fda_drug_adverse_event_tools.rst:480
+#: ../../tools/fda_drug_adverse_event_tools.rst:526
+#: ../../tools/fda_drug_adverse_event_tools.rst:565
+#: 08c80a19636f4518bf81ba797dc1bcda 19b44e34131340389a43fd71d1ee293a
+#: 3380a906cb8a41979eb8944c0772e0eb 3a94d1a6647b47acb4d8c40cf1ed7a3e
+#: 3b1e64d5f77749788d367406ca112747 51230126607e48c59368ef863ffd2725
+#: 6bac06653dbb48ffbf13c8d2c55c1312 af9f6b09313e4b179a9a27f34f2d950f
+#: b7a1e6afbab5400f8c482834273704df decffd1d2f8048f78f9c055c12fb98c2
+#: e576068327434c299b7e07b45606452f eae2250c498049349ade62be8fe77f9b
+#: ebace9746b4f49b197460d79b7ae1d84 f63eeb2b324b4abf82ffd0cc322dc37f
+#: f8ae8d3168434771a9f96c6449a8cc7b
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:28
+#: ../../tools/fda_drug_adverse_event_tools.rst:62
+#: ../../tools/fda_drug_adverse_event_tools.rst:108
+#: ../../tools/fda_drug_adverse_event_tools.rst:148
+#: ../../tools/fda_drug_adverse_event_tools.rst:188
+#: ../../tools/fda_drug_adverse_event_tools.rst:228
+#: 03ce9786f2de4faab017ec9840af24a3 51fe695cea7e494194e5b00703905e2b
+#: 60c5c64d437241ae83032dd2a1e87168 c85f6dbca8524e539633d4a9b66deb6e
+#: e2496214506e48ffab18b12725ad98eb fb3f20bab81d4102927c349fa166a284
+msgid ""
+"``medicinalproducts`` (array) (required) Array of medicinal product names."
+msgstr "``medicinalproducts``（数组）（必填）药品名称的数组。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:31
+#: ../../tools/fda_drug_adverse_event_tools.rst:117
+#: ../../tools/fda_drug_adverse_event_tools.rst:197
+#: 0ca78ffc14ea417195e2ecea46c45ee5 2c5af24ee250402b99c5cb3421e05fac
+#: 807c30e8a9f944cbaaf4662bb1ecaf09
+msgid "``serious`` (string) (optional) Filter by seriousness."
+msgstr "``serious``（字符串）（可选）按严重性筛选。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:34
+#: ../../tools/fda_drug_adverse_event_tools.rst:80
+#: ../../tools/fda_drug_adverse_event_tools.rst:120
+#: ../../tools/fda_drug_adverse_event_tools.rst:160
+#: ../../tools/fda_drug_adverse_event_tools.rst:200
+#: ../../tools/fda_drug_adverse_event_tools.rst:240
+#: ../../tools/fda_drug_adverse_event_tools.rst:280
+#: ../../tools/fda_drug_adverse_event_tools.rst:310
+#: ../../tools/fda_drug_adverse_event_tools.rst:344
+#: ../../tools/fda_drug_adverse_event_tools.rst:384
+#: ../../tools/fda_drug_adverse_event_tools.rst:423
+#: ../../tools/fda_drug_adverse_event_tools.rst:454
+#: ../../tools/fda_drug_adverse_event_tools.rst:500
+#: ../../tools/fda_drug_adverse_event_tools.rst:540
+#: ../../tools/fda_drug_adverse_event_tools.rst:579
+#: 03f09441d85a449eb6dab8b17d5225bf 09da1c1898124b3682ac74716abb90f3
+#: 0d0fb53ea2284a30a0e6799598225f76 1b7629afe9de40d5bd347eb3911c56a5
+#: 3adcc9d15a3b4e0c9b624e862b585f1a 3d3aac261d024e7c87d834288676b77e
+#: 5a84d4bac4a04d6391f516a5a0af1f1f 5da048250b6045ca83f8bf36e3e145e4
+#: a5f6d7345f5c4b47a121ebdad1d47425 ad181714ed684aa4ad1d170dd8c7f336
+#: be9c48b9df804467b62b33e6ab97af49 c3b107392e4a4a75ad862c9c2927a0c2
+#: dedc04cf6e9f450c9ffa10a0fcf12d1e f866c51981cf42e3b999ca4493a5f338
+#: fc2e15ca3a82446f8570e859694d2eeb
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:48
+#: c8b12d279d0e4798829ef86243753a4a
+msgid ""
+"**FAERS_count_additive_adverse_reactions** (Type: "
+"FDACountAdditiveReactionsTool)"
+msgstr ""
+"**FAERS_count_additive_adverse_reactions**（类型：FDACountAdditiveReactionsTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:50
+#: a6daf43a900441998ec16b4103bea615
+msgid ""
+"Additive multi-drug data: Aggregate adverse reaction counts across specified"
+" medicinal products, ..."
+msgstr "添加性多药数据：汇总指定药品的不良反应计数，..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 1dbe63e2a9ba48319d1a1ae5bc08eaad
+msgid "FAERS_count_additive_adverse_reactions tool specification"
+msgstr "FAERS_count_additive_adverse_reactions 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:56
+#: 77f488e1d55e4800b79d6e03985cbac9
+msgid "**Name**: ``FAERS_count_additive_adverse_reactions``"
+msgstr "**名称**: ``FAERS_count_additive_adverse_reactions``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:58
+#: 4b694ad60d7447298b15df90c583f055
+msgid ""
+"**Description**: Additive multi-drug data: Aggregate adverse reaction counts"
+" across specified medicinal products, stratified by demographics, "
+"seriousness, and outcomes. Data source: FDA Adverse Event Reporting System "
+"(FAERS)."
+msgstr ""
+"**描述**：添加剂多药数据：汇总指定药品的不良反应计数，并按人口统计学特征、严重程度和结果进行分层。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:65
+#: 56ad03a57877400ea1188c05d288f075
+msgid "``patientsex`` (string) (optional) Filter by patient sex."
+msgstr "``patientsex``（字符串）（可选）按患者性别筛选。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:68
+#: 437fa3d515e7417b84455417db6229c3
+msgid "``patientagegroup`` (string) (optional) Filter by patient age group."
+msgstr "``patientagegroup``（字符串）（可选）按患者年龄组进行筛选。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:71
+#: bea461c0aeb8467f8948781a8ba25a64
+msgid ""
+"``occurcountry`` (string) (optional) Filter by ISO2 country code of "
+"occurrence."
+msgstr "``occurcountry``（字符串）（可选）根据发生地的 ISO2 国家代码进行筛选。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:74
+#: 181f762656cc4bf7b66435b3c1a82674
+msgid "``serious`` (string) (optional) Filter by seriousness classification."
+msgstr "``serious``（字符串）（可选）按严重性分类进行筛选。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:77
+#: f0d0574e5f674e248b8e2773cf25810f
+msgid "``seriousnessdeath`` (string) (optional) Filter for fatal outcomes."
+msgstr "``seriousnessdeath``（字符串）（可选）筛选致命结果。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:94
+#: b544c2b51a6644739aa5bf8fe2094af8
+msgid ""
+"**FAERS_count_additive_event_reports_by_country** (Type: "
+"FDACountAdditiveReactionsTool)"
+msgstr ""
+"**FAERS_count_additive_event_reports_by_country**（类型：FDACountAdditiveReactionsTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:96
+#: cf2d3854b0e24e7f964a2af5fdb1b9b6
+msgid ""
+"Additive multi-drug data: Aggregate report counts by country of occurrence "
+"across specified medic..."
+msgstr "添加性多药数据：按指定药物在各发生国家的汇总报告数量统计"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: bc4c3df2a73542be9c0f4162d0abe1ad
+msgid "FAERS_count_additive_event_reports_by_country tool specification"
+msgstr "FAERS_count_additive_event_reports_by_country 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:102
+#: b4dffcd0e2864f82b76ba43b680266a2
+msgid "**Name**: ``FAERS_count_additive_event_reports_by_country``"
+msgstr "**名称**: ``FAERS_count_additive_event_reports_by_country``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:104
+#: 4f43c02523e3433e81cc9e5c38fb6c05
+msgid ""
+"**Description**: Additive multi-drug data: Aggregate report counts by "
+"country of occurrence across specified medicinal products. Data source: FDA "
+"Adverse Event Reporting System (FAERS)."
+msgstr "**描述**：添加剂多药数据：按发生国家汇总指定药品的报告数量。数据来源：美国食品药品监督管理局不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:111
+#: ../../tools/fda_drug_adverse_event_tools.rst:191
+#: ../../tools/fda_drug_adverse_event_tools.rst:231
+#: 4dd3f7863e2b40e38d58152c0867b9ad 7afe00b97c11463b92d44d5019a61fe4
+#: d7d20ad05f8c44a3bf00651702a0e17a
+msgid "``patientsex`` (string) (optional) Filter by sex."
+msgstr "``patientsex``（字符串）（可选）按性别筛选。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:114
+#: ../../tools/fda_drug_adverse_event_tools.rst:194
+#: ../../tools/fda_drug_adverse_event_tools.rst:234
+#: 0ded8e4083954edfadc907ad0f938e63 ac3472fda6434a5e8b9aa0c012449dd9
+#: d236eceedceb41538a7eb3cf8525752c
+msgid "``patientagegroup`` (string) (optional) Filter by age group."
+msgstr "``patientagegroup``（字符串）（可选）按年龄组筛选。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:134
+#: 819b4469f2d34cf183d072eec8e7bd11
+msgid ""
+"**FAERS_count_additive_reaction_outcomes** (Type: "
+"FDACountAdditiveReactionsTool)"
+msgstr ""
+"**FAERS_count_additive_reaction_outcomes**（类型：FDACountAdditiveReactionsTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:136
+#: 3634c6a3862f407aa32e11bf3b889037
+msgid ""
+"Additive multi-drug data: Determine reaction outcome counts (e.g., "
+"recovered, resolving, fatal) a..."
+msgstr "加成多药数据：确定反应结果计数（例如，恢复、缓解、致死）等..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 76240837b0024a40b8c9e30bfddae715
+msgid "FAERS_count_additive_reaction_outcomes tool specification"
+msgstr "FAERS_count_additive_reaction_outcomes 工具规格说明"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:142
+#: 4567019f4a8e495f85071345fbe23eab
+msgid "**Name**: ``FAERS_count_additive_reaction_outcomes``"
+msgstr "**名称**：``FAERS_count_additive_reaction_outcomes``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:144
+#: 604a3bbd37064a999e95cb9d0e762d65
+msgid ""
+"**Description**: Additive multi-drug data: Determine reaction outcome counts"
+" (e.g., recovered, resolving, fatal) across medicinal products using "
+"standardized outcome mappings. Data source: FDA Adverse Event Reporting "
+"System (FAERS)."
+msgstr ""
+"**描述**：多药物叠加数据：使用标准化的结果映射，确定各药品的反应结果计数（例如，恢复、缓解、致死）。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:151
+#: ../../tools/fda_drug_adverse_event_tools.rst:414
+#: 9be6ba672b4941a7b91c58e5e59a3640 af0f04c97bb24806a07c45c1298c1939
+msgid "``patientsex`` (string) (optional) No description"
+msgstr "``patientsex``（字符串）（可选）无描述"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:154
+#: ../../tools/fda_drug_adverse_event_tools.rst:417
+#: 58a7cbc064cb4a86a1a60f1211a351ec 7dabac7f7dc14e859553deac7da7df12
+msgid "``patientagegroup`` (string) (optional) No description"
+msgstr "``patientagegroup``（字符串）（可选） 无描述"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:157
+#: ../../tools/fda_drug_adverse_event_tools.rst:420
+#: 27efb0889f564f6e8e675fe5f1150988 f267f1e3691c4f69ac7f54025fa915d4
+msgid "``occurcountry`` (string) (optional) No description"
+msgstr "``occurcountry``（字符串）（可选）无描述"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:174
+#: 877372b2ac85440ab37ceb4d5ce89d38
+msgid ""
+"**FAERS_count_additive_reports_by_reporter_country** (Type: "
+"FDACountAdditiveReactionsTool)"
+msgstr ""
+"**FAERS_count_additive_reports_by_reporter_country**（类型：FDACountAdditiveReactionsTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:176
+#: 3d0ccfd6fac5428abf10986b4de96c74
+msgid ""
+"Additive multi-drug data: Aggregate adverse event reports by primary "
+"reporter country across medi..."
+msgstr "加成多药数据：按主要报告国家汇总不良事件报告，涵盖多种药物的联合使用情况…"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: d5459c1c107e4812a9d69d16b509f16b
+msgid "FAERS_count_additive_reports_by_reporter_country tool specification"
+msgstr "FAERS_count_additive_reports_by_reporter_country 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:182
+#: 4aefdd95ccbf48eba5a54c3ecece6d97
+msgid "**Name**: ``FAERS_count_additive_reports_by_reporter_country``"
+msgstr "**名称**：``FAERS_count_additive_reports_by_reporter_country``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:184
+#: 98ed75b9ff17494081108510e0a78db9
+msgid ""
+"**Description**: Additive multi-drug data: Aggregate adverse event reports "
+"by primary reporter country across medicinal products. Data source: FDA "
+"Adverse Event Reporting System (FAERS)."
+msgstr "**描述**：多药物加成数据：按主要报告者国家汇总各药品的不良事件报告。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:214
+#: 21e71c976e4448ed821fc1e71751fcc4
+msgid ""
+"**FAERS_count_additive_seriousness_classification** (Type: "
+"FDACountAdditiveReactionsTool)"
+msgstr ""
+"**FAERS_count_additive_seriousness_classification**（类型：FDACountAdditiveReactionsTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:216
+#: 5114039073ec4d2faca6aab0fa7a2f54
+msgid ""
+"Additive multi-drug data: Quantify serious vs non-serious classifications "
+"across medicinal produc..."
+msgstr "加成多药数据：量化药品中严重与非严重分类的比例..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: c737c090cb1d4d68b981a7022490c4aa
+msgid "FAERS_count_additive_seriousness_classification tool specification"
+msgstr "FAERS_count_additive_seriousness_classification 工具规格说明"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:222
+#: d673e6af2fe24127b7e8b1de2af3529d
+msgid "**Name**: ``FAERS_count_additive_seriousness_classification``"
+msgstr "**名称**：``FAERS_count_additive_seriousness_classification``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:224
+#: a583242547ad4a3eb099c881804e2618
+msgid ""
+"**Description**: Additive multi-drug data: Quantify serious vs non-serious "
+"classifications across medicinal products, annotated per regulatory "
+"definitions. Data source: FDA Adverse Event Reporting System (FAERS)."
+msgstr "**描述**：多药物叠加数据：根据监管定义，对药品中严重与非严重分类进行量化。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:237
+#: 98bb595ea5ff49e3b31bd7d227e3fb09
+msgid "``occurcountry`` (string) (optional) ISO2 country code filter."
+msgstr "``occurcountry``（字符串）（可选）ISO2 国家代码过滤器。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:254
+#: 0af48b97c0cc41edba0f5c93d1c30b93
+msgid "**FAERS_count_country_by_drug_event** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_count_country_by_drug_event**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:256
+#: 4cb72c42216a4f3f8031e22a544318ad
+msgid ""
+"Count the number of adverse event reports per country of occurrence, "
+"filtered by drug, patient de..."
+msgstr "统计按发生国家分类的不良事件报告数量，筛选条件包括药物、患者信息等..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: d71ca350f3a645eb982043183cc9eee2
+msgid "FAERS_count_country_by_drug_event tool specification"
+msgstr "FAERS_count_country_by_drug_event 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:262
+#: aa0393e1440a4c6f85a8a5fc482d59a3
+msgid "**Name**: ``FAERS_count_country_by_drug_event``"
+msgstr "**名称**：``FAERS_count_country_by_drug_event``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:263
+#: ../../tools/fda_drug_adverse_event_tools.rst:302
+#: ../../tools/fda_drug_adverse_event_tools.rst:333
+#: ../../tools/fda_drug_adverse_event_tools.rst:367
+#: ../../tools/fda_drug_adverse_event_tools.rst:406
+#: ../../tools/fda_drug_adverse_event_tools.rst:446
+#: ../../tools/fda_drug_adverse_event_tools.rst:477
+#: ../../tools/fda_drug_adverse_event_tools.rst:523
+#: ../../tools/fda_drug_adverse_event_tools.rst:562
+#: 008aed03f14a4081ab2a317f744cec94 1492daacc05f4142b74fe790cb0b22b0
+#: 2eaa4edfe62b4a77ac8f5ab7754d01bb 35ebd79d8afd4b97b90152e8525c94ff
+#: 36cfbdbd4e39470daa8a82c626675ad9 4a605047ca7840518efa5cdeb78fa367
+#: 6eff7a4165e0431c9fd555d9a676f1cd a47f47ce45a14dac8ef7884b4efc8b11
+#: e945c902ca2d437a8966ec108897b317
+msgid "**Type**: ``FDADrugAdverseEventTool``"
+msgstr "**类型**：``FDADrugAdverseEventTool``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:264
+#: d36c6f45e012498aa0a76b30e371eb30
+msgid ""
+"**Description**: Count the number of adverse event reports per country of "
+"occurrence, filtered by drug, patient demographics, and seriousness. Data "
+"source: FDA Adverse Event Reporting System (FAERS)."
+msgstr ""
+"**描述**：按发生国家统计不良事件报告数量，可根据药物、患者人口统计信息及严重程度进行筛选。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:268
+#: ../../tools/fda_drug_adverse_event_tools.rst:528
+#: ../../tools/fda_drug_adverse_event_tools.rst:567
+#: 047bca60a3e3471db9482334cad6723e 2ad8467ae0724278ba6ec9c6f372bfdd
+#: 2d4fb87e054e4d2e9b1d1c03a0dc049d
+msgid "``medicinalproduct`` (string) (optional) Drug name."
+msgstr "``medicinalproduct``（字符串）（可选）药品名称。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:271
+#: ../../tools/fda_drug_adverse_event_tools.rst:372
+#: ../../tools/fda_drug_adverse_event_tools.rst:485
+#: ../../tools/fda_drug_adverse_event_tools.rst:531
+#: ../../tools/fda_drug_adverse_event_tools.rst:570
+#: 2c2585ceda9d431ba139c496df2fde83 50c4fcd0171f47a39f19447b843fe34d
+#: 752baea44707445daaeb8debb0a7b9c6 b3cb6aa95fc94369bf23348fcbbe6cce
+#: bb1053c05e0b40d38a11053f75cdc903
+msgid ""
+"``patientsex`` (string) (optional) Patient sex, leave it blank if you don't "
+"want to apply a filter."
+msgstr "``patientsex``（字符串）（可选）患者性别，如不需筛选，请留空。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:274
+#: ../../tools/fda_drug_adverse_event_tools.rst:375
+#: ../../tools/fda_drug_adverse_event_tools.rst:488
+#: ../../tools/fda_drug_adverse_event_tools.rst:534
+#: ../../tools/fda_drug_adverse_event_tools.rst:573
+#: 3f0abb9057944d85841cbba5ac5fbf3d 4695dbbe7a564318a863da5e12edc2b7
+#: 6f1f4cfb3f30411d83a7d9943eb01aa8 a10424207c284264bbe92eaa1a2ca164
+#: e08e84bfaad34b6993a7cfe183efbd54
+msgid "``patientagegroup`` (string) (optional) Patient age group."
+msgstr "``patientagegroup``（字符串）（可选）患者年龄组。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:277
+#: ../../tools/fda_drug_adverse_event_tools.rst:381
+#: ../../tools/fda_drug_adverse_event_tools.rst:494
+#: ../../tools/fda_drug_adverse_event_tools.rst:537
+#: 1087551c73f44837ba0c8bdf4b0793fe 2a12ec4fae2f47c7bfb5bb622f3dd3f9
+#: 2a593e30a92541aab36d9ee619607f96 d0589c7366074e4989ef7a798162066c
+msgid "``serious`` (string) (optional) Whether the event was serious."
+msgstr "``serious``（字符串）（可选）事件是否严重。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:293
+#: 3d20458ceaf9430881114362b361d7a2
+msgid "**FAERS_count_death_related_by_drug** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_count_death_related_by_drug**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:295
+#: 5049f0c3f642449e9a00838a74fbf9c2
+msgid ""
+"Count adverse events associated with patient death for a given drug. Data "
+"source: FDA Adverse Eve..."
+msgstr "统计与患者死亡相关的特定药物不良事件的发生次数。数据来源：FDA不良事件数据库。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 16cdc0292ebe411cb7f84742747bf67e
+msgid "FAERS_count_death_related_by_drug tool specification"
+msgstr "FAERS_count_death_related_by_drug 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:301
+#: 56d966f6a5cd4194a89af2ab73d21373
+msgid "**Name**: ``FAERS_count_death_related_by_drug``"
+msgstr "**名称**：``FAERS_count_death_related_by_drug``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:303
+#: 02bf37777f3647648b0609190c3bf057
+msgid ""
+"**Description**: Count adverse events associated with patient death for a "
+"given drug. Data source: FDA Adverse Event Reporting System (FAERS)."
+msgstr "**描述**：统计与患者死亡相关的特定药物不良事件。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:307
+#: ../../tools/fda_drug_adverse_event_tools.rst:338
+#: ../../tools/fda_drug_adverse_event_tools.rst:411
+#: ../../tools/fda_drug_adverse_event_tools.rst:451
+#: ../../tools/fda_drug_adverse_event_tools.rst:482
+#: 6e82efe1691a4c60aec2be8910d95e5b 737ee5ca25d24a44881e7979238566eb
+#: 88923ae70b874755b111aed7fc406cb6 a18190b021ce443eb12307ada14f87e1
+#: ce2a886bab294d5d8c1ecd9a4c66123a
+msgid "``medicinalproduct`` (string) (required) Drug name."
+msgstr "``medicinalproduct``（字符串）（必填）药品名称。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:324
+#: e70edbdf8c0c4c0ca1f0b36548d611ce
+msgid "**FAERS_count_drug_routes_by_event** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_count_drug_routes_by_event**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:326
+#: 6d13cecee188425eabeb3dd11fb6e64c
+msgid ""
+"Count the most common routes of administration for drugs involved in adverse"
+" event reports. Data ..."
+msgstr "统计不良事件报告中涉及药物的最常见给药途径。数据..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 019fea3ad5764e8b99a2a02e05dfe950
+msgid "FAERS_count_drug_routes_by_event tool specification"
+msgstr "FAERS_count_drug_routes_by_event 工具规格说明"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:332
+#: 8e2132b88c1b48cb887349512778bcd5
+msgid "**Name**: ``FAERS_count_drug_routes_by_event``"
+msgstr "**名称**：``FAERS_count_drug_routes_by_event``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:334
+#: ea1be16a59e34cf499bb991e00476a7a
+msgid ""
+"**Description**: Count the most common routes of administration for drugs "
+"involved in adverse event reports. Data source: FDA Adverse Event Reporting "
+"System (FAERS)."
+msgstr "**描述**：统计不良事件报告中涉及药物的最常见给药途径。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:341
+#: 8e7acd286b144bc79b9305484a804f68
+msgid "``serious`` (string) (optional) Seriousness of event."
+msgstr "``serious``（字符串）（可选）事件的严重程度。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:358
+#: c3eb713c7afb463dbf657496a1c87c12
+msgid "**FAERS_count_drugs_by_drug_event** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_count_drugs_by_drug_event**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:360
+#: 82effaebc384438880dac283b369de82
+msgid ""
+"Count the number of different drugs involved in FDA adverse event reports, "
+"filtered by patient de..."
+msgstr "统计FDA不良事件报告中涉及的不同药物数量，按患者去重筛选..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 6b67dc19ce774a47bc96ec0dd5c4a010
+msgid "FAERS_count_drugs_by_drug_event tool specification"
+msgstr "FAERS_count_drugs_by_drug_event 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:366
+#: 0ca782206af64fadb8d9d419296da659
+msgid "**Name**: ``FAERS_count_drugs_by_drug_event``"
+msgstr "**名称**：``FAERS_count_drugs_by_drug_event``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:368
+#: b36b3d179cd145ac880787bd809bbf13
+msgid ""
+"**Description**: Count the number of different drugs involved in FDA adverse"
+" event reports, filtered by patient details, country, and seriousness. Data "
+"source: FDA Adverse Event Reporting System (FAERS)."
+msgstr ""
+"**描述**：统计涉及FDA不良事件报告中不同药物的数量，筛选条件包括患者详情、国家及严重程度。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:378
+#: ../../tools/fda_drug_adverse_event_tools.rst:491
+#: ../../tools/fda_drug_adverse_event_tools.rst:576
+#: cb762a8fcd144d32b841f2e5d2bec4f4 e7b80e9a471e40a39884af3606fdf3a9
+#: efef82ac940c48f8a6d6395e2a2be875
+msgid "``occurcountry`` (string) (optional) Country where event occurred."
+msgstr "``occurcountry``（字符串）（可选）事件发生的国家。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:397
+#: 8b43ca6dfd3d40c5adf886cccb2b548d
+msgid "**FAERS_count_outcomes_by_drug_event** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_count_outcomes_by_drug_event**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:399
+#: 70717d3818a04cceb46b34f96c34e87e
+msgid ""
+"Count the outcome of adverse reactions (recovered, recovering, fatal, "
+"unresolved) filtered by dru..."
+msgstr "统计按药物筛选的不良反应结果（已恢复、恢复中、致死、未解决）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 529133b8f41249078fd965ffe465669e
+msgid "FAERS_count_outcomes_by_drug_event tool specification"
+msgstr "FAERS_count_outcomes_by_drug_event 工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:405
+#: af7f25bd63d740ce9c4bb8ebe4537403
+msgid "**Name**: ``FAERS_count_outcomes_by_drug_event``"
+msgstr "**名称**：``FAERS_count_outcomes_by_drug_event``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:407
+#: d98f7c4d73c245698269d3f7239c1d78
+msgid ""
+"**Description**: Count the outcome of adverse reactions (recovered, "
+"recovering, fatal, unresolved) filtered by drug, seriousness, and "
+"demographics. Data source: FDA Adverse Event Reporting System (FAERS)."
+msgstr ""
+"**描述**：统计按药物、严重程度和人口统计学筛选的不良反应结果（已恢复、恢复中、致死、未解决）。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:437
+#: 0495334b5621485da38485a322c391f0
+msgid ""
+"**FAERS_count_patient_age_distribution** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_患者年龄分布统计**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:439
+#: d418de49dcfe4ab19847789eb127a225
+msgid ""
+"Analyze the age distribution of patients experiencing adverse events for a "
+"specific drug. The age..."
+msgstr "分析特定药物不良事件患者的年龄分布。年龄..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 85ddedb7792b48df8ef1375e8d94cb15
+msgid "FAERS_count_patient_age_distribution tool specification"
+msgstr "FAERS_count_patient_age_distribution 工具规格说明"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:445
+#: 12fdebe89d2d4194a4fff6289bcce896
+msgid "**Name**: ``FAERS_count_patient_age_distribution``"
+msgstr "**名称**：``FAERS_count_patient_age_distribution``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:447
+#: 22baeb06f3f54ea188e8cfea157cdf75
+msgid ""
+"**Description**: Analyze the age distribution of patients experiencing "
+"adverse events for a specific drug. The age groups are: Neonate (0-28 days),"
+" Infant (29 days - 23 months), Child (2-11 years), Adolescent (12-17 years),"
+" Adult (18-64 years), Elderly (65+ years). Data source: FDA Adverse Event "
+"Reporting System (FAERS)."
+msgstr ""
+"**描述**：分析特定药物不良事件患者的年龄分布。年龄组划分为：新生儿（0-28天）、婴儿（29天-23个月）、儿童（2-11岁）、青少年（12-17岁）、成人（18-64岁）、老年人（65岁及以上）。数据来源：美国食品药品监督管理局不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:468
+#: e50d50f2ce92409db44ecf9c40c57fb1
+msgid ""
+"**FAERS_count_reactions_by_drug_event** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_count_reactions_by_drug_event**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:470
+#: 7c487035f6794e3aaab656fe0d643380
+msgid ""
+"Count the number of adverse reactions reported for a given drug, filtered by"
+" patient details, eve..."
+msgstr "统计特定药物的不良反应报告数量，按患者信息筛选，eve..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 5ff0ea0092dd4eaaa895a3aa10b18b86
+msgid "FAERS_count_reactions_by_drug_event tool specification"
+msgstr "FAERS_count_reactions_by_drug_event 工具规格说明"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:476
+#: d6607035d05f41618abdd3b5a1a7a08d
+msgid "**Name**: ``FAERS_count_reactions_by_drug_event``"
+msgstr "**名称**：``FAERS_count_reactions_by_drug_event``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:478
+#: f549d7ca29c44ab8a401560d6bf7772b
+msgid ""
+"**Description**: Count the number of adverse reactions reported for a given "
+"drug, filtered by patient details, event seriousness, and reaction outcomes."
+" Data source: FDA Adverse Event Reporting System (FAERS)."
+msgstr ""
+"**描述**：统计特定药物的不良反应报告数量，筛选条件包括患者信息、事件严重程度及反应结果。数据来源：美国食品药品监督管理局不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:497
+#: 9ebefc6efce349ac9c7b5dd35f7e421f
+msgid "``seriousnessdeath`` (string) (optional) Was death reported?"
+msgstr "``seriousnessdeath``（字符串）（可选）是否报告了死亡？"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:514
+#: 1a35b4ed3f2448d2b3451fb257a4e8dd
+msgid ""
+"**FAERS_count_reportercountry_by_drug_event** (Type: "
+"FDADrugAdverseEventTool)"
+msgstr "**FAERS_按药物事件报告者国家统计**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:516
+#: bf1239b6c2f24f03a9375ed591879fe1
+msgid ""
+"Count the number of FDA adverse event reports grouped by the country of the "
+"primary reporter. Dat..."
+msgstr "统计按主要报告者所在国家分组的FDA不良事件报告数量。Dat..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: 0064790e7dc947929402145e06b9e826
+msgid "FAERS_count_reportercountry_by_drug_event tool specification"
+msgstr "FAERS_按药物事件统计报告者国家工具规范"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:522
+#: 62420057212546c2bdec96fe20e672c3
+msgid "**Name**: ``FAERS_count_reportercountry_by_drug_event``"
+msgstr "**名称**：``FAERS_count_reportercountry_by_drug_event``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:524
+#: c503f3b4883642f79238d5ebed0d92e3
+msgid ""
+"**Description**: Count the number of FDA adverse event reports grouped by "
+"the country of the primary reporter. Data source: FDA Adverse Event "
+"Reporting System (FAERS)."
+msgstr "**描述**：按主要报告者所在国家统计FDA不良事件报告的数量。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:553
+#: 423c7081ab024c09b008e8aceb40ee34
+msgid ""
+"**FAERS_count_seriousness_by_drug_event** (Type: FDADrugAdverseEventTool)"
+msgstr "**FAERS_按药物事件严重性计数**（类型：FDADrugAdverseEventTool）"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:555
+#: fe52034b9fca493ab37c563733558b38
+msgid ""
+"Count the number of adverse event reports classified as serious or non-"
+"serious, filtered by drug ..."
+msgstr "统计按药物筛选的严重或非严重不良事件报告数量..."
+
+#: ../../tools/fda_drug_adverse_event_tools.rst
+#: ba2ed94f7f864a468f04d26627218842
+msgid "FAERS_count_seriousness_by_drug_event tool specification"
+msgstr "FAERS_按药物事件严重程度计数工具规格说明"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:561
+#: 7ba92ab2e9b74d4d80f25426d500052d
+msgid "**Name**: ``FAERS_count_seriousness_by_drug_event``"
+msgstr "**名称**：``FAERS_count_seriousness_by_drug_event``"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:563
+#: e3f0ea5c0e78401fa95ef31c49197d02
+msgid ""
+"**Description**: Count the number of adverse event reports classified as "
+"serious or non-serious, filtered by drug and patient demographics. In "
+"results, term Serious means: 'The adverse event resulted in death, a life "
+"threatening condition, hospitalization, disability, congenital anomaly, or "
+"other serious condition', term Non-serious means 'The adverse event did not "
+"result in any of the above' Data source: FDA Adverse Event Reporting System "
+"(FAERS)."
+msgstr ""
+"**描述**：统计按药物和患者人口统计学特征筛选的严重或非严重不良事件报告数量。结果中，术语“严重”指：“不良事件导致死亡、危及生命的状况、住院、残疾、先天异常或其他严重状况”；术语“非严重”指“不良事件未导致上述任何情况”。数据来源：FDA不良事件报告系统（FAERS）。"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:592
+#: 90d99008429745ad9e6e6f58f093ad01
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:594
+#: b4614586caa946e9925a57cef89db1b3
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/fda_drug_adverse_event_tools.rst:595
+#: cf09626e65064c42ab8dd98f4aa771d6
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

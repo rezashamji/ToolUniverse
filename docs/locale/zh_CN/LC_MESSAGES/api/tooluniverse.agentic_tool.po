@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.agentic_tool.rst:2 8a8bcf07de844a5980f24e9e27cdd608
+msgid "tooluniverse.agentic\\_tool module"
+msgstr "tooluniverse.agentic_tool 模块"
+
+#: 0cba1972b06a4dfe9c7c714734322bdd of tooluniverse.agentic_tool.AgenticTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: a217255ba9e94eadbedf196ea31004a8 of tooluniverse.agentic_tool.AgenticTool:1
+msgid ""
+"Generic wrapper around LLM prompting supporting JSON-defined configs with "
+"prompts and input arguments."
+msgstr "基于 JSON 定义配置（包含提示和输入参数）的通用大语言模型（LLM）提示封装器。"
+
+#: ee38d404e22948578f616408621c7f78 of
+#: tooluniverse.agentic_tool.AgenticTool.has_any_api_keys:1
+msgid "Check if any API keys are available across all supported API types."
+msgstr "检查所有支持的 API 类型中是否有可用的 API 密钥。"
+
+#: ../../api/tooluniverse.agentic_tool.rst 0b880c24b29a48d8ba3a37f61303c70f
+msgid "Returns"
+msgstr "返回值"
+
+#: ed4e9ebff923438c86e867c60d8cacbb of
+#: tooluniverse.agentic_tool.AgenticTool.has_any_api_keys:3
+msgid "True if at least one API type has all required keys, False otherwise"
+msgstr "如果至少有一种 API 类型包含所有必需的键，则为 True，否则为 False"
+
+#: ../../api/tooluniverse.agentic_tool.rst 6bdf777a7103448298a2dfe8ed283c9a
+msgid "Return type"
+msgstr "返回类型"
+
+#: f7c1123a5ac340be95ef4de31c370ce1 of
+#: tooluniverse.agentic_tool.AgenticTool._get_global_fallback_chain:1
+msgid "Get the global fallback chain from environment or use default."
+msgstr "从环境中获取全局回退链，或使用默认值。"
+
+#: 57f181fc10e74e76b8b674fe88989be4 of
+#: tooluniverse.agentic_tool.AgenticTool._try_initialize_api:1
+msgid ""
+"Try to initialize the primary API, fallback to secondary if configured."
+msgstr "尝试初始化主API，若已配置则回退至次要API。"
+
+#: 33acae2c28184b529414b8ee60176ca8 of
+#: tooluniverse.agentic_tool.AgenticTool._try_api:1
+msgid "Try to initialize a specific API and model."
+msgstr "尝试初始化特定的 API 和模型。"
+
+#: e0d92e17d39243f2a793063fa9a2e5ee of
+#: tooluniverse.agentic_tool.AgenticTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: f68f48d5b147429cad40ef8e67f1e2b8 of
+#: tooluniverse.agentic_tool.AgenticTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以与大多数具体工具实现保持一致，这些工具通常期望输入为一个字典。"
+
+#: 82a76e88951845668cf1cd627acd6967 of
+#: tooluniverse.agentic_tool.AgenticTool.is_available:1
+msgid "Check if the tool is available for use."
+msgstr "请检查该工具是否可用。"
+
+#: c7d5dd3046774750ad79d07dab0ed5cd of
+#: tooluniverse.agentic_tool.AgenticTool.get_availability_status:1
+msgid "Get detailed availability status of the tool."
+msgstr "获取工具的详细可用性状态。"
+
+#: 042d5b3baec94a6e8717218be0e69ed1 of
+#: tooluniverse.agentic_tool.AgenticTool.retry_initialization:1
+msgid "Attempt to reinitialize the tool (useful if API keys were updated)."
+msgstr "尝试重新初始化工具（如果已更新 API 密钥，此操作可能有用）。"

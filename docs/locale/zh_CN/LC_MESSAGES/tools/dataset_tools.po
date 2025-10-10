@@ -1,0 +1,425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/dataset_tools.rst:2 84e9b19bba2d4f249e886e2b5240af32
+msgid "Dataset Tools"
+msgstr "数据集工具"
+
+#: ../../tools/dataset_tools.rst:4 20174271e3414847b1804ffb25562a10
+msgid ""
+"**Configuration File**: ``dataset_tools.json`` **Tool Type**: Local **Tools "
+"Count**: 7"
+msgstr "**配置文件**：``dataset_tools.json`` **工具类型**：本地 **工具数量**：7"
+
+#: ../../tools/dataset_tools.rst:8 301e0e00800a4a48879bb30d2f796988
+msgid ""
+"This page contains all tools defined in the ``dataset_tools.json`` "
+"configuration file."
+msgstr "本页面包含在``dataset_tools.json``配置文件中定义的所有工具。"
+
+#: ../../tools/dataset_tools.rst:11 b25249c844bf42f3b6cc5dfed7e144ef
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/dataset_tools.rst:14 1443b59a6c844874a360ab8c8b243995
+msgid "**dict_search** (Type: DatasetTool)"
+msgstr "**dict_search**（类型：DatasetTool）"
+
+#: ../../tools/dataset_tools.rst:16 f513d3feeb474bd5b823c907d893d475
+msgid ""
+"Search the DICTrank dataset for drug-induced cardiotoxicity (DICT) risk "
+"information by trade name..."
+msgstr "通过商品名称搜索 DICTrank 数据集中的药物诱导心脏毒性（DICT）风险信息..."
+
+#: ../../tools/dataset_tools.rst ae783c48b1ec456ea849d8e6146fedb9
+msgid "dict_search tool specification"
+msgstr "dict_search 工具规范"
+
+#: ../../tools/dataset_tools.rst:20 ../../tools/dataset_tools.rst:62
+#: ../../tools/dataset_tools.rst:104 ../../tools/dataset_tools.rst:146
+#: ../../tools/dataset_tools.rst:188 ../../tools/dataset_tools.rst:230
+#: ../../tools/dataset_tools.rst:269 43a97c19a7534370a977e95d77542196
+#: 6becd78a2330401dbdea8d4ce1d308a0 9deadbacd528437ab51733666f12db75
+#: a04c4d3b5d9044c1aa81de2c556889a3 b33d1c2b7faf493eab776225f992e4ed
+#: ca964bf5a175439c8a1583f08d04a501 eb57fa70a2b241628f37e37f86910350
+msgid "**Tool Information:**"
+msgstr ""
+"**工具信息：**  \n"
+"\n"
+"Context: 文档"
+
+#: ../../tools/dataset_tools.rst:22 99a7dc9d15aa4d3a895eb7997d689b42
+msgid "**Name**: ``dict_search``"
+msgstr "**名称**: ``dict_search``"
+
+#: ../../tools/dataset_tools.rst:23 ../../tools/dataset_tools.rst:65
+#: ../../tools/dataset_tools.rst:107 ../../tools/dataset_tools.rst:149
+#: ../../tools/dataset_tools.rst:191 ../../tools/dataset_tools.rst:233
+#: ../../tools/dataset_tools.rst:272 1553f19494464b7999a1eaa9a5ad438b
+#: 1570ebb4af9d450bb5dce58ccd24c7ff 6171c0c07b734edc83025d47af9ab950
+#: 7c0ce3d72ae940279b15e302af4b5bfc 819465b8f9ab4e7ca6932ba398374bda
+#: caaf4c7fafb74607b16764056b4d8e4f facd89854cbc42d793229e4fad150f97
+msgid "**Type**: ``DatasetTool``"
+msgstr "**类型**: ``DatasetTool``"
+
+#: ../../tools/dataset_tools.rst:24 a7ebac3ca494403ab23864bf5802af40
+msgid ""
+"**Description**: Search the DICTrank dataset for drug-induced cardiotoxicity"
+" (DICT) risk information by trade name, generic name, or active ingredient. "
+"Searching with exact match is not recommeded."
+msgstr "**描述**：通过商品名、通用名或活性成分在DICTrank数据集中搜索药物诱发心脏毒性（DICT）风险信息。不建议使用精确匹配进行搜索。"
+
+#: ../../tools/dataset_tools.rst:26 ../../tools/dataset_tools.rst:68
+#: ../../tools/dataset_tools.rst:110 ../../tools/dataset_tools.rst:152
+#: ../../tools/dataset_tools.rst:194 ../../tools/dataset_tools.rst:236
+#: ../../tools/dataset_tools.rst:275 08c7fca8663a4da6bcac90233d5d28ee
+#: 5b35a865805d4239a8d21a8aa5581992 92ce1a7aa9ef4f1e895607c58817acd0
+#: b915f8186340401fbc290987ccb5565f ba44046fadad476eacd9e92baf49cf1d
+#: da323faf963a48408f119042c0c0eff1 fc30381076cf42269d97351142af0a93
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/dataset_tools.rst:28 106482cee53d4f6389312a56a6baa407
+msgid ""
+"``query`` (string) (optional) Free-text query (e.g. 'ZYPREXA', "
+"'Olanzapine')."
+msgstr "``query``（字符串）（可选）自由文本查询（例如：'ZYPREXA'，'Olanzapine'）。"
+
+#: ../../tools/dataset_tools.rst:31 9d43abada0074efd9bdbf763efe1a22a
+msgid ""
+"``search_fields`` (array) (optional) Columns to search. Choose from: 'Trade "
+"Name', 'Generic/Proper Name(s)', 'Active Ingredient(s)'."
+msgstr "``search_fields``（数组）（可选）要搜索的列。可选择以下内容：'商品名'、'通用名/规范名称'、'活性成分'。"
+
+#: ../../tools/dataset_tools.rst:34 ../../tools/dataset_tools.rst:76
+#: ../../tools/dataset_tools.rst:118 ../../tools/dataset_tools.rst:160
+#: ../../tools/dataset_tools.rst:202 2f566077ff804feca0c2ff889c95872b
+#: 4c48a04529b240aab9ed4cd06c6efbda 6664f08b032b4fbba9fb7bbf47898d96
+#: cd914381a35048149e1fd64cfb0676b3 d7418bdea73d40dba04de644099a9bca
+msgid ""
+"``case_sensitive`` (boolean) (optional) Match text with exact case if true."
+msgstr "``case_sensitive``（布尔值）（可选）如果为 true，则精确匹配大小写的文本。"
+
+#: ../../tools/dataset_tools.rst:37 ../../tools/dataset_tools.rst:79
+#: ../../tools/dataset_tools.rst:121 ../../tools/dataset_tools.rst:163
+#: ../../tools/dataset_tools.rst:205 0eaaa3a7f2544b21a805e8c1f0e77c3e
+#: 1dd5bb8d208b43e898f25bd7495d9ec9 2f11120cf9b54921a75e1541fdb378b7
+#: 97fd56f963e34be5a81a4cb8f86b82e0 dac253805e58480f95e35705132cdda6
+msgid ""
+"``exact_match`` (boolean) (optional) Field value must equal query exactly if"
+" true; otherwise substring match."
+msgstr "``exact_match``（布尔值）（可选）如果为 true，字段值必须与查询完全匹配；否则为子字符串匹配。"
+
+#: ../../tools/dataset_tools.rst:40 ../../tools/dataset_tools.rst:82
+#: ../../tools/dataset_tools.rst:124 ../../tools/dataset_tools.rst:208
+#: 7f1f5e7c3d724d8095c18f90726ff0be 86a6331d7f3543dfb2f5cc833813226c
+#: a61c16f1d75e4bc09e777e3da756a85c e9fd2c164a034f7c9c6da6042757116f
+msgid "``limit`` (integer) (optional) Maximum number of rows to return."
+msgstr "``limit``（整数）（可选）返回的最大行数。"
+
+#: ../../tools/dataset_tools.rst:43 ../../tools/dataset_tools.rst:85
+#: ../../tools/dataset_tools.rst:127 ../../tools/dataset_tools.rst:169
+#: ../../tools/dataset_tools.rst:211 ../../tools/dataset_tools.rst:250
+#: ../../tools/dataset_tools.rst:292 36d70a5d1b764f3991465844e4c2715c
+#: 53341dff69ac412688dc10faf08fb123 685f5e9b73e54d35b4c8515e71fbc4a8
+#: 846066a44f7c412eaab85e1c864a3df1 91ee63bf3bdf40f28f0a8aa11fefcb72
+#: af9d50672fd449ecb82ab16a798a9ccd f29d3fd0607845ab807eff1d73f67770
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/dataset_tools.rst:56 25cc9743f638469386678ad26ba7ad53
+msgid "**dili_search** (Type: DatasetTool)"
+msgstr "**dili_search**（类型：DatasetTool）"
+
+#: ../../tools/dataset_tools.rst:58 0a09987d7e344df9afb37790b8c900e9
+msgid ""
+"Search the DILIrank dataset for drug-induced liver-injury (DILI) risk "
+"information by compound nam..."
+msgstr "在DILIrank数据集中，通过化合物名称搜索药物性肝损伤（DILI）风险信息。"
+
+#: ../../tools/dataset_tools.rst bf48caa05dc04861802c93bd14cdd804
+msgid "dili_search tool specification"
+msgstr "dili_search 工具规格说明"
+
+#: ../../tools/dataset_tools.rst:64 37754e40a40343678285e3b291d63c85
+msgid "**Name**: ``dili_search``"
+msgstr "**名称**：``dili_search``"
+
+#: ../../tools/dataset_tools.rst:66 cc33ee9429944b5684acb4ba90278cb7
+msgid ""
+"**Description**: Search the DILIrank dataset for drug-induced liver-injury "
+"(DILI) risk information by compound name. Searching with exact match is not "
+"recommeded."
+msgstr "**描述**：通过化合物名称在DILIrank数据集中搜索药物性肝损伤（DILI）风险信息。不建议使用精确匹配进行搜索。"
+
+#: ../../tools/dataset_tools.rst:70 4a5ad808614a42d08d7ad13b88d2959d
+msgid "``query`` (string) (optional) Free-text query (e.g. 'acetaminophen')."
+msgstr "``query``（字符串）（可选）自由文本查询（例如：“对乙酰氨基酚”）。"
+
+#: ../../tools/dataset_tools.rst:73 f0c1941cbf384a73b789ff296301c380
+msgid ""
+"``search_fields`` (array) (optional) Columns to search. Choose from: "
+"'Compound Name'."
+msgstr "``search_fields``（数组）（可选）要搜索的列。可选项包括：‘Compound Name’。"
+
+#: ../../tools/dataset_tools.rst:98 1747682081e642cfb1ca732a255137d5
+msgid "**diqt_search** (Type: DatasetTool)"
+msgstr "**diqt_search**（类型：DatasetTool）"
+
+#: ../../tools/dataset_tools.rst:100 b466697ee7ab44d1871dea03c67219f2
+msgid ""
+"Search the DIQTA dataset for drug-induced QT-interval prolongation risk "
+"information by generic na..."
+msgstr "通过通用名搜索DIQTA数据集中药物诱导QT间期延长风险信息..."
+
+#: ../../tools/dataset_tools.rst 814236a631274ac089ad3f5f2534647d
+msgid "diqt_search tool specification"
+msgstr "diqt_search 工具规格说明"
+
+#: ../../tools/dataset_tools.rst:106 2f285e68b7f349edb0fe7ded7f17be89
+msgid "**Name**: ``diqt_search``"
+msgstr "**名称**：``diqt_search``"
+
+#: ../../tools/dataset_tools.rst:108 3638d91cd71b4fa68c8cd6eeba4da99b
+msgid ""
+"**Description**: Search the DIQTA dataset for drug-induced QT-interval "
+"prolongation risk information by generic name or DrugBank ID. Searching with"
+" exact match is not recommeded for generic name."
+msgstr ""
+"**描述**：通过通用名或 DrugBank ID 在 DIQTA 数据集中搜索药物诱导 QT 间期延长风险信息。通用名不建议使用精确匹配进行搜索。"
+
+#: ../../tools/dataset_tools.rst:112 7a30469cd8c34ef79a4441d2bf66b76c
+msgid ""
+"``query`` (string) (optional) Free-text query (e.g. 'Astemizole', "
+"'DB00637')."
+msgstr "``query``（字符串）（可选）自由文本查询（例如：'Astemizole'，'DB00637'）。"
+
+#: ../../tools/dataset_tools.rst:115 41223e911733404bb0005cfd3b374f94
+msgid ""
+"``search_fields`` (array) (optional) Columns to search. Choose from: "
+"'Generic/Proper Name(s)', 'DrugBank ID'."
+msgstr "``search_fields``（数组）（可选）要搜索的列。可选择以下内容：'通用名/专有名'，'DrugBank ID'。"
+
+#: ../../tools/dataset_tools.rst:140 10cadbc5e98948c5b507c7815c8289e1
+msgid "**drugbank_full_search** (Type: DatasetTool)"
+msgstr "**drugbank_full_search**（类型：DatasetTool）"
+
+#: ../../tools/dataset_tools.rst:142 4bb27dadf1b8491b9bed540ae4b916bd
+msgid ""
+"Search the cleaned DrugBank dataframe (one row per drug) by ID, common name,"
+" or synonym. Returns ..."
+msgstr "通过药物ID、常用名称或同义词搜索已清理的DrugBank数据框（每种药物对应一行）。返回..."
+
+#: ../../tools/dataset_tools.rst 6a0457c933c6458ca256a269f71c5ea1
+msgid "drugbank_full_search tool specification"
+msgstr "drugbank_full_search 工具规范"
+
+#: ../../tools/dataset_tools.rst:148 38100e6825d448cdbbc9e1b7ac0ede56
+msgid "**Name**: ``drugbank_full_search``"
+msgstr "**名称**: ``drugbank_full_search``"
+
+#: ../../tools/dataset_tools.rst:150 4f5126ee93a14dc180c5c12dc74e9318
+msgid ""
+"**Description**: Search the cleaned DrugBank dataframe (one row per drug) by"
+" ID, common name, or synonym. Returns identifiers, ATC, main pharmacology "
+"text fields, and protein partners. For best results, it is recommended that "
+"one uses `drugbank_vocab_search` to obtain DrugBank ID from other keywords "
+"first, and use this tool with DrugBank ID."
+msgstr ""
+"**描述**：通过ID、通用名称或同义词搜索清理后的DrugBank数据框（每种药物占一行）。返回标识符、ATC代码、主要药理学文本字段以及蛋白质合作伙伴。为了获得最佳效果，建议先使用`drugbank_vocab_search`从其他关键词获取DrugBank"
+" ID，然后使用此工具通过DrugBank ID进行搜索。"
+
+#: ../../tools/dataset_tools.rst:154 4cabafdb968345149054465e890567d9
+msgid ""
+"``query`` (string) (optional) Free-text query (e.g. 'DB00945', "
+"'acetylsalicylic', 'Acarbosa')."
+msgstr "``query``（字符串）（可选）自由文本查询（例如：'DB00945'、'acetylsalicylic'、'Acarbosa'）。"
+
+#: ../../tools/dataset_tools.rst:157 4140e1b8055c47648a2757ab48137794
+msgid ""
+"``search_fields`` (array) (optional) Columns to search in. Choose from: "
+"'drugbank_id', 'name', 'synonyms'."
+msgstr "``search_fields``（数组）（可选）要搜索的列。可选择：'drugbank_id'、'name'、'synonyms'。"
+
+#: ../../tools/dataset_tools.rst:166 c46627a78a124aa7aaa1953273eb0b9c
+msgid "``limit`` (integer) (optional) Max number of rows to return."
+msgstr "``limit``（整数）（可选）返回的最大行数。"
+
+#: ../../tools/dataset_tools.rst:182 190dc63761864562a31e4e80bb6a33bb
+msgid "**drugbank_links_search** (Type: DatasetTool)"
+msgstr "**drugbank_links_search**（类型：DatasetTool）"
+
+#: ../../tools/dataset_tools.rst:184 f28bd449bbd243a8932a78cb837d9c77
+msgid ""
+"Search the cross-reference table linking DrugBank IDs to external "
+"identifiers (CAS, KEGG, PubChem..."
+msgstr "查询交叉引用表，将DrugBank ID与外部标识符（CAS、KEGG、PubChem等）进行关联..."
+
+#: ../../tools/dataset_tools.rst f2db75bfc68a451193644b8ee9a0c7f6
+msgid "drugbank_links_search tool specification"
+msgstr "drugbank_links_search 工具规范"
+
+#: ../../tools/dataset_tools.rst:190 df8a03cf76b14b01a16eb00012204fe7
+msgid "**Name**: ``drugbank_links_search``"
+msgstr "**名称**: ``drugbank_links_search``"
+
+#: ../../tools/dataset_tools.rst:192 7c66d9a95629496d9f5f6f3c7d8474f2
+msgid ""
+"**Description**: Search the cross-reference table linking DrugBank IDs to "
+"external identifiers (CAS, KEGG, PubChem, ChEBI, PharmGKB, UniProt, etc.) "
+"and web resources."
+msgstr ""
+"**描述**：搜索交叉引用表，将DrugBank "
+"ID与外部标识符（CAS、KEGG、PubChem、ChEBI、PharmGKB、UniProt等）及网络资源进行关联。"
+
+#: ../../tools/dataset_tools.rst:196 8d735a8f39d1409083547a8802895737
+msgid ""
+"``query`` (string) (optional) Free-text query (e.g. 'DB00002', 'Cetuximab')."
+msgstr "``query``（字符串）（可选）自由文本查询（例如：'DB00002'，'Cetuximab'）。"
+
+#: ../../tools/dataset_tools.rst:199 b9963d6f13b9484b8debc04d69f9bded
+msgid ""
+"``search_fields`` (array) (optional) Columns to search. Choose from: "
+"'DrugBank ID', 'Name', 'CAS Number', 'Drug Type', 'KEGG Compound ID', 'KEGG "
+"Drug ID', 'PubChem Compound ID', 'PubChem Substance ID', 'ChEBI ID', "
+"'PharmGKB ID', 'HET ID', 'UniProt ID', 'Wikipedia ID', 'Drugs.com Link', "
+"'NDC ID', 'ChemSpider ID', 'BindingDB ID', 'TTD ID'."
+msgstr ""
+"``search_fields``（数组）（可选）搜索的列。可选择以下字段：'DrugBank "
+"ID'、'名称'、'CAS编号'、'药物类型'、'KEGG化合物ID'、'KEGG药物ID'、'PubChem化合物ID'、'PubChem物质ID'、'ChEBI"
+" ID'、'PharmGKB ID'、'HET ID'、'UniProt ID'、'维基百科ID'、'Drugs.com链接'、'NDC "
+"ID'、'ChemSpider ID'、'BindingDB ID'、'TTD ID'。"
+
+#: ../../tools/dataset_tools.rst:224 84cdaf97ac7c4dd381a47083ae79efb8
+msgid "**drugbank_vocab_filter** (Type: DatasetTool)"
+msgstr "**drugbank_vocab_filter**（类型：数据集工具）"
+
+#: ../../tools/dataset_tools.rst:226 717e99b1b4764faeaceccdda1f03ad44
+msgid ""
+"Filter the DrugBank vocabulary dataset based on specific field criteria. Use"
+" simple field-value p..."
+msgstr "根据特定字段条件筛选DrugBank词汇数据集。使用简单的字段-值对进行过滤。"
+
+#: ../../tools/dataset_tools.rst 5e933411ef7e40ebac724e5840bf2c5c
+msgid "drugbank_vocab_filter tool specification"
+msgstr "drugbank_vocab_filter 工具规范"
+
+#: ../../tools/dataset_tools.rst:232 3bc5c94c0f584816b498471dfb0f718f
+msgid "**Name**: ``drugbank_vocab_filter``"
+msgstr "**名称**：``drugbank_vocab_filter``"
+
+#: ../../tools/dataset_tools.rst:234 4129e579cc7149b8a76483b6b3c0fb8d
+msgid ""
+"**Description**: Filter the DrugBank vocabulary dataset based on specific "
+"field criteria. Use simple field-value pairs to filter drugs by properties "
+"like names, IDs, and chemical identifiers."
+msgstr "**描述**：根据特定字段条件筛选 DrugBank 词汇数据集。使用简单的字段-值对，根据名称、ID 及化学标识符等属性筛选药物。"
+
+#: ../../tools/dataset_tools.rst:238 7d310049b9004941befbafa6fe168685
+msgid "``field`` (string) (optional) The field to filter on"
+msgstr "``field``（字符串）（可选）用于筛选的字段"
+
+#: ../../tools/dataset_tools.rst:241 86e3d403c38c4ad78720a7b5606f2783
+msgid ""
+"``condition`` (string) (optional) The type of filtering condition to apply. "
+"Filter is case-insensitive."
+msgstr "``condition``（字符串）（可选）应用的过滤条件类型。过滤不区分大小写。"
+
+#: ../../tools/dataset_tools.rst:244 56cddcc209884aa3ad6eb16ccdedcd8c
+msgid ""
+"``value`` (string) (optional) The value to filter by. Not required when "
+"condition is 'not_empty'. Examples: 'insulin' (for contains), 'DB00' (for "
+"starts_with), 'acid' (for ends_with), 'Aspirin' (for exact)"
+msgstr ""
+"``value``（字符串）（可选）用于过滤的值。当条件为“not_empty”时，此项非必填。示例：'insulin'（用于包含匹配）、'DB00'（用于开头匹配）、'acid'（用于结尾匹配）、'Aspirin'（用于精确匹配）"
+
+#: ../../tools/dataset_tools.rst:247 ../../tools/dataset_tools.rst:289
+#: e3a6a2ffbd544b94861d99cdb02f89f2 fcd0f01abbf94a7799573c7efa3b0911
+msgid "``limit`` (integer) (optional) Maximum number of results to return."
+msgstr "``limit``（整数）（可选）返回结果的最大数量。"
+
+#: ../../tools/dataset_tools.rst:263 1e183543efeb4b45b38e1bc1b2c8d670
+msgid "**drugbank_vocab_search** (Type: DatasetTool)"
+msgstr "**drugbank_vocab_search**（类型：数据集工具）"
+
+#: ../../tools/dataset_tools.rst:265 c887aa49f17444e39c77fdb18f076cae
+msgid ""
+"Search the DrugBank vocabulary dataset for drugs by name, ID, synonyms, or "
+"other fields using tex..."
+msgstr "使用 tex 在 DrugBank 词汇数据集中通过名称、ID、同义词或其他字段搜索药物。"
+
+#: ../../tools/dataset_tools.rst 9d4015cb18f548688f8c06b8ebbc6d54
+msgid "drugbank_vocab_search tool specification"
+msgstr "drugbank_vocab_search 工具规范"
+
+#: ../../tools/dataset_tools.rst:271 3fe05defdd214d59a2ad0bbf9aa5adec
+msgid "**Name**: ``drugbank_vocab_search``"
+msgstr "**名称**：``drugbank_vocab_search``"
+
+#: ../../tools/dataset_tools.rst:273 438d51b80f5f432fb702560cba38f469
+msgid ""
+"**Description**: Search the DrugBank vocabulary dataset for drugs by name, "
+"ID, synonyms, or other fields using text-based queries. Returns detailed "
+"drug information including DrugBank ID, common name, CAS number, UNII, and "
+"synonyms."
+msgstr ""
+"**描述**：通过基于文本的查询，在DrugBank词汇数据集中按名称、ID、同义词或其他字段搜索药物。返回包括DrugBank "
+"ID、通用名称、CAS号、UNII及同义词在内的详细药物信息。"
+
+#: ../../tools/dataset_tools.rst:277 383c326787064befa6051b44c3022d10
+msgid ""
+"``query`` (string) (optional) Search query string. Can be drug name, "
+"synonym, DrugBank ID, or any text to search for."
+msgstr "``query``（字符串）（可选）搜索查询字符串。可以是药物名称、同义词、DrugBank ID，或任何用于搜索的文本。"
+
+#: ../../tools/dataset_tools.rst:280 7c97ea3b3b7b4a7fb6be5a8853c564e0
+msgid ""
+"``search_fields`` (array) (optional) Fields to search in. Available fields: "
+"'DrugBank ID', 'Accession Numbers', 'Common name', 'CAS', 'UNII', "
+"'Synonyms', 'Standard InChI Key'."
+msgstr ""
+"``search_fields``（数组）（可选）搜索的字段。可用字段包括：‘DrugBank ID’、‘Accession "
+"Numbers’、‘Common name’、‘CAS’、‘UNII’、‘Synonyms’、‘Standard InChI Key’。"
+
+#: ../../tools/dataset_tools.rst:283 b293e5e668e745ba8d2c46689107746d
+msgid ""
+"``case_sensitive`` (boolean) (optional) Whether the search should be case "
+"sensitive."
+msgstr "``case_sensitive``（布尔值）（可选） 指定搜索是否区分大小写。"
+
+#: ../../tools/dataset_tools.rst:286 b09bab42b45245b4ab3da0d37c6c5fc1
+msgid ""
+"``exact_match`` (boolean) (optional) Whether to perform exact matching "
+"instead of substring matching."
+msgstr "``exact_match``（布尔值）（可选）是否执行精确匹配，而非子字符串匹配。"
+
+#: ../../tools/dataset_tools.rst:305 bcdb1d0d56294631880fd94c684a4df8
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/dataset_tools.rst:307 e8076ed7692b4751985753d8b74bc439
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具总览"
+
+#: ../../tools/dataset_tools.rst:308 5e0ff52eb93b48b78b4159f0377123e2
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

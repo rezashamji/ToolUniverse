@@ -17,7 +17,7 @@ except FileNotFoundError as e:
     )
     sys.exit(1)
 
-server = FastMCP("Your MCP Server", stateless_http=True)
+server = FastMCP("Your MCP Server")
 agents = {}
 for tool_config in boltz_tools:
     agents[tool_config["name"]] = Boltz2DockingTool(tool_config=tool_config)
@@ -47,4 +47,4 @@ def run_boltz2(query: dict):
 
 
 if __name__ == "__main__":
-    server.run(transport="streamable-http", host="0.0.0.0", port=8080)
+    server.run(transport="streamable-http", host="0.0.0.0", port=8080, stateless_http=True)

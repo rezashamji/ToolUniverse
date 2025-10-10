@@ -9,6 +9,7 @@ import traceback
 import os
 import importlib.util
 import re
+from datetime import datetime
 from typing import Set
 from .base_tool import BaseTool
 from .tool_registry import register_tool
@@ -204,12 +205,13 @@ class ComposeTool(BaseTool):
             print(f"Error loading composition file {self.composition_file}: {e}")
             return f"# Error loading file: {e}\nresult = {{'error': 'Failed to load composition code'}}"
 
-    def run(self, arguments):
+    def run(self, arguments, stream_callback=None):
         """
         Execute the composed tool with custom code logic.
 
         Args:
             arguments (dict): Input arguments for the composition
+            stream_callback (callable, optional): Callback function for streaming output
 
         Returns:
             Any: Result from the composition execution
@@ -268,10 +270,10 @@ class ComposeTool(BaseTool):
         try:
             if self.composition_file:
                 # Execute function from external file
-                return self._execute_from_file(arguments)
+                return self._execute_from_file(arguments, stream_callback)
             else:
                 # Execute inline code (existing behavior)
-                return self._execute_inline_code(arguments)
+                return self._execute_inline_code(arguments, stream_callback)
 
         except Exception as e:
             error_msg = f"Error in ComposeTool '{self.name}': {str(e)}"
@@ -280,12 +282,49 @@ class ComposeTool(BaseTool):
 
             return {"error": error_msg, "traceback": traceback.format_exc()}
 
-    def _execute_from_file(self, arguments):
+    def _emit_stream_chunk(self, chunk, stream_callback):
+        """
+        Emit a stream chunk if callback is provided.
+        
+        Args:
+            chunk (str): The chunk to emit
+            stream_callback (callable, optional): Callback function for streaming output
+        """
+        if stream_callback and chunk:
+            try:
+                stream_callback(chunk)
+            except Exception as e:
+                print(f"Error in stream callback: {e}")
+
+    def _create_event_emitter(self, stream_callback):
+        """
+        Create an event emitter function for the compose script.
+        
+        Args:
+            stream_callback (callable, optional): Callback function for streaming output
+            
+        Returns:
+            callable: Event emitter function
+        """
+        def emit_event(event_type, data=None):
+            """Emit an event via stream callback"""
+            if stream_callback:
+                event = {
+                    "type": event_type,
+                    "timestamp": datetime.now().isoformat(),
+                    "data": data or {}
+                }
+                self._emit_stream_chunk(json.dumps(event), stream_callback)
+        
+        return emit_event
+
+    def _execute_from_file(self, arguments, stream_callback=None):
         """
         Execute composition code from external file.
 
         Args:
             arguments (dict): Input arguments
+            stream_callback (callable, optional): Callback function for streaming output
 
         Returns:
             Any: Result from the composition execution
@@ -302,15 +341,40 @@ class ComposeTool(BaseTool):
         # Get the composition function
         compose_func = getattr(compose_module, self.composition_function)
 
-        # Execute the function with context
-        return compose_func(arguments, self.tooluniverse, self._call_tool)
+        # Import memory manager
+        from .memory_manager import memory_manager
 
-    def _execute_inline_code(self, arguments):
+        # Execute the function with backward-compatible parameters
+        import inspect
+        sig = inspect.signature(compose_func)
+        params = list(sig.parameters.keys())
+        
+        # Build arguments based on function signature
+        call_args = {
+            'arguments': arguments,
+            'tooluniverse': self.tooluniverse,
+            'call_tool': self._call_tool
+        }
+        
+        # Add optional parameters if the function accepts them
+        if 'stream_callback' in params:
+            call_args['stream_callback'] = stream_callback
+        if 'emit_event' in params:
+            call_args['emit_event'] = self._create_event_emitter(stream_callback)
+        if 'memory_manager' in params:
+            from .memory_manager import memory_manager
+            call_args['memory_manager'] = memory_manager
+        
+        # Call with only the parameters the function expects
+        return compose_func(**{k: v for k, v in call_args.items() if k in params})
+
+    def _execute_inline_code(self, arguments, stream_callback=None):
         """
         Execute inline composition code (existing behavior).
 
         Args:
             arguments (dict): Input arguments
+            stream_callback (callable, optional): Callback function for streaming output
 
         Returns:
             Any: Result from the composition execution
@@ -368,4 +432,23 @@ class ComposeTool(BaseTool):
 
         function_call = {"name": tool_name, "arguments": arguments}
 
-        return self.tooluniverse.run_one_function(function_call)
+        result = self.tooluniverse.run_one_function(function_call)
+        
+        # Ensure consistent result format for backward compatibility
+        if isinstance(result, str):
+            # If result is a string, it might be an error message or JSON string
+            try:
+                import json
+                parsed_result = json.loads(result)
+                if isinstance(parsed_result, dict):
+                    return parsed_result
+                else:
+                    return {"result": parsed_result}
+            except (json.JSONDecodeError, TypeError):
+                # If it's not JSON, treat as error message
+                return {"error": result}
+        elif isinstance(result, dict):
+            return result
+        else:
+            # For other types, wrap in a standard format
+            return {"result": result}

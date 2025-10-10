@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:40-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/zenodo_tools.rst:2 a117718fcd7e4af0b2b8ccac014acd0c
+msgid "Zenodo Tools"
+msgstr "Zenodo 工具"
+
+#: ../../tools/zenodo_tools.rst:4 88da241f51304d21a65c8bace2add295
+msgid ""
+"**Configuration File**: ``zenodo_tools.json`` **Tool Type**: Local **Tools "
+"Count**: 1"
+msgstr ""
+"**配置文件**：``zenodo_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：1"
+
+#: ../../tools/zenodo_tools.rst:8 200fa218ebf343a4994e93686b4fc14c
+msgid ""
+"This page contains all tools defined in the ``zenodo_tools.json`` "
+"configuration file."
+msgstr "本页面包含在 ``zenodo_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/zenodo_tools.rst:11 625254bf04174c69aa4901027e615947
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/zenodo_tools.rst:14 211df184913d43c1aaec0bac536fa30f
+msgid "**Zenodo_search_records** (Type: ZenodoTool)"
+msgstr "**Zenodo_search_records**（类型：Zenodo工具）"
+
+#: ../../tools/zenodo_tools.rst:16 fb11d33001e6455fb3a21cae89a1a464
+msgid ""
+"Search Zenodo for research data, publications, and datasets. Zenodo is an "
+"open-access repository ..."
+msgstr "在 Zenodo 上搜索研究数据、出版物和数据集。Zenodo 是一个开放获取的存储库..."
+
+#: ../../tools/zenodo_tools.rst f25886fea8cc4c8d82723007c1e59617
+msgid "Zenodo_search_records tool specification"
+msgstr "Zenodo_search_records 工具规格说明"
+
+#: ../../tools/zenodo_tools.rst:20 cdce5bfe559f41d8a0037c046d10bf72
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/zenodo_tools.rst:22 c6fbc7f8867f4edd9b02001b55105b5c
+msgid "**Name**: ``Zenodo_search_records``"
+msgstr "**名称**：``Zenodo_search_records``"
+
+#: ../../tools/zenodo_tools.rst:23 039e2cfea0044fe4a821af0c9238c361
+msgid "**Type**: ``ZenodoTool``"
+msgstr "**类型**：``ZenodoTool``"
+
+#: ../../tools/zenodo_tools.rst:24 78852bd9728f4e45b1d973ea52e59dbb
+msgid ""
+"**Description**: Search Zenodo for research data, publications, and "
+"datasets. Zenodo is an open-access repository that hosts research outputs "
+"from all fields of science, including papers, datasets, software, and more."
+msgstr ""
+"**描述**：在 Zenodo 中搜索研究数据、出版物和数据集。Zenodo "
+"是一个开放获取的存储库，托管来自各个科学领域的研究成果，包括论文、数据集、软件等。"
+
+#: ../../tools/zenodo_tools.rst:26 27ef92ce91b542be822996afd07b4522
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/zenodo_tools.rst:28 c7ee92be30d044f494ce8d3dd10a5ed8
+msgid ""
+"``query`` (string) (required) Free text search query for Zenodo records. Use"
+" keywords to search across titles, descriptions, authors, and other "
+"metadata."
+msgstr "``query``（字符串）（必填）用于Zenodo记录的自由文本搜索查询。使用关键词在标题、描述、作者及其他元数据中进行搜索。"
+
+#: ../../tools/zenodo_tools.rst:31 6de53286f345466ca9d4df5e527a56b7
+msgid ""
+"``max_results`` (integer) (optional) Maximum number of results to return. "
+"Must be between 1 and 200."
+msgstr "``max_results``（整数）（可选）返回的最大结果数。必须介于1到200之间。"
+
+#: ../../tools/zenodo_tools.rst:34 50622ce3006c452a8876264c034711b2
+msgid ""
+"``community`` (string) (optional) Optional community slug to filter results "
+"by specific research community (e.g., 'zenodo', 'ecfunded')."
+msgstr "``community``（字符串）（可选）可选的社区标识符，用于按特定研究社区筛选结果（例如，‘zenodo’、‘ecfunded’）。"
+
+#: ../../tools/zenodo_tools.rst:37 fa3dd2fbf763477dbb05b27018f79618
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/zenodo_tools.rst:51 663d888619c545f1a87d97649e70b0b9
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/zenodo_tools.rst:53 abf5ec9f31a3409cb30d76d476cfcfba
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具总览"
+
+#: ../../tools/zenodo_tools.rst:54 4668884cdb40449dba60f0e31b1fb268
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

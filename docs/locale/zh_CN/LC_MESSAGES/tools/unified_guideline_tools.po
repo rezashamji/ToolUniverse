@@ -1,0 +1,499 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/unified_guideline_tools.rst:2 b59cb2a97cde454cab33f83ac90ca59e
+msgid "Unified Guideline Tools"
+msgstr "统一指南工具"
+
+#: ../../tools/unified_guideline_tools.rst:4 f2110199bc75444eb6b17199d6353939
+msgid ""
+"**Configuration File**: ``unified_guideline_tools.json`` **Tool Type**: "
+"Local **Tools Count**: 8"
+msgstr "**配置文件**：``unified_guideline_tools.json`` **工具类型**：本地 **工具数量**：8"
+
+#: ../../tools/unified_guideline_tools.rst:8 06eee771b26142e0b86d7139ef1cc24f
+msgid ""
+"This page contains all tools defined in the ``unified_guideline_tools.json``"
+" configuration file."
+msgstr "此页面包含在``unified_guideline_tools.json``配置文件中定义的所有工具。"
+
+#: ../../tools/unified_guideline_tools.rst:11 1dbfa57b58194448bdb653f695a05963
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/unified_guideline_tools.rst:14 caf35cb1adea4d989ffab9e10d014fcc
+msgid "**EuropePMC_Guidelines_Search** (Type: EuropePMCGuidelinesTool)"
+msgstr "**EuropePMC_Guidelines_Search**（类型：EuropePMCGuidelinesTool）"
+
+#: ../../tools/unified_guideline_tools.rst:16 3d10818646a140ddaf21a8b71496c1e4
+msgid ""
+"Search Europe PMC for clinical guidelines and evidence-based "
+"recommendations. Europe PMC provides..."
+msgstr "在 Europe PMC 中搜索临床指南和循证建议。Europe PMC 提供..."
+
+#: ../../tools/unified_guideline_tools.rst 9705ee8dd84a42faada580cf2900918e
+msgid "EuropePMC_Guidelines_Search tool specification"
+msgstr "EuropePMC_Guidelines_Search 工具规范"
+
+#: ../../tools/unified_guideline_tools.rst:20
+#: ../../tools/unified_guideline_tools.rst:54
+#: ../../tools/unified_guideline_tools.rst:88
+#: ../../tools/unified_guideline_tools.rst:119
+#: ../../tools/unified_guideline_tools.rst:159
+#: ../../tools/unified_guideline_tools.rst:196
+#: ../../tools/unified_guideline_tools.rst:233
+#: ../../tools/unified_guideline_tools.rst:264
+#: 06eb7a58482b49549574a41ff9ada86b 35da005787b84db088ede95d7d60a931
+#: 43c2cea03c5e49b9902a924c71a28673 5b0369286b7645e89e4bfd2b33ea1719
+#: 6f57959ca4bc43b59401be36951c6287 90b86534e52b43f9a3e71510d6f9dfd8
+#: f26f308abf334ba3b599b09f9eaa3703 fedd66e127064861883a65784683ea3c
+msgid "**Tool Information:**"
+msgstr ""
+"**工具信息：**  \n"
+"\n"
+"上下文：文档"
+
+#: ../../tools/unified_guideline_tools.rst:22 6fc67570560545cbadfe65950aa5909d
+msgid "**Name**: ``EuropePMC_Guidelines_Search``"
+msgstr "**名称**: ``EuropePMC_Guidelines_Search``"
+
+#: ../../tools/unified_guideline_tools.rst:23 3f080e1649394e6d97b7d7a5c3a6cb17
+msgid "**Type**: ``EuropePMCGuidelinesTool``"
+msgstr "**类型**: ``EuropePMCGuidelinesTool``"
+
+#: ../../tools/unified_guideline_tools.rst:24 dafbc8e450be4a52aa947d62dec381b0
+msgid ""
+"**Description**: Search Europe PMC for clinical guidelines and evidence-"
+"based recommendations. Europe PMC provides free access to a comprehensive "
+"archive of life sciences literature, including clinical practice guidelines "
+"from international sources."
+msgstr ""
+"**描述**：在 Europe PMC 中搜索临床指南和循证推荐。Europe PMC "
+"提供免费的生命科学文献综合档案访问权限，其中包括来自国际来源的临床实践指南。"
+
+#: ../../tools/unified_guideline_tools.rst:26
+#: ../../tools/unified_guideline_tools.rst:60
+#: ../../tools/unified_guideline_tools.rst:94
+#: ../../tools/unified_guideline_tools.rst:125
+#: ../../tools/unified_guideline_tools.rst:165
+#: ../../tools/unified_guideline_tools.rst:202
+#: ../../tools/unified_guideline_tools.rst:239
+#: ../../tools/unified_guideline_tools.rst:270
+#: 5482d21f7a2e495d801ca02eb07736ae 67d06aacb5eb4d18838c47f86f4b1433
+#: 67e0150137254166be78ac4255e4843c 7254838c587a4a5580f305f76143d017
+#: 846252685d1d40d19cfe9de8de27356a 88707b7cb77643589579661640621081
+#: a85fd9417a484f94af352add66bb3896 aeaca060d94d4b9ba7d5574ed65bb18f
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/unified_guideline_tools.rst:28 9b1063a2edcc4fe1b3a999b6a99e4406
+msgid ""
+"``query`` (string) (required) Medical condition, treatment, or clinical "
+"topic to search for (e.g., 'diabetes', 'cardiovascular disease', 'mental "
+"health')"
+msgstr "``query``（字符串）（必填）要搜索的医疗状况、治疗方法或临床主题（例如，“糖尿病”、“心血管疾病”、“心理健康”）"
+
+#: ../../tools/unified_guideline_tools.rst:31
+#: ../../tools/unified_guideline_tools.rst:130
+#: ../../tools/unified_guideline_tools.rst:170
+#: ../../tools/unified_guideline_tools.rst:207
+#: ../../tools/unified_guideline_tools.rst:275
+#: 1ee6cd6be17948cab41d2fdadc76cfea 7d9a4f8dab154d67bf6f1ed407e71ad3
+#: 9e1638c6879d4c58b58a3446f745b90c ce3156e0e5bc4f80b189040b8af904c9
+#: f7debcd4be354f25b58f6426396a5270
+msgid ""
+"``limit`` (integer) (optional) Maximum number of guidelines to return "
+"(default: 10)"
+msgstr "``limit``（整数）（可选）返回的指南最大数量（默认值：10）"
+
+#: ../../tools/unified_guideline_tools.rst:34
+#: ../../tools/unified_guideline_tools.rst:68
+#: ../../tools/unified_guideline_tools.rst:99
+#: ../../tools/unified_guideline_tools.rst:139
+#: ../../tools/unified_guideline_tools.rst:176
+#: ../../tools/unified_guideline_tools.rst:213
+#: ../../tools/unified_guideline_tools.rst:244
+#: ../../tools/unified_guideline_tools.rst:278
+#: 0b01a93a2cee4f73b35351417e6f2502 305ca82ee70a47a29ee36cff5291dd8d
+#: 5f9cc0e1883a4979afe8338214f47b66 9f7c489670734ad39acbaae21c03f177
+#: c39ca664369748499a76dda8ce45f5db d9021da032ca48bda66db75fd8dca8a1
+#: df2ebb97a6f1436d93239c55ed52d5f5 f84425e8de6246d993a1801576aa54d2
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/unified_guideline_tools.rst:48 0f8030b51cf545cdb81abd18c8bb26f1
+msgid "**NICE_Clinical_Guidelines_Search** (Type: NICEWebScrapingTool)"
+msgstr "**NICE_Clinical_Guidelines_Search**（类型：NICE网页抓取工具）"
+
+#: ../../tools/unified_guideline_tools.rst:50 9a692bd5ff3c492cb77626674d65582f
+msgid ""
+"Search NICE (National Institute for Health and Care Excellence) clinical "
+"guidelines and evidence-..."
+msgstr "搜索 NICE（英国国家健康与护理卓越研究所）的临床指南和证据-..."
+
+#: ../../tools/unified_guideline_tools.rst 69b1bfc77bce49b9ae908053a833e002
+msgid "NICE_Clinical_Guidelines_Search tool specification"
+msgstr "NICE_临床指南_搜索工具规范"
+
+#: ../../tools/unified_guideline_tools.rst:56 4fff5a7d0f044831a2a599ad5ff5da73
+msgid "**Name**: ``NICE_Clinical_Guidelines_Search``"
+msgstr "**名称**: ``NICE_Clinical_Guidelines_Search``"
+
+#: ../../tools/unified_guideline_tools.rst:57 79c35eea9e514d36b424e82869e8afc7
+msgid "**Type**: ``NICEWebScrapingTool``"
+msgstr "**类型**: ``NICEWebScrapingTool``"
+
+#: ../../tools/unified_guideline_tools.rst:58 984f2fa9c63648babe9c5433b3675244
+msgid ""
+"**Description**: Search NICE (National Institute for Health and Care "
+"Excellence) clinical guidelines and evidence-based recommendations. Provides"
+" access to official NICE guidelines covering diagnosis, treatment, and care "
+"pathways for various medical conditions."
+msgstr ""
+"**描述**：搜索NICE（英国国家健康与护理卓越研究所）的临床指南和循证建议。提供访问官方NICE指南的途径，涵盖各种医疗状况的诊断、治疗和护理路径。"
+
+#: ../../tools/unified_guideline_tools.rst:62 7b39cb5d907a465ab1c7c33872ddaac5
+msgid ""
+"``query`` (string) (required) Medical condition, treatment, or clinical "
+"topic to search for in NICE guidelines (e.g., 'diabetes', 'hypertension', "
+"'cancer screening')"
+msgstr "``query``（字符串）（必填）要在NICE指南中搜索的医学状况、治疗方法或临床主题（例如，“糖尿病”、“高血压”、“癌症筛查”）"
+
+#: ../../tools/unified_guideline_tools.rst:65 73827a0affb54da79182b034b14e36fe
+msgid ""
+"``limit`` (integer) (optional) Maximum number of clinical guidelines to "
+"return (default: 10)"
+msgstr "``limit``（整数）（可选）返回的临床指南最大数量（默认值：10）"
+
+#: ../../tools/unified_guideline_tools.rst:82 7e93f7b35c4146818b2ca02f420abbf8
+msgid "**NICE_Guideline_Full_Text** (Type: NICEGuidelineFullTextTool)"
+msgstr "**NICE_Guideline_Full_Text**（类型：NICEGuidelineFullTextTool）"
+
+#: ../../tools/unified_guideline_tools.rst:84 bdb4ee75388f4e21af28f32a0bbed600
+msgid ""
+"Fetch complete full text content from a NICE clinical guideline page. Takes "
+"a NICE guideline URL ..."
+msgstr "从NICE临床指南页面获取完整的全文内容。输入一个NICE指南的URL..."
+
+#: ../../tools/unified_guideline_tools.rst 9798811fecfd44cfbdb84d7cfbec457d
+msgid "NICE_Guideline_Full_Text tool specification"
+msgstr "NICE_Guideline_Full_Text 工具规格"
+
+#: ../../tools/unified_guideline_tools.rst:90 f1fe8f0926aa4df990315d3931a8cefa
+msgid "**Name**: ``NICE_Guideline_Full_Text``"
+msgstr "**名称**: ``NICE_Guideline_Full_Text``"
+
+#: ../../tools/unified_guideline_tools.rst:91 0e0e860dc2b24ada93829eb773233f6d
+msgid "**Type**: ``NICEGuidelineFullTextTool``"
+msgstr "**类型**: ``NICEGuidelineFullTextTool``"
+
+#: ../../tools/unified_guideline_tools.rst:92 c34a398cffa040cebf059a9f6ce7c849
+msgid ""
+"**Description**: Fetch complete full text content from a NICE clinical "
+"guideline page. Takes a NICE guideline URL and extracts all sections, "
+"recommendations, and complete guideline text. Use this after finding a "
+"guideline with NICE_Clinical_Guidelines_Search to get the full content."
+msgstr ""
+"**描述**：从NICE临床指南页面获取完整的全文内容。输入一个NICE指南的URL，提取所有章节、建议和完整的指南文本。在使用NICE_Clinical_Guidelines_Search查找到指南后，可使用此功能获取完整内容。"
+
+#: ../../tools/unified_guideline_tools.rst:96 d05da5fb4e1643539a1b1c01a02cd01c
+msgid ""
+"``url`` (string) (required) Full URL of the NICE guideline page (e.g., "
+"'https://www.nice.org.uk/guidance/ng28'). Must be a valid NICE guideline "
+"URL."
+msgstr ""
+"``url``（字符串）（必填）NICE 指南页面的完整 "
+"URL（例如：'https://www.nice.org.uk/guidance/ng28'）。必须是有效的 NICE 指南 URL。"
+
+#: ../../tools/unified_guideline_tools.rst:113
+#: be0aa356362c49e1b462709d39bc89d6
+msgid "**OpenAlex_Guidelines_Search** (Type: OpenAlexGuidelinesTool)"
+msgstr "**OpenAlex_Guidelines_Search**（类型：OpenAlexGuidelinesTool）"
+
+#: ../../tools/unified_guideline_tools.rst:115
+#: 551a2cb8b51e40fc94b8f61182466f39
+msgid ""
+"Search for clinical practice guidelines using OpenAlex scholarly database. "
+"Provides access to a c..."
+msgstr "使用 OpenAlex 学术数据库搜索临床实践指南。提供对 c... 的访问。"
+
+#: ../../tools/unified_guideline_tools.rst 90fc1d515e434eb49802fb62add4f53d
+msgid "OpenAlex_Guidelines_Search tool specification"
+msgstr "OpenAlex_指南_搜索工具规范"
+
+#: ../../tools/unified_guideline_tools.rst:121
+#: 5b0f88d6a1fd4967a4b98b248278a588
+msgid "**Name**: ``OpenAlex_Guidelines_Search``"
+msgstr "**名称**: ``OpenAlex_Guidelines_Search``"
+
+#: ../../tools/unified_guideline_tools.rst:122
+#: 7327834d2f7242abb1ca0a3105b745b6
+msgid "**Type**: ``OpenAlexGuidelinesTool``"
+msgstr "**类型**: ``OpenAlexGuidelinesTool``"
+
+#: ../../tools/unified_guideline_tools.rst:123
+#: c1b825fe8ed44f93a1a0a37435def047
+msgid ""
+"**Description**: Search for clinical practice guidelines using OpenAlex "
+"scholarly database. Provides access to a comprehensive collection of "
+"guidelines from various sources worldwide, with citation metrics and "
+"institutional affiliations."
+msgstr "**描述**：使用 OpenAlex 学术数据库搜索临床实践指南。提供来自全球各类来源的指南的全面集合，并附有引用指标和机构关联信息。"
+
+#: ../../tools/unified_guideline_tools.rst:127
+#: 9fe276ded32d4cf7b25eee289ae21e74
+msgid ""
+"``query`` (string) (required) Medical condition or clinical topic to search "
+"for guidelines (e.g., 'diabetes management', 'hypertension treatment', "
+"'cancer screening')"
+msgstr "``query``（字符串）（必填）需要搜索指南的医疗状况或临床主题（例如：“糖尿病管理”、“高血压治疗”、“癌症筛查”）"
+
+#: ../../tools/unified_guideline_tools.rst:133
+#: bc152637277b48a1908725b796f13af9
+msgid ""
+"``year_from`` (integer) (optional) Filter for guidelines published from this"
+" year onwards (optional)"
+msgstr "``year_from``（整数）（可选）筛选从该年份起发布的指南（可选）"
+
+#: ../../tools/unified_guideline_tools.rst:136
+#: e019a7f4d0dc48efbbac506e9a38e062
+msgid ""
+"``year_to`` (integer) (optional) Filter for guidelines published up to this "
+"year (optional)"
+msgstr "``year_to``（整数）（可选）用于筛选发布至该年份的指南（可选）"
+
+#: ../../tools/unified_guideline_tools.rst:153
+#: e38f259097454ad0a5331e89db01c46a
+msgid "**PubMed_Guidelines_Search** (Type: PubMedGuidelinesTool)"
+msgstr "**PubMed_指南_搜索**（类型：PubMed指南工具）"
+
+#: ../../tools/unified_guideline_tools.rst:155
+#: fa2003ae942d43c4abb7da40e46fb71c
+msgid ""
+"Search PubMed for peer-reviewed clinical practice guidelines using NCBI "
+"E-utilities. Filters resu..."
+msgstr "使用NCBI E-utilities在PubMed中搜索经过同行评审的临床实践指南。应用筛选器结果..."
+
+#: ../../tools/unified_guideline_tools.rst f00c08da0930435e98e9d1b429832c1b
+msgid "PubMed_Guidelines_Search tool specification"
+msgstr "PubMed_Guidelines_Search 工具规范"
+
+#: ../../tools/unified_guideline_tools.rst:161
+#: 06367d1b9cd54fc292937372efc1d522
+msgid "**Name**: ``PubMed_Guidelines_Search``"
+msgstr "**名称**: ``PubMed_Guidelines_Search``"
+
+#: ../../tools/unified_guideline_tools.rst:162
+#: 2cd97fbf083540f5927aa768cb19f9e8
+msgid "**Type**: ``PubMedGuidelinesTool``"
+msgstr "**类型**: ``PubMedGuidelinesTool``"
+
+#: ../../tools/unified_guideline_tools.rst:163
+#: 2125bfeb6a1144c5899ef5fa4335eafc
+msgid ""
+"**Description**: Search PubMed for peer-reviewed clinical practice "
+"guidelines using NCBI E-utilities. Filters results specifically for "
+"guideline and practice guideline publication types. Provides access to high-"
+"quality, evidence-based clinical guidelines from medical journals worldwide."
+msgstr ""
+"**描述**：使用NCBI "
+"E-utilities在PubMed中搜索同行评审的临床实践指南。筛选结果以获取指南和实践指南类型的出版物。提供来自全球医学期刊的高质量、循证的临床指南。"
+
+#: ../../tools/unified_guideline_tools.rst:167
+#: ec82e3e0a35d4a3dac94241ab91d3905
+msgid ""
+"``query`` (string) (required) Medical condition, treatment, or clinical "
+"topic to search for (e.g., 'diabetes', 'hypertension management', 'cancer "
+"treatment')"
+msgstr "``query``（字符串）（必填）要搜索的医疗状况、治疗方法或临床主题（例如，“糖尿病”、“高血压管理”、“癌症治疗”）"
+
+#: ../../tools/unified_guideline_tools.rst:173
+#: 822d1748c2484b7db18223e81c5d101e
+msgid ""
+"``api_key`` (string) (optional) Optional NCBI API key for higher rate "
+"limits. Get your free key at https://www.ncbi.nlm.nih.gov/account/"
+msgstr ""
+"``api_key``（字符串）（可选）可选的 NCBI API 密钥，用于提高速率限制。您可以在 "
+"https://www.ncbi.nlm.nih.gov/account/ 免费获取密钥。"
+
+#: ../../tools/unified_guideline_tools.rst:190
+#: 067d523c08a0495fb45d016a6fb3203c
+msgid "**TRIP_Database_Guidelines_Search** (Type: TRIPDatabaseTool)"
+msgstr "**TRIP_Database_Guidelines_Search**（类型：TRIPDatabaseTool）"
+
+#: ../../tools/unified_guideline_tools.rst:192
+#: 5a7a357be41345a8b004c398f7f0e755
+msgid ""
+"Search TRIP Database (Turning Research into Practice) for evidence-based "
+"clinical guidelines. TRI..."
+msgstr "搜索 TRIP 数据库（将研究转化为实践）以查找循证临床指南。TRI..."
+
+#: ../../tools/unified_guideline_tools.rst 892040a09c484c1aade63e363f7d232d
+msgid "TRIP_Database_Guidelines_Search tool specification"
+msgstr "TRIP_数据库_指南_搜索工具规范"
+
+#: ../../tools/unified_guideline_tools.rst:198
+#: 20afd99431354638a65be075e2c61415
+msgid "**Name**: ``TRIP_Database_Guidelines_Search``"
+msgstr "**名称**: ``TRIP_Database_Guidelines_Search``"
+
+#: ../../tools/unified_guideline_tools.rst:199
+#: 894a34546c5d470bb10f45d60dd2cdd0
+msgid "**Type**: ``TRIPDatabaseTool``"
+msgstr "**类型**: ``TRIPDatabaseTool``"
+
+#: ../../tools/unified_guideline_tools.rst:200
+#: 4203338b683246ec8632814250aa77a9
+msgid ""
+"**Description**: Search TRIP Database (Turning Research into Practice) for "
+"evidence-based clinical guidelines. TRIP is a specialized clinical search "
+"engine that focuses on high-quality evidence-based content, particularly "
+"clinical guidelines from reputable sources worldwide."
+msgstr ""
+"**描述**：搜索 TRIP 数据库（将研究转化为实践）以获取循证临床指南。TRIP "
+"是一个专注于高质量循证内容的专业临床搜索引擎，特别是来自全球权威来源的临床指南。"
+
+#: ../../tools/unified_guideline_tools.rst:204
+#: 005bd59a0e454d8591193c533f659432
+msgid ""
+"``query`` (string) (required) Medical condition, treatment, or clinical "
+"question (e.g., 'diabetes management', 'stroke prevention', 'antibiotic "
+"therapy')"
+msgstr "``query``（字符串）（必填）医疗状况、治疗方法或临床问题（例如：“糖尿病管理”、“中风预防”、“抗生素治疗”）"
+
+#: ../../tools/unified_guideline_tools.rst:210
+#: 1faec810e6a2475c98f09f3f52436bff
+msgid ""
+"``search_type`` (string) (optional) Type of content to search for (default: "
+"'guideline'). Options include 'guideline', 'systematic-review', 'evidence-"
+"based-synopses'"
+msgstr ""
+"``search_type``（字符串）（可选）要搜索的内容类型（默认值：'guideline'）。选项包括 "
+"'guideline'、'systematic-review'、'evidence-based-synopses'"
+
+#: ../../tools/unified_guideline_tools.rst:227
+#: c74d07bb463a4a2d93df00da4933a6b5
+msgid "**WHO_Guideline_Full_Text** (Type: WHOGuidelineFullTextTool)"
+msgstr "**WHO_Guideline_Full_Text**（类型：WHOGuidelineFullTextTool）"
+
+#: ../../tools/unified_guideline_tools.rst:229
+#: 4240d3da2926435dbe4ee2104f89de08
+msgid ""
+"Fetch full text content from a WHO (World Health Organization) guideline "
+"publication page. Extrac..."
+msgstr "从世界卫生组织（WHO）指南发布页面获取完整的文本内容。"
+
+#: ../../tools/unified_guideline_tools.rst 59c0f78797984deaa3fc4d703b104898
+msgid "WHO_Guideline_Full_Text tool specification"
+msgstr "WHO_Guideline_Full_Text 工具规范"
+
+#: ../../tools/unified_guideline_tools.rst:235
+#: a5ad47895fbb44249f64aa9cc05643b5
+msgid "**Name**: ``WHO_Guideline_Full_Text``"
+msgstr "**名称**: ``WHO_Guideline_Full_Text``"
+
+#: ../../tools/unified_guideline_tools.rst:236
+#: b7c216388bf046459a26dfc47ea2cc2a
+msgid "**Type**: ``WHOGuidelineFullTextTool``"
+msgstr "**类型**: ``WHOGuidelineFullTextTool``"
+
+#: ../../tools/unified_guideline_tools.rst:237
+#: 4e206e6e786f4464bc4e877513c72253
+msgid ""
+"**Description**: Fetch full text content from a WHO (World Health "
+"Organization) guideline publication page. Extracts available web content and"
+" finds PDF download links. Use this after finding a guideline with "
+"WHO_Guidelines_Search to get the full content or PDF link."
+msgstr ""
+"**描述**：从WHO（世界卫生组织）指南发布页面获取完整的文本内容。提取可用的网页内容并查找PDF下载链接。在使用WHO_Guidelines_Search找到指南后，使用此功能获取完整内容或PDF链接。"
+
+#: ../../tools/unified_guideline_tools.rst:241
+#: 031a5847ad1c4571a8cfe67ed42cf5b2
+msgid ""
+"``url`` (string) (required) Full URL of the WHO publication page (e.g., "
+"'https://www.who.int/publications/i/item/9789240113879'). Must be a valid "
+"WHO publication URL."
+msgstr ""
+"``url``（字符串）（必填）WHO出版物页面的完整URL（例如，'https://www.who.int/publications/i/item/9789240113879'）。必须是有效的WHO出版物URL。"
+
+#: ../../tools/unified_guideline_tools.rst:258
+#: 0a2fa2cc29a14bbab32b5c0f9ae84a2f
+msgid "**WHO_Guidelines_Search** (Type: WHOGuidelinesTool)"
+msgstr "**WHO_Guidelines_Search**（类型：WHOGuidelinesTool）"
+
+#: ../../tools/unified_guideline_tools.rst:260
+#: b3a4aca3398e48999c0ee8c796e2d1f3
+msgid ""
+"Search WHO (World Health Organization) official clinical guidelines and "
+"health recommendations. P..."
+msgstr "搜索WHO（世界卫生组织）官方临床指南和健康建议。"
+
+#: ../../tools/unified_guideline_tools.rst a043a6ea818a4a68af715a17e31dcb94
+msgid "WHO_Guidelines_Search tool specification"
+msgstr "WHO_Guidelines_Search 工具规格"
+
+#: ../../tools/unified_guideline_tools.rst:266
+#: 6739900dac4f4b8ebece9c13631c81b7
+msgid "**Name**: ``WHO_Guidelines_Search``"
+msgstr "**名称**: ``WHO_Guidelines_Search``"
+
+#: ../../tools/unified_guideline_tools.rst:267
+#: 174106b388104d0b85b88566b24d50a7
+msgid "**Type**: ``WHOGuidelinesTool``"
+msgstr "**类型**: ``WHOGuidelinesTool``"
+
+#: ../../tools/unified_guideline_tools.rst:268
+#: d9c85a2947fa4b2882e882066ddfbac2
+msgid ""
+"**Description**: Search WHO (World Health Organization) official clinical "
+"guidelines and health recommendations. Provides access to authoritative "
+"global health guidelines published by WHO."
+msgstr "**描述**：搜索WHO（世界卫生组织）官方临床指南和健康建议。提供访问WHO发布的权威全球健康指南的途径。"
+
+#: ../../tools/unified_guideline_tools.rst:272
+#: 22540c0c21af46239557dcc2bb276943
+msgid ""
+"``query`` (string) (required) Medical condition, disease, or health topic to"
+" search for in WHO guidelines (e.g., 'malaria', 'HIV', 'diabetes', "
+"'tuberculosis')"
+msgstr ""
+"``query``（字符串）（必填）要在 WHO 指南中搜索的医学状况、疾病或健康主题（例如：“疟疾”、“艾滋病”、“糖尿病”、“结核病”）"
+
+#: ../../tools/unified_guideline_tools.rst:292
+#: 0502216b10374293b66e1e1e6a0896bc
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/unified_guideline_tools.rst:294
+#: 36c6ec12e0d347bbab2c60024e5febef
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/unified_guideline_tools.rst:295
+#: b21bbe50f87a4f85b580eb99c5e7675f
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"
+
+#~ msgid ""
+#~ "**Configuration File**: ``unified_guideline_tools.json`` **Tool Type**: "
+#~ "Local **Tools Count**: 4"
+#~ msgstr "**配置文件**: ``unified_guideline_tools.json`` **工具类型**: 本地 **工具数量**: 4"

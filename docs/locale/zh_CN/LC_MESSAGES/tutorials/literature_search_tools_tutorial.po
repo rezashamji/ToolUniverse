@@ -1,0 +1,1549 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:2
+#: f77ccc226e4f4e4b900abe37c63c1e64
+msgid "Literature Search Tools Tutorial"
+msgstr "文献检索工具教程"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:4
+#: afe3016dd1bc45c39cb6010d768e2b69
+msgid ""
+"This comprehensive tutorial demonstrates how to use the literature search "
+"tools available in ToolUniverse for finding academic papers, preprints, and "
+"research articles across multiple databases."
+msgstr "本综合教程演示了如何使用 ToolUniverse 中提供的文献检索工具，跨多个数据库查找学术论文、预印本及研究文章。"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:7
+#: a03111c1ec6946e9b6c43555d71c11ba
+msgid "Overview"
+msgstr "概述"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:9
+#: 888fde75d1a546d08d1c8105339a7553
+#, fuzzy
+msgid ""
+"ToolUniverse provides 15 powerful literature search tools that cover "
+"different aspects of academic research. All tools have been optimized with "
+"enhanced data extraction, comprehensive metadata, and data quality "
+"indicators:"
+msgstr "ToolUniverse 提供 15 种强大的文献检索工具，涵盖学术研究的不同方面："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:11
+#: 7c16c8eb9b0c4375b39088ac2a2b9c2e
+msgid ""
+"**Preprint Archives:** - ArXiv - Physics, mathematics, computer science, and"
+" other fields - BioRxiv - Biology preprints - MedRxiv - Medical preprints - "
+"HAL - French research archive"
+msgstr ""
+"**预印本档案库：**  \n"
+"- ArXiv - 物理学、数学、计算机科学及其他领域  \n"
+"- BioRxiv - 生物学预印本  \n"
+"- MedRxiv - 医学预印本  \n"
+"- HAL - 法国科研档案库"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:17
+#: 8acb1bdff29447278c48c5b8a297cf45
+msgid ""
+"**Academic Databases:** - Crossref - Scholarly articles with DOI metadata - "
+"PubMed - Medical and life sciences literature - Europe PMC - Biomedical "
+"literature - Semantic Scholar - AI-powered academic search - OpenAlex - Open"
+" academic graph - DBLP - Computer science bibliography"
+msgstr ""
+"**学术数据库：**  \n"
+"- Crossref - 带有 DOI 元数据的学术文章  \n"
+"- PubMed - 医学与生命科学文献  \n"
+"- Europe PMC - 生物医学文献  \n"
+"- Semantic Scholar - 人工智能驱动的学术搜索  \n"
+"- OpenAlex - 开放学术图谱  \n"
+"- DBLP - 计算机科学文献目录"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:25
+#: 51bb5d3fdd7045769badd90bb9364e5d
+msgid ""
+"**Open Access Tools:** - DOAJ - Directory of Open Access Journals - "
+"Unpaywall - Open access status checker - CORE - World's largest open access "
+"research papers collection - PMC - PubMed Central full-text biomedical "
+"literature - Zenodo - Open research data and publications repository"
+msgstr ""
+"**开放获取工具：**  \n"
+"- DOAJ - 开放获取期刊目录  \n"
+"- Unpaywall - 开放获取状态检查工具  \n"
+"- CORE - 全球最大的开放获取研究论文集合  \n"
+"- PMC - PubMed Central 生物医学全文文献库  \n"
+"- Zenodo - 开放研究数据与出版物存储库"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:33
+#: 82c6c98c07d6438fa9a652ac36373cb2
+msgid "Tool Overview Table"
+msgstr "工具概览表"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:36
+#: 5f29c71f5e944261a2082ba248a18883
+msgid "Tool Name"
+msgstr "工具名称"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:36
+#: 6bd3ed9baeac402d8db5a6e29809d70b
+msgid "Database"
+msgstr "数据库"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:36
+#: 192f50e66b6c411fbb437cae3224e6cb
+msgid "Best For"
+msgstr "最佳适用"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:36
+#: 8b5fd54b13844b8989aa033c0ea322d6
+msgid "Key Features"
+msgstr "主要功能"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:38
+#: 085149030a5d48dd929cfbada18e27d9
+msgid "ArXiv_search_ papers"
+msgstr "ArXiv_search_论文"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:38
+#: cf1c54c8e9234acb8c187d3e540eac93
+msgid "ArXiv"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:38
+#: 5010af4864ce4972a3592d3803c1ffbd
+msgid "Preprints"
+msgstr "预印本"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:38
+#: a33add3e8c024a4fbd9c8abfad728533
+msgid "Physics, Math, CS, Biology"
+msgstr "物理学、数学、计算机科学、生物学"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:41
+#: 6afb7b71c4aa4aacb9307950ff9d1a3e
+msgid "Crossref_search_ works"
+msgstr "Crossref_search_ 功能正常"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:41
+#: 695cb6e97d174790898d610c19cb4cc7
+msgid "Crossref"
+msgstr "交叉引用"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:41
+#: 2ec0e5c9188540a29f617a7a7ee03ad6
+msgid "Scholarly Articles"
+msgstr "学术文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:41
+#: 8a585949e21e4351a94c2554ff99c5c3
+#, fuzzy
+msgid "DOI metadata, Rich metadata, HTML cleaning"
+msgstr "DOI元数据，丰富的元数据"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:45
+#: 7e6cc4d9703e40c29c222bc3fdc6aeb2
+msgid "PubMed_search_ articles"
+msgstr "PubMed_搜索_文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:45
+#: 56eafd39db5f4e4eac63180358697829
+msgid "PubMed"
+msgstr "PubMed（美国国立医学图书馆生物医学文献数据库）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:45
+#: 30458788b15443b1996f62d61686eaaa
+msgid "Medical/Life Sciences"
+msgstr "医学/生命科学"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:45
+#: a5419b44b77e41618f20ae1dbaebd84e
+#, fuzzy
+msgid "Medical literature, MeSH keywords"
+msgstr "医学文献"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:49
+#: c74255098c724c209f64e00d40d495bc
+msgid "SemanticScholar_ search_papers"
+msgstr "SemanticScholar_ 搜索_论文"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:49
+#: 3ef15d142e4e4278ade9709c1613a022
+msgid "Semantic Scholar"
+msgstr "语义学者"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:49
+#: 35e41d2726d0470c983e3e9ac42c4c5e
+msgid "AI-powered Search"
+msgstr "AI 驱动的搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:49
+#: b269241c482d4c07a0234287fd914210
+#, fuzzy
+msgid "AI ranking, Citations, Rate limit handling"
+msgstr "人工智能排名，引用"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:54
+#: 5af4b25e36074926bebddb8967e656e6
+msgid "openalex_ literature_ search"
+msgstr "openalex_ 文献_ 搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:54
+#: 600d50197524434092170e3b41398de7
+msgid "OpenAlex"
+msgstr ""
+"OpenAlex\n"
+"\n"
+"Context: 技术文档\n"
+"\n"
+"OpenAlex"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:54
+#: b6dec9adef274f259d031a8d55cefce0
+msgid "Comprehensive Academic Search"
+msgstr "综合学术检索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:54
+#: 909ac4ef48d94a888b244129d273d653
+#, fuzzy
+msgid "Open access, Year filtering, Abstract reconstruction"
+msgstr "开放获取，年份筛选"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:59
+#: 7f6bd79000b045499d3cf608a6ee653b
+msgid "EuropePMC_ search_articles"
+msgstr "EuropePMC_ 搜索文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:59
+#: 01c650dd64ad4801b85afa8bb7774371
+msgid "Europe PMC"
+msgstr "欧洲 PMC"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:59
+#: 672f5b83dd5f4e46a1ef42950a9e13da
+msgid "Biomedical Literature"
+msgstr "生物医学文献"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:59
+#: c6dbfe9f8931495bb503b74df74b3494
+#, fuzzy
+msgid "European research, Core+Lite modes"
+msgstr "欧洲研究"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:63
+#: 0f87fe6d31674a58876c5db7a2830322
+msgid "DBLP_search_ publications"
+msgstr "DBLP_搜索_出版物"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:63
+#: d64734ff20bd4348b94cae6db48b2f93
+msgid "DBLP"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:63
+#: 119a6be116f94189b4b4e70b963eb86f
+msgid "Computer Science"
+msgstr "计算机科学"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:63
+#: e4ed7e29c6bb44918054879087a4dca2
+#, fuzzy
+msgid "CS bibliography, Conference papers"
+msgstr "计算机科学参考文献"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:67
+#: caadb63ed60b41cc8a51e82a8df6231e
+msgid "DOAJ_search_ articles"
+msgstr "DOAJ_搜索_文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:67
+#: 772c5fe73f764ab393158133986e892d
+msgid "DOAJ"
+msgstr "DOAJ（开放获取期刊目录）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:67
+#: 1dbc38b199074cceac12b6fd7e47f47c
+msgid "Open Access"
+msgstr "开放获取"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:67
+#: 797c61d10a1a42d9a6eec8f8cd8d5181
+#, fuzzy
+msgid "Articles & Journals, HTML cleaning"
+msgstr "文章与期刊"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:71
+#: 864b20c928c943d68e64dcc2fcf0e643
+msgid "BioRxiv_search_ preprints"
+msgstr "BioRxiv_搜索_预印本"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:71
+#: 121c134aa6b24cf3bd46faa37109cd37
+msgid "BioRxiv"
+msgstr "BioRxiv（生物预印本）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:71
+#: 5cbe028c59644219b6549f17f8bb51bb
+msgid "Biology Preprints"
+msgstr "生物学预印本"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:71
+#: 10627b72627147098f740e2448c47d73
+#, fuzzy
+msgid "Biology preprints, Abstracts"
+msgstr "生物学预印本"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:75
+#: d845fc6f8594433fabfedc2a99fae0c7
+msgid "MedRxiv_search_ preprints"
+msgstr "MedRxiv_search_ 预印本"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:75
+#: 8eb370c991b84e87a0b2c18d037f1734
+msgid "MedRxiv"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:75
+#: f9c9aff7bf22484ca82d150350f9072a
+msgid "Medical Preprints"
+msgstr "医学预印本"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:75
+#: e8e810ea83c34bf6830cbf2d50ecac7e
+#, fuzzy
+msgid "Medical preprints, Abstracts"
+msgstr "医学预印本"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:79
+#: 9c90f9a1a7644bfd97309796917af27a
+msgid "HAL_search_ archive"
+msgstr "HAL_search_ 存档"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:79
+#: 97fe39a23e3e40c790a745218587b628
+msgid "HAL"
+msgstr "硬件抽象层（HAL）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:79
+#: eea9eef082544b069939a2ada3a0c38b
+msgid "French Research Archive"
+msgstr "法国研究档案馆"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:79
+#: 1ce14beb98684404b4352a1fab94ac13
+msgid "French academic papers"
+msgstr "法语学术论文"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:82
+#: d573cd6dbc0f4e4fb493db8dd17344c0
+msgid "Unpaywall_ check_oa_status"
+msgstr "Unpaywall_检查_开放获取状态"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:82
+#: eee23259ad764232945c41035b0c80b0
+msgid "Unpaywall"
+msgstr "Unpaywall（免费获取学术论文工具）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:82
+#: 64c8d8d8ac5e46979543529d0fe77dce
+msgid "Open Access Status"
+msgstr "开放获取状态"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:82
+#: b22f3c3957f44fb8992e2b885243835a
+msgid "OA status checking"
+msgstr "OA状态检查"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:87
+#: d19c8f6b9fb14e45a7d7fb9c8a06fc92
+#, fuzzy
+msgid "Enhanced Features"
+msgstr "主要功能"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:89
+#: 16527710c4a24d8dad06aaf3ce5eccb6
+msgid ""
+"All literature search tools have been optimized with the following "
+"enhancements:"
+msgstr "所有文献检索工具已通过以下改进进行了优化："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:91
+#: df7696c0b410463ba929c28f44b63eb2
+msgid ""
+"**Comprehensive Data Extraction:** - Authors information with proper "
+"formatting - DOI (Digital Object Identifier) extraction - Citation counts "
+"where available - Open access status indicators - Keywords and subject terms"
+" - Article type classification - Publisher information - Data quality "
+"indicators for transparency"
+msgstr ""
+"**全面数据提取：**  \n"
+"- 作者信息（格式规范）  \n"
+"- DOI（数字对象唯一标识符）提取  \n"
+"- 引用次数（如有）  \n"
+"- 开放获取状态指示  \n"
+"- 关键词和主题词  \n"
+"- 文章类型分类  \n"
+"- 出版商信息  \n"
+"- 数据质量指标（以确保透明性）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:101
+#: 6eeccff45fb846b0be3579846152172b
+msgid ""
+"**Improved Error Handling:** - Enhanced rate limit handling with automatic "
+"retry - User-friendly error messages - Graceful handling of missing data - "
+"Consistent fallback values"
+msgstr ""
+"**改进的错误处理：**  \n"
+"- 增强的速率限制处理，支持自动重试  \n"
+"- 用户友好的错误消息  \n"
+"- 优雅地处理数据缺失情况  \n"
+"- 提供一致的回退值"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:107
+#: dd5d191c4c3d48a4bca8acc14b5d9ed7
+msgid ""
+"**Data Quality Transparency:** - Each result includes a `data_quality` "
+"object - Boolean indicators for field availability - Clear indication of "
+"missing vs. unavailable data - Consistent data structure across all tools"
+msgstr ""
+"**数据质量透明性：**  \n"
+"- 每个结果包含一个 `data_quality` 对象  \n"
+"- 字段可用性的布尔值指示器  \n"
+"- 清晰区分数据缺失与数据不可用  \n"
+"- 所有工具中的数据结构保持一致"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:113
+#: 24be2fbdfc3641cb8219a7ddbf5d9d48
+msgid ""
+"**Advanced Metadata:** - HTML tag cleaning for abstracts - Abstract "
+"reconstruction from inverted indexes (OpenAlex) - Multi-mode API calls for "
+"comprehensive data (Europe PMC) - Enhanced author and affiliation extraction"
+msgstr ""
+"**高级元数据：**  \n"
+"- 清理摘要中的HTML标签  \n"
+"- 从倒排索引（OpenAlex）重建摘要  \n"
+"- 多模式API调用以获取全面数据（Europe PMC）  \n"
+"- 提升作者与机构信息提取"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:120
+#: 84905cf234004755b888bd33d20b99f3
+msgid "Getting Started"
+msgstr "入门指南"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:122
+#: 26c98c76c5da4afa952eb4beda61515a
+msgid ""
+"First, let's initialize ToolUniverse and load the literature search tools:"
+msgstr "首先，初始化 ToolUniverse 并加载文献检索工具："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:155
+#: 298a2a41dbcf465c86f2ab9db6adc7ef
+msgid "Basic Usage Pattern"
+msgstr "基本使用模式"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:157
+#: 5c3133611e104d64b0fabecb27bd4186
+msgid "All literature search tools follow a similar usage pattern:"
+msgstr "所有文献检索工具的使用模式均大同小异："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:197
+#: cf259ed4c02c40f184b96ad1eab31bf1
+msgid "Tool-Specific Examples"
+msgstr "工具特定示例"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:200
+#: ba5ab9fa8ccd414285d2349d117a03aa
+msgid "ArXiv Search"
+msgstr "ArXiv 搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:202
+#: e3c1b49f265e4a1298942c19b6de648f
+msgid ""
+"Search for preprints in physics, mathematics, computer science, and other "
+"fields:"
+msgstr "在物理学、数学、计算机科学及其他领域搜索预印本："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:228
+#: 1159ed63f4de4ac698f084182e2d984d
+msgid "Crossref Search"
+msgstr "Crossref 搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:230
+#: bd03e6e0e48640edb6a51f176979828a
+msgid "Search for scholarly articles with rich metadata:"
+msgstr "搜索具有丰富元数据的学术文章："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:254
+#: 0801b6c7282d4fa79ab10ac70e3868f3
+msgid "PubMed Search"
+msgstr "PubMed 检索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:256
+#: d02e8e7fd8754025830694972970007c
+msgid "Search medical and life sciences literature:"
+msgstr "搜索医学与生命科学文献："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:279
+#: 9ed2c0baf5074b389bbc6ec192ce2187
+msgid "Semantic Scholar Search"
+msgstr "语义学者搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:281
+#: 3b39f353e0c74c1fa21409d81dcdb64d
+msgid "AI-powered academic search with enhanced results:"
+msgstr "基于人工智能的学术搜索，提供增强的结果："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:295
+#: dc227b4b6e3f4232b68e523e59538617
+msgid "OpenAlex Search"
+msgstr "OpenAlex 搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:297
+#: 35063faf7d384e9599adbb3ddcfe50e6
+msgid "Comprehensive academic search with advanced filtering:"
+msgstr "全面学术检索与高级筛选："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:322
+#: 9b72883806884652a3254bbbe3b2495a
+msgid "Preprint Archives"
+msgstr "预印本档案"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:324
+#: 9132e14e11264b75b7ae5270381b9edb
+msgid "Search for preprints in specific fields:"
+msgstr "在特定领域中搜索预印本："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:356
+#: a838250005dc4fc3836f45aa59832fcd
+msgid "Open Access Tools"
+msgstr "开放获取工具"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:358
+#: f66c515c9e1641ac96e811d56b243bf3
+msgid "Find open access articles and check access status:"
+msgstr "查找开放获取文章并检查访问状态："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:392
+#: ba862871f0a54d64b6654f49b81f4439
+msgid "Advanced Usage Patterns"
+msgstr "高级使用模式"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:395
+#: df1f64e78d6e4593ba4b56e8abb623c4
+msgid "Combining Multiple Searches"
+msgstr "组合多重搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:397
+#: 08135a8182d0404f97d14be6cd4f5adf
+msgid "Search across multiple databases for comprehensive results:"
+msgstr "跨多个数据库进行搜索以获得全面结果："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:432
+#: 5397b9ed83c74f058c555bb9a986de29
+msgid "Filtering and Sorting"
+msgstr "筛选与排序"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:434
+#: 826b470203b14a49b181b692a9521d75
+msgid "Different tools offer various filtering and sorting options:"
+msgstr "不同工具提供多种筛选和排序选项："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:472
+#: b10adc411f024ec890c62f0f4e4e597a
+msgid "Error Handling"
+msgstr "错误处理"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:474
+#: 05f11b525f494f598045f252e177b615
+msgid "Always include proper error handling for robust applications:"
+msgstr "始终包含适当的错误处理以确保应用程序的健壮性："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:510
+#: 948abb99d0cb421c8a218037faf41cbf
+msgid "Best Practices"
+msgstr "最佳实践"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:512
+#: f5dc3c23cee047c4a2f4d4108467f832
+msgid ""
+"**Choose the Right Tool:** - Use ArXiv for preprints in physics, math, CS - "
+"Use PubMed for medical/life sciences - Use Semantic Scholar for AI-powered "
+"ranking - Use OpenAlex for comprehensive academic search"
+msgstr ""
+"**选择合适的工具：**  \n"
+"- 使用 ArXiv 获取物理、数学和计算机科学领域的预印本  \n"
+"- 使用 PubMed 获取医学和生命科学领域的文献  \n"
+"- 使用 Semantic Scholar 进行人工智能驱动的文献排序  \n"
+"- 使用 OpenAlex 进行全面的学术搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:518
+#: ea84f95bbb364bf4972d0603c4acd99a
+msgid ""
+"**Optimize Your Queries:** - Use specific, relevant keywords - Combine terms"
+" with appropriate operators - Use filters to narrow results"
+msgstr ""
+"**优化查询：**  \n"
+"- 使用具体且相关的关键词  \n"
+"- 结合适当的运算符进行组合  \n"
+"- 使用筛选器缩小结果范围"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:523
+#: 10041b89c2014d60ba5c1bc2ac5a26bf
+msgid ""
+"**Handle Rate Limits:** - Some APIs have rate limits - Implement delays "
+"between requests if needed - Use error handling for 429 (Too Many Requests) "
+"errors"
+msgstr ""
+"**处理速率限制：**  \n"
+"- 某些 API 存在速率限制  \n"
+"- 如有必要，在请求之间实现延迟  \n"
+"- 对 429（请求过多）错误进行错误处理"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:528
+#: 9c42f7a1cf724b738ca2666cda0ab31b
+msgid ""
+"**Process Results Efficiently:** - Check result types before processing - "
+"Extract only needed fields - Implement pagination for large result sets"
+msgstr ""
+"**高效处理结果：**  \n"
+"- 在处理前检查结果类型  \n"
+"- 仅提取所需字段  \n"
+"- 对大规模结果集实现分页处理"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:533
+#: 197d26976e1d4f25a3fedb88dd298bd5
+msgid ""
+"**Combine Multiple Sources:** - Use different tools for comprehensive "
+"coverage - Cross-reference results for validation - Merge and deduplicate "
+"results"
+msgstr ""
+"**结合多个来源：**  \n"
+"- 使用不同工具以实现全面覆盖  \n"
+"- 交叉验证结果以确保准确性  \n"
+"- 合并并去重结果"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:539
+#: 79a644fa36a84cbbbd44d2281cf6edfc
+msgid "Complete Example"
+msgstr "完整示例"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:541
+#: ff2816274dee4782b75a988c3afeb2bf
+msgid ""
+"Here's a complete example that demonstrates searching across multiple "
+"literature databases:"
+msgstr "以下是一个完整示例，演示如何跨多个文献数据库进行检索："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:623
+#: 03e3907c8b734eb29b788fa7c109448b
+msgid ""
+"This tutorial provides a comprehensive guide to using ToolUniverse's "
+"literature search tools. For more specific examples and advanced usage "
+"patterns, refer to the individual tool documentation in the API reference."
+msgstr "本教程提供了使用 ToolUniverse 文献检索工具的全面指南。有关更具体的示例和高级用法，请参阅 API 参考中的各个工具文档。"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:626
+#: 4611a3b08ab94f9ebece3cf31b9b3164
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:628
+#: 630dfcf0c7b0404696e1a90636799890
+msgid "Common Issues and Solutions:"
+msgstr "常见问题及解决方案："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:630
+#: c7da262882d747d39732753308720cd6
+msgid ""
+"**API Rate Limits:** - Some services have rate limits - Implement delays "
+"between requests - Use error handling for 429 errors"
+msgstr ""
+"**API 速率限制：**  \n"
+"- 某些服务存在速率限制  \n"
+"- 在请求之间实现延迟  \n"
+"- 对 429 错误进行错误处理"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:635
+#: 38956fce8c1c4e7a849ec7eb637859f9
+msgid ""
+"**Missing Results:** - Check query spelling and keywords - Try different "
+"search terms - Verify tool parameters"
+msgstr ""
+"**无结果：**  \n"
+"- 检查查询拼写和关键词  \n"
+"- 尝试不同的搜索词  \n"
+"- 核实工具参数"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:640
+#: 6b580adcae374dcfb1411398cb03399b
+msgid ""
+"**Authentication Errors:** - Some tools require API keys - Check your .env "
+"file configuration - Verify API key validity"
+msgstr ""
+"**认证错误：**  \n"
+"- 某些工具需要 API 密钥  \n"
+"- 检查您的 .env 文件配置  \n"
+"- 验证 API 密钥的有效性"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:645
+#: 0a2a6de8b3344ba2add9c722cf62c679
+msgid ""
+"**Network Issues:** - Check internet connection - Implement retry logic - "
+"Handle timeout exceptions"
+msgstr ""
+"**网络问题：**  \n"
+"- 检查网络连接  \n"
+"- 实施重试机制  \n"
+"- 处理超时异常"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:650
+#: 86aaba5daf0e44a4aabc9964a0feb6bd
+msgid ""
+"For more help, see the :doc:`troubleshooting guide "
+"<../help/troubleshooting>`."
+msgstr "如需更多帮助，请参阅 :doc:`故障排除指南 <../help/troubleshooting>`。"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:653
+#: a5d92c18e87543469937519545b76e8d
+msgid "Quick Reference"
+msgstr "快速参考"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:656
+#: fb4e61e7928648eb937dc0698062e099
+msgid "Common Parameters"
+msgstr "常用参数"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:658
+#: c1d86d46ca70434dad0e9ebdbe8bd1d9
+msgid "Most search tools accept these common parameters:"
+msgstr "大多数搜索工具支持以下常用参数："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:661
+#: 6b7b490eceeb440b9d072125dd7f8a84
+msgid "Parameter"
+msgstr "参数"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:661
+#: e9146bb71bb0419b859adb15fbe81df2
+msgid "Type"
+msgstr "类型"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:661
+#: 241f275398a94daa8eebc676a306c35c
+msgid "Description"
+msgstr "描述"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:661
+#: 74daf6b238e044a2a596fa2a8e511b11
+msgid "Example"
+msgstr "示例"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:663
+#: e700dba8d8104b42b04ae77d9d7b3b8e
+msgid "query"
+msgstr "查询"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:663
+#: ../../tutorials/literature_search_tools_tutorial.rst:671
+#: ../../tutorials/literature_search_tools_tutorial.rst:673
+#: ../../tutorials/literature_search_tools_tutorial.rst:675
+#: ../../tutorials/literature_search_tools_tutorial.rst:684
+#: ../../tutorials/literature_search_tools_tutorial.rst:686
+#: 3e7cbfd4f6374fc0b55389cb631aee36 51cba52f73b84d4087de8777cadda704
+#: 912aab33202247aa9b5f501f0ea93d2f 9e3c4533b018473c8eec64388232db9a
+#: ebd2310c74854db286e75a2712a4950a fe6a9b77f3e044f68e78393b80b0637c
+msgid "string"
+msgstr "字符串"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:663
+#: 84621cdecb5747dda3fed8470f2f2c29
+msgid "Search terms"
+msgstr "搜索词"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:663
+#: 4fe37748687f430d949ca28a1d2bd145
+msgid "\"machine learning\""
+msgstr "机器学习"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:666
+#: e1c5f1a809b54771a32947c317716b6c
+msgid "limit"
+msgstr "限制"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:666
+#: ../../tutorials/literature_search_tools_tutorial.rst:668
+#: ../../tutorials/literature_search_tools_tutorial.rst:678
+#: ../../tutorials/literature_search_tools_tutorial.rst:680
+#: 1f4f36ae725e4d0a9b0f1469329653f7 7a7e539b510d49cfbc35b5a48fe597ae
+#: 7f734bc0e20c45659c6a248314817af5 a3f587cc3e074bce82d0a152545050f9
+msgid "integer"
+msgstr "整数"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:666
+#: c87fb9acb1f6499e9bc9067285df95a4
+msgid "Max results"
+msgstr "最大结果"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:666
+#: ../../tutorials/literature_search_tools_tutorial.rst:668
+#: 843ff81b8ed744819a4f436ec11971fd e6e8d97b754a430b833d86548c5a49fa
+msgid "5"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:668
+#: 29da1197bdac480c9362695364b5cec5
+msgid "max_results"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:668
+#: cc21dc6323664eedabe5fa988ee403e8
+msgid "Max results (alternative)"
+msgstr "最大结果（替代）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:671
+#: ca96b398b05d4df1a10184fb4d143c1b
+msgid "sort_by"
+msgstr "排序依据"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:671
+#: ad8885f04d30491fb83d1933b0007b46
+msgid "Sort order"
+msgstr "排序顺序"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:671
+#: 05dda5e219af437f928f87b8454460b2
+msgid "\"relevance\""
+msgstr "相关性"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:673
+#: dfd0f8576c3f466089a5d8efb379c313
+msgid "sort_order"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:673
+#: 6caca1ec46224092be3d1b9679f96824
+msgid "Sort direction"
+msgstr "排序方向"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:673
+#: e3524fb817d545e0a3c313a076a13d00
+msgid "\"descending\""
+msgstr "降序"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:675
+#: 7bc4221897cd49efa90162ae40990daa
+msgid "filter"
+msgstr "过滤器"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:675
+#: 2b754ae01eab4a6195c67842062c25f1
+msgid "Result filters"
+msgstr "结果过滤器"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:675
+#: 42ae2f3cdeb84684808fffe97fc2bf4e
+msgid "\"type:journal- article\""
+msgstr "type: 期刊-文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:678
+#: 14a93928c39f470687de01993285f869
+msgid "year_from"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:678
+#: 7d09e2f552ee412a8047238be6623901
+msgid "Start year"
+msgstr "开始年份"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:678
+#: 8b6f9245d3db49179fc3dad69832962e
+msgid "2020"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:680
+#: 4122ac6ec0024f58b14b67de2bf684f9
+msgid "year_to"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:680
+#: 380d41db41d7466d851c8da527ce7ce4
+msgid "End year"
+msgstr "结束年份"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:680
+#: 967f1c95281c477aba810a986c3e9b6d
+msgid "2024"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:682
+#: 6331788e5c91461e854a43ccf9a3b474
+msgid "open_access"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:682
+#: 5a6fd453db084f858f59ae904b3a328e
+msgid "boolean"
+msgstr "布尔"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:682
+#: 4160871194a941d3b05b23ad545cfff7
+msgid "Open access only"
+msgstr "仅限开放访问"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:682
+#: 7f8fe23a202f426c8e4e2ba9ef6819aa
+msgid "True"
+msgstr "真"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:684
+#: 024053853c88491792000eec1d9f5f96
+msgid "type"
+msgstr "类型"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:684
+#: 4bbf0d6191b14d79a185cbec7d98c9b1
+msgid "Content type"
+msgstr "内容类型"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:684
+#: 087b64dde4454abe82215ff353150488
+msgid "\"articles\""
+msgstr "文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:686
+#: cc28e81b03ca4458a70a7ce81a52e314
+msgid "email"
+msgstr "电子邮件"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:686
+#: 98fb14be3b574480bf9d6d42f85f38f5
+msgid "Contact email (required)"
+msgstr "联系邮箱（必填）"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:686
+#: 65a3257c23404d9e877c64bd49009cf1
+msgid "\"user@example. com\""
+msgstr "user@example.com"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:691
+#: 244a8092a23e4155b2bdfb1cf93e61af
+msgid "Quick Usage Examples"
+msgstr "快速使用示例"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:693
+#: 86deb0f568c54fa1a8e2415852b54625
+msgid "ArXiv Search: .. code-block:: python"
+msgstr ""
+"ArXiv 搜索：.. code-block:: python\n"
+"\n"
+"上下文：文档"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:696
+#: ../../tutorials/literature_search_tools_tutorial.rst:708
+#: ../../tutorials/literature_search_tools_tutorial.rst:720
+#: ../../tutorials/literature_search_tools_tutorial.rst:731
+#: ../../tutorials/literature_search_tools_tutorial.rst:742
+#: 552b5483c3124cee96423e13da7dd226 5867d8892b524d848c6ee362532bcd77
+#: b2721ad775c941df9c808882ae8b5eab f18b608843e84e4dac37fb2e1477e945
+#: f47f53308d4940eb955cf7d0e7a2389c
+msgid "result = tu.run({"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:697
+#: 5c459f50aa1a465eafd4b21726023a15
+msgid "\"name\": \"ArXiv_search_papers\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:699
+#: f821b4f3cb0f47728467cede6c5aaf3e
+msgid "\"query\": \"machine learning\", \"limit\": 5, \"sort_by\": \"relevance\""
+msgstr "query\": \"机器学习\", \"limit\": 5, \"sort_by\": \"相关性"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:702
+#: ../../tutorials/literature_search_tools_tutorial.rst:714
+#: ../../tutorials/literature_search_tools_tutorial.rst:725
+#: ../../tutorials/literature_search_tools_tutorial.rst:736
+#: ../../tutorials/literature_search_tools_tutorial.rst:749
+#: ../../tutorials/literature_search_tools_tutorial.rst:761
+#: ../../tutorials/literature_search_tools_tutorial.rst:770
+#: ../../tutorials/literature_search_tools_tutorial.rst:779
+#: ../../tutorials/literature_search_tools_tutorial.rst:792
+#: ../../tutorials/literature_search_tools_tutorial.rst:801
+#: ../../tutorials/literature_search_tools_tutorial.rst:942
+#: ../../tutorials/literature_search_tools_tutorial.rst:965
+#: ../../tutorials/literature_search_tools_tutorial.rst:987
+#: ../../tutorials/literature_search_tools_tutorial.rst:1006
+#: ../../tutorials/literature_search_tools_tutorial.rst:1032
+#: ../../tutorials/literature_search_tools_tutorial.rst:1051
+#: 03d4874855c04418839dab430cc760d1 05f9981a4165488bb03127ca8ab59131
+#: 13f23936ee7f4b2095f23f0385cd3fda 1e48b61452ce431e99323e35a402a633
+#: 24a136a48c4d492caff12166f0e4aa79 2e183ad9a71f40219b47a0de3b04cf61
+#: 5e26e4490cb74f5ba21c9193acadda98 6d3aa60779514985ad159badcbdafef3
+#: 6fd5ba14fe4944a395d2746aca582dfa 7bda42fd9e3d4fc49ffe121df5119e54
+#: 9687275643f14efd93a426ec4fb3cbd3 98ed1e38633944e78503b7e4fec357c8
+#: c21a8bb72b1049b1bf030acb255e9d6f e6525324be8a4bf089d7c658160de9f1
+#: ebf33012e5284c50b6899cffde3ec0ab fc86742c2bea4b34872094293ef8f991
+msgid "}"
+msgstr "请提供需要翻译的具体英文文本，我将为您提供准确且专业的中文翻译。"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:703
+#: ../../tutorials/literature_search_tools_tutorial.rst:715
+#: ../../tutorials/literature_search_tools_tutorial.rst:726
+#: ../../tutorials/literature_search_tools_tutorial.rst:737
+#: ../../tutorials/literature_search_tools_tutorial.rst:750
+#: ../../tutorials/literature_search_tools_tutorial.rst:762
+#: ../../tutorials/literature_search_tools_tutorial.rst:771
+#: ../../tutorials/literature_search_tools_tutorial.rst:780
+#: ../../tutorials/literature_search_tools_tutorial.rst:793
+#: ../../tutorials/literature_search_tools_tutorial.rst:802
+#: ../../tutorials/literature_search_tools_tutorial.rst:943
+#: ../../tutorials/literature_search_tools_tutorial.rst:966
+#: ../../tutorials/literature_search_tools_tutorial.rst:988
+#: ../../tutorials/literature_search_tools_tutorial.rst:1007
+#: ../../tutorials/literature_search_tools_tutorial.rst:1052
+#: 06a7cf98a89249de889166dd60773be5 081ac7157193400a9c36ae1c5ea306c6
+#: 1342c93e63d543ab9777ff5da42e3196 38d7086df14740f0b56e32c2e52df093
+#: 469cdbd3a7c44677a826c1abac13eb9c 84c04e1dd22a4a06881d4c12be6133ad
+#: 85303573fc30445daac4c6747e968331 875c9ab81b8e4cfa8a205a89ed95fc73
+#: 8bd4ebf92c7341338c24d614274aa4d2 d14218e8049b403b9ae63bc75472f5b5
+#: d3914c966feb4b0fa6424aa4eeab6c85 db10d8740a724f028e0edcc997a8e63f
+#: e2f2da40212f4afdb8d3fad90f70262a fa65783ef55149e1a4114018a67a8d42
+#: fadde6f59f1d4bce9e5a712eb982ce65
+msgid "})"
+msgstr "抱歉，您似乎没有提供需要翻译的完整英文文本。请您提供完整的内容，我将为您翻译成符合要求的中文。"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:705
+#: d5eb71db8eae48c9b12af72182cf9f76
+msgid "Crossref Search: .. code-block:: python"
+msgstr "Crossref 搜索：.. code-block:: python"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:709
+#: ../../tutorials/literature_search_tools_tutorial.rst:1002
+#: 05d10fb8a5574c8abc2060f28ca5b500 c1ac979bcf544eea9c30d200f9863ac5
+msgid "\"name\": \"Crossref_search_works\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:711
+#: 88e3bac2f97a46389feb61782a98f6a0
+msgid "\"query\": \"artificial intelligence\", \"limit\": 5, \"filter\": \"type:journal-article\""
+msgstr "query\": \"人工智能\", \"limit\": 5, \"filter\": \"type:journal-article"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:717
+#: f90af8bd5ab64c0e92d7612d917fc460
+msgid "PubMed Search: .. code-block:: python"
+msgstr "PubMed 搜索： .. code-block:: python"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:721
+#: f2fbc28688c940beadf0dc2e69c579bc
+msgid "\"name\": \"PubMed_search_articles\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:723
+#: 5a4f8b3b63b9423ab2bb31aff91e7f62
+msgid "\"query\": \"cancer research\", \"limit\": 5"
+msgstr "\"query\": \"癌症研究\", \"limit\": 5"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:728
+#: b1c4b46eb23041619cbd4610c160033f
+msgid "Semantic Scholar Search: .. code-block:: python"
+msgstr ""
+"语义学者搜索：.. code-block:: python\n"
+"\n"
+"上下文：文档"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:732
+#: ../../tutorials/literature_search_tools_tutorial.rst:982
+#: 22cb335bd8a24236af2075df6053572b 2837b8826303467691591663b1ecffe8
+msgid "\"name\": \"SemanticScholar_search_papers\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:734
+#: e92765596d554447b7ff62b3827ee7d9
+msgid "\"query\": \"deep learning\", \"limit\": 5"
+msgstr "\"query\": \"深度学习\", \"limit\": 5"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:739
+#: e6dae177707b4f47b8743ff8426fc9e1
+msgid "OpenAlex Search: .. code-block:: python"
+msgstr "OpenAlex 搜索： .. code-block:: python"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:743
+#: ../../tutorials/literature_search_tools_tutorial.rst:961
+#: ../../tutorials/literature_search_tools_tutorial.rst:1047
+#: 4940282109db4787b093dd5d37b90e53 89ef4cfb2d9c4db6b43c3c6da7fad048
+#: dd06a862dcfa4d719a61c90f2b8da7bf
+msgid "\"name\": \"openalex_literature_search\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:745
+#: f847d7637e42430c9338fb230e5202ef
+msgid ""
+"\"search_keywords\": \"artificial intelligence\", \"max_results\": 5, "
+"\"year_from\": 2020, \"open_access\": True"
+msgstr ""
+"\"search_keywords\": \"人工智能\", \"max_results\": 5, \"year_from\": 2020, "
+"\"open_access\": True"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:752
+#: 242dae968a094d029d7344ffe729766c
+msgid "Preprint Archives: .. code-block:: python"
+msgstr ""
+"预印本档案： .. code-block:: python\n"
+"\n"
+"上下文：文档"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:755
+#: 0c8c3143ceaf4739b244bf82435cfd1a
+msgid "# BioRxiv (Biology) result = tu.run({"
+msgstr "# BioRxiv（生物学）result = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:757
+#: 3f2146d4e1974a00b8e20602fe7ddf0d
+msgid "\"name\": \"BioRxiv_search_preprints\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:759
+#: b68e022714544697a9112d4b6109fbfc
+msgid "\"query\": \"CRISPR\", \"max_results\": 5"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:764
+#: 0fa1af774d3744a683c73340cd000f9d
+msgid "# MedRxiv (Medical) result = tu.run({"
+msgstr "# MedRxiv（医学）result = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:766
+#: 1f8a6e16a1904679a8cd0cf0ddd1175f
+msgid "\"name\": \"MedRxiv_search_preprints\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:768
+#: 6356eceacda84d64b62a3a8e8029b838
+msgid "\"query\": \"COVID-19\", \"max_results\": 5"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:773
+#: e95e1b24a7064ce79cff8d7ccb9a452f
+msgid "# HAL (French Archive) result = tu.run({"
+msgstr "# HAL（法国档案）result = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:775
+#: 56d4c13aa80e4378b6bab56ce2bbf6f4
+msgid "\"name\": \"HAL_search_archive\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:777
+#: 131cf68df71646d39f8cab060940c569
+msgid "\"query\": \"mathematics\", \"max_results\": 5"
+msgstr "\"query\": \"数学\", \"max_results\": 5"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:782
+#: 439979883e304c23b0dff0823594c3b1
+msgid "Open Access Tools: .. code-block:: python"
+msgstr "开放访问工具： .. code-block:: python"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:785
+#: 40e5a97cd2254ef6a806252f4f82af27
+msgid "# DOAJ Search result = tu.run({"
+msgstr "# DOAJ 搜索结果 = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:787
+#: 4b084fcfb3564fba9986ce128a32f7a1
+msgid "\"name\": \"DOAJ_search_articles\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:789
+#: 6a321c1e39f94b188d51b37e824555c9
+msgid "\"query\": \"renewable energy\", \"max_results\": 5, \"type\": \"articles\""
+msgstr "query\": \"可再生能源\", \"max_results\": 5, \"type\": \"文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:795
+#: decb49c09f984b6b905b841861589945
+msgid "# Unpaywall Check result = tu.run({"
+msgstr "# Unpaywall 检查结果 = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:797
+#: 9f101d0979f449c497bf0c0fd268dbff
+msgid "\"name\": \"Unpaywall_check_oa_status\", \"arguments\": {"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:799
+#: 1a054a1467fc4591a939ea165175b528
+msgid "\"doi\": \"10.1038/nature12373\", \"email\": \"your-email@example.com\""
+msgstr "doi\": \"10.1038/nature12373\", \"email\": \"your-email@example.com"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:805
+#: f3dbdddd224a4f7d876444d227cd929c
+msgid "CORE Search"
+msgstr "核心搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:807
+#: 6c4f6f0a45dc4424a999c1290e06e7d7
+msgid "Search the world's largest collection of open access research papers:"
+msgstr "搜索全球最大的开放获取研究论文集合："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:842
+#: 4e93d675439a4a08b8e9e12230be4b4a
+msgid "PMC Search"
+msgstr "PMC 搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:844
+#: 1fbf589656614a92812ecb2197a2e3ec
+msgid "Search PubMed Central full-text biomedical literature:"
+msgstr "搜索 PubMed Central 全文生物医学文献："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:879
+#: 06670027d56f47ef878b6c53daace59e
+msgid "Zenodo Search"
+msgstr "Zenodo 搜索"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:881
+#: b2bcea1c209e458782ebb84e69f8627d
+msgid "Search Zenodo for research data, publications, and datasets:"
+msgstr "在Zenodo中搜索研究数据、出版物和数据集："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:914
+#: 3618ca25729e4f7ba085e92949d8855e
+msgid "Tool Selection Guide"
+msgstr "工具选择指南"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:916
+#: 60109e8ab1c74360aa61a66d0587f27b
+msgid "Choose the right tool for your research field:"
+msgstr "为您的研究领域选择合适的工具："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:918
+#: 86092930967c43f4a58a3a5b16c49b65
+msgid "**Physics/Math/CS**: ArXiv"
+msgstr "**物理/数学/计算机科学**：ArXiv"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:919
+#: ef486a616dff40aa80cd8fc405a08051
+msgid "**Medical/Life Sciences**: PubMed, Europe PMC, PMC"
+msgstr "**医学/生命科学**：PubMed、Europe PMC、PMC"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:920
+#: f2ca30ef1e7c47a88dac03dc15f972da
+msgid "**General Academic**: Crossref, Semantic Scholar, OpenAlex"
+msgstr "**通用学术**：Crossref、Semantic Scholar、OpenAlex"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:921
+#: d114ad52d5794ead9640f4284c7c3786
+msgid "**Computer Science**: DBLP"
+msgstr "**计算机科学**：DBLP"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:922
+#: 48532a4f705b4804b9b3eb8910507bfd
+msgid "**Preprints**: BioRxiv, MedRxiv, HAL"
+msgstr "**预印本**：BioRxiv、MedRxiv、HAL"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:923
+#: 398107d298e84dc9acd78f3ae16333b0
+msgid "**Open Access**: DOAJ, Unpaywall, CORE"
+msgstr "**开放获取**：DOAJ、Unpaywall、CORE"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:924
+#: 181d9362ae484552b7db17935cc13843
+msgid "**Full-Text Biomedical**: PMC"
+msgstr "**全文生物医学**：PMC"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:925
+#: 6a87a4248a3642299d8edabb989aed9e
+msgid "**Comprehensive Open Access**: CORE"
+msgstr "**全面开放获取**：CORE"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:926
+#: 928c66210ad04f4cb3586c7b10c7d57d
+msgid "**Research Data & Datasets**: Zenodo"
+msgstr "**研究数据与数据集**：Zenodo"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:929
+#: 2b148755046c4ffc8d38dc7fa59c2e71
+msgid "Optimized Tool Examples"
+msgstr "优化工具示例"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:931
+#: 6a2f5c5d11794923845229b6d6810e16
+msgid ""
+"Here are examples showing the enhanced features of the optimized tools:"
+msgstr "以下是展示优化工具增强功能的示例："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:933
+#: b12d8635428440d7908e18de01a6d44b
+msgid "**Europe PMC with Enhanced Data:** .. code-block:: python"
+msgstr ""
+"**Europe PMC with Enhanced Data:** .. code-block:: python\n"
+"\n"
+"上下文：文档"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:936
+#: b6081377374944d7b3e8a86895c78cef
+msgid "# Europe PMC now provides comprehensive metadata result = tu.run({"
+msgstr "# Europe PMC 现已提供全面的元数据"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:938
+#: 830724a23e464c88926369ec284774a2
+#, fuzzy
+msgid "\"name\": \"EuropePMC_search_articles\", \"arguments\": {"
+msgstr "EuropePMC_ 搜索文章"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:940
+#: ../../tutorials/literature_search_tools_tutorial.rst:1004
+#: 053e4734f7fb4913a2d2479fe71a0e39 9187a1d6bfc94f78a16384c1e2a6cbf8
+#, fuzzy
+msgid "\"query\": \"machine learning\", \"limit\": 2"
+msgstr "机器学习"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:945
+#: ../../tutorials/literature_search_tools_tutorial.rst:968
+#: ../../tutorials/literature_search_tools_tutorial.rst:990
+#: ../../tutorials/literature_search_tools_tutorial.rst:1009
+#: 3feea5757c304500a84c5c592502dbf7 608f27a8a90845bdad35274e794f7677
+#: c530aac501274c43a4441399ead074bf d33929ae0e3a43ed8210c8958b9efaa0
+msgid "if isinstance(result, list) and result:"
+msgstr "如果 isinstance(result, list) 且 result:"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:946
+#: 36568cba5b48485c9682585e39796764
+#, python-brace-format
+msgid ""
+"paper = result[0] print(f\"Title: {paper.get('title')}\") print(f\"Authors: "
+"{paper.get('authors')}\") print(f\"Journal: {paper.get('journal')}\") "
+"print(f\"DOI: {paper.get('doi')}\") print(f\"Citations: "
+"{paper.get('citations')}\") print(f\"Open Access: "
+"{paper.get('open_access')}\") print(f\"Keywords: {paper.get('keywords')}\") "
+"print(f\"Data Quality: {paper.get('data_quality')}\")"
+msgstr ""
+"paper = result[0]  \n"
+"print(f\"标题: {paper.get('title')}\")  \n"
+"print(f\"作者: {paper.get('authors')}\")  \n"
+"print(f\"期刊: {paper.get('journal')}\")  \n"
+"print(f\"DOI: {paper.get('doi')}\")  \n"
+"print(f\"引用次数: {paper.get('citations')}\")  \n"
+"print(f\"开放获取: {paper.get('open_access')}\")  \n"
+"print(f\"关键词: {paper.get('keywords')}\")  \n"
+"print(f\"数据质量: {paper.get('data_quality')}\")"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:956
+#: 4c5d5d0198514ea881352c2ab4906aa3
+msgid "**OpenAlex with Abstract Reconstruction:** .. code-block:: python"
+msgstr ""
+"**OpenAlex with Abstract Reconstruction:** .. code-block:: python\n"
+"\n"
+"上下文：文档"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:959
+#: 3df9c2765e4d4488846052ba70729c72
+msgid ""
+"# OpenAlex now reconstructs abstracts from inverted index result = tu.run({"
+msgstr ""
+"# OpenAlex 现在通过倒排索引重建摘要  \n"
+"result = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:963
+#: 29aa4b6a547b4743b7cde754e67b2cd1
+msgid "\"search_keywords\": \"artificial intelligence\", \"max_results\": 2"
+msgstr "\"search_keywords\": \"人工智能\", \"max_results\": 2"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:969
+#: 84390a13def840daac94ea4bc80d86c0
+#, python-brace-format
+msgid ""
+"paper = result[0] print(f\"Title: {paper.get('title')}\") print(f\"Abstract:"
+" {paper.get('abstract')[:200]}...\") print(f\"Authors: "
+"{paper.get('authors')}\") print(f\"Venue: {paper.get('venue')}\") "
+"print(f\"Citation Count: {paper.get('citation_count')}\") print(f\"Keywords:"
+" {paper.get('keywords')}\")"
+msgstr ""
+"paper = result[0]  \n"
+"print(f\"标题: {paper.get('title')}\")  \n"
+"print(f\"摘要: {paper.get('abstract')[:200]}...\")  \n"
+"print(f\"作者: {paper.get('authors')}\")  \n"
+"print(f\"会议/期刊: {paper.get('venue')}\")  \n"
+"print(f\"引用次数: {paper.get('citation_count')}\")  \n"
+"print(f\"关键词: {paper.get('keywords')}\")"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:977
+#: 742a27f62a254aedb750cbcb11f7bee6
+msgid "**Semantic Scholar with Rate Limit Handling:** .. code-block:: python"
+msgstr "**具有速率限制处理的语义学者（Semantic Scholar）：** .. code-block:: python"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:980
+#: 5ceeaa660a4c47da855cb80d843aa08a
+msgid ""
+"# Semantic Scholar now handles rate limits gracefully result = tu.run({"
+msgstr "# Semantic Scholar 现在能够优雅地处理速率限制 result = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:984
+#: 0c64152491ca4933b02dd719384b9784
+msgid ""
+"\"query\": \"deep learning\", \"limit\": 2, \"api_key\": "
+"\"your_api_key_here\"  # Optional for higher limits"
+msgstr "\"query\": \"深度学习\", \"limit\": 2, \"api_key\": \"your_api_key_here\"  # 可选，用于更高限制"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:991
+#: 0ad426cf8c5e4411943b801d53d367d1
+#, python-brace-format
+msgid ""
+"paper = result[0] print(f\"Title: {paper.get('title')}\") print(f\"Abstract:"
+" {paper.get('abstract')}\") print(f\"Journal: {paper.get('journal')}\") "
+"print(f\"Data Quality: {paper.get('data_quality')}\")"
+msgstr ""
+"```python\n"
+"paper = result[0]\n"
+"print(f\"标题: {paper.get('title')}\")\n"
+"print(f\"摘要: {paper.get('abstract')}\")\n"
+"print(f\"期刊: {paper.get('journal')}\")\n"
+"print(f\"数据质量: {paper.get('data_quality')}\")\n"
+"```"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:997
+#: 505b67ee3d824d428dd4eb8c52e09731
+msgid "**Crossref with HTML Cleaning:** .. code-block:: python"
+msgstr "**与 HTML 清理交叉引用：** .. code-block:: python"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1000
+#: f959c160c9404c0e8bdae8a970e6ea15
+msgid "# Crossref now cleans HTML tags from abstracts result = tu.run({"
+msgstr ""
+"# Crossref 现在会从摘要中清除 HTML 标签  \n"
+"result = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1010
+#: 8287ff3456f245b59f152091663b69a4
+#, python-brace-format
+msgid ""
+"paper = result[0] print(f\"Title: {paper.get('title')}\") print(f\"Clean "
+"Abstract: {paper.get('abstract')}\") print(f\"Authors: "
+"{paper.get('authors')}\") print(f\"Publisher: {paper.get('publisher')}\") "
+"print(f\"Article Type: {paper.get('article_type')}\")"
+msgstr ""
+"paper = result[0]  \n"
+"print(f\"标题: {paper.get('title')}\")  \n"
+"print(f\"清理后的摘要: {paper.get('abstract')}\")  \n"
+"print(f\"作者: {paper.get('authors')}\")  \n"
+"print(f\"出版商: {paper.get('publisher')}\")  \n"
+"print(f\"文章类型: {paper.get('article_type')}\")"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1017
+#: e88fd439a2a340209bc9909aab44b18d
+msgid "**Data Quality Analysis:** .. code-block:: python"
+msgstr "**数据质量分析：** .. code-block:: python"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1020
+#: e43642db432b4a5f86f1de89f035ed8a
+msgid "def analyze_data_quality(results):"
+msgstr ""
+"```python\n"
+"def 分析数据质量(results):\n"
+"```"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1021
+#: 58f3a67267d54802b4480e7c3990f875
+msgid ""
+"\"\"\"Analyze data quality across multiple tools.\"\"\" if not "
+"isinstance(results, list):"
+msgstr "\"\"\"分析多个工具中的数据质量。\"\"\" if not isinstance(results, list):"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1023
+#: d5a9e8e870414cde9d9b109a90d837e5
+msgid "return"
+msgstr "返回"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1025
+#: 506c15f634a04565a795f63faf3da408
+msgid "total_papers = len(results) quality_stats = {"
+msgstr ""
+"total_papers = len(results)  \n"
+"quality_stats = {"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1027
+#: 4a1623bd93374c3fb4faf0ad617e145a
+msgid ""
+"'has_abstract': 0, 'has_authors': 0, 'has_doi': 0, 'has_citations': 0, "
+"'has_keywords': 0"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1034
+#: 667a0aeb679d4e3a89284073d86e0e49
+msgid "for paper in results:"
+msgstr "对于结果中的论文："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1035
+#: dbecb9caf16b488cb005893d0fa4095a
+msgid "if 'data_quality' in paper:"
+msgstr "如果 'data_quality' 在 paper 中："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1036
+#: de7ed3f8a38d455e9abcad506d3d42f2
+msgid "for field, available in paper['data_quality'].items():"
+msgstr "对于字段，位于 paper['data_quality'].items() 中："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1037
+#: 437c8a6d21be48e39f31ea5753470e2c
+msgid "if field in quality_stats and available:"
+msgstr "如果 quality_stats 中存在字段且可用："
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1038
+#: b7285bc977054c75ada1928ffdc49eb5
+msgid "quality_stats[field] += 1"
+msgstr ""
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1040
+#: 8957c93cc71b47cf9ec1189c18dab4c3
+#, python-brace-format
+msgid ""
+"print(f\"Data Quality Analysis ({total_papers} papers):\") for field, count "
+"in quality_stats.items():"
+msgstr ""
+"print(f\"数据质量分析（{total_papers} 篇文档）:\")  \n"
+"for field, count in quality_stats.items():"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1042
+#: 93b16288c5d14ccbb1e4a0c084356543
+#, python-brace-format
+msgid ""
+"percentage = (count / total_papers) * 100 print(f\"  {field}: "
+"{count}/{total_papers} ({percentage:.1f}%)\")"
+msgstr ""
+"percentage = (count / total_papers) * 100  \n"
+"print(f\"  {field}: {count}/{total_papers} ({percentage:.1f}%)\")"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1045
+#: 3651745decc6450985bc309e9c21d449
+msgid "# Use with any search results result = tu.run({"
+msgstr ""
+"# 可用于任何搜索结果  \n"
+"result = tu.run({"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1049
+#: 63ac4eb1fce84719a8f5740a310e90d7
+msgid "\"search_keywords\": \"machine learning\", \"max_results\": 5"
+msgstr "\"search_keywords\": \"机器学习\", \"max_results\": 5"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1054
+#: a517d0fe50cc4e19b9ce455f863b9950
+msgid "if isinstance(result, list):"
+msgstr "如果 isinstance(result, list):"
+
+#: ../../tutorials/literature_search_tools_tutorial.rst:1055
+#: af72d5a0b1c2440dab5a7af26aacfbe2
+msgid "analyze_data_quality(result)"
+msgstr "分析数据质量(result)"

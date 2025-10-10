@@ -111,7 +111,6 @@ Examples:
             auto_expose_tools=True,
             search_enabled=True,
             max_workers=5,
-            stateless_http=True,  # Enable stateless mode for MCPAutoLoaderTool compatibility
             hooks_enabled=hooks_enabled,
             hook_config=hook_config,
             hook_type=args.hook_type,
@@ -254,8 +253,8 @@ Examples:
     # Server configuration (stdio-specific)
     parser.add_argument(
         "--name",
-        default="SMCP ToolUniverse Server",
-        help="Server name (default: SMCP ToolUniverse Server)",
+        default="ToolUniverse SMCP Server",
+        help="Server name (default: ToolUniverse SMCP Server)",
     )
     parser.add_argument(
         "--no-search",
@@ -528,7 +527,6 @@ Examples:
             exclude_tool_types=exclude_tool_types,
             search_enabled=not args.no_search,
             max_workers=args.max_workers,
-            stateless_http=True,  # Enable stateless mode for MCPAutoLoaderTool compatibility
             hooks_enabled=hooks_enabled,
             hook_config=hook_config,
             hook_type=hook_type,
@@ -685,8 +683,8 @@ Examples:
     )
     parser.add_argument(
         "--name",
-        default="SMCP ToolUniverse Server",
-        help="Server name (default: SMCP ToolUniverse Server)",
+        default="ToolUniverse SMCP Server",
+        help="Server name (default: ToolUniverse SMCP Server)",
     )
     parser.add_argument(
         "--no-search",
@@ -956,7 +954,6 @@ Examples:
             exclude_tool_types=exclude_tool_types,
             search_enabled=not args.no_search,
             max_workers=args.max_workers,
-            stateless_http=True,  # Enable stateless mode for MCPAutoLoaderTool compatibility
             hooks_enabled=hooks_enabled,
             hook_config=hook_config,
             hook_type=args.hook_type,

@@ -75,7 +75,7 @@ We support three search methods: keyword search, LLM-based search, and embedding
    print(f"Found {len(protein_tools)} protein-related tools")
 
 .. seealso::
-     For comprehensive tool search methods, see :doc:`guide/finding_tools`
+     For comprehensive tool search methods, see :doc:`tutorials/finding_tools`
 
 Step 3: Load Tool Specifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -265,7 +265,7 @@ Tools
 * **Tool Composition** → :doc:`guide/tool_composition` - Chain ToolUniverse's 600+ tools into powerful scientific workflows using Tool Composer
 * **Scientific Workflows** → :doc:`guide/scientific_workflows` - Real-world research scenarios: drug discovery, safety analysis, literature review
 * **Expert Feedback** → :doc:`tutorials/expert_feedback` - Human-in-the-loop consultation platform for AI systems with web interface
-* **Embedding Store Guide** → :doc:`tool_setup_guides/Embedding_store_guide` - Setup and configuration for embedding storage
+* **Embedding Tools** → :doc:`tools/embedding_tools` - Setup and configuration for embedding storage
 * **Hooks System** → :doc:`guide/hooks/index` - Intelligent output processing with AI-powered hooks
 
   * **SummarizationHook** → :doc:`guide/hooks/summarization_hook` - AI-powered output summarization
@@ -280,7 +280,7 @@ Tools
 * **Architecture Overview** → :doc:`expand_tooluniverse/architecture` - ToolUniverse's code architecture and extension points
 * **Local Tool Registration** → :doc:`expand_tooluniverse/local_tool_registration` - Create tools that run within ToolUniverse
 * **Remote Tool Registration** → :doc:`expand_tooluniverse/remote_tool_registration` - Integrate external services and APIs
-* **Contributing Tools** → :doc:`expand_tooluniverse/contributing_tools` - Submit your custom tools to the ToolUniverse repository
+* **Contributing Tools** → :doc:`expand_tooluniverse/index` - Submit your custom tools to the ToolUniverse repository
 * **Deployment** → :doc:`deployment` - Deployment guide for production environments
 * **Contributing** → :doc:`contributing` - How to contribute to ToolUniverse development
 

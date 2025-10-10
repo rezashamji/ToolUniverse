@@ -3,15 +3,17 @@
 This tutorial covers everything you need to know about adding custom tools to ToolUniverse using the new decorator-based auto-registration system.
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Development Environment Setup](#development-environment-setup)
-3. [Quick Start](#quick-start)
-4. [Method 1: Decorator Registration (Recommended)](#method-1-decorator-registration-recommended)
-5. [Method 2: Manual Registration](#method-2-manual-registration)
-6. [Tool Configuration](#tool-configuration)
-7. [Real-World Examples](#real-world-examples)
-8. [Best Practices](#best-practices)
-9. [Troubleshooting](#troubleshooting)
+1. :ref:`overview`
+2. :ref:`development-environment-setup`
+3. :ref:`quick-start`
+4. :ref:`method-1-decorator-registration-recommended`
+5. :ref:`method-2-manual-registration`
+6. :ref:`tool-configuration`
+7. :ref:`real-world-examples`
+8. :ref:`best-practices`
+9. :ref:`troubleshooting`
+
+.. _overview:
 
 ## Overview
 
@@ -27,6 +29,8 @@ ToolUniverse now supports **automatic tool discovery** through decorators. When 
 ### What Changed
 - ❌ **Before**: Manual imports and mappings in `execute_function.py`
 - ✅ **Now**: Simple decorator registration with auto-discovery
+
+.. _development-environment-setup:
 
 ## Development Environment Setup
 
@@ -80,6 +84,8 @@ tu.load_tools()
 print(f"✅ Loaded {len(tu.all_tools)} tools!")
 ```
 
+.. _quick-start:
+
 ## Quick Start
 
 Here's the fastest way to add a new tool:
@@ -126,6 +132,8 @@ print(result)
 ```
 
 That's it! Your tool is automatically discovered and ready to use.
+
+.. _method-1-decorator-registration-recommended:
 
 ## Method 1: Decorator Registration (Recommended)
 
@@ -275,6 +283,8 @@ The `config` parameter in the decorator supports all standard ToolUniverse confi
 })
 ```
 
+.. _method-2-manual-registration:
+
 ## Method 2: Manual Registration
 
 For dynamic tools or special cases, you can register tools at runtime:
@@ -320,6 +330,8 @@ result = tu.run_one_function({
     "arguments": {"input": "test"}
 })
 ```
+
+.. _tool-configuration:
 
 ## Tool Configuration
 
@@ -375,6 +387,8 @@ result = tu.run_one_function({
     "required": ["data"]
 }
 ```
+
+.. _real-world-examples:
 
 ## Real-World Examples
 
@@ -635,6 +649,8 @@ class APIClientTool:
         return {"error": "Max retries exceeded", "success": False}
 ```
 
+.. _best-practices:
+
 ## Best Practices
 
 ### 1. File Naming
@@ -714,6 +730,8 @@ return {
     "details": {...}  # optional error details
 }
 ```
+
+.. _troubleshooting:
 
 ## Troubleshooting
 

@@ -3,7 +3,7 @@ Compose Tools
 
 **Configuration File**: ``compose_tools.json``
 **Tool Type**: Local
-**Tools Count**: 8
+**Tools Count**: 9
 
 This page contains all tools defined in the ``compose_tools.json`` configuration file.
 
@@ -138,6 +138,43 @@ Comprehensive literature search and summary tool that searches multiple database
           "name": "LiteratureSearchTool",
           "arguments": {
               "research_topic": "example_value"
+          }
+      }
+      result = tu.run(query)
+
+
+**MultiAgentLiteratureSearch** (Type: ComposeTool)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Multi-agent literature search system that uses AI agents to analyze intent, extract keywords, exe...
+
+.. dropdown:: MultiAgentLiteratureSearch tool specification
+
+   **Tool Information:**
+
+   * **Name**: ``MultiAgentLiteratureSearch``
+   * **Type**: ``ComposeTool``
+   * **Description**: Multi-agent literature search system that uses AI agents to analyze intent, extract keywords, execute parallel searches, summarize results, and check quality iteratively
+
+   **Parameters:**
+
+   * ``query`` (string) (required)
+     The research query to search for
+
+   * ``max_iterations`` (integer) (optional)
+     Maximum number of iterations (default: 3)
+
+   * ``quality_threshold`` (number) (optional)
+     Quality threshold for completion (default: 0.7)
+
+   **Example Usage:**
+
+   .. code-block:: python
+
+      query = {
+          "name": "MultiAgentLiteratureSearch",
+          "arguments": {
+              "query": "example_value"
           }
       }
       result = tu.run(query)

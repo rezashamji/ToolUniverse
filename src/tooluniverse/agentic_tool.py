@@ -3,30 +3,35 @@ from __future__ import annotations
 import os
 import json
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional
 
 from .base_tool import BaseTool
 from .tool_registry import register_tool
 from .logging_config import get_logger
-from .llm_clients import AzureOpenAIClient, GeminiClient
+from .llm_clients import AzureOpenAIClient, GeminiClient, OpenRouterClient, VLLMClient
 
 
 # Global default fallback configuration
 DEFAULT_FALLBACK_CHAIN = [
     {"api_type": "CHATGPT", "model_id": "gpt-4o-1120"},
+    {"api_type": "OPENROUTER", "model_id": "openai/gpt-4o"},
     {"api_type": "GEMINI", "model_id": "gemini-2.0-flash"},
 ]
 
 # API key environment variable mapping
 API_KEY_ENV_VARS = {
     "CHATGPT": ["AZURE_OPENAI_API_KEY", "AZURE_OPENAI_ENDPOINT"],
+    "OPENROUTER": ["OPENROUTER_API_KEY"],
     "GEMINI": ["GEMINI_API_KEY"],
+    "VLLM": ["VLLM_SERVER_URL"],
 }
 
 
 @register_tool("AgenticTool")
 class AgenticTool(BaseTool):
     """Generic wrapper around LLM prompting supporting JSON-defined configs with prompts and input arguments."""
+
+    STREAM_FLAG_KEY = "_tooluniverse_stream"
 
     @staticmethod
     def has_any_api_keys() -> bool:
@@ -197,13 +202,21 @@ class AgenticTool(BaseTool):
             f"Tool '{self.name}' failed to initialize with all available APIs"
         )
 
-    def _try_api(self, api_type: str, model_id: str) -> bool:
+    def _try_api(self, api_type: str, model_id: str, server_url: Optional[str] = None) -> bool:
         """Try to initialize a specific API and model."""
         try:
             if api_type == "CHATGPT":
                 self._llm_client = AzureOpenAIClient(model_id, None, self.logger)
+            elif api_type == "OPENROUTER":
+                self._llm_client = OpenRouterClient(model_id, self.logger)
             elif api_type == "GEMINI":
                 self._llm_client = GeminiClient(model_id, self.logger)
+            elif api_type == "VLLM":
+                if not server_url:
+                    server_url = os.getenv("VLLM_SERVER_URL")
+                if not server_url:
+                    raise ValueError("VLLM_SERVER_URL environment variable not set")
+                self._llm_client = VLLMClient(model_id, server_url, self.logger)
             else:
                 raise ValueError(f"Unsupported API type: {api_type}")
 
@@ -237,7 +250,7 @@ class AgenticTool(BaseTool):
 
     # ------------------------------------------------------------------ LLM utilities -----------
     def _validate_model_config(self):
-        supported_api_types = ["CHATGPT", "GEMINI"]
+        supported_api_types = ["CHATGPT", "OPENROUTER", "GEMINI", "VLLM"]
         if self._api_type not in supported_api_types:
             raise ValueError(
                 f"Unsupported API type: {self._api_type}. Supported types: {supported_api_types}"
@@ -246,8 +259,17 @@ class AgenticTool(BaseTool):
             raise ValueError("max_new_tokens must be positive or None")
 
     # ------------------------------------------------------------------ public API --------------
-    def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+    def run(
+        self,
+        arguments: Dict[str, Any],
+        stream_callback: Optional[Callable[[str], None]] = None,
+    ) -> Dict[str, Any]:
         start_time = datetime.now()
+
+        # Work on a copy so we can remove control flags without mutating caller data
+        arguments = dict(arguments or {})
+        stream_flag = bool(arguments.pop("_tooluniverse_stream", False))
+        streaming_requested = stream_flag or stream_callback is not None
 
         # Check if tool is available before attempting to run
         if not self._is_available:
@@ -296,15 +318,51 @@ class AgenticTool(BaseTool):
             custom_format = arguments.get("response_format", None)
 
             # Delegate to client; client handles provider-specific logic
-            response = self._llm_client.infer(
-                messages=messages,
-                temperature=self._temperature,
-                max_tokens=None,  # client resolves per-model defaults/env
-                return_json=self._return_json,
-                custom_format=custom_format,
-                max_retries=self._max_retries,
-                retry_delay=self._retry_delay,
+            response = None
+
+            streaming_permitted = (
+                streaming_requested and not self._return_json and custom_format is None
             )
+
+            if streaming_permitted and hasattr(self._llm_client, "infer_stream"):
+                try:
+                    chunks_collected: List[str] = []
+                    stream_iter = self._llm_client.infer_stream(
+                        messages=messages,
+                        temperature=self._temperature,
+                        max_tokens=None,
+                        return_json=self._return_json,
+                        custom_format=custom_format,
+                        max_retries=self._max_retries,
+                        retry_delay=self._retry_delay,
+                    )
+                    for chunk in stream_iter:
+                        if not chunk:
+                            continue
+                        chunks_collected.append(chunk)
+                        self._emit_stream_chunk(chunk, stream_callback)
+                    if chunks_collected:
+                        response = "".join(chunks_collected)
+                except Exception as stream_error:  # noqa: BLE001
+                    self.logger.warning(
+                        f"Streaming failed for tool '{self.name}': {stream_error}. Falling back to buffered response."
+                    )
+                    response = None
+
+            if response is None:
+                response = self._llm_client.infer(
+                    messages=messages,
+                    temperature=self._temperature,
+                    max_tokens=None,  # client resolves per-model defaults/env
+                    return_json=self._return_json,
+                    custom_format=custom_format,
+                    max_retries=self._max_retries,
+                    retry_delay=self._retry_delay,
+                )
+
+                if streaming_requested and response:
+                    for chunk in self._iter_chunks(response):
+                        self._emit_stream_chunk(chunk, stream_callback)
 
             end_time = datetime.now()
             execution_time = (end_time - start_time).total_seconds()
@@ -334,7 +392,8 @@ class AgenticTool(BaseTool):
                 }
             else:
                 return response
-        except Exception as e:
+
+        except Exception as e:  # noqa: BLE001
             end_time = datetime.now()
             execution_time = (end_time - start_time).total_seconds()
             self.logger.error(f"Error executing {self.name}: {str(e)}")
@@ -355,13 +414,35 @@ class AgenticTool(BaseTool):
                         "model_info": {
                             "api_type": self._api_type,
                             "model_id": self._model_id,
+                            "temperature": self._temperature,
+                            "max_new_tokens": self._max_new_tokens,
                         },
                         "execution_time_seconds": execution_time,
                         "timestamp": start_time.isoformat(),
                     },
                 }
             else:
-                return "error: " + str(e) + " error_type: " + type(e).__name__
+                return f"error: {str(e)} error_type: {type(e).__name__}"
+
+    @staticmethod
+    def _iter_chunks(text: str, size: int = 800):
+        if not text:
+            return
+        for idx in range(0, len(text), size):
+            yield text[idx : idx + size]
+
+    def _emit_stream_chunk(
+        self, chunk: Optional[str], stream_callback: Optional[Callable[[str], None]]
+    ) -> None:
+        if not stream_callback or not chunk:
+            return
+        try:
+            stream_callback(chunk)
+        except Exception as callback_error:  # noqa: BLE001
+            # Streaming callbacks should not break tool execution; log and continue
+            self.logger.debug(
+                f"Stream callback for tool '{self.name}' raised an exception: {callback_error}"
+            )
 
     # ------------------------------------------------------------------ helpers -----------------
     def _validate_arguments(self, arguments: Dict[str, Any]):
@@ -440,8 +521,15 @@ class AgenticTool(BaseTool):
         try:
             if self._api_type == "CHATGPT":
                 self._llm_client = AzureOpenAIClient(self._model_id, None, self.logger)
+            elif self._api_type == "OPENROUTER":
+                self._llm_client = OpenRouterClient(self._model_id, self.logger)
             elif self._api_type == "GEMINI":
                 self._llm_client = GeminiClient(self._gemini_model_id, self.logger)
+            elif self._api_type == "VLLM":
+                server_url = os.getenv("VLLM_SERVER_URL")
+                if not server_url:
+                    raise ValueError("VLLM_SERVER_URL environment variable not set")
+                self._llm_client = VLLMClient(self._model_id, server_url, self.logger)
             else:
                 raise ValueError(f"Unsupported API type: {self._api_type}")
 

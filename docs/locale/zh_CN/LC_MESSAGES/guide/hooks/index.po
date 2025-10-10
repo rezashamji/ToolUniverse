@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../guide/hooks/index.rst:8
+msgid "Hook Topics"
+msgstr "钩子主题"
+
+#: ../../guide/hooks/index.rst:2 ee8cae57f305493fbe286e24c2d6790e
+msgid "Post-processing Tool Outputs"
+msgstr "后处理工具输出"
+
+#: ../../guide/hooks/index.rst:4 da1d5d1fc3894596a4018f8b5fdd4bbc
+msgid "**Intelligent output processing for ToolUniverse**"
+msgstr "**ToolUniverse 的智能输出处理**"
+
+#: ../../guide/hooks/index.rst:6 fab8bbbaf0b7449fb0a3992d4d0272e9
+msgid ""
+"The ToolUniverse Hooks system provides automatic post-processing of tool "
+"outputs. Use hooks to summarize long results, save large outputs to files, "
+"and customize behavior per tool or workflow."
+msgstr ""
+"ToolUniverse Hooks 系统提供对工具输出的自动后处理功能。使用 Hooks "
+"可对长结果进行摘要，将大量输出保存到文件中，并根据具体工具或工作流程自定义行为。"
+
+#: ../../guide/hooks/index.rst:17 dd6f827f23af485cb23e5bf46a700362
+msgid "**Topic summaries**"
+msgstr "**主题摘要**"
+
+#: ../../guide/hooks/index.rst:19 01fae93e1ddb425daa599dee380242b6
+msgid ""
+":doc:`summarization_hook`: Automatically condenses long tool outputs into "
+"concise, high-signal summaries. Useful for literature results, large "
+"datasets, and multi-step workflows."
+msgstr ""
+":doc:`summarization_hook`：自动将冗长的工具输出浓缩为简洁且高效的信息摘要。适用于文献结果、大型数据集及多步骤工作流程。"
+
+#: ../../guide/hooks/index.rst:20 a4bfcf69f9844e0db16ace236f515356
+msgid ""
+":doc:`file_save_hook`: Saves large outputs to disk with metadata for later "
+"processing and sharing. Ideal for heavy payloads, audit trails, and external"
+" pipelines."
+msgstr ":doc:`file_save_hook`：将大型输出及其元数据保存到磁盘，以便后续处理和共享。适用于大容量数据、审计追踪和外部管道。"
+
+#: ../../guide/hooks/index.rst:21 402d21a06ca34ac2b0b9317d12a8248c
+msgid ""
+":doc:`hook_configuration`: Configure which hooks run, when they trigger, and"
+" how they behave. Supports thresholds, per-tool rules, and advanced options."
+msgstr ":doc:`hook_configuration`：配置钩子的运行时机、触发条件及行为方式。支持阈值设置、按工具规则及高级选项。"
+
+#: ../../guide/hooks/index.rst:22 45c89017ec934d97bcd9f2e3b097a3d6
+msgid ""
+":doc:`server_stdio_hooks`: How to use hooks in server (HTTP/SSE) and stdio "
+"modes. Covers CLI flags, Python API, defaults, and best practices."
+msgstr ""
+":doc:`server_stdio_hooks`：如何在服务器（HTTP/SSE）和标准输入输出模式中使用钩子。涵盖命令行参数、Python "
+"API、默认设置及最佳实践。"

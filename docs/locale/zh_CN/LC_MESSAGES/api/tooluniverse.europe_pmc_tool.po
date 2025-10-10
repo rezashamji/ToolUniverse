@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.europe_pmc_tool.rst:2
+#: 6279a8cc393b415fbb3982d18dd02fc0
+msgid "tooluniverse.europe\\_pmc\\_tool module"
+msgstr "tooluniverse.europe_pmc_tool 模块"
+
+#: cd78b1e1487d4c499c5b2c44860ff86c of
+#: tooluniverse.europe_pmc_tool.EuropePMCTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 845b7d1a43ab41c68d1c1ac1f6804dc0 of
+#: tooluniverse.europe_pmc_tool.EuropePMCTool:1
+msgid "Tool to search for articles on Europe PMC including abstracts."
+msgstr "用于在 Europe PMC 上搜索文章及其摘要的工具。"
+
+#: c1f5d13534ea4a49bdeb3f724042bee5 of
+#: tooluniverse.europe_pmc_tool.EuropePMCTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 8facb5bc51ea477aaec454af3dcd2f1c of
+#: tooluniverse.europe_pmc_tool.EuropePMCTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现中期望的输入字典。"

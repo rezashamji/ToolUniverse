@@ -3,6 +3,6 @@ tooluniverse.openalex\_tool module
 
 .. automodule:: tooluniverse.openalex_tool
    :members:
-   :private-members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
+   :private-members:

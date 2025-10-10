@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 14:59-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../old_files/I18N_GUIDE.md:1 82ce8a3b717c41ed85070efc0265a9fa
+msgid "ToolUniverse 文档中英文切换指南"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:3 116c808d5b27444bb9cbf9124bd2915c
+msgid "📋 概述"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:5 22190c058e684370a3e54a48cc0db1ae
+msgid "ToolUniverse 文档现已支持中英文切换！本指南将帮助你完成翻译和构建。"
+msgstr "ToolUniverse 文档现已支持中英文切换！本指南将帮助您完成翻译与构建。"
+
+#: ../../old_files/I18N_GUIDE.md:7 3baa49e128aa42bd8f414c21908c5100
+msgid "🚀 快速开始"
+msgstr "🚀 快速入门"
+
+#: ../../old_files/I18N_GUIDE.md:9 1b176d5a7da0495d9d6dbfb80af6b70d
+msgid "1. 构建多语言文档"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:16 76b474216bb149f98474b84f9753eb22
+msgid "这将自动："
+msgstr "这将自动完成："
+
+#: ../../old_files/I18N_GUIDE.md:17 43e0fdaadafe456db3945c1b311d4b90
+msgid "生成英文文档"
+msgstr "Generate English Documentation"
+
+#: ../../old_files/I18N_GUIDE.md:18 bd5af25256954193af663ca5acc2cd6d
+msgid "生成中文文档（基于翻译）"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:19 a319bbf8b9b24051a71c1c3a80fbf9a9
+msgid "创建语言切换器页面"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:21 5bd8a9d855ea449c83f2f2ad8e831306
+msgid "2. 查看效果"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:27 d0f82f71de964da2909dbb44389e9edd
+msgid "📝 如何翻译"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:29 f0203172702d41f39c2b2e0dc7322a35
+msgid "翻译文件位置"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:31 01fe380b67f44600b389dda9c6bc3c5b
+msgid "所有翻译文件在：`locale/zh_CN/LC_MESSAGES/`"
+msgstr "所有翻译文件位于：`locale/zh_CN/LC_MESSAGES/`"
+
+#: ../../old_files/I18N_GUIDE.md:33 28cb1350f8b84355a49d05384e1ce7de
+msgid "翻译格式示例"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:35 d3ce24af71a840e9bb412f42fd4986d6
+msgid "打开 `locale/zh_CN/LC_MESSAGES/index.po`："
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:62 2bbac949f99c41a2bc83777df386d0a9
+msgid "主要翻译文件"
+msgstr "Main translation file"
+
+#: ../../old_files/I18N_GUIDE.md:64 937f96f4f876478997fa65b7717ed8ba
+msgid "优先翻译以下文件以获得最佳效果："
+msgstr ""
+"以下是翻译后的中文内容：\n"
+"\n"
+"优先翻译以下文件以获得最佳效果："
+
+#: ../../old_files/I18N_GUIDE.md:66 993a48e14c104d99b2142db18a3849ac
+msgid "**首页导航** - `locale/zh_CN/LC_MESSAGES/index.po`"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:67 7170e629a3a54986b488377d31ff75f8
+msgid "**快速开始** - `locale/zh_CN/LC_MESSAGES/quickstart.po`"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:68 47fa576ceb724958a5f298372492c8e3
+msgid "**安装指南** - `locale/zh_CN/LC_MESSAGES/installation.po`"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:69 17bf0dd93dab4a0cb524189e29da19b3
+msgid "**入门教程** - `locale/zh_CN/LC_MESSAGES/getting_started.po`"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:70 c4a7a4c1765d4f01b082041ccb8b4afa
+msgid "**FAQ** - `locale/zh_CN/LC_MESSAGES/faq.po`"
+msgstr "**常见问题解答** - `locale/zh_CN/LC_MESSAGES/faq.po`"
+
+#: ../../old_files/I18N_GUIDE.md:72 4b61a9a8a74d4adeb586adcc29f422a5
+msgid "🔄 工作流程"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:74 1789c9184f924238bbfc3d12edef1bec
+msgid "完整翻译流程"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:92 2af7e427dfc5495cbadd97e1c65e042a
+msgid "快速测试单个文件翻译"
+msgstr "快速测试单个文件的翻译"
+
+#: ../../old_files/I18N_GUIDE.md:102 41fdc53966e445d68461350ad8a74181
+msgid "📂 目录结构"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:122 499b3368568247d39f5ff52d753f9fce
+msgid "🎯 Shibuya 主题语言切换器"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:124 7532bf4b12ed47ac9766239bf018a1d2
+msgid "Shibuya 主题已配置语言切换器："
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:136 de81e5d064fd4c48b3c810b57b7a0cc3
+msgid "当有多个语言版本时，主题会自动在导航栏显示语言切换下拉菜单。"
+msgstr "当存在多个语言版本时，主题会在导航栏自动显示语言切换下拉菜单。"
+
+#: ../../old_files/I18N_GUIDE.md:138 466ba0422ed843e8a8352ba5ceeb2afe
+msgid "💡 翻译技巧"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:140 ceb9e2519e254e89803c2668f2c7748f
+msgid "1. 批量翻译"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:142 7545f2bca7414f3ebf38d63d3d50113d
+msgid "使用文本编辑器的查找替换功能："
+msgstr "使用文本编辑器的查找和替换功能："
+
+#: ../../old_files/I18N_GUIDE.md:143 5b8f043747fc4edaa0d0e1ed15447e5a
+msgid "VSCode: Cmd+Shift+H"
+msgstr "VSCode：Cmd+Shift+H"
+
+#: ../../old_files/I18N_GUIDE.md:144 ed0361b14ea84e238d19dc3870be2d12
+#, python-format
+msgid "Vim: `:%s/msgstr \"\"/msgstr \"翻译\"/g`"
+msgstr "Vim：`:%s/msgstr \"\"/msgstr \"翻译\"/g`"
+
+#: ../../old_files/I18N_GUIDE.md:146 b5bccb04eeaf4fcab5e946c30df33462
+msgid "2. 保持格式"
+msgstr "2. Maintain formatting"
+
+#: ../../old_files/I18N_GUIDE.md:148 a680efa7ae3443cc896ef79b0d9f1696
+msgid "翻译时保持："
+msgstr "在翻译时保持："
+
+#: ../../old_files/I18N_GUIDE.md:149 c1d479b319c44b9a95be8c075cc9af53
+msgid "Emoji 图标不变"
+msgstr "Emoji 图标保持不变"
+
+#: ../../old_files/I18N_GUIDE.md:150 1058291852224ee4966c4ce8925f3600
+msgid "Markdown 语法不变"
+msgstr "Markdown 语法保持不变"
+
+#: ../../old_files/I18N_GUIDE.md:151 e1f7e1f1e68e4ce89356c85b84bbe631
+msgid "reStructuredText 指令不变"
+msgstr "reStructuredText 指令保持不变"
+
+#: ../../old_files/I18N_GUIDE.md:152 c34360fc42864a209760c158e1612e97
+msgid "代码块不变"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:154 17437b2416264031b6e527564cc88724
+msgid "3. 使用翻译工具"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:156 f9b5a6148fe74d6b9f47cd87169f39ec
+msgid "可以使用："
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:157 0ef565fb8ee14a049cd3c8e5d7753423
+msgid "DeepL Translator"
+msgstr "DeepL 翻译器"
+
+#: ../../old_files/I18N_GUIDE.md:158 f3fce67e546a4d5c83283cddf699821f
+msgid "Google Translate"
+msgstr "Google 翻译"
+
+#: ../../old_files/I18N_GUIDE.md:159 ad4d8c2b43044b99b7988b37fd0b9813
+msgid "ChatGPT/Claude"
+msgstr ""
+"ChatGPT/Claude\n"
+"\n"
+"上下文：文档"
+
+#: ../../old_files/I18N_GUIDE.md:161 df149762f72944b6aba6df0eb4ab737c
+msgid "然后手动审核调整。"
+msgstr "然后手动审核和调整。"
+
+#: ../../old_files/I18N_GUIDE.md:163 dc25c789520e45b6b784f9ee6955e673
+msgid "4. 渐进式翻译"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:165 ceca51efeed043018114857af31b4aa7
+msgid "不需要一次翻译所有文件："
+msgstr "无需一次性翻译所有文件："
+
+#: ../../old_files/I18N_GUIDE.md:166 eeb303cd466d4b06858dfd8093dc6b5d
+msgid "先翻译首页和主要导航"
+msgstr "请先翻译首页和主要导航"
+
+#: ../../old_files/I18N_GUIDE.md:167 ffc985bad46f4152a3fbd5b4ae72a337
+msgid "再翻译快速开始和安装"
+msgstr "快速入门和安装指南"
+
+#: ../../old_files/I18N_GUIDE.md:168 6473a7069e224d33a5529d5a38ecfe04
+msgid "最后翻译详细文档和 API"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:170 2cd5144581ff40d098105ba0554a57c8
+msgid "未翻译的内容会显示英文原文。"
+msgstr "未翻译的内容将显示英文原文。"
+
+#: ../../old_files/I18N_GUIDE.md:172 d5926419273c4d8a9fd5e4dea26aebbe
+msgid "🔧 配置详解"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:174 f7b2a6609b654fd5ae16852d6a1a96f5
+msgid "conf.py 国际化配置"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:194 7904857c419f4207a075bbae181dc706
+msgid "🌐 部署多语言文档"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:196 cb234daae5df4bfdbb7f9f08bc912861
+msgid "GitHub Pages"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:212 d9bbcf789d4048a9af1fad074b0cab0c
+msgid "自定义域名语言路径"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:214 657619b816be4fcfb5a1997e0cc25c66
+msgid "英文: `https://yourdomain.com/`"
+msgstr "`https://yourdomain.com/`"
+
+#: ../../old_files/I18N_GUIDE.md:215 bc2a87af3a8e4afe9c307f6e00e6ea6f
+msgid "中文: `https://yourdomain.com/zh_CN/`"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:217 289f5742515d4e8ea1e35baba3917e3c
+msgid "📚 参考资源"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:219 5beb0bb850ab499a817ad1f6fcf79efb
+msgid ""
+"[Sphinx 国际化文档](https://www.sphinx-"
+"doc.org/en/master/usage/advanced/intl.html)"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:220 150d996e18244287948135c6357c2cba
+msgid "[sphinx-intl 使用指南](https://pypi.org/project/sphinx-intl/)"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:221 84f4bde578844457966e87cd57783c67
+msgid "[Shibuya 主题文档](https://shibuya.lepture.com/)"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:223 8510757d72cd4e769c33fc2e842f214f
+msgid "❓ 常见问题"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:225 c114448484d94caf9c538dcd71d3ff8e
+msgid "Q: 翻译后重新构建没有生效？"
+msgstr "问：翻译后重新构建未生效？"
+
+#: ../../old_files/I18N_GUIDE.md:227 6b31e5f11de74a318dfd13db32cf0854
+msgid "A: 确保："
+msgstr "确保："
+
+#: ../../old_files/I18N_GUIDE.md:228 bd9b2d042a9b446e838f4b150b85aed2
+msgid ".po 文件已保存"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:229 f5f588c3faa64347ae93070fd72efdf6
+msgid "运行 `make clean` 清理缓存"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:230 17beea3436534ff4b4c0ef8794404e3c
+msgid "重新运行 `./build_multilang.sh`"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:232 8c2110872ad84ec0a1aaa71693eb0da4
+msgid "Q: 如何只更新某个页面的翻译？"
+msgstr "问：如何仅更新某个页面的翻译？"
+
+#: ../../old_files/I18N_GUIDE.md:234 ad64e9dd2fb1471e90d0d49778336dfa
+msgid "A:"
+msgstr "请提供需要翻译的具体英文文本，我将为您翻译成符合要求的中文内容。"
+
+#: ../../old_files/I18N_GUIDE.md:242 8351bb680470442da3bbca70a07b38fd
+msgid "Q: 可以添加其他语言吗？"
+msgstr "Q: Can other languages be added?"
+
+#: ../../old_files/I18N_GUIDE.md:244 04242a83a67c411e90be25438c0a099c
+msgid "A:可以！修改 conf.py："
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:253 42d5fdf65863406aa93dd8417c37be76
+msgid "然后运行："
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:258 ab65852776a243eab12e1ba67b863787
+msgid "🎉 开始翻译"
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:260 df3766621f264a2a859b86304a4112ef
+msgid "准备好了吗？运行以下命令开始："
+msgstr ""
+
+#: ../../old_files/I18N_GUIDE.md:267 bca2f3d4c95e42b2aabe13defd3314ef
+msgid "Happy translating! 🌍"
+msgstr "翻译愉快！🌍"

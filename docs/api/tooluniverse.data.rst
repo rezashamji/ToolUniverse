@@ -3,9 +3,9 @@ tooluniverse.data package
 
 .. automodule:: tooluniverse.data
    :members:
-   :private-members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
+   :private-members:
 
 Submodules
 ----------

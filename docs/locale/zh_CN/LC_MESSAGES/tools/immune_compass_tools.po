@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/immune_compass_tools.rst:2 8f2a13d6e1aa435dbae95c3a5395daa4
+msgid "Immune Compass Tools"
+msgstr "免疫指南工具"
+
+#: ../../tools/immune_compass_tools.rst:4 69473e537e7a4c059a5f62839b3f4277
+msgid ""
+"**Configuration File**: ``remote_tools/immune_compass_tools.json`` **Tool "
+"Type**: Remote **Tools Count**: 1"
+msgstr ""
+"**配置文件**：``remote_tools/immune_compass_tools.json``  \n"
+"**工具类型**：远程  \n"
+"**工具数量**：1"
+
+#: ../../tools/immune_compass_tools.rst:8 90de0791e47847ff8af04ee36a7f2218
+msgid ""
+"This page contains all tools defined in the ``immune_compass_tools.json`` "
+"configuration file."
+msgstr "此页面包含在 ``immune_compass_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/immune_compass_tools.rst:11 aa6426b9ed1e4c58b87e3df8a67c9743
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/immune_compass_tools.rst:14 b5563f1c28774534bc6b7f83addef56b
+msgid "**run_compass_prediction** (Type: RemoteTool)"
+msgstr "**run_compass_prediction**（类型：RemoteTool）"
+
+#: ../../tools/immune_compass_tools.rst:16 df89bff2bced4cdbba9a146464945c81
+msgid ""
+"Predicts immune checkpoint inhibitor (ICI) response using COMPASS model. "
+"This tool analyzes singl..."
+msgstr "使用COMPASS模型预测免疫检查点抑制剂（ICI）反应。该工具分析单细胞数据以评估治疗效果。"
+
+#: ../../tools/immune_compass_tools.rst 6cd7a7a8ec5d40b78aaa8dfe7d472b51
+msgid "run_compass_prediction tool specification"
+msgstr "run_compass_prediction 工具规范"
+
+#: ../../tools/immune_compass_tools.rst:20 c40a61c3b9f4446f8ddc9af2407ecf88
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/immune_compass_tools.rst:22 820a1329c35d4a33aaae9d9e4afb0dfb
+msgid "**Name**: ``run_compass_prediction``"
+msgstr "**名称**：``run_compass_prediction``"
+
+#: ../../tools/immune_compass_tools.rst:23 24b10e5a02274a93ba403aab6133864b
+msgid "**Type**: ``RemoteTool``"
+msgstr "**类型**：``RemoteTool``"
+
+#: ../../tools/immune_compass_tools.rst:24 a50e815057014511868d7a0006bf1e39
+msgid ""
+"**Description**: Predicts immune checkpoint inhibitor (ICI) response using "
+"COMPASS model. This tool analyzes single-sample tumor gene expression data "
+"to predict patient responsiveness to immune checkpoint inhibitor therapy. "
+"The COMPASS model leverages immune cell concept analysis to provide both a "
+"binary prediction and interpretable insights into the immune "
+"microenvironment factors driving the prediction."
+msgstr ""
+"**描述**：使用COMPASS模型预测免疫检查点抑制剂（ICI）的响应情况。本工具通过分析单样本肿瘤基因表达数据，预测患者对免疫检查点抑制剂疗法的反应。COMPASS模型利用免疫细胞概念分析，提供二元预测结果，并提供对驱动预测的免疫微环境因素的可解释性见解。"
+
+#: ../../tools/immune_compass_tools.rst:26 1a920b90bd184b74a6cc6eb9a43000e9
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/immune_compass_tools.rst:28 08396899141c4e7c8baf9702d1dff7a8
+msgid ""
+"``gene_expression_data_path`` (string) (required) Path to the TPM expression"
+" data file. Keys should be standard gene symbols (e.g., 'CD274', 'PDCD1', "
+"'CTLA4'). Values should be normalized expression in TPM (Transcripts Per "
+"Million). Minimum ~100 genes recommended for reliable predictions."
+msgstr ""
+"``gene_expression_data_path``（字符串）（必填）TPM表达数据文件的路径。键应为标准基因符号（例如：'CD274'、'PDCD1'、'CTLA4'）。值应为以TPM（每百万转录本数）为单位的归一化表达值。建议至少包含约100个基因以确保预测结果的可靠性。"
+
+#: ../../tools/immune_compass_tools.rst:31 dae01efb4082494da6dcb2265bdab291
+msgid ""
+"``threshold`` (number) (optional) Probability threshold for responder "
+"classification (0.0-1.0). Values ≥ threshold classify sample as likely "
+"responder. Default 0.5 provides balanced sensitivity/specificity. Consider "
+"lower thresholds (~0.3) for higher sensitivity."
+msgstr ""
+"``threshold``（数字）（可选）用于响应者分类的概率阈值（0.0-1.0）。值 ≥ 阈值时，将样本分类为可能的响应者。默认值为 "
+"0.5，可在灵敏度和特异性之间提供平衡。若需更高的灵敏度，可考虑使用较低的阈值（约 0.3）。"
+
+#: ../../tools/immune_compass_tools.rst:34 14b76150e164473d8e046ae8b8e08443
+msgid ""
+"``root_path`` (string) (optional) Path to the directory containing model "
+"checkpoints. If None, uses COMPASS_MODEL_PATH/immune-compass/checkpoint."
+msgstr ""
+"``root_path``（字符串）（可选）模型检查点所在目录的路径。如果为 None，则使用 COMPASS_MODEL_PATH/immune-"
+"compass/checkpoint。"
+
+#: ../../tools/immune_compass_tools.rst:37 732a270742b84b46a93a0bb4e2455b71
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/immune_compass_tools.rst:51 48a8f8f03b9a43ecbf15681b37b68bda
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/immune_compass_tools.rst:53 b3b86bbbfa014bfca2b8136783664252
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/immune_compass_tools.rst:54 5d11df69cd814f91aa490d9930de07da
+msgid ":doc:`remote_tools` - Remote Tools Setup"
+msgstr ":doc:`remote_tools` - 远程工具设置"

@@ -31,6 +31,65 @@
                 }
             },
             "required": ["search_keywords"]
+        },
+        "return_schema": {
+            "type": "array",
+            "description": "List of academic papers from OpenAlex matching the search query",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "Title of the paper"
+                    },
+                    "abstract": {
+                        "type": "string",
+                        "description": "Abstract of the paper"
+                    },
+                    "authors": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "List of author names"
+                    },
+                    "year": {
+                        "type": "integer",
+                        "description": "Publication year"
+                    },
+                    "organizations": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "List of organizational affiliations"
+                    },
+                    "venue": {
+                        "type": "string",
+                        "description": "Journal or venue name"
+                    },
+                    "doi": {
+                        "type": "string",
+                        "description": "Digital Object Identifier (DOI) of the paper"
+                    },
+                    "citation_count": {
+                        "type": "integer",
+                        "description": "Number of citations"
+                    },
+                    "open_access": {
+                        "type": "boolean",
+                        "description": "Open access status"
+                    },
+                    "pdf_url": {
+                        "type": "string",
+                        "description": "URL to PDF if available"
+                    },
+                    "openalex_id": {
+                        "type": "string",
+                        "description": "OpenAlex identifier"
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "URL to the paper"
+                    }
+                }
+            }
         }
     }
 ]

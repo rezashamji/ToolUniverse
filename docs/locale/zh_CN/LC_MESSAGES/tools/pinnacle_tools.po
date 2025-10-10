@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/pinnacle_tools.rst:2 e8e09321e9a24c50a371ae92b0b11263
+msgid "Pinnacle Tools"
+msgstr "巅峰工具"
+
+#: ../../tools/pinnacle_tools.rst:4 8997b22c79af4b849c5c60b6563ee8d2
+msgid ""
+"**Configuration File**: ``remote_tools/pinnacle_tools.json`` **Tool Type**: "
+"Remote **Tools Count**: 1"
+msgstr ""
+"**配置文件**: ``remote_tools/pinnacle_tools.json`` **工具类型**: 远程 **工具数量**: 1"
+
+#: ../../tools/pinnacle_tools.rst:8 f49e0e8c6c784911ac3ab4a494f525b7
+msgid ""
+"This page contains all tools defined in the ``pinnacle_tools.json`` "
+"configuration file."
+msgstr "此页面包含在``pinnacle_tools.json``配置文件中定义的所有工具。"
+
+#: ../../tools/pinnacle_tools.rst:11 91eb33462a764f6db7a05bd65a999865
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/pinnacle_tools.rst:14 ac68320ea8b443019b07c02dccd35da1
+msgid "**run_pinnacle_ppi_retrieval** (Type: RemoteTool)"
+msgstr "**运行_pinnacle_ppi_检索**（类型：远程工具）"
+
+#: ../../tools/pinnacle_tools.rst:16 7104a6454b2a4f67acd481d5f161e99c
+msgid ""
+"Retrieves cell-type-specific protein-protein interaction embeddings from "
+"PINNACLE. This tool prov..."
+msgstr "从PINNACLE中检索细胞类型特异性的蛋白质-蛋白质交互嵌入数据。该工具提供..."
+
+#: ../../tools/pinnacle_tools.rst 820d8035371f4aedb97fea7f052702c6
+msgid "run_pinnacle_ppi_retrieval tool specification"
+msgstr "run_pinnacle_ppi_retrieval 工具规范"
+
+#: ../../tools/pinnacle_tools.rst:20 26ff4df625e840a9bd6220d3d7862c25
+msgid "**Tool Information:**"
+msgstr ""
+"**工具信息：**\n"
+"\n"
+"Context: 文档"
+
+#: ../../tools/pinnacle_tools.rst:22 6e74f44b88174fd7a2068d793388a658
+msgid "**Name**: ``run_pinnacle_ppi_retrieval``"
+msgstr "**名称**: ``run_pinnacle_ppi_retrieval``"
+
+#: ../../tools/pinnacle_tools.rst:23 30240b41d5fa435aab36bd6a1926c0a4
+msgid "**Type**: ``RemoteTool``"
+msgstr "**类型**: ``RemoteTool``"
+
+#: ../../tools/pinnacle_tools.rst:24 8c00e5a40a654bdea29ff45afd105b73
+msgid ""
+"**Description**: Retrieves cell-type-specific protein-protein interaction "
+"embeddings from PINNACLE. This tool provides access to pre-computed PINNACLE"
+" (Protein Interaction Network Contextualized Learning) embeddings that "
+"represent protein-protein interactions in specific cellular contexts. These "
+"embeddings encode functional relationships between proteins as dense vector "
+"representations, capturing both direct physical interactions and functional "
+"associations."
+msgstr ""
+"**描述**: 从PINNACLE检索细胞类型特异性的蛋白质-蛋白质相互作用嵌入。此工具提供预先计算的PINNACLE（Protein "
+"Interaction Network Contextualized "
+"Learning，蛋白质相互作用网络上下文化学习）嵌入，这些嵌入表示特定细胞环境中的蛋白质-"
+"蛋白质相互作用。嵌入以密集向量表示蛋白质之间的功能关系，捕捉直接的物理相互作用和功能关联。"
+
+#: ../../tools/pinnacle_tools.rst:26 25fd6b6b440a4040afaae6999f014972
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/pinnacle_tools.rst:28 200077db52a4460fbdb6aba417161df6
+msgid ""
+"``cell_type`` (string) (required) Target cell type for embedding retrieval. "
+"Supports flexible naming: Standard formats: 'b_cell', 'hepatocyte', "
+"'cardiomyocyte'; Alternative formats: 'B-cell', 'T cell', 'NK cells'; Tissue"
+" types: 'liver', 'heart', 'brain', 'immune'. The tool performs intelligent "
+"matching to find the best available match."
+msgstr ""
+"``cell_type``（字符串）（必填）目标细胞类型，用于嵌入检索。支持灵活的命名方式：标准格式：'b_cell'、'hepatocyte'、'cardiomyocyte'；替代格式：'B-cell'、'T"
+" cell'、'NK "
+"cells'；组织类型：'liver'、'heart'、'brain'、'immune'。该工具会执行智能匹配以找到最佳可用匹配项。"
+
+#: ../../tools/pinnacle_tools.rst:31 661960f89ce94403a835c4337a8fc029
+msgid ""
+"``embed_path`` (string) (optional) Path to the PINNACLE embeddings file "
+"(.pth format). If None, uses "
+"PINNACLE_DATA_PATH/pinnacle_embeds/ppi_embed_dict.pth."
+msgstr ""
+"``embed_path``（字符串）（可选）指定PINNACLE嵌入文件的路径（.pth格式）。如果为None，则使用PINNACLE_DATA_PATH/pinnacle_embeds/ppi_embed_dict.pth。"
+
+#: ../../tools/pinnacle_tools.rst:34 154e827de4704775acef7b0a0c665c12
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/pinnacle_tools.rst:48 211f238373534272b9ee2ee9ebfb75a4
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/pinnacle_tools.rst:50 5af3ac8d91414689ba2bceec992581b0
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/pinnacle_tools.rst:51 5a3d1e7e88c741979f5ffc2a74d7c475
+msgid ":doc:`remote_tools` - Remote Tools Setup"
+msgstr ":doc:`remote_tools` - 远程工具设置"

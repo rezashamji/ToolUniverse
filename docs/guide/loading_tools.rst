@@ -11,7 +11,7 @@ Python API: Using load_tools()
 The ``load_tools()`` method is the primary way to load tools when using ToolUniverse programmatically in Python.
 
 .. note::
-   **For complete Python API documentation**, see :doc:`../api_quick_reference` for commonly used classes and methods, or :doc:`../api_comprehensive` for full API reference.
+   **For complete Python API documentation**, see :doc:`api_quick_reference` for commonly used classes and methods, or :doc:`api_comprehensive` for full API reference.
 
 .. autofunction:: tooluniverse.execute_function.ToolUniverse.load_tools
    :noindex:
@@ -125,6 +125,9 @@ MCP Server Functions
 -------------------------------------------
 
 ToolUniverse provides two main MCP server functions for different use cases:
+
+.. seealso::
+   For a comprehensive MCP overview, detailed configuration, best practices, and troubleshooting, see :doc:`mcp_support`.
 
 1. **`tooluniverse-mcp`** - Full-featured server with configurable transport (HTTP, SSE, stdio)
 2. **`tooluniverse-smcp-stdio`** - Specialized server for stdio transport (for desktop AI applications)

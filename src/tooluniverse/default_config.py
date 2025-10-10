@@ -33,6 +33,23 @@ default_tool_files = {
     "Enrichr": os.path.join(current_dir, "data", "enrichr_tools.json"),
     "HumanBase": os.path.join(current_dir, "data", "humanbase_tools.json"),
     "OpenAlex": os.path.join(current_dir, "data", "openalex_tools.json"),
+    # Literature search tools
+    "arxiv": os.path.join(current_dir, "data", "arxiv_tools.json"),
+    "crossref": os.path.join(current_dir, "data", "crossref_tools.json"),
+    "dblp": os.path.join(current_dir, "data", "dblp_tools.json"),
+    "pubmed": os.path.join(current_dir, "data", "pubmed_tools.json"),
+    "doaj": os.path.join(current_dir, "data", "doaj_tools.json"),
+    "unpaywall": os.path.join(current_dir, "data", "unpaywall_tools.json"),
+    "biorxiv": os.path.join(current_dir, "data", "biorxiv_tools.json"),
+    "medrxiv": os.path.join(current_dir, "data", "medrxiv_tools.json"),
+    "hal": os.path.join(current_dir, "data", "hal_tools.json"),
+    "core": os.path.join(current_dir, "data", "core_tools.json"),
+    "pmc": os.path.join(current_dir, "data", "pmc_tools.json"),
+    "zenodo": os.path.join(current_dir, "data", "zenodo_tools.json"),
+    "openaire": os.path.join(current_dir, "data", "openaire_tools.json"),
+    "osf_preprints": os.path.join(current_dir, "data", "osf_preprints_tools.json"),
+    "fatcat": os.path.join(current_dir, "data", "fatcat_tools.json"),
+    "wikidata_sparql": os.path.join(current_dir, "data", "wikidata_sparql_tools.json"),
     "agents": os.path.join(current_dir, "data", "agentic_tools.json"),
     "dataset": os.path.join(current_dir, "data", "dataset_tools.json"),
     # 'mcp_clients': os.path.join(current_dir, 'data', 'mcp_client_tools_example.json'),
@@ -49,6 +66,7 @@ default_tool_files = {
     "pubchem": os.path.join(current_dir, "data", "pubchem_tools.json"),
     "medlineplus": os.path.join(current_dir, "data", "medlineplus_tools.json"),
     "uniprot": os.path.join(current_dir, "data", "uniprot_tools.json"),
+    "cellosaurus": os.path.join(current_dir, "data", "cellosaurus_tools.json"),
     # 'software': os.path.join(current_dir, 'data', 'software_tools.json'),
     # Package tools - categorized software tools
     "software_bioinformatics": os.path.join(
@@ -116,6 +134,8 @@ default_tool_files = {
     "odphp": os.path.join(current_dir, "data", "odphp_tools.json"),
     "euhealth": os.path.join(current_dir, "data", "euhealth_tools.json"),
 
+    # Guideline and health policy tools
+    "guidelines": os.path.join(current_dir, "data", "unified_guideline_tools.json"),
 }
 
 

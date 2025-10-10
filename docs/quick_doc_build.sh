@@ -7,11 +7,27 @@
 # 2. Generate Remote Tools documentation
 # 3. Install Sphinx documentation dependencies
 # 4. Generate enhanced API documentation
-# 5. Build HTML documentation
-# 6. Provide local server preview
+# 5. Build multi-language HTML documentation (English + Chinese by default)
+# 6. Create language switcher interface
+# 7. Provide local server# Display script execution completion and new features introduction
+echo -e "\n${GREEN}✅ Enhanced documentation system completed!${NC}"
+echo -e "${BLUE}💡 Features:${NC}"
+echo -e "   ✨ Automatic discovery of all modules and functions"
+echo -e "   🌍 Multi-language support (English & Chinese)"
+echo -e "   🔄 Language switcher in navigation bar"
+echo -e "   📊 Detailed statistics"
+echo -e "   🔍 Enhanced module discovery"
+echo -e "   📚 Comprehensive API index"
+echo -e "   🎨 Modern Shibuya theme"
+echo -e "   📱 Responsive design"
+echo -e "   🔍 Built-in search functionality"
+echo -e "   🌓 Dark/Light mode toggle"Usage:
+#   ./quick_doc_build.sh                    # Build both English and Chinese
+#   DOC_LANGUAGES=en ./quick_doc_build.sh   # Build English only
+#   DOC_LANGUAGES=zh_CN ./quick_doc_build.sh # Build Chinese only
 
 # Exit on error (stop script immediately on any error)
-set -e
+set -Eeuo pipefail
 
 # ===========================================
 # Color definitions - for beautifying terminal output
@@ -26,6 +42,41 @@ NC='\033[0m'          # Reset color
 # Display script title
 echo -e "${BLUE}🧬 ToolUniverse Documentation Generation System${NC}"
 echo "========================================"
+
+# Configure build behavior via environment flags
+DOC_LANGUAGES_RAW="${DOC_LANGUAGES:-en,zh_CN}"  # Default to both English and Chinese
+DOC_SKIP_REMOTE="${DOC_SKIP_REMOTE:-0}"
+DOC_SKIP_SERVER_PROMPT="${DOC_SKIP_SERVER_PROMPT:-0}"
+DOC_SKIP_INSTALL="${DOC_SKIP_INSTALL:-0}"  # Skip dependency installation if already done
+DOC_OPTIMIZED="${DOC_OPTIMIZED:-0}"  # Use optimized build settings
+DOCS_STRICT="${DOCS_STRICT:-0}"
+CI="${CI:-}"
+GITHUB_ACTIONS="${GITHUB_ACTIONS:-}"
+
+# Normalize language list (accept comma or space separated values)
+IFS=', ' read -r -a LANGUAGES <<< "${DOC_LANGUAGES_RAW//,/ }"
+FILTERED_LANGUAGES=()
+for RAW_LANG in "${LANGUAGES[@]}"; do
+  TRIMMED_LANG=$(echo "$RAW_LANG" | xargs)
+  if [ -n "$TRIMMED_LANG" ]; then
+    FILTERED_LANGUAGES+=("$TRIMMED_LANG")
+  fi
+done
+
+if [ ${#FILTERED_LANGUAGES[@]} -eq 0 ]; then
+  LANGUAGES=("en")
+else
+  LANGUAGES=("${FILTERED_LANGUAGES[@]}")
+fi
+
+NEEDS_TRANSLATIONS=0
+for DOC_LANGUAGE in "${LANGUAGES[@]}"; do
+  if [ "$DOC_LANGUAGE" = "zh_CN" ]; then
+    NEEDS_TRANSLATIONS=1
+  fi
+done
+
+echo -e "${YELLOW}Target documentation languages: ${LANGUAGES[*]}${NC}"
 
 # Optional strict mode: treat warnings as errors when DOCS_STRICT=1
 SPHINX_FLAGS=""
@@ -63,43 +114,53 @@ echo -e "${GREEN}✅ Tool configuration index generation completed${NC}"
 # Step 0.1: Generate Remote Tools documentation (automatic)
 # ===========================================
 # This step generates documentation for remote tools, including MCP servers, etc.
-echo -e "\n${BLUE}🌐 Generating Remote Tools documentation (automatic)${NC}"
-cd "$SCRIPT_DIR"
+if [ "$DOC_SKIP_REMOTE" = "1" ]; then
+  echo -e "\n${YELLOW}⏭️ Skipping Remote Tools documentation generation (DOC_SKIP_REMOTE=1)${NC}"
+else
+  echo -e "\n${BLUE}🌐 Generating Remote Tools documentation (automatic)${NC}"
+  cd "$SCRIPT_DIR"
 
-# Check if remote tool documentation generation script exists
-if [ -f "generate_remote_tools_docs.py" ]; then
+  # Check if remote tool documentation generation script exists
+  if [ -f "generate_remote_tools_docs.py" ]; then
     python generate_remote_tools_docs.py || { echo -e "${RED}❌ Failed to generate Remote Tools documentation${NC}"; exit 1; }
     echo -e "${GREEN}✅ Remote Tools documentation generation completed${NC}"
-else
+  else
     echo -e "${YELLOW}⚠️ generate_remote_tools_docs.py not found${NC}"
+  fi
 fi
 
 # ===========================================
 # Step 1: Install Sphinx documentation dependencies
 # ===========================================
 # Install Python packages required for building documentation
-echo -e "\n${BLUE}📦 Installing enhanced documentation dependencies${NC}"
-cd "$PROJECT_ROOT"
-
-# Prefer local virtualenv if exists; otherwise, create one for isolation
-if [ -d ".venv" ]; then
-  # shellcheck disable=SC1091
-  source .venv/bin/activate || true
+if [ "${DOC_SKIP_INSTALL}" = "1" ]; then
+  echo -e "\n${YELLOW}⏭️ Skipping dependency installation (DOC_SKIP_INSTALL=1)${NC}"
 else
-  if command -v python3 >/dev/null 2>&1; then
-    python3 -m venv .venv || true
+  echo -e "\n${BLUE}📦 Installing enhanced documentation dependencies${NC}"
+  cd "$PROJECT_ROOT"
+
+  # Prefer local virtualenv if exists; otherwise, create one for isolation
+  if [ -d ".venv" ]; then
     # shellcheck disable=SC1091
     source .venv/bin/activate || true
+  else
+    if command -v python3 >/dev/null 2>&1; then
+      python3 -m venv .venv || true
+      # shellcheck disable=SC1091
+      source .venv/bin/activate || true
+    fi
   fi
-fi
 
-# Install via project extras if possible; fallback to explicit list
-if command -v uv >/dev/null 2>&1; then
-  uv pip install -q -e '.[docs]' 2>/dev/null || uv pip install -q sphinx furo myst-parser linkify-it-py sphinx-copybutton sphinx-design sphinx-tabs sphinx-notfound-page sphinx-autodoc-typehints 2>/dev/null || true
-else
-  pip install -q -e '.[docs]' 2>/dev/null || pip install -q sphinx furo myst-parser linkify-it-py sphinx-copybutton sphinx-design sphinx-tabs sphinx-notfound-page sphinx-autodoc-typehints 2>/dev/null || true
+  # Install via project extras if possible; fallback to explicit list
+  COMMON_PACKAGES="sphinx shibuya furo pydata-sphinx-theme myst-parser linkify-it-py sphinx-copybutton sphinx-design sphinx-tabs sphinx-notfound-page sphinx-autodoc-typehints sphinx-intl"
+
+  if command -v uv >/dev/null 2>&1; then
+    uv pip install -q -e '.[docs]' 2>/dev/null || uv pip install -q $COMMON_PACKAGES 2>/dev/null || true
+  else
+    pip install -q -e '.[docs]' 2>/dev/null || pip install -q $COMMON_PACKAGES 2>/dev/null || true
+  fi
+  echo -e "${GREEN}✅ Dependencies installation completed${NC}"
 fi
-echo -e "${GREEN}✅ Dependencies installation completed${NC}"
 
 # ===========================================
 # Step 2: Generate enhanced API documentation
@@ -166,6 +227,23 @@ cat > _templates/module.rst << 'EOF'
    :imported-members:
 EOF
 
+# ===========================================
+# Step 2.5: Update translation catalogs
+# ===========================================
+if [ "$NEEDS_TRANSLATIONS" -eq 1 ]; then
+  # Check if translation files need update (skip if unchanged in CI)
+  if [ -n "$CI" ] || [ -n "$GITHUB_ACTIONS" ]; then
+    echo -e "\n${YELLOW}🌍 Skipping translation catalog update in CI (use existing translations)${NC}"
+  else
+    echo -e "\n${BLUE}🌍 Updating translation catalogs${NC}"
+    mkdir -p _build/gettext
+    sphinx-build -b gettext . _build/gettext -q || true
+    sphinx-intl update -p _build/gettext -l zh_CN >/dev/null 2>&1 || true
+  fi
+else
+  echo -e "\n${YELLOW}🌍 Skipping translation catalog update (no zh_CN in DOC_LANGUAGES)${NC}"
+fi
+
 # Ensure api directory exists
 mkdir -p api
 
@@ -174,24 +252,18 @@ mkdir -p api
 # ===========================================
 # Check if sphinx-apidoc command is available
 if command -v sphinx-apidoc >/dev/null 2>&1; then
+    # Determine sphinx-apidoc flags based on optimization mode
+    if [ "${DOC_OPTIMIZED}" = "1" ]; then
+      # Optimized mode: faster builds, skip unchanged files
+      echo -e "${YELLOW}Using optimized API generation (skip unchanged files, maxdepth 4)${NC}"
+      APIDOC_FLAGS="-o api ../src/tooluniverse --separate --module-first --maxdepth 4 --templatedir=_templates"
+    else
+      # Full mode: regenerate everything
+      APIDOC_FLAGS="-f -o api ../src/tooluniverse --separate --module-first --maxdepth 6 --private --force --templatedir=_templates"
+    fi
+    
     # Use sphinx-apidoc to scan source code and generate API documentation
-    # -f: force overwrite existing files
-    # -o api: output to api directory
-    # ../src/tooluniverse: source code path
-    # --separate: create separate documentation file for each module
-    # --module-first: module name first
-    # --maxdepth 6: maximum recursion depth
-    # --private: include private members
-    # --force: force regeneration
-    # --templatedir=_templates: use custom templates
-    sphinx-apidoc -f -o api ../src/tooluniverse \
-        --separate \
-        --module-first \
-        --maxdepth 6 \
-        --private \
-        --force \
-        --templatedir=_templates \
-        2>/dev/null || true
+    sphinx-apidoc $APIDOC_FLAGS 2>/dev/null || true
 
     # Count generated API documentation files
     API_FILES=$(find api -name "*.rst" | wc -l | tr -d ' ')
@@ -225,31 +297,143 @@ else
 fi
 
 # ===========================================
-# Step 3: Build enhanced HTML documentation
+# Step 3: Build enhanced HTML documentation (multi-language)
 # ===========================================
-# Use sphinx-build to convert RST documentation to HTML format
-echo -e "\n${BLUE}🔧 Building enhanced HTML documentation${NC}"
+echo -e "\n${BLUE}🔧 Building enhanced HTML documentation (multi-language)${NC}"
 
-# Ensure Python can import project sources when building
-export PYTHONPATH="$SRC_DIR:$PYTHONPATH"
-
-# Use sphinx-build to build HTML documentation
-# -b html: build HTML format
-# . : current directory (docs directory)
-# _build/html: output directory
-# --keep-going: continue building when encountering errors
-# -q: quiet mode
-sphinx-build ${SPHINX_FLAGS} -b html . _build/html --keep-going -q || true
-
-# ===========================================
-# Check build results
-# ===========================================
-# Check if homepage file was successfully generated
-if [ -f "_build/html/index.html" ]; then
-    echo -e "${GREEN}✅ Documentation build successful${NC}"
+if [ -n "${PYTHONPATH:-}" ]; then
+  export PYTHONPATH="$SRC_DIR:$PYTHONPATH"
 else
-    echo -e "${RED}❌ Documentation build failed${NC}"
-    exit 1
+  export PYTHONPATH="$SRC_DIR"
+fi
+
+
+OUTPUT_DIR="_build/html"
+# Ensure we're in the docs directory
+SCRIPT_DIR="$(dirname "$0")"
+cd "$SCRIPT_DIR"
+
+rm -rf "$OUTPUT_DIR"
+mkdir -p "$OUTPUT_DIR"
+
+# Determine number of parallel jobs for Sphinx
+if [ "${DOC_OPTIMIZED}" = "1" ]; then
+  SPHINX_JOBS="-j auto"  # Use all available CPU cores
+  echo -e "${YELLOW}Using parallel build with auto jobs${NC}"
+else
+  SPHINX_JOBS=""
+fi
+
+for DOC_LANGUAGE in "${LANGUAGES[@]}"; do
+  if [ -z "$DOC_LANGUAGE" ]; then
+    continue
+  fi
+  TARGET_DIR="$OUTPUT_DIR/${DOC_LANGUAGE//_/-}"
+  # Special handling for zh_CN to use zh-CN format
+  if [ "$DOC_LANGUAGE" = "zh_CN" ]; then
+    TARGET_DIR="$OUTPUT_DIR/zh-CN"
+  fi
+  echo -e "${YELLOW}🌐 Building language: ${DOC_LANGUAGE} -> ${TARGET_DIR}${NC}"
+  sphinx-build ${SPHINX_FLAGS} ${SPHINX_JOBS} -b html -D language="$DOC_LANGUAGE" . "$TARGET_DIR" --keep-going -q || true
+
+  if [ -f "$TARGET_DIR/index.html" ]; then
+    echo -e "${GREEN}   ✅ ${DOC_LANGUAGE} build succeeded${NC}"
+  else
+    echo -e "${RED}   ❌ ${DOC_LANGUAGE} build failed${NC}"
+    echo -e "${YELLOW}   ⚠️ Continuing with other languages...${NC}"
+    # Don't exit on single language failure, continue with others
+  fi
+done
+
+# ===========================================
+# Step 3.5: Copy English content to root directory for direct access
+# ===========================================
+# Check if English build exists and copy to root
+if [ -d "$OUTPUT_DIR/en" ] && [ -f "$OUTPUT_DIR/en/index.html" ]; then
+  echo -e "\n${BLUE}🌍 Setting up English as default (root path) by copying content${NC}"
+  
+  # Copy all English content to root directory (excluding en folder itself)
+  echo -e "${BLUE}📋 Copying English documentation to root directory...${NC}"
+  
+  # First, copy all English content to root (excluding the en directory itself)
+  rsync -a "$OUTPUT_DIR/en/" "$OUTPUT_DIR/"
+  
+  # Create a simple redirect for old /zh_CN/ paths to new /zh-CN/ paths
+  cat > "$OUTPUT_DIR/redirect_old_paths.js" << 'REDIRECT_JS'
+// ToolUniverse Documentation - Old Path Redirect Handler
+(function() {
+    'use strict';
+    
+    // Only run on GitHub Pages (not in development)
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return;
+    }
+    
+    const currentPath = window.location.pathname;
+    const basePath = '/ToolUniverse/';
+    
+    // Handle old zh_CN paths
+    if (currentPath.includes('/zh_CN/')) {
+        const newPath = currentPath.replace('/zh_CN/', '/zh-CN/');
+        window.location.replace(newPath);
+        return;
+    }
+})();
+REDIRECT_JS
+  
+  # Add the redirect script to all HTML files in root
+  find "$OUTPUT_DIR" -maxdepth 1 -name "*.html" -exec sed -i.bak 's|</head>|    <script src="redirect_old_paths.js"></script>\n</head>|' {} \;
+  
+  # Create .htaccess file for Apache server compatibility (if needed)
+  cat > "$OUTPUT_DIR/.htaccess" << 'HTACCESS'
+# ToolUniverse Documentation - Apache .htaccess
+# This file ensures proper redirects for multi-language documentation
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Redirect old /zh_CN/ paths to new /zh-CN/ structure
+RewriteRule ^zh_CN/(.*)$ zh-CN/$1 [R=302,L]
+
+# Set proper MIME types
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js
+AddType image/png .png
+AddType image/jpeg .jpg
+AddType image/svg+xml .svg
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Set cache headers
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+HTACCESS
+  
+  echo -e "${GREEN}✅ English documentation copied to root directory${NC}"
+  echo -e "${GREEN}✅ Old path redirect script created${NC}"
+  echo -e "${GREEN}✅ .htaccess file created for Apache servers${NC}"
+  echo -e "${YELLOW}💡 Access: http://localhost:port/ (direct English content) OR http://localhost:port/en/ OR http://localhost:port/zh-CN/${NC}"
 fi
 
 # ===========================================
@@ -261,7 +445,7 @@ echo -e "\n${BLUE}📊 Generating detailed statistics${NC}"
 # Count HTML files
 HTML_FILES=$(find _build/html -name "*.html" | wc -l | tr -d ' ')
 # Count API documentation
-API_DOCS=$(find _build/html/api -name "*.html" 2>/dev/null | wc -l | tr -d ' ' || echo "0")
+API_DOCS=$(find _build/html -path "*api/*.html" 2>/dev/null | wc -l | tr -d ' ' || echo "0")
 # Calculate total documentation size
 DOC_SIZE=$(du -sh _build/html 2>/dev/null | cut -f1 || echo "unknown")
 
@@ -291,10 +475,54 @@ echo -e "   🏗️ Total classes: ${CLASS_COUNT}"
 # Step 5: Display documentation access methods
 # ===========================================
 # Provide various ways to access documentation and links
-BUILD_PATH="$SCRIPT_DIR/_build/html/index.html"
+DEFAULT_LANG="${LANGUAGES[0]}"
+# Server should start from html root directory, not language subdirectory
+SERVER_DIR="$SCRIPT_DIR/_build/html"
+DEFAULT_DIR="$SCRIPT_DIR/_build/html/${DEFAULT_LANG//_/-}"
+# Special handling for zh_CN to use zh-CN format
+if [ "$DEFAULT_LANG" = "zh_CN" ]; then
+  DEFAULT_DIR="$SCRIPT_DIR/_build/html/zh-CN"
+fi
+
 echo -e "\n${BLUE}📂 Access documentation:${NC}"
-echo -e "   🏠 Homepage: file://${BUILD_PATH}"
-echo -e "   🔧 Complete API: file://${SCRIPT_DIR}/_build/html/api/modules.html"
+
+# If multiple languages, show main entry point
+if [ ${#LANGUAGES[@]} -gt 1 ]; then
+  echo -e "   � ${GREEN}Main Entry: file://${SCRIPT_DIR}/_build/html/index.html${NC} (auto-redirects to English)"
+  echo -e "   ${BLUE}   💡 Use the language switcher in the navigation bar to switch languages${NC}"
+  echo ""
+fi
+
+# Show individual language links
+for DOC_LANGUAGE in "${LANGUAGES[@]}"; do
+  TARGET_DIR="$SCRIPT_DIR/_build/html/${DOC_LANGUAGE//_/-}"
+  # Special handling for zh_CN to use zh-CN format
+  if [ "$DOC_LANGUAGE" = "zh_CN" ]; then
+    TARGET_DIR="$SCRIPT_DIR/_build/html/zh-CN"
+  fi
+  if [ -f "$TARGET_DIR/index.html" ]; then
+    case "$DOC_LANGUAGE" in
+      en)
+        FLAG="��"
+        LABEL="English"
+        ;;
+      zh_CN)
+        FLAG="🇨🇳"
+        LABEL="简体中文"
+        ;;
+      *)
+        FLAG="🌐"
+        LABEL="$DOC_LANGUAGE"
+        ;;
+    esac
+    echo -e "   ${FLAG} ${LABEL}:"
+    echo -e "      📖 Home: file://${TARGET_DIR}/index.html"
+    if [ -f "$TARGET_DIR/api/modules.html" ]; then
+      echo -e "      🔧 API:  file://${TARGET_DIR}/api/modules.html"
+    fi
+    echo ""
+  fi
+done
 
 # ===========================================
 # Step 6: Optional local server startup
@@ -302,6 +530,8 @@ echo -e "   🔧 Complete API: file://${SCRIPT_DIR}/_build/html/api/modules.html
 # Check if running in CI environment
 if [ -n "$CI" ] || [ -n "$GITHUB_ACTIONS" ]; then
     echo -e "${BLUE}🤖 CI environment detected, skipping server startup${NC}"
+elif [ "$DOC_SKIP_SERVER_PROMPT" = "1" ]; then
+  echo -e "${YELLOW}⏭️ Skipping server prompt (DOC_SKIP_SERVER_PROMPT=1)${NC}"
 else
     # Ask user if they want to start local HTTP server to preview documentation
     echo -e "\n${YELLOW}Start local server to view documentation? (y/n)${NC}"
@@ -326,35 +556,52 @@ else
         fi
     done
 
-    # ===========================================
-    # Start HTTP server
-    # ===========================================
-    if [ -z "$PORT" ]; then
-        # If no available port found, provide manual startup command
-        echo -e "${RED}❌ Unable to find available port, please start server manually${NC}"
-        echo -e "${YELLOW}💡 Manual startup command: cd _build/html && python -m http.server 8080${NC}"
-    else
-        # Display access address
-        echo -e "${GREEN}📡 Access address: http://localhost:${PORT}${NC}"
-        echo -e "${YELLOW}Press Ctrl+C to stop server${NC}"
-
-        # Switch to build directory and start server
-        cd _build/html
-        python -m http.server $PORT
+  if [ -z "$PORT" ]; then
+    echo -e "${RED}❌ Unable to find available port, please start server manually${NC}"
+    echo -e "${YELLOW}💡 Manual startup command: cd ${SERVER_DIR} && python -m http.server 8080${NC}"
+  else
+    echo -e "${GREEN}📡 Access address: http://localhost:${PORT}${NC}"
+    echo -e "${YELLOW}Press Ctrl+C to stop server${NC}"
+    if [ ! -d "$SERVER_DIR" ]; then
+      echo -e "${RED}❌ Server directory not found: ${SERVER_DIR}${NC}"
+      exit 1
     fi
+    echo -e "${BLUE}📂 Server directory: ${SERVER_DIR}${NC}"
+    cd "$SERVER_DIR"
+    python -m http.server "$PORT"
+  fi
 fi
 fi
+
+# ===========================================
+# Final verification
+# ===========================================
+echo -e "\n${BLUE}🔍 Final verification...${NC}"
+if [ ! -d "$OUTPUT_DIR" ]; then
+  echo -e "${RED}❌ Output directory $OUTPUT_DIR not found!${NC}"
+  exit 1
+fi
+
+if [ ! -f "$OUTPUT_DIR/index.html" ]; then
+  echo -e "${RED}❌ Root index.html not found!${NC}"
+  exit 1
+fi
+
+echo -e "${GREEN}✅ Build verification passed!${NC}"
 
 # ===========================================
 # Script completion summary
 # ===========================================
 # Display script execution completion and new features introduction
 echo -e "\n${GREEN}✅ Enhanced documentation system completed!${NC}"
-echo -e "${BLUE}💡 New features:${NC}"
+echo -e "${BLUE}💡 Features:${NC}"
 echo -e "   ✨ Automatic discovery of all modules and functions"
-echo -e "   📊 Detailed statistics"
+echo -e "   🌍 Multi-language support (English & Chinese)"
+echo -e "   � Language switcher interface"
+echo -e "   �📊 Detailed statistics"
 echo -e "   🔍 Enhanced module discovery"
 echo -e "   📚 Comprehensive API index"
-echo -e "   🎨 Custom template support"
+echo -e "   🎨 Modern Shibuya theme"
 echo -e "   📱 Responsive design"
 echo -e "   🔍 Built-in search functionality"
+echo -e "   🌓 Dark/Light mode toggle"

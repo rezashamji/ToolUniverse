@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.reactome_tool.rst:2 4c2e4a10cc2a4b97b55f5b5d459bc5ee
+msgid "tooluniverse.reactome\\_tool module"
+msgstr "tooluniverse.reactome_tool 模块"
+
+#: 0a6700d707e144eda5efcad0bfd0a417 of
+#: tooluniverse.reactome_tool.ReactomeRESTTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: f5d9f2c7cb0045deb471a3aa61f74af6 of
+#: tooluniverse.reactome_tool.ReactomeRESTTool:1
+msgid ""
+"Generic Reactome Content Service REST tool. If there is no "
+"\"fields.extract_path\" in config or its value is empty, returns complete "
+"JSON; Otherwise, drills down according to the \"dot-separated path\" in "
+"extract_path and returns corresponding sub-node."
+msgstr ""
+"通用 Reactome 内容服务 REST 工具。若配置中不存在 \"fields.extract_path\" 或其值为空，则返回完整的 "
+"JSON；否则，根据 extract_path 中的“点分路径”逐层深入，返回对应的子节点。"
+
+#: e80e136b199e4696ae7a7bb2e24ebdba of
+#: tooluniverse.reactome_tool.ReactomeRESTTool._build_url:1
+#, python-brace-format
+msgid ""
+"Combines endpoint_template (containing {xxx}) with path parameters from "
+"arguments to generate complete URL. For example "
+"endpoint_template=\"/data/pathway/{stId}\", "
+"arguments={\"stId\":\"R-HSA-73817\"} → Returns "
+"\"https://reactome.org/ContentService/data/pathway/R-HSA-73817\""
+msgstr ""
+"将包含{xxx}的endpoint_template与参数中的路径参数结合，生成完整的URL。例如 "
+"endpoint_template=\"/data/pathway/{stId}\"，arguments={\"stId\":\"R-HSA-73817\"}"
+" → 返回 \"https://reactome.org/ContentService/data/pathway/R-HSA-73817\""
+
+#: 7c61b602400543a9b0916a67c523c268 of
+#: tooluniverse.reactome_tool.ReactomeRESTTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 5ca1a87112e14ac79f872e73b4706f03 of
+#: tooluniverse.reactome_tool.ReactomeRESTTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现对输入字典的要求。"

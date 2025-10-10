@@ -18,7 +18,7 @@ except FileNotFoundError as e:
     )
     sys.exit(1)
 
-server = FastMCP("Your MCP Server", stateless_http=True)
+server = FastMCP("Your MCP Server")
 agents = {}
 for tool_config in uspto_downloader_tools:
     agents[tool_config["name"]] = USPTOPatentDocumentDownloader(tool_config=tool_config)
@@ -58,4 +58,4 @@ def download_full_text(query: dict):
 
 
 if __name__ == "__main__":
-    server.run(transport="streamable-http", host="0.0.0.0", port=8081)
+    server.run(transport="streamable-http", host="0.0.0.0", port=8081, stateless_http=True)

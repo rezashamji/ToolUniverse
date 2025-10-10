@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.semantic_scholar_tool.rst:2
+#: 1186cf2b423b462abd882c1b6f874f68
+msgid "tooluniverse.semantic\\_scholar\\_tool module"
+msgstr "tooluniverse.semantic_scholar_tool 模块"
+
+#: 48df6dd0be5548e5b673f36422ae6566 of
+#: tooluniverse.semantic_scholar_tool.SemanticScholarTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: d3b67152f8654bd08fe3a240c2ac2aad of
+#: tooluniverse.semantic_scholar_tool.SemanticScholarTool:1
+msgid "Tool to search for papers on Semantic Scholar including abstracts."
+msgstr "用于在 Semantic Scholar 上搜索论文及其摘要的工具。"
+
+#: 7f4d9dcb655c467689ef792abc7a6c5b of
+#: tooluniverse.semantic_scholar_tool.SemanticScholarTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: c2f3c4f48c7f4316a2a85986a1db196b of
+#: tooluniverse.semantic_scholar_tool.SemanticScholarTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现对输入字典的要求。"

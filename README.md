@@ -58,6 +58,7 @@ ToolUniverse addresses this challenge by providing a standardized ecosystem that
 
 - [**AI-Tool Interaction Protocol**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/interaction_protocol.html): Standardized interface governing how AI scientists issue tool requests and receive results
 - [**Universal AI Model Support**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/building_ai_scientists/index.html): Works with any LLM, AI agent, or large reasoning model (GPT5, Claude, Gemini, Qwen, Deepseek, open models)
+- [**OpenRouter Integration**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/openrouter_support.html): Access 100+ models from OpenAI, Anthropic, Google, Qwen, and more through a single API
 - [**Easy to Load & Find & Call Tool**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/index.html) (*[WebService](https://aiscientist.tools/), [PythonAPI](https://zitniklab.hms.harvard.edu/ToolUniverse/api/modules.html), [MCP](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/mcp_support.html)*): Maps natural-language descriptions to tool specifications and executes tools with structured results 
 - [**Tool Composition & Scientific Workflows**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/tool_composition.html): Chains tools for sequential or parallel execution in self-directed scientific workflows
 - [**Continuous Expansion**](https://zitniklab.hms.harvard.edu/ToolUniverse/expand_tooluniverse/index.html): New tools can be easily registered locally or remotely without additional configuration

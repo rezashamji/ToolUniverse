@@ -1,0 +1,532 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version:  ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 12:42-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../getting_started.rst:2 7a8892e43435410289e6ac7b4b8e34fd
+msgid "Getting Started with ToolUniverse"
+msgstr "ToolUniverse 入门指南"
+
+#: ../../getting_started.rst:4 8b5e2aaeb9fd45779775d0907066991d
+msgid ""
+"This tutorial provides detailed, step-by-step instructions for using "
+"ToolUniverse effectively."
+msgstr "本教程提供使用 ToolUniverse 的详细分步说明。"
+
+#: ../../getting_started.rst:6 9ef5916345c740fe9ca33325607ebb26
+msgid ""
+"**Prerequisites**: You should have already completed the "
+":doc:`quickstart` Tutorial and have ToolUniverse installed (see "
+":doc:`installation`). This tutorial assumes basic Python knowledge and "
+"internet access for API calls."
+msgstr ""
+"**先决条件**：您应该已经完成了 :doc:`quickstart` 教程并安装了 ToolUniverse（请参阅 "
+":doc:`installation`）。本教程假设您具备基本的 Python 知识和用于 API 调用的互联网访问权限。"
+
+#: ../../getting_started.rst:9 d3181ed9ca324fc9b60a3c3e52f92bb8
+msgid "🧪 Step-by-Step Tutorial"
+msgstr "🧪 分步教程"
+
+#: ../../getting_started.rst:12 c1c49f19c9d34f53904a70b12d20f68a
+msgid "Understanding Basic Workflow"
+msgstr "了解基本工作流程"
+
+#: ../../getting_started.rst:14 c41cd48ff4ea453bb7ae87c85da00105
+msgid "ToolUniverse follows a simple but powerful pattern:"
+msgstr "ToolUniverse 遵循一个简单但强大的模式："
+
+#: ../../getting_started.rst:16 e045930b4d874d18864bc0d1725fdeb4
+msgid "**Initialize once**: Create a ToolUniverse instance"
+msgstr "**一次性初始化**：创建 ToolUniverse 实例"
+
+#: ../../getting_started.rst:17 ce69d3fd5977425a9d6193039444387f
+msgid "**Load tools**: Load available tools from various databases"
+msgstr "**加载工具**：从各种数据库加载可用工具"
+
+#: ../../getting_started.rst:18 549c700d0aae4cb99da727149e042b76
+msgid "**Query tools**: Use standardized query format"
+msgstr "**查询工具**：使用标准化的查询格式"
+
+#: ../../getting_started.rst:19 570ed2d205da49b3b5415ce81448a116
+msgid "**Get results**: Receive structured data"
+msgstr "**获取结果**：接收结构化数据"
+
+#: ../../getting_started.rst:22 accb7aa31583493e84ae566bfd28b1bc
+msgid ""
+"For full AI-Tool Interaction Protocol, see "
+":doc:`guide/interaction_protocol`"
+msgstr "有关完整的 AI-工具交互协议，请参阅 :doc:`guide/interaction_protocol`"
+
+#: ../../getting_started.rst:24 d49290ba1c204115937b822fab8e81db
+msgid "Let's start with a simple example and build up complexity:"
+msgstr "让我们从一个简单的例子开始，逐步增加复杂度："
+
+#: ../../getting_started.rst:27 f87e13c85c944770b66f7da695366423
+msgid "Step 1: Initialize ToolUniverse"
+msgstr "步骤 1：初始化 ToolUniverse"
+
+#: ../../getting_started.rst:29 50b99da9a75b4c4f8b131029206ee50e
+msgid ""
+"Create a ToolUniverse instance and load scientific tools. This step sets "
+"up the foundation for accessing 600+ tools across various scientific "
+"domains."
+msgstr "创建 ToolUniverse 实例并加载科学工具。此步骤为访问各种科学领域中的 600+ 工具奠定了基础。"
+
+#: ../../getting_started.rst:45 df859e84352043018e74277ac1dc2bb7
+msgid ""
+"For detailed tool loading options and configurations, see "
+":doc:`guide/loading_tools`"
+msgstr "有关详细的工具加载选项和配置，请参阅 :doc:`guide/loading_tools`"
+
+#: ../../getting_started.rst:48 42ed4a52e13843d285d166eaed296c81
+msgid "Step 2: Explore Available Tools"
+msgstr "步骤 2：探索可用工具"
+
+#: ../../getting_started.rst:50 f9434549e69a4bbc98e5566b97b16cbc
+msgid ""
+"List built-in tools in ToolUniverse: This method supports two different "
+"organization modes to help you understand tools from different "
+"perspectives."
+msgstr "列出 ToolUniverse 中的内置工具：此方法支持两种不同的组织模式，帮助您从不同角度理解工具。"
+
+#: ../../getting_started.rst:60 a8887c5ab9154d3585e9191812a2dc8a
+msgid "For comprehensive tool listing methods, see :doc:`guide/listing_tools`"
+msgstr "有关全面的工具列表方法，请参阅 :doc:`guide/listing_tools`"
+
+#: ../../getting_started.rst:62 6e65e1bcec5f47bab2b2d3ed81f8306e
+msgid ""
+"To find tools by description, use the Find Tool operation. This feature "
+"helps you or your AI scientists discover relevant tools based on their "
+"descriptions. We support three search methods: keyword search, LLM-based "
+"search, and embedding search."
+msgstr ""
+"要按描述查找工具，请使用查找工具操作。此功能帮助您或您的 AI 科学家根据工具描述发现相关工具。我们支持三种搜索方法：关键词搜索、基于 LLM "
+"的搜索和嵌入搜索。"
+
+#: ../../getting_started.rst:78 e7a9532c3fb04df9a334307c653b50a2
+#, fuzzy
+msgid "For comprehensive tool search methods, see :doc:`tutorials/finding_tools`"
+msgstr "有关全面的工具搜索方法，请参阅 :doc:`guide/finding_tools`"
+
+#: ../../getting_started.rst:81 febf8bcb2e7a4f5999cb4c78f6348d95
+msgid "Step 3: Load Tool Specifications"
+msgstr "步骤 3：加载工具规范"
+
+#: ../../getting_started.rst:83 582942db31b44d169b70a85e692b2e10
+msgid ""
+"Inspect tool specifications to understand their parameters and "
+"capabilities before execution. This helps you or your AI scientists "
+"understand what arguments each tool expects and how to use them "
+"effectively."
+msgstr "检查工具规范以在执行前了解其参数和功能。这有助于您或您的 AI 科学家了解每个工具期望的参数以及如何有效使用它们。"
+
+#: ../../getting_started.rst:104 f3a6745d73ce459daded22074b65b08a
+msgid ""
+"For detailed tool specification schema and interaction protocols, see "
+":doc:`guide/interaction_protocol`"
+msgstr "有关详细的工具规范架构和交互协议，请参阅 :doc:`guide/interaction_protocol`"
+
+#: ../../getting_started.rst:107 f155811ffd3e46128cf393e56e8c05f9
+msgid "Step 4: Execute Tools"
+msgstr "步骤 4：执行工具"
+
+#: ../../getting_started.rst:109 09ad4014c8a8468b9b898e8954bf6308
+msgid ""
+"Execute scientific tools using the standardized query format. All tools "
+"follow a consistent structure that makes it easy to work with different "
+"scientific databases and APIs."
+msgstr "使用标准化的查询格式执行科学工具。所有工具都遵循一致的结构，使处理不同的科学数据库和 API 变得容易。"
+
+#: ../../getting_started.rst:111 cf22bfb9a86d4ffa809e0cf5cdb6064b
+msgid "All tools follow this consistent structure:"
+msgstr "所有工具都遵循这个一致的结构："
+
+#: ../../getting_started.rst:127 ec436cd4d09146eb8302df7782e09e7b
+msgid ""
+"For detailed tool execution patterns and advanced usage, see "
+":doc:`guide/tool_caller`"
+msgstr "有关详细的工具执行模式和高级用法，请参阅 :doc:`guide/tool_caller`"
+
+#: ../../getting_started.rst:130 8690ec51842040aab1b9049380f794b6
+msgid "**Execute your First Scientific Tool Call**"
+msgstr "**执行您的第一个科学工具调用**"
+
+#: ../../getting_started.rst:132 91b8eab2f7b240d99446d52b9e5d31ed
+msgid ""
+"Run your scientific tool call to use tools. This demonstrates how to "
+"access drug safety, gene information, literature, and disease data "
+"through standardized tool calls."
+msgstr "运行您的科学工具调用以使用工具。这演示了如何通过标准化的工具调用访问药物安全性、基因信息、文献和疾病数据。"
+
+#: ../../getting_started.rst:135 9e2c141e6b9642d481848201f393acff
+msgid ""
+"Retrieve comprehensive protein and gene information from UniProt "
+"database. Get protein sequences, functions, annotations, and related "
+"biological data."
+msgstr "从 UniProt 数据库检索全面的蛋白质和基因信息。获取蛋白质序列、功能、注释和相关生物数据。"
+
+#: ../../getting_started.rst:148 16fa217a0b7e49e69b9628496bb939f4
+msgid ""
+"Analyze drug safety profiles using FDA adverse event reporting data. "
+"Identify potential side effects and safety concerns for pharmaceutical "
+"compounds."
+msgstr "使用 FDA 不良事件报告数据分析药物安全性概况。识别制药化合物的潜在副作用和安全问题。"
+
+#: ../../getting_started.rst:161 717e29eea3564d8797f036a99926f549
+msgid ""
+"Explore disease-target relationships using OpenTargets platform. Discover"
+" therapeutic targets associated with specific diseases and their evidence"
+" scores."
+msgstr "使用 OpenTargets 平台探索疾病-靶点关系。发现与特定疾病相关的治疗靶点及其证据评分。"
+
+#: ../../getting_started.rst:175 6c6ef3b6a80f49d0a6f3d41c7b115834
+msgid ""
+"Search scientific literature across multiple databases with entity "
+"recognition. Find relevant papers, abstracts, and citations for your "
+"research topics."
+msgstr "在多个数据库中搜索具有实体识别功能的科学文献。为您的研究主题查找相关论文、摘要和引用。"
+
+#: ../../getting_started.rst:193 c1d95e5f8af64b5fbd9efd528323193b
+msgid ""
+"ToolUniverse support the building of complex scientific workflows. For "
+"advanced workflow patterns and tool composition, see "
+":doc:`guide/scientific_workflows`"
+msgstr ""
+"ToolUniverse 支持构建复杂的科学工作流程。有关高级工作流程模式和工具组合，请参阅 "
+":doc:`guide/scientific_workflows`"
+
+#: ../../getting_started.rst:196 4d97a1825f064df59fc38e9efc82b4af
+msgid "MCP Server Integration"
+msgstr "MCP 服务器集成"
+
+#: ../../getting_started.rst:198 f3a3d068a39a4ca7a384c5d7a19c568b
+msgid ""
+"Connect ToolUniverse to AI assistants through the Model Context Protocol "
+"(MCP). This enables AI agents to discover and execute scientific tools "
+"automatically, creating powerful AI-scientist workflows."
+msgstr ""
+"通过模型上下文协议 (MCP) 将 ToolUniverse 连接到 AI 助手。这使 AI 智能体能够自动发现和执行科学工具，创建强大的 "
+"AI-科学家工作流程。"
+
+#: ../../getting_started.rst:225 dba1089bfadf4cc9991de0dc464a0148
+msgid ""
+"For complete MCP server setup, configuration, and integration, see "
+":doc:`guide/mcp_support`"
+msgstr "有关完整的 MCP 服务器设置、配置和集成，请参阅 :doc:`guide/mcp_support`"
+
+#: ../../getting_started.rst:228 cadd09978de64b6b9641ea3fe41f1756
+msgid ""
+"For complete MCP integration with LLMs/Reasoning models/AI Agents like "
+"Claude, ChatGPT, Gemini, and Qwen, see "
+":doc:`guide/building_ai_scientists/index`"
+msgstr ""
+"有关与 Claude、ChatGPT、Gemini 和 Qwen 等 LLM/推理模型/AI 智能体的完整 MCP 集成，请参阅 "
+":doc:`guide/building_ai_scientists/index`"
+
+#: ../../getting_started.rst:231 c09c3cb7cde44671baf34f5c207de4e5
+msgid "ToolUniverse Features"
+msgstr "ToolUniverse 功能特性"
+
+#: ../../getting_started.rst:233 1a633fc67642475994511507c13d92f9
+msgid ""
+"💡 **For Python API documentation**, see the dedicated :doc:`api/modules` "
+"section."
+msgstr "💡 **有关 Python API 文档**，请参阅专门的 :doc:`api/modules` 部分。"
+
+#: ../../getting_started.rst:236 c68f7c35ba8f410490949da4f97b56b6
+msgid "📖 Building AI Scientists"
+msgstr "📖 构建 AI 科学家"
+
+#: ../../getting_started.rst:238 f99b9eadd5844defa999944f7ed3f770
+msgid ""
+"**Building AI Scientists Overview** → "
+":doc:`guide/building_ai_scientists/index` - Transform any LLM into a "
+"powerful research scientist"
+msgstr ""
+"**构建 AI 科学家概述** → :doc:`guide/building_ai_scientists/index` - 将任何 LLM "
+"转化为强大的研究科学家"
+
+#: ../../getting_started.rst:240 c022d9f56f44489096399f68ca79c06d
+msgid ""
+"**Claude Desktop** → :doc:`guide/building_ai_scientists/claude_desktop` -"
+" Integrate ToolUniverse with Claude Desktop App through MCP"
+msgstr ""
+"**Claude Desktop** → :doc:`guide/building_ai_scientists/claude_desktop` -"
+" 通过 MCP 将 ToolUniverse 与 Claude Desktop 应用集成"
+
+#: ../../getting_started.rst:241 b453ec2ee9854bf0b1b20dc179366365
+msgid ""
+"**Claude Code** → :doc:`guide/building_ai_scientists/claude_code` - Build"
+" AI scientists using Claude Code environment"
+msgstr ""
+"**Claude Code** → :doc:`guide/building_ai_scientists/claude_code` - 使用 "
+"Claude Code 环境构建 AI 科学家"
+
+#: ../../getting_started.rst:242 cf71ec91c7f242749d33386337980076
+msgid ""
+"**Gemini CLI** → :doc:`guide/building_ai_scientists/gemini_cli` - "
+"Command-line based scientific research with Gemini CLI"
+msgstr ""
+"**Gemini CLI** → :doc:`guide/building_ai_scientists/gemini_cli` - 基于命令行的 "
+"Gemini CLI 科学研究"
+
+#: ../../getting_started.rst:243 8ec6d3caea1b421097b74a3545087573
+msgid ""
+"**Qwen Code** → :doc:`guide/building_ai_scientists/qwen_code` - AI "
+"scientist integration with Qwen Code environment"
+msgstr ""
+"**Qwen Code** → :doc:`guide/building_ai_scientists/qwen_code` - 与 Qwen "
+"Code 环境的 AI 科学家集成"
+
+#: ../../getting_started.rst:244 10809050283f4a90aba6e0413a846cb5
+msgid ""
+"**Codex CLI** → :doc:`guide/building_ai_scientists/codex_cli` - Terminal-"
+"based AI scientist with Codex CLI"
+msgstr ""
+"**Codex CLI** → :doc:`guide/building_ai_scientists/codex_cli` - 基于终端的 "
+"Codex CLI AI 科学家"
+
+#: ../../getting_started.rst:245 50f18745f9064dec8646660956e6d2fa
+msgid ""
+"**ChatGPT API** → :doc:`guide/building_ai_scientists/chatgpt_api` - "
+"Programmatic scientific research with ChatGPT function calling"
+msgstr ""
+"**ChatGPT API** → :doc:`guide/building_ai_scientists/chatgpt_api` - 使用 "
+"ChatGPT 函数调用的程序化科学研究"
+
+#: ../../getting_started.rst:248 636d230934744c048a16961863f82c84
+msgid "Tools"
+msgstr "工具"
+
+#: ../../getting_started.rst:250 3c0303ce9705481b9e3caedd9a0f2af2
+msgid ""
+"**Tools Configuration Index** → :doc:`tools/tools_config_index` - "
+"Complete index of all available tools"
+msgstr "**工具配置索引** → :doc:`tools/tools_config_index` - 所有可用工具的完整索引"
+
+#: ../../getting_started.rst:251 bb4f037c9be34c7fa6c15a884bd350b3
+msgid ""
+"**Remote Tools Setup** → :doc:`tools/remote_tools` - Setup and "
+"configuration for remote tools"
+msgstr "**远程工具设置** → :doc:`tools/remote_tools` - 远程工具的设置和配置"
+
+#: ../../getting_started.rst:255 9dc8304c38d2423da53fe16493911394
+msgid "📖 Use ToolUniverse"
+msgstr "📖 使用 ToolUniverse"
+
+#: ../../getting_started.rst:257 08c0ebdf60ab4ca3bac195bb81fc9c4e
+msgid ""
+"**Guide Overview** → :doc:`guide/index` - Comprehensive guide to using "
+"ToolUniverse"
+msgstr "**指南概述** → :doc:`guide/index` - 使用 ToolUniverse 的综合指南"
+
+#: ../../getting_started.rst:258 a2227a0ea6ed4bb19d3cf85235c8badf
+msgid ""
+"**Interaction Protocol** → :doc:`guide/interaction_protocol` - AI-Tool "
+"interaction standards and protocols"
+msgstr "**交互协议** → :doc:`guide/interaction_protocol` - AI-工具交互标准和协议"
+
+#: ../../getting_started.rst:259 0251489e4e8f450a9f09dcb65e9ed360
+msgid ""
+"**Loading Tools** → :doc:`guide/loading_tools` - Complete tutorial to "
+"loading tools with Python API and MCP terminal commands"
+msgstr "**加载工具** → :doc:`guide/loading_tools` - 使用 Python API 和 MCP 终端命令加载工具的完整教程"
+
+#: ../../getting_started.rst:260 5eadf3fb4f0b4f52a79c5e6061edadbb
+msgid ""
+"**Listing Tools** → :doc:`guide/listing_tools` - Discover and filter "
+"tools by capability, domain, and IO"
+msgstr "**列出工具** → :doc:`guide/listing_tools` - 按功能、领域和 IO 发现和过滤工具"
+
+#: ../../getting_started.rst:261 707daa296bc4491399131e60c208adaf
+msgid ""
+"**Tool Discovery** → :doc:`tutorials/finding_tools` - Tutorial to "
+"ToolUniverse's three tool finder methods: keyword, LLM, and embedding "
+"search"
+msgstr ""
+"**工具发现** → :doc:`tutorials/finding_tools` - ToolUniverse "
+"三种工具查找方法的教程：关键词、LLM 和嵌入搜索"
+
+#: ../../getting_started.rst:262 b491f7580d004d59ab8101ac2ae68457
+msgid ""
+"**Tool Caller** → :doc:`guide/tool_caller` - Primary execution engine "
+"with dynamic loading, validation, and MCP server integration"
+msgstr "**工具调用器** → :doc:`guide/tool_caller` - 具有动态加载、验证和 MCP 服务器集成的核心执行引擎"
+
+#: ../../getting_started.rst:263 cd3377347cd14073ae3fae8ccc4c0169
+msgid ""
+"**Case Study** → :doc:`tutorials/tooluniverse_case_study` - End-to-end "
+"hypercholesterolemia drug discovery workflow with Gemini 2.5 Pro"
+msgstr ""
+"**案例研究** → :doc:`tutorials/tooluniverse_case_study` - 使用 Gemini 2.5 Pro "
+"的端到端高胆固醇血症药物发现工作流程"
+
+#: ../../getting_started.rst:264 bc7e40f74e7444d2a2b0b1250a88e079
+msgid ""
+"**Agentic Tools** → :doc:`tutorials/agentic_tools_tutorial` - Build and "
+"use AI-powered tools with LLMs for tasks requiring reasoning and "
+"creativity"
+msgstr ""
+"**智能体工具** → :doc:`tutorials/agentic_tools_tutorial` - 使用 LLM 构建和使用 AI "
+"驱动的工具，用于需要推理和创造性的任务"
+
+#: ../../getting_started.rst:265 b868ec1ba29845399fbc04ad0d20eee8
+msgid ""
+"**Tool Composition** → :doc:`guide/tool_composition` - Chain "
+"ToolUniverse's 600+ tools into powerful scientific workflows using Tool "
+"Composer"
+msgstr ""
+"**工具组合** → :doc:`guide/tool_composition` - 使用工具组合器将 ToolUniverse 的 600+ "
+"工具链接成强大的科学工作流程"
+
+#: ../../getting_started.rst:266 ed13e0517e8347898dbd3d11d35f3fa7
+msgid ""
+"**Scientific Workflows** → :doc:`guide/scientific_workflows` - Real-world"
+" research scenarios: drug discovery, safety analysis, literature review"
+msgstr "**科学工作流程** → :doc:`guide/scientific_workflows` - 真实世界的研究场景：药物发现、安全性分析、文献综述"
+
+#: ../../getting_started.rst:267 60f0345cbe1c491f97e43e8fb25aa131
+msgid ""
+"**Expert Feedback** → :doc:`tutorials/expert_feedback` - Human-in-the-"
+"loop consultation platform for AI systems with web interface"
+msgstr "**专家反馈** → :doc:`tutorials/expert_feedback` - 具有网络界面的 AI 系统人工干预咨询平台"
+
+#: ../../getting_started.rst:268 479d3bb489334762928ffbed4493958e
+#, fuzzy
+msgid ""
+"**Embedding Tools** → :doc:`tools/embedding_tools` - Setup and "
+"configuration for embedding storage"
+msgstr "**嵌入存储指南** → :doc:`tool_setup_guides/Embedding_store_guide` - 嵌入存储的设置和配置"
+
+#: ../../getting_started.rst:269 0bb6e71579c04287a5bfd13f0ec73a75
+msgid ""
+"**Hooks System** → :doc:`guide/hooks/index` - Intelligent output "
+"processing with AI-powered hooks"
+msgstr "**钩子系统** → :doc:`guide/hooks/index` - 使用 AI 驱动钩子的智能输出处理"
+
+#: ../../getting_started.rst:271 086e7fbc1dc240caba654a4492f8b937
+msgid ""
+"**SummarizationHook** → :doc:`guide/hooks/summarization_hook` - AI-"
+"powered output summarization"
+msgstr "**摘要钩子** → :doc:`guide/hooks/summarization_hook` - AI 驱动的输出摘要"
+
+#: ../../getting_started.rst:272 835b707202d34afbbd12cfa7e0ff7241
+msgid ""
+"**FileSaveHook** → :doc:`guide/hooks/file_save_hook` - File-based output "
+"processing and archiving"
+msgstr "**文件保存钩子** → :doc:`guide/hooks/file_save_hook` - 基于文件的输出处理和归档"
+
+#: ../../getting_started.rst:273 faa29cb068b247d388e70e9a09273fd2
+msgid ""
+"**Hook Configuration** → :doc:`guide/hooks/hook_configuration` - Advanced"
+" configuration and customization"
+msgstr "**钩子配置** → :doc:`guide/hooks/hook_configuration` - 高级配置和自定义"
+
+#: ../../getting_started.rst:274 8159e1dd2c16468383282508bd9411ce
+msgid ""
+"**Server & Stdio Hooks** → :doc:`guide/hooks/server_stdio_hooks` - Using "
+"hooks with server and stdio interfaces"
+msgstr ""
+"**服务器和标准 IO 钩子** → :doc:`guide/hooks/server_stdio_hooks` - 在服务器和标准 IO "
+"接口中使用钩子"
+
+#: ../../getting_started.rst:277 5368db6c5d244ff8ba1bb5e2c0a13678
+msgid "🛠️ Expand ToolUniverse"
+msgstr "🛠️ 扩展 ToolUniverse"
+
+#: ../../getting_started.rst:279 47119dcec2e04076a984671466296d87
+msgid ""
+"**Tool Development Overview** → :doc:`expand_tooluniverse/index` - Learn "
+"how to extend ToolUniverse with your own custom tools"
+msgstr "**工具开发概述** → :doc:`expand_tooluniverse/index` - 了解如何使用自定义工具扩展 ToolUniverse"
+
+#: ../../getting_started.rst:280 1b4f1eb1a6664aaf83669915c78047aa
+msgid ""
+"**Architecture Overview** → :doc:`expand_tooluniverse/architecture` - "
+"ToolUniverse's code architecture and extension points"
+msgstr ""
+"**架构概览** → :doc:`expand_tooluniverse/architecture` - ToolUniverse "
+"的代码架构与扩展点"
+
+#: ../../getting_started.rst:281 854cbcb320f6439ca8de7b5626d67030
+msgid ""
+"**Local Tool Registration** → "
+":doc:`expand_tooluniverse/local_tool_registration` - Create tools that "
+"run within ToolUniverse"
+msgstr ""
+"**本地工具注册** → :doc:`expand_tooluniverse/local_tool_registration` - "
+"创建在ToolUniverse中运行的工具"
+
+#: ../../getting_started.rst:282 b859602b71394877b1dd6b49f7bc9123
+msgid ""
+"**Remote Tool Registration** → "
+":doc:`expand_tooluniverse/remote_tool_registration` - Integrate external "
+"services and APIs"
+msgstr ""
+"**远程工具注册** → :doc:`expand_tooluniverse/remote_tool_registration` - "
+"集成外部服务和 API"
+
+#: ../../getting_started.rst:283 92f5a4bb70294619829185f4b8706f65
+#, fuzzy
+msgid ""
+"**Contributing Tools** → :doc:`expand_tooluniverse/index` - Submit your "
+"custom tools to the ToolUniverse repository"
+msgstr ""
+"**贡献工具** → :doc:`expand_tooluniverse/contributing_tools` - 将您的自定义工具提交到 "
+"ToolUniverse 仓库"
+
+#: ../../getting_started.rst:284 5dc6f90e9c7a429191b28a9559acb4cd
+msgid ""
+"**Deployment** → :doc:`deployment` - Deployment guide for production "
+"environments"
+msgstr "**部署** → :doc:`deployment` - 生产环境部署指南"
+
+#: ../../getting_started.rst:285 1ae765cfc20448f2a601102280504f4e
+msgid ""
+"**Contributing** → :doc:`contributing` - How to contribute to "
+"ToolUniverse development"
+msgstr "**贡献** → :doc:`contributing` - 如何为 ToolUniverse 的开发做出贡献"
+
+#: ../../getting_started.rst:288 e725ade3b04b410282af9e1d69658ecc
+msgid "📚 API & Reference"
+msgstr "📚 API 和参考"
+
+#: ../../getting_started.rst:290 2a210878578548d7af6c8ee4422b02b5
+msgid ""
+"**API Modules** → :doc:`api/modules` - Complete API reference "
+"documentation"
+msgstr "**API 模块** → :doc:`api/modules` - 完整的 API 参考文档"
+
+#: ../../getting_started.rst:291 fc2b3e9cb6cf4ce5a84186b629fee8c9
+msgid ""
+"**Reference Index** → :doc:`reference/index` - Reference documentation "
+"and specifications"
+msgstr "**参考索引** → :doc:`reference/index` - 参考文档与规范"
+
+#: ../../getting_started.rst:292 aa92f4d912bd473f9d2a0215725874fe
+msgid ""
+"**Help & Support** → :doc:`help/index` - Help resources and "
+"troubleshooting guides"
+msgstr "**帮助与支持** → :doc:`help/index` - 帮助资源和故障排除指南"
+
+#: ../../getting_started.rst:295 f77990a36f3548c4b6a0ba63622e746a
+msgid "For complete tool reference and capabilities, see :doc:`guide/tools`"
+msgstr "有关完整的工具参考和功能，请参阅 :doc:`guide/tools`"
+

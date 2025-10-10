@@ -12,7 +12,7 @@ API Reference
 ~~~~~~~~~~~~~
 
 .. note::
-   **For complete Python API documentation**, see :doc:`../api_quick_reference` for commonly used classes and methods, or :doc:`../api_comprehensive` for full API reference.
+   **For complete Python API documentation**, see :doc:`api_quick_reference` for commonly used classes and methods, or :doc:`api_comprehensive` for full API reference.
 
 .. autofunction:: tooluniverse.execute_function.ToolUniverse.list_built_in_tools
    :noindex:

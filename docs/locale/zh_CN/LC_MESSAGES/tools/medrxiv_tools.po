@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:40-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/medrxiv_tools.rst:2 d620e34ecd564924a13948bc11b7ceb3
+msgid "Medrxiv Tools"
+msgstr "Medrxiv 工具"
+
+#: ../../tools/medrxiv_tools.rst:4 ec22f406ecb74e3a85b88402bbcebfeb
+msgid ""
+"**Configuration File**: ``medrxiv_tools.json`` **Tool Type**: Local **Tools "
+"Count**: 1"
+msgstr ""
+"**配置文件**：``medrxiv_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：1"
+
+#: ../../tools/medrxiv_tools.rst:8 a5ba2798f3af4ec798d6e9b64ff3c0b1
+msgid ""
+"This page contains all tools defined in the ``medrxiv_tools.json`` "
+"configuration file."
+msgstr "此页面包含 ``medrxiv_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/medrxiv_tools.rst:11 c6794a0cf3b74408831f5dd6cdf11c8e
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/medrxiv_tools.rst:14 6d1f148b3cc14e279eaf0a9e0e248c38
+msgid "**MedRxiv_search_preprints** (Type: MedRxivTool)"
+msgstr "**MedRxiv_search_preprints**（类型：MedRxiv工具）"
+
+#: ../../tools/medrxiv_tools.rst:16 5594e32cc117451b89dad4eab23500b6
+msgid ""
+"Search medRxiv preprints using the public medRxiv API. Returns preprints "
+"with title, authors, yea..."
+msgstr "使用公共 medRxiv API 搜索 medRxiv 预印本。返回包含标题、作者、年份的预印本信息..."
+
+#: ../../tools/medrxiv_tools.rst 0de2c42c91ed40a8899433d328fc2ea8
+msgid "MedRxiv_search_preprints tool specification"
+msgstr "MedRxiv_search_preprints 工具规格说明"
+
+#: ../../tools/medrxiv_tools.rst:20 c66a378a4b034a948c767e2cb361d067
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/medrxiv_tools.rst:22 355ffbc617bd4ff3a75e80461ed580c6
+msgid "**Name**: ``MedRxiv_search_preprints``"
+msgstr "**名称**：``MedRxiv_search_preprints``"
+
+#: ../../tools/medrxiv_tools.rst:23 333e2bb13a05400f96a2f561365da95f
+msgid "**Type**: ``MedRxivTool``"
+msgstr "**类型**：``MedRxivTool``"
+
+#: ../../tools/medrxiv_tools.rst:24 3202517304f74c7f890829bd546a3410
+msgid ""
+"**Description**: Search medRxiv preprints using the public medRxiv API. "
+"Returns preprints with title, authors, year, DOI, and URL."
+msgstr "**描述**：使用公共 medRxiv API 搜索 medRxiv 预印本。返回包含标题、作者、年份、DOI 及 URL 的预印本信息。"
+
+#: ../../tools/medrxiv_tools.rst:26 05b7de23a80a40e2b8b7bbd7736851e1
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/medrxiv_tools.rst:28 71cebc7cfb1a47e1961ed22838172e29
+msgid ""
+"``query`` (string) (required) Search query for medRxiv preprints. Use "
+"keywords separated by spaces to refine your search."
+msgstr "``query``（字符串）（必填）用于搜索medRxiv预印本的查询词。使用空格分隔的关键词以细化搜索。"
+
+#: ../../tools/medrxiv_tools.rst:31 1071e4aef25848e18109057d927a52f7
+msgid ""
+"``max_results`` (integer) (optional) Maximum number of preprints to return. "
+"Default is 10, maximum is 200."
+msgstr "``max_results``（整数）（可选）返回的预印本最大数量。默认值为10，最大值为200。"
+
+#: ../../tools/medrxiv_tools.rst:34 de74cd37dc0743d3b51c50d692c6a0f9
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/medrxiv_tools.rst:48 9057fb50a2ee46138e31e77dbd837059
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/medrxiv_tools.rst:50 00d556129d6c42549c3af994eb5ae77a
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/medrxiv_tools.rst:51 960489bf201f4b32b747eb20ce0e35c6
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

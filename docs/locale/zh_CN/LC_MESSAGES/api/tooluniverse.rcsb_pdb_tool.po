@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.rcsb_pdb_tool.rst:2 e8dddd0df6904c72b15aeffdd8019663
+msgid "tooluniverse.rcsb\\_pdb\\_tool module"
+msgstr "tooluniverse.rcsb_pdb_tool 模块"
+
+#: 93017e8ec50b4482862d0fe8c8c7ba91 of tooluniverse.rcsb_pdb_tool.RCSBTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 64778264f9c94b4895197e175a56175c of
+#: tooluniverse.rcsb_pdb_tool.RCSBTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: ef5cf163e4284e83869cf8dcaafc9db1 of
+#: tooluniverse.rcsb_pdb_tool.RCSBTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现所期望的输入字典。"

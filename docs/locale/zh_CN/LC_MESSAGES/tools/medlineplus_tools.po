@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/medlineplus_tools.rst:2 ecf159cc9abc482e990376ca2e3fa129
+msgid "Medlineplus Tools"
+msgstr "Medlineplus 工具"
+
+#: ../../tools/medlineplus_tools.rst:4 9728b9878dc14cbb9a6d28cf9a812b80
+msgid ""
+"**Configuration File**: ``medlineplus_tools.json`` **Tool Type**: Local "
+"**Tools Count**: 5"
+msgstr ""
+"**配置文件**：``medlineplus_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：5"
+
+#: ../../tools/medlineplus_tools.rst:8 86226c6310a74c898c703b3a20f1ea01
+msgid ""
+"This page contains all tools defined in the ``medlineplus_tools.json`` "
+"configuration file."
+msgstr "此页面包含在 ``medlineplus_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/medlineplus_tools.rst:11 222aef81a0fe48a48f23afb1e49136e8
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/medlineplus_tools.rst:14 607d7221eec84bdca6e6a2851a14ad6d
+msgid "**MedlinePlus_connect_lookup_by_code** (Type: MedlinePlusRESTTool)"
+msgstr "**MedlinePlus_connect_lookup_by_code**（类型：MedlinePlusRESTTool）"
+
+#: ../../tools/medlineplus_tools.rst:16 16ba0deda41d42e2b1b4263657a4e7d3
+msgid ""
+"Look up corresponding MedlinePlus page information through MedlinePlus "
+"Connect Web Service using ..."
+msgstr "通过 MedlinePlus Connect 网络服务查找对应的 MedlinePlus 页面信息，使用..."
+
+#: ../../tools/medlineplus_tools.rst e9466f701759402986b38e13aa4c5390
+msgid "MedlinePlus_connect_lookup_by_code tool specification"
+msgstr "MedlinePlus_connect_lookup_by_code 工具规范"
+
+#: ../../tools/medlineplus_tools.rst:20 ../../tools/medlineplus_tools.rst:64
+#: ../../tools/medlineplus_tools.rst:98 ../../tools/medlineplus_tools.rst:132
+#: ../../tools/medlineplus_tools.rst:161 21e2e466f44e40158739b330447b8b51
+#: 3f0187aafa6648748b66bdfdcff356ca 82503a566ec34e01aa460f26e2299c1e
+#: cefc25c4e295464db3022fbca216b908 eda61c79cd744b8b806a2b0bb2e1f654
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/medlineplus_tools.rst:22 943a6a96d5db4ac8ac442ebaa513ab70
+msgid "**Name**: ``MedlinePlus_connect_lookup_by_code``"
+msgstr "**名称**：``MedlinePlus_connect_lookup_by_code``"
+
+#: ../../tools/medlineplus_tools.rst:23 ../../tools/medlineplus_tools.rst:67
+#: ../../tools/medlineplus_tools.rst:101 ../../tools/medlineplus_tools.rst:135
+#: ../../tools/medlineplus_tools.rst:164 94ce645d736b4063b11b852d30084e5e
+#: b2032e845c574eac816332e7e8eb97eb cd5c463e81fe4795828e41100c24d207
+#: dfb37c62ff46491188184d66c9d9cddd f7803e8067e84fdcb58054802000f284
+msgid "**Type**: ``MedlinePlusRESTTool``"
+msgstr "**类型**：``MedlinePlusRESTTool``"
+
+#: ../../tools/medlineplus_tools.rst:24 b375498cb87746bba54397f66dc8752c
+msgid ""
+"**Description**: Look up corresponding MedlinePlus page information through "
+"MedlinePlus Connect Web Service using clinical/drug/test codes (such as "
+"ICD-10 CM, RXCUI, LOINC, etc.), supports JSON or XML format return."
+msgstr ""
+"**描述**：通过 MedlinePlus Connect Web 服务使用临床/药物/测试代码（如 ICD-10 CM、RXCUI、LOINC "
+"等）查询对应的 MedlinePlus 页面信息，支持 JSON 或 XML 格式返回。"
+
+#: ../../tools/medlineplus_tools.rst:26 ../../tools/medlineplus_tools.rst:70
+#: ../../tools/medlineplus_tools.rst:104 ../../tools/medlineplus_tools.rst:138
+#: ../../tools/medlineplus_tools.rst:167 275f8c7f66c74b7c870dd54e83651fd6
+#: 42c82cf8a29f446684a89ef29ef8960a 73545eeffd26498c868255aef8bc6780
+#: b525c84a7d8c44a29109c7317139d5e8 e3a8da7cf6334fe787928efb714ad7a8
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/medlineplus_tools.rst:28 077e0642d915492e948af55b871bd3f0
+msgid ""
+"``cs`` (string) (required) Code system OID, e.g., ICD-10 "
+"CM=2.16.840.1.113883.6.90, RXCUI=2.16.840.1.113883.6.88, "
+"LOINC=2.16.840.1.113883.6.1, etc."
+msgstr ""
+"``cs``（字符串）（必填）代码系统OID，例如：ICD-10 "
+"CM=2.16.840.1.113883.6.90，RXCUI=2.16.840.1.113883.6.88，LOINC=2.16.840.1.113883.6.1，等等。"
+
+#: ../../tools/medlineplus_tools.rst:31 1be99e1d787e43bf8da018c8482a1beb
+msgid ""
+"``c`` (string) (required) Specific code value to query, e.g., \"E11.9\" "
+"(ICD-10 CM) or \"637188\" (RXCUI)."
+msgstr "``c``（字符串）（必填）要查询的特定代码值，例如“E11.9”（ICD-10 CM）或“637188”（RXCUI）。"
+
+#: ../../tools/medlineplus_tools.rst:34 f3110d50c52a43b7ad847545d3f41316
+msgid ""
+"``dn`` (string) (optional) Optional, descriptive name (English) "
+"corresponding to the code, for drugs can fill in \"Chantix 0.5 MG Oral "
+"Tablet\", can improve matching accuracy."
+msgstr ""
+"`dn`（字符串）（可选）可选项，对应代码的描述性名称（英文）。对于药物，可以填写“Chantix 0.5 MG 口服片剂”，可提高匹配准确性。"
+
+#: ../../tools/medlineplus_tools.rst:37 3619d5312a254501835a047d74ef2212
+msgid ""
+"``language`` (string) (optional) Return information language, \"en\" for "
+"English, \"es\" for Spanish, default \"en\"."
+msgstr "``language``（字符串）（可选）返回信息的语言，“en”表示英语，“es”表示西班牙语，默认值为“en”。"
+
+#: ../../tools/medlineplus_tools.rst:40 ../../tools/medlineplus_tools.rst:75
+#: ../../tools/medlineplus_tools.rst:109 37a1002f30e347f68f0612ce5514cc89
+#: 5ff02ad2cf4a45038b913674029aeb4c d1b2c8c8bc4745ecb5741c07190e5246
+msgid ""
+"``format`` (string) (optional) Return format, options \"json\" or \"xml\", "
+"default \"json\"."
+msgstr "``format``（字符串）（可选）返回格式，可选项为 \"json\" 或 \"xml\"，默认值为 \"json\"。"
+
+#: ../../tools/medlineplus_tools.rst:43 ../../tools/medlineplus_tools.rst:78
+#: ../../tools/medlineplus_tools.rst:112 ../../tools/medlineplus_tools.rst:142
+#: ../../tools/medlineplus_tools.rst:178 4526c70171ef46e68a9c2f94375d8d43
+#: 4b494b58769c4d2e8e702e40b53e9488 56f493d9afe84c26967cf3fa4d43f426
+#: 861d2ede1da945c6a7fb3336b92e9bcd f56cc10bb94843d1ae293d5803c8cb9c
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/medlineplus_tools.rst:58 21562fb6004149e5bab99eee3b7a0437
+msgid ""
+"**MedlinePlus_get_genetics_condition_by_name** (Type: MedlinePlusRESTTool)"
+msgstr ""
+"**MedlinePlus_get_genetics_condition_by_name**（类型：MedlinePlusRESTTool）"
+
+#: ../../tools/medlineplus_tools.rst:60 3a16dc9f0cce409e81689af47d7caf00
+msgid ""
+"Get detailed information from MedlinePlus Genetics corresponding to genetic "
+"condition name, suppo..."
+msgstr "从 MedlinePlus Genetics 获取与遗传疾病名称相关的详细信息，支持..."
+
+#: ../../tools/medlineplus_tools.rst 82ca8fb012994bd2825fc5689a79aecd
+msgid "MedlinePlus_get_genetics_condition_by_name tool specification"
+msgstr "MedlinePlus_get_genetics_condition_by_name 工具规范"
+
+#: ../../tools/medlineplus_tools.rst:66 a5d2bf2de5ab413da6ab24f72555f0c0
+msgid "**Name**: ``MedlinePlus_get_genetics_condition_by_name``"
+msgstr "**名称**: ``MedlinePlus_get_genetics_condition_by_name``"
+
+#: ../../tools/medlineplus_tools.rst:68 602be1db78e64403854f91a69ef19993
+msgid ""
+"**Description**: Get detailed information from MedlinePlus Genetics "
+"corresponding to genetic condition name, supports JSON or XML format return."
+msgstr "**描述**：从 MedlinePlus Genetics 获取与遗传疾病名称对应的详细信息，支持 JSON 或 XML 格式的返回。"
+
+#: ../../tools/medlineplus_tools.rst:72 40a903f0af794f07b65d8a3e6d9a2785
+msgid ""
+"``condition`` (string) (required) URL slug of genetic condition, e.g., "
+"\"alzheimer-disease\", must match MedlinePlus page path."
+msgstr ""
+"``condition``（字符串）（必填项）遗传疾病的 URL 标识，例如 “alzheimer-disease”，必须与 MedlinePlus "
+"页面路径一致。"
+
+#: ../../tools/medlineplus_tools.rst:92 245208fa446c4e81840467b6f227aedd
+msgid "**MedlinePlus_get_genetics_gene_by_name** (Type: MedlinePlusRESTTool)"
+msgstr "**MedlinePlus_get_genetics_gene_by_name**（类型：MedlinePlusRESTTool）"
+
+#: ../../tools/medlineplus_tools.rst:94 6341f0f5d05e4e3d9f00768435dbe58f
+msgid ""
+"Get detailed information from MedlinePlus Genetics corresponding to gene "
+"name, supports JSON or X..."
+msgstr "从 MedlinePlus Genetics 获取与基因名称对应的详细信息，支持 JSON 或 X..."
+
+#: ../../tools/medlineplus_tools.rst d61d1d95993646bfb37e7d0797d65e90
+msgid "MedlinePlus_get_genetics_gene_by_name tool specification"
+msgstr "MedlinePlus_get_genetics_gene_by_name 工具规范"
+
+#: ../../tools/medlineplus_tools.rst:100 4a6aa21dd57840d9b9f2c78e7b9d46d8
+msgid "**Name**: ``MedlinePlus_get_genetics_gene_by_name``"
+msgstr "**名称**: ``MedlinePlus_get_genetics_gene_by_name``"
+
+#: ../../tools/medlineplus_tools.rst:102 160a4cc1fe09405981e08a22facaf5c9
+msgid ""
+"**Description**: Get detailed information from MedlinePlus Genetics "
+"corresponding to gene name, supports JSON or XML format return."
+msgstr "**描述**：获取与基因名称对应的 MedlinePlus Genetics 详细信息，支持 JSON 或 XML 格式返回。"
+
+#: ../../tools/medlineplus_tools.rst:106 5bb6da47dd5f4a1a8159424cc9a57f3d
+msgid ""
+"``gene`` (string) (required) URL slug of gene name, e.g., \"BRCA1\", must "
+"match MedlinePlus page path."
+msgstr "``gene``（字符串）（必填）基因名称的URL标识，例如 \"BRCA1\"，必须与MedlinePlus页面路径匹配。"
+
+#: ../../tools/medlineplus_tools.rst:126 4468e57aec45469a9ad8d4622d71eb0f
+msgid "**MedlinePlus_get_genetics_index** (Type: MedlinePlusRESTTool)"
+msgstr "**MedlinePlus_get_genetics_index**（类型：MedlinePlusRESTTool）"
+
+#: ../../tools/medlineplus_tools.rst:128 2aa32b27a45f4a54b6f5c7e04c3732af
+msgid ""
+"Download index file (XML) of all genetics entries in MedlinePlus, get "
+"complete list in one call."
+msgstr "下载MedlinePlus中所有遗传学条目的索引文件（XML），一次调用获取完整列表。"
+
+#: ../../tools/medlineplus_tools.rst 7c6c6429b94c4f26bdcd14a98cc1a6f9
+msgid "MedlinePlus_get_genetics_index tool specification"
+msgstr "MedlinePlus_get_genetics_index 工具规格说明"
+
+#: ../../tools/medlineplus_tools.rst:134 7918b246e2a647fcbe4504007f4514e3
+msgid "**Name**: ``MedlinePlus_get_genetics_index``"
+msgstr "**名称**：``MedlinePlus_get_genetics_index``"
+
+#: ../../tools/medlineplus_tools.rst:136 5ac15e49a54d4539bee1579b8c3c6d5e
+msgid ""
+"**Description**: Download index file (XML) of all genetics entries in "
+"MedlinePlus, get complete list in one call."
+msgstr "**描述**：下载MedlinePlus中所有遗传学条目的索引文件（XML），一次调用即可获取完整列表。"
+
+#: ../../tools/medlineplus_tools.rst:140 7d56a0f872ff4f2bb84723ba597a83c0
+msgid "No parameters required."
+msgstr "无需参数。"
+
+#: ../../tools/medlineplus_tools.rst:155 3626ae91704141d89921ca0155aff5e2
+msgid "**MedlinePlus_search_topics_by_keyword** (Type: MedlinePlusRESTTool)"
+msgstr "**MedlinePlus_按关键词搜索主题**（类型：MedlinePlusRESTTool）"
+
+#: ../../tools/medlineplus_tools.rst:157 578e69a6f437499c8859981953326051
+msgid ""
+"Search for relevant information in MedlinePlus Web Service by keyword across"
+" health topics or oth..."
+msgstr "通过关键词在 MedlinePlus Web 服务中搜索健康主题或其他相关信息"
+
+#: ../../tools/medlineplus_tools.rst 83a26ac404f549e6aaa40e080ba5278c
+msgid "MedlinePlus_search_topics_by_keyword tool specification"
+msgstr "MedlinePlus_按关键词搜索主题 工具规格说明"
+
+#: ../../tools/medlineplus_tools.rst:163 5087da583337459babf6ccb3944167e9
+msgid "**Name**: ``MedlinePlus_search_topics_by_keyword``"
+msgstr "**名称**：``MedlinePlus_search_topics_by_keyword``"
+
+#: ../../tools/medlineplus_tools.rst:165 001904cf1fc44d3881ff32f18cc3e6a4
+msgid ""
+"**Description**: Search for relevant information in MedlinePlus Web Service "
+"by keyword across health topics or other sub-libraries (such as drugs, "
+"genetics, etc.)."
+msgstr "**描述**：通过关键词在MedlinePlus网络服务中搜索相关信息，涵盖健康主题或其他子库（如药物、遗传学等）。"
+
+#: ../../tools/medlineplus_tools.rst:169 36f38c748989410bb469ca3521c6ae7d
+msgid ""
+"``term`` (string) (required) Search keyword, e.g., \"diabetes\", needs to be"
+" URL encoded before passing."
+msgstr "``term``（字符串）（必填）搜索关键词，例如“diabetes”，传递前需进行URL编码。"
+
+#: ../../tools/medlineplus_tools.rst:172 290d3eb241204bed951b3510c8593d66
+msgid ""
+"``db`` (string) (required) Specify the database to search, e.g., "
+"healthTopics (English health topics), healthTopicsSpanish (Spanish health "
+"topics), drugs (English drugs), etc."
+msgstr ""
+"``db``（字符串）（必填）指定要搜索的数据库，例如 "
+"healthTopics（英文健康主题）、healthTopicsSpanish（西班牙文健康主题）、drugs（英文药物）等。"
+
+#: ../../tools/medlineplus_tools.rst:175 0defe02e39a545e3ab229ebf6f474323
+msgid ""
+"``rettype`` (string) (optional) Result return format, options: brief "
+"(concise information, default), topic (detailed XML record), all (includes "
+"all available information)."
+msgstr ""
+"``rettype``（字符串）（可选）结果返回格式，选项包括：brief（简洁信息，默认）、topic（详细的 XML "
+"记录）、all（包含所有可用信息）。"
+
+#: ../../tools/medlineplus_tools.rst:193 1198dd3f8768472797579c35932cf48f
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/medlineplus_tools.rst:195 649a9baaa0064592bbd37e58920bfa03
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/medlineplus_tools.rst:196 4ca41d0dc9d541578e67676be82c8adf
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

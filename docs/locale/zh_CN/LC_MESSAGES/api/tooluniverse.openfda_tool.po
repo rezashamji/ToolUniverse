@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.openfda_tool.rst:2 baf9b78963964f0ba2c56a9252dc0e06
+msgid "tooluniverse.openfda\\_tool module"
+msgstr "tooluniverse.openfda_tool 模块"
+
+#: 9c2c0b1acdae4f8698b91699d53bd8d9 of
+#: tooluniverse.openfda_tool.extract_nested_fields:1
+msgid "Recursively extracts nested fields from a list of dictionaries."
+msgstr "递归提取字典列表中的嵌套字段。"
+
+#: ../../api/tooluniverse.openfda_tool.rst 65cd1e871a104e9989679200bce1b54a
+#: 6b095afd87d84de0887f88c2f0d0d3e8
+msgid "Parameters"
+msgstr "参数"
+
+#: e460abea1dfd4ac2bc95da26766853f1 of
+#: tooluniverse.openfda_tool.extract_nested_fields:3
+msgid "List of dictionaries from which to extract fields"
+msgstr "用于提取字段的字典列表"
+
+#: 75825725f9254a898f88bf2a641c1a21 of
+#: tooluniverse.openfda_tool.extract_nested_fields:4
+msgid ""
+"List of nested fields to extract, each specified with dot notation (e.g., "
+"'openfda.brand_name')"
+msgstr "要提取的嵌套字段列表，每个字段均以点表示法指定（例如，'openfda.brand_name'）"
+
+#: ../../api/tooluniverse.openfda_tool.rst d088a818f8ab4489a0df9e9d925cc43d
+#: fc8fbe19b0bd4abb9ce3a94d6fb5f534
+msgid "Returns"
+msgstr "返回值"
+
+#: 79308b6c3c4d4f9eabfb55b8b4263746 of
+#: tooluniverse.openfda_tool.extract_nested_fields:6
+msgid "List of dictionaries containing only the specified fields"
+msgstr "仅包含指定字段的字典列表"
+
+#: dbbb936e4c7846b4aaf15bce713f755c of
+#: tooluniverse.openfda_tool.map_properties_to_openfda_fields:1
+msgid ""
+"Maps the provided arguments to the corresponding openFDA fields based on the"
+" search_fields mapping."
+msgstr "根据 search_fields 映射，将提供的参数映射到相应的 openFDA 字段。"
+
+#: 7bd340125bec44f38071fc87364ce88f of
+#: tooluniverse.openfda_tool.map_properties_to_openfda_fields:3
+msgid "The input arguments containing property names and values."
+msgstr "包含属性名称和值的输入参数。"
+
+#: 741dec970fb6402783ecc295d3ca458e of
+#: tooluniverse.openfda_tool.map_properties_to_openfda_fields:4
+msgid "The mapping of property names to openFDA fields."
+msgstr "属性名称与 openFDA 字段的映射。"
+
+#: 50049c75520141bc883f62e92773a5ab of
+#: tooluniverse.openfda_tool.map_properties_to_openfda_fields:6
+msgid "A dictionary with openFDA fields and corresponding values."
+msgstr "一个包含openFDA字段及其对应值的字典。"
+
+#: ced4ff92a99b4734b08f4e4e04575401 of
+#: tooluniverse.openfda_tool.extract_sentences_with_keywords:1
+msgid ""
+"Extracts sentences containing any of the specified keywords from the text."
+msgstr "从文本中提取包含任何指定关键词的句子。"
+
+#: 682cfaec02664779b6b1cf370ff39bd5 of
+#: tooluniverse.openfda_tool.extract_sentences_with_keywords:3
+msgid ""
+"Parameters: - text (str): The input text from which to extract sentences. - "
+"keywords (list): A list of keywords to search for in the text."
+msgstr ""
+"参数：  \n"
+"- text (str)：输入的文本，用于提取句子。  \n"
+"- keywords (list)：在文本中搜索的关键词列表。"
+
+#: 768976d3fff44bdc9a1c4e04cf1d3c6b of
+#: tooluniverse.openfda_tool.extract_sentences_with_keywords:7
+msgid "Returns: - list: A list of sentences containing any of the keywords."
+msgstr ""
+"返回值：  \n"
+"- list：包含任意关键词的句子列表。"
+
+#: 45dfb4d896bc4e1bb98bb8f596a052db of tooluniverse.openfda_tool.FDATool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 55051c0265e543898677ae497bf7fa76 56f7a982a1e24b3582682a01238a51ba
+#: a34b26eb670c4aef848e94dd3a59d938 cfa43737285d49f6891c4aaad062ad6b of
+#: tooluniverse.openfda_tool.FDADrugLabelGetDrugGenericNameTool.run:1
+#: tooluniverse.openfda_tool.FDADrugLabelSearchIDTool.run:1
+#: tooluniverse.openfda_tool.FDADrugLabelSearchTool.run:1
+#: tooluniverse.openfda_tool.FDATool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 30841a7ce74940229fae3b48c0c61338 309bbdeb72214f71b9e55bbc24f2fed2
+#: 9c0e1a211fa644d1aa0567803b4311a5 e5b6b3ac43bb429e9e50a4c4e1284649 of
+#: tooluniverse.openfda_tool.FDADrugLabelGetDrugGenericNameTool.run:3
+#: tooluniverse.openfda_tool.FDADrugLabelSearchIDTool.run:3
+#: tooluniverse.openfda_tool.FDADrugLabelSearchTool.run:3
+#: tooluniverse.openfda_tool.FDATool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以便与大多数具体工具实现保持一致，这些工具通常期望输入为一个字典。"
+
+#: a4a06f030dec46cca01a2cbea0da8eaa f2aad7dd85904cc1980fce9afbf1d2ef
+#: f5b474ae16bf41a6a7b2b7bc801ae569 of
+#: tooluniverse.openfda_tool.FDADrugLabelSearchIDTool:1
+#: tooluniverse.openfda_tool.FDADrugLabelSearchTool:1
+#: tooluniverse.openfda_tool.FDADrugLabelTool:1
+msgid "Bases: :py:class:`~tooluniverse.openfda_tool.FDATool`"
+msgstr "基础类：:py:class:`~tooluniverse.openfda_tool.FDATool`"
+
+#: e8d75824a5b34d0f8b207da85ea3c1be of
+#: tooluniverse.openfda_tool.FDADrugLabelGetDrugGenericNameTool:1
+msgid "Bases: :py:class:`~tooluniverse.openfda_tool.FDADrugLabelTool`"
+msgstr "基类：:py:class:`~tooluniverse.openfda_tool.FDADrugLabelTool`"

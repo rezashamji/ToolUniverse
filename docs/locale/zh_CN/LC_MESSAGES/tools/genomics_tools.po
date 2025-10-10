@@ -1,0 +1,678 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/genomics_tools.rst:2 1ce2f2e916ec4c19a7aedb857764962d
+msgid "Genomics Tools"
+msgstr "基因组学工具"
+
+#: ../../tools/genomics_tools.rst:4 2cace60667974fc48c6d797fe7a9ff32
+msgid ""
+"**Configuration File**: ``packages/genomics_tools.json`` **Tool Type**: "
+"Local **Tools Count**: 20"
+msgstr ""
+"**配置文件**：``packages/genomics_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：20"
+
+#: ../../tools/genomics_tools.rst:8 aae9eaffe03a48f49c89e05fdc3591f0
+msgid ""
+"This page contains all tools defined in the ``genomics_tools.json`` "
+"configuration file."
+msgstr "本页面包含 ``genomics_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/genomics_tools.rst:11 0714ac1b875349d4bc4a7ab5ae6c2808
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/genomics_tools.rst:14 ea57c26a353740a8b1f832dfc12b9725
+msgid "**get_arboreto_info** (Type: PackageTool)"
+msgstr "**get_arboreto_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:16 cfe91031295f49d294f4db46cc064784
+msgid ""
+"Get comprehensive information about Arboreto – gene regulatory network "
+"inference"
+msgstr "获取有关 Arboreto —— 基因调控网络推断的全面信息"
+
+#: ../../tools/genomics_tools.rst d85e1525b4834604824603316b7d8626
+msgid "get_arboreto_info tool specification"
+msgstr "get_arboreto_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:20 ../../tools/genomics_tools.rst:51
+#: ../../tools/genomics_tools.rst:82 ../../tools/genomics_tools.rst:113
+#: ../../tools/genomics_tools.rst:143 ../../tools/genomics_tools.rst:174
+#: ../../tools/genomics_tools.rst:204 ../../tools/genomics_tools.rst:235
+#: ../../tools/genomics_tools.rst:264 ../../tools/genomics_tools.rst:293
+#: ../../tools/genomics_tools.rst:323 ../../tools/genomics_tools.rst:354
+#: ../../tools/genomics_tools.rst:383 ../../tools/genomics_tools.rst:413
+#: ../../tools/genomics_tools.rst:442 ../../tools/genomics_tools.rst:472
+#: ../../tools/genomics_tools.rst:502 ../../tools/genomics_tools.rst:532
+#: ../../tools/genomics_tools.rst:561 ../../tools/genomics_tools.rst:591
+#: 079d0813e0f049a49e2d43e0bc75f0e6 1ab7840a5d8349578fe5ef652c7eadc4
+#: 1d97e3f469bf4568867b5fd872cf3d35 1e7a90341193471880f6d7f70cf1141f
+#: 25bc6496b37a464aaee1582c129722cc 2a6f2fb30d8148d68db2f10cde57f90a
+#: 3cc71b7a440e4db0b02ff95f4eb4d98b 59d27f6bfa554ab58a4db3f499ed91fd
+#: 63929ec95fc1432698a9696e2d24c895 826c3a784008449f864a5db3809d58ac
+#: 9b6eb7d15f6b45ddacd19c4263587b5f 9d61a5e56b1e4de6ab58a65d866df810
+#: 9de81577119644888aaf241c37cd8c02 a210700f4c9d4cd7bf30c40ec6be6cec
+#: a37a46f421db4c03997f059de7db3489 bf146ac860b24dc78b5090d71580ec0f
+#: c0cf7c42c62c456f84e58993a3a9bccc cd65cd0b21f24bd3b29f3c75485a9e5c
+#: d82aa56a4bfd4825b4c743ea739754ea f59c301882ae49ddba9dc4a73f4ee318
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/genomics_tools.rst:22 3b048744e1a145b49eac9b3235ba73df
+msgid "**Name**: ``get_arboreto_info``"
+msgstr "**名称**：``get_arboreto_info``"
+
+#: ../../tools/genomics_tools.rst:23 ../../tools/genomics_tools.rst:54
+#: ../../tools/genomics_tools.rst:85 ../../tools/genomics_tools.rst:116
+#: ../../tools/genomics_tools.rst:146 ../../tools/genomics_tools.rst:177
+#: ../../tools/genomics_tools.rst:207 ../../tools/genomics_tools.rst:238
+#: ../../tools/genomics_tools.rst:267 ../../tools/genomics_tools.rst:296
+#: ../../tools/genomics_tools.rst:326 ../../tools/genomics_tools.rst:357
+#: ../../tools/genomics_tools.rst:386 ../../tools/genomics_tools.rst:416
+#: ../../tools/genomics_tools.rst:445 ../../tools/genomics_tools.rst:475
+#: ../../tools/genomics_tools.rst:505 ../../tools/genomics_tools.rst:535
+#: ../../tools/genomics_tools.rst:564 ../../tools/genomics_tools.rst:594
+#: 017dc799f76e42dfa9843b2438e94a9a 0b23c75250594ed98ecb7f689f91ad51
+#: 0e9c805890bf4d108e80e851c7076177 19fbce519fd64c45b2c3400ab5af52d0
+#: 1b0ec5d85c66454a862bc88867542fa0 1bc4b6f7376b43d18712416e3b43f1f8
+#: 3023d9962d534e4288d9a5728b7397c3 4e2e7fab7288466d94ea0f9dbb3c6a97
+#: 5473acbd9f954d248d535f97f9d02377 65330f3df68b45eaa511429b261e8b39
+#: 79e356bbbeaf4b719eb4a81ff649b6e3 92cc30e08b6545f4acba8c1d44a8ff81
+#: 93bacd2851b04bcf9c8569fa09c30222 950ea70050ba4cc4b597243dd0d85117
+#: 966238c5cdeb449f84021e3caa0f0f1a 96d61ebdab5c4b9688d771d202725ab0
+#: b3e15af123984447be32851be93adcf3 ce712dc72a1d48d2903091b68de89a5e
+#: ea0f38f7e77b40dab44485a93b5e91c9 ebb46e0b3262492a96194b885e56265b
+msgid "**Type**: ``PackageTool``"
+msgstr "**类型**：``PackageTool``"
+
+#: ../../tools/genomics_tools.rst:24 3d3a20e69f37449a941f7e7688b73b54
+msgid ""
+"**Description**: Get comprehensive information about Arboreto – gene "
+"regulatory network inference"
+msgstr "**描述**：获取关于 Arboreto 的全面信息——基因调控网络推断"
+
+#: ../../tools/genomics_tools.rst:26 ../../tools/genomics_tools.rst:57
+#: ../../tools/genomics_tools.rst:88 ../../tools/genomics_tools.rst:119
+#: ../../tools/genomics_tools.rst:149 ../../tools/genomics_tools.rst:180
+#: ../../tools/genomics_tools.rst:210 ../../tools/genomics_tools.rst:241
+#: ../../tools/genomics_tools.rst:270 ../../tools/genomics_tools.rst:299
+#: ../../tools/genomics_tools.rst:329 ../../tools/genomics_tools.rst:360
+#: ../../tools/genomics_tools.rst:389 ../../tools/genomics_tools.rst:419
+#: ../../tools/genomics_tools.rst:448 ../../tools/genomics_tools.rst:478
+#: ../../tools/genomics_tools.rst:508 ../../tools/genomics_tools.rst:538
+#: ../../tools/genomics_tools.rst:567 ../../tools/genomics_tools.rst:597
+#: 04cc6b88864c40aa86568702327f21ee 070373ae1a694509829bddc43333bd00
+#: 2f129ad0de5f45679946b3732a15688f 376f1ffc27274370ae4e4e91c9eb6f79
+#: 40d0f85157634cabb79af4aee62bd467 469c87badfc3414385ab35524d50ebea
+#: 4986a5b846bb4009ad54b5ffb45ec719 58f652ce962a44bf959df68ec0b74a8b
+#: 5c8f0c98f6f54d639930ca062c93136a 62fb81194f3c485abd09617663a0b871
+#: 702a6a2ab6d0498692da82dfb2b3c0c9 9564682e4db24c11a91df5dfa22bce20
+#: 9f2def0a015b456680b15ffbeb840f3e a206d2836b6b4d15915e2b324d7e7f23
+#: cb8f6ced83994bc9873bae98c9f411e6 cbaadbfe774343498b82c79a75355541
+#: d4b19f9d529140ccbe10a9128eb910f9 dcab7252b05d4e5c9107a66bd3edecaa
+#: eccba4aff23243a69dc52457bdf587dd f94b26e28e604beb8ba90d1035b36d7a
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/genomics_tools.rst:28 119849dc605042f38b0e3230a37176d7
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"Arboreto"
+msgstr "``info_type``（字符串）（必填）要检索的关于 Arboreto 的信息类型"
+
+#: ../../tools/genomics_tools.rst:31 ../../tools/genomics_tools.rst:62
+#: ../../tools/genomics_tools.rst:93 ../../tools/genomics_tools.rst:124
+#: ../../tools/genomics_tools.rst:154 ../../tools/genomics_tools.rst:185
+#: ../../tools/genomics_tools.rst:215 ../../tools/genomics_tools.rst:245
+#: ../../tools/genomics_tools.rst:274 ../../tools/genomics_tools.rst:304
+#: ../../tools/genomics_tools.rst:334 ../../tools/genomics_tools.rst:364
+#: ../../tools/genomics_tools.rst:394 ../../tools/genomics_tools.rst:423
+#: ../../tools/genomics_tools.rst:453 ../../tools/genomics_tools.rst:483
+#: ../../tools/genomics_tools.rst:513 ../../tools/genomics_tools.rst:542
+#: ../../tools/genomics_tools.rst:572 ../../tools/genomics_tools.rst:602
+#: 0aebe052219b432e8d31fb6e58b64ce5 25b032ed9a3045b29b2b243c84f93451
+#: 2fc0e0c1f9684cfeab86a5bef768c6c3 34023978939e4eb38e5455dd8bef7ef9
+#: 3e1e60e3dc2e4f08923538b2d202cbb1 562c78dc1be84f66b78db266137c6e32
+#: 5d8da57e4aac474a99ecfb7af016dc9e 64a5852a8b374db581eb20e057af4e66
+#: 6c5be07c4add4eb8bddc4842073b8c56 738acb661ff94951add34e6bceaa5acf
+#: 88c296453b45428c8165fc5cf3eee746 8b333e45686a4113bbfb7c7504fc11ac
+#: bccfab90b2f1483696b8d7064218195f d7348acda6114557bcb578024b8a8f4b
+#: dbcfc6f9169041c698b51fe3034f6a1c ddac5d1af2a1499c94ac5e80e5ffa4ad
+#: e3692d72dd174b65adb8535ed10b2268 e4f8ad871958417c8752a5a63f8f7659
+#: f8e4827aefbc48d9baf05a75dbf86eee f925ece6b5b74f6493b051a8bf278e43
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/genomics_tools.rst:45 146320fde5ed4727a76b0695d2392566
+msgid "**get_cellxgene_census_info** (Type: PackageTool)"
+msgstr "**get_cellxgene_census_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:47 af0dcbc07c6d4e08a9045d8f73d4d471
+msgid ""
+"Get comprehensive information about cellxgene-census – access to the "
+"CELLxGENE Census single-cell..."
+msgstr "获取有关 cellxgene-census 的全面信息——访问 CELLxGENE Census 单细胞..."
+
+#: ../../tools/genomics_tools.rst 7914b9b2b1c24a5c9dd35c8b91b9f493
+msgid "get_cellxgene_census_info tool specification"
+msgstr "get_cellxgene_census_info 工具规范"
+
+#: ../../tools/genomics_tools.rst:53 8b8baae7eb384fb49dd4299f77ca322d
+msgid "**Name**: ``get_cellxgene_census_info``"
+msgstr "**名称**: ``get_cellxgene_census_info``"
+
+#: ../../tools/genomics_tools.rst:55 67ef6d8725a6434bbe0957a4fc284b5c
+msgid ""
+"**Description**: Get comprehensive information about cellxgene-census – "
+"access to the CELLxGENE Census single-cell data"
+msgstr "**描述**：获取有关 cellxgene-census 的全面信息——访问 CELLxGENE Census 单细胞数据"
+
+#: ../../tools/genomics_tools.rst:59 6dba50e531564db381df1265c051840e
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"cellxgene-census"
+msgstr "``info_type``（字符串）（必填）要检索的有关 cellxgene-census 的信息类型"
+
+#: ../../tools/genomics_tools.rst:76 462271f038d14c848cb6e5c0633bc4aa
+msgid "**get_clair3_info** (Type: PackageTool)"
+msgstr "**get_clair3_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:78 03364e4d386946ff857c5d48eced26fc
+msgid ""
+"Get comprehensive information about Clair3 – variant calling for long-read "
+"sequencing"
+msgstr "获取有关Clair3的全面信息——适用于长读长测序的变异检测"
+
+#: ../../tools/genomics_tools.rst b7470028d0eb43f6a83804a381509eee
+msgid "get_clair3_info tool specification"
+msgstr "get_clair3_info 工具规范"
+
+#: ../../tools/genomics_tools.rst:84 a18c40e17956447fab94c17255062974
+msgid "**Name**: ``get_clair3_info``"
+msgstr "**名称**: ``get_clair3_info``"
+
+#: ../../tools/genomics_tools.rst:86 6cd015dfedf74d25bb87e041e396e9a7
+msgid ""
+"**Description**: Get comprehensive information about Clair3 – variant "
+"calling for long-read sequencing"
+msgstr "**描述**：获取关于Clair3的全面信息——适用于长读长测序的变异检测"
+
+#: ../../tools/genomics_tools.rst:90 518166d448f346cab0e6bfb6360aa1a4
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"Clair3"
+msgstr "``info_type``（字符串）（必填）关于 Clair3 要检索的信息类型"
+
+#: ../../tools/genomics_tools.rst:107 bb6ecba65da64568b69ee0e7c961b937
+msgid "**get_cyvcf2_info** (Type: PackageTool)"
+msgstr "**get_cyvcf2_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:109 1244ce36e74b456ea5a42c14584ad460
+msgid ""
+"Get comprehensive information about cyvcf2 – fast VCF/BCF file processing"
+msgstr "获取有关 cyvcf2 的全面信息 – 快速处理 VCF/BCF 文件"
+
+#: ../../tools/genomics_tools.rst ea17b36812b3403ba49e727447f39282
+msgid "get_cyvcf2_info tool specification"
+msgstr "get_cyvcf2_info 工具规范"
+
+#: ../../tools/genomics_tools.rst:115 fd6e536826d6463f8b9c29a6de17f448
+msgid "**Name**: ``get_cyvcf2_info``"
+msgstr "**名称**: ``get_cyvcf2_info``"
+
+#: ../../tools/genomics_tools.rst:117 b59656505f1c4a1b9962966f58880a93
+msgid ""
+"**Description**: Get comprehensive information about cyvcf2 – fast VCF/BCF "
+"file processing"
+msgstr "**描述**：获取关于 cyvcf2 的全面信息——快速处理 VCF/BCF 文件"
+
+#: ../../tools/genomics_tools.rst:121 ../../tools/genomics_tools.rst:182
+#: ../../tools/genomics_tools.rst:301 ../../tools/genomics_tools.rst:391
+#: ../../tools/genomics_tools.rst:450 ../../tools/genomics_tools.rst:480
+#: ../../tools/genomics_tools.rst:510 ../../tools/genomics_tools.rst:569
+#: ../../tools/genomics_tools.rst:599 0b96791936a242a5b587e0c87b14a3d0
+#: 16206f3db4a947e38fedb44628369666 4ead699a8d804bb8a5b30b580c1d2956
+#: 4ef790f211ba4222a6335db20d74b757 75a29bdc5ba64972ba568b849ca910c7
+#: 8386fcdcd6464318aff0281c81d706e9 85292211970a47cda7622c262c7a1e6e
+#: a284f25466774520867296aaeea881bc a481fd4a33944d6b97f275c2ef0e47b9
+msgid ""
+"``include_examples`` (boolean) (optional) Whether to include usage examples "
+"and quick start guide"
+msgstr "``include_examples``（布尔值）（可选）是否包含使用示例和快速入门指南"
+
+#: ../../tools/genomics_tools.rst:137 180b107751a640398bf460f93d24b0b2
+msgid "**get_deeptools_info** (Type: PackageTool)"
+msgstr "**get_deeptools_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:139 bae1e6e6e0934c6a8da284c555304723
+msgid ""
+"Get comprehensive information about deepTools – deep sequencing data "
+"processing"
+msgstr "获取有关 deepTools 的全面信息——深度测序数据处理"
+
+#: ../../tools/genomics_tools.rst 2d93e39de8d845048332cc50455f4203
+msgid "get_deeptools_info tool specification"
+msgstr "get_deeptools_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:145 27a3da9ce2c34c2bb0d0d863710e5efe
+msgid "**Name**: ``get_deeptools_info``"
+msgstr "**名称**：``get_deeptools_info``"
+
+#: ../../tools/genomics_tools.rst:147 be3f72cda26b4c1ca2c3c0146b38a66d
+msgid ""
+"**Description**: Get comprehensive information about deepTools – deep "
+"sequencing data processing"
+msgstr "**描述**：获取关于 deepTools —— 深度测序数据处理的全面信息"
+
+#: ../../tools/genomics_tools.rst:151 d6cb2b7af156499db38e584a4cc48c71
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"deepTools"
+msgstr "``info_type``（字符串）（必填）要检索的关于 deepTools 的信息类型"
+
+#: ../../tools/genomics_tools.rst:168 ebf653078cca487199c2db13db3564be
+msgid "**get_gseapy_info** (Type: PackageTool)"
+msgstr "**get_gseapy_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:170 f3cf616704894597a404c9c1c0b61ad8
+msgid ""
+"Get comprehensive information about GSEApy – Gene Set Enrichment Analysis in"
+" Python"
+msgstr "获取关于 GSEApy —— Python 中基因集富集分析的全面信息"
+
+#: ../../tools/genomics_tools.rst 9791ffab5a324df38e0e3165036de4b7
+msgid "get_gseapy_info tool specification"
+msgstr "get_gseapy_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:176 1c51743074d24573a14043161abb35bc
+msgid "**Name**: ``get_gseapy_info``"
+msgstr "**名称**：``get_gseapy_info``"
+
+#: ../../tools/genomics_tools.rst:178 f8cd11d4b1884279a90a67ba98859928
+msgid ""
+"**Description**: Get comprehensive information about GSEApy – Gene Set "
+"Enrichment Analysis in Python"
+msgstr "**描述**：获取关于 GSEApy —— Python 中的基因集富集分析的全面信息"
+
+#: ../../tools/genomics_tools.rst:198 b45eaf506ab442129c3a4ce0c9fb67c8
+msgid "**get_jcvi_info** (Type: PackageTool)"
+msgstr "**get_jcvi_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:200 b819b9d4b0b04cae8165c4c3f4144bd2
+msgid ""
+"Get comprehensive information about JCVI – genome assembly and comparative "
+"genomics"
+msgstr "获取关于JCVI——基因组组装与比较基因组学的全面信息"
+
+#: ../../tools/genomics_tools.rst 0b894aed7aa24086af0950104420733d
+msgid "get_jcvi_info tool specification"
+msgstr "get_jcvi_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:206 b0ef9c20bdea4b748d396e71b3ca5ef9
+msgid "**Name**: ``get_jcvi_info``"
+msgstr "**名称**：``get_jcvi_info``"
+
+#: ../../tools/genomics_tools.rst:208 998a615a5203478793dbe7322d6f7583
+msgid ""
+"**Description**: Get comprehensive information about JCVI – genome assembly "
+"and comparative genomics"
+msgstr "**描述**：获取关于JCVI——基因组组装与比较基因组学的全面信息"
+
+#: ../../tools/genomics_tools.rst:212 b3a5537e1ee94c13921a1667a30d110e
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about JCVI"
+msgstr "``info_type``（字符串）（必填） 要检索的关于 JCVI 的信息类型"
+
+#: ../../tools/genomics_tools.rst:229 aa2c17383d7447718e6fb5b645961366
+msgid "**get_kipoiseq_info** (Type: PackageTool)"
+msgstr "**get_kipoiseq_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:231 1205f66ccd574c75ad9eac9b304f0d9f
+msgid ""
+"Get information about the kipoiseq package. Kipoi sequence utilities for "
+"genomics deep learning"
+msgstr "获取有关 kipoiseq 软件包的信息。Kipoi 序列工具集，适用于基因组学深度学习。"
+
+#: ../../tools/genomics_tools.rst b4b4c309278b413ab09e2259db2f17ff
+msgid "get_kipoiseq_info tool specification"
+msgstr "get_kipoiseq_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:237 3e1eff84a4344480b3454526caeb08eb
+msgid "**Name**: ``get_kipoiseq_info``"
+msgstr "**名称**：``get_kipoiseq_info``"
+
+#: ../../tools/genomics_tools.rst:239 e1f1dc9da38c4f52ab6e20e71b146936
+msgid ""
+"**Description**: Get information about the kipoiseq package. Kipoi sequence "
+"utilities for genomics deep learning"
+msgstr "**描述**：获取有关 kipoiseq 软件包的信息。Kipoi 序列工具集，适用于基因组学深度学习。"
+
+#: ../../tools/genomics_tools.rst:243 ../../tools/genomics_tools.rst:272
+#: ../../tools/genomics_tools.rst:362 ../../tools/genomics_tools.rst:421
+#: ../../tools/genomics_tools.rst:540 2afa328012c347758aa13414f1d1a028
+#: 7f5d2b048de54742aabc2f4f329ee749 acdc16741064454f994b57b314cf5037
+#: b3771c67618547cc88418131456c998d ce3c4bb177774f41ab0a434c804ad0ad
+msgid "No parameters required."
+msgstr "无需参数。"
+
+#: ../../tools/genomics_tools.rst:258 0eb7112f284c47a9ae438c69d06b1b56
+msgid "**get_poretools_info** (Type: PackageTool)"
+msgstr "**get_poretools_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:260 26eaedbff2f0444188499c1f32cc1865
+msgid "Get information about the poretools package. Python package: poretools"
+msgstr "获取有关 poretools 软件包的信息。Python 软件包：poretools"
+
+#: ../../tools/genomics_tools.rst 98139c1e1e274508ba457b203cbd8035
+msgid "get_poretools_info tool specification"
+msgstr "get_poretools_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:266 3982a2b175134186ac133d0104a99b2e
+msgid "**Name**: ``get_poretools_info``"
+msgstr "**名称**：``get_poretools_info``"
+
+#: ../../tools/genomics_tools.rst:268 55af3ae09a6043dab8eb3f82eeac6b52
+msgid ""
+"**Description**: Get information about the poretools package. Python "
+"package: poretools"
+msgstr "**描述**：获取有关 poretools 包的信息。Python 包：poretools"
+
+#: ../../tools/genomics_tools.rst:287 4ee12909392148d4b446a712e8efc0ee
+msgid "**get_pybedtools_info** (Type: PackageTool)"
+msgstr "**get_pybedtools_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:289 a0343d5b747f418fa548fa58f7718289
+msgid ""
+"Get comprehensive information about pybedtools – Python wrapper for BEDTools"
+msgstr "获取关于 pybedtools —— BEDTools 的 Python 封装器的全面信息"
+
+#: ../../tools/genomics_tools.rst 99635d5dec9c44e19aa227c909bd147a
+msgid "get_pybedtools_info tool specification"
+msgstr "get_pybedtools_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:295 3805ca06f56f4d2191c5f64d1665f4c3
+msgid "**Name**: ``get_pybedtools_info``"
+msgstr "**名称**：``get_pybedtools_info``"
+
+#: ../../tools/genomics_tools.rst:297 59b60e35c528445aa86c9a2fe2d3d2ac
+msgid ""
+"**Description**: Get comprehensive information about pybedtools – Python "
+"wrapper for BEDTools"
+msgstr "**描述**：获取有关 pybedtools 的全面信息 —— BEDTools 的 Python 封装器"
+
+#: ../../tools/genomics_tools.rst:317 7a9f1566895847d5bb3f3344a0c58885
+msgid "**get_pydeseq2_info** (Type: PackageTool)"
+msgstr "**get_pydeseq2_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:319 e8379b53727940d2a7e85c7a82c32858
+msgid ""
+"Get comprehensive information about PyDESeq2 – RNA-seq differential "
+"expression analysis"
+msgstr "获取关于 PyDESeq2 —— RNA 测序差异表达分析的全面信息"
+
+#: ../../tools/genomics_tools.rst 2c28d644c6794e949c362890e97e32a0
+msgid "get_pydeseq2_info tool specification"
+msgstr "get_pydeseq2_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:325 01cb835754574ab183280c6dfd761cd9
+msgid "**Name**: ``get_pydeseq2_info``"
+msgstr "**名称**：``get_pydeseq2_info``"
+
+#: ../../tools/genomics_tools.rst:327 6b64542639eb4234b6600baa32272c7c
+msgid ""
+"**Description**: Get comprehensive information about PyDESeq2 – RNA-seq "
+"differential expression analysis"
+msgstr "**描述**：获取关于 PyDESeq2 —— RNA 测序差异表达分析的全面信息"
+
+#: ../../tools/genomics_tools.rst:331 eec8cc0037884962ba62367e032c4524
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"PyDESeq2"
+msgstr "``info_type``（字符串）（必填）要检索的关于 PyDESeq2 的信息类型"
+
+#: ../../tools/genomics_tools.rst:348 16e2ac39f2b04799babb3fbff4123380
+msgid "**get_pyensembl_info** (Type: PackageTool)"
+msgstr "**get_pyensembl_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:350 6d43b32735624ebb941fc6cc84d3483f
+msgid ""
+"Get information about the pyensembl package. Python interface to Ensembl "
+"reference genome metadata"
+msgstr "获取有关 pyensembl 包的信息。Python 接口，用于访问 Ensembl 参考基因组元数据。"
+
+#: ../../tools/genomics_tools.rst b6eb67077dbf44ddab086716683ba2c3
+msgid "get_pyensembl_info tool specification"
+msgstr "get_pyensembl_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:356 f2eed62a840f488aa252bf3a7aaf4d19
+msgid "**Name**: ``get_pyensembl_info``"
+msgstr "**名称**：``get_pyensembl_info``"
+
+#: ../../tools/genomics_tools.rst:358 1c9a22afd24440be9da755271e2d4502
+msgid ""
+"**Description**: Get information about the pyensembl package. Python "
+"interface to Ensembl reference genome metadata"
+msgstr "**描述**：获取关于 pyensembl 包的信息。Python 接口，用于访问 Ensembl 参考基因组元数据。"
+
+#: ../../tools/genomics_tools.rst:377 e3f3f829b9d94c36af5244b48f2933fb
+msgid "**get_pyfaidx_info** (Type: PackageTool)"
+msgstr "**get_pyfaidx_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:379 32bd3debea8d4439900b9b02a0f940a6
+msgid ""
+"Get comprehensive information about pyfaidx – efficient FASTA file indexing "
+"and random access"
+msgstr "获取关于 pyfaidx 的全面信息——高效的 FASTA 文件索引与随机访问"
+
+#: ../../tools/genomics_tools.rst 8792bb1a325b4034ad63a02a125f8451
+msgid "get_pyfaidx_info tool specification"
+msgstr "get_pyfaidx_info 工具规范"
+
+#: ../../tools/genomics_tools.rst:385 f49a4abc2b314f12af7baa6b032bd401
+msgid "**Name**: ``get_pyfaidx_info``"
+msgstr "**名称**：``get_pyfaidx_info``"
+
+#: ../../tools/genomics_tools.rst:387 54008a37dda245769b0e6b484e4647df
+msgid ""
+"**Description**: Get comprehensive information about pyfaidx – efficient "
+"FASTA file indexing and random access"
+msgstr "**描述**：获取关于 pyfaidx 的全面信息——高效的 FASTA 文件索引和随机访问工具"
+
+#: ../../tools/genomics_tools.rst:407 511f419afb164ae0adc0630543b28f33
+msgid "**get_pyfasta_info** (Type: PackageTool)"
+msgstr "**get_pyfasta_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:409 4699789ef5624e79aa8bf2c521ce5a22
+msgid ""
+"Get information about the pyfasta package. Python library for efficient "
+"random access to fasta su..."
+msgstr "获取有关 pyfasta 包的信息。该 Python 库用于高效随机访问 fasta 序列..."
+
+#: ../../tools/genomics_tools.rst c98a5280da594f0d8745bf48e68ebadd
+msgid "get_pyfasta_info tool specification"
+msgstr "get_pyfasta_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:415 f09c6eba75a7407c9e47feaa5e31b79c
+msgid "**Name**: ``get_pyfasta_info``"
+msgstr "**名称**：``get_pyfasta_info``"
+
+#: ../../tools/genomics_tools.rst:417 bcec8b5864a94bc98d897196db772183
+msgid ""
+"**Description**: Get information about the pyfasta package. Python library "
+"for efficient random access to fasta subsequences"
+msgstr "**描述**：获取有关 pyfasta 包的信息。该 Python 库用于高效随机访问 fasta 子序列。"
+
+#: ../../tools/genomics_tools.rst:436 7fbb8f389ae1455e878dacf7f71d3c01
+msgid "**get_pyliftover_info** (Type: PackageTool)"
+msgstr "**get_pyliftover_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:438 f266e3c018584c1ea619121646e05d09
+msgid ""
+"Get comprehensive information about PyLiftover – genomic coordinate "
+"conversion between assemblies"
+msgstr "获取关于 PyLiftover 的全面信息——基因组坐标在不同组装版本之间的转换"
+
+#: ../../tools/genomics_tools.rst db0e58b16aa34b539084bab25b04a290
+msgid "get_pyliftover_info tool specification"
+msgstr "get_pyliftover_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:444 eaa6354d4e8242999b30910ffb9cceca
+msgid "**Name**: ``get_pyliftover_info``"
+msgstr "**名称**：``get_pyliftover_info``"
+
+#: ../../tools/genomics_tools.rst:446 712406e686974ed4905b58d0abdd8003
+msgid ""
+"**Description**: Get comprehensive information about PyLiftover – genomic "
+"coordinate conversion between assemblies"
+msgstr "**描述**：获取关于 PyLiftover 的全面信息——基因组坐标在不同组装版本之间的转换"
+
+#: ../../tools/genomics_tools.rst:466 b87bcc5dba9e4f2993ee17d58f1e6a29
+msgid "**get_pyranges_info** (Type: PackageTool)"
+msgstr "**get_pyranges_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:468 d12cc7cf9c2049f28b6aec901edba481
+msgid ""
+"Get comprehensive information about PyRanges – efficient genomic interval "
+"operations"
+msgstr "获取关于 PyRanges 的全面信息 —— 高效的基因组区间操作工具"
+
+#: ../../tools/genomics_tools.rst f8efdf43a831430ea254e5362f5ab161
+msgid "get_pyranges_info tool specification"
+msgstr "get_pyranges_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:474 135bc120220e40d69f80790b45741d79
+msgid "**Name**: ``get_pyranges_info``"
+msgstr "**名称**：``get_pyranges_info``"
+
+#: ../../tools/genomics_tools.rst:476 2da1e2cbefdd454bb8098a70f2e823b5
+msgid ""
+"**Description**: Get comprehensive information about PyRanges – efficient "
+"genomic interval operations"
+msgstr "**描述**：获取关于 PyRanges 的全面信息——高效的基因组区间操作工具"
+
+#: ../../tools/genomics_tools.rst:496 c934173905f74babb4c8112964415c10
+msgid "**get_pysam_info** (Type: PackageTool)"
+msgstr "**get_pysam_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:498 7a5fb60a1060423a95266e4e82ef2983
+msgid ""
+"Get comprehensive information about pysam – interface to SAM/BAM/CRAM files"
+msgstr "获取有关 pysam 的全面信息——SAM/BAM/CRAM 文件接口"
+
+#: ../../tools/genomics_tools.rst 8148dcc027494f0ba92ef7187f9366b4
+msgid "get_pysam_info tool specification"
+msgstr "get_pysam_info 工具规范"
+
+#: ../../tools/genomics_tools.rst:504 f67ebe7aaaf648ffba414d263b688128
+msgid "**Name**: ``get_pysam_info``"
+msgstr "**名称**：``get_pysam_info``"
+
+#: ../../tools/genomics_tools.rst:506 c51cc6e3e3ee40b2be709aed9edbc413
+msgid ""
+"**Description**: Get comprehensive information about pysam – interface to "
+"SAM/BAM/CRAM files"
+msgstr "**描述**：获取关于 pysam 的全面信息——用于操作 SAM/BAM/CRAM 文件的接口"
+
+#: ../../tools/genomics_tools.rst:526 00f6e52d21f3499ca0c833adca71ad15
+msgid "**get_pyvcf_info** (Type: PackageTool)"
+msgstr "**get_pyvcf_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:528 7373484950bb49e3a7e16c1c6f6cfb57
+msgid ""
+"Get information about the pyvcf package. Python library for parsing and "
+"manipulating VCF files"
+msgstr "获取有关 pyvcf 包的信息。用于解析和操作 VCF 文件的 Python 库。"
+
+#: ../../tools/genomics_tools.rst 52404c05b263429faeb095b87be4c31c
+msgid "get_pyvcf_info tool specification"
+msgstr "get_pyvcf_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:534 d0b441cdd03242a59ee0f0033a43bd58
+msgid "**Name**: ``get_pyvcf_info``"
+msgstr "**名称**：``get_pyvcf_info``"
+
+#: ../../tools/genomics_tools.rst:536 55e1dcef39dd4b1dbfbadca14bbaf32d
+msgid ""
+"**Description**: Get information about the pyvcf package. Python library for"
+" parsing and manipulating VCF files"
+msgstr "**描述**：获取有关 pyvcf 包的信息。用于解析和操作 VCF 文件的 Python 库。"
+
+#: ../../tools/genomics_tools.rst:555 266769599b8d4ecc9164b4085ddfa135
+msgid "**get_reportlab_info** (Type: PackageTool)"
+msgstr "**get_reportlab_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:557 72f7dc5960394038a14db23b8eef3c2c
+msgid "Get comprehensive information about ReportLab – PDF generation library"
+msgstr "获取关于 ReportLab —— PDF 生成库的全面信息"
+
+#: ../../tools/genomics_tools.rst fa8dcde68a3f4455a9e47493d5a12ab6
+msgid "get_reportlab_info tool specification"
+msgstr "get_reportlab_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:563 b3d149ca037144e78dbb6daf968c72f3
+msgid "**Name**: ``get_reportlab_info``"
+msgstr "**名称**：``get_reportlab_info``"
+
+#: ../../tools/genomics_tools.rst:565 a4e59f46617641f086d12e3d75defb71
+msgid ""
+"**Description**: Get comprehensive information about ReportLab – PDF "
+"generation library"
+msgstr "**描述**：获取关于 ReportLab —— PDF 生成库的全面信息"
+
+#: ../../tools/genomics_tools.rst:585 300b1d7e255140089817d26c8cdba793
+msgid "**get_viennarna_info** (Type: PackageTool)"
+msgstr "**get_viennarna_info**（类型：PackageTool）"
+
+#: ../../tools/genomics_tools.rst:587 c121caf82cd3433a8044612edd7aa78f
+msgid ""
+"Get comprehensive information about ViennaRNA – RNA structure prediction and"
+" analysis"
+msgstr "获取关于 ViennaRNA —— RNA 结构预测与分析的全面信息"
+
+#: ../../tools/genomics_tools.rst 591b1683de1147d98753c5e8829b01a1
+msgid "get_viennarna_info tool specification"
+msgstr "get_viennarna_info 工具规格说明"
+
+#: ../../tools/genomics_tools.rst:593 ad24d626aa7e4591b6dbb9ddc5eeb88c
+msgid "**Name**: ``get_viennarna_info``"
+msgstr "**名称**：``get_viennarna_info``"
+
+#: ../../tools/genomics_tools.rst:595 2fad290f86ec4dfebf28b1b9df72467c
+msgid ""
+"**Description**: Get comprehensive information about ViennaRNA – RNA "
+"structure prediction and analysis"
+msgstr "**描述**：获取关于 ViennaRNA——RNA 结构预测与分析的全面信息"
+
+#: ../../tools/genomics_tools.rst:615 1ff135d55db2405f91d8ebcd09440eb3
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/genomics_tools.rst:617 ed47eb98876f4d7e826c554474519199
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/genomics_tools.rst:618 2ce98cdbd5d04d429da8aaa0266e0559
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

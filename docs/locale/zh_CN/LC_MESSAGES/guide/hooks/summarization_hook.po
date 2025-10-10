@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../guide/hooks/summarization_hook.rst:2 935e934d47bd460b890a90fb00dad911
+msgid "SummarizationHook"
+msgstr "摘要钩子"
+
+#: ../../guide/hooks/summarization_hook.rst:4 5d86208d000448858378250cef853e1d
+msgid "**AI-powered intelligent summarization of long tool outputs**"
+msgstr "**基于人工智能的长工具输出智能摘要**"
+
+#: ../../guide/hooks/summarization_hook.rst:6 bdec21386a954fcfbe30f3ac6ef1397a
+msgid ""
+"The SummarizationHook automatically summarizes long tool outputs using "
+"advanced AI models, preserving key findings and results while reducing "
+"length."
+msgstr "SummarizationHook 使用先进的人工智能模型自动总结冗长的工具输出，保留关键发现和结果，同时缩减内容长度。"
+
+#: ../../guide/hooks/summarization_hook.rst:9 cfcb9c9436f14368a5b811efce3204f0
+msgid "Overview"
+msgstr "概述"
+
+#: ../../guide/hooks/summarization_hook.rst:11
+#: d2018c4cc8844e7e8fd794d171e6ed4c
+msgid ""
+"**What it does:** - Analyzes tool outputs and identifies key information - "
+"Uses AI models to create concise summaries - Preserves important technical "
+"details and findings - Reduces output length while maintaining relevance"
+msgstr ""
+"**功能说明：**  \n"
+"- 分析工具输出并识别关键信息  \n"
+"- 利用人工智能模型生成简明摘要  \n"
+"- 保留重要的技术细节和发现  \n"
+"- 在保持相关性的前提下缩减输出长度"
+
+#: ../../guide/hooks/summarization_hook.rst:17
+#: 3b8599a7341e463c9d73b851c85e1c59
+msgid ""
+"**When to use:** - Large datasets from scientific databases - Complex "
+"research results and literature - Long-form tool outputs that exceed memory "
+"limits - When you need quick insights from detailed data"
+msgstr ""
+"**使用场景：**  \n"
+"- 来自科学数据库的大型数据集  \n"
+"- 复杂的研究结果和文献  \n"
+"- 超出内存限制的长格式工具输出  \n"
+"- 需要从详细数据中快速获取洞见时"
+
+#: ../../guide/hooks/summarization_hook.rst:24
+#: aee64417cfd2469dbf9218faf7c387c9
+msgid "Quick Start"
+msgstr "快速入门"
+
+#: ../../guide/hooks/summarization_hook.rst:26
+#: 073e1212a2144a5282cc191ab0d5d0e9
+msgid "**Simple Usage**"
+msgstr "**简单用法**"
+
+#: ../../guide/hooks/summarization_hook.rst:48
+#: 11d1960131c945a9a41f0ed764f9b6d0
+msgid "**Advanced Configuration**"
+msgstr "**高级配置**"
+
+#: ../../guide/hooks/summarization_hook.rst:74
+#: b6758eb0258d41d08f0cba1db4c178ec
+msgid "Configuration Options"
+msgstr "配置选项"
+
+#: ../../guide/hooks/summarization_hook.rst:76
+#: 169ac271fd42408bbeef377424ad1e59
+msgid ""
+"**Chunk Size** - Controls the size of chunks for processing - Default: 32000"
+" characters - Range: 1000-5000 characters recommended"
+msgstr "**块大小** - 控制处理块的大小 - 默认值：32000 字符 - 建议范围：1000-5000 字符"
+
+#: ../../guide/hooks/summarization_hook.rst:81
+#: 0ead72cf4fa84e12a5251703b7ad77f9
+msgid ""
+"**Focus Areas** - Specifies what to focus on during summarization - Default:"
+" \"key_findings_and_results\""
+msgstr "**关注重点** - 指定摘要时应关注的内容 - 默认值：\"key_findings_and_results\""
+
+#: ../../guide/hooks/summarization_hook.rst:85
+#: 0aa0ead7ef4d41e7bb8b90afa37d0739
+msgid ""
+"**Maximum Summary Length** - Limits the length of the final summary - "
+"Default: 3000 characters"
+msgstr "**最大摘要长度** - 限制最终摘要的长度 - 默认值：3000 字符"
+
+#: ../../guide/hooks/summarization_hook.rst:89
+#: 0df93695b7f5432b8ab3643d8a25695a
+msgid "**Focus Areas Options**"
+msgstr "**关注领域选项**"
+
+#: ../../guide/hooks/summarization_hook.rst:91
+#: f86a8018a25742179978bda6fafa8d5b
+msgid ""
+"General Focus Areas: - `key_findings_and_results`: General key findings and "
+"results - `consolidate_and_prioritize`: Merging multiple summaries - "
+"`technical_details`: Technical specifications and details - "
+"`main_conclusions`: Main conclusions and outcomes"
+msgstr ""
+"总体关注领域：  \n"
+"- `key_findings_and_results`：主要发现和结果  \n"
+"- `consolidate_and_prioritize`：合并多个摘要并优先排序  \n"
+"- `technical_details`：技术规格和细节  \n"
+"- `main_conclusions`：主要结论和成果"
+
+#: ../../guide/hooks/summarization_hook.rst:97
+#: 1b696d61a60743e9a0c2dd09004754ba
+msgid ""
+"Domain-Specific Focus Areas: - `protein_function_and_structure`: Protein-"
+"specific information - `compound_properties_and_activity`: Chemical compound"
+" data - `key_findings_and_relevance`: Literature search results - "
+"`clinical_significance_and_drug_interactions`: Clinical data - "
+"`methodology_and_results`: Research methodology and findings"
+msgstr ""
+"领域特定关注点：  \n"
+"- `protein_function_and_structure`：蛋白质相关信息  \n"
+"- `compound_properties_and_activity`：化合物性质及活性数据  \n"
+"- `key_findings_and_relevance`：文献检索结果  \n"
+"- `clinical_significance_and_drug_interactions`：临床意义及药物相互作用  \n"
+"- `methodology_and_results`：研究方法及结果"
+
+#: ../../guide/hooks/summarization_hook.rst:105
+#: 2458472b24294366bc5d80d4e1fc4dfe
+msgid "Examples"
+msgstr "示例"
+
+#: ../../guide/hooks/summarization_hook.rst:107
+#: 41c8d75f5bb24952843f4c9e6e78078f
+msgid "**Scientific Literature Analysis**"
+msgstr "**科学文献分析**"
+
+#: ../../guide/hooks/summarization_hook.rst:127
+#: d8e150b462ec4c48928598e30e206477
+msgid "**Protein Data Summarization**"
+msgstr "**蛋白质数据汇总**"
+
+#: ../../guide/hooks/summarization_hook.rst:165
+#: 5463a6249e4f47c4aeff148be88f7ba5
+msgid "**Compound Analysis Summarization**"
+msgstr "**化合物分析总结**"
+
+#: ../../guide/hooks/summarization_hook.rst:207
+#: a2a5f934ea154a859da7cff1c9608de7
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../guide/hooks/summarization_hook.rst:209
+#: 923d03bd70454d6a9d27412b54a12339
+msgid ""
+"**Summarization Not Triggering** - Check threshold settings: Ensure output "
+"exceeds threshold - Verify hook is enabled: Check `enabled` field - Confirm "
+"tool name matching: Ensure exact tool name match - Review conditions: Check "
+"all condition parameters"
+msgstr ""
+"**摘要未触发** - 检查阈值设置：确保输出超过阈值 - 验证钩子是否启用：检查 `enabled` 字段 - 确认工具名称匹配：确保工具名称完全匹配"
+" - 审查条件：检查所有条件参数"
+
+#: ../../guide/hooks/summarization_hook.rst:215
+#: 364103e55b714aa0a34fbaa9d3b5d8aa
+msgid ""
+"**Poor Summarization Quality** - Adjust focus areas: Use more specific focus"
+" areas - Modify chunk size: Smaller chunks may provide better context - "
+"Increase max summary length: Allow more detailed summaries - Check query "
+"context: Ensure original query is captured"
+msgstr ""
+"**摘要质量差** - 调整关注区域：使用更具体的关注区域 - 修改分块大小：较小的分块可能提供更好的上下文 - 增加最大摘要长度：允许更详细的摘要 -"
+" 检查查询上下文：确保捕捉到原始查询"
+
+#: ../../guide/hooks/summarization_hook.rst:221
+#: 43b1e3e2b05f481babc9607f221e25ba
+msgid ""
+"**Performance Issues** - Increase thresholds: Process fewer outputs - "
+"Optimize chunk sizes: Balance processing time and quality - Use tool-"
+"specific hooks: More efficient than global hooks - Enable caching: Reduce "
+"redundant processing"
+msgstr ""
+"**性能问题**  \n"
+"- 提高阈值：减少处理的输出数量  \n"
+"- 优化分块大小：平衡处理时间与质量  \n"
+"- 使用特定工具钩子：比全局钩子更高效  \n"
+"- 启用缓存：减少重复处理"
+
+#: ../../guide/hooks/summarization_hook.rst:227
+#: fd43963cd61b4f9cbc8c4654f8e8b4bc
+msgid "**Debugging**"
+msgstr "**调试**"
+
+#: ../../guide/hooks/summarization_hook.rst:229
+#: 3eaa796f40a9496aa4be29978978296a
+msgid "Enable detailed logging for hook operations:"
+msgstr "启用钩子操作的详细日志记录："
+
+#: ../../guide/hooks/summarization_hook.rst:239
+#: 99ccf0f697c848899d289e9a83c80150
+msgid "**Validation**"
+msgstr "**验证**"
+
+#: ../../guide/hooks/summarization_hook.rst:241
+#: a8569bd1598345df9ce7b03a89316cfb
+msgid "Verify hook configuration:"
+msgstr "验证钩子配置："
+
+#: ../../guide/hooks/summarization_hook.rst:254
+#: a0732ccc69554aeba253dc5e0fe5d627
+msgid "Next Steps"
+msgstr "后续步骤"
+
+#: ../../guide/hooks/summarization_hook.rst:256
+#: 8b707c4e4540476fa8c179a9b1315669
+msgid "**Learn More**"
+msgstr "**了解更多**"
+
+#: ../../guide/hooks/summarization_hook.rst:258
+#: de680bf46b02422c9d75ca5a2d79ebed
+msgid ""
+"**FileSaveHook** → :doc:`file_save_hook` - File-based output processing"
+msgstr "**FileSaveHook** → :doc:`file_save_hook` - 基于文件的输出处理"
+
+#: ../../guide/hooks/summarization_hook.rst:259
+#: bd8d31b217dd47f7b419fc2da679a278
+msgid ""
+"**Configuration** → :doc:`hook_configuration` - Advanced configuration "
+"options"
+msgstr "**配置** → :doc:`hook_configuration` - 高级配置选项"
+
+#: ../../guide/hooks/summarization_hook.rst:260
+#: 45f8273ad48b48bb87292ea0b90f5371
+msgid "**Hooks Overview** → :doc:`index` - Complete hooks system Tutorial"
+msgstr "**Hooks 概述** → :doc:`index` - 完整的 Hooks 系统教程"
+
+#: ../../guide/hooks/summarization_hook.rst:262
+#: 72e8a83dd2cf4d2298c66cf3f5584fa1
+msgid "**Related Topics**"
+msgstr "**相关主题**"
+
+#: ../../guide/hooks/summarization_hook.rst:264
+#: a37bd7cb764a45c3a17aadd1cbb4197b
+msgid ""
+"**Tool Composition** → :doc:`../tool_composition` - Chain tools into "
+"workflows"
+msgstr "**工具组成** → :doc:`../tool_composition` - 将工具链接成工作流"
+
+#: ../../guide/hooks/summarization_hook.rst:265
+#: 010f3a82f2a64cacbb1222e614e3fabf
+msgid ""
+"**Best Practices** → :doc:`../best_practices` - Performance optimization "
+"tips"
+msgstr "**最佳实践** → :doc:`../best_practices` - 性能优化技巧"
+
+#: ../../guide/hooks/summarization_hook.rst:266
+#: af9f2320fe82471280be854836bf1d4d
+msgid "**Examples** → :doc:`../examples` - More usage examples"
+msgstr "**示例** → :doc:`../examples` - 更多使用示例"

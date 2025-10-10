@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.rst:2
+#: dbedd07faadf47b1bcd29e0a026f3fc3
+msgid "tooluniverse.web\\_tools.literature\\_search\\_ui package"
+msgstr "tooluniverse.web_tools.literature_search_ui 包"
+
+#: 64b1056d5dda4581835ebeb489a9fd45 of
+#: tooluniverse.web_tools.literature_search_ui:1
+msgid ""
+"Literature Search Web UI A web interface for searching academic literature "
+"using multiple databases"
+msgstr "文献检索网页界面 一个用于通过多个数据库搜索学术文献的网页界面"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.rst:11
+#: 918a555ba5924dda87f0cd4e3b6995ab
+msgid "Submodules"
+msgstr "子模块"

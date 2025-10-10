@@ -3,6 +3,6 @@ tooluniverse.utils module
 
 .. automodule:: tooluniverse.utils
    :members:
-   :private-members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
+   :private-members:

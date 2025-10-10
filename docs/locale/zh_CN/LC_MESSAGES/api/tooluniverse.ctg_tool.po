@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.ctg_tool.rst:2 4cebb69d96a84c7898579abe91a87e67
+msgid "tooluniverse.ctg\\_tool module"
+msgstr "tooluniverse.ctg_tool 模块"
+
+#: dcaa4a3037d641f2b2370c0ffca0a218 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool:1
+msgid "Bases: :py:class:`~tooluniverse.restful_tool.RESTfulTool`"
+msgstr "基础：:py:class:`~tooluniverse.restful_tool.RESTfulTool`"
+
+#: 085b7e8bb072429b9caf010e45bad0c3 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._map_param_names:1
+msgid ""
+"Maps the parameter names in the arguments dictionary to the expected "
+"parameter names defined in the tool's JSON configuration."
+msgstr "将参数字典中的参数名称映射到工具 JSON 配置中定义的预期参数名称。"
+
+#: ../../api/tooluniverse.ctg_tool.rst 360b05b696c94c5084c32574421e91ba
+#: 50ac15cfb1ab4ce7836af04429d1ee74 5778a99e1d424fa2933e3d20339cf13e
+#: 5ff2e784b186496b8145849bb6cad101
+msgid "Parameters"
+msgstr "参数"
+
+#: aa7cfd76f7864b26a1871964b27d5671 b9207e6ff1e64113957463cefc860309
+#: bc9e1315ae394b71b20bff6be35a3487 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._format_endpoint_url:3
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._map_param_names:3
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._prepare_api_params:3
+msgid "Runtime arguments provided to the tool's run method."
+msgstr "传递给工具 run 方法的运行时参数。"
+
+#: ../../api/tooluniverse.ctg_tool.rst 34f988ba0215420cb8305c8ef8bba952
+#: 512a868f03b34601bc8ca566acfff902 b313db394c234dd89592642f3b22a41e
+#: f67c5d930f9d44db9933c6bcec5ecec3
+msgid "Returns"
+msgstr "返回值"
+
+#: 0fa6e82f6bc64729872100b88467a591 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._map_param_names:6
+msgid "A new dictionary with mapped parameter names."
+msgstr "带有映射参数名称的新字典。"
+
+#: ../../api/tooluniverse.ctg_tool.rst 03cbcd2f790f4bd6985a02912d3374eb
+#: 51b481c6578d412ba362ec473afb2bfc 52d7de22727a4d21901cb03665681557
+#: a10c939c61424ce5850cc52212f8c549
+msgid "Return type"
+msgstr "返回类型"
+
+#: 39234a1156364f03a05e6f5ca6c03bd7 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._prepare_api_params:1
+msgid ""
+"Prepares the dictionary of parameters for the API query string based on tool"
+" config and runtime arguments."
+msgstr "根据工具配置和运行时参数准备用于 API 查询字符串的参数字典。"
+
+#: 458aef0620b24fd5801ca16c97e50157 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._prepare_api_params:6
+msgid "A dictionary of parameters ready for the API requests."
+msgstr "一个用于 API 请求的参数字典。"
+
+#: b6f1d35406dc46898bef688ff0eed0c8 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._format_endpoint_url:1
+#, python-brace-format
+msgid ""
+"Formats the endpoint URL by substituting path parameters (like {nctId}) with"
+" values from the arguments dictionary."
+msgstr "通过将路径参数（例如 {nctId}）替换为参数字典中的值来格式化端点 URL。"
+
+#: b38c7c04497f4ccf9fa76fd00aa48d30 of
+#: tooluniverse.ctg_tool.ClinicalTrialsTool._format_endpoint_url:6
+msgid "The formatted endpoint URL."
+msgstr "格式化的端点 URL。"
+
+#: 1f24a555f0064818b314b3fc917b227e c531cf8ff7a8436ca082c3a49654bc7c of
+#: tooluniverse.ctg_tool.ClinicalTrialsDetailsTool.run:1
+#: tooluniverse.ctg_tool.ClinicalTrialsTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 42b5171f94144521bb30ff2e0f3f60f2 bed7c414a5284de883f0003176d104cf of
+#: tooluniverse.ctg_tool.ClinicalTrialsDetailsTool.run:3
+#: tooluniverse.ctg_tool.ClinicalTrialsTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以便与大多数具体工具实现保持一致，这些工具通常需要一个输入字典。"
+
+#: 76339e1412254675a12358bf0ba4cabb ae44bc105871417fb7588badff2ddac6 of
+#: tooluniverse.ctg_tool.ClinicalTrialsDetailsTool:1
+#: tooluniverse.ctg_tool.ClinicalTrialsSearchTool:1
+msgid "Bases: :py:class:`~tooluniverse.ctg_tool.ClinicalTrialsTool`"
+msgstr "基础：:py:class:`~tooluniverse.ctg_tool.ClinicalTrialsTool`"
+
+#: 6c00e7b18bf84d5384487b09c106ba1a of
+#: tooluniverse.ctg_tool.ClinicalTrialsSearchTool.run:1
+msgid "Executes the search query for clinical trials."
+msgstr "执行临床试验的搜索查询。"
+
+#: 9e3add182e7d4623b030f91c791eb146 of
+#: tooluniverse.ctg_tool.ClinicalTrialsSearchTool.run:3
+msgid "A dictionary containing parameters provided by the user/LLM"
+msgstr "一个包含用户或LLM提供的参数的字典"
+
+#: 6c32b66783274345bc46db3e186d38aa of
+#: tooluniverse.ctg_tool.ClinicalTrialsSearchTool.run:6
+msgid ""
+"The JSON response from the API as a dictionary,              or raw text for"
+" non-JSON responses, or an error dictionary."
+msgstr "从API返回的JSON响应作为字典，非JSON响应则以原始文本形式返回，或者返回错误字典。"
+
+#: e70371432a284bc3897454cb5a13d33b of
+#: tooluniverse.ctg_tool.ClinicalTrialsSearchTool.run:8
+msgid "The JSON response from the API as a dictionary,"
+msgstr "作为字典形式的 API 返回的 JSON 响应，"
+
+#: d0e1de50a02447949482b82c3a6d7d37 of
+#: tooluniverse.ctg_tool.ClinicalTrialsSearchTool.run:9
+msgid "or raw text for non-JSON responses, or an error dictionary."
+msgstr "或非 JSON 响应的原始文本，或错误字典。"
+
+#: d0a0c5849f1d4d87ae40292c408e9077 of
+#: tooluniverse.ctg_tool.ClinicalTrialsDetailsTool._simplify_output:1
+msgid "Manually extract generally most useful information"
+msgstr "手动提取通常最有用的信息"

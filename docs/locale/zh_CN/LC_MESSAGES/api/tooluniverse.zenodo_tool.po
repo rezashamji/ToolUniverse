@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.zenodo_tool.rst:2 9132cd8bdb864f51b37d3815e5e9882c
+msgid "tooluniverse.zenodo\\_tool module"
+msgstr "tooluniverse.zenodo_tool 模块"
+
+#: 6fed6ac57a754a679ea90e043410ed4f of tooluniverse.zenodo_tool.ZenodoTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: ce179566f3414f5d9597415707132e20 of tooluniverse.zenodo_tool.ZenodoTool:1
+msgid "Search Zenodo records with optional community filter."
+msgstr "使用可选的社区筛选搜索 Zenodo 记录。"
+
+#: 7ed8d96e14a24dd2bce24845ccace907 of tooluniverse.zenodo_tool.ZenodoTool:3
+msgid "Parameters (arguments):"
+msgstr "参数（参数列表）："
+
+#: ebfc3f3cf29b46e0bafe9ad41eda7fa5 of tooluniverse.zenodo_tool.ZenodoTool:4
+msgid ""
+"query (str): Free text query max_results (int): Max results (default 10, max"
+" 200) community (str): Optional community slug to filter"
+msgstr ""
+"query (str)：自由文本查询  \n"
+"max_results (int)：最大结果数（默认10，最大200）  \n"
+"community (str)：可选的社区标识符，用于筛选"
+
+#: 2bfe48d630624774a315fee2b1bd4d41 of
+#: tooluniverse.zenodo_tool.ZenodoTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 246de71f7f85417a81dbead7371138a1 of
+#: tooluniverse.zenodo_tool.ZenodoTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现所期望的输入字典。"

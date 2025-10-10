@@ -46,5 +46,5 @@ How do I use it with Claude?
 Need more help?
 ---------------
 
-- **Troubleshooting**: :doc:`troubleshooting`
+- **Troubleshooting**: :doc:`help/troubleshooting`
 - **GitHub Issues**: `Report problems <https://github.com/mims-harvard/ToolUniverse/issues>`_

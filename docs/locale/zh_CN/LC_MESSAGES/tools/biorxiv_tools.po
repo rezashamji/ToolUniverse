@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:40-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/biorxiv_tools.rst:2 8199debd2f5f4cebab86294cd5eaf595
+msgid "Biorxiv Tools"
+msgstr "Biorxiv 工具"
+
+#: ../../tools/biorxiv_tools.rst:4 26b9de3992c34de291f51afc86fda24f
+msgid ""
+"**Configuration File**: ``biorxiv_tools.json`` **Tool Type**: Local **Tools "
+"Count**: 1"
+msgstr ""
+"**配置文件**：``biorxiv_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：1"
+
+#: ../../tools/biorxiv_tools.rst:8 c685cfdd31aa43ea9a3914279f919714
+msgid ""
+"This page contains all tools defined in the ``biorxiv_tools.json`` "
+"configuration file."
+msgstr "此页面包含 ``biorxiv_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/biorxiv_tools.rst:11 d2908e32a6434e1ebb5cb6213419ef47
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/biorxiv_tools.rst:14 bfc28c40a14a441ea08bd0b45f3a6a68
+msgid "**BioRxiv_search_preprints** (Type: BioRxivTool)"
+msgstr "**BioRxiv_search_preprints**（类型：BioRxiv工具）"
+
+#: ../../tools/biorxiv_tools.rst:16 878c94129b5647d79c1fc369f7abd939
+msgid ""
+"Search bioRxiv preprints using the public bioRxiv API. Returns preprints "
+"with title, authors, yea..."
+msgstr "使用公共 bioRxiv API 搜索 bioRxiv 预印本。返回包含标题、作者、年份的预印本信息..."
+
+#: ../../tools/biorxiv_tools.rst 6a3875fdd1b04e8586e4ba7130d91b68
+msgid "BioRxiv_search_preprints tool specification"
+msgstr "BioRxiv_search_preprints 工具规格说明"
+
+#: ../../tools/biorxiv_tools.rst:20 2bb2572f952141a3b18e5f893d4e8c9d
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/biorxiv_tools.rst:22 9cc3f15d4d1640d8844e9bfca91baa93
+msgid "**Name**: ``BioRxiv_search_preprints``"
+msgstr "**名称**：``BioRxiv_search_preprints``"
+
+#: ../../tools/biorxiv_tools.rst:23 4cc0ee2da9d64c4594c8d617c0acb700
+msgid "**Type**: ``BioRxivTool``"
+msgstr "**类型**：``BioRxivTool``"
+
+#: ../../tools/biorxiv_tools.rst:24 b204d012e5d041c8b06bbf777daa07f1
+msgid ""
+"**Description**: Search bioRxiv preprints using the public bioRxiv API. "
+"Returns preprints with title, authors, year, DOI, and URL."
+msgstr "**描述**：使用公共 bioRxiv API 搜索 bioRxiv 预印本。返回包含标题、作者、年份、DOI 和 URL 的预印本信息。"
+
+#: ../../tools/biorxiv_tools.rst:26 fc4053dddfb94473a9148f50daf5dd70
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/biorxiv_tools.rst:28 f54393aebf4448cb8757682360b9bc5a
+msgid ""
+"``query`` (string) (required) Search query for bioRxiv preprints. Use "
+"keywords separated by spaces to refine your search."
+msgstr "``query``（字符串）（必填）用于搜索bioRxiv预印本的查询词。使用空格分隔的关键词以细化搜索结果。"
+
+#: ../../tools/biorxiv_tools.rst:31 348f20d6c009464a9071ed8dc42f24e7
+msgid ""
+"``max_results`` (integer) (optional) Maximum number of preprints to return. "
+"Default is 10, maximum is 200."
+msgstr "``max_results``（整数）（可选）返回的预印本最大数量。默认值为10，最大值为200。"
+
+#: ../../tools/biorxiv_tools.rst:34 cea36c4592834bf780d049754246b997
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/biorxiv_tools.rst:48 5b9c9b092cdc4d018421905e87ef177f
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/biorxiv_tools.rst:50 e23329aa4cca4d48bb1abd308cd31a9b
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具总览"
+
+#: ../../tools/biorxiv_tools.rst:51 74662e0db70d41728b89d06b96ec9571
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

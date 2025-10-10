@@ -124,14 +124,6 @@ python human_expert_mcp_server.py --interface-only
 - `submit_expert_response`: Submit expert responses (for experts)
 - `get_expert_status`: Get system status
 
-## Available MCP Tools
-
-- `consult_human_expert`: Submit questions to human experts
-- `get_expert_response`: Check for expert responses
-- `list_pending_expert_requests`: View pending requests (for experts)
-- `submit_expert_response`: Submit expert responses (for experts)
-- `get_expert_status`: Get system status
-
 ## ToolUniverse Integration
 
 The tools are configured in `src/tooluniverse/data/expert_feedback_tools.json`. The configuration uses the `EXPERT_FEEDBACK_MCP_SERVER_URL` environment variable to determine the server URL.

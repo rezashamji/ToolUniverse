@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.logging_config.rst:2
+#: 73653c2ffb534761b30d9617b40f5eb5
+msgid "tooluniverse.logging\\_config module"
+msgstr "tooluniverse.logging_config 模块"
+
+#: aeba804e52e04f27afdd2de80012cc14 of tooluniverse.logging_config:1
+msgid "Global logging configuration for ToolUniverse"
+msgstr "ToolUniverse 的全局日志配置"
+
+#: 9ce51c5b9ede4c42b1d7fb76a99e1129 of tooluniverse.logging_config:3
+msgid ""
+"This module provides a centralized logging system based on Python's standard"
+" logging module. It allows controlling debug output across the entire "
+"ToolUniverse project with different verbosity levels."
+msgstr ""
+"该模块基于 Python 标准日志模块，提供了一个集中式日志系统。它允许在整个 ToolUniverse 项目中通过不同的详细级别控制调试输出。"
+
+#: 22b4819f15dc435f8d380f9b29c88522 of tooluniverse.logging_config:7
+msgid "Usage:"
+msgstr "用法："
+
+#: 2550bd9b57324ce79260c4772516a385 of tooluniverse.logging_config:8
+msgid ""
+"# Set log level via environment variable export TOOLUNIVERSE_LOG_LEVEL=DEBUG"
+msgstr "# 通过环境变量设置日志级别 export TOOLUNIVERSE_LOG_LEVEL=DEBUG"
+
+#: 33cc39c87c8b49d38de32d20aa8a8201 of tooluniverse.logging_config:11
+msgid ""
+"# Or set programmatically from tooluniverse.logging_config import "
+"setup_logging, get_logger setup_logging('DEBUG')"
+msgstr ""
+"# 或通过编程方式设置 from tooluniverse.logging_config import setup_logging, "
+"get_logger setup_logging('DEBUG')"
+
+#: 93bb9c0431f341da8bed8d763f6df625 of tooluniverse.logging_config:15
+msgid ""
+"# Use in your code logger = get_logger(__name__) logger.info(\"This is an "
+"info message\") logger.debug(\"This is a debug message\")"
+msgstr ""
+"# 在代码中使用  \n"
+"logger = get_logger(__name__)  \n"
+"logger.info(\"这是一个信息消息\")  \n"
+"logger.debug(\"这是一个调试消息\")"
+
+#: a5c05c636d3f46d69c73154f5f24d113 of
+#: tooluniverse.logging_config.ToolUniverseFormatter:1
+msgid "Bases: :py:class:`~logging.Formatter`"
+msgstr "基类：:py:class:`~logging.Formatter`"
+
+#: ac7c4da890ce49fdbdc70d53b747a102 of
+#: tooluniverse.logging_config.ToolUniverseFormatter:1
+msgid "Custom formatter with colored output and emoji prefixes"
+msgstr "带有彩色输出和表情符号前缀的自定义格式化器"
+
+#: 5c9ff519dd7346c6ac4c904108314c94 of
+#: tooluniverse.logging_config.ToolUniverseFormatter.format:1
+msgid "Format the specified record as text."
+msgstr "将指定记录格式化为文本。"
+
+#: eb020fcbbfeb4be1bc4bdc4b09439ec7 of
+#: tooluniverse.logging_config.ToolUniverseFormatter.format:3
+msgid ""
+"The record's attribute dictionary is used as the operand to a string "
+"formatting operation which yields the returned string. Before formatting the"
+" dictionary, a couple of preparatory steps are carried out. The message "
+"attribute of the record is computed using LogRecord.getMessage(). If the "
+"formatting string uses the time (as determined by a call to usesTime(), "
+"formatTime() is called to format the event time. If there is exception "
+"information, it is formatted using formatException() and appended to the "
+"message."
+msgstr ""
+"记录的属性字典被用作字符串格式化操作的操作数，从而生成返回的字符串。在格式化字典之前，需要执行几个准备步骤。记录的 message 属性通过 "
+"LogRecord.getMessage() 方法计算得出。如果格式化字符串使用了时间（通过调用 usesTime() 方法判断），则会调用 "
+"formatTime() 方法来格式化事件时间。如果存在异常信息，则会使用 formatException() 方法对其进行格式化，并将其附加到消息中。"
+
+#: e7a088eb1bb54160989c38059ae5b43b of
+#: tooluniverse.logging_config.ToolUniverseLogger:1
+msgid "Bases: :py:class:`object`"
+msgstr "基础：:py:class:`object`"
+
+#: f0bb05759a834fee980618db2af4f0d9 of
+#: tooluniverse.logging_config.ToolUniverseLogger:1
+msgid "Singleton logger manager for ToolUniverse"
+msgstr "工具宇宙的单例日志管理器"
+
+#: 30d3fd6f1cb644abb164e24aaff44448 of
+#: tooluniverse.logging_config.ToolUniverseLogger._setup_logger:1
+msgid "Setup the main ToolUniverse logger"
+msgstr "设置主 ToolUniverse 日志记录器"
+
+#: 2ecf862b25604c29b68a5b4a5e7593c5 50797189e9874bbd8592661ada841b59 of
+#: tooluniverse.logging_config.ToolUniverseLogger.get_logger:1
+#: tooluniverse.logging_config.get_logger:1
+msgid "Get a logger instance"
+msgstr "获取日志记录器实例"
+
+#: 88f602319ae74d71a31ed0ebf266ccae of
+#: tooluniverse.logging_config.ToolUniverseLogger.set_level:1
+msgid "Set logging level"
+msgstr "设置日志级别"
+
+#: 86e0486474784829ac961fd7c438610b of
+#: tooluniverse.logging_config.setup_logging:1
+msgid "Setup global logging configuration"
+msgstr "设置全局日志配置"
+
+#: ../../api/tooluniverse.logging_config.rst 266ae06195cf44439fbc9096acf203b8
+#: 731bd637d9294537afbcceda2184ecfd 94a3774427fe4f85be14a1dbd9747422
+#: e5f410ca112f4f878880f21f4437af8a
+msgid "Parameters"
+msgstr "参数"
+
+#: f1eee2d7cc604328a6771de6439ba0e0 of
+#: tooluniverse.logging_config.setup_logging:3
+msgid "Log level ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')"
+msgstr "日志级别（'DEBUG'、'INFO'、'WARNING'、'ERROR'、'CRITICAL'）"
+
+#: f44a9b9181c740fdb45da003e391bcba of
+#: tooluniverse.logging_config.get_logger:3
+msgid "Logger name (usually __name__)"
+msgstr "记录器名称（通常为 __name__）"
+
+#: ../../api/tooluniverse.logging_config.rst 5db71cd02069493eb4c1e9096ff7fbc0
+#: f2c6f64af06c4cc59f5033e47593b163
+msgid "Returns"
+msgstr "退货"
+
+#: 59e6f859cada4d35b31edcb35aacda5e of
+#: tooluniverse.logging_config.get_logger:6
+msgid "Logger instance"
+msgstr "记录器实例"
+
+#: ../../api/tooluniverse.logging_config.rst c8abf31634bb48599e91f03790540ebf
+#: fc4cdd0ac09f41dfa80730789e749e07
+msgid "Return type"
+msgstr "返回类型"
+
+#: d460626009dd4d0087f41ed91d962be3 of
+#: tooluniverse.logging_config.set_log_level:1
+msgid "Set global log level"
+msgstr "设置全局日志级别"
+
+#: 2e89768987b840e2aa0845f868c65fef e205fbf110d34c4aa03088f6ed6e2d82 of
+#: tooluniverse.logging_config.debug:1
+msgid "Log debug message"
+msgstr "记录调试消息"
+
+#: a719492e52d644ca9630466618481231 ff1b2ee91b1b49da94750b5f891e0838 of
+#: tooluniverse.logging_config.info:1
+msgid "Log info message"
+msgstr "日志信息消息"
+
+#: 7f7657f4cbf2425784961733c6c13af7 babe807c8e33463c99e613db883cf336 of
+#: tooluniverse.logging_config.progress_log:1
+msgid "Log progress message"
+msgstr "记录进度消息"
+
+#: 549ab42f9af749aab7db608fff8c898e of tooluniverse.logging_config.warning:1
+msgid "Log warning message"
+msgstr "记录警告消息"
+
+#: daa96d173fe54838b938ff3f038d73ac of tooluniverse.logging_config.error:1
+msgid "Log error message"
+msgstr "记录错误消息"
+
+#: 12e618fe85b048a080514b341a709a16 of tooluniverse.logging_config.critical:1
+msgid "Log critical message"
+msgstr "记录关键消息"
+
+#: ae5d09824a334f6694debd2c6f30444c of
+#: tooluniverse.logging_config.get_hook_logger:1
+msgid "Get a logger specifically configured for hook operations."
+msgstr "获取专门为钩子操作配置的记录器。"
+
+#: abb0baba9ce34d53ac5606131685eb30 of
+#: tooluniverse.logging_config.get_hook_logger:3
+msgid "Name of the logger. Defaults to 'HookManager'"
+msgstr "记录器名称。默认值为 'HookManager'"
+
+#: e1179a9f4be841cbb6be0e52912d1370 of
+#: tooluniverse.logging_config.get_hook_logger:6
+msgid "Configured logger for hook operations"
+msgstr "为钩子操作配置的日志记录器"
+
+#: 945e2d4339e243babcdd9d698958e010 of
+#: tooluniverse.logging_config.log_hook_execution:1
+msgid "Log hook execution details for monitoring and debugging."
+msgstr "记录钩子执行详情以便监控和调试。"
+
+#: b3030ded491542c9a8ac31a246f3307b of
+#: tooluniverse.logging_config.log_hook_execution:3
+msgid "Name of the hook that was executed"
+msgstr "执行的钩子名称"
+
+#: 5a0f35e3ed3c4a80a55ade326a41d96c of
+#: tooluniverse.logging_config.log_hook_execution:5
+msgid "Name of the tool the hook was applied to"
+msgstr "应用挂钩的工具名称"
+
+#: 4205ad1f6803450ebb99b5bfeef9f4d3 of
+#: tooluniverse.logging_config.log_hook_execution:7
+msgid "Time taken to execute the hook in seconds"
+msgstr "执行钩子所用时间（秒）"
+
+#: 20849b6462904714a5ee8e09177e21d4 of
+#: tooluniverse.logging_config.log_hook_execution:9
+msgid "Whether the hook execution was successful"
+msgstr "钩子执行是否成功"

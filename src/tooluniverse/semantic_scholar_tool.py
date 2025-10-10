@@ -38,7 +38,7 @@ class SemanticScholarTool(BaseTool):
         if response.status_code == 429:
             retry_after = int(response.headers.get("Retry-After", "2"))
             import time
-
+            print(f"Semantic Scholar API rate limited, waiting {retry_after} seconds...")
             time.sleep(retry_after)
             response = requests.get(
                 self.base_url, params=params, headers=headers, timeout=20
@@ -47,16 +47,37 @@ class SemanticScholarTool(BaseTool):
             return {
                 "error": f"Semantic Scholar API error {response.status_code}",
                 "reason": response.reason,
+                "suggestion": "API requests too frequent, please try again later or use an API key"
             }
         results = response.json().get("data", [])
-        papers = [
-            {
-                "title": p.get("title"),
-                "abstract": p.get("abstract"),
-                "journal": p.get("venue"),
-                "year": p.get("year"),
-                "url": p.get("url"),
-            }
-            for p in results
-        ]
+        papers = []
+        for p in results:
+            # Extract basic information
+            title = p.get("title")
+            abstract = p.get("abstract")
+            journal = p.get("venue")
+            year = p.get("year")
+            url = p.get("url")
+            
+            # Handle missing abstract
+            if not abstract:
+                abstract = "Abstract not available"
+            
+            # Handle missing journal information
+            if not journal:
+                journal = "Journal information not available"
+            
+            papers.append({
+                "title": title or "Title not available",
+                "abstract": abstract,
+                "journal": journal,
+                "year": year,
+                "url": url or "URL not available",
+                "data_quality": {
+                    "has_abstract": bool(abstract and abstract != "Abstract not available"),
+                    "has_journal": bool(journal and journal != "Journal information not available"),
+                    "has_year": bool(year),
+                    "has_url": bool(url and url != "URL not available")
+                }
+            })
         return papers

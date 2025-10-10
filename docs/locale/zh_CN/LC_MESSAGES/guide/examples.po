@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../guide/examples.rst:2 0ec2069c95e64bceb116f7092a0ad24d
+msgid "Examples & Code Samples"
+msgstr "示例与代码样本"
+
+#: ../../guide/examples.rst:4 e27d6a7facdb450595f483ab5ba327e8
+msgid ""
+"**Comprehensive examples from basic queries to advanced scientific "
+"workflows.**"
+msgstr "**从基础查询到高级科学工作流程的全面示例。**"
+
+#: ../../guide/examples.rst:6 d7cb856f11b64601918e785a62b30b6a
+msgid ""
+"Learn ToolUniverse through practical, copy-paste examples that you can run "
+"immediately. This Tutorial progresses from simple 30-second tests to complex"
+" multi-database research pipelines."
+msgstr "通过实用的复制粘贴示例学习 ToolUniverse，这些示例可以立即运行。本教程从简单的30秒测试逐步深入到复杂的多数据库研究流程。"
+
+#: ../../guide/examples.rst:9 c6f7fa2016444acfbe4a61facc80e6ee
+msgid "🚀 Getting Started Examples"
+msgstr "🚀 入门示例"
+
+#: ../../guide/examples.rst:12 02ed93e5514e4f87bb1520e13fa2ba85
+msgid "30-Second Test Drive"
+msgstr "30秒试驾"
+
+#: ../../guide/examples.rst:14 f8a315d1ccb44ce2b32d5b59b25eab5d
+msgid "Verify your installation and see ToolUniverse in action:"
+msgstr "验证您的安装并查看 ToolUniverse 的实际运行情况："
+
+#: ../../guide/examples.rst:32 52aba8176829481f9b36ab01629966e3
+msgid "Your First Scientific Query"
+msgstr "您的首次科学查询"
+
+#: ../../guide/examples.rst:60 77f1705a431048d38c85c35182dc54d2
+msgid "📊 Basic Scientific Queries"
+msgstr "📊 基础科学查询"
+
+#: ../../guide/examples.rst:63 91a0cae4bb704b4eb6e4f1d6f3e993fc
+msgid "Gene Information"
+msgstr "基因信息"
+
+#: ../../guide/examples.rst:65 829fe5339b4f4441b6c852ffd1d80891
+msgid "Get comprehensive protein/gene information:"
+msgstr "获取全面的蛋白质/基因信息："
+
+#: ../../guide/examples.rst:83 021931839c1b4f23997fbe591866c2a8
+msgid "Disease Information"
+msgstr "疾病信息"
+
+#: ../../guide/examples.rst:85 334251b86f014214adaeecbb653298a8
+msgid "Explore disease definitions and associations:"
+msgstr "探索疾病定义及关联："
+
+#: ../../guide/examples.rst:117 3770fa2f1fe043cfb18674460e7d7d14
+msgid "Drug Safety Analysis"
+msgstr "药物安全分析"
+
+#: ../../guide/examples.rst:119 5144cd24daa8466f952059d9b0ce3039
+msgid "Check drug safety information:"
+msgstr "检查药物安全信息："
+
+#: ../../guide/examples.rst:143 78a6697ff2b24643bab50130b3e73e6a
+msgid "Literature Search"
+msgstr "文献检索"
+
+#: ../../guide/examples.rst:145 9a0053602217487484647fef05892cff
+msgid "Find relevant scientific papers:"
+msgstr "查找相关科学论文："
+
+#: ../../guide/examples.rst:171 c513a562cd3e4755ba72a23cefc818e8
+msgid "🔬 Intermediate Workflows"
+msgstr "🔬 中级工作流程"
+
+#: ../../guide/examples.rst:174 f513fa7ac25a4201ad403e538fdf5c3a
+msgid "Drug-Target-Disease Analysis"
+msgstr "药物-靶点-疾病分析"
+
+#: ../../guide/examples.rst:176 36e9cf5163ab4101b70199dca8b5077d
+msgid "Comprehensive analysis connecting drugs, targets, and diseases:"
+msgstr "全面分析药物、靶点与疾病之间的关联："
+
+#: ../../guide/examples.rst:245 c1096bb27dc14fca9684badb41fb5aec
+msgid "Multi-Database Gene Analysis"
+msgstr "多数据库基因分析"
+
+#: ../../guide/examples.rst:247 26f6001b97434f8180bbe146ca3da976
+msgid "Comprehensive gene analysis across multiple databases:"
+msgstr "跨多个数据库的综合基因分析："
+
+#: ../../guide/examples.rst:320 61145c8a3c004e40a05636e39944e404
+msgid "Gene Enrichment Analysis"
+msgstr "基因富集分析"
+
+#: ../../guide/examples.rst:322 bd4b11e7de064d2cbba91134d2ed1ec5
+msgid "Perform comprehensive gene enrichment analysis:"
+msgstr "执行全面的基因富集分析："
+
+#: ../../guide/examples.rst:378 493afe17756e4541aaccdf114197ac42
+msgid "🏭 Advanced Workflows"
+msgstr "🏭 高级工作流程"
+
+#: ../../guide/examples.rst:381 557ba27b2aee40efb406b05e08b609dc
+msgid "Drug Discovery Pipeline"
+msgstr "药物发现流程"
+
+#: ../../guide/examples.rst:383 624e4f61dff9436597ae9d6c90d83c5e
+msgid "Complete drug discovery workflow:"
+msgstr "完整的药物发现工作流程："
+
+#: ../../guide/examples.rst:485 46206fb283d24f1bb8cba580ba5b5a13
+msgid "Pharmacovigilance Workflow"
+msgstr "药物警戒工作流程"
+
+#: ../../guide/examples.rst:487 fa8271712a854fe8bfdd512c9193aa22
+msgid "Real-world safety monitoring workflow:"
+msgstr "现实世界安全监测工作流程："
+
+#: ../../guide/examples.rst:568 c4968dfd6495474687ee4a5f61bfca9b
+msgid "Clinical Trial Analysis"
+msgstr "临床试验分析"
+
+#: ../../guide/examples.rst:570 2e634abdda8849b79e0aacac8965fc72
+msgid "Comprehensive clinical trial analysis:"
+msgstr "全面的临床试验分析："
+
+#: ../../guide/examples.rst:644 947a1de35bcc4d21808c6cbbd44ca8c3
+msgid "Multi-Modal Analysis"
+msgstr "多模态分析"
+
+#: ../../guide/examples.rst:646 3a95316c945e413aaa1d9921a3e2348f
+msgid "Comprehensive analysis combining multiple data sources:"
+msgstr "综合分析结合多种数据来源："
+
+#: ../../guide/examples.rst:757 f1cbddd15f234cf194c21f323dbda4be
+msgid "🛠️ Utility Functions"
+msgstr "🛠️ 实用函数"
+
+#: ../../guide/examples.rst:760 7fd96d24fe614d2aaf7d8a660210f7a3
+msgid "Error Handling Best Practices"
+msgstr "错误处理最佳实践"
+
+#: ../../guide/examples.rst:762 5fed841d73864ab680fadaf21b88bbd8
+msgid "Robust error handling for production use:"
+msgstr "用于生产环境的健壮错误处理："
+
+#: ../../guide/examples.rst:823 55ee84e6078543b3bb9523681fea7d96
+msgid "Performance Optimization"
+msgstr "性能优化"
+
+#: ../../guide/examples.rst:825 964aad477cc649feae667720be77268b
+msgid "Optimize for speed and efficiency:"
+msgstr "优化速度与效率："
+
+#: ../../guide/examples.rst:905 56d4df8ad0794d8f933ba0248bba07a3
+msgid "Interactive Tool Discovery"
+msgstr "交互式工具发现"
+
+#: ../../guide/examples.rst:907 b28fcee94ca34486aa2b4634652c2ed1
+msgid "Find tools for your research area:"
+msgstr "为您的研究领域查找工具："
+
+#: ../../guide/examples.rst:945 ec07a499676c4f95801e0f82f8b55d8c
+msgid "Troubleshooting Examples"
+msgstr "故障排除示例"
+
+#: ../../guide/examples.rst:947 e1e4fd9363d54d00b3b883afe769d3a1
+msgid "Common issues and solutions:"
+msgstr "常见问题及解决方案："
+
+#: ../../guide/examples.rst:995 8e78f6750bd0497c912fa123a7569c88
+msgid "🎯 Next Steps"
+msgstr "🎯 下一步"
+
+#: ../../guide/examples.rst:997 7a0e7b4a8d3e4e95a0dfb62f79b33400
+msgid "You've now seen ToolUniverse in action! Here's what to explore next:"
+msgstr "您现在已经见识了 ToolUniverse 的实际应用！接下来可以探索以下内容："
+
+#: ../../guide/examples.rst:999 4a57852577ec49a5b0688323c681ed25
+msgid ""
+"**🔬 Scientific Workflows** → :doc:`scientific_workflows` - Ready for real "
+"research? See domain-specific workflows for drug discovery, literature "
+"review, and more"
+msgstr ""
+"**🔬 科学工作流程** → :doc:`scientific_workflows` - "
+"准备好进行真实研究了吗？查看药物发现、文献综述等领域专用工作流程"
+
+#: ../../guide/examples.rst:1000 cfcb63c2544a49b2ba90ba8c62bea5f9
+msgid ""
+"**🛠️ All Available Tools** → :doc:`tools` - Explore the complete catalog of "
+"600+ scientific tools and their capabilities"
+msgstr "**🛠️ 所有可用工具** → :doc:`tools` - 探索包含600多种科学工具及其功能的完整目录"
+
+#: ../../guide/examples.rst:1001 0574f39678744f94b1496e10a7bf6291
+msgid ""
+"**⚡ Best Practices** → :doc:`best_practices` - Learn optimization "
+"techniques, security practices, and production deployment tips"
+msgstr "**⚡ 最佳实践** → :doc:`best_practices` - 学习优化技术、安全规范及生产环境部署技巧"
+
+#: ../../guide/examples.rst:1002 c26129f0e3ff4a5da7d372ffd2322e42
+msgid ""
+"**🎯 Custom Development** → :doc:`../tutorials/index` - Want to create your "
+"own tools or integrate with AI assistants? Check out our tutorials"
+msgstr ""
+"**🎯 定制开发** → :doc:`../tutorials/index` - 想要创建自己的工具或与 AI 助手集成？请查看我们的教程。"
+
+#: ../../guide/examples.rst:1005 febc4a69afc34cf6bb769caa66175b02
+msgid ""
+"**Practice tip**: Try modifying the examples above with your own research "
+"interests. Change gene names, diseases, or drug names to explore data "
+"relevant to your work!"
+msgstr "**实践建议**：尝试将上述示例替换为您自己的研究兴趣。更改基因名称、疾病或药物名称，以探索与您工作相关的数据！"

@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.unified_guideline_tools.rst:2
+#: e76747a975be40eeb67c39cb1ae784cd
+msgid "tooluniverse.unified\\_guideline\\_tools module"
+msgstr "tooluniverse.unified\\_guideline\\_tools 模块"
+
+#: 225c2a900a9d444aa6b2bc2403982cfc of tooluniverse.unified_guideline_tools:1
+msgid ""
+"Unified Guideline Tools Consolidated clinical guidelines search tools from "
+"multiple sources."
+msgstr ""
+"统一指南工具  \n"
+"整合来自多个来源的临床指南搜索工具。"
+
+#: 0e5532aacae9428eba85671dae1c610e 251264e86e3f4c178af27f5d3194382f
+#: 4abecef2c4ac4d2b940dc08236e65820 76bf8bf3f9ba445ebcdb9590e80e4bd5
+#: 9c5d73254d7b4b74a3f5e2fa55d5f0b6 d18171c6601a4360bb1a1a7de065e8c9
+#: e8429c36e0514ec69b22d1b02d113339 eba70694efc94b429cda9a5c42007fce of
+#: tooluniverse.unified_guideline_tools.EuropePMCGuidelinesTool:1
+#: tooluniverse.unified_guideline_tools.NICEGuidelineFullTextTool:1
+#: tooluniverse.unified_guideline_tools.NICEWebScrapingTool:1
+#: tooluniverse.unified_guideline_tools.OpenAlexGuidelinesTool:1
+#: tooluniverse.unified_guideline_tools.PubMedGuidelinesTool:1
+#: tooluniverse.unified_guideline_tools.TRIPDatabaseTool:1
+#: tooluniverse.unified_guideline_tools.WHOGuidelineFullTextTool:1
+#: tooluniverse.unified_guideline_tools.WHOGuidelinesTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 841020c0ead6439db0dfc510f702df68 of
+#: tooluniverse.unified_guideline_tools.NICEWebScrapingTool:1
+msgid ""
+"Real NICE guidelines search using web scraping. Makes actual HTTP requests "
+"to NICE website and parses HTML responses."
+msgstr "通过网页抓取实现对NICE指南的真实搜索。向NICE网站发出实际的HTTP请求，并解析HTML响应。"
+
+#: 0f9ad997641f42198a42ff6f33cdfcd8 2dcc569ef7084516ba72dfe1586bd7ec
+#: 464606f6f9ac4ac9984e8d48ce3a3d69 67509131730844aebe4f82fac143a930
+#: 83b410b12dd84bd482e90edeb1059bed 8b3192e15ed245aaa891ed42f1843fed
+#: 8fc555f7081c44a585edb3aebba46350 e392071742574f9796aab5b37cae81cd of
+#: tooluniverse.unified_guideline_tools.EuropePMCGuidelinesTool.run:1
+#: tooluniverse.unified_guideline_tools.NICEGuidelineFullTextTool.run:1
+#: tooluniverse.unified_guideline_tools.NICEWebScrapingTool.run:1
+#: tooluniverse.unified_guideline_tools.OpenAlexGuidelinesTool.run:1
+#: tooluniverse.unified_guideline_tools.PubMedGuidelinesTool.run:1
+#: tooluniverse.unified_guideline_tools.TRIPDatabaseTool.run:1
+#: tooluniverse.unified_guideline_tools.WHOGuidelineFullTextTool.run:1
+#: tooluniverse.unified_guideline_tools.WHOGuidelinesTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 01b53a4b3191450d9e9179142f9629c6 1c8663f227b747c69fcdef581f81cfde
+#: a85d51fa2ec54f9ab5c2a615ecdc3257 a86539a85a56455d956dd9cd0bda0562
+#: ba0dc14e9f744e79a95e834b1b01866a daeb5b6bee914284bc9135f190aae851
+#: e247375a091c402d8b2d43880fe89c46 ec51647069aa4975878c2f5a15164ec9 of
+#: tooluniverse.unified_guideline_tools.EuropePMCGuidelinesTool.run:3
+#: tooluniverse.unified_guideline_tools.NICEGuidelineFullTextTool.run:3
+#: tooluniverse.unified_guideline_tools.NICEWebScrapingTool.run:3
+#: tooluniverse.unified_guideline_tools.OpenAlexGuidelinesTool.run:3
+#: tooluniverse.unified_guideline_tools.PubMedGuidelinesTool.run:3
+#: tooluniverse.unified_guideline_tools.TRIPDatabaseTool.run:3
+#: tooluniverse.unified_guideline_tools.WHOGuidelineFullTextTool.run:3
+#: tooluniverse.unified_guideline_tools.WHOGuidelinesTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以便与大多数具体工具实现保持一致，这些工具通常期望输入为一个字典。"
+
+#: 88ddea8b04634ab0994e47df2cc2677d of
+#: tooluniverse.unified_guideline_tools.NICEWebScrapingTool._fetch_guideline_summary:1
+msgid "Fetch summary from a guideline detail page."
+msgstr "从指南详情页面获取摘要。"
+
+#: 1be1517bed3740e4a22fb18c73071688 of
+#: tooluniverse.unified_guideline_tools.NICEWebScrapingTool._search_nice_guidelines_real:1
+msgid "Search NICE guidelines using real web scraping."
+msgstr "使用真实的网页抓取功能搜索NICE指南。"
+
+#: d33a4a3b85b1461d9801a0586026a46c of
+#: tooluniverse.unified_guideline_tools.PubMedGuidelinesTool:1
+msgid ""
+"Search PubMed for clinical practice guidelines. Uses NCBI E-utilities with "
+"guideline publication type filter."
+msgstr "在PubMed中搜索临床实践指南。使用NCBI E-utilities并应用指南出版类型过滤器。"
+
+#: 6ee48b135a7746288701fb0f1abb3e1b of
+#: tooluniverse.unified_guideline_tools.PubMedGuidelinesTool._search_pubmed_guidelines:1
+msgid "Search PubMed for guideline publications."
+msgstr "在PubMed中搜索指南类出版物。"
+
+#: 268d06e336bb4f77823b25c39dd244cd of
+#: tooluniverse.unified_guideline_tools.EuropePMCGuidelinesTool:1
+msgid ""
+"Search Europe PMC for clinical guidelines. Europe PMC provides access to "
+"life science literature including guidelines."
+msgstr "在 Europe PMC 中搜索临床指南。Europe PMC 提供获取生命科学文献（包括指南）的途径。"
+
+#: 139d9330bc004b048ec00dee38ee6bd7 of
+#: tooluniverse.unified_guideline_tools.EuropePMCGuidelinesTool._search_europepmc_guidelines:1
+msgid "Search Europe PMC for guideline publications."
+msgstr "在 Europe PMC 中搜索指南出版物。"
+
+#: 4e1903de645b49ac9f1fc513f171a38d of
+#: tooluniverse.unified_guideline_tools.TRIPDatabaseTool:1
+msgid ""
+"Search TRIP Database (Turning Research into Practice). Specialized evidence-"
+"based medicine database with clinical guidelines filter."
+msgstr "搜索 TRIP 数据库（将研究转化为实践）。这是一个专门的循证医学数据库，带有临床指南筛选功能。"
+
+#: d05c4d6a47ab4c2ab1b03714b769d784 of
+#: tooluniverse.unified_guideline_tools.TRIPDatabaseTool._search_trip_database:1
+msgid "Search TRIP Database for clinical guidelines."
+msgstr "在 TRIP 数据库中搜索临床指南。"
+
+#: 1da0a805d63c4843b3a73c289b73f9e3 of
+#: tooluniverse.unified_guideline_tools.WHOGuidelinesTool:1
+msgid ""
+"WHO (World Health Organization) Guidelines Search Tool. Searches WHO "
+"official guidelines from their publications website."
+msgstr "WHO（世界卫生组织）指南搜索工具。用于从其官方网站的出版物页面搜索WHO官方指南。"
+
+#: a002de8cdcbd414abb51cf719a6cb002 of
+#: tooluniverse.unified_guideline_tools.WHOGuidelinesTool._fetch_guideline_description:1
+msgid "Fetch description from a WHO guideline detail page."
+msgstr "从WHO指南详情页获取描述。"
+
+#: f33149c47c03407e98c69dd41451d3c3 of
+#: tooluniverse.unified_guideline_tools.WHOGuidelinesTool._search_who_guidelines:1
+msgid "Search WHO guidelines by scraping their official website."
+msgstr "通过抓取WHO官方网站来搜索其指南。"
+
+#: e868469b87ca4d02ab734313237a2fc7 of
+#: tooluniverse.unified_guideline_tools.OpenAlexGuidelinesTool:1
+msgid ""
+"OpenAlex Guidelines Search Tool. Specialized tool for searching clinical "
+"practice guidelines using OpenAlex API."
+msgstr "OpenAlex 指南搜索工具。使用 OpenAlex API 搜索临床实践指南的专业工具。"
+
+#: 192d63f5ed6341ab974c688fc187d4ee of
+#: tooluniverse.unified_guideline_tools.OpenAlexGuidelinesTool._search_openalex_guidelines:1
+msgid "Search for clinical guidelines using OpenAlex API."
+msgstr "使用 OpenAlex API 搜索临床指南。"
+
+#: d996870417cc4adbb886974342e6d028 of
+#: tooluniverse.unified_guideline_tools.OpenAlexGuidelinesTool._reconstruct_abstract:1
+msgid "Reconstruct abstract from inverted index."
+msgstr "从倒排索引重建摘要。"
+
+#: 4efe4558f8d44933ba371e61a1248027 of
+#: tooluniverse.unified_guideline_tools.NICEGuidelineFullTextTool:1
+msgid ""
+"Fetch full text content from NICE guideline pages. Takes a NICE guideline "
+"URL and extracts the complete guideline content."
+msgstr "从NICE指南页面获取完整文本内容。输入NICE指南的URL，提取完整的指南内容。"
+
+#: 151bbefba58347b29084a2617be33676 of
+#: tooluniverse.unified_guideline_tools.NICEGuidelineFullTextTool._fetch_full_guideline:1
+msgid "Fetch complete guideline content from NICE page."
+msgstr "从NICE页面获取完整的指南内容。"
+
+#: 865da5483a4e496c932dcc87f931a1fc of
+#: tooluniverse.unified_guideline_tools.WHOGuidelineFullTextTool:1
+msgid ""
+"Fetch full text content from WHO guideline pages. Takes a WHO publication "
+"URL and extracts content or PDF download link."
+msgstr "从WHO指南页面获取全文内容。输入WHO出版物的URL，提取内容或PDF下载链接。"
+
+#: 9be61758b37f4c248f0972c7440aea70 of
+#: tooluniverse.unified_guideline_tools.WHOGuidelineFullTextTool._fetch_who_guideline:1
+msgid "Fetch WHO guideline content and PDF link."
+msgstr "获取WHO指南内容及PDF链接。"

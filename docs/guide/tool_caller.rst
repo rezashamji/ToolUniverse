@@ -37,7 +37,7 @@ Basic Tool Execution
 The ``run`` method is the primary execution engine that handles both single and multiple function calls.
 
 .. seealso::
-   For complete API documentation, see :doc:`../api_comprehensive` - ToolUniverse class and methods
+   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
 
 Tool Initialization and Caching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +45,7 @@ Tool Initialization and Caching
 Tools are dynamically loaded and cached for performance:
 
 .. seealso::
-   For complete API documentation, see :doc:`../api_comprehensive` - ToolUniverse class and methods
+   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
 
 Internal Execution Method
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,7 +53,7 @@ Internal Execution Method
 The ``run`` method internally uses ``run_one_function`` for individual tool execution:
 
 .. seealso::
-   For complete API documentation, see :doc:`../api_comprehensive` - ToolUniverse class and methods
+   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
 
 .. note::
    While ``run_one_function`` is available for direct use, the ``run`` method is the recommended interface as it provides better error handling, supports multiple function calls, and offers more flexible input parsing options.
@@ -95,7 +95,7 @@ Tool Validation
 The Tool Caller performs comprehensive validation before execution:
 
 .. seealso::
-   For complete API documentation, see :doc:`../api_comprehensive` - ToolUniverse class and methods
+   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
 
 .. _mcp-server-integration:
 
@@ -110,7 +110,7 @@ SMCP Server Overview
 The SMCP server extends standard MCP capabilities with scientific domain expertise, intelligent tool discovery, and optimized configurations for research applications. It automatically handles the complex task of exposing hundreds of specialized tools through a consistent, well-documented interface.
 
 .. seealso::
-   For complete SMCP API documentation, see :doc:`../api_comprehensive` - SMCP class
+   For complete SMCP API documentation, see :doc:`api_comprehensive` - SMCP class
 
 Key Features:
 - **Scientific Tool Integration**: Native access to 350+ specialized tools
@@ -180,7 +180,7 @@ Complete Parameter Reference
    - ``--transport``: Transport protocol (stdio, http, sse) - default: http
    - ``--host``: Host to bind to - default: 0.0.0.0
    - ``--port``: Port to bind to - default: 7000
-   - ``--name``: Server name - default: "SMCP ToolUniverse Server"
+   - ``--name``: Server name - default: "ToolUniverse SMCP Server"
    - ``--max-workers``: Maximum worker threads - default: 5
    - ``--no-search``: Disable intelligent search functionality
    - ``--verbose``, ``-v``: Enable verbose logging
@@ -448,4 +448,9 @@ This comprehensive Tutorial covers both direct API usage and MCP server integrat
 - Comprehensive error handling and validation ensure reliable operation
 - Debug logging and troubleshooting tools help resolve issues quickly
 
-For more detailed information, refer to the :doc:`../api_comprehensive` documentation and :doc:`../tutorials/aiscientists/adding_mcp_tools_en` tutorials.
+For more detailed information, refer to the :doc:`api_comprehensive` documentation and :doc:`tutorials/aiscientists/adding_mcp_tools_en` tutorials.
+
+.. toctree::
+   :hidden:
+
+   tutorials/aiscientists/adding_mcp_tools_en

@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:40-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/crossref_tools.rst:2 7e9f723a68fb4ad6bfdb32c802dd1e18
+msgid "Crossref Tools"
+msgstr "Crossref 工具"
+
+#: ../../tools/crossref_tools.rst:4 8ac6691f65244a3b8b56b583eb2a6ae7
+msgid ""
+"**Configuration File**: ``crossref_tools.json`` **Tool Type**: Local **Tools"
+" Count**: 1"
+msgstr ""
+"**配置文件**：``crossref_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：1"
+
+#: ../../tools/crossref_tools.rst:8 8633fe82a7614c908499e8f06eaac190
+msgid ""
+"This page contains all tools defined in the ``crossref_tools.json`` "
+"configuration file."
+msgstr "本页面包含 ``crossref_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/crossref_tools.rst:11 ebb816fa85fb48d29c8cfce5d647804f
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/crossref_tools.rst:14 dd1405e7a1b3488187e0fe24b2391a1f
+msgid "**Crossref_search_works** (Type: CrossrefTool)"
+msgstr "**Crossref_search_works**（类型：CrossrefTool）"
+
+#: ../../tools/crossref_tools.rst:16 c61477452c194cda97e76e69d2094ff0
+msgid ""
+"Search Crossref Works API for articles by keyword. Returns articles with "
+"title, abstract, journal..."
+msgstr "通过关键词搜索 Crossref Works API 中的文章。返回包含标题、摘要、期刊等信息的文章。"
+
+#: ../../tools/crossref_tools.rst e449203b0b4a4452a05e22393c83678b
+msgid "Crossref_search_works tool specification"
+msgstr "Crossref_search_works 工具规格说明"
+
+#: ../../tools/crossref_tools.rst:20 69c0f89dc59e40ae9247ba441287d0ce
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/crossref_tools.rst:22 8ceda13d5e644ff59241fb7aa6613a4e
+msgid "**Name**: ``Crossref_search_works``"
+msgstr "**名称**：``Crossref_search_works``"
+
+#: ../../tools/crossref_tools.rst:23 64a25cb3686c49d38b8b70404ab82890
+msgid "**Type**: ``CrossrefTool``"
+msgstr "**类型**：``CrossrefTool``"
+
+#: ../../tools/crossref_tools.rst:24 7ccb2eb2d86241659a80d3accf2591c4
+msgid ""
+"**Description**: Search Crossref Works API for articles by keyword. Returns "
+"articles with title, abstract, journal, year, DOI, and URL. Supports "
+"filtering by publication type and date range."
+msgstr ""
+"**描述**：通过关键词搜索 Crossref Works API 获取文章。返回包含标题、摘要、期刊、年份、DOI 及 URL "
+"的文章信息。支持按出版类型和日期范围进行筛选。"
+
+#: ../../tools/crossref_tools.rst:26 631162e4b2f34c31a7566ba91ad099c8
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/crossref_tools.rst:28 61047462138b43bc917541b16be808fa
+msgid ""
+"``query`` (string) (required) Search query for Crossref works. Use keywords "
+"separated by spaces to refine your search."
+msgstr "``query``（字符串）（必填）用于搜索 Crossref 作品的查询条件。使用空格分隔的关键词以细化搜索。"
+
+#: ../../tools/crossref_tools.rst:31 5290058f9af44db39f6d94f3ba03fd60
+msgid ""
+"``limit`` (integer) (optional) Number of articles to return. This sets the "
+"maximum number of articles retrieved from Crossref."
+msgstr "``limit``（整数）（可选）返回的文章数量。此参数设置从 Crossref 检索的文章最大数量。"
+
+#: ../../tools/crossref_tools.rst:34 92971bd1694e4eabb138610ab12eea75
+msgid ""
+"``filter`` (string) (optional) Optional filter string for Crossref API. "
+"Examples: 'type:journal-article,from-pub-date:2020-01-01'"
+msgstr ""
+"``filter``（字符串）（可选）Crossref API 的可选过滤字符串。例如：'type:journal-article,from-pub-"
+"date:2020-01-01'"
+
+#: ../../tools/crossref_tools.rst:37 f9f7d7e67bf24e73a990c6e28429b18a
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/crossref_tools.rst:51 b06db7baf8a8445e8214695eb091deeb
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/crossref_tools.rst:53 5b2b9359b1b74486b48cf32b6eff4de4
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/crossref_tools.rst:54 0485026dc0ee42d0be504e4e41b91917
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

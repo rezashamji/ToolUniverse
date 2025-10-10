@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version:  ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.biorxiv_tool.rst:2 0bde8f45421347c8b515c07d30dfa96c
+msgid "tooluniverse.biorxiv\\_tool module"
+msgstr "tooluniverse.biorxiv_tool 模块"
+
+#: 73f25b88def94bf0aab72359249b720e of tooluniverse.biorxiv_tool.BioRxivTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: ce872646a62948a492a3c3dcee4ce4a3 of tooluniverse.biorxiv_tool.BioRxivTool:1
+#, fuzzy
+msgid "Search bioRxiv preprints using bioRxiv's API (same interface as medRxiv)."
+msgstr "使用公共 bioRxiv API 搜索 bioRxiv 预印本。"
+
+#: ../../api/tooluniverse.biorxiv_tool.rst 938fd5a10e4d4d77bd56c8949ea57d26
+msgid "Parameters"
+msgstr "参数"
+
+#: 8f13235c334a477fa0109ed083a6ae8f of tooluniverse.biorxiv_tool.BioRxivTool:3
+msgid "Search term"
+msgstr "搜索词"
+
+#: 76871c5382f041c5a931a0bed2498726 of tooluniverse.biorxiv_tool.BioRxivTool:5
+msgid "Max results to return (default 10, max 200)"
+msgstr "返回的最大结果数（默认10，最大200）"
+
+#: a14631b82b2948608bc03f8d9d661cc6 of
+#: tooluniverse.biorxiv_tool.BioRxivTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 7bb0a9e852d54418bf1d0530cfa487a4 of
+#: tooluniverse.biorxiv_tool.BioRxivTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping"
+" to align with most concrete tool implementations which expect a "
+"dictionary of inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以与大多数具体工具实现保持一致，这些实现通常期望接收一个输入字典。"
+

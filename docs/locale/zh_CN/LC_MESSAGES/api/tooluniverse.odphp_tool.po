@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.odphp_tool.rst:2 e7931108e6694f77a0e58fee3c9675db
+msgid "tooluniverse.odphp\\_tool module"
+msgstr "tooluniverse.odphp_tool 模块"
+
+#: 25768016b4c8435bb2189b2a61a2b3e3 9f3341fb1bb54d129b91d336c164466b of
+#: tooluniverse.odphp_tool.ODPHPOutlinkFetch:1
+#: tooluniverse.odphp_tool.ODPHPRESTTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: d048d10da432401b836ad8a608363b48 of tooluniverse.odphp_tool.ODPHPRESTTool:1
+msgid "Base class for ODPHP (MyHealthfinder) REST API tools."
+msgstr "ODPHP（MyHealthfinder）REST API 工具的基类。"
+
+#: 9b4152ef3dfb4633a69e570a4f16a07a of
+#: tooluniverse.odphp_tool._sections_array:1
+msgid ""
+"Tolerant accessor for the sections array. Data sometimes uses "
+"Sections.Section (capital S) and sometimes Sections.section (lowercase)."
+msgstr ""
+"容错访问器用于 sections 数组。数据有时使用 Sections.Section（大写 S），有时使用 Sections.section（小写 "
+"s）。"
+
+#: 6c90178f7a5e4917a598e41aa5d4dc06 74dc26b173984a40837e95460cd09538
+#: fd77f561bece4f299bdc109c58c16164 of tooluniverse.odphp_tool.ODPHPItemList:1
+#: tooluniverse.odphp_tool.ODPHPMyHealthfinder:1
+#: tooluniverse.odphp_tool.ODPHPTopicSearch:1
+msgid "Bases: :py:class:`~tooluniverse.odphp_tool.ODPHPRESTTool`"
+msgstr "基类：:py:class:`~tooluniverse.odphp_tool.ODPHPRESTTool`"
+
+#: 11b3c1ed62f941b9b16be034bfcd45b7 of
+#: tooluniverse.odphp_tool.ODPHPMyHealthfinder:1
+msgid ""
+"Search for demographic-specific health recommendations (MyHealthfinder)."
+msgstr "搜索特定人群的健康建议（MyHealthfinder）。"
+
+#: 453cee4a40a3431689b641e49e931cba 901b85807e67471aa26b4515d53fe349
+#: b868f24dd3784558a52abdb57517d2ee c2ecc45e236f40deb0cf845852849e29 of
+#: tooluniverse.odphp_tool.ODPHPItemList.run:1
+#: tooluniverse.odphp_tool.ODPHPMyHealthfinder.run:1
+#: tooluniverse.odphp_tool.ODPHPOutlinkFetch.run:1
+#: tooluniverse.odphp_tool.ODPHPTopicSearch.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 2e9bb21ed00b4b6f9f71e3a5e378ef75 7098f7e4fd95416999fbf2cb686970a2
+#: 959b310121544bf290d9a3a903a40e7a b47ec7a541b54101b5c8f9e1af12714b of
+#: tooluniverse.odphp_tool.ODPHPItemList.run:3
+#: tooluniverse.odphp_tool.ODPHPMyHealthfinder.run:3
+#: tooluniverse.odphp_tool.ODPHPOutlinkFetch.run:3
+#: tooluniverse.odphp_tool.ODPHPTopicSearch.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现所期望的输入字典。"
+
+#: dd320dab0b2e46b4821b935e70e29ad9 of tooluniverse.odphp_tool.ODPHPItemList:1
+msgid "Retrieve list of topics or categories."
+msgstr "检索主题或类别列表。"
+
+#: 06537b7a09d6449eaee19afd2e8c2b0a of
+#: tooluniverse.odphp_tool.ODPHPTopicSearch:1
+msgid "Search for health topics by ID, category, or keyword."
+msgstr "通过ID、类别或关键词搜索健康主题。"
+
+#: b4e0eacf4da94aa8a0c47ea7e8fd6b21 of
+#: tooluniverse.odphp_tool.ODPHPOutlinkFetch:1
+msgid ""
+"Fetch article pages referenced by AccessibleVersion / RelatedItems.Url and "
+"return readable text. - HTML: extracts main/article/body text; strips "
+"nav/aside/footer/script/style. - PDF or non-HTML: returns metadata + URL so "
+"the agent can surface it."
+msgstr ""
+"根据AccessibleVersion / RelatedItems.Url获取引用的文章页面，并返回可读文本。  \n"
+"- 对于HTML：提取主要内容/文章/正文文本；剔除导航栏（nav）、侧边栏（aside）、页脚（footer）、脚本（script）和样式（style）。  \n"
+"- 对于PDF或非HTML：返回元数据和URL，以便智能体能够展示相关内容。"

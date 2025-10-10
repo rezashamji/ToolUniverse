@@ -1,0 +1,504 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:2
+#: 1de89b1ff9a94e91af20d9afb9dbd560
+msgid "GPT Codex CLI"
+msgstr "GPT Codex 命令行界面 (CLI)"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:4
+#: 87a3418d96fd493ca308bf4df5ade6cd
+msgid "**Building AI Scientists with GPT Codex CLI and ToolUniverse**"
+msgstr "**使用 GPT Codex CLI 和 ToolUniverse 构建 AI 科学家**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:7
+#: e46391552ddf4833b083bc3ba4212740
+msgid "Overview"
+msgstr "概述"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:9
+#: b76aff6056a84776a00e4e71f3d5e952
+msgid ""
+"GPT Codex CLI integration enables powerful command-line-based scientific "
+"research through the Model Context Protocol (MCP). This approach provides a "
+"terminal-based interface for scientific research while leveraging Codex's "
+"advanced reasoning capabilities and ToolUniverse's comprehensive scientific "
+"tools ecosystem."
+msgstr ""
+"GPT Codex CLI 集成通过模型上下文协议（MCP）实现了强大的基于命令行的科学研究。该方法提供了一个基于终端的科学研究界面，同时利用了 "
+"Codex 的先进推理能力和 ToolUniverse 的全面科学工具生态系统。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:29
+#: 9b550852ca9e441ebdadcf8443236104
+msgid "**Benefits of Codex CLI Integration**:"
+msgstr "**Codex CLI 集成的优势**："
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:31
+#: 4994f64a26cb4830b836b13602073587
+msgid ""
+"**Command-Line Efficiency**: Fast, scriptable scientific research workflows"
+msgstr "**命令行效率**：快速且可脚本化的科学研究工作流程"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:32
+#: 63a146d595cc477a99bf58ef517ab54b
+msgid ""
+"**Advanced Reasoning**: Codex's sophisticated reasoning for complex "
+"scientific problems"
+msgstr "**高级推理**：Codex 针对复杂科学问题的高级推理能力"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:33
+#: 9a6afc8a632a4319b5aeb618e10d0479
+msgid ""
+"**Comprehensive Tools**: Access to 600+ scientific tools across multiple "
+"domains"
+msgstr "**综合工具**：可访问涵盖多个领域的600多种科学工具"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:34
+#: 7bc209fcdbca4e638cb6df3723fdb7b9
+msgid ""
+"**Automated Execution**: Direct tool execution through natural language "
+"commands"
+msgstr "**自动执行**：通过自然语言命令直接执行工具"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:35
+#: a998d251402c41798f2b89ecc0eb6599
+msgid "**Batch Processing**: Handle multiple research tasks efficiently"
+msgstr "**批量处理**：高效处理多个研究任务"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:38
+#: a2467fd8581a47cc9e8b9740bd65f3a7
+msgid "Installation and Setup"
+msgstr "安装与设置"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:41
+#: b58b371669444da492c76bd2656c2e9f
+msgid "**Codex CLI**: Install using npm or Homebrew"
+msgstr "**Codex CLI**：通过 npm 或 Homebrew 安装"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:42
+#: f9c4c8d951994889aa4d10ae6ad0f82f
+msgid "**Python 3.10+**: Required for ToolUniverse"
+msgstr "**Python 3.10 及以上版本**：ToolUniverse 必需"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:43
+#: 9907d20c0a2f454fb3aff03440c85d24
+msgid "**UV Package Manager**: For dependency management"
+msgstr "**UV 包管理器**：用于依赖管理"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:44
+#: d705811791504d5ba1f0e31adbe3c05c
+msgid "**ChatGPT Account**: For authentication (recommended)"
+msgstr "**ChatGPT 账户**：用于身份验证（推荐）"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:47
+#: 72a75c65949947b69785c94e7633ac01
+msgid "Step 1: Install Codex CLI"
+msgstr "步骤 1：安装 Codex CLI"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:62
+#: ba7c1aa5a3c64cefac2ac1f11bf7a48b
+msgid "Step 2: Install UV and ToolUniverse"
+msgstr "步骤 2：安装 UV 和 ToolUniverse"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:77
+#: defddd090b4b41f287639b7ed80873b2
+msgid "Step 3: Configure Codex CLI"
+msgstr "步骤 3：配置 Codex CLI"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:79
+#: 4ca91b292c6c42de84c0b1f776b722b6
+msgid "Create the configuration file:"
+msgstr "创建配置文件："
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:86
+#: 9f8d37ddb05344c4a1e033fc31acf64c
+msgid "Add the ToolUniverse MCP server configuration:"
+msgstr "添加 ToolUniverse MCP 服务器配置："
+
+#: ../../guide/building_ai_scientists/codex_cli.rst
+#: a564587212244358b0f84f28ec1c1029
+msgid "Advanced Settings"
+msgstr "高级设置"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:120
+#: 3aa51374bf8d497fa2f026ae9a161308
+msgid "**Configuration Benefits:**"
+msgstr "**配置优势：**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:122
+#: 7bd36812dab6410a96992ade72200c8c
+msgid ""
+"``--exclude-tool-types PackageTool``: Removes package management tools to "
+"save context window space if you don't have coding needs"
+msgstr "``--exclude-tool-types PackageTool``：移除包管理工具，以节省上下文窗口空间，适用于无编码需求的情况。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:123
+#: 5bd9efbdc12c4a14b9590c5cbd4367aa
+msgid ""
+"``--hook-type SummarizationHook``: Provides summary of the output that is "
+"too long to fit in the context window"
+msgstr "``--hook-type SummarizationHook``：提供对超出上下文窗口长度的输出内容的摘要。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:124
+#: 894b6ec391ee42059bc414234681fbb8
+msgid ""
+"``AZURE_OPENAI_API_KEY`` and ``AZURE_OPENAI_ENDPOINT``: Required for "
+"SummarizationHook functionality"
+msgstr ""
+"``AZURE_OPENAI_API_KEY`` 和 ``AZURE_OPENAI_ENDPOINT``：SummarizationHook "
+"功能所必需的参数"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:127
+#: 7605677ce9454817b3dac0aaeceb4f7d
+msgid "Step 4: Authenticate and Start"
+msgstr "第4步：认证并启动"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:129
+#: 7c4950ce76a84799a30f7ba6d0179e40
+msgid "**Sign in with ChatGPT (recommended):**"
+msgstr "**使用 ChatGPT 登录（推荐）：**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:135
+#: e126f5217a3e4889b7f4f9ec70b8b678
+msgid "Select **Sign in with ChatGPT** when prompted."
+msgstr "在提示时选择**使用 ChatGPT 登录**。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:137
+#: 35138f3a41054a0c98a87ec8342989e7
+msgid "**Or use API key:**"
+msgstr "**或使用 API 密钥：**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:145
+#: 044293bf539948fc955901c5fa563079
+msgid "Step 5: Configure Context File (Optional)"
+msgstr "步骤5：配置上下文文件（可选）"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:147
+#: e671476ccaa24e60a5918819cb577a66
+msgid ""
+"Create a context file to provide project-specific instructions for "
+"scientific research:"
+msgstr ""
+"创建一个上下文文件，以提供针对科学研究项目的特定说明：\n"
+"\n"
+"上下文：技术文档"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:149
+#: 5dbd0cfadbb44082a11dd8c5904bf212
+msgid "**Create AGENTS.md file** in your project root:"
+msgstr "在项目根目录中**创建 AGENTS.md 文件**："
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:155
+#: 9562fbbaf8ca495c9fdcf71fafa37f80
+msgid "**Add ToolUniverse-specific context**:"
+msgstr ""
+"**添加与 ToolUniverse 相关的特定内容**：\n"
+"\n"
+"上下文：技术文档"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:170
+#: 4fa7a9dc4a2c4442b0825482b99ee45a
+msgid "Step 6: Verify Integration"
+msgstr "步骤6：验证集成"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:172
+#: 7fec77d59cf64aa7a03c4d2e7ddb0577
+msgid "Start Codex CLI: ``codex``"
+msgstr "启动 Codex CLI：``codex``"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:173
+#: 2a9094798d7b4eaa93e69e4681ee006d
+msgid "Check MCP status: ``/mcp``"
+msgstr "检查 MCP 状态：``/mcp``"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:174
+#: 4b1305672ffd412396d8a59bab78e016
+msgid "Test with: ``What scientific tools are available?``"
+msgstr "测试内容: ``有哪些科学工具可用？``"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:177
+#: 17e8a0c2512d4190b7dc815e4a3cc817
+msgid "Scientific Research Capabilities"
+msgstr "科学研究能力"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:179
+#: 7d6b05f317f4454f983fd8cfcfbac2d1
+msgid ""
+"Codex CLI with ToolUniverse provides comprehensive scientific research "
+"capabilities:"
+msgstr "Codex CLI 与 ToolUniverse 提供全面的科学研究功能："
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:181
+#: 3185a9a3970f4a629678c265819085fb
+msgid ""
+"**Drug Discovery and Development** - Target identification and validation - "
+"Drug information retrieval and analysis - Safety profile analysis and "
+"clinical trial data"
+msgstr ""
+"**药物发现与开发**  \n"
+"- 靶点识别与验证  \n"
+"- 药物信息检索与分析  \n"
+"- 安全性特征分析与临床试验数据"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:186
+#: c0341f356e6842579b2abca426d21f99
+msgid ""
+"**Genomics and Molecular Biology** - Gene analysis from UniProt - Protein "
+"structure and interaction analysis - Pathway analysis and functional "
+"annotation"
+msgstr ""
+"**基因组学与分子生物学**  \n"
+"- 来自UniProt的基因分析  \n"
+"- 蛋白质结构与相互作用分析  \n"
+"- 通路分析与功能注释"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:191
+#: 6f6f3b8f6bad4673bdf51a20bc84e5f7
+msgid ""
+"**Literature Research** - PubMed and Semantic Scholar searches - Abstract "
+"summarization and trend analysis - Citation analysis and gap identification"
+msgstr ""
+"**文献研究**  \n"
+"- PubMed 和 Semantic Scholar 检索  \n"
+"- 摘要总结与趋势分析  \n"
+"- 引用分析与空白识别"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:196
+#: 5dd6b3171ac24f18b238b921574daa73
+msgid ""
+"**Clinical Research** - ClinicalTrials.gov searches - FDA approvals and "
+"safety information - Regulatory information access"
+msgstr ""
+"**临床研究**  \n"
+"- ClinicalTrials.gov 搜索  \n"
+"- FDA 批准和安全信息  \n"
+"- 监管信息获取"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:201
+#: dce5e10f54e8498498dde33b8ad8a0c1
+msgid ""
+"**Multi-Step Workflows** - Hypothesis-driven research - Comparative analysis"
+" - Complex research task automation"
+msgstr "**多步骤工作流程** - 假设驱动的研究 - 比较分析 - 复杂研究任务自动化"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:208
+#: bcfebcc8c83642ea8af6f55ec56061a4
+msgid "Advanced Configuration"
+msgstr "高级配置"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:210
+#: 126dda033a5549d1ba4ba744f9e5f915
+msgid "**Tool Selection**"
+msgstr "**工具选择**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:212
+#: bbb5bf906bbb441eaf86865465639f70
+msgid "Load only specific tools for better performance:"
+msgstr "仅加载特定工具以提升性能："
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:229
+#: e46bbbc02d924656879e4aebede51713
+msgid "**Multiple Servers**"
+msgstr "**多台服务器**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:231
+#: 0751e3e415fc4b21b92508f5b47b705a
+msgid "Run different ToolUniverse instances for different purposes:"
+msgstr "为不同用途运行不同的 ToolUniverse 实例："
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:246
+#: 2bb551a577bc436ca8a0778afa9cd728
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:248
+#: 91fbd33007e049f0b2eaa4dc985a1858
+msgid "**Step-by-Step Debugging:**"
+msgstr "**逐步调试：**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:250
+#: 35c40f4a954d4a9e904f387709ff1d05
+msgid "**Check Codex CLI Version:** .. code-block:: bash"
+msgstr "**检查 Codex CLI 版本：** .. code-block:: bash"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:253
+#: 2819ee8c6227483b88bc806a90886757
+msgid "codex --version"
+msgstr "codex --版本"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:255
+#: 3f52d0fdf0034a1988244e3a2c26181f
+msgid ""
+"Ensure you're using the latest version. Older versions may have MCP server "
+"issues."
+msgstr "确保您使用的是最新版本。旧版本可能存在 MCP 服务器问题。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:257
+#: a5472fab35854fbfa35547a29851294e
+msgid "**Verify Configuration File:** .. code-block:: bash"
+msgstr "**验证配置文件：** .. code-block:: bash"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:260
+#: 37f89867a0704cbdaf5d8306adf051a5
+msgid "cat ~/.codex/config.toml"
+msgstr ""
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:262
+#: e322e3f52fe14be0b8d308816733cc20
+msgid "Ensure the file exists and has correct TOML syntax."
+msgstr "确保文件存在且具有正确的 TOML 语法。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:264
+#: 8eca0a3482a9456cac8b98f3a52d3218
+msgid "**Test MCP Server Manually:** .. code-block:: bash"
+msgstr "**手动测试 MCP 服务器：** .. code-block:: bash"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:267
+#: f0bb4a62dd32475a96d02d7ad6d230a4
+msgid "uv --directory ~/tooluniverse-env run tooluniverse-smcp-stdio"
+msgstr "uv --directory ~/tooluniverse-env 运行 tooluniverse-smcp-stdio"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:269
+#: 6df1d348f7f54348a697f67ab0c245d9
+msgid "This should start the MCP server directly to check if it works."
+msgstr "这将直接启动 MCP 服务器以检查其是否正常运行。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:271
+#: db94477709a443369c50e612469cd6c0
+msgid "**Check Codex CLI Logs:** .. code-block:: bash"
+msgstr "**检查 Codex CLI 日志：** .. code-block:: bash"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:274
+#: d2af50a73019468a8102f92502ca9325
+msgid "DEBUG=true codex"
+msgstr ""
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:276
+#: 7fc3fd330e5a407084ff3a65d1642a37
+msgid "This enables detailed logging to see MCP server connection errors."
+msgstr "这使得能够进行详细日志记录，以查看 MCP 服务器连接错误。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:278
+#: 30ae4db6d80649e4bfbbe503c1c9e09f
+msgid ""
+"**Verify MCP Server Status:** Start Codex CLI and run: .. code-block:: text"
+msgstr "**验证 MCP 服务器状态：** 启动 Codex CLI 并运行： .. code-block:: text"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:282
+#: 8aa37cdb17b2403999c6062aa5706de1
+msgid "codex /mcp"
+msgstr ""
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:285
+#: f306059dad2b415694e5abe76a393e65
+msgid "Check if ToolUniverse tools are listed."
+msgstr "检查 ToolUniverse 工具是否已列出。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:287
+#: 1191ec4b9cd64f489a17ecf79da29d2f
+msgid "**Check Available Commands:** .. code-block:: bash"
+msgstr "**检查可用命令：** .. code-block:: bash"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:290
+#: 789da328c9ed42e9ae29c89d03473862
+msgid "codex --help"
+msgstr ""
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:292
+#: ac1b408ccb3b49fbbaa56a2bdaa761c6
+msgid "View all available Codex CLI options."
+msgstr "查看所有可用的 Codex CLI 选项。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:294
+#: 8961b80ea519440ba109c0805035faec
+msgid "**Common Issues:**"
+msgstr "**常见问题：**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:296
+#: 35ce8ae723584802b384ad76d78e0584
+msgid ""
+"**MCP Server Not Loading**: Check ToolUniverse installation path and UV "
+"installation"
+msgstr "**MCP 服务器未加载**：请检查 ToolUniverse 安装路径及 UV 安装情况"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:297
+#: 23a49242f88c4f45a2fdcae0ab3c062b
+msgid ""
+"**No Tools Discovered**: Verify MCP server is working and tool filters "
+"aren't too restrictive"
+msgstr "**未发现工具**：请确认 MCP 服务器正常运行且工具筛选条件不过于严格。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:298
+#: b50fb6c3c06743b184765802d8967eec
+msgid "**Tools Not Executing**: Check API keys and network connectivity"
+msgstr "**工具未执行**：请检查 API 密钥和网络连接情况。"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:299
+#: 39799c9ed4564adda448b06b5be23102
+msgid "**Authentication Issues**: Ensure ChatGPT sign-in or valid API key"
+msgstr "**身份验证问题**：确保 ChatGPT 登录或有效的 API 密钥"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:301
+#: 25693f99cc474ab9a245d2876ca699f4
+msgid "**Debug Commands:**"
+msgstr "**调试命令：**"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:303
+#: 639bd5e80c354c599c99a2c0367703d4
+msgid "``DEBUG=true codex``: Run with detailed logging"
+msgstr "``DEBUG=true codex``：以详细日志模式运行"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:304
+#: 81d307d1135a40bab28594a96e8eaeec
+msgid "``codex --help``: Show all available options"
+msgstr "``codex --help``：显示所有可用选项"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:305
+#: b58d5f2e23024bf1a28aaf21a3fa6a05
+msgid "``/mcp``: Show MCP server status (if available)"
+msgstr "``/mcp``：显示 MCP 服务器状态（如可用）"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:308
+#: 0e89ae8bb3b74bdca684ee9717c63a61
+msgid "References"
+msgstr "参考文献"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:310
+#: 36f04b1be3404ab5b3a9079ef5c03929
+msgid "`Codex CLI GitHub Repository <https://github.com/openai/codex>`_"
+msgstr "Codex CLI GitHub 仓库 <https://github.com/openai/codex>`_"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:311
+#: 2717f1c29ada480fa170699a78a65d9a
+msgid ""
+"`Codex CLI Documentation <https://github.com/openai/codex/tree/main/docs>`_"
+msgstr "Codex CLI 文档 <https://github.com/openai/codex/tree/main/docs>`_"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:312
+#: cfff84064c03470bba5de23397c66062
+msgid "`Model Context Protocol (MCP) <https://modelcontextprotocol.io/>`_"
+msgstr "模型上下文协议（MCP）<https://modelcontextprotocol.io/>`_"
+
+#: ../../guide/building_ai_scientists/codex_cli.rst:313
+#: c794d723bc29407388aff8cf9c66e62b
+msgid "`ToolUniverse Documentation <https://tooluniverse.readthedocs.io/>`_"
+msgstr "ToolUniverse 文档 <https://tooluniverse.readthedocs.io/>_"

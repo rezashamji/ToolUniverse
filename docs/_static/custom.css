@@ -1,5 +1,15 @@
 /* Custom CSS for ToolUniverse documentation */
 
+/* Force primary sidebar to always be visible */
+#pst-primary-sidebar.bd-sidebar-primary {
+    display: block !important;
+}
+
+/* Remove hide-on-wide class effect */
+.bd-sidebar-primary.hide-on-wide {
+    display: block !important;
+}
+
 /* Logo and branding */
 .wy-side-nav-search .wy-dropdown > a img.logo {
     width: 200px;

@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.doaj_tool.rst:2 5c1cb74859ae404d89ae31ca73f80fb3
+msgid "tooluniverse.doaj\\_tool module"
+msgstr "tooluniverse.doaj_tool 模块"
+
+#: 4c19953fc1b84746a904c8fcef2d177d of tooluniverse.doaj_tool.DOAJTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 31c817a42e4542a9ab6cc0023c53ba55 of tooluniverse.doaj_tool.DOAJTool:1
+msgid "Search DOAJ (Directory of Open Access Journals) articles and journals."
+msgstr "搜索 DOAJ（开放获取期刊目录）中的文章和期刊。"
+
+#: 011817af8aaf43369270410783bc47dd of tooluniverse.doaj_tool.DOAJTool:3
+msgid "Parameters (arguments):"
+msgstr "参数（参数列表）："
+
+#: cdca084262f54ad2ab5d31cb25c91843 of tooluniverse.doaj_tool.DOAJTool:4
+msgid ""
+"query (str): Query string (Lucene syntax supported by DOAJ) max_results "
+"(int): Max number of results (default 10, max 100) type (str): \"articles\" "
+"or \"journals\" (default: \"articles\")"
+msgstr ""
+"query (str)：查询字符串（支持 DOAJ 的 Lucene 语法）  \n"
+"max_results (int)：最大结果数量（默认 10，最大 100）  \n"
+"type (str)：“articles” 或 “journals”（默认：“articles”）"
+
+#: c878e3ffb2404a5186dbe4865fcf3551 of tooluniverse.doaj_tool.DOAJTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 2ea6f2cc709d425bb3a299b0bf6cd18c of tooluniverse.doaj_tool.DOAJTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现所期望的输入字典。"

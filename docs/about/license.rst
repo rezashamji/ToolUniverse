@@ -6,7 +6,7 @@ ToolUniverse License Information
 MIT License
 -----------
 
-.. include:: ../LICENSE
+.. include:: ../../LICENSE
    :literal:
 
 Third-Party Licenses

@@ -1,0 +1,815 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/xml_tools.rst:2 5e8c60d35ca245759ec543e9dfa83e7d
+msgid "Xml Tools"
+msgstr "Xml 工具"
+
+#: ../../tools/xml_tools.rst:4 f6c34801fb2648c384a7cfb7d604e173
+msgid ""
+"**Configuration File**: ``xml_tools.json`` **Tool Type**: Local **Tools "
+"Count**: 19"
+msgstr ""
+"**配置文件**：``xml_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：19"
+
+#: ../../tools/xml_tools.rst:8 dcd5b926e03042209fb28a885fa5ecdf
+msgid ""
+"This page contains all tools defined in the ``xml_tools.json`` configuration"
+" file."
+msgstr "此页面包含在``xml_tools.json``配置文件中定义的所有工具。"
+
+#: ../../tools/xml_tools.rst:11 5b78d6a18ccc4f169825ecc81e8bb139
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/xml_tools.rst:14 556018b602b54c7bbaf451bf729c297a
+msgid "**drugbank_filter_drugs_by_name** (Type: XMLTool)"
+msgstr "**drugbank_filter_drugs_by_name**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:16 b7293d7e086446e9a57be688a794fdc4
+msgid ""
+"Filter DrugBank records based on conditions applied to drug names. For "
+"example, find drugs whose ..."
+msgstr "根据药物名称的条件筛选 DrugBank 记录。例如，查找药物名称符合特定条件的药物..."
+
+#: ../../tools/xml_tools.rst 8db894fb010944e89292a8d144738fda
+msgid "drugbank_filter_drugs_by_name tool specification"
+msgstr "drugbank_filter_drugs_by_name 工具规范"
+
+#: ../../tools/xml_tools.rst:20 ../../tools/xml_tools.rst:57
+#: ../../tools/xml_tools.rst:97 ../../tools/xml_tools.rst:137
+#: ../../tools/xml_tools.rst:177 ../../tools/xml_tools.rst:217
+#: ../../tools/xml_tools.rst:257 ../../tools/xml_tools.rst:297
+#: ../../tools/xml_tools.rst:337 ../../tools/xml_tools.rst:377
+#: ../../tools/xml_tools.rst:417 ../../tools/xml_tools.rst:457
+#: ../../tools/xml_tools.rst:497 ../../tools/xml_tools.rst:537
+#: ../../tools/xml_tools.rst:577 ../../tools/xml_tools.rst:617
+#: ../../tools/xml_tools.rst:657 ../../tools/xml_tools.rst:697
+#: ../../tools/xml_tools.rst:737 190fe6e34ff940ea9111f12737d1f87f
+#: 198138bfa7974421a83f30cce614a3b3 1d75eb5965924ed49388edadc54e8d80
+#: 2166e1eb444f47e6a7fe9a87391210e4 23dc42b3fabd47e0a3860abf4df8c23a
+#: 30080fd2eeb14dcca108bca3e9d83461 3613ef83cae548daab71b2b72c1dc7af
+#: 5a910ac9af824958a66d718f7eba38d7 689484b30cf743ef97e3be67b4c3c915
+#: 73ac63dac96d4e2f914e4b48ab9064a9 85043457c1c34aee95995c2d1395f59b
+#: 963990b8b3e0425db59e1c3a7a348042 99815292db404e0dac7c4b82f3cc5931
+#: aaedd8c0a66e474291eea3359d2ff48b b4892efade5949b7b4cc48a510d2c927
+#: c751d090c75543dca4bf5bf82e09ea5a dee0c6e70211494a9860f0a30c020428
+#: e78b0e7a91de4de0a905ffb6acd6bb0d f5a3251ac9bc43edac69a94429abd137
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/xml_tools.rst:22 1e6d3d59d86a4da8afdc76e4249d05e0
+msgid "**Name**: ``drugbank_filter_drugs_by_name``"
+msgstr "**名称**：``drugbank_filter_drugs_by_name``"
+
+#: ../../tools/xml_tools.rst:23 ../../tools/xml_tools.rst:60
+#: ../../tools/xml_tools.rst:100 ../../tools/xml_tools.rst:140
+#: ../../tools/xml_tools.rst:180 ../../tools/xml_tools.rst:220
+#: ../../tools/xml_tools.rst:260 ../../tools/xml_tools.rst:300
+#: ../../tools/xml_tools.rst:340 ../../tools/xml_tools.rst:380
+#: ../../tools/xml_tools.rst:420 ../../tools/xml_tools.rst:460
+#: ../../tools/xml_tools.rst:500 ../../tools/xml_tools.rst:540
+#: ../../tools/xml_tools.rst:580 ../../tools/xml_tools.rst:620
+#: ../../tools/xml_tools.rst:660 ../../tools/xml_tools.rst:700
+#: ../../tools/xml_tools.rst:740 2ff2778ec9ed4dc7af4505d74eb55b51
+#: 3a7d972775f44af787469aac87788b8e 42855c3ffa7a4638b994643037fe596a
+#: 5fe9f6c796e948769e974c2ef2f55ad4 7a7d6b3891e4479b89de89e4b22a7f8e
+#: 8075c37ee96240ddb5ef247bee9f815e 87ff6b31657f4bd5be3c86c34b0ede6f
+#: 92e159974f0e4fe883eeedd399bcda54 97a11ae7a9754e4884f3c981358fc65d
+#: 9ced4679e9ac4daeb810021dbb25f89a b290b01bcbf44b2d9f921aa4530db726
+#: c01fc2ab852d4687a1c28f0fd7e648f7 cf0b58f2e43a4b669dd0938ba9cca41d
+#: d8b984e9e75446dbb3b3078a6103e19f d91d7779cfcc426f9132eeea5e21d1a8
+#: e3a2b3f5306b42ec95d5b29be8479027 e5cb758ae76e4d148a6e09f6c84db11f
+#: eea801ed896a4705a60d7511505f8243 f8fe636ef1cb456a8f3b3f9c33ebe1e6
+msgid "**Type**: ``XMLTool``"
+msgstr "**类型**：``XMLTool``"
+
+#: ../../tools/xml_tools.rst:24 b7b88ff1c7034b3d899d9d0596aea110
+msgid ""
+"**Description**: Filter DrugBank records based on conditions applied to drug"
+" names. For example, find drugs whose names end with 'cillin' (penicillin "
+"antibiotics), contain 'mab', or are exactly 'Insulin'."
+msgstr ""
+"**描述**：根据药物名称的条件筛选DrugBank记录。例如，查找名称以“cillin”结尾的药物（青霉素类抗生素）、包含“mab”的药物，或名称完全为“Insulin”的药物。"
+
+#: ../../tools/xml_tools.rst:26 ../../tools/xml_tools.rst:63
+#: ../../tools/xml_tools.rst:103 ../../tools/xml_tools.rst:143
+#: ../../tools/xml_tools.rst:183 ../../tools/xml_tools.rst:223
+#: ../../tools/xml_tools.rst:263 ../../tools/xml_tools.rst:303
+#: ../../tools/xml_tools.rst:343 ../../tools/xml_tools.rst:383
+#: ../../tools/xml_tools.rst:423 ../../tools/xml_tools.rst:463
+#: ../../tools/xml_tools.rst:503 ../../tools/xml_tools.rst:543
+#: ../../tools/xml_tools.rst:583 ../../tools/xml_tools.rst:623
+#: ../../tools/xml_tools.rst:663 ../../tools/xml_tools.rst:703
+#: ../../tools/xml_tools.rst:743 1f8a000e3faa4e10ad98f72930f75cca
+#: 23a9bfabe2ab46afa0fdf2d7364e3168 3d71f8b129eb4fd090770f5b751e9e62
+#: 5cc5ebe933ba403d8b7a107e7f892550 6c7d01486bfb4e678cb73bececb5e029
+#: 6f00155670bb4e05926ce6e3ab806b4f 77a8ab12ba7241caa1f5d9b383f5b3ad
+#: 7c5debb3d1c645cba4d05cd6b81a5bbe 83ef1e9137d242cdbefd641f24307300
+#: 8628d86c2cd544e98a1b363c336f4bd0 8775e6e526fb4f6c873b86a97160a9d5
+#: a037ec7368014c1789b12d63ed580add a3e50e983e804544a0f97241bf16737f
+#: aa46852ba24b4bd1b3c07cc959f3b3a3 bd4e41ad2ec4456c875a541223ce1c60
+#: cf55aea8fbe74769b5c6250faafd7be5 de4b43caea974e0a82cd692ed23a77f8
+#: e92ee6e2fa9a4ab693f764aa4972754a ea03fcd7501c466f98005dd04540d79b
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/xml_tools.rst:28 1b991caabf0a4ab4bf4d1831d9bb2d07
+msgid ""
+"``condition`` (string) (required) The condition to apply for filtering."
+msgstr "``condition``（字符串）（必填）用于筛选的条件。"
+
+#: ../../tools/xml_tools.rst:31 3bd9828900734b6f97b8ff419810d9bc
+msgid ""
+"``value`` (string) (optional) The value to use with the condition (e.g., "
+"'Aspirin' for 'starts_with'). Required for 'contains', 'starts_with', "
+"'ends_with', and 'exact' conditions."
+msgstr ""
+"``value``（字符串）（可选）用于条件的值（例如，对于“starts_with”条件，值为 "
+"'Aspirin'）。对于“contains”、“starts_with”、“ends_with”和“exact”条件，此值为必填项。"
+
+#: ../../tools/xml_tools.rst:34 f6f6f635ac4a4504b812896b3f755370
+msgid "``limit`` (integer) (optional) Maximum number of results to return."
+msgstr "``limit``（整数）（可选）返回结果的最大数量。"
+
+#: ../../tools/xml_tools.rst:37 ../../tools/xml_tools.rst:77
+#: ../../tools/xml_tools.rst:117 ../../tools/xml_tools.rst:157
+#: ../../tools/xml_tools.rst:197 ../../tools/xml_tools.rst:237
+#: ../../tools/xml_tools.rst:277 ../../tools/xml_tools.rst:317
+#: ../../tools/xml_tools.rst:357 ../../tools/xml_tools.rst:397
+#: ../../tools/xml_tools.rst:437 ../../tools/xml_tools.rst:477
+#: ../../tools/xml_tools.rst:517 ../../tools/xml_tools.rst:557
+#: ../../tools/xml_tools.rst:597 ../../tools/xml_tools.rst:637
+#: ../../tools/xml_tools.rst:677 ../../tools/xml_tools.rst:717
+#: ../../tools/xml_tools.rst:757 01bedba7d14d4443af6293f95b378d46
+#: 101517c6fbe04f27ba5528d2337acca1 103e52dbc8144b6ba1a5bf9efc7c91ec
+#: 2bbe4f6373014d19a0a732e119b52d3e 3357e4f3c24e4c4fafb2c86e0c0a53e5
+#: 5e32445d7e6849c5ba8201bba7d841ad 6c8ab7b8bd80447282ddcdbc4196af98
+#: 73b699cb649f4642aafa0493f8d7af49 93149dec07094ae5b9b6ff0295720660
+#: 936f9d0991384837995d611ff069c96f b9a794bf532c419eb5ca577431917e12
+#: bf5d2e5c15e3494084777dd95e381fc7 c9ff80e8a6fe4c4bacd054f9fc275cbd
+#: d52fb61498e440a6ac98f9cd3fd3c60e da499e3f88454afba66153c4634a18b7
+#: e625a38235f442918731cc9468c2aae7 e815d3d903ef426a89166213eff7307f
+#: f92939ae98814c61bc290d70092f616d fa50bfba88a7440586e5d269cfceee9e
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/xml_tools.rst:51 9eee37558bf24664a893b63012476c27
+msgid ""
+"**drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id** (Type: XMLTool)"
+msgstr ""
+"**drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:53 e807fc95cfde4c3482ba925431a92254
+msgid ""
+"Get basic drug information including name, description, CAS number, and "
+"approval status by drug n..."
+msgstr "获取基本药物信息，包括名称、描述、CAS编号以及审批状态，通过药物名称查询..."
+
+#: ../../tools/xml_tools.rst 56a41c5b811c46659a54a807b6a53575
+msgid ""
+"drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id 工具规范"
+
+#: ../../tools/xml_tools.rst:59 93e3cca19f7249e7957bee8a94115bce
+msgid "**Name**: ``drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id``"
+msgstr "**名称**: ``drugbank_get_drug_basic_info_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:61 76748cff8da64b8cb4d6789dd7969260
+msgid ""
+"**Description**: Get basic drug information including name, description, CAS"
+" number, and approval status by drug name or DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取基本药物信息，包括名称、描述、CAS编号和审批状态。"
+
+#: ../../tools/xml_tools.rst:65 c0f37cea817c4a4798d0cadc7af2f8c3
+msgid "``query`` (string) (required) Drug name or DrugBank ID to search for"
+msgstr "``query``（字符串）（必填）要搜索的药物名称或DrugBank ID"
+
+#: ../../tools/xml_tools.rst:68 ../../tools/xml_tools.rst:108
+#: ../../tools/xml_tools.rst:148 ../../tools/xml_tools.rst:188
+#: ../../tools/xml_tools.rst:228 ../../tools/xml_tools.rst:268
+#: ../../tools/xml_tools.rst:308 ../../tools/xml_tools.rst:348
+#: ../../tools/xml_tools.rst:388 ../../tools/xml_tools.rst:428
+#: ../../tools/xml_tools.rst:468 ../../tools/xml_tools.rst:508
+#: ../../tools/xml_tools.rst:548 ../../tools/xml_tools.rst:588
+#: 1ba6457de9744a28904c8c7cd284c27e 3188b7cfce204781a18c78a7a1a96bc9
+#: 48398f23a89844469d632f987a6ab991 5d50b1e986274232bde4d50fcec7b50f
+#: 7432bbd67be24fcc900e33494ca6ea24 7686a90f21c744ec813a4e1a12080c63
+#: 82c1b1a373d24482ba4ca3e2ae3c9660 84b0a0e8132e4bba84e6d3ee20eb13d0
+#: 8a7d6d34226645e7990f475da7ca5e8e c4e3a78cdde748cfa49b63f9e2079adf
+#: c6ba676d04934b628b2c9b6a28bdd11f c7afc3a832fe4708991a2740ed6bd697
+#: cab577d41e2b4449be5dda03b52e76eb efbd6d71844b4aef9aeb6d2f554ae978
+msgid ""
+"``case_sensitive`` (boolean) (optional) Select True to perform a case-"
+"sensitive search"
+msgstr "``case_sensitive``（布尔值）（可选）选择 True 以执行区分大小写的搜索"
+
+#: ../../tools/xml_tools.rst:71 a3c9603688a241afa0ace6fa7289c3fc
+msgid ""
+"``exact_match`` (boolean) (optional) Select True to require an exact match "
+"with the queried name or ID"
+msgstr "``exact_match``（布尔值）（可选）选择 True 以要求与查询的名称或 ID 完全匹配"
+
+#: ../../tools/xml_tools.rst:74 ../../tools/xml_tools.rst:114
+#: ../../tools/xml_tools.rst:154 ../../tools/xml_tools.rst:194
+#: ../../tools/xml_tools.rst:234 ../../tools/xml_tools.rst:274
+#: ../../tools/xml_tools.rst:314 ../../tools/xml_tools.rst:354
+#: ../../tools/xml_tools.rst:394 ../../tools/xml_tools.rst:434
+#: ../../tools/xml_tools.rst:474 ../../tools/xml_tools.rst:514
+#: ../../tools/xml_tools.rst:554 ../../tools/xml_tools.rst:594
+#: ../../tools/xml_tools.rst:634 ../../tools/xml_tools.rst:674
+#: ../../tools/xml_tools.rst:714 ../../tools/xml_tools.rst:754
+#: 12558f809c944ca5bf646eeb1f66b339 156627ad97a34f42b3d7cd5867efe161
+#: 219d9b9f429948fdb2c0e82b78736e43 22437428ded3465ebee4d3b3c84c42d6
+#: 2cee7cb13367465eb45af0875583a034 303c6b7d7b6c4272aedf9025560224fa
+#: 4dd0eb2459ed4b59a98807a08e349875 4df02da00e2d463d9bcbc8e9dd899dd5
+#: 77cfaca0a955457cb281e5a1b89372f4 7989f87c02904d07886324a64fa61f94
+#: 91929e550402470bb53e632f1f50b9d1 93c520dcd63c470c8edb0ba05d604dfb
+#: a1daab8ed58846029d8076bdcbcf7cd8 ae68088b9bd14c55b7376cbfbaf08746
+#: b199e99f48df4ada965423f21cee0baa d97b989be6254555aef5b765cb1163a0
+#: e111ac9803ea4fcfb4e994467fe3e4da ed1f5d25504741229df551f90ac8770c
+msgid "``limit`` (integer) (optional) Maximum number of results to return"
+msgstr "``limit``（整数）（可选）返回结果的最大数量"
+
+#: ../../tools/xml_tools.rst:91 fd29f4743de74777a177c328c3c1cd01
+msgid ""
+"**drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id** (Type: XMLTool)"
+msgstr ""
+"**drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:93 2e5d56458d994029a20787a0545aaf6c
+msgid ""
+"Get drug chemical properties including molecular formula, weight, and "
+"structure by drug name or D..."
+msgstr "通过药物名称或D获取药物的化学性质，包括分子式、分子量和结构。"
+
+#: ../../tools/xml_tools.rst 708df89365f344588c8189218d6bd7eb
+msgid ""
+"drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id 工具规范"
+
+#: ../../tools/xml_tools.rst:99 0b230d768d474d629c20c915045f9d33
+msgid "**Name**: ``drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id``"
+msgstr "**名称**: ``drugbank_get_drug_chemistry_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:101 7515b71231574ee9acec203fc9e69d52
+msgid ""
+"**Description**: Get drug chemical properties including molecular formula, "
+"weight, and structure by drug name or DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取药物的化学属性，包括分子式、分子量和结构。"
+
+#: ../../tools/xml_tools.rst:105 ../../tools/xml_tools.rst:345
+#: ../../tools/xml_tools.rst:385 ../../tools/xml_tools.rst:505
+#: ../../tools/xml_tools.rst:545 ../../tools/xml_tools.rst:585
+#: 5c71512e3c64487ab25fa7b240a31000 6ba7502c33e948228de864364138e5bc
+#: 8d6e4513acc54810b5b2b3c1071b8bfd 96f6472e0c694d01aacf60097e057ca2
+#: c6c0b811854c441e8bf341ca091a3def cb7bd8403f574ad1b591e020ea2c3e76
+msgid "``query`` (string) (required) Drug name or Drugbank ID to search for"
+msgstr "``query``（字符串）（必填）用于搜索的药物名称或Drugbank ID"
+
+#: ../../tools/xml_tools.rst:111 ../../tools/xml_tools.rst:151
+#: ../../tools/xml_tools.rst:191 ../../tools/xml_tools.rst:231
+#: ../../tools/xml_tools.rst:271 ../../tools/xml_tools.rst:311
+#: ../../tools/xml_tools.rst:351 ../../tools/xml_tools.rst:391
+#: ../../tools/xml_tools.rst:431 ../../tools/xml_tools.rst:471
+#: ../../tools/xml_tools.rst:511 ../../tools/xml_tools.rst:551
+#: ../../tools/xml_tools.rst:591 02cd102090074e4585f72b72849c44c9
+#: 037e4218f59e4078bd02b2163cc6ddc0 04ad34da250745c6a80c4b4c4e2fd9bf
+#: 0589fd7f6f034c1f97e4f9ebf04d22d6 0abbcfec8e0441a7b21923b873d98efc
+#: 23898bed0ae54163854a6fa5638b7f8a 2d9140dd1b064c2ab3e5a2663ad57489
+#: 68f34decbd9942599947ac2c2cd47811 a5590478fd3441b6b5f5bb99482fb15d
+#: a76b6475d5d54c42b7e4b0b02bc12dcd de60934c12a248459394fe3d826559dc
+#: e29d26736c644aa7a132729e38076ce4 ff294969eb5945a2b83049b9efc21f93
+msgid ""
+"``exact_match`` (boolean) (optional) Select True to require an exact match"
+msgstr "``exact_match``（布尔值）（可选）选择 True 以要求完全匹配"
+
+#: ../../tools/xml_tools.rst:131 fa4a24b08ec44f06a1e1746d0d0a31d7
+msgid ""
+"**drugbank_get_drug_interactions_by_drug_name_or_drugbank_id** (Type: "
+"XMLTool)"
+msgstr ""
+"**drugbank_get_drug_interactions_by_drug_name_or_drugbank_id**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:133 f6b87f8501f5441c92fc79ac0ea692a3
+msgid ""
+"Get drug interactions and contraindications by drug name or DrugBank ID."
+msgstr "通过药物名称或 DrugBank ID 获取药物相互作用和禁忌症信息。"
+
+#: ../../tools/xml_tools.rst 0ce1c8be6ac140b88ff3ef21993b0aca
+msgid ""
+"drugbank_get_drug_interactions_by_drug_name_or_drugbank_id tool "
+"specification"
+msgstr "drugbank_get_drug_interactions_by_drug_name_or_drugbank_id 工具规格说明"
+
+#: ../../tools/xml_tools.rst:139 dadff5d61e364f2388094bd280eb7462
+msgid ""
+"**Name**: ``drugbank_get_drug_interactions_by_drug_name_or_drugbank_id``"
+msgstr "**名称**：``drugbank_get_drug_interactions_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:141 db211f2b86c34f1aa9821f267f6d6ee9
+msgid ""
+"**Description**: Get drug interactions and contraindications by drug name or"
+" DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取药物相互作用和禁忌症。"
+
+#: ../../tools/xml_tools.rst:145 6fd8fedbdf634446bf4cd1f24b0e9795
+msgid "``query`` (string) (required) Drug name to search for interactions"
+msgstr "``query``（字符串）（必填）用于搜索相互作用的药物名称"
+
+#: ../../tools/xml_tools.rst:171 06dbb3bfca244d3a82dcc1d5357a0605
+msgid ""
+"**drugbank_get_drug_name_and_description_by_indication** (Type: XMLTool)"
+msgstr "**drugbank_get_drug_name_and_description_by_indication**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:173 070e9b445a7c42d18dc01fb1c9c71d2f
+msgid "Get drug name, Drugbank ID, and description by its indication."
+msgstr "通过适应症获取药物名称、Drugbank ID 及描述。"
+
+#: ../../tools/xml_tools.rst dabc25731e6043f3a1ae53384eb1bb89
+msgid ""
+"drugbank_get_drug_name_and_description_by_indication tool specification"
+msgstr "drugbank_get_drug_name_and_description_by_indication 工具规范"
+
+#: ../../tools/xml_tools.rst:179 5559cba5b2034945b1055453b8f6c71c
+msgid "**Name**: ``drugbank_get_drug_name_and_description_by_indication``"
+msgstr "**名称**：``drugbank_get_drug_name_and_description_by_indication``"
+
+#: ../../tools/xml_tools.rst:181 bd90ecef7a0d4623bd91d20bddd18d1e
+msgid ""
+"**Description**: Get drug name, Drugbank ID, and description by its "
+"indication."
+msgstr "**描述**：根据适应症获取药物名称、Drugbank ID 及其描述。"
+
+#: ../../tools/xml_tools.rst:185 b5f750c6fb4244cc88e2b742812d720b
+msgid "``query`` (string) (required) Drug indication to search for"
+msgstr "``query``（字符串）（必填）用于搜索的药物适应症"
+
+#: ../../tools/xml_tools.rst:211 76dac0a2ef3346dd97589fe005ec3825
+msgid ""
+"**drugbank_get_drug_name_and_description_by_pathway_name** (Type: XMLTool)"
+msgstr ""
+"**drugbank_get_drug_name_and_description_by_pathway_name**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:213 ff01f9b198d3481d905c28fe9fa4a76a
+msgid "Get drug names and descriptions by pathway name."
+msgstr "通过通路名称获取药物名称及描述。"
+
+#: ../../tools/xml_tools.rst f3a07e92372c4ef68a4b2cd021ee2dc6
+msgid ""
+"drugbank_get_drug_name_and_description_by_pathway_name tool specification"
+msgstr "drugbank_get_drug_name_and_description_by_pathway_name 工具规格说明"
+
+#: ../../tools/xml_tools.rst:219 0de8f6b0cd194d9582a04629c56c11f6
+msgid "**Name**: ``drugbank_get_drug_name_and_description_by_pathway_name``"
+msgstr "**名称**：``drugbank_get_drug_name_and_description_by_pathway_name``"
+
+#: ../../tools/xml_tools.rst:221 b27f20cbc3cf46d2a1c2a947fd571049
+msgid "**Description**: Get drug names and descriptions by pathway name."
+msgstr "**描述**：通过通路名称获取药物名称及其描述。"
+
+#: ../../tools/xml_tools.rst:225 71fe34bcf4e14a13bfb24a488cea884d
+msgid "``query`` (string) (required) Pathway name to search for"
+msgstr "``query``（字符串）（必填）要搜索的路径名称"
+
+#: ../../tools/xml_tools.rst:251 97fdcbf9458b49c188eb2e6d4b85e603
+msgid ""
+"**drugbank_get_drug_name_and_description_by_target_name** (Type: XMLTool)"
+msgstr "**drugbank_get_drug_name_and_description_by_target_name**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:253 3c8aa0fc04b94de88eddedd443fc90a6
+msgid ""
+"Get associated drug names and descriptions for a particular target, enzyme, "
+"carrier, or transport..."
+msgstr "获取特定靶点、酶、载体或转运蛋白相关的药物名称及描述..."
+
+#: ../../tools/xml_tools.rst ffc47c9ab37c4c45a047f6e1ad3b814e
+msgid ""
+"drugbank_get_drug_name_and_description_by_target_name tool specification"
+msgstr "drugbank_get_drug_name_and_description_by_target_name 工具规格说明"
+
+#: ../../tools/xml_tools.rst:259 b4ab980370344800856a5f4108018652
+msgid "**Name**: ``drugbank_get_drug_name_and_description_by_target_name``"
+msgstr "**名称**：``drugbank_get_drug_name_and_description_by_target_name``"
+
+#: ../../tools/xml_tools.rst:261 a5022d1642e3485abcbef25f3da0f964
+msgid ""
+"**Description**: Get associated drug names and descriptions for a particular"
+" target, enzyme, carrier, or transporter protein."
+msgstr "**描述**：获取特定靶点、酶、载体或转运蛋白相关的药物名称及其描述。"
+
+#: ../../tools/xml_tools.rst:265 1755f4e75cdd4362945d55a9911b404a
+msgid ""
+"``query`` (string) (required) Target, enzyme, carrier, or transporter name "
+"to search for"
+msgstr "``query``（字符串）（必填）要搜索的靶点、酶、载体或转运蛋白名称"
+
+#: ../../tools/xml_tools.rst:291 57379b5fc9704353ab5d29b5ebb3d86e
+msgid ""
+"**drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action** "
+"(Type: XMLTool)"
+msgstr ""
+"**drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:293 95006c27656a41f4b0f01675f925a5b0
+msgid ""
+"Get drug name, ID, description, pharmacodynamics, mechanism of action, and "
+"pharmacokinetics by dr..."
+msgstr "获取药物名称、编号、描述、药效学、作用机制及药代动力学信息，方法为 dr..."
+
+#: ../../tools/xml_tools.rst dfabc24e1b014e908d74ca5882c35d31
+msgid ""
+"drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action tool "
+"specification"
+msgstr ""
+"drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action "
+"工具规格说明"
+
+#: ../../tools/xml_tools.rst:299 f652d86829b348c5a15c39ea23fe6ffb
+msgid ""
+"**Name**: "
+"``drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action``"
+msgstr ""
+"**名称**：``drugbank_get_drug_name_description_pharmacology_by_mechanism_of_action``"
+
+#: ../../tools/xml_tools.rst:301 e7ea094a53ef416fabaa417072e66e5e
+msgid ""
+"**Description**: Get drug name, ID, description, pharmacodynamics, mechanism"
+" of action, and pharmacokinetics by drug mechanism of action."
+msgstr "**描述**：通过药物作用机制获取药物名称、编号、描述、药效学、作用机制及药代动力学信息。"
+
+#: ../../tools/xml_tools.rst:305 ee9bc8c326fb4a3d8d05f4d30e1e7343
+msgid ""
+"``query`` (string) (required) Query string to search for in mechanism of "
+"action descriptions"
+msgstr "``query``（字符串）（必填）用于在作用机制描述中搜索的查询字符串"
+
+#: ../../tools/xml_tools.rst:331 56462f04e21448fbb9f09eb4a2456c29
+msgid ""
+"**drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id** "
+"(Type: XMLTool)"
+msgstr ""
+"**drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:333 f614f22098b24782878504559b54e0c4
+msgid "Get drug pathways and metabolic reactions by drug name or DrugBank ID."
+msgstr "通过药物名称或 DrugBank ID 获取药物通路和代谢反应。"
+
+#: ../../tools/xml_tools.rst bdc493d6e8eb4eb18f45aeab30ba8733
+msgid ""
+"drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id tool "
+"specification"
+msgstr ""
+"drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id 工具规格说明"
+
+#: ../../tools/xml_tools.rst:339 4b2bd9665cfa463f8eb582daa05fd6f2
+msgid ""
+"**Name**: "
+"``drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id``"
+msgstr ""
+"**名称**：``drugbank_get_drug_pathways_and_reactions_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:341 883ec506d9404382b019b3f5b07f8548
+msgid ""
+"**Description**: Get drug pathways and metabolic reactions by drug name or "
+"DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取药物通路和代谢反应。"
+
+#: ../../tools/xml_tools.rst:371 986b1f4704a0489ba12ae2d0c443a6c3
+msgid "**drugbank_get_drug_products_by_name_or_drugbank_id** (Type: XMLTool)"
+msgstr "**drugbank_get_drug_products_by_name_or_drugbank_id**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:373 abf72f367694469ab7a80684ab983d68
+msgid ""
+"Get commercial drug products, dosage forms, and pricing informatiomon by "
+"drug name or DrugBank ID."
+msgstr "通过药品名称或DrugBank ID获取商业药品、剂型及价格信息。"
+
+#: ../../tools/xml_tools.rst 9b6f5335fdf34689949308b363f1a7e8
+msgid "drugbank_get_drug_products_by_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_drug_products_by_name_or_drugbank_id 工具规格说明"
+
+#: ../../tools/xml_tools.rst:379 f5cd3a19a0324d35963858547e0a248b
+msgid "**Name**: ``drugbank_get_drug_products_by_name_or_drugbank_id``"
+msgstr "**名称**：``drugbank_get_drug_products_by_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:381 7908153c661a4569a28acf1a02af4085
+msgid ""
+"**Description**: Get commercial drug products, dosage forms, and pricing "
+"informatiomon by drug name or DrugBank ID."
+msgstr "**描述**：通过药品名称或 DrugBank ID 获取商业药品、剂型及定价信息。"
+
+#: ../../tools/xml_tools.rst:411 3f9eecd9eecd4da28a2f9d95e98aaab6
+msgid ""
+"**drugbank_get_drug_references_by_drug_name_or_drugbank_id** (Type: XMLTool)"
+msgstr ""
+"**drugbank_get_drug_references_by_drug_name_or_drugbank_id**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:413 a72b2e9739c04ee5b845d9423766b7f1
+msgid ""
+"Get drug literature references, patents, and external links by drug name or "
+"DrugBank ID."
+msgstr "通过药物名称或DrugBank ID获取药物文献参考、专利及外部链接。"
+
+#: ../../tools/xml_tools.rst 2de4e0c0018d4f7684d774124fe94a88
+msgid ""
+"drugbank_get_drug_references_by_drug_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_drug_references_by_drug_name_or_drugbank_id 工具规范"
+
+#: ../../tools/xml_tools.rst:419 8f9a706088344408a6894f968df59486
+msgid "**Name**: ``drugbank_get_drug_references_by_drug_name_or_drugbank_id``"
+msgstr "**名称**：``drugbank_get_drug_references_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:421 5b085a0990164b0e871c79fd5619b203
+msgid ""
+"**Description**: Get drug literature references, patents, and external links"
+" by drug name or DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取药物文献参考、专利及外部链接。"
+
+#: ../../tools/xml_tools.rst:425 16205856ac2c4fde8cce48f25990c159
+msgid ""
+"``query`` (string) (required) Drug name or Drugbank ID to search for "
+"references"
+msgstr "``query``（字符串）（必填）用于搜索参考文献的药物名称或Drugbank ID"
+
+#: ../../tools/xml_tools.rst:451 14e1e9e3a9144abbad19fee3c6be2ead
+msgid ""
+"**drugbank_get_indications_by_drug_name_or_drugbank_id** (Type: XMLTool)"
+msgstr "**drugbank_get_indications_by_drug_name_or_drugbank_id**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:453 c707f882593d4194988e452fe0ebb94c
+msgid "Get drug indications and therapeutic uses by drug name or DrugBank ID."
+msgstr "通过药物名称或 DrugBank ID 获取药物适应症和治疗用途。"
+
+#: ../../tools/xml_tools.rst 5acfb15ace8e47369a2ebc8cbebcbf95
+msgid ""
+"drugbank_get_indications_by_drug_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_indications_by_drug_name_or_drugbank_id 工具规格说明"
+
+#: ../../tools/xml_tools.rst:459 735b2c098e7d45d6a67a3c1d9536b960
+msgid "**Name**: ``drugbank_get_indications_by_drug_name_or_drugbank_id``"
+msgstr "**名称**：``drugbank_get_indications_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:461 f0cc9efe853947ba97503d9055b12c63
+msgid ""
+"**Description**: Get drug indications and therapeutic uses by drug name or "
+"DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取药物适应症和治疗用途。"
+
+#: ../../tools/xml_tools.rst:465 056c5bf805e6469ebaacdd83efe2d3e1
+msgid "``query`` (string) (required) Drug name or ID to search for"
+msgstr "``query``（字符串）（必填）用于搜索的药物名称或编号"
+
+#: ../../tools/xml_tools.rst:491 4629e337493044fc8ffee0cc5b8eb301
+msgid ""
+"**drugbank_get_pharmacology_by_drug_name_or_drugbank_id** (Type: XMLTool)"
+msgstr "**drugbank_get_pharmacology_by_drug_name_or_drugbank_id**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:493 443cdd960b7845b2a60d63bc471e8d8a
+msgid ""
+"Get drug pharmacodynamics, mechanism of action, and pharmacokinetics by drug"
+" name or Drugbank ID."
+msgstr "通过药物名称或Drugbank ID获取药物的药效学、作用机制及药代动力学信息。"
+
+#: ../../tools/xml_tools.rst a31f4e6b4ca04e43888a172a5d0cc7d8
+msgid ""
+"drugbank_get_pharmacology_by_drug_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_pharmacology_by_drug_name_or_drugbank_id 工具规范"
+
+#: ../../tools/xml_tools.rst:499 76b7262b0bc54322bddcade0e01daa3b
+msgid "**Name**: ``drugbank_get_pharmacology_by_drug_name_or_drugbank_id``"
+msgstr "**名称**：``drugbank_get_pharmacology_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:501 662470dc45964984b9780b9c57ac98d6
+msgid ""
+"**Description**: Get drug pharmacodynamics, mechanism of action, and "
+"pharmacokinetics by drug name or Drugbank ID."
+msgstr "**描述**：通过药物名称或Drugbank ID获取药物的药效学、作用机制及药代动力学信息。"
+
+#: ../../tools/xml_tools.rst:531 3ef98d2cd1744b1b99dcb3b98c6ff1c6
+msgid "**drugbank_get_safety_by_drug_name_or_drugbank_id** (Type: XMLTool)"
+msgstr "**drugbank_get_safety_by_drug_name_or_drugbank_id**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:533 7a2ff63197874369a07edd3224f6949a
+msgid ""
+"Get drug toxicity, contraindications, and safety information by drug name or"
+" DrugBank ID."
+msgstr "通过药物名称或 DrugBank ID 获取药物毒性、禁忌症及安全性信息。"
+
+#: ../../tools/xml_tools.rst e4427bf49d7d424ab48f25fdc6ec8d8e
+msgid "drugbank_get_safety_by_drug_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_safety_by_drug_name_or_drugbank_id 工具规格说明"
+
+#: ../../tools/xml_tools.rst:539 b409b71a548a44b68cd14c561b4f4ab5
+msgid "**Name**: ``drugbank_get_safety_by_drug_name_or_drugbank_id``"
+msgstr "**名称**：``drugbank_get_safety_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:541 8276abbbaa914a92a144b52c647cf655
+msgid ""
+"**Description**: Get drug toxicity, contraindications, and safety "
+"information by drug name or DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取药物毒性、禁忌症及安全性信息。"
+
+#: ../../tools/xml_tools.rst:571 f7c233fd02c14c699331f2f22e844424
+msgid "**drugbank_get_targets_by_drug_name_or_drugbank_id** (Type: XMLTool)"
+msgstr "**drugbank_get_targets_by_drug_name_or_drugbank_id**（类型：XML工具）"
+
+#: ../../tools/xml_tools.rst:573 91b742d15e514ab28e425edfb3b818ae
+msgid ""
+"Get drug targets, enzymes, carriers, and transporters by drug name or "
+"DrugBank ID."
+msgstr "通过药物名称或DrugBank ID获取药物靶点、酶、载体和转运蛋白。"
+
+#: ../../tools/xml_tools.rst 25768ae92f7d4b9a943df0820696318b
+msgid "drugbank_get_targets_by_drug_name_or_drugbank_id tool specification"
+msgstr "drugbank_get_targets_by_drug_name_or_drugbank_id 工具规格说明"
+
+#: ../../tools/xml_tools.rst:579 cf6241742b044c4fb6888eaba6c84595
+msgid "**Name**: ``drugbank_get_targets_by_drug_name_or_drugbank_id``"
+msgstr "**名称**：``drugbank_get_targets_by_drug_name_or_drugbank_id``"
+
+#: ../../tools/xml_tools.rst:581 5aad0cc5a3de4241a6b6f239e06e8765
+msgid ""
+"**Description**: Get drug targets, enzymes, carriers, and transporters by "
+"drug name or DrugBank ID."
+msgstr "**描述**：通过药物名称或DrugBank ID获取药物靶点、酶、载体和转运蛋白。"
+
+#: ../../tools/xml_tools.rst:611 03e5053816804a2fb1b069f62fdf309f
+msgid "**mesh_get_subjects_by_pharmacological_action** (Type: XMLTool)"
+msgstr "**mesh_get_subjects_by_pharmacological_action**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:613 4d0c5bad019c4f3a98308a7afe56f440
+msgid ""
+"Find MeSH (Medical Subject Heading) subjects with matching pharmacological "
+"actions."
+msgstr "查找具有匹配药理作用的MeSH（医学主题词）条目。"
+
+#: ../../tools/xml_tools.rst e57f047e76fb430480ff40af10b922f5
+msgid "mesh_get_subjects_by_pharmacological_action tool specification"
+msgstr "mesh_get_subjects_by_pharmacological_action 工具规格说明"
+
+#: ../../tools/xml_tools.rst:619 f3a447405676463b9e8126fd2d66b47a
+msgid "**Name**: ``mesh_get_subjects_by_pharmacological_action``"
+msgstr "**名称**：``mesh_get_subjects_by_pharmacological_action``"
+
+#: ../../tools/xml_tools.rst:621 c5a36c23db1144b2805dff9b67a8e0e1
+msgid ""
+"**Description**: Find MeSH (Medical Subject Heading) subjects with matching "
+"pharmacological actions."
+msgstr "**描述**：查找具有匹配药理作用的MeSH（医学主题词）主题。"
+
+#: ../../tools/xml_tools.rst:625 ef9248cb20a745c89451381f2b47d7e2
+msgid ""
+"``query`` (string) (required) Pharmacological action to search for in MeSH "
+"subjects"
+msgstr "``query``（字符串）（必填）用于在MeSH主题中搜索的药理作用"
+
+#: ../../tools/xml_tools.rst:628 83406e4693a148b2bfa475be2bbe49bb
+msgid ""
+"``case_sensitive`` (boolean) (optional) Select True to perform a case-"
+"sensitive search for the pharmacological action query"
+msgstr "``case_sensitive``（布尔值）（可选）选择 True 以执行药理作用查询的区分大小写搜索"
+
+#: ../../tools/xml_tools.rst:631 2511b2f7b22947978db21448b4cee9e3
+msgid ""
+"``exact_match`` (boolean) (optional) Select True to require an exact match "
+"for the pharmacological action query"
+msgstr "``exact_match``（布尔值）（可选）选择 True 以要求药理作用查询的精确匹配"
+
+#: ../../tools/xml_tools.rst:651 bb5b147f1afe4df89275d78ded533072
+msgid "**mesh_get_subjects_by_subject_id** (Type: XMLTool)"
+msgstr "**mesh_get_subjects_by_subject_id**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:653 e4d8a62779dc42e7a036230ed4f11234
+msgid ""
+"Find MeSH (Medical Subject Heading) subjects with a matching subject ID "
+"(also called Descriptor UI)."
+msgstr "查找具有匹配主题ID（也称为描述符UI）的MeSH（医学主题词）主题。"
+
+#: ../../tools/xml_tools.rst c7f005a31a1a48419dfe40b45f15e047
+msgid "mesh_get_subjects_by_subject_id tool specification"
+msgstr "mesh_get_subjects_by_subject_id 工具规范"
+
+#: ../../tools/xml_tools.rst:659 69a51809ec864ed68c003ddd3c24219d
+msgid "**Name**: ``mesh_get_subjects_by_subject_id``"
+msgstr "**名称**：``mesh_get_subjects_by_subject_id``"
+
+#: ../../tools/xml_tools.rst:661 f7506036dcd646558ae139a6d48cbeeb
+msgid ""
+"**Description**: Find MeSH (Medical Subject Heading) subjects with a "
+"matching subject ID (also called Descriptor UI)."
+msgstr "**描述**：查找具有匹配主题ID（也称为描述符UI）的MeSH（医学主题词）主题。"
+
+#: ../../tools/xml_tools.rst:665 3b721208993340548e7a8dbd6980c837
+msgid ""
+"``query`` (string) (required) Query ID to search for among the MeSH subject "
+"IDs"
+msgstr "``query``（字符串）（必填）用于在MeSH主题ID中搜索的查询ID"
+
+#: ../../tools/xml_tools.rst:668 ../../tools/xml_tools.rst:708
+#: ../../tools/xml_tools.rst:748 8942e2d781b14399954f4a7f6abb0b9a
+#: ced0a7454660456c84eb2063747174de f5af7e4272734b9eac1d7884e111ff97
+msgid ""
+"``case_sensitive`` (boolean) (optional) Select True to perform a case-"
+"sensitive search for the query"
+msgstr "``case_sensitive``（布尔值）（可选）选择 True 以执行区分大小写的查询搜索"
+
+#: ../../tools/xml_tools.rst:671 ../../tools/xml_tools.rst:711
+#: ../../tools/xml_tools.rst:751 805e160f2dfc489a8a2164d06221ca33
+#: c709dbaa7edd40aeadbc684b761d7cd4 ce93dd06034b42bbae0ba80af8c18168
+msgid ""
+"``exact_match`` (boolean) (optional) Select True to require an exact match "
+"for the query"
+msgstr "``exact_match``（布尔值）（可选）选择 True 以要求查询的精确匹配"
+
+#: ../../tools/xml_tools.rst:691 dbc81ff6abe94016ad7ed54bcaf0f710
+msgid "**mesh_get_subjects_by_subject_name** (Type: XMLTool)"
+msgstr "**mesh_get_subjects_by_subject_name**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:693 3cecbe4da7c248519c7fd095cd3710bb
+msgid "Find MeSH (Medical Subject Heading) subjects with matching names."
+msgstr "查找名称匹配的MeSH（医学主题词）主题。"
+
+#: ../../tools/xml_tools.rst 0e0f366c264c4797bae844c6bab4bb09
+msgid "mesh_get_subjects_by_subject_name tool specification"
+msgstr "mesh_get_subjects_by_subject_name 工具规格说明"
+
+#: ../../tools/xml_tools.rst:699 db9e502838f142a789d1c5b0a89153ab
+msgid "**Name**: ``mesh_get_subjects_by_subject_name``"
+msgstr "**名称**：``mesh_get_subjects_by_subject_name``"
+
+#: ../../tools/xml_tools.rst:701 54dd9e2c03444f598c5c2376342405b8
+msgid ""
+"**Description**: Find MeSH (Medical Subject Heading) subjects with matching "
+"names."
+msgstr "**描述**：查找名称匹配的MeSH（医学主题词）条目。"
+
+#: ../../tools/xml_tools.rst:705 afe47c3255d6474da08e5e9535ef1686
+msgid ""
+"``query`` (string) (required) Query string to search for in the name of each"
+" MeSH subject and the names of the subject's key concepts and concept "
+"synonyms."
+msgstr "``query``（字符串）（必填）用于在每个MeSH主题的名称以及该主题的关键概念和概念同义词名称中进行搜索的查询字符串。"
+
+#: ../../tools/xml_tools.rst:731 ecc7887350e14495a713b1b77b3f8172
+msgid "**mesh_get_subjects_by_subject_scope_or_definition** (Type: XMLTool)"
+msgstr "**mesh_get_subjects_by_subject_scope_or_definition**（类型：XMLTool）"
+
+#: ../../tools/xml_tools.rst:733 c5ce92a5b8f1414ea90fdb2966187ebe
+msgid ""
+"Find MeSH (Medical Subject Heading) subjects with matching scopes "
+"(definitions)."
+msgstr "查找具有匹配范围（定义）的MeSH（医学主题词）主题。"
+
+#: ../../tools/xml_tools.rst 3869ba26916c4ff0ab306168f43145ae
+msgid "mesh_get_subjects_by_subject_scope_or_definition tool specification"
+msgstr "mesh_get_subjects_by_subject_scope_or_definition 工具规格说明"
+
+#: ../../tools/xml_tools.rst:739 53d24b3cfcab4d5b80cc29fe99cdd247
+msgid "**Name**: ``mesh_get_subjects_by_subject_scope_or_definition``"
+msgstr "**名称**：``mesh_get_subjects_by_subject_scope_or_definition``"
+
+#: ../../tools/xml_tools.rst:741 76223728c4b64be58ae1a373794b3acd
+msgid ""
+"**Description**: Find MeSH (Medical Subject Heading) subjects with matching "
+"scopes (definitions)."
+msgstr "**描述**：查找具有匹配范围（定义）的MeSH（医学主题词）主题。"
+
+#: ../../tools/xml_tools.rst:745 7fc2cd3fb50d48f58e90325b32697107
+msgid ""
+"``query`` (string) (required) Query string to search for in the scope notes "
+"of MeSH subjects"
+msgstr "``query``（字符串）（必填）用于在MeSH主题的范围说明中搜索的查询字符串"
+
+#: ../../tools/xml_tools.rst:771 7ce2649b27fa4ee49ddd5d3f24c1f9f8
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/xml_tools.rst:773 8ced825be3234039a99773d33b26923b
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/xml_tools.rst:774 6a4e380d4dd34c49b405afbf5fbcff5e
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

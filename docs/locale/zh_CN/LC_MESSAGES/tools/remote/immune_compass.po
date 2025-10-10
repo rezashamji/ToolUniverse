@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/remote/immune_compass.md:1 185362558c614cca8dca0078ef622ab1
+msgid "COMPASS Immunotherapy Treatment Prediction Tool - MCP Server"
+msgstr "COMPASS 免疫治疗预测工具 - MCP 服务器"
+
+#: ../../tools/remote/immune_compass.md:3 1882963ed0b94372a50e4a0aa5b9d3f8
+msgid ""
+"A MCP tool from [Prism ToolSpace](https://huggingface.co/datasets/mims-"
+"harvard/ToolSpace) for running immune checkpoint inhibitor (ICI) response "
+"predictions using the [COMPASS model](https://github.com/mims-"
+"harvard/COMPASS). This tool processes the pateint level mRNA's TPM "
+"(transcripts per million) tumor expression profile and cancer context to "
+"predict patient responsiveness for immunotherapy and provides interpretable "
+"insights through immune cell concept analysis."
+msgstr ""
+"来自 [Prism ToolSpace](https://huggingface.co/datasets/mims-harvard/ToolSpace)"
+" 的 MCP 工具，用于使用 [COMPASS 模型](https://github.com/mims-harvard/COMPASS) "
+"进行免疫检查点抑制剂（ICI）反应预测。该工具处理患者层面的 mRNA "
+"TPM（每百万转录本数）肿瘤表达谱及癌症背景，以预测患者对免疫治疗的响应性，并通过免疫细胞概念分析提供可解释的见解。"
+
+#: ../../tools/remote/immune_compass.md:6 ec49101c8dd84c51886946085efeb04e
+msgid "Prerequisites"
+msgstr "先决条件"
+
+#: ../../tools/remote/immune_compass.md:8 fea1fec0f0684461a7037c0a497cb834
+msgid "1. Install COMPASS Library"
+msgstr "1. 安装 COMPASS 库"
+
+#: ../../tools/remote/immune_compass.md:10 dd927b0e132a46828b3966e0309e6156
+msgid "First, install the COMPASS library from the official repository:"
+msgstr "首先，从官方仓库安装 COMPASS 库："
+
+#: ../../tools/remote/immune_compass.md:23 7cb2c63dc3534f0cb6a23a33b5b3586b
+msgid "2. GPU Support (Optional)"
+msgstr "2. GPU 支持（可选）"
+
+#: ../../tools/remote/immune_compass.md:25 3ea97089f2a74de7b2769a24fcf5d026
+msgid ""
+"For GPU acceleration, install CUDA-enabled PyTorch before installing other "
+"dependencies:"
+msgstr "要实现GPU加速，请在安装其他依赖项之前先安装支持CUDA的PyTorch："
+
+#: ../../tools/remote/immune_compass.md:33 56713d8ffe3240f1b5130bf019c2b9be
+msgid "Model Weights Setup"
+msgstr "模型权重设置"
+
+#: ../../tools/remote/immune_compass.md:35 73a6957c0c1147f49ee25026b1c860a5
+msgid "1. Download Pre-trained Models"
+msgstr "1. 下载预训练模型"
+
+#: ../../tools/remote/immune_compass.md:37 22e61e4e2f3a4b36bb12215208891f6f
+msgid ""
+"Download the pre-trained COMPASS models from the official repository. "
+"Available models include:"
+msgstr "从官方仓库下载预训练的 COMPASS 模型。可用的模型包括："
+
+#: ../../tools/remote/immune_compass.md:39 923128fede364cdaa2dc6d2de598bc00
+msgid ""
+"**`pft_leave_IMVigor210.pt`** - Fine-tuned on IMVigor210 cohort (urothelial "
+"carcinoma) - *Default*"
+msgstr "**`pft_leave_IMVigor210.pt`** - 在IMVigor210队列（尿路上皮癌）上进行微调 - *默认*"
+
+#: ../../tools/remote/immune_compass.md:40 60b0c278fa0541dda7f0ff5d4cbdbd7b
+msgid "**`pft_leave_Gide.pt`** - Fine-tuned on Gide cohort (melanoma)"
+msgstr "**`pft_leave_Gide.pt`** - 在Gide队列（黑色素瘤）上进行微调"
+
+#: ../../tools/remote/immune_compass.md:41 6338281701ee4379870c96622a767e0f
+msgid "**`pretrainer.pt`** - Base pre-trained model"
+msgstr "**`pretrainer.pt`** - 基础预训练模型"
+
+#: ../../tools/remote/immune_compass.md:42 59f4968d430041c0902fa952198e1e91
+msgid "**`finetuner_pft_all.pt`** - Fine-tuned on all available cohorts"
+msgstr "**`finetuner_pft_all.pt`** - 在所有可用队列上进行微调"
+
+#: ../../tools/remote/immune_compass.md:44 e4a014de49ea42ef8e34c45ad92619a2
+msgid "You can download models from:"
+msgstr "您可以从以下位置下载模型："
+
+#: ../../tools/remote/immune_compass.md:45 f29709545ce14eb1bd9fe54f95f71a89
+msgid "**Official Download Page**: https://www.immuno-compass.com/download/"
+msgstr "**官方下载页面**: https://www.immuno-compass.com/download/"
+
+#: ../../tools/remote/immune_compass.md:46 0cd77e41935d4a39a363174ef3dc2da9
+msgid "**Direct Model Links**:"
+msgstr "**直接模型链接**"
+
+#: ../../tools/remote/immune_compass.md:47 ff34219920344e828b9b008eeeee18f4
+msgid ""
+"IMVigor210: https://www.immuno-"
+"compass.com/download/model/LOCO/pft_leave_IMVigor210.pt"
+msgstr ""
+"IMVigor210：https://www.immuno-"
+"compass.com/download/model/LOCO/pft_leave_IMVigor210.pt"
+
+#: ../../tools/remote/immune_compass.md:48 3049d11e0d12442cb437bd0fd9f7485d
+msgid ""
+"Gide: https://www.immuno-compass.com/download/model/LOCO/pft_leave_Gide.pt"
+msgstr ""
+
+#: ../../tools/remote/immune_compass.md:49 aaa77a7c211149c2ada9365ed1d66450
+msgid ""
+"Pre-trainer: https://www.immuno-compass.com/download/model/pretrainer.pt"
+msgstr ""
+"预训练模型下载链接：<a href=\"https://www.immuno-"
+"compass.com/download/model/pretrainer.pt\">https://www.immuno-"
+"compass.com/download/model/pretrainer.pt</a>"
+
+#: ../../tools/remote/immune_compass.md:51 42782aefcb8d4d9f99a256edd93dfe1e
+msgid "2. Directory Structure Setup"
+msgstr "2. 目录结构设置"
+
+#: ../../tools/remote/immune_compass.md:53 9a2e21f34a284e26b6756bdf2962db03
+msgid "Create the following directory structure for your model weights:"
+msgstr "为您的模型权重创建以下目录结构："
+
+#: ../../tools/remote/immune_compass.md:65 930a1b892b9f487fbd1548f171083e93
+msgid "3. Set Environment Variable"
+msgstr "3. 设置环境变量"
+
+#: ../../tools/remote/immune_compass.md:67 f36e37ecc7c84aa8a3b28ec48a97057d
+msgid ""
+"Set the `COMPASS_MODEL_PATH` environment variable to point to your COMPASS "
+"installation:"
+msgstr "将 `COMPASS_MODEL_PATH` 环境变量设置为指向您的 COMPASS 安装路径："
+
+#: ../../tools/remote/immune_compass.md:74 43c8887758f1423a956a8f455951345c
+msgid "**Example Setup:**"
+msgstr "**示例设置：**"
+
+#: ../../tools/remote/immune_compass.md:88 1b1e382bbba44423b45b1b5d43ac48a6
+msgid "Input and Output Specifications"
+msgstr "输入与输出规格"
+
+#: ../../tools/remote/immune_compass.md:90 46706aac561d4cbca565813fb3cdc74c
+msgid "Input Format"
+msgstr "输入格式"
+
+#: ../../tools/remote/immune_compass.md:92 9ecc37a31df640eb89fd8b72c8b9ceb3
+msgid ""
+"The tool expects patient level TPM gene expression data in **pickle format**"
+" (`.pkl` file) containing a pandas DataFrame with:"
+msgstr "该工具要求患者级别的TPM基因表达数据以**pickle格式**（`.pkl`文件）提供，其中包含一个pandas DataFrame："
+
+#: ../../tools/remote/immune_compass.md:94 e7c2b2b120e94e7ba5868f0a9676cc78
+msgid "**Rows**: Samples/patients"
+msgstr "**行**：样本/患者"
+
+#: ../../tools/remote/immune_compass.md:95 383d879771084670a744517487a41427
+msgid "**Columns**: Genes (standard gene symbols like \"CD274\", \"PDCD1\", \"CTLA4\")"
+msgstr "**列**：基因（标准基因符号，例如 \"CD274\"、\"PDCD1\"、\"CTLA4\"）"
+
+#: ../../tools/remote/immune_compass.md:96 aae6b128faa44a34bf2ccd8fe2e1ecc9
+msgid "**Values**: Normalized expression in TPM (Transcripts Per Million)"
+msgstr "**数值**：以TPM（每百万转录本数）归一化的表达量"
+
+#: ../../tools/remote/immune_compass.md:97 7c8b0679db7647c7ba85b50c5a559a76
+msgid "**Minimum**: ~100 genes recommended for reliable predictions"
+msgstr "**最少**：建议使用约100个基因以确保预测的可靠性"
+
+#: ../../tools/remote/immune_compass.md:99 bcdf8a82ec744932b7c428e7de7d3dc9
+msgid ""
+"For specifiction of how to prepare the patient TPM profile data, please "
+"refer to [COMPASS page](https://www.immuno-compass.com/)."
+msgstr "有关如何准备患者TPM档案数据的具体说明，请参阅[COMPASS页面](https://www.immuno-compass.com/)。"
+
+#: ../../tools/remote/immune_compass.md:101 c1f09f58de4a4d2d926acf9d45d6be56
+msgid "Output Format"
+msgstr "输出格式"
+
+#: ../../tools/remote/immune_compass.md:103 f8261c5903a143de847811eb2ac27f8e
+msgid "The tool returns a structured JSON response:"
+msgstr "该工具返回结构化的 JSON 响应："
+
+#: ../../tools/remote/immune_compass.md:130 8620ffdaff9044bfa9d570a8ca2e80b8
+msgid "**Output Fields:**"
+msgstr "**输出字段：**"
+
+#: ../../tools/remote/immune_compass.md:131 d0b6c6423cc746ad99504c8e5b5c0ff3
+msgid ""
+"`is_responder` (bool): True if predicted responder (probability ≥ threshold)"
+msgstr "`is_responder`（bool）：如果预测为响应者（概率 ≥ 阈值），则为 True"
+
+#: ../../tools/remote/immune_compass.md:132 21ef5d355d8d47e7850d44e5d885e149
+msgid ""
+"`top_concepts` (list): Ranked immune cell concepts with importance scores"
+msgstr "`top_concepts`（列表）：按重要性评分排序的免疫细胞概念"
+
+#: ../../tools/remote/immune_compass.md:133 c673d61755674690bd3cd41ce04fe3ab
+msgid "`context_info` (list): Human-readable analysis summary"
+msgstr "`context_info`（列表）：可读性强的分析摘要"
+
+#: ../../tools/remote/immune_compass.md:134 94e192d3ce41465b8410ac410fd78a09
+msgid "`error` (optional): Error description if prediction failed"
+msgstr "`error`（可选）：预测失败时的错误描述"
+
+#: ../../tools/remote/immune_compass.md:136 e1caa372ecd3455eaa3b419ea8d6f3ae
+msgid "Running the MCP Server"
+msgstr "运行 MCP 服务器"
+
+#: ../../tools/remote/immune_compass.md:138 0cd6000b63f34b49b499101d43be33b5
+msgid "1. Start the Server"
+msgstr "1. 启动服务器"
+
+#: ../../tools/remote/immune_compass.md:151 8fb99390561d47c886097cd153f88bcc
+msgid "2. Server Configuration"
+msgstr "2. 服务器配置"
+
+#: ../../tools/remote/immune_compass.md:153 58fbf9cd9aab4c7d8f77a5703d1f8c43
+msgid "The server runs with the following default settings:"
+msgstr "服务器以以下默认设置运行："
+
+#: ../../tools/remote/immune_compass.md:154 9f3c021edbce46d8a051a5c1a86c4363
+msgid "**Host**: `0.0.0.0` (accepts connections from any IP)"
+msgstr "**主机**：`0.0.0.0`（接受来自任意 IP 的连接）"
+
+#: ../../tools/remote/immune_compass.md:155 b1812b90e7374e5d92ab8be278e5a544
+msgid "**Port**: `7003` (configured to avoid conflicts)"
+msgstr "**端口**：`7003`（已配置以避免冲突）"
+
+#: ../../tools/remote/immune_compass.md:156 f5a2f1c6096644dcbb74937f9937214d
+msgid "**Transport**: `streamable-http`"
+msgstr "**传输**：`streamable-http`"
+
+#: ../../tools/remote/immune_compass.md:157 5606d86aadf64d40b08ad8f893d34bd3
+msgid "**Mode**: Stateless HTTP"
+msgstr "**模式**：无状态 HTTP"
+
+#: ../../tools/remote/immune_compass.md:159 efec81b0b9f84ff8a6474230af0685b1
+msgid "3. Server Logs"
+msgstr "3. 服务器日志"
+
+#: ../../tools/remote/immune_compass.md:161 db25a18314fa44f4b31deb35cd884194
+msgid "When starting successfully, you'll see:"
+msgstr "启动成功后，您将看到："
+
+#: ../../tools/remote/immune_compass.md:170 34f22694ffba49c6b99c5b23814da50b
+msgid "Tool Usage"
+msgstr "工具使用"
+
+#: ../../tools/remote/immune_compass.md:172 ecfc0edf2dea4c10a65d2517195c1a25
+msgid "MCP Tool Function"
+msgstr "MCP 工具功能"
+
+#: ../../tools/remote/immune_compass.md:174 431bd63c442c45669fdb856f4ef431a2
+msgid "The server exposes one main tool function:"
+msgstr "服务器提供一个主要的工具功能："
+
+#: ../../tools/remote/immune_compass.md:184 d6d1493b1c6c44ba925cf78079844003
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/remote/immune_compass.md:185 0af828251e6e4c789a6ad8d221db9244
+msgid ""
+"`gene_expression_data_path` (str): Path to the pickle file containing TPM "
+"expression data"
+msgstr "`gene_expression_data_path` (str)：包含TPM表达数据的pickle文件路径"
+
+#: ../../tools/remote/immune_compass.md:186 19c953f6850a4847b3493b9d640d0c78
+msgid ""
+"`threshold` (float): Probability threshold for responder classification "
+"(0.0-1.0)"
+msgstr "`threshold`（浮点数）：用于响应者分类的概率阈值（0.0-1.0）"
+
+#: ../../tools/remote/immune_compass.md:187 1f16fb8bf66444d286ec81be6e9fef6f
+msgid "Default: 0.5 (balanced sensitivity/specificity)"
+msgstr "默认值：0.5（灵敏度与特异性平衡）"
+
+#: ../../tools/remote/immune_compass.md:188 a6adc5492fe84d07bd18dfebfdc99932
+msgid "Lower values (~0.3): Higher sensitivity"
+msgstr "较低的数值（约0.3）：更高的灵敏度"
+
+#: ../../tools/remote/immune_compass.md:189 98f7e670945d45678ec89b22b27a2b36
+msgid "Higher values (~0.7): Higher specificity"
+msgstr "较高的数值（约0.7）：较高的特异性"
+
+#: ../../tools/remote/immune_compass.md:190 5cb1c4190d844ac9a7f60cb77784a2d7
+msgid "`root_path` (str, optional): Custom path to model checkpoint directory"
+msgstr "`root_path`（字符串，可选）：自定义模型检查点目录路径"
+
+#: ../../tools/remote/immune_compass.md:193 0babbe2f2f70483f94ee1ad15f5fb809
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../tools/remote/immune_compass.md:195 5542d07c4f9c4b5ab1d8ddc8ebd06291
+msgid "Common Issues"
+msgstr "常见问题"
+
+#: ../../tools/remote/immune_compass.md:197 939428b2d74a4bd580eb9d01f97f2dff
+msgid "**Model Not Found Error**"
+msgstr "**模型未找到错误**"
+
+#: ../../tools/remote/immune_compass.md:201 4ba84f153b0d44acba8a4c72dca4441b
+msgid "Ensure `COMPASS_MODEL_PATH` is set correctly"
+msgstr "确保正确设置 `COMPASS_MODEL_PATH`"
+
+#: ../../tools/remote/immune_compass.md:202 96b67e2befde44d0a60b22d0fbd1551b
+msgid "Verify model weights are downloaded to the `checkpoint/` directory"
+msgstr "确认模型权重已下载至 `checkpoint/` 目录下"
+
+#: ../../tools/remote/immune_compass.md:204 7d40bb3de15c40c09259f0706c4f3aef
+msgid "**Import Error**"
+msgstr "**导入错误**"
+
+#: ../../tools/remote/immune_compass.md:208 263cd0fb15d34a64aa8d4e5e7a5ac69a
+msgid "Install COMPASS: `uv pip install immuno-compass`"
+msgstr "安装 COMPASS：`uv pip install immuno-compass`"
+
+#: ../../tools/remote/immune_compass.md:209 9ab04f9634a443b3b26f076f49e5f5b2
+msgid "Ensure you're in the correct conda environment"
+msgstr "确保您处于正确的 conda 环境中"
+
+#: ../../tools/remote/immune_compass.md:212 b2020d6bab53470f92ddfda3788bb552
+msgid "**Input Data Format Error**"
+msgstr "**输入数据格式错误**"
+
+#: ../../tools/remote/immune_compass.md:216 144cd63e743845259bbdc19c46df07a3
+msgid "Ensure input file is in pickle format with correct DataFrame structure"
+msgstr "确保输入文件为pickle格式且具有正确的DataFrame结构"
+
+#: ../../tools/remote/immune_compass.md:217 aaf9711a9fec4df18d136e57cd9eddb2
+msgid "Check that gene symbols are standard (e.g., \"CD274\", not \"PD-L1\")"
+msgstr "检查基因符号是否为标准格式（例如，“CD274”，而非“PD-L1”）"
+
+#: ../../tools/remote/immune_compass.md:220 02604ee85d13444e9336c5874fe61971
+msgid "References"
+msgstr "参考文献"
+
+#: ../../tools/remote/immune_compass.md:222 a872c836b9f94d40a222a77d3d79554c
+msgid ""
+"**COMPASS Paper**: [Generalizable AI predicts immunotherapy outcomes across "
+"cancers and treatments](https://github.com/mims-harvard/COMPASS)"
+msgstr ""
+"**COMPASS 论文**：[通用型人工智能预测不同癌症及治疗中的免疫疗法效果](https://github.com/mims-"
+"harvard/COMPASS)"
+
+#: ../../tools/remote/immune_compass.md:223 9d68600e074741908558961fdd027c52
+msgid "**Project Website**: https://www.immuno-compass.com/"
+msgstr "**项目网站**：https://www.immuno-compass.com/"
+
+#: ../../tools/remote/immune_compass.md:224 df9dc5299d0e4c60aa0e3dcc08488cfe
+msgid "**GitHub Repository**: https://github.com/mims-harvard/COMPASS"
+msgstr "**GitHub 仓库**：https://github.com/mims-harvard/COMPASS"
+
+#: ../../tools/remote/immune_compass.md:225 3664f3a1ea194efdbebd51f855a17040
+msgid "**Documentation**: https://compass.readthedocs.io/"
+msgstr "**文档**: https://compass.readthedocs.io/"
+
+#: ../../tools/remote/immune_compass.md:227 3ac79c1d27274c74b4c845332a80c897
+msgid "Citation"
+msgstr "引用"
+
+#: ../../tools/remote/immune_compass.md:229 88b67e87f77949188a8d1bec8c58edfb
+msgid "If you use this tool, please cite the COMPASS paper:"
+msgstr "如果您使用此工具，请引用 COMPASS 论文："
+
+#: ../../tools/remote/immune_compass.md:240 afeec94d82c24b6881088e432e77a5eb
+msgid "License"
+msgstr "许可证"
+
+#: ../../tools/remote/immune_compass.md:242 fc2060adb2274857b887a3b76f1de2e8
+msgid ""
+"This tool is released under the MIT License, consistent with the original "
+"COMPASS project."
+msgstr "该工具依据 MIT 许可证发布，与原始 COMPASS 项目保持一致。"

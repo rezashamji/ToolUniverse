@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 00:49-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.multi_agent_compose.rst:2
+#: f022f6cb78f64a3781a796281e2fa5c0
+msgid "tooluniverse.web\\_tools.literature\\_search\\_ui.multi\\_agent\\_compose module"
+msgstr "tooluniverse.web\\_tools.literature\\_search\\_ui.multi\\_agent\\_compose 模块"
+
+#: 4a42db5998e444deb80e4ead1d23ce10 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose:2
+msgid "Multi-Agent Literature Search Compose Function"
+msgstr "多代理文献检索撰写功能"
+
+#: c80f051b81534bec8db60cb05b76a9ae of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose:4
+msgid ""
+"This module implements the compose function for the multi-agent literature "
+"search system."
+msgstr "该模块实现了多代理文献检索系统的compose函数。"
+
+#: 405f8153b5f94a4bbf15dfb9a9b5ee97 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose.compose:1
+msgid "Multi-agent literature search compose function"
+msgstr "多代理文献检索组合功能"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.multi_agent_compose.rst
+#: af47e8de56844284bfb88fedeec36372
+msgid "Parameters"
+msgstr "参数"
+
+#: d535845a67e24d9d88310c620621a973 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose.compose:3
+msgid "Input parameters from the tool call"
+msgstr "工具调用的输入参数"
+
+#: 4bbf8d2fcbdf45d59c92b0fef92f2264 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose.compose:5
+msgid "Reference to the ToolUniverse instance"
+msgstr "对 ToolUniverse 实例的引用"
+
+#: d869d2c29ed148fb8fbc261c27be177a of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose.compose:7
+msgid "Function to call other tools"
+msgstr "调用其他工具的功能"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.multi_agent_compose.rst
+#: f55fe70343de4be38d004b175ede54e5
+msgid "Returns"
+msgstr "退货"
+
+#: 9e6a3f2dbbfd407e8638bc98a08e00db of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose.compose:10
+msgid "The result of the multi-agent search"
+msgstr "多智能体搜索的结果"
+
+#: ../../api/tooluniverse.web_tools.literature_search_ui.multi_agent_compose.rst
+#: 7abf31a5f50346a98f41fb76c4ccb56d
+msgid "Return type"
+msgstr "返回类型"
+
+#: ec59de52c8944781a27706cb2430528e of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose._format_papers_for_summary:1
+msgid "Format papers for summary generation"
+msgstr "为摘要生成格式化文档"
+
+#: 6125e9c654a04b72b28dd27dfb466769 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose._calculate_quality_score:1
+msgid "Calculate quality score for a search plan"
+msgstr "计算搜索计划的质量评分"
+
+#: b57d9fec149c44569951f97992267a58 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose._format_plans_for_analysis:1
+msgid "Format plans for quality analysis"
+msgstr "格式化计划以进行质量分析"
+
+#: 185376c0c04c42a98e1ba0533ece7569 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose._apply_improvements:1
+msgid "Apply improvements to existing plans and add new plans"
+msgstr "对现有计划进行改进并添加新计划"
+
+#: 43916f52cc004a11a80b66bcfa66dc75 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose._format_plan_summaries:1
+msgid "Format plan summaries for overall summary generation"
+msgstr "格式化计划摘要以生成整体摘要"
+
+#: 04df29d2a7d148ce9d97d7bdb2856b15 of
+#: tooluniverse.web_tools.literature_search_ui.multi_agent_compose._create_plan_summaries:1
+msgid "Create structured plan summaries for return"
+msgstr "为退货创建结构化计划摘要"

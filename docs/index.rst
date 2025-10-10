@@ -5,6 +5,10 @@
 |logo| ToolUniverse Documentation
 =================================
 
+.. raw:: html
+
+   <div align="center">
+
 .. image:: https://img.shields.io/badge/Website-aiscientist.tools-brightgreen.svg?logo=google-chrome
    :alt: Website
    :target: https://aiscientist.tools
@@ -21,16 +25,9 @@
    :alt: Slack
    :target: https://join.slack.com/t/tooluniversehq/shared_invite/zt-3dic3eoio-5xxoJch7TLNibNQn5_AREQ
 
+.. raw:: html
 
-.. image:: https://img.shields.io/badge/python-3.10+-blue.svg
-   :alt: Python Version
-
-.. image:: https://img.shields.io/badge/tools-600+-green.svg
-   :alt: Number of Tools
-
-
-Democratizing AI Scientists for Science
----------------------------
+   </div>
 
 .. raw:: html
 
@@ -59,6 +56,11 @@ Democratizing AI Scientists for Science
    </a>
    
    </div>
+
+Democratizing AI Scientists for Science
+---------------------------
+
+
 
 ToolUniverse is a unified ecosystem that transforms any large language model (LLM)—open or closed—into a powerful AI scientist. By standardizing how LLMs identify and call tools, it integrates over 600 scientific resources, including machine learning models, datasets, APIs, and analysis packages.
 
@@ -114,13 +116,6 @@ Transform any LLM/Reasoning Model/Agent into a powerful research scientist with 
 
 .. toctree::
    :maxdepth: 1
-   :caption: 🔧 Tools
-
-   tools/tools_config_index
-   tools/remote_tools
-
-.. toctree::
-   :maxdepth: 1
    :caption: 💡 Use ToolUniverse
 
    guide/index
@@ -129,12 +124,15 @@ Transform any LLM/Reasoning Model/Agent into a powerful research scientist with 
    guide/listing_tools
    tutorials/finding_tools
    guide/tool_caller
+   guide/mcp_support
    tutorials/tooluniverse_case_study
    tutorials/agentic_tools_tutorial
+   tutorials/literature_search_tools_tutorial
+   tutorials/literature_search_web_ui_tutorial
+   guide/clinical_guidelines_tools
    guide/tool_composition
    guide/scientific_workflows
    tutorials/expert_feedback
-   tool_setup_guides/Embedding_store_guide
    guide/hooks/index
 
 .. toctree::
@@ -148,11 +146,20 @@ Transform any LLM/Reasoning Model/Agent into a powerful research scientist with 
    deployment
    contributing
 
+.. toctree::
+   :maxdepth: 1
+   :caption: 🔧 Tools
+
+   tools/tools_config_index
+   tools/remote_tools
+
 
 .. toctree::
    :maxdepth: 1
    :caption: 🔌 API
 
+   api_quick_reference
+   api_comprehensive
    api/modules
 
 .. toctree::

@@ -1,0 +1,1510 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/bioinformatics_core_tools.rst:2
+#: 3c1947aa07594deab4c0ea88327149db
+msgid "Bioinformatics Core Tools"
+msgstr "生物信息学核心工具"
+
+#: ../../tools/bioinformatics_core_tools.rst:4
+#: 44aa58ba45e24a9bb9a20ee9a3c4eef9
+msgid ""
+"**Configuration File**: ``packages/bioinformatics_core_tools.json`` **Tool "
+"Type**: Local **Tools Count**: 37"
+msgstr ""
+"**配置文件**：``packages/bioinformatics_core_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：37"
+
+#: ../../tools/bioinformatics_core_tools.rst:8
+#: ff847460ee1449459878c64c002171bf
+msgid ""
+"This page contains all tools defined in the "
+"``bioinformatics_core_tools.json`` configuration file."
+msgstr "本页面包含 ``bioinformatics_core_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/bioinformatics_core_tools.rst:11
+#: 451b41294e254b0d95309a0c055173e3
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/bioinformatics_core_tools.rst:14
+#: 3da3b9e8d0014d3c9705049b514346af
+msgid "**get_arxiv_info** (Type: PackageTool)"
+msgstr "**get_arxiv_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:16
+#: e4834b9cb0b94b3f9b24250e4e648d1d
+msgid ""
+"Get comprehensive information about arxiv – access to arXiv preprint "
+"repository"
+msgstr "获取关于 arxiv 的全面信息 – 访问 arXiv 预印本库"
+
+#: ../../tools/bioinformatics_core_tools.rst 03503bb691fe42dfa0a3d63f0991eddd
+msgid "get_arxiv_info tool specification"
+msgstr "get_arxiv_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:20
+#: ../../tools/bioinformatics_core_tools.rst:50
+#: ../../tools/bioinformatics_core_tools.rst:80
+#: ../../tools/bioinformatics_core_tools.rst:109
+#: ../../tools/bioinformatics_core_tools.rst:139
+#: ../../tools/bioinformatics_core_tools.rst:170
+#: ../../tools/bioinformatics_core_tools.rst:199
+#: ../../tools/bioinformatics_core_tools.rst:228
+#: ../../tools/bioinformatics_core_tools.rst:259
+#: ../../tools/bioinformatics_core_tools.rst:289
+#: ../../tools/bioinformatics_core_tools.rst:320
+#: ../../tools/bioinformatics_core_tools.rst:351
+#: ../../tools/bioinformatics_core_tools.rst:381
+#: ../../tools/bioinformatics_core_tools.rst:412
+#: ../../tools/bioinformatics_core_tools.rst:443
+#: ../../tools/bioinformatics_core_tools.rst:473
+#: ../../tools/bioinformatics_core_tools.rst:504
+#: ../../tools/bioinformatics_core_tools.rst:535
+#: ../../tools/bioinformatics_core_tools.rst:565
+#: ../../tools/bioinformatics_core_tools.rst:596
+#: ../../tools/bioinformatics_core_tools.rst:627
+#: ../../tools/bioinformatics_core_tools.rst:658
+#: ../../tools/bioinformatics_core_tools.rst:689
+#: ../../tools/bioinformatics_core_tools.rst:720
+#: ../../tools/bioinformatics_core_tools.rst:751
+#: ../../tools/bioinformatics_core_tools.rst:782
+#: ../../tools/bioinformatics_core_tools.rst:813
+#: ../../tools/bioinformatics_core_tools.rst:844
+#: ../../tools/bioinformatics_core_tools.rst:874
+#: ../../tools/bioinformatics_core_tools.rst:905
+#: ../../tools/bioinformatics_core_tools.rst:936
+#: ../../tools/bioinformatics_core_tools.rst:967
+#: ../../tools/bioinformatics_core_tools.rst:997
+#: ../../tools/bioinformatics_core_tools.rst:1028
+#: ../../tools/bioinformatics_core_tools.rst:1059
+#: ../../tools/bioinformatics_core_tools.rst:1089
+#: ../../tools/bioinformatics_core_tools.rst:1120
+#: 00462146a6a54af19f2b706334436eb0 0108eff9a8d3455ba35aee23cfca244a
+#: 0755d6a2168d493aa63275dc022c0ca1 08c71f684c5d41c18c32f903130c8c50
+#: 1913f626bb0d420f81891e4b01414a0c 1b88abf37b3a4140bccb9635578d7b04
+#: 25653163cb3e4ae48ee2e78d3c7bfe55 2bec806c060a468099cad960a76f2ff5
+#: 2ca8135d991e4872a0d2a6b6f0114388 30be3d8b97174458971e696c2bc646d5
+#: 312e84a1a5f2411ba82679550da3f763 32a22ecef37e45899335a33dc8126374
+#: 3785e6fe6d424266be44f89b733e6692 40e2c46183144bf6a3a0399d3ba8451c
+#: 5caa81eee3b44737adc1e92340f59bc6 5f42de2344494bdca5d1c7e38fdf3497
+#: 6f85323e6b7a4e8f92a23f13d51fd999 8071167bb8a6400181b030698ae3b546
+#: 846f7bf4f6f947b587ad3395982b0b28 87ca4f00bf9b481d900025abbab05935
+#: 8a36642fa9da48a397c53518c3cbf51e 94b47874c00a4753a8ad9020d94c55e1
+#: 9ac5765a392b4de898d33cce6d0b27d3 c0278de2a9ba48fe83b2c5cc1f7ace64
+#: c565f41123144fcfac3eaece31b6df95 c7387e4aa4f84ab6bcc6a23d68c16f70
+#: c90b566f1cd64151a12c452f014fdf66 ca6ae2a80699417a9e2ed45d89ec47c3
+#: d3e8bde826aa42328c272f5b7bcca71d db58f4a195fe4f4297faed966cbfd49e
+#: de3159d53a3a439980abb58d8476295c df26f3fbb63b4e64b8daeee193d96501
+#: eb84ec37cf6c45dc90cc1f4315a4ad5e ed5c7baa528c43ddbc2a783529543d26
+#: f336e98808964f29a7e6088f9623dc0c f8fdbc57df8b418e89320fc74902f23c
+#: fc7919598f9d4a5e85c1c8a4aa2255f5
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/bioinformatics_core_tools.rst:22
+#: 818e61b2e64b4bfaa763517b1688166c
+msgid "**Name**: ``get_arxiv_info``"
+msgstr "**名称**：``get_arxiv_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:23
+#: ../../tools/bioinformatics_core_tools.rst:53
+#: ../../tools/bioinformatics_core_tools.rst:83
+#: ../../tools/bioinformatics_core_tools.rst:112
+#: ../../tools/bioinformatics_core_tools.rst:142
+#: ../../tools/bioinformatics_core_tools.rst:173
+#: ../../tools/bioinformatics_core_tools.rst:202
+#: ../../tools/bioinformatics_core_tools.rst:231
+#: ../../tools/bioinformatics_core_tools.rst:262
+#: ../../tools/bioinformatics_core_tools.rst:292
+#: ../../tools/bioinformatics_core_tools.rst:323
+#: ../../tools/bioinformatics_core_tools.rst:354
+#: ../../tools/bioinformatics_core_tools.rst:384
+#: ../../tools/bioinformatics_core_tools.rst:415
+#: ../../tools/bioinformatics_core_tools.rst:446
+#: ../../tools/bioinformatics_core_tools.rst:476
+#: ../../tools/bioinformatics_core_tools.rst:507
+#: ../../tools/bioinformatics_core_tools.rst:538
+#: ../../tools/bioinformatics_core_tools.rst:568
+#: ../../tools/bioinformatics_core_tools.rst:599
+#: ../../tools/bioinformatics_core_tools.rst:630
+#: ../../tools/bioinformatics_core_tools.rst:661
+#: ../../tools/bioinformatics_core_tools.rst:692
+#: ../../tools/bioinformatics_core_tools.rst:723
+#: ../../tools/bioinformatics_core_tools.rst:754
+#: ../../tools/bioinformatics_core_tools.rst:785
+#: ../../tools/bioinformatics_core_tools.rst:816
+#: ../../tools/bioinformatics_core_tools.rst:847
+#: ../../tools/bioinformatics_core_tools.rst:877
+#: ../../tools/bioinformatics_core_tools.rst:908
+#: ../../tools/bioinformatics_core_tools.rst:939
+#: ../../tools/bioinformatics_core_tools.rst:970
+#: ../../tools/bioinformatics_core_tools.rst:1000
+#: ../../tools/bioinformatics_core_tools.rst:1031
+#: ../../tools/bioinformatics_core_tools.rst:1062
+#: ../../tools/bioinformatics_core_tools.rst:1092
+#: ../../tools/bioinformatics_core_tools.rst:1123
+#: 09034b84576944e496f67206613d864c 12cb61e2e56c4ce9bb94d5405c22a08b
+#: 138f63f2d8b847dfa599ba1b4c789505 14691c6938f44baeb5fbc70bf4eb3aaf
+#: 20c712bb60db4356921aaf2460740d35 23135e4203954a5dbb92ad11f19db861
+#: 276cb767bd7b4040853c8d07761bb6ef 2e0e268a7dfd405e8e2e58c3d38aad65
+#: 3614bdebc8e34ef3aa62cac463b1661a 439a81c58cfc499dae64c4c7b574631a
+#: 449ec33cf11b4373960e1c0459f67169 5cce3fb7f3a149feb1e06110eb62128b
+#: 5d1faa4e2c0146e694a019450c619ecd 60e7b9cca15e4cbc89257e59e40f0797
+#: 6acb8642363d4c1eab880c713a015892 6ca93148c29743868c7a9a971e67a619
+#: 728ba76a0a95435b9bf4d17c29827898 7e2d5a3717e34f91a3b4f7a99a858136
+#: 867122e50a6e40e3a4c1f9a3c86ec381 8b35594925e74580b6b2d0b9af890842
+#: 937a9279098c401c82ed4f4a4e9d6ea9 95cc6cd3b21742cea3e46cd14f1d280c
+#: aa5e97dc1ef140c4af52fadc0c4f9369 aed2d818aa2b4a39add4da9e9cec289b
+#: b92d9b0aa0f349a7af2cd152d87d4947 c129fb84326d4482b9ac7cf5c483e191
+#: c24a0f4a84f5401d9beba70b4e08f5cb c9914f205cbd40b3b8842667b1fe219b
+#: ca130c8370db4c01a4a08bbabc379411 ca399c13ca184992a5c91c303caa37cf
+#: cb45c9bb6dfc40f7ac83143ed817022a d15efb8f9e4248ed8053a13f84643469
+#: e3e1b973aa7a4396af5c25d9752b6859 e4ed2e2ded61483f996fdcaa982a47ab
+#: e96955faf8e14395b01b2d020d99302a f3c91d19518844359292c6c90553227f
+#: fa7c22fe2ed6477494ca8fef9bd0da7e
+msgid "**Type**: ``PackageTool``"
+msgstr "**类型**：``PackageTool``"
+
+#: ../../tools/bioinformatics_core_tools.rst:24
+#: 0711c18c65a645bf8dd30a048570cc59
+msgid ""
+"**Description**: Get comprehensive information about arxiv – access to arXiv"
+" preprint repository"
+msgstr "**描述**：获取关于arxiv的全面信息——访问arXiv预印本存储库"
+
+#: ../../tools/bioinformatics_core_tools.rst:26
+#: ../../tools/bioinformatics_core_tools.rst:56
+#: ../../tools/bioinformatics_core_tools.rst:86
+#: ../../tools/bioinformatics_core_tools.rst:115
+#: ../../tools/bioinformatics_core_tools.rst:145
+#: ../../tools/bioinformatics_core_tools.rst:176
+#: ../../tools/bioinformatics_core_tools.rst:205
+#: ../../tools/bioinformatics_core_tools.rst:234
+#: ../../tools/bioinformatics_core_tools.rst:265
+#: ../../tools/bioinformatics_core_tools.rst:295
+#: ../../tools/bioinformatics_core_tools.rst:326
+#: ../../tools/bioinformatics_core_tools.rst:357
+#: ../../tools/bioinformatics_core_tools.rst:387
+#: ../../tools/bioinformatics_core_tools.rst:418
+#: ../../tools/bioinformatics_core_tools.rst:449
+#: ../../tools/bioinformatics_core_tools.rst:479
+#: ../../tools/bioinformatics_core_tools.rst:510
+#: ../../tools/bioinformatics_core_tools.rst:541
+#: ../../tools/bioinformatics_core_tools.rst:571
+#: ../../tools/bioinformatics_core_tools.rst:602
+#: ../../tools/bioinformatics_core_tools.rst:633
+#: ../../tools/bioinformatics_core_tools.rst:664
+#: ../../tools/bioinformatics_core_tools.rst:695
+#: ../../tools/bioinformatics_core_tools.rst:726
+#: ../../tools/bioinformatics_core_tools.rst:757
+#: ../../tools/bioinformatics_core_tools.rst:788
+#: ../../tools/bioinformatics_core_tools.rst:819
+#: ../../tools/bioinformatics_core_tools.rst:850
+#: ../../tools/bioinformatics_core_tools.rst:880
+#: ../../tools/bioinformatics_core_tools.rst:911
+#: ../../tools/bioinformatics_core_tools.rst:942
+#: ../../tools/bioinformatics_core_tools.rst:973
+#: ../../tools/bioinformatics_core_tools.rst:1003
+#: ../../tools/bioinformatics_core_tools.rst:1034
+#: ../../tools/bioinformatics_core_tools.rst:1065
+#: ../../tools/bioinformatics_core_tools.rst:1095
+#: ../../tools/bioinformatics_core_tools.rst:1126
+#: 0d9c85efd38848099ba8f192ff6736fe 0e23887c9fad4058825fdcc03d187661
+#: 1164ef81bf1b4d0286e1524ddec74604 150832e8bb3e4dfab07ae02ec284a613
+#: 19e42e5f40244a7eb32ef925bef3619c 2bcd3403094c4830ba7a065fd4a1774d
+#: 3265b555376746c48ce07ec1cbb42c25 339dbd740ff844c5b100d88bf06b762e
+#: 36873b3aaff44554a5a7c8152f9fc3c3 389f36c325c245138ca24901f2028069
+#: 3f1c47e527024017a9b25197c7dad766 40050602d18f49fa91e4b2263a1300e2
+#: 47ea99b3f8534389a11ec9bad259e27d 47f30543d7fc4d76902b2321173d678a
+#: 4e7a138ce03943bca8ab248e78ba85af 5c9f6b5324b74e058f5c9dd0b666efb5
+#: 71942f4b7f9e4707980079d542a142d4 7207998203f04b6491f82aee69b515e6
+#: 730d2bde79054a2492bc48d036de3713 77428547674b46b2aa132825639fa221
+#: 7efa3a248973464ba7e7ba124d7bf614 813ae2e3421e40a08e7d9f5c904ddb6d
+#: 97a8cfd6ace049c3b35a4ef774c8ee63 9b4b5272adaa488ab7cbf99549d4c283
+#: 9b96480a925b492c9ba6df29d97d35b5 9ce5f49bab204d3d879e0e65f3e7d38b
+#: 9fde9db27d364d029906b8c68f287a78 a37596be8c3a46448e92b7d8eb7d48a7
+#: a40fdcdc6f544d3eb3a5698ac1fe3f9c a5b023de48eb4b90a7faf078535bf933
+#: a75221f6ed804fc3a7f9a3ad3d30b37e aaaad1a7a79e4c60ade483bafd2caa64
+#: aeef96281bb546c0846c2e5900a04756 b1b2ecd759a04d649a4c136335e311e9
+#: b2045511f7194a5a808888d4199ca83c bda410a3b626420f8132e8c712a7fe47
+#: f9bd2a22288b465ba75644406674c786
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/bioinformatics_core_tools.rst:28
+#: ../../tools/bioinformatics_core_tools.rst:58
+#: ../../tools/bioinformatics_core_tools.rst:117
+#: ../../tools/bioinformatics_core_tools.rst:267
+#: ../../tools/bioinformatics_core_tools.rst:359
+#: ../../tools/bioinformatics_core_tools.rst:451
+#: ../../tools/bioinformatics_core_tools.rst:543
+#: ../../tools/bioinformatics_core_tools.rst:852
+#: ../../tools/bioinformatics_core_tools.rst:975
+#: ../../tools/bioinformatics_core_tools.rst:1067
+#: 02c8b62107784d52a83c6b5a2436b728 04f585f5ac4e4fd2a6da0a0cb4825caf
+#: 274548f2a44d40378d5088497cae97fe 2b9cf818f1c443269a0f376f87d22eea
+#: 65985c5511084d498c7a4dc8b33b240b c15f90c029c64f57a2799c601cdaaa70
+#: c34db3eb22c44ae5a9666a1d675a353f e0f272b390074307a86c088adc3d1160
+#: e2342f426c664d1d824fddb027aa2052 f4f31578be244815ba6207417ff726f2
+msgid ""
+"``include_examples`` (boolean) (optional) Whether to include usage examples "
+"and quick start guide"
+msgstr "``include_examples``（布尔值）（可选）是否包含使用示例和快速入门指南"
+
+#: ../../tools/bioinformatics_core_tools.rst:31
+#: ../../tools/bioinformatics_core_tools.rst:61
+#: ../../tools/bioinformatics_core_tools.rst:90
+#: ../../tools/bioinformatics_core_tools.rst:120
+#: ../../tools/bioinformatics_core_tools.rst:150
+#: ../../tools/bioinformatics_core_tools.rst:180
+#: ../../tools/bioinformatics_core_tools.rst:209
+#: ../../tools/bioinformatics_core_tools.rst:239
+#: ../../tools/bioinformatics_core_tools.rst:270
+#: ../../tools/bioinformatics_core_tools.rst:300
+#: ../../tools/bioinformatics_core_tools.rst:331
+#: ../../tools/bioinformatics_core_tools.rst:362
+#: ../../tools/bioinformatics_core_tools.rst:392
+#: ../../tools/bioinformatics_core_tools.rst:423
+#: ../../tools/bioinformatics_core_tools.rst:454
+#: ../../tools/bioinformatics_core_tools.rst:484
+#: ../../tools/bioinformatics_core_tools.rst:515
+#: ../../tools/bioinformatics_core_tools.rst:546
+#: ../../tools/bioinformatics_core_tools.rst:576
+#: ../../tools/bioinformatics_core_tools.rst:607
+#: ../../tools/bioinformatics_core_tools.rst:638
+#: ../../tools/bioinformatics_core_tools.rst:669
+#: ../../tools/bioinformatics_core_tools.rst:700
+#: ../../tools/bioinformatics_core_tools.rst:731
+#: ../../tools/bioinformatics_core_tools.rst:762
+#: ../../tools/bioinformatics_core_tools.rst:793
+#: ../../tools/bioinformatics_core_tools.rst:824
+#: ../../tools/bioinformatics_core_tools.rst:855
+#: ../../tools/bioinformatics_core_tools.rst:885
+#: ../../tools/bioinformatics_core_tools.rst:916
+#: ../../tools/bioinformatics_core_tools.rst:947
+#: ../../tools/bioinformatics_core_tools.rst:978
+#: ../../tools/bioinformatics_core_tools.rst:1008
+#: ../../tools/bioinformatics_core_tools.rst:1039
+#: ../../tools/bioinformatics_core_tools.rst:1070
+#: ../../tools/bioinformatics_core_tools.rst:1100
+#: ../../tools/bioinformatics_core_tools.rst:1131
+#: 078b957f409d4148b6a6b6aa58a0c962 14de8d19d366469fb4e86bb3243313be
+#: 284dd33e0d3f4acfa6131f167550ecc0 2b2f116b6340450ab1b519341e777d43
+#: 2ca628cf7a094363a41d625549538874 30ddd9518c01444da2016a6d9872f280
+#: 36acf526eddc43f29d0301e92eca9f7e 3a6bc493ba324747a5a838329d650450
+#: 3c303340382a44beb9f9ba32320d565b 3ff0cc1e8d434c7d84a6a087cd508b69
+#: 44ce8d9ba0c342aeb0915610a92ff2c1 45bc70f9767c435e8803fe1f8d44375c
+#: 4733d9a0e32f4a6fb910a123ef27d807 59c8373aa9f0492ab6faf55a7c6598a5
+#: 5a39401ebd724a318d9aefd2d8b166a4 6f29d1bbf9b74fd5895c5b783c51993f
+#: 70c6f7375f964601a4daef39167582e3 751d83051f63419aa15ffb5707161555
+#: 7e0ca6caf3a64d37b7ab5f25b6c6e2d9 7f64957e773c43fc9113d4854de697e4
+#: 8c3805d0129d4235b6ef5484eb67578b 918270519b49456f924ec323201aa6b6
+#: 9476a87b0cbc4070982d34fbfacda085 95eb2e6f56464991a54dbaa9bdee5020
+#: a61bb04d8dc0445f8b8dd64ca1654f18 aac98f19e198430c87970141a8e62dac
+#: af72c6e8382248da8edba9df596c34ef bb33ce9ca6334010883948bee3b0fc87
+#: c3c7961a692c4860b528d3c5cb3cb524 ce00cf28649549eba24659a934839c04
+#: e64ed85d6b3148ec87fb4b9eb228cbcd eafa803cbe5f4c7eababac4547f39fce
+#: eb9f6ee4cce64f13a95cd5b0b5d5af54 ecafe12fe0eb408e93dbd296c0920b6b
+#: ee18bf04b8ba45739e9bf2723116e96e ef3227bdd76642f7904fea3fd37fa69b
+#: ff51758c67c84354a662decc7e402ce3
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/bioinformatics_core_tools.rst:44
+#: e33ca71a00e943de8b44996712ad254e
+msgid "**get_biopython_info** (Type: PackageTool)"
+msgstr "**get_biopython_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:46
+#: b8ab7e4df1d141e39d5e9b60c782f3cd
+msgid ""
+"Get comprehensive information about Biopython – powerful tools for "
+"computational molecular biolog..."
+msgstr "获取关于Biopython的全面信息——强大的计算分子生物学工具..."
+
+#: ../../tools/bioinformatics_core_tools.rst 325d59272558491b82d571157225a57e
+msgid "get_biopython_info tool specification"
+msgstr "get_biopython_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:52
+#: f56a4bbdceff4c799f6e06b1ba2ddb4b
+msgid "**Name**: ``get_biopython_info``"
+msgstr "**名称**: ``get_biopython_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:54
+#: deada6d6d5ed4484b46975d4b215f101
+msgid ""
+"**Description**: Get comprehensive information about Biopython – powerful "
+"tools for computational molecular biology and bioinformatics"
+msgstr "**描述**：获取关于 Biopython 的全面信息——专为计算分子生物学和生物信息学设计的强大工具"
+
+#: ../../tools/bioinformatics_core_tools.rst:74
+#: 1792b828b5a446aba1e8e7ff4876d0ec
+msgid "**get_bioservices_info** (Type: PackageTool)"
+msgstr "**get_bioservices_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:76
+#: 97df11abff254b7f8df0b6d14ad7339d
+msgid ""
+"Get information about the bioservices package. Python package: bioservices"
+msgstr "获取有关 bioservices 软件包的信息。Python 软件包：bioservices"
+
+#: ../../tools/bioinformatics_core_tools.rst 3e51e6d7d80249539dc14467d755d0cd
+msgid "get_bioservices_info tool specification"
+msgstr "get_bioservices_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:82
+#: ef388be07a9c4d00b659fa020ec6350b
+msgid "**Name**: ``get_bioservices_info``"
+msgstr "**名称**: ``get_bioservices_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:84
+#: f3308f654aca474ba0e103d4f49ddf1e
+msgid ""
+"**Description**: Get information about the bioservices package. Python "
+"package: bioservices"
+msgstr "**描述**：获取有关 bioservices 软件包的信息。Python 软件包：bioservices"
+
+#: ../../tools/bioinformatics_core_tools.rst:88
+#: ../../tools/bioinformatics_core_tools.rst:178
+#: ../../tools/bioinformatics_core_tools.rst:207
+#: 628a897caba24134a4bb4cd6c7eb645e 6b734f9326c34c0a869ee26bad23d2b1
+#: b851d2fb77b8481ca6b811c4bf135d9e
+msgid "No parameters required."
+msgstr "无需参数。"
+
+#: ../../tools/bioinformatics_core_tools.rst:103
+#: 21a192c5a39f4a8981f13e2b2b33ce3a
+msgid "**get_biotite_info** (Type: PackageTool)"
+msgstr "**get_biotite_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:105
+#: acd31f78f7bd47819258e0a5ff966ef7
+msgid ""
+"Get comprehensive information about Biotite – comprehensive computational "
+"molecular biology library"
+msgstr "获取关于Biotite的全面信息——一款功能齐全的计算分子生物学库"
+
+#: ../../tools/bioinformatics_core_tools.rst 0bc964f77093482f975852cbdbe4844d
+msgid "get_biotite_info tool specification"
+msgstr "get_biotite_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:111
+#: fafd02e396cc44f9b85107073c0bcb9f
+msgid "**Name**: ``get_biotite_info``"
+msgstr "**名称**: ``get_biotite_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:113
+#: 5d9675a3552842ad846c5d8f6c5373e2
+msgid ""
+"**Description**: Get comprehensive information about Biotite – comprehensive"
+" computational molecular biology library"
+msgstr "**描述**：获取有关Biotite的全面信息——一款功能全面的计算分子生物学库"
+
+#: ../../tools/bioinformatics_core_tools.rst:133
+#: be01e7365bf74ca0a57aab7424b09ff3
+msgid "**get_cryosparc_tools_info** (Type: PackageTool)"
+msgstr "**get_cryosparc_tools_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:135
+#: 7b1672955ee742a7ad5ae97dd2ce068f
+msgid ""
+"Get comprehensive information about cryosparc-tools – interface to CryoSPARC"
+" cryo-EM processing"
+msgstr "获取有关 cryosparc-tools 的全面信息 —— CryoSPARC 冷冻电镜处理的接口"
+
+#: ../../tools/bioinformatics_core_tools.rst 1a5016f52f084c718548d25b801b74a8
+msgid "get_cryosparc_tools_info tool specification"
+msgstr "get_cryosparc_tools_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:141
+#: 7b929a86d4ad424ebd88f13410e7b8ef
+msgid "**Name**: ``get_cryosparc_tools_info``"
+msgstr "**名称**：``get_cryosparc_tools_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:143
+#: bba05e52c2b14bbb8041e7a2a72053cf
+msgid ""
+"**Description**: Get comprehensive information about cryosparc-tools – "
+"interface to CryoSPARC cryo-EM processing"
+msgstr "**描述**：获取关于 cryosparc-tools 的全面信息——CryoSPARC 冷冻电子显微镜处理的接口。"
+
+#: ../../tools/bioinformatics_core_tools.rst:147
+#: cc381812ddd941fa8972de12ab4a6620
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"cryosparc-tools"
+msgstr "``info_type``（字符串）（必填）要检索的关于 cryosparc-tools 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:164
+#: af881c5d579b435cb84c7edb02de6109
+msgid "**get_dendropy_info** (Type: PackageTool)"
+msgstr "**get_dendropy_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:166
+#: 2b7c45ad8dd841ce9fa58376b6a4eb49
+msgid "Get information about the dendropy package. Python package: dendropy"
+msgstr "获取有关 dendropy 包的信息。Python 包：dendropy"
+
+#: ../../tools/bioinformatics_core_tools.rst 014bc671861f4d6188e3f93689f76b3f
+msgid "get_dendropy_info tool specification"
+msgstr "get_dendropy_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:172
+#: 49f0f091626c4df794e6a5e70dc38ad3
+msgid "**Name**: ``get_dendropy_info``"
+msgstr "**名称**：``get_dendropy_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:174
+#: 1a999b5b07994ed8ac51485d5b6aad8e
+msgid ""
+"**Description**: Get information about the dendropy package. Python package:"
+" dendropy"
+msgstr "**描述**：获取有关 dendropy 包的信息。Python 包：dendropy"
+
+#: ../../tools/bioinformatics_core_tools.rst:193
+#: 27338f4f601d4a99ac02f474766bf406
+msgid "**get_ete3_info** (Type: PackageTool)"
+msgstr "**get_ete3_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:195
+#: 69ab869c06224118a32916ed0cfc8a04
+msgid "Get information about the ete3 package. Python package: ete3"
+msgstr "获取有关 ete3 包的信息。Python 包：ete3"
+
+#: ../../tools/bioinformatics_core_tools.rst 404897bfbb81483fa130f8d0764855e5
+msgid "get_ete3_info tool specification"
+msgstr "get_ete3_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:201
+#: e20f026dd9de4a3ba3d03afe473a9c5f
+msgid "**Name**: ``get_ete3_info``"
+msgstr "**名称**：``get_ete3_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:203
+#: d33e011b1edb4371be7de7dc882a0ead
+msgid ""
+"**Description**: Get information about the ete3 package. Python package: "
+"ete3"
+msgstr "**描述**：获取有关 ete3 包的信息。Python 包：ete3"
+
+#: ../../tools/bioinformatics_core_tools.rst:222
+#: 1831ed30ed124a29b0a95cd92bacd1b6
+msgid "**get_fanc_info** (Type: PackageTool)"
+msgstr "**get_fanc_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:224
+#: 1da426f7cf38461db523190d5b3fbded
+msgid ""
+"Get comprehensive information about FAN-C – framework for analyzing nuclear "
+"contacts"
+msgstr "获取关于FAN-C——核接触分析框架的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst f3fb7f3981b7424c81d46325c748e6d6
+msgid "get_fanc_info tool specification"
+msgstr "get_fanc_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:230
+#: 9a6dd4ec059745bb86402bf29c3fcaf2
+msgid "**Name**: ``get_fanc_info``"
+msgstr "**名称**：``get_fanc_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:232
+#: 2968cd1df8964ad99603c5d67db4bc57
+msgid ""
+"**Description**: Get comprehensive information about FAN-C – framework for "
+"analyzing nuclear contacts"
+msgstr "**描述**：获取关于FAN-C——用于分析核接触的框架的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:236
+#: 9fe3da894db94cf5877e2707a4b8e886
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"FAN-C"
+msgstr "``info_type``（字符串）（必填）要检索的关于FAN-C的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:253
+#: 08164d40d8aa41e6a83a98d0f6f0d80b
+msgid "**get_flask_info** (Type: PackageTool)"
+msgstr "**get_flask_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:255
+#: 159d808b69d04a83a1861fe8c3ebc0d7
+msgid ""
+"Get comprehensive information about Flask - a lightweight WSGI web "
+"application framework"
+msgstr "获取关于 Flask —— 一款轻量级 WSGI Web 应用框架的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 59dffb445c52438e8c150afb04701238
+msgid "get_flask_info tool specification"
+msgstr "get_flask_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:261
+#: 174fad11044a4085b33ef75daaf73be1
+msgid "**Name**: ``get_flask_info``"
+msgstr "**名称**：``get_flask_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:263
+#: 9d46e9e7ff744070908d170d8a904cf5
+msgid ""
+"**Description**: Get comprehensive information about Flask - a lightweight "
+"WSGI web application framework"
+msgstr "**描述**：获取关于 Flask —— 一款轻量级 WSGI Web 应用框架的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:283
+#: b6df75b16e2541a2894b13a213cf839a
+msgid "**get_flowio_info** (Type: PackageTool)"
+msgstr "**get_flowio_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:285
+#: 5b917371df154b0bb1fea06e27c48d11
+msgid ""
+"Get comprehensive information about FlowIO – FCS file I/O for flow cytometry"
+msgstr "获取关于 FlowIO —— 流式细胞术 FCS 文件输入输出的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 655b34ebad324d7a9aaa69da06d03838
+msgid "get_flowio_info tool specification"
+msgstr "get_flowio_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:291
+#: 70d232fb8244414fbf8e48af7c091c4e
+msgid "**Name**: ``get_flowio_info``"
+msgstr "**名称**：``get_flowio_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:293
+#: d47f45a7eed24d9798822135749146da
+msgid ""
+"**Description**: Get comprehensive information about FlowIO – FCS file I/O "
+"for flow cytometry"
+msgstr "**描述**：获取有关 FlowIO —— 流式细胞术的 FCS 文件输入/输出的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:297
+#: dac3b156652b4543bb573cda39a1703b
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"FlowIO"
+msgstr "``info_type``（字符串）（必填）要检索的 FlowIO 信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:314
+#: 7189bcad9cf74e0089240916041c75e4
+msgid "**get_flowkit_info** (Type: PackageTool)"
+msgstr "**get_flowkit_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:316
+#: 421bc1cd9b454ad4ab29966ef8bd7ff5
+msgid ""
+"Get comprehensive information about FlowKit – flow cytometry analysis "
+"toolkit"
+msgstr "获取关于 FlowKit —— 流式细胞术分析工具包的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 374f34d72b824af2baac8bd9dcabaf72
+msgid "get_flowkit_info tool specification"
+msgstr "get_flowkit_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:322
+#: e857e7dcf41a4ad7a5e009c6d201f2d4
+msgid "**Name**: ``get_flowkit_info``"
+msgstr "**名称**：``get_flowkit_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:324
+#: 53d1dbaae53d4edb9705cd870ca29679
+msgid ""
+"**Description**: Get comprehensive information about FlowKit – flow "
+"cytometry analysis toolkit"
+msgstr "**描述**：获取关于 FlowKit —— 流式细胞术分析工具包的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:328
+#: a23e5dfa7c004cb6a4500360662a2667
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"FlowKit"
+msgstr "``info_type``（字符串）（必填） 要检索的关于 FlowKit 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:345
+#: e8cc516ac4a34a3b80950b82a1640b14
+msgid "**get_gget_info** (Type: PackageTool)"
+msgstr "**get_gget_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:347
+#: 0ad6f148a74d4dcd9da1a12d80df0898
+msgid ""
+"Get comprehensive information about gget – genomics command-line tool and "
+"Python package"
+msgstr "获取关于 gget —— 基因组学命令行工具及 Python 包的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 657f82d1def24769bbfd97079394bab4
+msgid "get_gget_info tool specification"
+msgstr "get_gget_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:353
+#: 5b54684198974b7a8b265be9226b1612
+msgid "**Name**: ``get_gget_info``"
+msgstr "**名称**：``get_gget_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:355
+#: 9b1be0aed22a48d8aa65f8f081706ca2
+msgid ""
+"**Description**: Get comprehensive information about gget – genomics "
+"command-line tool and Python package"
+msgstr "**描述**：获取关于 gget —— 基因组学命令行工具及 Python 包的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:375
+#: cba9009ce82746368053242e6e6831e3
+msgid "**get_googlesearch_python_info** (Type: PackageTool)"
+msgstr "**get_googlesearch_python_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:377
+#: 74ac1a3cf54e4593be87bac80454defc
+msgid ""
+"Get comprehensive information about googlesearch-python – Google search "
+"automation"
+msgstr "获取有关 googlesearch-python —— 谷歌搜索自动化的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 629510f278a7422da9315d4ae59ae6fb
+msgid "get_googlesearch_python_info tool specification"
+msgstr "get_googlesearch_python_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:383
+#: 9f32ad7bd69743139a56f1107a0019d8
+msgid "**Name**: ``get_googlesearch_python_info``"
+msgstr "**名称**：``get_googlesearch_python_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:385
+#: 88564b1483b44d0284252d27ee9f12a5
+msgid ""
+"**Description**: Get comprehensive information about googlesearch-python – "
+"Google search automation"
+msgstr "**描述**：获取关于 googlesearch-python —— 谷歌搜索自动化的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:389
+#: 2e20bac472ab471da826b44f9c6b91df
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"googlesearch-python"
+msgstr "``info_type``（字符串）（必填）要检索的关于 googlesearch-python 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:406
+#: 8e767edc39fa47bcbf0ca6d2c42cfde0
+msgid "**get_khmer_info** (Type: PackageTool)"
+msgstr "**get_khmer_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:408
+#: 0d0449d4301548c397af6878b1d0d827
+msgid ""
+"Get comprehensive information about khmer – nucleotide sequence k-mer "
+"analysis"
+msgstr "获取有关khmer——核苷酸序列k-mer分析的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst d6ae65c3b6574b5dbd164200cf4d5053
+msgid "get_khmer_info tool specification"
+msgstr "get_khmer_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:414
+#: 649db3398039436bb14be59c05f36e17
+msgid "**Name**: ``get_khmer_info``"
+msgstr "**名称**：``get_khmer_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:416
+#: 6b6b6b12f49943f5a7a4ce1e66c38d21
+msgid ""
+"**Description**: Get comprehensive information about khmer – nucleotide "
+"sequence k-mer analysis"
+msgstr "**描述**：获取关于khmer——核苷酸序列k-mer分析的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:420
+#: 7449f7cc9cf44b12a1ff8f0ae9736d54
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"khmer"
+msgstr "``info_type``（字符串）（必填）要检索的关于高棉语的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:437
+#: bed140ff348f425c99719ca97e1d2cc2
+msgid "**get_lifelines_info** (Type: PackageTool)"
+msgstr "**get_lifelines_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:439
+#: 072c268c4ef54d998c1056680ad4cf49
+msgid ""
+"Get comprehensive information about lifelines – survival analysis in Python"
+msgstr "获取有关 lifelines —— Python 生存分析的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst eeca6b0b0a914b1fa0505f5bb6905f3d
+msgid "get_lifelines_info tool specification"
+msgstr "get_lifelines_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:445
+#: 6540d5c0f97843079871255b92f4be96
+msgid "**Name**: ``get_lifelines_info``"
+msgstr "**名称**：``get_lifelines_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:447
+#: a5e50345fc554893a861f33d44178325
+msgid ""
+"**Description**: Get comprehensive information about lifelines – survival "
+"analysis in Python"
+msgstr "**描述**：获取关于 lifelines —— Python 中生存分析的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:467
+#: 9effd3fc05c24867af9369ed5f2ec4b0
+msgid "**get_loompy_info** (Type: PackageTool)"
+msgstr "**get_loompy_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:469
+#: 5482c0919b574848854ab3919ca611a9
+msgid ""
+"Get comprehensive information about loompy – efficient storage for large "
+"omics datasets"
+msgstr "获取关于 loompy 的全面信息——高效存储大型组学数据集"
+
+#: ../../tools/bioinformatics_core_tools.rst 97245df0a73f42a2b78928a9eaf557cc
+msgid "get_loompy_info tool specification"
+msgstr "get_loompy_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:475
+#: 1d7fda8abdcb4a55ba66bd3a007523b3
+msgid "**Name**: ``get_loompy_info``"
+msgstr "**名称**：``get_loompy_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:477
+#: 433463926f054ad98f404babc64e8ea9
+msgid ""
+"**Description**: Get comprehensive information about loompy – efficient "
+"storage for large omics datasets"
+msgstr "**描述**：获取关于 loompy 的全面信息——用于大型组学数据集的高效存储方案"
+
+#: ../../tools/bioinformatics_core_tools.rst:481
+#: 667654b986e146c9bf9925f63013f710
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"loompy"
+msgstr "``info_type``（字符串）（必填） 要检索的关于 loompy 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:498
+#: 3edb512a84104310954b316e7dc50af1
+msgid "**get_mageck_info** (Type: PackageTool)"
+msgstr "**get_mageck_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:500
+#: 74f81a00c86b43ed846fcd093cd7f4c5
+msgid ""
+"Get comprehensive information about MAGeCK – CRISPR screen analysis toolkit"
+msgstr "获取关于MAGeCK——CRISPR筛选分析工具包的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 11b4f7bc8bc247c49bf97c62a2e1fcca
+msgid "get_mageck_info tool specification"
+msgstr "get_mageck_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:506
+#: b7a180d1e8f2434e993620d8cf3ad687
+msgid "**Name**: ``get_mageck_info``"
+msgstr "**名称**：``get_mageck_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:508
+#: cc85dbf5c85e45199217c826b2405779
+msgid ""
+"**Description**: Get comprehensive information about MAGeCK – CRISPR screen "
+"analysis toolkit"
+msgstr "**描述**：获取关于MAGeCK——CRISPR筛选分析工具包的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:512
+#: dbae8441fc564a8fbe3224dc49e919e5
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"MAGeCK"
+msgstr "``info_type``（字符串）（必填） 要检索的有关 MAGeCK 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:529
+#: 9a03a55a160945949f4d18b75cdc2c6a
+msgid "**get_msprime_info** (Type: PackageTool)"
+msgstr "**get_msprime_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:531
+#: a1f8dde9165c41ac93ba90503c71a7c8
+msgid ""
+"Get comprehensive information about msprime – coalescent simulation "
+"framework"
+msgstr "获取关于 msprime —— 合并模拟框架的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst f77ca70fc32c42fdbd8107fea6538fe7
+msgid "get_msprime_info tool specification"
+msgstr "get_msprime_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:537
+#: 04777245ded34513a49a30789c80db94
+msgid "**Name**: ``get_msprime_info``"
+msgstr "**名称**：``get_msprime_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:539
+#: eac196dc28124002bdce8fefc9312350
+msgid ""
+"**Description**: Get comprehensive information about msprime – coalescent "
+"simulation framework"
+msgstr "**描述**：获取关于 msprime —— 共祖模拟框架的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:559
+#: 305b6f73691b4e928ade688b430ff700
+msgid "**get_networkx_info** (Type: PackageTool)"
+msgstr "**get_networkx_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:561
+#: 8e049798048f4d67a7f65ba8ee34fec5
+msgid ""
+"Get comprehensive information about NetworkX – network analysis library"
+msgstr "获取关于 NetworkX —— 网络分析库的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 314deccbb98745c9abc87de6f5416a3d
+msgid "get_networkx_info tool specification"
+msgstr "get_networkx_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:567
+#: b1b5b5eb82b749f8adf541713e316463
+msgid "**Name**: ``get_networkx_info``"
+msgstr "**名称**：``get_networkx_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:569
+#: 81dab3b0af4c4b76920ae39cdcc9fee1
+msgid ""
+"**Description**: Get comprehensive information about NetworkX – network "
+"analysis library"
+msgstr "**描述**：获取关于 NetworkX —— 网络分析库的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:573
+#: cedc1fcc435a473f86bd2cbada10299b
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"NetworkX"
+msgstr "``info_type``（字符串）（必填）要检索的关于 NetworkX 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:590
+#: 6e3256466a3d40f784e34d0fac237414
+msgid "**get_numba_info** (Type: PackageTool)"
+msgstr "**get_numba_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:592
+#: 7d43012b39234dfdb5a9240a4336db31
+msgid "Get comprehensive information about Numba – JIT compiler for Python"
+msgstr "获取关于 Numba —— Python 的即时编译器（JIT 编译器）的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 501617e143824b6ca13696f5143b6d2b
+msgid "get_numba_info tool specification"
+msgstr "get_numba_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:598
+#: a2fdeedb0fa748dcb5b1cddfcec815d1
+msgid "**Name**: ``get_numba_info``"
+msgstr "**名称**：``get_numba_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:600
+#: 98dd96ee6a9347059c7b6de5cf1640e2
+msgid ""
+"**Description**: Get comprehensive information about Numba – JIT compiler "
+"for Python"
+msgstr "**描述**：获取关于 Numba —— Python 的即时编译器（JIT 编译器）的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:604
+#: 221a19cc0db5413395639da308723e21
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"Numba"
+msgstr "``info_type``（字符串）（必填） 要检索的关于 Numba 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:621
+#: d67c165110c542c38778051569884c04
+msgid "**get_pdbfixer_info** (Type: PackageTool)"
+msgstr "**get_pdbfixer_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:623
+#: 808cb9baddf84cc680f13da65c010da3
+msgid ""
+"Get comprehensive information about PDBFixer – protein structure preparation"
+" tool"
+msgstr "获取关于 PDBFixer —— 蛋白质结构预处理工具的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 31e04e376c9845ce857f360333187157
+msgid "get_pdbfixer_info tool specification"
+msgstr "get_pdbfixer_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:629
+#: 62d0ea6e57bb4ad49eae837ac9d24f52
+msgid "**Name**: ``get_pdbfixer_info``"
+msgstr "**名称**：``get_pdbfixer_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:631
+#: 7b89101c6caa4bc0b684a3ca383e6286
+msgid ""
+"**Description**: Get comprehensive information about PDBFixer – protein "
+"structure preparation tool"
+msgstr "**描述**：获取关于PDBFixer——蛋白质结构准备工具的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:635
+#: 168b866c45b04b04b27a78aa213a0f6e
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"PDBFixer"
+msgstr "``info_type``（字符串）（必填）要检索的有关 PDBFixer 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:652
+#: 8b3575e1c5f9448da7d0ce719ac2bc62
+msgid "**get_plip_info** (Type: PackageTool)"
+msgstr "**get_plip_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:654
+#: adfef7edb082436eafd700837787f139
+msgid ""
+"Get comprehensive information about PLIP – protein-ligand interaction "
+"profiler"
+msgstr "获取关于 PLIP —— 蛋白质-配体相互作用分析器的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 41eedc039c344833879faa8caf0ac3da
+msgid "get_plip_info tool specification"
+msgstr "get_plip_info 工具规格说明"
+
+#: ../../tools/bioinformatics_core_tools.rst:660
+#: 1517e91226b34ec59e6569495920a46e
+msgid "**Name**: ``get_plip_info``"
+msgstr "**名称**：``get_plip_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:662
+#: 3413fc72a7604d86b3a33c3d3b2f4b05
+msgid ""
+"**Description**: Get comprehensive information about PLIP – protein-ligand "
+"interaction profiler"
+msgstr "**描述**：获取有关 PLIP（蛋白质-配体相互作用分析器）的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:666
+#: 5daf12b5f9d14b0cbe71dad22ffff107
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about PLIP"
+msgstr "``info_type``（字符串）（必需）关于 PLIP 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:683
+#: 2dddc85df99340429ee8c1157fdf7dd0
+msgid "**get_poliastro_info** (Type: PackageTool)"
+msgstr "**get_poliastro_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:685
+#: 2db4d067a5974175ad6302100b30a237
+msgid "Get comprehensive information about poliastro – astrodynamics library"
+msgstr "获取有关 poliastro——航天动力学库的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 5e786fe3d10d4f58bdb6d16ac20eca38
+msgid "get_poliastro_info tool specification"
+msgstr "get_poliastro_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:691
+#: 94a98e91de094090b3b4ed3e2e2c1ccb
+msgid "**Name**: ``get_poliastro_info``"
+msgstr "**名称**: ``get_poliastro_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:693
+#: 82ce72f81798458d8d3b8f248afae73f
+msgid ""
+"**Description**: Get comprehensive information about poliastro – "
+"astrodynamics library"
+msgstr "**描述**：获取有关poliastro——航天动力学库的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:697
+#: 0164cb83694c4e059ed1490226f36504
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"poliastro"
+msgstr "``info_type``（字符串）（必填）要检索的有关poliastro的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:714
+#: d32ca67b97fc42d296df7e1f6884a915
+msgid "**get_prody_info** (Type: PackageTool)"
+msgstr "**get_prody_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:716
+#: 698e2be77c204d0aa0dbd79aedc3dced
+msgid "Get comprehensive information about ProDy – protein dynamics analysis"
+msgstr "获取有关ProDy——蛋白质动力学分析的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 37bf7f2b8f694a939c1778020c4f6bf3
+msgid "get_prody_info tool specification"
+msgstr "get_prody_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:722
+#: 694ae192ea62497dbf39df6db5c02910
+msgid "**Name**: ``get_prody_info``"
+msgstr "**名称**: ``get_prody_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:724
+#: bb394f76c9f24fd0a35cb0a78f16b0c4
+msgid ""
+"**Description**: Get comprehensive information about ProDy – protein "
+"dynamics analysis"
+msgstr "**描述**：获取有关 ProDy（蛋白质动力学分析）的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:728
+#: 4c424dbae0a3427dbfb3a89a7a780ed5
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"ProDy"
+msgstr "``info_type``（字符串）（必填）要检索的关于 ProDy 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:745
+#: 4dd809029e9640398063cdae865428d2
+msgid "**get_pybigwig_info** (Type: PackageTool)"
+msgstr "**get_pybigwig_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:747
+#: 21262953148340e08b1f457035a673a4
+msgid ""
+"Get comprehensive information about pyBigWig – BigWig file access in Python"
+msgstr "获取有关 pyBigWig 的全面信息 – 在 Python 中访问 BigWig 文件"
+
+#: ../../tools/bioinformatics_core_tools.rst b6848829dd10459f84663ff4c84aab49
+msgid "get_pybigwig_info tool specification"
+msgstr "get_pybigwig_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:753
+#: 44180f131ac94e28a33f0083f20f0002
+msgid "**Name**: ``get_pybigwig_info``"
+msgstr "**名称**: ``get_pybigwig_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:755
+#: d65f7960ee5240af9528055a8d9e34b7
+msgid ""
+"**Description**: Get comprehensive information about pyBigWig – BigWig file "
+"access in Python"
+msgstr "**描述**：获取有关 pyBigWig 的全面信息——在 Python 中访问 BigWig 文件"
+
+#: ../../tools/bioinformatics_core_tools.rst:759
+#: 401114728def492fade4f330655da2dc
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"pyBigWig"
+msgstr "``info_type``（字符串）（必填）要检索的关于 pyBigWig 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:776
+#: 04a59e9ca8334aa5bf1eb3fb50385aaa
+msgid "**get_pykalman_info** (Type: PackageTool)"
+msgstr "**get_pykalman_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:778
+#: d091c15342a343afafba211b352aa01b
+msgid ""
+"Get comprehensive information about PyKalman – Kalman filtering and "
+"smoothing"
+msgstr "获取有关 PyKalman 的全面信息——卡尔曼滤波与平滑"
+
+#: ../../tools/bioinformatics_core_tools.rst 9e2dc397acae4bf8b800c50e58f9677e
+msgid "get_pykalman_info tool specification"
+msgstr "get_pykalman_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:784
+#: eda4f3fdd56f451cb656296f2956ff3f
+msgid "**Name**: ``get_pykalman_info``"
+msgstr "**名称**: ``get_pykalman_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:786
+#: bcf766dac7c04d92978db6d7cf7eb9ec
+msgid ""
+"**Description**: Get comprehensive information about PyKalman – Kalman "
+"filtering and smoothing"
+msgstr "**描述**：获取有关 PyKalman 的全面信息——卡尔曼滤波与平滑"
+
+#: ../../tools/bioinformatics_core_tools.rst:790
+#: c9b98ae68a5f409eaa4ba0bb3b8e79d7
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"PyKalman"
+msgstr "``info_type``（字符串）（必填）要检索的有关 PyKalman 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:807
+#: 949a7eb16cc649ec9ade54d8cbcb0baa
+msgid "**get_pymassspec_info** (Type: PackageTool)"
+msgstr "**get_pymassspec_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:809
+#: db08e4d28b604e90983090d66e7c4ba5
+msgid ""
+"Get comprehensive information about PyMassSpec – mass spectrometry data "
+"analysis"
+msgstr "获取有关 PyMassSpec 的全面信息——质谱数据分析"
+
+#: ../../tools/bioinformatics_core_tools.rst 1a4c0f5f19ed494889b0140e1771e6c7
+msgid "get_pymassspec_info tool specification"
+msgstr "get_pymassspec_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:815
+#: 9d25c2f4f8ee4168940e0eb3433a0b4f
+msgid "**Name**: ``get_pymassspec_info``"
+msgstr "**名称**: ``get_pymassspec_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:817
+#: 4aed8a7185ed48e98fc0755154d9b563
+msgid ""
+"**Description**: Get comprehensive information about PyMassSpec – mass "
+"spectrometry data analysis"
+msgstr "**描述**：获取关于 PyMassSpec 的全面信息——质谱数据分析"
+
+#: ../../tools/bioinformatics_core_tools.rst:821
+#: b7d8fd5fc8004f2faecef358f8857b44
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"PyMassSpec"
+msgstr "``info_type``（字符串）（必填）要检索的有关 PyMassSpec 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:838
+#: 8186dcbb509b40c8a7d6e30e60e91d39
+msgid "**get_pymed_info** (Type: PackageTool)"
+msgstr "**get_pymed_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:840
+#: d47aac425bbc4fab806463d7bbf4cc88
+msgid "Get comprehensive information about PyMed – PubMed access in Python"
+msgstr "获取有关 PyMed 的全面信息 – 在 Python 中访问 PubMed"
+
+#: ../../tools/bioinformatics_core_tools.rst 10c5040f317d4837ba57ada558db7ec4
+msgid "get_pymed_info tool specification"
+msgstr "get_pymed_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:846
+#: edee3c845139477684393826f3ae62c8
+msgid "**Name**: ``get_pymed_info``"
+msgstr "**名称**: ``get_pymed_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:848
+#: 137e290231fb498f9fd31f66abf1a400
+msgid ""
+"**Description**: Get comprehensive information about PyMed – PubMed access "
+"in Python"
+msgstr "**描述**：获取有关 PyMed 的全面信息——在 Python 中访问 PubMed"
+
+#: ../../tools/bioinformatics_core_tools.rst:868
+#: d0aa43fee2934ef6b5bab091eaa5d187
+msgid "**get_pypdf2_info** (Type: PackageTool)"
+msgstr "**get_pypdf2_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:870
+#: e1eb8f3975594c8eb835181dcb5d37cc
+msgid "Get comprehensive information about PyPDF2 – PDF manipulation library"
+msgstr "获取有关 PyPDF2——PDF 操作库的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 17dcd69ae0ed45d4817b63b966a4d1e7
+msgid "get_pypdf2_info tool specification"
+msgstr "get_pypdf2_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:876
+#: 4ec58e261eb842fcb7b189335bd2d2fd
+msgid "**Name**: ``get_pypdf2_info``"
+msgstr "**名称**: ``get_pypdf2_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:878
+#: d6972630416944c2bbbcc3d2c72490eb
+msgid ""
+"**Description**: Get comprehensive information about PyPDF2 – PDF "
+"manipulation library"
+msgstr "**描述**：获取有关 PyPDF2——PDF 操作库的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:882
+#: e6f5fad4c7eb451baa9a2444162e248f
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"PyPDF2"
+msgstr "``info_type``（字符串）（必填）要检索的有关 PyPDF2 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:899
+#: 8fddfdf8ab914f94afc03a85f6c8bd28
+msgid "**get_pyscreener_info** (Type: PackageTool)"
+msgstr "**get_pyscreener_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:901
+#: 040c926de8124b71bde11eb5d527d320
+msgid ""
+"Get comprehensive information about PyScreener – high-throughput virtual "
+"screening in Python"
+msgstr "获取有关 PyScreener 的全面信息——基于 Python 的高通量虚拟筛选"
+
+#: ../../tools/bioinformatics_core_tools.rst dc903325b76d458d85de63e7821d3682
+msgid "get_pyscreener_info tool specification"
+msgstr "get_pyscreener_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:907
+#: 9ae8b3f57eca47279a4f1d1e9a3f2f4d
+msgid "**Name**: ``get_pyscreener_info``"
+msgstr "**名称**: ``get_pyscreener_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:909
+#: 635ecc6431a14d5e968a3f90afc6ab33
+msgid ""
+"**Description**: Get comprehensive information about PyScreener – high-"
+"throughput virtual screening in Python"
+msgstr "**描述**：获取有关 PyScreener 的全面信息——基于 Python 的高通量虚拟筛选"
+
+#: ../../tools/bioinformatics_core_tools.rst:913
+#: ef1e42dc67a54f189cd0f5635e8c33e6
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"PyScreener"
+msgstr "``info_type``（字符串）（必填）要检索的有关 PyScreener 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:930
+#: 5cd4e036e10f4251a3f62d61c8e38bfd
+msgid "**get_pytdc_info** (Type: PackageTool)"
+msgstr "**get_pytdc_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:932
+#: d3dc732edef241e18765ccf50fdc6216
+msgid ""
+"Get comprehensive information about PyTDC – Therapeutics Data Commons in "
+"Python"
+msgstr "获取有关 PyTDC – Therapeutics Data Commons in Python 的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst e7af1dbf37474757b25c230577035898
+msgid "get_pytdc_info tool specification"
+msgstr "get_pytdc_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:938
+#: 7215e13859954711a2aab05603f5943d
+msgid "**Name**: ``get_pytdc_info``"
+msgstr "**名称**: ``get_pytdc_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:940
+#: 5c49f1dd94cf471e82d7cb1658d91c68
+msgid ""
+"**Description**: Get comprehensive information about PyTDC – Therapeutics "
+"Data Commons in Python"
+msgstr "**描述**：获取有关 PyTDC – 基于 Python 的治疗数据共享平台的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:944
+#: f0e80ff6973c4d8082c2ea30025f148d
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"PyTDC"
+msgstr "``info_type``（字符串）（必填）要检索的有关 PyTDC 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:961
+#: 8c8fcd194e4b4ea782e1c77573d9e684
+msgid "**get_requests_info** (Type: PackageTool)"
+msgstr "**get_requests_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:963
+#: dc4ff871e132499ca741f7bc9cde3a11
+msgid ""
+"Get comprehensive information about Requests - Python HTTP library for "
+"humans"
+msgstr "获取关于 Requests 的全面信息 —— 为人类设计的 Python HTTP 库"
+
+#: ../../tools/bioinformatics_core_tools.rst c517061f69454f9db474b80ee8b079b2
+msgid "get_requests_info tool specification"
+msgstr "get_requests_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:969
+#: 00a367f3477641188f15308c18d6af4e
+msgid "**Name**: ``get_requests_info``"
+msgstr "**名称**: ``get_requests_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:971
+#: 69c3960170fb45bda43c3d17bbb449b0
+msgid ""
+"**Description**: Get comprehensive information about Requests - Python HTTP "
+"library for humans"
+msgstr "**描述**：获取关于 Requests 的全面信息——为人类设计的 Python HTTP 库"
+
+#: ../../tools/bioinformatics_core_tools.rst:991
+#: 63463ee2a02a4b3981f5f5e9b274fcc5
+msgid "**get_ruptures_info** (Type: PackageTool)"
+msgstr "**get_ruptures_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:993
+#: 245f088d5bde48529143f12bfd5d771a
+msgid ""
+"Get comprehensive information about ruptures – change point detection "
+"library"
+msgstr "获取关于ruptures的全面信息——变点检测库"
+
+#: ../../tools/bioinformatics_core_tools.rst 4b663d94a24740448d94258a631ecd65
+msgid "get_ruptures_info tool specification"
+msgstr "get_ruptures_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:999
+#: fda967488aa046e8a7a8225bf29824c7
+msgid "**Name**: ``get_ruptures_info``"
+msgstr "**名称**: ``get_ruptures_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:1001
+#: 6ace2e99bc814d80a9e09711987faf4d
+msgid ""
+"**Description**: Get comprehensive information about ruptures – change point"
+" detection library"
+msgstr "**描述**：获取有关 ruptures（变点检测库）的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:1005
+#: e10776bb3c8b4d1c956b9023bde65072
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"ruptures"
+msgstr "``info_type``（字符串）（必填）要检索的断裂相关信息的类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:1022
+#: 6efdcbb998d441558b95482276df8667
+msgid "**get_scholarly_info** (Type: PackageTool)"
+msgstr "**get_scholarly_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:1024
+#: 9767d4227d2348169fbadb4068003299
+msgid ""
+"Get comprehensive information about scholarly – Google Scholar data "
+"retrieval"
+msgstr "获取有关学术数据的全面信息 – Google Scholar 数据检索"
+
+#: ../../tools/bioinformatics_core_tools.rst e6fe8e35cab64c25bce3f63d63aa4c14
+msgid "get_scholarly_info tool specification"
+msgstr "get_scholarly_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:1030
+#: 211ed706a44b49c4ab0e1b6e5eeb6db6
+msgid "**Name**: ``get_scholarly_info``"
+msgstr "**名称**: ``get_scholarly_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:1032
+#: 3ec067bc532a4b7d938b72d823d763eb
+msgid ""
+"**Description**: Get comprehensive information about scholarly – Google "
+"Scholar data retrieval"
+msgstr "**描述**：获取有关学术信息的全面数据 —— Google Scholar 数据检索"
+
+#: ../../tools/bioinformatics_core_tools.rst:1036
+#: 680a9139408840c98ea054a4b2eae702
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"scholarly"
+msgstr "``info_type``（字符串）（必填）要检索的学术信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:1053
+#: 5bf5109688354403bf2d5aace62f9419
+msgid "**get_scikit_bio_info** (Type: PackageTool)"
+msgstr "**get_scikit_bio_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:1055
+#: 237a50abf8ec46599527478a7d3f314c
+msgid ""
+"Get comprehensive information about scikit-bio – bioinformatics library "
+"built on scientific Pytho..."
+msgstr "获取关于scikit-bio的全面信息——这是一个基于科学Python构建的生物信息学库"
+
+#: ../../tools/bioinformatics_core_tools.rst c820e27fb65d44e98236fa50d9a9aa7b
+msgid "get_scikit_bio_info tool specification"
+msgstr "get_scikit_bio_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:1061
+#: c743ecde6b804f26aad6ea52dc8b0331
+msgid "**Name**: ``get_scikit_bio_info``"
+msgstr "**名称**: ``get_scikit_bio_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:1063
+#: 0115b42d5e574e08b8b114fafaaa877e
+msgid ""
+"**Description**: Get comprehensive information about scikit-bio – "
+"bioinformatics library built on scientific Python stack"
+msgstr "**描述**：获取关于 scikit-bio 的全面信息——一个基于科学 Python 技术栈构建的生物信息学库"
+
+#: ../../tools/bioinformatics_core_tools.rst:1083
+#: 89198ec22c37451da1ddaf15caac94a5
+msgid "**get_trackpy_info** (Type: PackageTool)"
+msgstr "**get_trackpy_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:1085
+#: 1e4b1e7f154d4dd98787a6a44daf1157
+msgid ""
+"Get comprehensive information about trackpy – particle tracking toolkit for "
+"Python"
+msgstr "获取有关 trackpy 的全面信息——适用于 Python 的粒子追踪工具包"
+
+#: ../../tools/bioinformatics_core_tools.rst fedaf39914ec4290af1df1f49483c9f1
+msgid "get_trackpy_info tool specification"
+msgstr "get_trackpy_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:1091
+#: 2d9c49f7a9c84f8d9cf56abb52600790
+msgid "**Name**: ``get_trackpy_info``"
+msgstr "**名称**: ``get_trackpy_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:1093
+#: ca24a14259a443c58c1d428d9baa060d
+msgid ""
+"**Description**: Get comprehensive information about trackpy – particle "
+"tracking toolkit for Python"
+msgstr "**描述**：获取关于 trackpy 的全面信息——用于 Python 的粒子跟踪工具包"
+
+#: ../../tools/bioinformatics_core_tools.rst:1097
+#: 7419ea5cef5344f98a47c0dcfc86be6e
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"trackpy"
+msgstr "``info_type``（字符串）（必填）要检索的有关 trackpy 的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:1114
+#: ef92cf26a94c408c8ba77f3ab7625f70
+msgid "**get_tskit_info** (Type: PackageTool)"
+msgstr "**get_tskit_info**（类型：PackageTool）"
+
+#: ../../tools/bioinformatics_core_tools.rst:1116
+#: 3eee0af886344ddab94daab55211732c
+msgid ""
+"Get comprehensive information about tskit – tree sequence toolkit for "
+"population genetics"
+msgstr "获取有关 tskit——用于群体遗传学的树序列工具包的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst 9209821aca484248a3e570ff1d8d981a
+msgid "get_tskit_info tool specification"
+msgstr "get_tskit_info 工具规范"
+
+#: ../../tools/bioinformatics_core_tools.rst:1122
+#: e6d7383e69b64ce392a4b25f314f0002
+msgid "**Name**: ``get_tskit_info``"
+msgstr "**名称**: ``get_tskit_info``"
+
+#: ../../tools/bioinformatics_core_tools.rst:1124
+#: 02cd9f598175459c84814e549fb67e36
+msgid ""
+"**Description**: Get comprehensive information about tskit – tree sequence "
+"toolkit for population genetics"
+msgstr "**描述**：获取有关 tskit（用于群体遗传学的树序列工具包）的全面信息"
+
+#: ../../tools/bioinformatics_core_tools.rst:1128
+#: 3da87f4b7eea497682a5177bf26d63d5
+msgid ""
+"``info_type`` (string) (required) Type of information to retrieve about "
+"tskit"
+msgstr "``info_type``（字符串）（必填）关于 tskit 要检索的信息类型"
+
+#: ../../tools/bioinformatics_core_tools.rst:1145
+#: af3464446f07475bab53a51fff9765b2
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/bioinformatics_core_tools.rst:1147
+#: ac87e651f5724d219c47691e31a0e5c5
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/bioinformatics_core_tools.rst:1148
+#: d1763611625d4774b5b6e8ec3224bfe1
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

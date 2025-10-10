@@ -1,0 +1,1811 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tools/opentarget_tools.rst:2 0fc80828df0a4fefbd4e0c767409b4f1
+msgid "Opentarget Tools"
+msgstr "Opentarget 工具"
+
+#: ../../tools/opentarget_tools.rst:4 75246059fb3d425f8f968d95153a5642
+msgid ""
+"**Configuration File**: ``opentarget_tools.json`` **Tool Type**: Local "
+"**Tools Count**: 53"
+msgstr ""
+"**配置文件**：``opentarget_tools.json``  \n"
+"**工具类型**：本地  \n"
+"**工具数量**：53"
+
+#: ../../tools/opentarget_tools.rst:8 e82c50b403454cc58ff53979c3fde4fc
+msgid ""
+"This page contains all tools defined in the ``opentarget_tools.json`` "
+"configuration file."
+msgstr "此页面包含 ``opentarget_tools.json`` 配置文件中定义的所有工具。"
+
+#: ../../tools/opentarget_tools.rst:11 5cda71202b20421787eb6a0015af1501
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: ../../tools/opentarget_tools.rst:14 60f3909954074ddea0a12f563da1c5e1
+msgid "**OpenTargets_drug_pharmacogenomics_data** (Type: OpenTarget)"
+msgstr "**OpenTargets_药物药物基因组学数据**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:16 13d2321f798a404b8bd1ed3972462297
+msgid ""
+"Retrieve pharmacogenomics data for a specific drug, including evidence "
+"levels and genotype annota..."
+msgstr "检索特定药物的药物基因组学数据，包括证据等级和基因型注释..."
+
+#: ../../tools/opentarget_tools.rst a70dd45bc05e43bb96124a2257a5c1e9
+msgid "OpenTargets_drug_pharmacogenomics_data tool specification"
+msgstr "OpenTargets_drug_pharmacogenomics_data 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:20 ../../tools/opentarget_tools.rst:53
+#: ../../tools/opentarget_tools.rst:83 ../../tools/opentarget_tools.rst:113
+#: ../../tools/opentarget_tools.rst:146 ../../tools/opentarget_tools.rst:182
+#: ../../tools/opentarget_tools.rst:212 ../../tools/opentarget_tools.rst:242
+#: ../../tools/opentarget_tools.rst:272 ../../tools/opentarget_tools.rst:302
+#: ../../tools/opentarget_tools.rst:332 ../../tools/opentarget_tools.rst:362
+#: ../../tools/opentarget_tools.rst:392 ../../tools/opentarget_tools.rst:422
+#: ../../tools/opentarget_tools.rst:452 ../../tools/opentarget_tools.rst:482
+#: ../../tools/opentarget_tools.rst:512 ../../tools/opentarget_tools.rst:542
+#: ../../tools/opentarget_tools.rst:572 ../../tools/opentarget_tools.rst:605
+#: ../../tools/opentarget_tools.rst:635 ../../tools/opentarget_tools.rst:665
+#: ../../tools/opentarget_tools.rst:695 ../../tools/opentarget_tools.rst:725
+#: ../../tools/opentarget_tools.rst:755 ../../tools/opentarget_tools.rst:785
+#: ../../tools/opentarget_tools.rst:815 ../../tools/opentarget_tools.rst:845
+#: ../../tools/opentarget_tools.rst:875 ../../tools/opentarget_tools.rst:905
+#: ../../tools/opentarget_tools.rst:935 ../../tools/opentarget_tools.rst:965
+#: ../../tools/opentarget_tools.rst:995 ../../tools/opentarget_tools.rst:1040
+#: ../../tools/opentarget_tools.rst:1085 ../../tools/opentarget_tools.rst:1130
+#: ../../tools/opentarget_tools.rst:1166 ../../tools/opentarget_tools.rst:1202
+#: ../../tools/opentarget_tools.rst:1238 ../../tools/opentarget_tools.rst:1268
+#: ../../tools/opentarget_tools.rst:1298 ../../tools/opentarget_tools.rst:1328
+#: ../../tools/opentarget_tools.rst:1358 ../../tools/opentarget_tools.rst:1388
+#: ../../tools/opentarget_tools.rst:1418 ../../tools/opentarget_tools.rst:1448
+#: ../../tools/opentarget_tools.rst:1481 ../../tools/opentarget_tools.rst:1511
+#: ../../tools/opentarget_tools.rst:1541 ../../tools/opentarget_tools.rst:1571
+#: ../../tools/opentarget_tools.rst:1601 ../../tools/opentarget_tools.rst:1637
+#: ../../tools/opentarget_tools.rst:1667 04ecd883f7db4f7196d08220b4b747c8
+#: 06ef82c19b69495f9f17cf1a09a547e9 0cf406f2cfeb494c9a5a242f73f6174c
+#: 15630a3aefa94909b285bbc4ea91ca8b 1b2f75d804854aa3a67f5785401ef893
+#: 1d606623b6fc42c394828732f0e19fe1 29f026383f6a40c2bbc7c060a137562b
+#: 2a679d01f1a94500847d1a053be09cc5 2a7046d3936b4f7e81f583aa8a6b70a1
+#: 334593c5d68d4f90b9e0059717aa0bda 36865ab7aa1c48fdb53e5ea1e9b3cefc
+#: 39b869281e42445893d45ecc2f616131 3a8a4feb36aa4b488c849d80f92904bd
+#: 40879ad971f0444aa94a8b8e9d43387e 4285f99836a349ddb0f7f6c947876038
+#: 4620f13496a74951a084eb5f6b135de5 46e4331d01d243dd875a77268b931f8b
+#: 4b18c150c0ed4436ade683506c75ac2d 4d496aca2e40457fa25529be258dbeba
+#: 506e557d836a44e291ea8cc22f878044 50f3bde5a4cb42979f2064634f0d8bb6
+#: 52d7eddfdd244fb0bea922d897f8d088 5355c7f87f5a423f9cfa94e7941dbeb0
+#: 63c9ce4cb35b40509941bed32b733dd0 65c9378f8adc4060a7f7b8063f27461f
+#: 6841e6ce9bab44ecaee847abbb6ece09 6de1fac6b06a40d6b0d177c672000b7d
+#: 73570bed0ea4494188a5087244c5cd42 77fda96e1ab24ad39b0baf22e894e733
+#: 7971dd5e0ade479183c741c457928520 7aea0d63fe344c8092ab3af1b8a6f579
+#: 7cddfb8bb5ca488da12f8eae118018d1 860ff2d918d74857a0cca10e9b1418d6
+#: 8dbd8ec2ddc7444eb8f9bc20a3197292 9ca7c770bde8451899d6d161ce1fa33e
+#: 9edf0f26fd3a4623b0206cce806e90f4 a7ea149cf587448386516a8376d689e5
+#: a8398510c33744ab858c4796b70f0652 af3154fd273f4f7fb55f374e0979daa5
+#: b9a8c972361a43509fd431cef96ec178 be5b704fc9d04543860a499596ab614f
+#: c4ec93666532487188eecf36c77eeb08 c826dbf52b4747b78f04188e269c395c
+#: dc4498315a5b4374952003d2ef54d8ce e184de55e9224169a7a688f58d012d53
+#: e2a76927b7554622bf0213e2c2aaecc4 e33aba0eefdb45dbbe2e19fcdb6abb65
+#: e354104ca3954c6fa1956d6a8717288c e7ee9d30001140f9b628f532193a4bdf
+#: ec5f8ce2700b4fdba2421b0d8d6c5138 f04ee539f1da4e7b9001a3bdb77bcddd
+#: f682bca8aaed4ab2967d6e7cbd393e76 f8a471d5bb9241dfba1c0353439cfa33
+msgid "**Tool Information:**"
+msgstr "**工具信息：**"
+
+#: ../../tools/opentarget_tools.rst:22 9441587608bd4769830e021e59c4c756
+msgid "**Name**: ``OpenTargets_drug_pharmacogenomics_data``"
+msgstr "**名称**：``OpenTargets_drug_pharmacogenomics_data``"
+
+#: ../../tools/opentarget_tools.rst:23 ../../tools/opentarget_tools.rst:56
+#: ../../tools/opentarget_tools.rst:86 ../../tools/opentarget_tools.rst:116
+#: ../../tools/opentarget_tools.rst:149 ../../tools/opentarget_tools.rst:185
+#: ../../tools/opentarget_tools.rst:215 ../../tools/opentarget_tools.rst:245
+#: ../../tools/opentarget_tools.rst:275 ../../tools/opentarget_tools.rst:305
+#: ../../tools/opentarget_tools.rst:335 ../../tools/opentarget_tools.rst:365
+#: ../../tools/opentarget_tools.rst:395 ../../tools/opentarget_tools.rst:425
+#: ../../tools/opentarget_tools.rst:455 ../../tools/opentarget_tools.rst:485
+#: ../../tools/opentarget_tools.rst:515 ../../tools/opentarget_tools.rst:545
+#: ../../tools/opentarget_tools.rst:575 ../../tools/opentarget_tools.rst:608
+#: ../../tools/opentarget_tools.rst:668 ../../tools/opentarget_tools.rst:728
+#: ../../tools/opentarget_tools.rst:758 ../../tools/opentarget_tools.rst:788
+#: ../../tools/opentarget_tools.rst:818 ../../tools/opentarget_tools.rst:848
+#: ../../tools/opentarget_tools.rst:878 ../../tools/opentarget_tools.rst:908
+#: ../../tools/opentarget_tools.rst:938 ../../tools/opentarget_tools.rst:968
+#: ../../tools/opentarget_tools.rst:998 ../../tools/opentarget_tools.rst:1043
+#: ../../tools/opentarget_tools.rst:1088 ../../tools/opentarget_tools.rst:1133
+#: ../../tools/opentarget_tools.rst:1169 ../../tools/opentarget_tools.rst:1205
+#: ../../tools/opentarget_tools.rst:1241 ../../tools/opentarget_tools.rst:1271
+#: ../../tools/opentarget_tools.rst:1301 ../../tools/opentarget_tools.rst:1331
+#: ../../tools/opentarget_tools.rst:1361 ../../tools/opentarget_tools.rst:1391
+#: ../../tools/opentarget_tools.rst:1421 ../../tools/opentarget_tools.rst:1451
+#: ../../tools/opentarget_tools.rst:1484 ../../tools/opentarget_tools.rst:1514
+#: ../../tools/opentarget_tools.rst:1544 ../../tools/opentarget_tools.rst:1574
+#: ../../tools/opentarget_tools.rst:1604 ../../tools/opentarget_tools.rst:1640
+#: ../../tools/opentarget_tools.rst:1670 01d9d9a525844e3e9a43d00bee3e6c1d
+#: 0a61ed3f93a948a5b83a9b2861927ac7 0a95a8052cf646a5b42eee5f2eff688d
+#: 16cbf3ed461f47f285da14dc3fcd14cb 2571138b9c2f4e8289f78d42e5d0d369
+#: 2d331a8ef21f4a9d82dbfceac77a89fe 43cfc0816b9a4cbda974fa69c1b2f678
+#: 470aa309193945eaa3ef3950f1d93f02 489c7f4ed4d54b89aecda2a070ca2392
+#: 4991bd1d76024099bf9c7b89bc2e9118 4b2fa0888e084a258b3e9e9101b1ad26
+#: 50858ff2594b4548bce728193940d5a1 5105e94efadf455aacb6e58856c85eb4
+#: 51cb041b2c1a4710b3d72c83f585c58c 527bf2fbe1d34615b106148cec7c714c
+#: 5b6daf3c47794a5fa7b11754ad8ef308 613ae6b939464feda74da4b086ffaafc
+#: 61c806314d96433797c882842a2db60f 683c6bc74d9e4e6ba88c72e0dcda276a
+#: 6b41317dcb31495698bfb90fde2c6aba 6d80f035dd9f4d53ae258efbe5adb37b
+#: 731d366fd34746dca5d467bdea8144f7 73258c3d5d84412583dc80d1b6cd19f1
+#: 746d9d93c49c47409fc64bf037fea709 837efcc83ee84ec085ddc5037c0a410d
+#: 8543d12305f94cbdb8a0be944b6b1aa3 886842d5580b4e8f9431f67cbb927745
+#: 90d7b7c21307432eaac27da418d31f6e 93e6819182d2444b9caa1192158aa4e9
+#: 9647745c875e44d283016d273d4159df 9e864375620f427989cb2f7716137b34
+#: a0231a6c759c4ac6848f6c90312bfad8 a0bd112eadb44f57aa33c882e5eda0b4
+#: a312055eb84a41ea9ba12e2f3e84f031 a6d60e70a66c4fc78ac3c225507263ab
+#: a7b2d0582ced4853aab71194a3216de0 c18be005ecd946528d7e03938684f261
+#: c4c065e205b7409f9357efe4b8850d04 ca4bbc61ec4c425192f33958a86620c8
+#: cece6bd354c64b48bb816682c45893fc e05648df7bd94e75b2972f48ed008883
+#: e3e538710cb04c1fae140b7d424b175a e5c7551c09dd4448a35a1dd3f4aebce6
+#: e929be3a849d45258ea9117765e633bd e9559d827a954cd980c8ba97897fe536
+#: f5300701497e4f3ab858fe765b473c6c f5c07fc7e1dd424c9fc1a0260ff1c87b
+#: f64f6bddc70e4826bf7c801b72ca8596 f98b2e0847774d6daf43bbfb25876eef
+#: feb6f80f3e684fffb48cdf63200d589e febee51e8a1b436286cc137a831fd1ea
+msgid "**Type**: ``OpenTarget``"
+msgstr "**类型**：``OpenTarget``"
+
+#: ../../tools/opentarget_tools.rst:24 76a6d8bdf3294ac7a5770e1ffc806efa
+msgid ""
+"**Description**: Retrieve pharmacogenomics data for a specific drug, "
+"including evidence levels and genotype annotations."
+msgstr "**描述**：检索特定药物的药物基因组学数据，包括证据级别和基因型注释。"
+
+#: ../../tools/opentarget_tools.rst:26 ../../tools/opentarget_tools.rst:59
+#: ../../tools/opentarget_tools.rst:89 ../../tools/opentarget_tools.rst:119
+#: ../../tools/opentarget_tools.rst:152 ../../tools/opentarget_tools.rst:188
+#: ../../tools/opentarget_tools.rst:218 ../../tools/opentarget_tools.rst:248
+#: ../../tools/opentarget_tools.rst:278 ../../tools/opentarget_tools.rst:308
+#: ../../tools/opentarget_tools.rst:338 ../../tools/opentarget_tools.rst:368
+#: ../../tools/opentarget_tools.rst:398 ../../tools/opentarget_tools.rst:428
+#: ../../tools/opentarget_tools.rst:458 ../../tools/opentarget_tools.rst:488
+#: ../../tools/opentarget_tools.rst:518 ../../tools/opentarget_tools.rst:548
+#: ../../tools/opentarget_tools.rst:578 ../../tools/opentarget_tools.rst:611
+#: ../../tools/opentarget_tools.rst:641 ../../tools/opentarget_tools.rst:671
+#: ../../tools/opentarget_tools.rst:701 ../../tools/opentarget_tools.rst:731
+#: ../../tools/opentarget_tools.rst:761 ../../tools/opentarget_tools.rst:791
+#: ../../tools/opentarget_tools.rst:821 ../../tools/opentarget_tools.rst:851
+#: ../../tools/opentarget_tools.rst:881 ../../tools/opentarget_tools.rst:911
+#: ../../tools/opentarget_tools.rst:941 ../../tools/opentarget_tools.rst:971
+#: ../../tools/opentarget_tools.rst:1001 ../../tools/opentarget_tools.rst:1046
+#: ../../tools/opentarget_tools.rst:1091 ../../tools/opentarget_tools.rst:1136
+#: ../../tools/opentarget_tools.rst:1172 ../../tools/opentarget_tools.rst:1208
+#: ../../tools/opentarget_tools.rst:1244 ../../tools/opentarget_tools.rst:1274
+#: ../../tools/opentarget_tools.rst:1304 ../../tools/opentarget_tools.rst:1334
+#: ../../tools/opentarget_tools.rst:1364 ../../tools/opentarget_tools.rst:1394
+#: ../../tools/opentarget_tools.rst:1424 ../../tools/opentarget_tools.rst:1454
+#: ../../tools/opentarget_tools.rst:1487 ../../tools/opentarget_tools.rst:1517
+#: ../../tools/opentarget_tools.rst:1547 ../../tools/opentarget_tools.rst:1577
+#: ../../tools/opentarget_tools.rst:1607 ../../tools/opentarget_tools.rst:1643
+#: ../../tools/opentarget_tools.rst:1673 06fefb099c5942869f4df8c83daeeccf
+#: 074e5aa3d7da4d70905dabd4fac14336 077e1e1d7fc946d5ba000d794156d27f
+#: 08ae14f45524497aa03d0268e23a1e88 0bd06a042c9d425abee893ac4494535e
+#: 0fe3c0fbdfcc4c64b8ac7b89b2689df8 1bced92036c141afbef88bfba2a1e5d3
+#: 1de3be275e1c429095c94ce768d51e96 1e874f55f7e14855b390b9194220048f
+#: 1f5b7294d74f40ad8ee32dd269c35e07 2bf42929859e4ffabe560d327c939a6d
+#: 2f1ba0f406e04cd9b74d73959358ee84 35622c7d9ca640e29085dfc617cbcdc2
+#: 3cfbff2977e24a8486e102578d5bfbfd 3d6bbf52966147ebba0cf6f00b2b9158
+#: 41e955c5c5c74941a54a1718422e94d8 441d85c26a054dccaba0cf5aede05789
+#: 45a1d59f838447f4a3ce57ffbb6fc7bf 4849aa864e464e67b4cd6c1cddbcbfd1
+#: 4a55975e0f844b439b4f4785554c133f 4c7a5a805d304388a8f280c7f11f6980
+#: 4f828c3e7861479ab684e7f8268fcfde 5004b25964c546b3a9a0cc873e0fa8e1
+#: 5084d9ad86de48b9b2a17903d5412f57 5450bf017b8e45efac8c59b0f2c36243
+#: 559556292276406380fc16c78870528f 5c725f959fd64ce8a86a23ff8c92b2c2
+#: 65e1585e52e645dbb5db1a784ab2774b 70b8c484f74148dda0d641b0076eee3d
+#: 70f265246b2f4afabea06c39e760de6b 721f4a3c6f9543b1abcd6ff305b29518
+#: 7a69fda73469436fac2baac0169d1c2b 83bee48fd6c041bab99265e4e071a55a
+#: 8788929a1568449a9c3e1eebe9bc3eb6 96433508a43c4593b7e590b1b40f160e
+#: a6d40fae744244a48763f25527e5aa59 a71c81ac4350411eb409d8878f216e15
+#: b558c48d0f3146cca3467658bbd46160 c3bb63debcdd40b6a221fe8ef45d1120
+#: c855309b710e4cefbcf2390ee7cf6665 cb15ba81fe47493393a3fc3939021236
+#: ccbe24d4b82646fd8304b91bf9426b7f ce4be5199c50406d839682dd1ee3967e
+#: d4a12620393a412cb58c4ef2bd05bbce d9c719e3ca974fc79868848e33ef3bc9
+#: dd45522ea9504815b832b1138ce9ee31 e1e4be402b754ab385e304a2cf2967ef
+#: e5e6d9aa04c040419a154aab28689164 e7722af325154d5aac8fbea8e2749889
+#: f474ca88ef1b4448a423c014bd7664a8 f656a16562f74457b9b14f01f07da6b3
+#: fcdeddd91c9a46da9a92457ba4d45a02 ffd516c5ca8c4e9b98d583c6c872145b
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../tools/opentarget_tools.rst:28 ../../tools/opentarget_tools.rst:61
+#: ../../tools/opentarget_tools.rst:91 ../../tools/opentarget_tools.rst:250
+#: ../../tools/opentarget_tools.rst:580 ../../tools/opentarget_tools.rst:613
+#: ../../tools/opentarget_tools.rst:673 ../../tools/opentarget_tools.rst:763
+#: ../../tools/opentarget_tools.rst:793 ../../tools/opentarget_tools.rst:823
+#: ../../tools/opentarget_tools.rst:853 ../../tools/opentarget_tools.rst:943
+#: ../../tools/opentarget_tools.rst:973 1a19f4a66113455eab2b9a8502015793
+#: 2da3f2f6fde845cbb42793bdba161187 374d2331c30f461a93373f9252dbcaaf
+#: 40a4fe307cd3450b9fcb514962e55ae9 4293dac242c242819d69caaa61ac7569
+#: 51922a6190e144cabbe6c61b8ab2aff6 53157cf52564402bb80a104f98646951
+#: 632d210b50004607aa8572ca60780e9a a5441a6f7d6245c5a7b0ad5c265c1f73
+#: ab739c26eccf4ab6be7c05e426dc7afd ae20e0f83fe64c5dae65577457ad59c1
+#: c2417c531a2640e0a663136c3e7553b1 d0835c53145e418ba47fb3ce390f6137
+msgid "``chemblId`` (string) (optional) The ChEMBL ID of the drug."
+msgstr "``chemblId``（字符串）（可选）药物的 ChEMBL ID。"
+
+#: ../../tools/opentarget_tools.rst:31 154dd3956a5f44049652d536a66fbfb4
+msgid "``page`` (object) (optional) Pagination options."
+msgstr "``page``（对象）（可选）分页选项。"
+
+#: ../../tools/opentarget_tools.rst:34 ../../tools/opentarget_tools.rst:64
+#: ../../tools/opentarget_tools.rst:94 ../../tools/opentarget_tools.rst:127
+#: ../../tools/opentarget_tools.rst:163 ../../tools/opentarget_tools.rst:193
+#: ../../tools/opentarget_tools.rst:223 ../../tools/opentarget_tools.rst:253
+#: ../../tools/opentarget_tools.rst:283 ../../tools/opentarget_tools.rst:313
+#: ../../tools/opentarget_tools.rst:343 ../../tools/opentarget_tools.rst:373
+#: ../../tools/opentarget_tools.rst:403 ../../tools/opentarget_tools.rst:433
+#: ../../tools/opentarget_tools.rst:463 ../../tools/opentarget_tools.rst:493
+#: ../../tools/opentarget_tools.rst:523 ../../tools/opentarget_tools.rst:553
+#: ../../tools/opentarget_tools.rst:586 ../../tools/opentarget_tools.rst:616
+#: ../../tools/opentarget_tools.rst:646 ../../tools/opentarget_tools.rst:676
+#: ../../tools/opentarget_tools.rst:706 ../../tools/opentarget_tools.rst:736
+#: ../../tools/opentarget_tools.rst:766 ../../tools/opentarget_tools.rst:796
+#: ../../tools/opentarget_tools.rst:826 ../../tools/opentarget_tools.rst:856
+#: ../../tools/opentarget_tools.rst:886 ../../tools/opentarget_tools.rst:916
+#: ../../tools/opentarget_tools.rst:946 ../../tools/opentarget_tools.rst:976
+#: ../../tools/opentarget_tools.rst:1021 ../../tools/opentarget_tools.rst:1066
+#: ../../tools/opentarget_tools.rst:1111 ../../tools/opentarget_tools.rst:1147
+#: ../../tools/opentarget_tools.rst:1183 ../../tools/opentarget_tools.rst:1219
+#: ../../tools/opentarget_tools.rst:1249 ../../tools/opentarget_tools.rst:1279
+#: ../../tools/opentarget_tools.rst:1309 ../../tools/opentarget_tools.rst:1339
+#: ../../tools/opentarget_tools.rst:1369 ../../tools/opentarget_tools.rst:1399
+#: ../../tools/opentarget_tools.rst:1429 ../../tools/opentarget_tools.rst:1462
+#: ../../tools/opentarget_tools.rst:1492 ../../tools/opentarget_tools.rst:1522
+#: ../../tools/opentarget_tools.rst:1552 ../../tools/opentarget_tools.rst:1582
+#: ../../tools/opentarget_tools.rst:1618 ../../tools/opentarget_tools.rst:1648
+#: ../../tools/opentarget_tools.rst:1681 00be7e42f7bf4eaf905535826cdfc8d3
+#: 022b08d040164e0b91d38770e00dad0d 046f9e134e074aae8d3f5217efec2b98
+#: 04a9855b32ba4c0b8c6ca2b081339333 0e25603eebe74c298f2cecc80b9d918b
+#: 1ae9746c46084f99a898dd079c904c5c 1d1904f049ff43429a8b2ad73df3c25f
+#: 1f427e75d55b4bfea0c75d492cf9b4d0 25d5796b890649f8bea7f26bdd5b6ece
+#: 28ce1b7e66ee4c47b18ff96a44d3e9ef 29cf9d9ece8e4ef489ce60f37e271a3a
+#: 2fb9844b01c64441a469fa657e0f1580 31d2091fdabc40dca69367d6f7a92534
+#: 33788ca5244d4c2aa23d41cd7a688678 3b6a96b1e0da4eb7bd80329979693177
+#: 44b46b3dd7624a62bebe14ad717bee00 454e8941bf4b45a591da4d445b158ecb
+#: 4838f12da9c14021b0ffcdf53af1c4d5 58c4fbace15244cca610f130a9ba1099
+#: 608f70599142410aa99ac5f76286417d 6da31eb1eaac49c483c09686db291c7f
+#: 7c3360210dbc49c8bf3418df273e3c5c 7d491282d2e24c5b8b018b266c6bea3c
+#: 7e3489b40e4d48ef93fa4f52b4296cd0 7fb8d788198549e4920a95fea6df856b
+#: 85947fa588bc420bb92c7e06eb07c118 85debf486a8e4a9d8a66667251a65d4d
+#: 906eefd21e454b759a810f2e0fda60aa 9485375124ad41829692ec2a1217eef9
+#: 9e5dfcacfea64b50812eebc8cd104d61 a0bee579f55142608e46331546b79e25
+#: a3083cf4dde64177893800fc3c6b8f6c a39697b7b80b460caa2108b205522c43
+#: a62820ca496a47f89b760132974ee7b3 a9a7030d6f784e1ab709070d950554c0
+#: aa1ee7ba225f44a3b7c43bd488298498 ab0f303c44c241fb9ec5fa6136f40e79
+#: ab882f8ba276421c9cade37f1b5a851d ade79c7da29843e38f6405070ccd59b3
+#: adffde4d0ad74798ba6fc85ebfb875a7 b52345aeafbf44e38a9fda6b3f7db0f0
+#: b93914a34fb3460fa5f6c3c257cd5213 ba9c774b01ad4d209f27066daafaa243
+#: bb9fed5541ac41309c8e8f3d750bc73c c2bf125861204309a79bcaccfb667342
+#: c91b3c60a049467ba4a61fc51ff242bb cfcd18ef7eab4fb289c1118c6c1f5a95
+#: d64da80541ef4f6e854636d006822895 e8433ac311b4422da1e7dbabfbd090cf
+#: ef880547652546b4b28d0fe6db34aba0 f10ab74e18e14989bed0f92d6a5b3209
+#: fc10df121071447194f1d8a92b226da5 fd6fb599309b403dabe1077722ccc891
+msgid "**Example Usage:**"
+msgstr "**示例用法：**"
+
+#: ../../tools/opentarget_tools.rst:47 eb10e0cd32614116a93573269f6af884
+msgid ""
+"**OpenTargets_get_approved_indications_by_drug_chemblId** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_approved_indications_by_drug_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:49 f32a58aa86a2462c9fbb2a03d758e8c4
+msgid ""
+"Retrieve detailed information about multiple drugs using a list of ChEMBL "
+"IDs."
+msgstr "使用一组 ChEMBL ID 检索多个药物的详细信息。"
+
+#: ../../tools/opentarget_tools.rst 1667c553f3954d2fb51100c1512954ce
+msgid ""
+"OpenTargets_get_approved_indications_by_drug_chemblId tool specification"
+msgstr "OpenTargets_get_approved_indications_by_drug_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:55 518a1fcb912847619c143f497bb4a353
+msgid "**Name**: ``OpenTargets_get_approved_indications_by_drug_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_approved_indications_by_drug_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:57 397d2019e2b44059a5ebaef5e1d84446
+msgid ""
+"**Description**: Retrieve detailed information about multiple drugs using a "
+"list of ChEMBL IDs."
+msgstr "**描述**：使用一组 ChEMBL ID 检索多个药物的详细信息。"
+
+#: ../../tools/opentarget_tools.rst:77 9bc15a33adad4995b8879f322dc77a91
+msgid ""
+"**OpenTargets_get_associated_diseases_by_drug_chemblId** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_associated_diseases_by_drug_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:79 12e12516287a4a739c6ed8f7feb66c9f
+msgid ""
+"Retrieve the list of diseases associated with a specific drug chemblId based"
+" on clinical trial da..."
+msgstr "根据临床试验数据，检索与特定药物 chemblId 相关的疾病列表。"
+
+#: ../../tools/opentarget_tools.rst e91b8d27e5ec4b9485c85d30d256b760
+msgid ""
+"OpenTargets_get_associated_diseases_by_drug_chemblId tool specification"
+msgstr "OpenTargets_get_associated_diseases_by_drug_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:85 a8c8003c3dd34c5b9526baa0e2d0186e
+msgid "**Name**: ``OpenTargets_get_associated_diseases_by_drug_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_associated_diseases_by_drug_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:87 1691d50c21ca476988de8677dfb85802
+msgid ""
+"**Description**: Retrieve the list of diseases associated with a specific "
+"drug chemblId based on clinical trial data or post-marketed drugs."
+msgstr "**描述**：根据临床试验数据或上市后药物信息，检索与特定药物的 chemblId 相关的疾病列表。"
+
+#: ../../tools/opentarget_tools.rst:107 5875fcb490b841cf99ce8d0e80cbf14f
+msgid ""
+"**OpenTargets_get_associated_drugs_by_disease_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_associated_drugs_by_disease_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:109 b2306cf49a3e4777a0754eac8651093f
+msgid ""
+"Retrieve known drugs associated with a specific disease by disease efoId."
+msgstr "根据疾病的 efoId 检索与特定疾病相关的已知药物。"
+
+#: ../../tools/opentarget_tools.rst 1d369dcbab8441a7958830cf7d51e566
+msgid "OpenTargets_get_associated_drugs_by_disease_efoId tool specification"
+msgstr "OpenTargets_get_associated_drugs_by_disease_efoId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:115 10822b2fee6144e7839b9acdad225cb9
+msgid "**Name**: ``OpenTargets_get_associated_drugs_by_disease_efoId``"
+msgstr "**名称**: ``OpenTargets_get_associated_drugs_by_disease_efoId``"
+
+#: ../../tools/opentarget_tools.rst:117 0fff0d5bd6014404bd195c4afcad81a2
+msgid ""
+"**Description**: Retrieve known drugs associated with a specific disease by "
+"disease efoId."
+msgstr "**描述**：通过疾病的 efoId 检索与特定疾病相关的已知药物。"
+
+#: ../../tools/opentarget_tools.rst:121 ../../tools/opentarget_tools.rst:340
+#: ../../tools/opentarget_tools.rst:370 ../../tools/opentarget_tools.rst:400
+#: ../../tools/opentarget_tools.rst:460 ../../tools/opentarget_tools.rst:490
+#: ../../tools/opentarget_tools.rst:520 ../../tools/opentarget_tools.rst:1138
+#: 3d8d6a0421924a059bdf173e0a99c2cf 483ca16b8b9c447bb663285e24954fac
+#: 9b5ac719f0154a0988807fa2e7712e3f c44cbf2f75154c7f98808f3064c9264f
+#: d993a4d7922f49c98a61839d675d54e1 e213e523deab4b49b5510e01c5a2500f
+#: ebe78eb811474fa190f382d136abdf56 ee2ad637cb974f49880946eaec6c6773
+msgid "``efoId`` (string) (optional) The EFO ID of the disease."
+msgstr "``efoId``（字符串）（可选）疾病的 EFO 编号。"
+
+#: ../../tools/opentarget_tools.rst:124 3cd3d519a28e4d809a93a9096a0f4813
+msgid ""
+"``size`` (integer) (optional) Number of entries to fetch, recomanding a "
+"large number to avoid missing drugs."
+msgstr "``size``（整数）（可选）要获取的条目数量，建议设置较大数值以避免遗漏药物。"
+
+#: ../../tools/opentarget_tools.rst:140 69de4289c7594fd58e5bd791ecd28498
+msgid ""
+"**OpenTargets_get_associated_drugs_by_target_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_通过目标EnsemblID获取相关药物**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:142 a02950e6c0064a87ab496349b4d40951
+msgid ""
+"Get known drugs and information (e.g. id, name, MoA) associated with a "
+"specific target ensemblID,..."
+msgstr "获取与特定目标ensemblID相关的已知药物及信息（例如ID、名称、作用机制）..."
+
+#: ../../tools/opentarget_tools.rst 9bfaecdbf3da4aa59154bffb6091791b
+msgid ""
+"OpenTargets_get_associated_drugs_by_target_ensemblID tool specification"
+msgstr "OpenTargets_get_associated_drugs_by_target_ensemblID 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:148 06c2c595446a445d9eb59f3f4491e63e
+msgid "**Name**: ``OpenTargets_get_associated_drugs_by_target_ensemblID``"
+msgstr "**名称**：``OpenTargets_get_associated_drugs_by_target_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:150 be01c8b13650471b849bd4117272452a
+msgid ""
+"**Description**: Get known drugs and information (e.g. id, name, MoA) "
+"associated with a specific target ensemblID, including clinical trial phase "
+"and mechanism of action of the drugs."
+msgstr "**描述**：获取与特定靶点ensemblID相关的已知药物及其信息（例如ID、名称、作用机制），包括药物的临床试验阶段和作用机制。"
+
+#: ../../tools/opentarget_tools.rst:154 ../../tools/opentarget_tools.rst:280
+#: ../../tools/opentarget_tools.rst:1246 ../../tools/opentarget_tools.rst:1276
+#: ../../tools/opentarget_tools.rst:1306 ../../tools/opentarget_tools.rst:1456
+#: ../../tools/opentarget_tools.rst:1549 ../../tools/opentarget_tools.rst:1579
+#: 26f32fdf7dab40289c9b893041a3df0f 71d60e928a35401a8bfa466553b0dd6c
+#: 7202b20d347d4be4aaa797be25ffba64 a8c151ca1b6a406984dce0fe9c552c99
+#: d896d94db33440878e34e6d9e3750409 e9f5404ba8814644999b9a82ec774ec0
+#: f85cd5dbca3d416c9190d645e617e8f7 fadcdab1cc534cbaa04e83378d0789dc
+msgid "``ensemblId`` (string) (optional) The Ensembl ID of the target."
+msgstr "``ensemblId``（字符串）（可选）目标的Ensembl ID。"
+
+#: ../../tools/opentarget_tools.rst:157 120697877ecd4502b51baae98e4820ca
+msgid "``size`` (integer) (optional) Number of entries to fetch."
+msgstr "``size``（整数）（可选）要获取的条目数量。"
+
+#: ../../tools/opentarget_tools.rst:160 9139f3c6d62d4e7b9dc98d2b2e53d344
+msgid "``cursor`` (string) (optional) Cursor for pagination."
+msgstr "``cursor``（字符串）（可选）用于分页的游标。"
+
+#: ../../tools/opentarget_tools.rst:176 b1d06b713adf48ec9488a7f862fba571
+msgid ""
+"**OpenTargets_get_associated_phenotypes_by_disease_efoId** (Type: "
+"OpenTarget)"
+msgstr "**OpenTargets_根据疾病EFO ID获取相关表型**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:178 f054d35db41747919fc3739ec84cf790
+msgid "Find HPO phenotypes asosciated with the specified disease efoId."
+msgstr "查找与指定疾病 efoId 相关的 HPO 表型。"
+
+#: ../../tools/opentarget_tools.rst 183b3dfe57c74ef09beb47345b3132a0
+msgid ""
+"OpenTargets_get_associated_phenotypes_by_disease_efoId tool specification"
+msgstr "OpenTargets_根据疾病EFO ID获取相关表型工具规范"
+
+#: ../../tools/opentarget_tools.rst:184 679bcc5176f9494482c1c2ec59e05b1c
+msgid "**Name**: ``OpenTargets_get_associated_phenotypes_by_disease_efoId``"
+msgstr "**名称**：``OpenTargets_get_associated_phenotypes_by_disease_efoId``"
+
+#: ../../tools/opentarget_tools.rst:186 f56fe49b2fbe4cfbb367cf7ee31bad1b
+msgid ""
+"**Description**: Find HPO phenotypes asosciated with the specified disease "
+"efoId."
+msgstr "**描述**：查找与指定疾病 efoId 相关的 HPO 表型。"
+
+#: ../../tools/opentarget_tools.rst:190 ../../tools/opentarget_tools.rst:220
+#: ../../tools/opentarget_tools.rst:1675 3a439127ddd7488aaf7d9f4724c605a8
+#: 73514b3818944edc97f9f968b6eb45c4 b312bd8141644b18bd30f695977c472b
+msgid "``efoId`` (string) (optional) The efoId of a disease or phenotype."
+msgstr "``efoId``（字符串）（可选）疾病或表型的 efoId。"
+
+#: ../../tools/opentarget_tools.rst:206 5f23e1f8498f4ab1a9b6c7f0af036496
+msgid ""
+"**OpenTargets_get_associated_targets_by_disease_efoId** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_associated_targets_by_disease_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:208 29765dee7f784432941b5319b6c2713d
+msgid ""
+"Find targets associated with a specific disease or phenotype based on efoId."
+msgstr "根据 efoId 查找与特定疾病或表型相关的靶点。"
+
+#: ../../tools/opentarget_tools.rst 1a03ecd0d7e24edeb0b4d3a2ce778a73
+msgid "OpenTargets_get_associated_targets_by_disease_efoId tool specification"
+msgstr "OpenTargets_通过疾病EFO ID获取相关靶点工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:214 0fd464be14cc4dd1ac2f0a254cd802bc
+msgid "**Name**: ``OpenTargets_get_associated_targets_by_disease_efoId``"
+msgstr "**名称**：``OpenTargets_get_associated_targets_by_disease_efoId``"
+
+#: ../../tools/opentarget_tools.rst:216 72db95f45c9d480b9e2577f9cbfae9a5
+msgid ""
+"**Description**: Find targets associated with a specific disease or "
+"phenotype based on efoId."
+msgstr "**描述**：根据 efoId 查找与特定疾病或表型相关的靶点。"
+
+#: ../../tools/opentarget_tools.rst:236 75d981829ff249f684dc875027a111c4
+msgid ""
+"**OpenTargets_get_associated_targets_by_drug_chemblId** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_associated_targets_by_drug_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:238 93d8f4e9053d437b98dadb51ecd41aa6
+msgid ""
+"Retrieve the list of targets linked to a specific drug chemblId based on its"
+" mechanism of action."
+msgstr "根据药物的作用机制，检索与特定药物 chemblId 相关联的靶点列表。"
+
+#: ../../tools/opentarget_tools.rst 38155fcd2086425db8997d29b6228d28
+msgid "OpenTargets_get_associated_targets_by_drug_chemblId tool specification"
+msgstr "OpenTargets_get_associated_targets_by_drug_chemblId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:244 1082bea939d341b8a9e4f7b5e61e606d
+msgid "**Name**: ``OpenTargets_get_associated_targets_by_drug_chemblId``"
+msgstr "**名称**：``OpenTargets_get_associated_targets_by_drug_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:246 d0647c18be8e437688d8bd6e1a023971
+msgid ""
+"**Description**: Retrieve the list of targets linked to a specific drug "
+"chemblId based on its mechanism of action."
+msgstr "**描述**：根据药物的作用机制，检索与特定药物 chemblId 相关联的靶点列表。"
+
+#: ../../tools/opentarget_tools.rst:266 6a9784d1edb94bcebc559922f6cd4d84
+msgid ""
+"**OpenTargets_get_biological_mouse_models_by_ensemblID** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_biological_mouse_models_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:268 2508687afe85474c9f4494e2c72ca6a4
+msgid ""
+"Retrieve biological mouse models, including allelic compositions and genetic"
+" backgrounds, for a s..."
+msgstr "检索生物小鼠模型，包括等位基因组成和遗传背景，用于s..."
+
+#: ../../tools/opentarget_tools.rst b7756335fc9946dc8e035aaba8b916b6
+msgid ""
+"OpenTargets_get_biological_mouse_models_by_ensemblID tool specification"
+msgstr "OpenTargets_get_biological_mouse_models_by_ensemblID 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:274 fac9d17ba68d47369f9054886ef5e770
+msgid "**Name**: ``OpenTargets_get_biological_mouse_models_by_ensemblID``"
+msgstr "**名称**：``OpenTargets_get_biological_mouse_models_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:276 e96461b79715453aaf2bcf477a1b6652
+msgid ""
+"**Description**: Retrieve biological mouse models, including allelic "
+"compositions and genetic backgrounds, for a specific target."
+msgstr "**描述**：检索生物小鼠模型，包括等位基因组成和遗传背景，针对特定靶标。"
+
+#: ../../tools/opentarget_tools.rst:296 b671c63cf79645f0a8a7d3c0b592ddce
+msgid ""
+"**OpenTargets_get_chemical_probes_by_target_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_通过目标Ensembl ID获取化学探针**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:298 554bade02a3f4f8bb5186ff6e767616f
+msgid ""
+"Retrieve chemical probes associated with a specific target using its "
+"ensemblID."
+msgstr "使用其 ensemblID 检索与特定靶点相关的化学探针。"
+
+#: ../../tools/opentarget_tools.rst 8705f16fabc14478a00ba50cb5381fee
+msgid "OpenTargets_get_chemical_probes_by_target_ensemblID tool specification"
+msgstr "OpenTargets_get_chemical_probes_by_target_ensemblID 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:304 3b540feb86c54abeac38c7db819b4f18
+msgid "**Name**: ``OpenTargets_get_chemical_probes_by_target_ensemblID``"
+msgstr "**名称**：``OpenTargets_get_chemical_probes_by_target_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:306 4d9025b27045498ca044cddb85171ac5
+msgid ""
+"**Description**: Retrieve chemical probes associated with a specific target "
+"using its ensemblID."
+msgstr "**描述**：使用目标的 ensemblID 检索与之相关的化学探针。"
+
+#: ../../tools/opentarget_tools.rst:310 d670bac0f0f642af8259e36a6f41da7e
+msgid ""
+"``ensemblId`` (string) (optional) The Ensembl ID of the target for which to "
+"retrieve chemical probes."
+msgstr "``ensemblId``（字符串）（可选）用于检索化学探针的目标的Ensembl ID。"
+
+#: ../../tools/opentarget_tools.rst:326 bb5a6327d1ee4612a14dd37f0e17233c
+msgid ""
+"**OpenTargets_get_disease_ancestors_parents_by_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_disease_ancestors_parents_by_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:328 e824b0fcd67d40b686f3f3945a38daa1
+msgid ""
+"Retrieve the disease ancestors and parents in the ontology using the disease"
+" EFO ID."
+msgstr "使用疾病 EFO ID 在本体中检索疾病的祖先和父节点。"
+
+#: ../../tools/opentarget_tools.rst 7dd594f0475b49828ddecd4e64cc9fd2
+msgid "OpenTargets_get_disease_ancestors_parents_by_efoId tool specification"
+msgstr "OpenTargets_get_disease_ancestors_parents_by_efoId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:334 1740880b2c3247fa8ee954e71ddf9174
+msgid "**Name**: ``OpenTargets_get_disease_ancestors_parents_by_efoId``"
+msgstr "**名称**：``OpenTargets_get_disease_ancestors_parents_by_efoId``"
+
+#: ../../tools/opentarget_tools.rst:336 d76b1b3c6fc647018e71a2372be5463a
+msgid ""
+"**Description**: Retrieve the disease ancestors and parents in the ontology "
+"using the disease EFO ID."
+msgstr "**描述**：使用疾病 EFO ID 检索本体中的疾病祖先和父节点。"
+
+#: ../../tools/opentarget_tools.rst:356 bb997f7e145e4bdab75a5051b0ff5c94
+msgid ""
+"**OpenTargets_get_disease_descendants_children_by_efoId** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_disease_descendants_children_by_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:358 51f95dd760ac40da9e2b407fe8bc808b
+msgid ""
+"Retrieve the disease descendants and children in the ontology using the "
+"disease EFO ID."
+msgstr "使用疾病的 EFO ID 检索本体中的疾病后代和子类。"
+
+#: ../../tools/opentarget_tools.rst e75fe1cbc83e41c8a7f5e1905de555e2
+msgid ""
+"OpenTargets_get_disease_descendants_children_by_efoId tool specification"
+msgstr "OpenTargets_get_disease_descendants_children_by_efoId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:364 50e8018ecdf14db08f4752efb809b588
+msgid "**Name**: ``OpenTargets_get_disease_descendants_children_by_efoId``"
+msgstr "**名称**：``OpenTargets_get_disease_descendants_children_by_efoId``"
+
+#: ../../tools/opentarget_tools.rst:366 a6fe2ceefd034128ba5bd5c4b69fd6a9
+msgid ""
+"**Description**: Retrieve the disease descendants and children in the "
+"ontology using the disease EFO ID."
+msgstr "**描述**：使用疾病 EFO ID 检索本体中的疾病后代和子类。"
+
+#: ../../tools/opentarget_tools.rst:386 6189b9c394c2460287d317924c76e272
+msgid "**OpenTargets_get_disease_description_by_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_disease_description_by_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:388 1e7646c753484844b8b3577ede9f107f
+msgid ""
+"Retrieve disease description, name, database cros references, obsolete "
+"terms, and whether it's a ..."
+msgstr "检索疾病描述、名称、数据库交叉引用、废弃术语及其状态..."
+
+#: ../../tools/opentarget_tools.rst 22930e654cc94e089e364fe1695d6b62
+msgid "OpenTargets_get_disease_description_by_efoId tool specification"
+msgstr "OpenTargets_get_disease_description_by_efoId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:394 d580038c001443bfb36ca75eaf150d54
+msgid "**Name**: ``OpenTargets_get_disease_description_by_efoId``"
+msgstr "**名称**：``OpenTargets_get_disease_description_by_efoId``"
+
+#: ../../tools/opentarget_tools.rst:396 82c35e065e7b4f708583cd924ba2760c
+msgid ""
+"**Description**: Retrieve disease description, name, database cros "
+"references, obsolete terms, and whether it's a therapeutic area, all using "
+"the specified efoId."
+msgstr "**描述**：使用指定的 efoId 检索疾病描述、名称、数据库交叉引用、废弃术语及是否属于治疗领域。"
+
+#: ../../tools/opentarget_tools.rst:416 b994de8ae418431595087830d6e718f6
+msgid "**OpenTargets_get_disease_id_description_by_name** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_disease_id_description_by_name**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:418 64381eac00434957a3d709ec27daabde
+msgid ""
+"Retrieve the efoId and additional details of a disease based on its name."
+msgstr "根据疾病名称检索其efoId及其他详细信息。"
+
+#: ../../tools/opentarget_tools.rst 88364fe28cf34b58ae6c4aa408224caa
+msgid "OpenTargets_get_disease_id_description_by_name tool specification"
+msgstr "OpenTargets_get_disease_id_description_by_name 工具规范"
+
+#: ../../tools/opentarget_tools.rst:424 f6d6a03aefcf41e69478f58ca759debf
+msgid "**Name**: ``OpenTargets_get_disease_id_description_by_name``"
+msgstr "**名称**：``OpenTargets_get_disease_id_description_by_name``"
+
+#: ../../tools/opentarget_tools.rst:426 fbfa881fd35843bbb5070c907ac1c575
+msgid ""
+"**Description**: Retrieve the efoId and additional details of a disease "
+"based on its name."
+msgstr "**描述**：根据疾病名称检索其efoId及其他详细信息。"
+
+#: ../../tools/opentarget_tools.rst:430 5cee89bd02e4484185ef26d3559d4b0e
+msgid ""
+"``diseaseName`` (string) (optional) The name of the disease to search for."
+msgstr "``diseaseName``（字符串）（可选）要搜索的疾病名称。"
+
+#: ../../tools/opentarget_tools.rst:446 04440aa1b11745b8bf59cb612e9d9bf4
+msgid "**OpenTargets_get_disease_locations_by_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_disease_locations_by_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:448 96cbb23581dc46feb70a4c9f4fc63d0a
+msgid ""
+"Retrieve the disease's direct location and indirect location disease terms "
+"and IDs using the dise..."
+msgstr "使用疾病...检索疾病的直接位置和间接位置的疾病术语及其ID"
+
+#: ../../tools/opentarget_tools.rst 99bcdc8b0f174c6daf370c68ae11f9e1
+msgid "OpenTargets_get_disease_locations_by_efoId tool specification"
+msgstr "OpenTargets_get_disease_locations_by_efoId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:454 74a76625fe5d46249bff568750ffd0dc
+msgid "**Name**: ``OpenTargets_get_disease_locations_by_efoId``"
+msgstr "**名称**：``OpenTargets_get_disease_locations_by_efoId``"
+
+#: ../../tools/opentarget_tools.rst:456 e38034a0415147db8c4fc13a95ee888e
+msgid ""
+"**Description**: Retrieve the disease's direct location and indirect "
+"location disease terms and IDs using the disease EFO ID."
+msgstr "**描述**：使用疾病的 EFO ID 检索疾病的直接位置和间接位置的疾病术语及其 ID。"
+
+#: ../../tools/opentarget_tools.rst:476 f39cd4f21c6140cbba9748d841e8dc0f
+msgid "**OpenTargets_get_disease_synonyms_by_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_disease_synonyms_by_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:478 e7efe90cdf8140098330175b72035bac
+msgid "Retrieve disease synonyms by its EFO ID."
+msgstr "通过其 EFO ID 检索疾病同义词。"
+
+#: ../../tools/opentarget_tools.rst 0f51068d142b4a6797dadcd515202fc4
+msgid "OpenTargets_get_disease_synonyms_by_efoId tool specification"
+msgstr "OpenTargets_get_disease_synonyms_by_efoId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:484 bc10c703ebc6470babb7e7ca396ed1e7
+msgid "**Name**: ``OpenTargets_get_disease_synonyms_by_efoId``"
+msgstr "**名称**：``OpenTargets_get_disease_synonyms_by_efoId``"
+
+#: ../../tools/opentarget_tools.rst:486 a54ee6669cd04aaaaa69e88f47e122c4
+msgid "**Description**: Retrieve disease synonyms by its EFO ID."
+msgstr "**描述**：通过其 EFO ID 检索疾病同义词。"
+
+#: ../../tools/opentarget_tools.rst:506 93c453ba99794aa091a213fdc5857134
+msgid ""
+"**OpenTargets_get_disease_therapeutic_areas_by_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_disease_therapeutic_areas_by_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:508 d6c2d947f48c41a0a58d3e034c871eb5
+msgid ""
+"Retrieve the therapeutic areas associated with a specific disease efoId."
+msgstr "检索与特定疾病 efoId 相关的治疗领域。"
+
+#: ../../tools/opentarget_tools.rst 399582d4e7e54c47bd55bcca44db0ee5
+msgid "OpenTargets_get_disease_therapeutic_areas_by_efoId tool specification"
+msgstr "OpenTargets_get_disease_therapeutic_areas_by_efoId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:514 f11d0482fe39401e931e8a55979c3b7c
+msgid "**Name**: ``OpenTargets_get_disease_therapeutic_areas_by_efoId``"
+msgstr "**名称**：``OpenTargets_get_disease_therapeutic_areas_by_efoId``"
+
+#: ../../tools/opentarget_tools.rst:516 14ff22f965d4496d9b4d4df0e4ecaafc
+msgid ""
+"**Description**: Retrieve the therapeutic areas associated with a specific "
+"disease efoId."
+msgstr "**描述**：检索与特定疾病 efoId 相关的治疗领域。"
+
+#: ../../tools/opentarget_tools.rst:536 2ae9fd6469c046fea3e409ca69c59874
+msgid ""
+"**OpenTargets_get_diseases_phenotypes_by_target_ensembl** (Type: OpenTarget)"
+msgstr "**OpenTargets_通过目标Ensembl获取疾病表型**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:538 a914c6997e89461fad279c8f5b90b927
+msgid ""
+"Find diseases or phenotypes associated with a specific target using "
+"ensemblId."
+msgstr "使用 ensemblId 查找与特定靶点相关的疾病或表型。"
+
+#: ../../tools/opentarget_tools.rst 5639728430ad4c67b7f1b2af3c68a1e9
+msgid ""
+"OpenTargets_get_diseases_phenotypes_by_target_ensembl tool specification"
+msgstr "OpenTargets_get_diseases_phenotypes_by_target_ensembl 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:544 781514ab8c7b4f5cb181d6fb3c9bd8b6
+msgid "**Name**: ``OpenTargets_get_diseases_phenotypes_by_target_ensembl``"
+msgstr "**名称**：``OpenTargets_get_diseases_phenotypes_by_target_ensembl``"
+
+#: ../../tools/opentarget_tools.rst:546 deb5dff693e24c1290d91e15e4e6d0a6
+msgid ""
+"**Description**: Find diseases or phenotypes associated with a specific "
+"target using ensemblId."
+msgstr "**描述**：使用 ensemblId 查找与特定靶点相关的疾病或表型。"
+
+#: ../../tools/opentarget_tools.rst:550 ../../tools/opentarget_tools.rst:1519
+#: ../../tools/opentarget_tools.rst:1678 2ac658970e5e47b6818dc223139bf560
+#: 94fdad174faa4e5ba34741570b9c0a67 9a5cff76ae89415f825828a6b3d648bf
+msgid "``ensemblId`` (string) (optional) The ensemblId of a target."
+msgstr "``ensemblId``（字符串）（可选）目标的 ensemblId。"
+
+#: ../../tools/opentarget_tools.rst:566 d5335612ed3b4b62820d1afa592e6ddc
+msgid "**OpenTargets_get_drug_adverse_events_by_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_drug_adverse_events_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:568 f35ab867ddc74030a9c996ee0151220d
+msgid ""
+"Retrieve significant adverse events reported for a specific drug chemblId."
+msgstr "检索针对特定药物 chemblId 报告的重要不良事件。"
+
+#: ../../tools/opentarget_tools.rst 1ed300a7e59f44e187dcb64ce452893c
+msgid "OpenTargets_get_drug_adverse_events_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_adverse_events_by_chemblId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:574 7248804385d24136abc08e2207e4cbcd
+msgid "**Name**: ``OpenTargets_get_drug_adverse_events_by_chemblId``"
+msgstr "**名称**：``OpenTargets_get_drug_adverse_events_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:576 f69e175b43374b17abd08ee6fabbe071
+msgid ""
+"**Description**: Retrieve significant adverse events reported for a specific"
+" drug chemblId."
+msgstr "**描述**：检索针对特定药物 chemblId 报告的重要不良事件。"
+
+#: ../../tools/opentarget_tools.rst:583 9a981921b9fc42eca73ee8fba727b0bf
+msgid "``page`` (object) (optional) Pagination settings."
+msgstr "``page``（对象）（可选）分页设置。"
+
+#: ../../tools/opentarget_tools.rst:599 53bd0edb1e784b7090b1ed36f82772f4
+msgid ""
+"**OpenTargets_get_drug_approval_status_by_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_drug_approval_status_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:601 c4839b6b10c84a5e9572ee84b29bcbe3
+msgid "Retrieve the approval status of a specific drug chemblId."
+msgstr "检索特定药物 chemblId 的审批状态。"
+
+#: ../../tools/opentarget_tools.rst f9feaf3ecf094178b3abaca225357a68
+msgid "OpenTargets_get_drug_approval_status_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_approval_status_by_chemblId 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:607 4187e7c9c4e54a748a4e92fba58257a5
+msgid "**Name**: ``OpenTargets_get_drug_approval_status_by_chemblId``"
+msgstr "**名称**：``OpenTargets_get_drug_approval_status_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:609 411778bdc04947138d21ec4cd446a0d2
+msgid ""
+"**Description**: Retrieve the approval status of a specific drug chemblId."
+msgstr "**描述**：获取特定药物 chemblId 的审批状态。"
+
+#: ../../tools/opentarget_tools.rst:629 e1fbf526bc5f4426800d7ef9417f7853
+msgid ""
+"**OpenTargets_get_drug_chembId_by_generic_name** (Type: "
+"OpentargetToolDrugNameMatch)"
+msgstr ""
+"**OpenTargets_get_drug_chembId_by_generic_name**（类型：OpentargetToolDrugNameMatch）"
+
+#: ../../tools/opentarget_tools.rst:631 ../../tools/opentarget_tools.rst:691
+#: 22f39e421a674af9a750cce705cfe409 c2024a317bd14ef7a3ed59c9c62b9a2c
+msgid ""
+"Fetch the drug chemblId and description based on the drug generic name."
+msgstr "根据药物通用名获取药物的chemblId和描述。"
+
+#: ../../tools/opentarget_tools.rst 427ce67b8992402bb3594932d5de0335
+msgid "OpenTargets_get_drug_chembId_by_generic_name tool specification"
+msgstr "OpenTargets_get_drug_chembId_by_generic_name 工具规格说明"
+
+#: ../../tools/opentarget_tools.rst:637 cc11666c2cc0438a832ec135bf41da52
+msgid "**Name**: ``OpenTargets_get_drug_chembId_by_generic_name``"
+msgstr "**名称**：``OpenTargets_get_drug_chembId_by_generic_name``"
+
+#: ../../tools/opentarget_tools.rst:638 ../../tools/opentarget_tools.rst:698
+#: 734c56759778480ab73da21e0ce1f822 8a0961698dff4fdf94ea4bf7a4252c07
+msgid "**Type**: ``OpentargetToolDrugNameMatch``"
+msgstr "**类型**：``OpentargetToolDrugNameMatch``"
+
+#: ../../tools/opentarget_tools.rst:639 ../../tools/opentarget_tools.rst:699
+#: 15788077a4684de397383201f0fb93ad be2ca5ee7ec543d693c8387d879da984
+msgid ""
+"**Description**: Fetch the drug chemblId and description based on the drug "
+"generic name."
+msgstr "**描述**：根据药物通用名获取药物的chemblId和描述信息。"
+
+#: ../../tools/opentarget_tools.rst:643 294404896c184b0c94e92f4fafeb056c
+msgid ""
+"``drugName`` (string) (optional) The generic name of the drug for which the "
+"ID is required."
+msgstr "``drugName``（字符串）（可选）需要获取ID的药物通用名称。"
+
+#: ../../tools/opentarget_tools.rst:659 e5760edbfc6d4bbcb869bffebcd6e8da
+msgid "**OpenTargets_get_drug_description_by_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_drug_description_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:661 bd3848b430bb40b69c473ddb87ea72e3
+msgid ""
+"Get drug name, year of first approval, type, cross references, and max "
+"clinical trial phase based..."
+msgstr "获取药物名称、首次批准年份、类型、交叉引用及最高临床试验阶段，基于..."
+
+#: ../../tools/opentarget_tools.rst bafb879d6919425b9acbc373e2955b25
+msgid "OpenTargets_get_drug_description_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_description_by_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:667 8209c44eb1c94f70984f50f77686cadb
+msgid "**Name**: ``OpenTargets_get_drug_description_by_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_drug_description_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:669 2139562416dd42768a2ca40952afc23e
+msgid ""
+"**Description**: Get drug name, year of first approval, type, cross "
+"references, and max clinical trial phase based on specified chemblId."
+msgstr "**描述**：根据指定的chemblId获取药物名称、首次批准年份、类型、交叉引用以及最高临床试验阶段。"
+
+#: ../../tools/opentarget_tools.rst:689 e1335ca40c724b48b82595fad5b6810f
+msgid ""
+"**OpenTargets_get_drug_id_description_by_name** (Type: "
+"OpentargetToolDrugNameMatch)"
+msgstr ""
+"**OpenTargets_get_drug_id_description_by_name**（类型：OpentargetToolDrugNameMatch）"
+
+#: ../../tools/opentarget_tools.rst c391d5fa8481451cb6fffce9630e5f3c
+msgid "OpenTargets_get_drug_id_description_by_name tool specification"
+msgstr "OpenTargets_get_drug_id_description_by_name 工具规范"
+
+#: ../../tools/opentarget_tools.rst:697 3ea15a15b1884da6b6739ebb436603d3
+msgid "**Name**: ``OpenTargets_get_drug_id_description_by_name``"
+msgstr "**名称**: ``OpenTargets_get_drug_id_description_by_name``"
+
+#: ../../tools/opentarget_tools.rst:703 ea3535d61d784b6db534751c12375697
+msgid ""
+"``drugName`` (string) (optional) The name of the drug for which the ID is "
+"required."
+msgstr "``drugName``（字符串）（可选）需要获取其ID的药物名称。"
+
+#: ../../tools/opentarget_tools.rst:719 626a1669c2d44c6bb571d4fb78952397
+msgid "**OpenTargets_get_drug_indications_by_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_drug_indications_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:721 6c47e2afc29b4ad0bbef9e347c3c9202
+msgid ""
+"Fetch indications (treatable phenotypes/diseases) for a given drug chemblId."
+msgstr "获取指定药物的chemblId对应的适应症（可治疗的表型/疾病）。"
+
+#: ../../tools/opentarget_tools.rst 77590234aa054d87b4329664c4503c96
+msgid "OpenTargets_get_drug_indications_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_indications_by_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:727 569e766d712c4dc181f3a6dbeda1b15d
+msgid "**Name**: ``OpenTargets_get_drug_indications_by_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_drug_indications_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:729 6bffe2a1a9a64542a7c29ceff9e91791
+msgid ""
+"**Description**: Fetch indications (treatable phenotypes/diseases) for a "
+"given drug chemblId."
+msgstr "**描述**：获取指定药物的化合物ChEMBL ID对应的可治疗表型/疾病信息。"
+
+#: ../../tools/opentarget_tools.rst:733 8171755ab56f4c4485711442050cf5b7
+msgid ""
+"``chemblId`` (string) (optional) The chemblId of the drug for which to "
+"retrieve treatable phenotypes information."
+msgstr "``chemblId``（字符串）（可选）用于检索可治疗表型信息的药物的 chemblId。"
+
+#: ../../tools/opentarget_tools.rst:749 937a9ca5da32491d9747dec3fe139593
+msgid ""
+"**OpenTargets_get_drug_mechanisms_of_action_by_chemblId** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_drug_mechanisms_of_action_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:751 50e1ea881339452899ce32282cb73a51
+msgid ""
+"Retrieve the mechanisms of action associated with a specific drug using "
+"chemblId."
+msgstr "使用 chemblId 检索与特定药物相关的作用机制。"
+
+#: ../../tools/opentarget_tools.rst f43071a4c65e4a33a5ba25dc2fc64035
+msgid ""
+"OpenTargets_get_drug_mechanisms_of_action_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_mechanisms_of_action_by_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:757 f1c0d9f6dbe24742a3223600a32a7aa0
+msgid "**Name**: ``OpenTargets_get_drug_mechanisms_of_action_by_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_drug_mechanisms_of_action_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:759 a77bc4a898e84c888596647d8334b330
+msgid ""
+"**Description**: Retrieve the mechanisms of action associated with a "
+"specific drug using chemblId."
+msgstr "**描述**：使用 chemblId 获取与特定药物相关的作用机制。"
+
+#: ../../tools/opentarget_tools.rst:779 b0a29689e6f3484ba675f4ae065230fd
+msgid "**OpenTargets_get_drug_synonyms_by_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_drug_synonyms_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:781 0df40c55460d435380a426f1b05cc64c
+msgid "Retrieve the synonyms associated with a specific drug chemblId."
+msgstr "检索与特定药物的chemblId相关的同义词。"
+
+#: ../../tools/opentarget_tools.rst 2a0308ad63144db0995ad29d6edb1eab
+msgid "OpenTargets_get_drug_synonyms_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_synonyms_by_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:787 49a0cf2bac4b4949897d8dbae61423fa
+msgid "**Name**: ``OpenTargets_get_drug_synonyms_by_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_drug_synonyms_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:789 3448cbe235fe47dfbd83dabc7b892fe6
+msgid ""
+"**Description**: Retrieve the synonyms associated with a specific drug "
+"chemblId."
+msgstr "**描述**：检索与特定药物的 chemblId 相关的同义词。"
+
+#: ../../tools/opentarget_tools.rst:809 fa83d9d045a142248a0e0e3467b688dc
+msgid "**OpenTargets_get_drug_trade_names_by_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_drug_trade_names_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:811 6dc007cc850944e58cda8d7e25618ca7
+msgid "Retrieve the trade names associated with a specific drug chemblId."
+msgstr "检索与特定药物的 chemblId 相关联的商品名。"
+
+#: ../../tools/opentarget_tools.rst a90da4fd8e2f433d806cc458f864db85
+msgid "OpenTargets_get_drug_trade_names_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_trade_names_by_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:817 0af7f1b96a014c42bbed9c0c9ed54e67
+msgid "**Name**: ``OpenTargets_get_drug_trade_names_by_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_drug_trade_names_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:819 90e8ee5d553d4cac85133e75feeadb68
+msgid ""
+"**Description**: Retrieve the trade names associated with a specific drug "
+"chemblId."
+msgstr "**描述**：检索与特定药物的 chemblId 相关联的商品名。"
+
+#: ../../tools/opentarget_tools.rst:839 d074875a912b4236a3405825276d7266
+msgid "**OpenTargets_get_drug_warnings_by_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_drug_warnings_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:841 f04eb25ecf7d40d3ad7d5de2f5c46570
+msgid "Retrieve warnings for a specific drug using ChEMBL ID."
+msgstr "使用 ChEMBL ID 检索特定药物的警告信息。"
+
+#: ../../tools/opentarget_tools.rst dab600ca7b8043f5b1b931555b3de14a
+msgid "OpenTargets_get_drug_warnings_by_chemblId tool specification"
+msgstr "OpenTargets_get_drug_warnings_by_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:847 14cfcdf05e4b4c1d8da1bf9fb3d8e2b0
+msgid "**Name**: ``OpenTargets_get_drug_warnings_by_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_drug_warnings_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:849 0d47165f67984677a464c372b28b95bc
+msgid ""
+"**Description**: Retrieve warnings for a specific drug using ChEMBL ID."
+msgstr "**描述**：使用 ChEMBL ID 检索特定药物的警告信息。"
+
+#: ../../tools/opentarget_tools.rst:869 a415f639d1864a17b3f15bdd6c7bf09a
+msgid ""
+"**OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId** (Type: "
+"OpenTarget)"
+msgstr ""
+"**OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:871 342f700e965c4a418cf0670130c8fe82
+msgid ""
+"Find withdrawn and black-box warning statuses for a specific drug by "
+"chemblId."
+msgstr "通过 chemblId 查询特定药物的撤回状态和黑框警告状态。"
+
+#: ../../tools/opentarget_tools.rst c6ff7b7d996c46ffbaf38c4370e96383
+msgid ""
+"OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId tool "
+"specification"
+msgstr "OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:877 f70bf88c4f8f406e9ee0e873dfd9c861
+msgid ""
+"**Name**: ``OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId``"
+msgstr ""
+"**名称**: ``OpenTargets_get_drug_withdrawn_blackbox_status_by_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:879 58673bbff3ae401d98589696432e8d28
+msgid ""
+"**Description**: Find withdrawn and black-box warning statuses for a "
+"specific drug by chemblId."
+msgstr "**描述**：通过 chemblId 查询特定药物的撤回状态和黑框警告状态。"
+
+#: ../../tools/opentarget_tools.rst:883 abb46284976a4a908e7fde1b53516646
+msgid "``chemblId`` (array) (optional) The chemblId of a drug."
+msgstr "``chemblId``（数组）（可选）药物的chemblId。"
+
+#: ../../tools/opentarget_tools.rst:899 135e8fac21cb4f7096d1f78847092445
+msgid "**OpenTargets_get_gene_ontology_terms_by_goID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_gene_ontology_terms_by_goID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:901 816bdd0cb2ca4106b4e0a8b8796a9e0a
+msgid "Retrieve Gene Ontology terms based on a list of GO IDs."
+msgstr "根据GO ID列表检索基因本体（Gene Ontology）术语。"
+
+#: ../../tools/opentarget_tools.rst 7f468c06e30f40579e2fbf8f4eecd9bd
+msgid "OpenTargets_get_gene_ontology_terms_by_goID tool specification"
+msgstr "OpenTargets_get_gene_ontology_terms_by_goID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:907 dc083ae5e8d241a790dacc0663feb8e5
+msgid "**Name**: ``OpenTargets_get_gene_ontology_terms_by_goID``"
+msgstr "**名称**: ``OpenTargets_get_gene_ontology_terms_by_goID``"
+
+#: ../../tools/opentarget_tools.rst:909 f0d962d98cca4ff39637ac29cc38dd7f
+msgid ""
+"**Description**: Retrieve Gene Ontology terms based on a list of GO IDs."
+msgstr "**描述**：根据GO ID列表检索基因本体（Gene Ontology）术语。"
+
+#: ../../tools/opentarget_tools.rst:913 9d60bdad541b4456abd7ad4a89539984
+msgid ""
+"``goIds`` (array) (optional) A list of Gene Ontology (GO) IDs to fetch the "
+"corresponding terms."
+msgstr "``goIds``（数组）（可选）用于获取对应术语的基因本体（GO）ID列表。"
+
+#: ../../tools/opentarget_tools.rst:929 65f3f7f5fd364e4fb933eee95caa6d6b
+msgid "**OpenTargets_get_known_drugs_by_drug_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_known_drugs_by_drug_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:931 552de91af37847b285fd20a76825c718
+msgid ""
+"Get a list of known drugs and associated information using the specified "
+"chemblId."
+msgstr "使用指定的chemblId获取已知药物及相关信息的列表。"
+
+#: ../../tools/opentarget_tools.rst 9cf41534cb8c4b8faec50ebac997feb7
+msgid "OpenTargets_get_known_drugs_by_drug_chemblId tool specification"
+msgstr "OpenTargets_get_known_drugs_by_drug_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:937 1cffc3a423e24965b3c4e7ae99fc2b59
+msgid "**Name**: ``OpenTargets_get_known_drugs_by_drug_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_known_drugs_by_drug_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:939 8a3be3e799c44ecb9bd8a7f49e60c780
+msgid ""
+"**Description**: Get a list of known drugs and associated information using "
+"the specified chemblId."
+msgstr "**描述**：使用指定的chemblId获取已知药物及其相关信息的列表。"
+
+#: ../../tools/opentarget_tools.rst:959 c6927ac589284c37bff5d65a1f97f2bd
+msgid ""
+"**OpenTargets_get_parent_child_molecules_by_drug_chembl_ID** (Type: "
+"OpenTarget)"
+msgstr ""
+"**OpenTargets_get_parent_child_molecules_by_drug_chembl_ID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:961 1268ce352de64c4c9a27b4118b2dafbb
+msgid "Get parent and child molecules of specified drug chemblId."
+msgstr "获取指定药物 chemblId 的父分子和子分子。"
+
+#: ../../tools/opentarget_tools.rst 30b79556c9744363a1b3205100b4e0a1
+msgid ""
+"OpenTargets_get_parent_child_molecules_by_drug_chembl_ID tool specification"
+msgstr "OpenTargets_get_parent_child_molecules_by_drug_chembl_ID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:967 d7bfc31529b84f7eb7a87d5d2dcd4fae
+msgid "**Name**: ``OpenTargets_get_parent_child_molecules_by_drug_chembl_ID``"
+msgstr "**名称**: ``OpenTargets_get_parent_child_molecules_by_drug_chembl_ID``"
+
+#: ../../tools/opentarget_tools.rst:969 d5f06a29f0db4754b9e7fcc0a1208d55
+msgid ""
+"**Description**: Get parent and child molecules of specified drug chemblId."
+msgstr "**描述**：获取指定药物 chemblId 的父分子和子分子。"
+
+#: ../../tools/opentarget_tools.rst:989 2fb7c4de4af84523b603a8dd8d74c8f8
+msgid "**OpenTargets_get_publications_by_disease_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_publications_by_disease_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:991 4d0fe943c33c47f986b6064e06329733
+msgid ""
+"Retrieve publications related to a disease efoId, including PubMed IDs and "
+"publication dates."
+msgstr "检索与疾病 efoId 相关的出版物，包括 PubMed ID 和出版日期。"
+
+#: ../../tools/opentarget_tools.rst 3105972a25224615b0cb39ac2a7cb87b
+msgid "OpenTargets_get_publications_by_disease_efoId tool specification"
+msgstr "OpenTargets_get_publications_by_disease_efoId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:997 d557aad5e929466f9d48b925267175d0
+msgid "**Name**: ``OpenTargets_get_publications_by_disease_efoId``"
+msgstr "**名称**: ``OpenTargets_get_publications_by_disease_efoId``"
+
+#: ../../tools/opentarget_tools.rst:999 c4c4afcb9c0b418cb61c967c07d40c1f
+msgid ""
+"**Description**: Retrieve publications related to a disease efoId, including"
+" PubMed IDs and publication dates."
+msgstr "**描述**：检索与疾病 efoId 相关的出版物，包括 PubMed ID 和出版日期。"
+
+#: ../../tools/opentarget_tools.rst:1003 2894e55a40b547eb99b32326e2fdaef9
+msgid "``entityId`` (string) (optional) The ID of the entity (efoId)."
+msgstr "``entityId``（字符串）（可选）实体的ID（efoId）。"
+
+#: ../../tools/opentarget_tools.rst:1006 ../../tools/opentarget_tools.rst:1051
+#: ../../tools/opentarget_tools.rst:1096 46182af492734b908506c4f121b95750
+#: b0b07e545e8b4796a55958432c381436 d4cab17527bf4be1ba7e79938a3af375
+msgid ""
+"``additionalIds`` (array) (optional) List of additional IDs to include in "
+"the search."
+msgstr "``additionalIds``（数组）（可选）要在搜索中包含的附加ID列表。"
+
+#: ../../tools/opentarget_tools.rst:1009 ../../tools/opentarget_tools.rst:1054
+#: ../../tools/opentarget_tools.rst:1099 7cbbffa3629946b29317b281631c580d
+#: 827548544b5b4f72b301d9aa795b144b 903c9d81dab5492f990314040f944563
+msgid ""
+"``startYear`` (integer) (optional) Year at the lower end of the filter."
+msgstr "``startYear``（整数）（可选）过滤器下限年份。"
+
+#: ../../tools/opentarget_tools.rst:1012 ../../tools/opentarget_tools.rst:1057
+#: ../../tools/opentarget_tools.rst:1102 084f1b4f821e44faa4202e1aa3cd02ae
+#: 862824b31e4242aca907dadee2bc753c fc2f055d94c0414e9928c155570c8056
+msgid ""
+"``startMonth`` (integer) (optional) Month at the lower end of the filter."
+msgstr "``startMonth``（整数）（可选）过滤器下限的月份。"
+
+#: ../../tools/opentarget_tools.rst:1015 ../../tools/opentarget_tools.rst:1060
+#: ../../tools/opentarget_tools.rst:1105 243cdcf3eb124dc6ae2bb35d3951719e
+#: 5bf7aa92eeb84da0987937db921ecd04 e0ab604890884572955905c5466c06ae
+msgid "``endYear`` (integer) (optional) Year at the higher end of the filter."
+msgstr "``endYear``（整数）（可选）筛选器高端的年份。"
+
+#: ../../tools/opentarget_tools.rst:1018 ../../tools/opentarget_tools.rst:1063
+#: ../../tools/opentarget_tools.rst:1108 27f8565582be40d0a68ebe49a0e52486
+#: d43aa69788eb416aa8f309fe9bca59f6 e37e9329ad4e4e1a849d642f778b8bba
+msgid ""
+"``endMonth`` (integer) (optional) Month at the higher end of the filter."
+msgstr "``endMonth``（整数）（可选）筛选器上限的月份。"
+
+#: ../../tools/opentarget_tools.rst:1034 f5be55b7cd674065a7fe193d41fa234b
+msgid "**OpenTargets_get_publications_by_drug_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_publications_by_drug_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1036 66c4bb70d8c7466fba8acbac18d3779e
+msgid ""
+"Retrieve publications related to a drug chemblId, including PubMed IDs and "
+"publication dates."
+msgstr "检索与药物 chemblId 相关的出版物，包括 PubMed ID 和出版日期。"
+
+#: ../../tools/opentarget_tools.rst 4f18b5d0ba4448c48021775f71a77229
+msgid "OpenTargets_get_publications_by_drug_chemblId tool specification"
+msgstr "OpenTargets_get_publications_by_drug_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1042 d5370c5346474b8a954ad7abd85d3fc8
+msgid "**Name**: ``OpenTargets_get_publications_by_drug_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_publications_by_drug_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:1044 89758b1250c14d3da4a24cb1ac4d39ba
+msgid ""
+"**Description**: Retrieve publications related to a drug chemblId, including"
+" PubMed IDs and publication dates."
+msgstr "**描述**：检索与药物 chemblId 相关的出版物，包括 PubMed ID 和出版日期。"
+
+#: ../../tools/opentarget_tools.rst:1048 3f5120df7eb2470d968504966e3ea52a
+msgid "``entityId`` (string) (optional) The ID of the entity (chemblId)."
+msgstr "``entityId``（字符串）（可选）实体的ID（chemblId）。"
+
+#: ../../tools/opentarget_tools.rst:1079 1c4715fb24d04b37b2aeb63bc43dd5d4
+msgid ""
+"**OpenTargets_get_publications_by_target_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_publications_by_target_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1081 e0f3041a66e24274a860f9439f2c1462
+msgid ""
+"Retrieve publications related to a target ensemblID, including PubMed IDs "
+"and publication dates."
+msgstr "检索与目标ensemblID相关的出版物，包括PubMed ID和出版日期。"
+
+#: ../../tools/opentarget_tools.rst 9a61a87c7d7948a585c11ea24cbbec6b
+msgid "OpenTargets_get_publications_by_target_ensemblID tool specification"
+msgstr "OpenTargets_get_publications_by_target_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1087 d3363226c9f24ec89709e7952fa236a8
+msgid "**Name**: ``OpenTargets_get_publications_by_target_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_publications_by_target_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1089 24350f0772a34d809947f65cd521bac0
+msgid ""
+"**Description**: Retrieve publications related to a target ensemblID, "
+"including PubMed IDs and publication dates."
+msgstr "**描述**：检索与目标ensemblID相关的出版物，包括PubMed ID和出版日期。"
+
+#: ../../tools/opentarget_tools.rst:1093 78b53f85499a4988bec3b43ff796fbe8
+msgid "``entityId`` (string) (optional) The ID of the entity (ensemblID)."
+msgstr "``entityId``（字符串）（可选）实体的ID（ensemblID）。"
+
+#: ../../tools/opentarget_tools.rst:1124 d0b0508d9d884164815867b4eb7b43f8
+msgid ""
+"**OpenTargets_get_similar_entities_by_disease_efoId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_similar_entities_by_disease_efoId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1126 3a2bb1b9e86040cd9e1759bba61c2ca6
+msgid ""
+"Retrieve similar entities for a given disease efoId using a model trained "
+"with PubMed."
+msgstr "使用基于PubMed训练的模型，根据给定疾病的efoId检索相似实体。"
+
+#: ../../tools/opentarget_tools.rst 206d2b773cef4bc3924e78fbd2cdfac1
+msgid "OpenTargets_get_similar_entities_by_disease_efoId tool specification"
+msgstr "OpenTargets_get_similar_entities_by_disease_efoId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1132 3284db78d02c44b9a2f2370192ac7767
+msgid "**Name**: ``OpenTargets_get_similar_entities_by_disease_efoId``"
+msgstr "**名称**: ``OpenTargets_get_similar_entities_by_disease_efoId``"
+
+#: ../../tools/opentarget_tools.rst:1134 c7c90b1cd3a3433aa90585a7fa46cb7e
+msgid ""
+"**Description**: Retrieve similar entities for a given disease efoId using a"
+" model trained with PubMed."
+msgstr "**描述**：使用基于PubMed训练的模型，根据给定疾病的efoId检索相似实体。"
+
+#: ../../tools/opentarget_tools.rst:1141 ../../tools/opentarget_tools.rst:1177
+#: ../../tools/opentarget_tools.rst:1213 56ab15bf1d4841bb8babababdef89af6
+#: 5a4eb8545cba419a89b72f5040062e41 f37114d3c12f4e22b4f30398b4db10fb
+msgid ""
+"``threshold`` (number) (optional) Threshold similarity between 0 and 1. Only"
+" results above threshold are returned."
+msgstr "``threshold``（数字）（可选）介于 0 到 1 之间的阈值相似度。仅返回高于该阈值的结果。"
+
+#: ../../tools/opentarget_tools.rst:1144 ../../tools/opentarget_tools.rst:1180
+#: ../../tools/opentarget_tools.rst:1216 9976d44c5b19434d81e0d691244b90d5
+#: ae6e45c34add4f96ab3852e72a8fc3d5 c57c299cbdbe4dd88d879a4f84b29be5
+msgid "``size`` (integer) (optional) Number of similar entities to fetch."
+msgstr "``size``（整数）（可选）要获取的相似实体数量。"
+
+#: ../../tools/opentarget_tools.rst:1160 dc1b15a3138c4e819a4788ef54e95226
+msgid ""
+"**OpenTargets_get_similar_entities_by_drug_chemblId** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_similar_entities_by_drug_chemblId**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1162 46ce0a4cd56c470f9f76f9f667f52c73
+msgid ""
+"Retrieve similar entities for a given drug chemblId using a model trained "
+"with PubMed."
+msgstr "使用基于PubMed训练的模型，根据给定的药物chemblId检索相似实体。"
+
+#: ../../tools/opentarget_tools.rst 431a2c0004364150a1627d10e7329469
+msgid "OpenTargets_get_similar_entities_by_drug_chemblId tool specification"
+msgstr "OpenTargets_get_similar_entities_by_drug_chemblId 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1168 e9140b3b92274783b648a8dd7728306f
+msgid "**Name**: ``OpenTargets_get_similar_entities_by_drug_chemblId``"
+msgstr "**名称**: ``OpenTargets_get_similar_entities_by_drug_chemblId``"
+
+#: ../../tools/opentarget_tools.rst:1170 7ceece2112914a2e8e68bca8eca1d899
+msgid ""
+"**Description**: Retrieve similar entities for a given drug chemblId using a"
+" model trained with PubMed."
+msgstr "**描述**：使用基于PubMed训练的模型，检索与指定药物chemblId相似的实体。"
+
+#: ../../tools/opentarget_tools.rst:1174 d6b6e4f79b464195aae72b212a394f55
+msgid "``chemblId`` (string) (optional) The chemblId of the disease."
+msgstr "``chemblId``（字符串）（可选）疾病的 chemblId。"
+
+#: ../../tools/opentarget_tools.rst:1196 9744132d34db41e1a096dcd2a6c93224
+msgid ""
+"**OpenTargets_get_similar_entities_by_target_ensemblID** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_similar_entities_by_target_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1198 4f212a6cded94276a29bf5f981440965
+msgid ""
+"Retrieve similar entities for a given target ensemblID using a model trained"
+" with PubMed."
+msgstr "使用基于PubMed训练的模型，为给定的目标ensemblID检索相似实体。"
+
+#: ../../tools/opentarget_tools.rst deb270697bdc4ee4989972d6cda86a5f
+msgid ""
+"OpenTargets_get_similar_entities_by_target_ensemblID tool specification"
+msgstr "OpenTargets_get_similar_entities_by_target_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1204 a0bf84eb2b1e48f7891e3bc274d6eb43
+msgid "**Name**: ``OpenTargets_get_similar_entities_by_target_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_similar_entities_by_target_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1206 fe9f1a40abfc444baa5c67d729f2cd79
+msgid ""
+"**Description**: Retrieve similar entities for a given target ensemblID "
+"using a model trained with PubMed."
+msgstr "**描述**：使用基于PubMed训练的模型，为指定的目标ensemblID检索相似实体。"
+
+#: ../../tools/opentarget_tools.rst:1210 d20b8c03cf5f4e17aaa91852d93a27ff
+msgid "``ensemblId`` (string) (optional) The ensemblID of the disease."
+msgstr "``ensemblId``（字符串）（可选）疾病的 ensemblID。"
+
+#: ../../tools/opentarget_tools.rst:1232 3de1b97653c041ea8df41e0efde7ceed
+msgid "**OpenTargets_get_target_classes_by_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_classes_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1234 18eaf624af3c4e9aaae2ace03b046ce7
+msgid ""
+"Retrieve the target classes associated with a specific target ensemblID."
+msgstr "检索与特定目标ensemblID关联的目标类。"
+
+#: ../../tools/opentarget_tools.rst ca504f3ebc334a6daf1ddffb81dc4d24
+msgid "OpenTargets_get_target_classes_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_classes_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1240 744a1de27c7244cbb751fa4d26d47dca
+msgid "**Name**: ``OpenTargets_get_target_classes_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_classes_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1242 4818fc556fa74479a9c4447cbebb40cd
+msgid ""
+"**Description**: Retrieve the target classes associated with a specific "
+"target ensemblID."
+msgstr "**描述**：检索与特定目标ensemblID关联的目标类。"
+
+#: ../../tools/opentarget_tools.rst:1262 ea282991f6ac4a1396693e218aa7fbaf
+msgid ""
+"**OpenTargets_get_target_constraint_info_by_ensemblID** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_target_constraint_info_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1264 d308ee805739474ca14a77aa5c17676a
+msgid ""
+"Retrieve genetic constraint information for a specific target ensemblID, "
+"including expected and o..."
+msgstr "获取特定目标ensemblID的遗传约束信息，包括预期值和其他相关数据。"
+
+#: ../../tools/opentarget_tools.rst d78809f32b74427a83945a0fa8cc49b5
+msgid "OpenTargets_get_target_constraint_info_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_constraint_info_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1270 794cf815f3ce4aca9e220c3709330dbc
+msgid "**Name**: ``OpenTargets_get_target_constraint_info_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_constraint_info_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1272 57750d1503004b79a19e1e560ae9e3cb
+msgid ""
+"**Description**: Retrieve genetic constraint information for a specific "
+"target ensemblID, including expected and observed values, and scores."
+msgstr "**描述**：检索特定目标的ensemblID的遗传约束信息，包括预期值、观察值和评分。"
+
+#: ../../tools/opentarget_tools.rst:1292 c28e53f7b8f544d5b65b17d502dc9f73
+msgid ""
+"**OpenTargets_get_target_enabling_packages_by_ensemblID** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_target_enabling_packages_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1294 c07797662ffb4f00aafd999adb9753a0
+msgid ""
+"Retrieve the Target Enabling Packages (TEP) associated with a specific "
+"target ensemblID."
+msgstr "检索与特定目标ensemblID关联的目标启用包（Target Enabling Packages，TEP）。"
+
+#: ../../tools/opentarget_tools.rst 50669f475a9343559766dbd988b56e55
+msgid ""
+"OpenTargets_get_target_enabling_packages_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_enabling_packages_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1300 3d2929ab7a724ca7ae6d6d6d1ef93aea
+msgid "**Name**: ``OpenTargets_get_target_enabling_packages_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_enabling_packages_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1302 4251b730d6cf4527a3c1c684b0c6f139
+msgid ""
+"**Description**: Retrieve the Target Enabling Packages (TEP) associated with"
+" a specific target ensemblID."
+msgstr "**描述**：检索与特定目标ensemblID关联的目标启用包（Target Enabling Packages, TEP）。"
+
+#: ../../tools/opentarget_tools.rst:1322 da9da43faeba4bdf80298a9931be18f5
+msgid ""
+"**OpenTargets_get_target_gene_ontology_by_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_gene_ontology_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1324 1a1de2206e344b849552c707d3ae5f45
+msgid ""
+"Retrieve Gene Ontology annotations for a specific target by Ensembl ID."
+msgstr "通过Ensembl ID检索特定目标的基因本体（Gene Ontology）注释。"
+
+#: ../../tools/opentarget_tools.rst 64dde4a9c90e416cafdf164b63121e27
+msgid "OpenTargets_get_target_gene_ontology_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_gene_ontology_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1330 2d622238dac842689c49f04ae9b44233
+msgid "**Name**: ``OpenTargets_get_target_gene_ontology_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_gene_ontology_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1332 26a681a7a436481b8d199f56722e9205
+msgid ""
+"**Description**: Retrieve Gene Ontology annotations for a specific target by"
+" Ensembl ID."
+msgstr "**描述**：通过Ensembl ID检索特定目标的基因本体注释。"
+
+#: ../../tools/opentarget_tools.rst:1336 4f0e137c7c3d43aaaf264f010ea628c1
+msgid ""
+"``ensemblId`` (string) (optional) The Ensembl ID of the target for which to "
+"retrieve Gene Ontology annotations."
+msgstr "``ensemblId``（字符串）（可选）用于检索基因本体（Gene Ontology）注释的目标的 Ensembl ID。"
+
+#: ../../tools/opentarget_tools.rst:1352 f11fa644ea2d47d9aea6798817379e17
+msgid ""
+"**OpenTargets_get_target_genomic_location_by_ensemblID** (Type: OpenTarget)"
+msgstr ""
+"**OpenTargets_get_target_genomic_location_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1354 856b4554ea794828ae87b021e6c08e3a
+msgid ""
+"Retrieve genomic location data for a specific target, including chromosome, "
+"start, end, and strand."
+msgstr "检索特定目标的基因组位置信息，包括染色体、起始位置、结束位置和链方向。"
+
+#: ../../tools/opentarget_tools.rst 7f034c9fb3954b619a21dad86c581219
+msgid ""
+"OpenTargets_get_target_genomic_location_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_genomic_location_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1360 33068a22c186494081210ca79d85b783
+msgid "**Name**: ``OpenTargets_get_target_genomic_location_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_genomic_location_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1362 52e5e4b7f067483193b7b06219d538f3
+msgid ""
+"**Description**: Retrieve genomic location data for a specific target, "
+"including chromosome, start, end, and strand."
+msgstr "**描述**：检索特定目标的基因组位置信息，包括染色体、起始位置、结束位置和链方向。"
+
+#: ../../tools/opentarget_tools.rst:1366 b74674ad83a24c5d836983bc1bf4b698
+msgid ""
+"``ensemblId`` (string) (optional) The Ensembl ID of the target for which to "
+"retrieve genomic location information."
+msgstr "``ensemblId``（字符串）（可选）目标的 Ensembl ID，用于检索其基因组位置信息。"
+
+#: ../../tools/opentarget_tools.rst:1382 30ae04daa7dd48a99c7ec9dba0121157
+msgid "**OpenTargets_get_target_homologues_by_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_homologues_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1384 d97722fb058c41cc9adf5e98ad7f9a26
+msgid "Fetch homologues for a specific target by Ensembl ID."
+msgstr "通过 Ensembl ID 获取特定目标的同源序列。"
+
+#: ../../tools/opentarget_tools.rst ab794c6047b54bbbaf0bff18c66e0298
+msgid "OpenTargets_get_target_homologues_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_homologues_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1390 002edbf9a36e4771ba2f7bb890bf7d1c
+msgid "**Name**: ``OpenTargets_get_target_homologues_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_homologues_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1392 7f12da759adc46558bc14b22cbe8778a
+msgid "**Description**: Fetch homologues for a specific target by Ensembl ID."
+msgstr "**描述**：通过Ensembl ID获取特定目标的同源基因。"
+
+#: ../../tools/opentarget_tools.rst:1396 8456982a357a443da0572b4657e3babf
+msgid ""
+"``ensemblId`` (string) (optional) The Ensembl ID of the target for which to "
+"retrieve homologues."
+msgstr "``ensemblId``（字符串）（可选）用于检索同源基因的目标 Ensembl ID。"
+
+#: ../../tools/opentarget_tools.rst:1412 3288c20e534847648a6b78587c48e6e3
+msgid "**OpenTargets_get_target_id_description_by_name** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_id_description_by_name**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1414 bb0ea5bae9be440eab029dc1b5d76522
+msgid "Get the ensemblId and description based on the target name."
+msgstr "根据目标名称获取ensemblId和描述。"
+
+#: ../../tools/opentarget_tools.rst 6ac2dbb968cb49519ef7d11cba87d544
+msgid "OpenTargets_get_target_id_description_by_name tool specification"
+msgstr "OpenTargets_get_target_id_description_by_name 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1420 812b6c3c07eb47ab8c112ba683f1212e
+msgid "**Name**: ``OpenTargets_get_target_id_description_by_name``"
+msgstr "**名称**: ``OpenTargets_get_target_id_description_by_name``"
+
+#: ../../tools/opentarget_tools.rst:1422 7c615c4ef14340e8916124114fe32c67
+msgid ""
+"**Description**: Get the ensemblId and description based on the target name."
+msgstr "**描述**：根据目标名称获取ensemblId和描述。"
+
+#: ../../tools/opentarget_tools.rst:1426 6e4e8328b1884ab5b6249179a981e86c
+msgid ""
+"``targetName`` (string) (optional) The name of the target for which the ID "
+"is required."
+msgstr "``targetName``（字符串）（可选）目标的名称，用于指定所需的 ID。"
+
+#: ../../tools/opentarget_tools.rst:1442 a92ca8916fec4547a8f4e0bedd70404a
+msgid ""
+"**OpenTargets_get_target_interactions_by_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_interactions_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1444 cbcb4635bc00425d8f1112e8ba0ecec6
+msgid ""
+"Retrieve interaction data for a specific target ensemblID, including "
+"interaction partners and evi..."
+msgstr "为特定的目标ensemblID检索交互数据，包括交互伙伴和证据信息..."
+
+#: ../../tools/opentarget_tools.rst 91ffc663022f46f3b4fe6b7347d4ab27
+msgid "OpenTargets_get_target_interactions_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_interactions_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1450 e22b0589b0f246ac927157b22071cea2
+msgid "**Name**: ``OpenTargets_get_target_interactions_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_interactions_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1452 51cd8856dcfe4c7d98c3ee62e9d3ee90
+msgid ""
+"**Description**: Retrieve interaction data for a specific target ensemblID, "
+"including interaction partners and evidence."
+msgstr "**描述**：检索特定目标ensemblID的交互数据，包括交互伙伴和证据。"
+
+#: ../../tools/opentarget_tools.rst:1459 f0bb484a1ac64f45bf06038699f253a2
+msgid "``page`` (object) (optional) Pagination parameters."
+msgstr "``page``（对象）（可选）分页参数。"
+
+#: ../../tools/opentarget_tools.rst:1475 6002aceefd994fdda02d80405342e667
+msgid ""
+"**OpenTargets_get_target_safety_profile_by_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_safety_profile_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1477 30aa7b84da7d4818b34251aee22e358f
+msgid ""
+"Retrieve known target safety liabilities for a specific target Ensembl ID."
+msgstr "检索特定目标的Ensembl ID对应的已知目标安全性责任。"
+
+#: ../../tools/opentarget_tools.rst 38ecf2e273064cc388949a028f9e5273
+msgid "OpenTargets_get_target_safety_profile_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_safety_profile_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1483 1a1f8f16450447da848695a07962ad24
+msgid "**Name**: ``OpenTargets_get_target_safety_profile_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_safety_profile_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1485 cafee5ec86a64edf93163c24be339867
+msgid ""
+"**Description**: Retrieve known target safety liabilities for a specific "
+"target Ensembl ID."
+msgstr "**描述**：检索特定目标 Ensembl ID 的已知目标安全性责任。"
+
+#: ../../tools/opentarget_tools.rst:1489 9d06b8d300c24182bcc395a45e2aaf73
+msgid ""
+"``ensemblId`` (string) (optional) The Ensembl ID of the target for which to "
+"retrieve safety liabilities."
+msgstr "``ensemblId``（字符串）（可选）用于检索安全性风险的目标的 Ensembl ID。"
+
+#: ../../tools/opentarget_tools.rst:1505 0b06cfe625d5474cbee401fcf06dd287
+msgid ""
+"**OpenTargets_get_target_subcellular_locations_by_ensemblID** (Type: "
+"OpenTarget)"
+msgstr ""
+"**OpenTargets_get_target_subcellular_locations_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1507 98700f8119da4e1b8040cd11440d6b46
+msgid ""
+"Retrieve information about subcellular locations for a specific target "
+"ensemblID."
+msgstr "检索特定目标ensemblID的亚细胞位置相关信息。"
+
+#: ../../tools/opentarget_tools.rst 038c24bd3c6a46b6b06de0511b7ede18
+msgid ""
+"OpenTargets_get_target_subcellular_locations_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_subcellular_locations_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1513 2ac45602f7bd417d96caf77d49921967
+msgid ""
+"**Name**: ``OpenTargets_get_target_subcellular_locations_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_subcellular_locations_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1515 657316835da44658816221501f3a6f33
+msgid ""
+"**Description**: Retrieve information about subcellular locations for a "
+"specific target ensemblID."
+msgstr "**描述**：检索特定目标的ensemblID对应的亚细胞位置信息。"
+
+#: ../../tools/opentarget_tools.rst:1535 6f9dabd43f484725bff7fa3524214194
+msgid "**OpenTargets_get_target_synonyms_by_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_synonyms_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1537 56f0ca5d740f453bb3f88aa7f838ee44
+msgid ""
+"Retrieve synonyms for specified target, including alternative names and "
+"symbols, using given ense..."
+msgstr "检索指定目标的同义词，包括替代名称和符号，使用提供的Ensembl数据。"
+
+#: ../../tools/opentarget_tools.rst 6945f485b6a74cf3a9f545e3ca66e040
+msgid "OpenTargets_get_target_synonyms_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_synonyms_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1543 80b6844781cb420ebf228d9d8c70a28d
+msgid "**Name**: ``OpenTargets_get_target_synonyms_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_synonyms_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1545 c2fcf87f5243492c9cdc19616f034f4b
+msgid ""
+"**Description**: Retrieve synonyms for specified target, including "
+"alternative names and symbols, using given ensemblID."
+msgstr "**描述**：使用指定的ensemblID检索目标的同义词，包括替代名称和符号。"
+
+#: ../../tools/opentarget_tools.rst:1565 0e03c4fa3e1940c88196150c26f9a180
+msgid ""
+"**OpenTargets_get_target_tractability_by_ensemblID** (Type: OpenTarget)"
+msgstr "**OpenTargets_get_target_tractability_by_ensemblID**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1567 7a0cebed419e4ec5a4403e047ea978f0
+msgid ""
+"Retrieve tractability assessments, including modality and values, for a "
+"specific target ensembl ID."
+msgstr "检索特定目标Ensembl ID的可追溯性评估，包括模式和数值。"
+
+#: ../../tools/opentarget_tools.rst c384fac63911455fbbea455f01cb3463
+msgid "OpenTargets_get_target_tractability_by_ensemblID tool specification"
+msgstr "OpenTargets_get_target_tractability_by_ensemblID 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1573 b67dceeedfd841dfa425df154a855f4b
+msgid "**Name**: ``OpenTargets_get_target_tractability_by_ensemblID``"
+msgstr "**名称**: ``OpenTargets_get_target_tractability_by_ensemblID``"
+
+#: ../../tools/opentarget_tools.rst:1575 17da18da71884460b1cd51a7f56a5750
+msgid ""
+"**Description**: Retrieve tractability assessments, including modality and "
+"values, for a specific target ensembl ID."
+msgstr "**描述**：检索特定目标 Ensembl ID 的可追溯性评估，包括模式和数值。"
+
+#: ../../tools/opentarget_tools.rst:1595 0af478a551094a62b2a2ccfb7eeb16db
+msgid "**OpenTargets_multi_entity_search_by_query_string** (Type: OpenTarget)"
+msgstr "**OpenTargets_multi_entity_search_by_query_string**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1597 c921bfdbf6734f7b9c8c782daa8d7465
+msgid ""
+"Perform a multi-entity search based on a query string, filtering by entity "
+"names and pagination s..."
+msgstr "根据查询字符串执行多实体搜索，按实体名称进行过滤，并支持分页操作。"
+
+#: ../../tools/opentarget_tools.rst 61304509116e4c559adbfee96d8e52da
+msgid "OpenTargets_multi_entity_search_by_query_string tool specification"
+msgstr "OpenTargets_multi_entity_search_by_query_string 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1603 6b32f41502264232abb117cc630e8ac2
+msgid "**Name**: ``OpenTargets_multi_entity_search_by_query_string``"
+msgstr "**名称**: ``OpenTargets_multi_entity_search_by_query_string``"
+
+#: ../../tools/opentarget_tools.rst:1605 7bbcf7caacb74f438f55090f36740c66
+msgid ""
+"**Description**: Perform a multi-entity search based on a query string, "
+"filtering by entity names and pagination settings."
+msgstr "**描述**：根据查询字符串执行多实体搜索，并通过实体名称和分页设置进行过滤。"
+
+#: ../../tools/opentarget_tools.rst:1609 ../../tools/opentarget_tools.rst:1645
+#: b500f9b901e541fdbd0c800a09dd6917 ef8328422c82466abbc4aa919aa4d532
+msgid ""
+"``queryString`` (string) (optional) The search string for querying "
+"information."
+msgstr "``queryString``（字符串）（可选）用于查询信息的搜索字符串。"
+
+#: ../../tools/opentarget_tools.rst:1612 65c4761c7ca3445d8220d283526bd320
+msgid ""
+"``entityNames`` (array) (optional) List of entity names to search for (e.g.,"
+" target, disease, drug)."
+msgstr "``entityNames``（数组）（可选）要搜索的实体名称列表（例如：目标、疾病、药物）。"
+
+#: ../../tools/opentarget_tools.rst:1615 36fbbdbe100648849469af8d3803484c
+msgid "``page`` (object) (optional) Pagination settings with index and size."
+msgstr "``page``（对象）（可选）包含索引和大小的分页设置。"
+
+#: ../../tools/opentarget_tools.rst:1631 d09d4c8f92f542d78bc80618e849aa99
+msgid ""
+"**OpenTargets_search_category_counts_by_query_string** (Type: OpenTarget)"
+msgstr "**OpenTargets_search_category_counts_by_query_string**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1633 8431d13d7fcc49628421b4328a120161
+msgid ""
+"Get the count of entries in each entity category (disease, target, drug) "
+"based on a query string."
+msgstr "根据查询字符串获取每个实体类别（疾病、靶点、药物）中的条目数量。"
+
+#: ../../tools/opentarget_tools.rst e8a7d6bf79dd486c97eec491cce67637
+msgid "OpenTargets_search_category_counts_by_query_string tool specification"
+msgstr "OpenTargets_search_category_counts_by_query_string 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1639 453c5bc5979a44e6a3d3e0f32b46bac8
+msgid "**Name**: ``OpenTargets_search_category_counts_by_query_string``"
+msgstr "**名称**: ``OpenTargets_search_category_counts_by_query_string``"
+
+#: ../../tools/opentarget_tools.rst:1641 5d97c96751874122b4d8e5830a1441b7
+msgid ""
+"**Description**: Get the count of entries in each entity category (disease, "
+"target, drug) based on a query string."
+msgstr "**描述**：根据查询字符串获取每个实体类别（疾病、靶点、药物）的条目数量。"
+
+#: ../../tools/opentarget_tools.rst:1661 692c90c948404343b18022320ea37c4f
+msgid "**OpenTargets_target_disease_evidence** (Type: OpenTarget)"
+msgstr "**OpenTargets_target_disease_evidence**（类型：OpenTarget）"
+
+#: ../../tools/opentarget_tools.rst:1663 43dcc76411c5469eaa60215774e8901e
+msgid ""
+"Explore evidence that supports a specific target-disease association. Input "
+"is disease efoId and ..."
+msgstr "探索支持特定目标-疾病关联的证据。输入为疾病的 efoId 和..."
+
+#: ../../tools/opentarget_tools.rst a38b21f979574cc78b6ae3a91b278973
+msgid "OpenTargets_target_disease_evidence tool specification"
+msgstr "OpenTargets_target_disease_evidence 工具规范"
+
+#: ../../tools/opentarget_tools.rst:1669 dfbcd54f813c4f6fbc85170d2b45b451
+msgid "**Name**: ``OpenTargets_target_disease_evidence``"
+msgstr "**名称**: ``OpenTargets_target_disease_evidence``"
+
+#: ../../tools/opentarget_tools.rst:1671 e79a4907c6b74b9a888caafb72958821
+msgid ""
+"**Description**: Explore evidence that supports a specific target-disease "
+"association. Input is disease efoId and target ensemblID."
+msgstr "**描述**：探索支持特定靶点与疾病关联的证据。输入内容为疾病的 efoId 和靶点的 ensemblID。"
+
+#: ../../tools/opentarget_tools.rst:1694 2ef654ec0b544b7a80019b2037982933
+msgid "Navigation"
+msgstr "导航"
+
+#: ../../tools/opentarget_tools.rst:1696 c736a9942be6436490d9ca288fe509ce
+msgid ":doc:`tools_config_index` - Back to Tools Overview"
+msgstr ":doc:`tools_config_index` - 返回工具概览"
+
+#: ../../tools/opentarget_tools.rst:1697 8068c5414b5f42ffb86d33cb8d0a0485
+msgid ":doc:`../guide/loading_tools` - Loading Local Tools"
+msgstr ":doc:`../guide/loading_tools` - 加载本地工具"

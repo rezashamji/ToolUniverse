@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 21:51-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.fatcat_tool.rst:2 acd2967779734d879551f0c702014078
+msgid "tooluniverse.fatcat\\_tool module"
+msgstr "tooluniverse.fatcat_tool 模块"
+
+#: f2f851304707407eb5c13bd76eb0309d of
+#: tooluniverse.fatcat_tool.FatcatScholarTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 2bbb72e8a17e430f9ea4baf66384d23f of
+#: tooluniverse.fatcat_tool.FatcatScholarTool:1
+msgid "Search Internet Archive Scholar via Fatcat releases search."
+msgstr "通过 Fatcat 发布搜索功能检索 Internet Archive Scholar。"
+
+#: f7799c08540b4960ba2275c932f5f189 of
+#: tooluniverse.fatcat_tool.FatcatScholarTool:3
+msgid "Parameters (arguments):"
+msgstr "参数（参数列表）："
+
+#: 169e4555226b4e7b895e46651e495639 of
+#: tooluniverse.fatcat_tool.FatcatScholarTool:4
+msgid ""
+"query (str): Query string max_results (int): Max results (default 10, max "
+"100)"
+msgstr ""
+"query (str)：查询字符串  \n"
+"max_results (int)：最大结果数（默认值 10，最大值 100）"
+
+#: e19a73437f17492b9484dcb53c94dc54 of
+#: tooluniverse.fatcat_tool.FatcatScholarTool.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: b220a0299148452e9c5333ec31767d5e of
+#: tooluniverse.fatcat_tool.FatcatScholarTool.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以符合大多数具体工具实现所期望的输入字典。"

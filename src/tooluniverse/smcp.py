@@ -92,6 +92,7 @@ AI Agent Interface:
 """
 
 import asyncio
+import functools
 import json
 from concurrent.futures import ThreadPoolExecutor
 from typing import Any, Dict, List, Optional, Union, Callable, Literal
@@ -248,7 +249,7 @@ class SMCP(FastMCP):
         or a list of both. Provides an easy way to enable hooks without full configuration.
         Takes precedence over hooks_enabled when specified.
 
-    **kwargs
+    **kwargs**
         Additional arguments passed to the underlying FastMCP server instance.
         Supports all FastMCP configuration options for advanced customization.
 
@@ -1389,7 +1390,7 @@ class SMCP(FastMCP):
                 self.tool_finder_available = True
                 self.tool_finder_type = "Tool_Finder_LLM"
                 self.logger.info(
-                    "✅ Tool_Finder_LLM (cost-optimized) available for advanced search"
+                    "✅ Tool_Finder_LLM available for advanced search"
                 )
                 return
 
@@ -1696,7 +1697,7 @@ class SMCP(FastMCP):
             this will be set as the function's __doc__ attribute. If None, the
             function's existing docstring will be used.
 
-        **kwargs
+        **kwargs**
             Additional FastMCP tool configuration options:
             - parameter_schema: Custom JSON schema for parameters
             - return_schema: Schema for return values
@@ -1772,7 +1773,7 @@ class SMCP(FastMCP):
         - Support all MCP client interaction patterns
 
         Best Practices:
-        ==============
+        ===============
         - Use descriptive, unique tool names
         - Include comprehensive docstrings
         - Add proper type annotations for parameters
@@ -1803,7 +1804,7 @@ class SMCP(FastMCP):
         It's designed to be safe to call multiple times and handles errors gracefully.
 
         Cleanup Operations:
-        ==================
+        ===================
 
         **Thread Pool Shutdown:**
         - Gracefully stops the ThreadPoolExecutor used for tool execution
@@ -1823,7 +1824,7 @@ class SMCP(FastMCP):
         - Ensures critical resources are always released
 
         Usage Patterns:
-        ==============
+        ===============
 
         **Automatic Cleanup (Recommended):**
         ```python
@@ -1853,14 +1854,14 @@ class SMCP(FastMCP):
         ```
 
         Performance Considerations:
-        ==========================
+        ===========================
         - Cleanup operations are typically fast (< 1 second)
         - Thread pool shutdown may take longer if tasks are running
         - Network connections are closed immediately
         - Memory cleanup depends on garbage collection
 
         Error Recovery:
-        ==============
+        ===============
         - Individual cleanup failures don't stop the overall process
         - Critical errors are logged but don't raise exceptions
         - Cleanup is idempotent - safe to call multiple times
@@ -1878,6 +1879,91 @@ class SMCP(FastMCP):
             self.executor.shutdown(wait=True)
         except Exception:
             pass
+
+    def _print_tooluniverse_banner(self):
+        """Print ToolUniverse branding banner after FastMCP banner with dynamic information."""
+        # Get transport info if available
+        transport_display = getattr(self, '_transport_type', 'Unknown')
+        server_url = getattr(self, '_server_url', 'N/A')
+        tools_count = len(self._exposed_tools)
+        
+        # Map transport types to display names
+        transport_map = {
+            'stdio': 'STDIO',
+            'streamable-http': 'Streamable-HTTP',
+            'http': 'HTTP',
+            'sse': 'SSE'
+        }
+        transport_name = transport_map.get(transport_display, transport_display)
+        
+        # Format lines with proper alignment (matching FastMCP style)
+        # Each line should be exactly 75 characters (emoji takes 2 display widths but counts as 1 in len())
+        transport_line = f"                 📦 Transport:       {transport_name}"
+        server_line = f"                 🔗 Server URL:      {server_url}"
+        tools_line = f"                 🧰 Loaded Tools:    {tools_count}"
+        
+        # Pad to exactly 75 characters (emoji counts as 1 in len() but displays as 2)
+        transport_line = transport_line + " " * (75 - len(transport_line))
+        server_line = server_line + " " * (75 - len(server_line))
+        tools_line = tools_line + " " * (75 - len(tools_line))
+        
+        banner = f"""
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│                         🧬 ToolUniverse SMCP Server 🧬                     │
+│                                                                            │
+│            Bridging AI Agents with Scientific Computing Tools              │
+│                                                                            │
+│{transport_line}│
+│{server_line}│
+│{tools_line}│
+│                                                                            │
+│                 🌐 Website:  https://aiscientist.tools/                    │
+│                 💻 GitHub:   https://github.com/mims-harvard/ToolUniverse  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+"""
+        print(banner)
+
+    def run(self, *args, **kwargs):
+        """
+        Override run method to display ToolUniverse banner after FastMCP banner.
+        
+        This method intercepts the parent's run() call to inject our custom banner
+        immediately after FastMCP displays its startup banner.
+        """
+        # Save transport information for banner display
+        transport = kwargs.get('transport', args[0] if args else 'unknown')
+        host = kwargs.get('host', '0.0.0.0')
+        port = kwargs.get('port', 7000)
+        
+        self._transport_type = transport
+        
+        # Build server URL based on transport
+        if transport == 'streamable-http' or transport == 'http':
+            self._server_url = f"http://{host}:{port}/mcp"
+        elif transport == 'sse':
+            self._server_url = f"http://{host}:{port}"
+        else:
+            self._server_url = "N/A (stdio mode)"
+        
+        # Use threading to print our banner shortly after FastMCP's banner
+        import threading
+        import time
+        
+        def delayed_banner():
+            """Print ToolUniverse banner with a small delay to appear after FastMCP banner."""
+            time.sleep(1.0)  # Delay to ensure FastMCP banner displays first
+            self._print_tooluniverse_banner()
+        
+        # Start banner thread only on first run
+        if not hasattr(self, '_tooluniverse_banner_shown'):
+            self._tooluniverse_banner_shown = True
+            banner_thread = threading.Thread(target=delayed_banner, daemon=True)
+            banner_thread.start()
+        
+        # Call parent's run method (blocking call)
+        return super().run(*args, **kwargs)
 
     def run_simple(
         self,
@@ -1925,21 +2011,21 @@ class SMCP(FastMCP):
             - Above 1024: No root privileges required
             - Check availability: Ensure port isn't already in use
 
-        **kwargs
+        **kwargs**
             Additional arguments passed to FastMCP's run() method:
             - debug (bool): Enable debug logging
             - access_log (bool): Log client requests
             - workers (int): Number of worker processes (HTTP only)
 
         Server Startup Process:
-        ======================
+        =======================
         1. **Initialization Summary**: Displays server configuration and capabilities
         2. **Transport Setup**: Configures selected communication method
         3. **Service Start**: Begins listening for client connections
         4. **Graceful Shutdown**: Handles interrupts and cleanup
 
         Deployment Scenarios:
-        ====================
+        =====================
 
         Development & Testing:
         ```python
@@ -1975,14 +2061,14 @@ class SMCP(FastMCP):
         ```
 
         Error Handling:
-        ==============
+        ===============
         - **KeyboardInterrupt**: Graceful shutdown on Ctrl+C
         - **Port in Use**: Clear error message with suggestions
         - **Transport Errors**: Detailed debugging information
         - **Cleanup**: Automatic resource cleanup on exit
 
         Logging Output:
-        ==============
+        ===============
         Provides informative startup messages:
         ```
         🚀 Starting SMCP server 'My Server'...
@@ -1992,14 +2078,14 @@ class SMCP(FastMCP):
         ```
 
         Security Considerations:
-        =======================
+        ========================
         - Use host="127.0.0.1" for local-only access
         - Configure firewall rules for production deployment
         - Consider HTTPS termination with reverse proxy
         - Validate all client inputs through MCP protocol
 
         Performance Notes:
-        =================
+        ==================
         - HTTP transport supports multiple concurrent clients
         - stdio transport is single-client but lower latency
         - SSE transport enables real-time bidirectional communication
@@ -2085,208 +2171,244 @@ class SMCP(FastMCP):
             func_params = []
             param_annotations = {}
 
-            for param_name, param_info in properties.items():
-                param_type = param_info.get("type", "string")
-                param_description = param_info.get(
-                    "description", f"{param_name} parameter"
-                )
-                is_required = param_name in required_params
+            # Process parameters in two phases: required first, then optional
+            # This ensures Python function signature validity (no default args before non-default)
+            for is_required_phase in [True, False]:
+                for param_name, param_info in properties.items():
+                    param_type = param_info.get("type", "string")
+                    param_description = param_info.get(
+                        "description", f"{param_name} parameter"
+                    )
+                    is_required = param_name in required_params
 
-                # Map JSON schema types to Python types and create appropriate Field
-                field_kwargs = {"description": param_description}
+                    # Skip if not in current phase
+                    if is_required != is_required_phase:
+                        continue
 
-                if param_type == "string":
-                    python_type = str
-                    # For string type, don't add json_schema_extra - let Pydantic handle it
-                elif param_type == "integer":
-                    python_type = int
-                    # For integer type, don't add json_schema_extra - let Pydantic handle it
-                elif param_type == "number":
-                    python_type = float
-                    # For number type, don't add json_schema_extra - let Pydantic handle it
-                elif param_type == "boolean":
-                    python_type = bool
-                    # For boolean type, don't add json_schema_extra - let Pydantic handle it
-                elif param_type == "array":
-                    python_type = list
-                    # Add array-specific schema information only for complex cases
-                    items_info = param_info.get("items", {})
-                    if items_info:
-                        # Clean up items definition - remove invalid fields
-                        cleaned_items = items_info.copy()
+                    # Map JSON schema types to Python types and create appropriate Field
+                    field_kwargs = {"description": param_description}
 
-                        # Remove 'required' field from items (not valid in JSON Schema for array items)
-                        if "required" in cleaned_items:
-                            cleaned_items.pop("required")
+                    if param_type == "string":
+                        python_type = str
+                        # For string type, don't add json_schema_extra - let Pydantic handle it
+                    elif param_type == "integer":
+                        python_type = int
+                        # For integer type, don't add json_schema_extra - let Pydantic handle it
+                    elif param_type == "number":
+                        python_type = float
+                        # For number type, don't add json_schema_extra - let Pydantic handle it
+                    elif param_type == "boolean":
+                        python_type = bool
+                        # For boolean type, don't add json_schema_extra - let Pydantic handle it
+                    elif param_type == "array":
+                        python_type = list
+                        # Add array-specific schema information only for complex cases
+                        items_info = param_info.get("items", {})
+                        if items_info:
+                            # Clean up items definition - remove invalid fields
+                            cleaned_items = items_info.copy()
 
-                        field_kwargs["json_schema_extra"] = {
-                            "type": "array",
-                            "items": cleaned_items,
-                        }
+                            # Remove 'required' field from items (not valid in JSON Schema for array items)
+                            if "required" in cleaned_items:
+                                cleaned_items.pop("required")
+
+                            field_kwargs["json_schema_extra"] = {
+                                "type": "array",
+                                "items": cleaned_items,
+                            }
+                        else:
+                            # If no items specified, default to string items
+                            field_kwargs["json_schema_extra"] = {
+                                "type": "array",
+                                "items": {"type": "string"},
+                            }
+                    elif param_type == "object":
+                        python_type = dict
+                        # Add object-specific schema information
+                        object_props = param_info.get("properties", {})
+                        if object_props:
+                            # Clean up the nested object properties - fix common schema issues
+                            cleaned_props = {}
+                            nested_required = []
+
+                            for prop_name, prop_info in object_props.items():
+                                cleaned_prop = prop_info.copy()
+
+                                # Fix string "True"/"False" in required field (common ToolUniverse issue)
+                                if "required" in cleaned_prop:
+                                    req_value = cleaned_prop.pop("required")
+                                    if req_value in ["True", "true", True]:
+                                        nested_required.append(prop_name)
+                                    # Remove the individual required field as it should be at object level
+
+                                cleaned_props[prop_name] = cleaned_prop
+
+                            # Create proper JSON schema for nested object
+                            object_schema = {"type": "object", "properties": cleaned_props}
+
+                            # Add required array at object level if there are required fields
+                            if nested_required:
+                                object_schema["required"] = nested_required
+
+                            field_kwargs["json_schema_extra"] = object_schema
                     else:
-                        # If no items specified, default to string items
-                        field_kwargs["json_schema_extra"] = {
-                            "type": "array",
-                            "items": {"type": "string"},
-                        }
-                elif param_type == "object":
-                    python_type = dict
-                    # Add object-specific schema information
-                    object_props = param_info.get("properties", {})
-                    if object_props:
-                        # Clean up the nested object properties - fix common schema issues
-                        cleaned_props = {}
-                        nested_required = []
+                        # For unknown types, default to string and only add type info if it's truly unknown
+                        python_type = str
+                        if param_type not in [
+                            "string",
+                            "integer",
+                            "number",
+                            "boolean",
+                            "array",
+                            "object",
+                        ]:
+                            field_kwargs["json_schema_extra"] = {"type": param_type}
 
-                        for prop_name, prop_info in object_props.items():
-                            cleaned_prop = prop_info.copy()
+                    # Create Pydantic Field with enhanced schema information
+                    pydantic_field = Field(**field_kwargs)
 
-                            # Fix string "True"/"False" in required field (common ToolUniverse issue)
-                            if "required" in cleaned_prop:
-                                req_value = cleaned_prop.pop("required")
-                                if req_value in ["True", "true", True]:
-                                    nested_required.append(prop_name)
-                                # Remove the individual required field as it should be at object level
-
-                            cleaned_props[prop_name] = cleaned_prop
-
-                        # Create proper JSON schema for nested object
-                        object_schema = {"type": "object", "properties": cleaned_props}
-
-                        # Add required array at object level if there are required fields
-                        if nested_required:
-                            object_schema["required"] = nested_required
-
-                        field_kwargs["json_schema_extra"] = object_schema
-                else:
-                    # For unknown types, default to string and only add type info if it's truly unknown
-                    python_type = str
-                    if param_type not in [
-                        "string",
-                        "integer",
-                        "number",
-                        "boolean",
-                        "array",
-                        "object",
-                    ]:
-                        field_kwargs["json_schema_extra"] = {"type": param_type}
-
-                # Create Pydantic Field with enhanced schema information
-                pydantic_field = Field(**field_kwargs)
-
-                if is_required:
-                    # Required parameter with description and schema info
-                    annotated_type = Annotated[python_type, pydantic_field]
-                    param_annotations[param_name] = annotated_type
-                    func_params.append(
-                        inspect.Parameter(
-                            param_name,
-                            inspect.Parameter.POSITIONAL_OR_KEYWORD,
-                            annotation=annotated_type,
-                        )
-                    )
-                else:
-                    # Optional parameter with description, schema info and default value
-                    annotated_type = Annotated[
-                        Union[python_type, type(None)], pydantic_field
-                    ]
-                    param_annotations[param_name] = annotated_type
-                    func_params.append(
-                        inspect.Parameter(
-                            param_name,
-                            inspect.Parameter.POSITIONAL_OR_KEYWORD,
-                            default=None,
-                            annotation=annotated_type,
-                        )
-                    )
-
-            # Create the async function with dynamic signature
-            if not properties:
-                # Tool has no parameters - create simple function
-                async def dynamic_tool_function() -> str:
-                    """Execute ToolUniverse tool with no arguments."""
-                    try:
-                        # Prepare function call with empty arguments
-                        function_call = {"name": tool_name, "arguments": {}}
-
-                        # Execute in thread pool to avoid blocking
-                        loop = asyncio.get_event_loop()
-                        result = await loop.run_in_executor(
-                            self.executor,
-                            self.tooluniverse.run_one_function,
-                            function_call,
-                        )
-
-                        # Format the result
-                        if isinstance(result, str):
-                            return result
-                        else:
-                            return json.dumps(result, indent=2, default=str)
-
-                    except Exception as e:
-                        error_msg = f"Error executing {tool_name}: {str(e)}"
-                        self.logger.error(error_msg)
-                        return json.dumps({"error": error_msg}, indent=2)
-
-                # Set function metadata
-                dynamic_tool_function.__name__ = tool_name
-                dynamic_tool_function.__signature__ = inspect.Signature([])
-                dynamic_tool_function.__annotations__ = {"return": str}
-
-            else:
-                # Tool has parameters - create function with dynamic signature
-                async def dynamic_tool_function(**kwargs) -> str:
-                    """Execute ToolUniverse tool with provided arguments."""
-                    try:
-                        # Filter out None values for optional parameters
-                        args_dict = {k: v for k, v in kwargs.items() if v is not None}
-
-                        # Validate required parameters
-                        missing_required = [
-                            param for param in required_params if param not in args_dict
-                        ]
-                        if missing_required:
-                            return json.dumps(
-                                {
-                                    "error": f"Missing required parameters: {missing_required}",
-                                    "required": required_params,
-                                    "provided": list(args_dict.keys()),
-                                },
-                                indent=2,
+                    if is_required:
+                        # Required parameter with description and schema info
+                        annotated_type = Annotated[python_type, pydantic_field]
+                        param_annotations[param_name] = annotated_type
+                        func_params.append(
+                            inspect.Parameter(
+                                param_name,
+                                inspect.Parameter.POSITIONAL_OR_KEYWORD,
+                                annotation=annotated_type,
                             )
-
-                        # Prepare function call
-                        function_call = {"name": tool_name, "arguments": args_dict}
-
-                        # Execute in thread pool to avoid blocking
-                        loop = asyncio.get_event_loop()
-                        result = await loop.run_in_executor(
-                            self.executor,
-                            self.tooluniverse.run_one_function,
-                            function_call,
+                        )
+                    else:
+                        # Optional parameter with description, schema info and default value
+                        annotated_type = Annotated[
+                            Union[python_type, type(None)], pydantic_field
+                        ]
+                        param_annotations[param_name] = annotated_type
+                        func_params.append(
+                            inspect.Parameter(
+                                param_name,
+                                inspect.Parameter.POSITIONAL_OR_KEYWORD,
+                                default=None,
+                                annotation=annotated_type,
+                            )
                         )
 
-                        # Format the result
-                        if isinstance(result, str):
-                            return result
-                        else:
-                            return json.dumps(result, indent=2, default=str)
+            # Add optional streaming parameter to signature
+            stream_field = Field(
+                description="Set to true to receive incremental streaming output (experimental)."
+            )
+            stream_annotation = Annotated[Union[bool, type(None)], stream_field]
+            param_annotations["_tooluniverse_stream"] = stream_annotation
+            func_params.append(
+                inspect.Parameter(
+                    "_tooluniverse_stream",
+                    inspect.Parameter.POSITIONAL_OR_KEYWORD,
+                    default=None,
+                    annotation=stream_annotation,
+                )
+            )
 
-                    except Exception as e:
-                        error_msg = f"Error executing {tool_name}: {str(e)}"
-                        self.logger.error(error_msg)
-                        return json.dumps({"error": error_msg}, indent=2)
+            # Optional FastMCP context injection for streaming callbacks
+            try:
+                from fastmcp.server.context import Context as MCPContext  # type: ignore
+            except Exception:  # pragma: no cover - context unavailable
+                MCPContext = None  # type: ignore
 
-                # Set function metadata
-                dynamic_tool_function.__name__ = tool_name
+            if MCPContext is not None:
+                func_params.append(
+                    inspect.Parameter(
+                        "ctx",
+                        inspect.Parameter.POSITIONAL_OR_KEYWORD,
+                        default=None,
+                        annotation=MCPContext,
+                    )
+                )
 
-                # Set function signature dynamically for tools with parameters
-                if func_params:
-                    dynamic_tool_function.__signature__ = inspect.Signature(func_params)
+            async def dynamic_tool_function(**kwargs) -> str:
+                """Execute ToolUniverse tool with provided arguments."""
+                try:
+                    ctx = kwargs.pop("ctx", None)
+                    stream_flag = bool(kwargs.get("_tooluniverse_stream"))
 
-                # Set annotations for type hints
-                dynamic_tool_function.__annotations__ = param_annotations.copy()
-                dynamic_tool_function.__annotations__["return"] = str
+                    # Filter out None values for optional parameters (preserve streaming flag)
+                    args_dict = {
+                        k: v for k, v in kwargs.items() if v is not None
+                    }
+                    filtered_args = {
+                        k: v
+                        for k, v in args_dict.items()
+                        if k != "_tooluniverse_stream"
+                    }
+
+                    # Validate required parameters
+                    missing_required = [
+                        param for param in required_params if param not in filtered_args
+                    ]
+                    if missing_required:
+                        return json.dumps(
+                            {
+                                "error": f"Missing required parameters: {missing_required}",
+                                "required": required_params,
+                                "provided": list(filtered_args.keys()),
+                            },
+                            indent=2,
+                        )
+
+                    function_call = {"name": tool_name, "arguments": args_dict}
+
+                    loop = asyncio.get_event_loop()
+                    stream_callback = None
+
+                    if stream_flag and ctx is not None and MCPContext is not None:
+                        def stream_callback(chunk: str) -> None:
+                            if not chunk:
+                                return
+                            try:
+                                future = asyncio.run_coroutine_threadsafe(
+                                    ctx.info(chunk), loop
+                                )
+
+                                def _log_future_result(fut) -> None:
+                                    exc = fut.exception()
+                                    if exc:
+                                        self.logger.debug(
+                                            f"Streaming callback error for {tool_name}: {exc}"
+                                        )
+
+                                future.add_done_callback(_log_future_result)
+                            except Exception as cb_error:  # noqa: BLE001
+                                self.logger.debug(
+                                    f"Failed to dispatch stream chunk for {tool_name}: {cb_error}"
+                                )
+
+                        # Ensure downstream tools see the streaming flag
+                        if "_tooluniverse_stream" not in args_dict:
+                            args_dict["_tooluniverse_stream"] = True
+
+                    run_callable = functools.partial(
+                        self.tooluniverse.run_one_function,
+                        function_call,
+                        stream_callback=stream_callback,
+                    )
+
+                    result = await loop.run_in_executor(self.executor, run_callable)
+
+                    if isinstance(result, str):
+                        return result
+                    else:
+                        return json.dumps(result, indent=2, default=str)
+
+                except Exception as e:
+                    error_msg = f"Error executing {tool_name}: {str(e)}"
+                    self.logger.error(error_msg)
+                    return json.dumps({"error": error_msg}, indent=2)
+
+            # Set function metadata
+            dynamic_tool_function.__name__ = tool_name
+            dynamic_tool_function.__signature__ = inspect.Signature(func_params)
+            annotations = param_annotations.copy()
+            annotations["return"] = str
+            dynamic_tool_function.__annotations__ = annotations
 
             # Create detailed docstring for internal use, but use clean description for FastMCP
             param_docs = []
@@ -2360,7 +2482,7 @@ def create_smcp_server(
         Recommended to keep enabled unless you have specific performance
         requirements or want to minimize dependencies.
 
-    **kwargs
+    **kwargs**
         Additional SMCP configuration options:
 
         - tooluniverse_config: Pre-configured ToolUniverse instance

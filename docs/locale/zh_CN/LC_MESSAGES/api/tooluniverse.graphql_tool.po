@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Shanghua Gao
+# This file is distributed under the same license as the ToolUniverse
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ToolUniverse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-07 10:37-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../api/tooluniverse.graphql_tool.rst:2 dfa8805910864115a87e91b3f6d0babe
+msgid "tooluniverse.graphql\\_tool module"
+msgstr "tooluniverse.graphql_tool 模块"
+
+#: 4c5b2279583e42bb8b32a633591c4ed5 of
+#: tooluniverse.graphql_tool.remove_none_and_empty_values:1
+msgid "Remove all key-value pairs where the value is None or an empty list"
+msgstr "删除所有值为 None 或空列表的键值对"
+
+#: 84b12bd46ca440aba5ab67881261b09f of tooluniverse.graphql_tool.GraphQLTool:1
+msgid "Bases: :py:class:`~tooluniverse.base_tool.BaseTool`"
+msgstr "基础类：:py:class:`~tooluniverse.base_tool.BaseTool`"
+
+#: 3980e9852fce413c8b542a53777c5125 84707eb53a75476b99a1e11d02e67e90
+#: da8ffd6aa1524bd694143a2c9d472075 of
+#: tooluniverse.graphql_tool.GraphQLTool.run:1
+#: tooluniverse.graphql_tool.OpentargetTool.run:1
+#: tooluniverse.graphql_tool.OpentargetToolDrugNameMatch.run:1
+msgid "Execute the tool."
+msgstr "执行该工具。"
+
+#: 57e7e64136ba4b78b697e22a1531d62a 7f791e9be7a24fe2b78021f9d2c3bf47
+#: e1d4279e1577496fab6c3b968124efbc of
+#: tooluniverse.graphql_tool.GraphQLTool.run:3
+#: tooluniverse.graphql_tool.OpentargetTool.run:3
+#: tooluniverse.graphql_tool.OpentargetToolDrugNameMatch.run:3
+msgid ""
+"The default BaseTool implementation accepts an optional arguments mapping to"
+" align with most concrete tool implementations which expect a dictionary of "
+"inputs."
+msgstr "默认的 BaseTool 实现接受一个可选的参数映射，以与大多数具体工具实现保持一致，这些实现通常期望接收一个输入字典。"
+
+#: 0b7ad522afb34328af9aace52bd0e310 43728d74d44847769bf74c7144e47fdf
+#: 9a09231d4b4c41f393ed4647af033bc0 f07628b6d82748a99c2a5fc3b052d5b6 of
+#: tooluniverse.graphql_tool.DiseaseTargetScoreTool:1
+#: tooluniverse.graphql_tool.OpentargetGeneticsTool:1
+#: tooluniverse.graphql_tool.OpentargetTool:1
+#: tooluniverse.graphql_tool.OpentargetToolDrugNameMatch:1
+msgid "Bases: :py:class:`~tooluniverse.graphql_tool.GraphQLTool`"
+msgstr "基类：:py:class:`~tooluniverse.graphql_tool.GraphQLTool`"
+
+#: b9964bf462ca4e3da24b61c9b815dbc3 of
+#: tooluniverse.graphql_tool.DiseaseTargetScoreTool:1
+msgid ""
+"Tool to extract disease-target association scores from specific data sources"
+msgstr "用于从特定数据源提取疾病-靶点关联评分的工具"
+
+#: bde700e75be940858c5545f739921e65 of
+#: tooluniverse.graphql_tool.DiseaseTargetScoreTool.run:1
+msgid ""
+"Extract disease-target scores for a specific datasource Arguments should "
+"contain: efoId, datasourceId (optional), pageSize (optional)"
+msgstr "提取特定数据源的疾病-靶点评分 参数应包含：efoId，datasourceId（可选），pageSize（可选）"
