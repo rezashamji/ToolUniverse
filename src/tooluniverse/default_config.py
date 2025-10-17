@@ -145,6 +145,7 @@ default_tool_files = {
         current_dir, "data", "output_summarization_tools.json"
     ),
     "odphp": os.path.join(current_dir, "data", "odphp_tools.json"),
+    "euhealth": os.path.join(current_dir, "data", "euhealth_tools.json"),
     "markitdown": os.path.join(current_dir, "data", "markitdown_tools.json"),
     # Genomics tools
     "genomics": os.path.join(current_dir, "data", "genomics_tools.json"),

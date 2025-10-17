@@ -173,6 +173,12 @@ MCPClientTool: Any
 MCPAutoLoaderTool: Any
 ADMETAITool: Any
 AlphaFoldRESTTool: Any
+ODPHPMyHealthfinder: Any
+ODPHPItemList: Any
+ODPHPTopicSearch: Any
+ODPHPOutlinkFetch: Any
+EuHealthTopicSearchTool: Any
+EuHealthDeepDiveTool: Any
 ComposeTool: Any
 CellosaurusSearchTool: Any
 CellosaurusQueryConverterTool: Any
@@ -232,8 +238,8 @@ if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
         from .tool_finder_embedding import ToolFinderEmbedding
         from .tool_finder_keyword import ToolFinderKeyword
         from .tool_finder_llm import ToolFinderLLM
-        from .embedding_database import EmbeddingDatabase
-        from .embedding_sync import EmbeddingSync
+        from .database_setup.embedding_database import EmbeddingDatabase
+        from .database_setup.embedding_sync import EmbeddingSync
         from .rcsb_pdb_tool import RCSBTool
         from .gwas_tool import (
             GWASAssociationSearch,
@@ -259,6 +265,8 @@ if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
         ODPHPTopicSearch,
         ODPHPOutlinkFetch,
     )
+    from .euhealth.euhealth_tool import EuHealthTopicSearchTool, EuHealthDeepDiveTool
+
     from .cellosaurus_tool import (
         CellosaurusSearchTool,
         CellosaurusQueryConverterTool,
@@ -359,6 +367,8 @@ else:
     ODPHPMyHealthfinder = _LazyImportProxy("odphp_tool", "ODHPHPMyHealthfinder")
     ODPHPTopicSearch = _LazyImportProxy("odphp_tool", "ODPHPTopicSearch")
     ODPHPOutlinkFetch = _LazyImportProxy("odphp_tool", "ODPHPOutlinkFetch")
+    EuHealthTopicSearchTool = _LazyImportProxy("euhealth.euhealth_tool", "EuHealthTopicSearchTool")
+    EuHealthDeepDiveTool = _LazyImportProxy("euhealth.euhealth_tool", "EuHealthDeepDiveTool")
     CellosaurusSearchTool = _LazyImportProxy(
         "cellosaurus_tool", "CellosaurusSearchTool"
     )
@@ -453,6 +463,8 @@ __all__ = [
     "ODPHPItemList",
     "ODPHPTopicSearch",
     "ODPHPOutlinkFetch",
+    "EuHealthTopicSearchTool",
+    "EuHealthDeepDiveTool",
     "CellosaurusSearchTool",
     "CellosaurusQueryConverterTool",
     "CellosaurusGetCellLineInfoTool",
