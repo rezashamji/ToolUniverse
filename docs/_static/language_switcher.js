@@ -50,15 +50,21 @@
         }
 
         // 兜底：当前不在语言目录下（例如根路径 / 或 /<repo>/index.html）
-        // 解析当前文件名
-        let relativeFile = 'index.html';
+        // 解析当前文件名和路径
+        let relativePath = '';
         if (currentPath !== '/' && currentPath !== basePrefix) {
-            const lastSlash = currentPath.lastIndexOf('/');
-            const file = currentPath.substring(lastSlash + 1) || 'index.html';
-            relativeFile = file;
+            // 移除基础前缀，获取相对路径
+            relativePath = currentPath.substring(basePrefix.length);
+            // 确保路径以 / 开头
+            if (!relativePath.startsWith('/')) {
+                relativePath = '/' + relativePath;
+            }
+        } else {
+            relativePath = '/index.html';
         }
+        
         const targetLangPrefix = newLang === 'zh_CN' ? 'zh-CN' : 'en';
-        window.location.href = origin + basePrefix + targetLangPrefix + '/' + relativeFile;
+        window.location.href = origin + basePrefix + targetLangPrefix + relativePath;
     }
     
     // 创建语言切换器

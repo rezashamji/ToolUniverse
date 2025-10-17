@@ -11,7 +11,10 @@
           "description": "Whether to include usage examples and quick start guide",
           "default": true
         }
-      }
+      },
+      "required": [
+        "include_examples"
+      ]
     },
     "package_name": "numpy",
     "local_info": {
@@ -108,7 +111,10 @@
           "description": "Whether to include usage examples and quick start guide",
           "default": true
         }
-      }
+      },
+      "required": [
+        "include_examples"
+      ]
     },
     "package_name": "pandas",
     "local_info": {
@@ -152,7 +158,10 @@
           "description": "Whether to include usage examples and quick start guide",
           "default": true
         }
-      }
+      },
+      "required": [
+        "include_examples"
+      ]
     },
     "package_name": "h5py",
     "local_info": {
@@ -196,7 +205,10 @@
           "description": "Whether to include usage examples and quick start guide",
           "default": true
         }
-      }
+      },
+      "required": [
+        "include_examples"
+      ]
     },
     "package_name": "tqdm",
     "local_info": {
@@ -293,7 +305,10 @@
           "description": "Whether to include usage examples and quick start guide",
           "default": true
         }
-      }
+      },
+      "required": [
+        "include_examples"
+      ]
     },
     "package_name": "cooler",
     "local_info": {

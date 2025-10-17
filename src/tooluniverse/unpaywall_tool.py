@@ -60,4 +60,3 @@ class UnpaywallTool(BaseTool):
             "url": data.get("url"),
         }
         return result
-

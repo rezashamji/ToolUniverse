@@ -11,7 +11,9 @@
           "description": "The keyword to search for, e.g., 'apoptosis' or 'kinase activity'."
         }
       },
-      "required": ["query"]
+      "required": [
+        "query"
+      ]
     },
     "fields": {
       "endpoint": "http://golr-aux.geneontology.io/solr/select?fq=document_category:\"ontology_class\"&q=*:*&fq=annotation_class_label:\"{query}\"&wt=json&rows=10",
@@ -31,7 +33,9 @@
           "description": "The standard GO term ID, e.g., 'GO:0006915' for apoptotic process."
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "fields": {
       "endpoint": "http://api.geneontology.org/api/bioentity/function/{id}",
@@ -51,7 +55,9 @@
           "description": "The standard GO term ID, e.g., 'GO:0006915' for apoptotic process."
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "fields": {
       "endpoint": "http://golr-aux.geneontology.io/solr/select?fq=document_category:\"ontology_class\"&q=*:*&fq=id:\"{id}\"&wt=json",
@@ -76,11 +82,15 @@
           "description": "Optional species filter using a NCBI taxon ID. For example, Human is 'NCBITaxon:9606', and Mouse is 'NCBITaxon:10090'."
         },
         "rows": {
-            "type": "integer",
-            "description": "The number of genes to return. Default is 100."
+          "type": "integer",
+          "description": "The number of genes to return. Default is 100."
         }
       },
-      "required": ["id"]
+      "required": [
+        "id",
+        "taxon",
+        "rows"
+      ]
     },
     "fields": {
       "endpoint": "http://api.geneontology.org/api/bioentity/function/{id}",
@@ -101,7 +111,9 @@
           "description": "A gene identifier such as gene symbol (e.g., 'TP53') or database ID."
         }
       },
-      "required": ["gene_id"]
+      "required": [
+        "gene_id"
+      ]
     },
     "fields": {
       "endpoint": "http://golr-aux.geneontology.io/solr/select?fq=document_category:\"annotation\"&q=*:*&fq=bioentity_label:\"{gene_id}\"&wt=json&rows=50",

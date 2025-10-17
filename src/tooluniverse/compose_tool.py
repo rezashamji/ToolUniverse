@@ -285,7 +285,7 @@ class ComposeTool(BaseTool):
     def _emit_stream_chunk(self, chunk, stream_callback):
         """
         Emit a stream chunk if callback is provided.
-        
+
         Args:
             chunk (str): The chunk to emit
             stream_callback (callable, optional): Callback function for streaming output
@@ -299,23 +299,24 @@ class ComposeTool(BaseTool):
     def _create_event_emitter(self, stream_callback):
         """
         Create an event emitter function for the compose script.
-        
+
         Args:
             stream_callback (callable, optional): Callback function for streaming output
-            
+
         Returns:
             callable: Event emitter function
         """
+
         def emit_event(event_type, data=None):
             """Emit an event via stream callback"""
             if stream_callback:
                 event = {
                     "type": event_type,
                     "timestamp": datetime.now().isoformat(),
-                    "data": data or {}
+                    "data": data or {},
                 }
                 self._emit_stream_chunk(json.dumps(event), stream_callback)
-        
+
         return emit_event
 
     def _execute_from_file(self, arguments, stream_callback=None):
@@ -346,25 +347,25 @@ class ComposeTool(BaseTool):
 
         # Execute the function with backward-compatible parameters
         import inspect
+
         sig = inspect.signature(compose_func)
         params = list(sig.parameters.keys())
-        
+
         # Build arguments based on function signature
         call_args = {
-            'arguments': arguments,
-            'tooluniverse': self.tooluniverse,
-            'call_tool': self._call_tool
+            "arguments": arguments,
+            "tooluniverse": self.tooluniverse,
+            "call_tool": self._call_tool,
         }
-        
+
         # Add optional parameters if the function accepts them
-        if 'stream_callback' in params:
-            call_args['stream_callback'] = stream_callback
-        if 'emit_event' in params:
-            call_args['emit_event'] = self._create_event_emitter(stream_callback)
-        if 'memory_manager' in params:
-            from .memory_manager import memory_manager
-            call_args['memory_manager'] = memory_manager
-        
+        if "stream_callback" in params:
+            call_args["stream_callback"] = stream_callback
+        if "emit_event" in params:
+            call_args["emit_event"] = self._create_event_emitter(stream_callback)
+        if "memory_manager" in params:
+            call_args["memory_manager"] = memory_manager
+
         # Call with only the parameters the function expects
         return compose_func(**{k: v for k, v in call_args.items() if k in params})
 
@@ -433,20 +434,21 @@ class ComposeTool(BaseTool):
         function_call = {"name": tool_name, "arguments": arguments}
 
         result = self.tooluniverse.run_one_function(function_call)
-        
+
         # Ensure consistent result format for backward compatibility
         if isinstance(result, str):
             # If result is a string, it might be an error message or JSON string
             try:
                 import json
+
                 parsed_result = json.loads(result)
                 if isinstance(parsed_result, dict):
                     return parsed_result
                 else:
                     return {"result": parsed_result}
             except (json.JSONDecodeError, TypeError):
-                # If it's not JSON, treat as error message
-                return {"error": result}
+                # If it's not JSON, treat as normal string result
+                return {"result": result}
         elif isinstance(result, dict):
             return result
         else:

@@ -12,39 +12,36 @@
       "properties": {
         "query": {
           "type": "string",
-          "description": "Keyword or keyphrase to search for in the patent application title. This field is required.",
-          "required": true
+          "description": "Keyword or keyphrase to search for in the patent application title. This field is required."
         },
         "exact_match": {
           "type": "boolean",
           "description": "If true, the search will only return results that exactly match the provided query. Default is false.",
-          "required": false,
           "default": false
         },
         "sort": {
           "type": "string",
           "description": "Sorts results by one of the following fields: filingDate or grantDate. Follow the field name with a space and 'asc' or 'desc' for ascending or descending by date, respectively. For example: 'filingDate desc'",
-          "required": false,
           "default": "filingDate desc"
         },
         "offset": {
           "type": "integer",
           "description": "The starting position (zero-indexed) of the result set. Default is 0.",
-          "required": false,
           "default": 0
         },
         "limit": {
           "type": "integer",
           "description": "The maximum number of results to return. Default is 25.",
-          "required": false,
           "default": 25
         },
         "rangeFilters": {
           "type": "string",
-          "description": "Limits results to the date range specified for one of the following fields: filingDate or grantDate. Provide the field name, a space, and a colon-separated start and end value in YYYY-MM-DD format. For example: 'grantDate 2010-01-01:2011-01-01'",
-          "required": false
+          "description": "Limits results to the date range specified for one of the following fields: filingDate or grantDate. Provide the field name, a space, and a colon-separated start and end value in YYYY-MM-DD format. For example: 'grantDate 2010-01-01:2011-01-01'"
         }
-      }
+      },
+      "required": [
+        "query"
+      ]
     },
     "default_query_params": {
       "fields": "applicationNumberText,grantDocumentMetaData,applicationMetaData.cpcClassificationBag,applicationMetaData.filingDate,applicationMetaData.grantDate,applicationMetaData.inventionTitle,applicationMetaData.applicationStatusDescriptionText,parentContinuityBag,childContinuityBag,applicationMetaData.earliestPublicationDate"
@@ -52,7 +49,9 @@
     "required": [
       "query"
     ],
-    "required_api_keys": ["USPTO_API_KEY"],
+    "required_api_keys": [
+      "USPTO_API_KEY"
+    ],
     "return_schema": {
       "type": "object",
       "properties": {
@@ -240,10 +239,12 @@
       "properties": {
         "applicationNumberText": {
           "type": "string",
-          "description": "The application number of the patent.",
-          "required": true
+          "description": "The application number of the patent."
         }
-      }
+      },
+      "required": [
+        "applicationNumberText"
+      ]
     },
     "return_fields": [
       "applicationNumberText",
@@ -273,7 +274,9 @@
     "required": [
       "applicationNumberText"
     ],
-    "required_api_keys": ["USPTO_API_KEY"],
+    "required_api_keys": [
+      "USPTO_API_KEY"
+    ],
     "return_schema": {
       "type": "object",
       "properties": {
@@ -438,10 +441,12 @@
       "properties": {
         "applicationNumberText": {
           "type": "string",
-          "description": "The application number of the patent.",
-          "required": true
+          "description": "The application number of the patent."
         }
-      }
+      },
+      "required": [
+        "applicationNumberText"
+      ]
     },
     "required": [
       "applicationNumberText"
@@ -450,7 +455,9 @@
       "applicationNumberText",
       "patentTermAdjustmentData.adjustmentTotalQuantity"
     ],
-    "required_api_keys": ["USPTO_API_KEY"],
+    "required_api_keys": [
+      "USPTO_API_KEY"
+    ],
     "return_schema": {
       "type": "object",
       "properties": {
@@ -513,15 +520,19 @@
       "properties": {
         "applicationNumberText": {
           "type": "string",
-          "description": "The application number of the patent.",
-          "required": true
+          "description": "The application number of the patent."
         }
-      }
+      },
+      "required": [
+        "applicationNumberText"
+      ]
     },
     "required": [
       "applicationNumberText"
     ],
-    "required_api_keys": ["USPTO_API_KEY"],
+    "required_api_keys": [
+      "USPTO_API_KEY"
+    ],
     "return_schema": {
       "type": "object",
       "properties": {
@@ -654,15 +665,19 @@
       "properties": {
         "applicationNumberText": {
           "type": "string",
-          "description": "The application number of the patent.",
-          "required": true
+          "description": "The application number of the patent."
         }
-      }
+      },
+      "required": [
+        "applicationNumberText"
+      ]
     },
     "required": [
       "applicationNumberText"
     ],
-    "required_api_keys": ["USPTO_API_KEY"],
+    "required_api_keys": [
+      "USPTO_API_KEY"
+    ],
     "return_schema": {
       "type": "object",
       "properties": {
@@ -727,10 +742,12 @@
       "properties": {
         "applicationNumberText": {
           "type": "string",
-          "description": "The application number of the patent.",
-          "required": true
+          "description": "The application number of the patent."
         }
-      }
+      },
+      "required": [
+        "applicationNumberText"
+      ]
     },
     "required": [
       "applicationNumberText"
@@ -739,7 +756,9 @@
       "applicationNumberText",
       "grantDocumentMetaData"
     ],
-    "required_api_keys": ["USPTO_API_KEY"],
+    "required_api_keys": [
+      "USPTO_API_KEY"
+    ],
     "return_schema": {
       "type": "object",
       "properties": {

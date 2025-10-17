@@ -51,6 +51,9 @@ default_tool_files = {
     "fatcat": os.path.join(current_dir, "data", "fatcat_tools.json"),
     "wikidata_sparql": os.path.join(current_dir, "data", "wikidata_sparql_tools.json"),
     "agents": os.path.join(current_dir, "data", "agentic_tools.json"),
+    "drug_discovery_agents": os.path.join(
+        current_dir, "data", "drug_discovery_agents.json"
+    ),
     "dataset": os.path.join(current_dir, "data", "dataset_tools.json"),
     # 'mcp_clients': os.path.join(current_dir, 'data', 'mcp_client_tools_example.json'),
     "mcp_auto_loader_txagent": os.path.join(
@@ -89,6 +92,16 @@ default_tool_files = {
     ),
     "software_visualization": os.path.join(
         current_dir, "data", "packages", "visualization_tools.json"
+    ),
+    # Scientific visualization tools
+    "visualization_protein_3d": os.path.join(
+        current_dir, "data", "protein_structure_3d_tools.json"
+    ),
+    "visualization_molecule_2d": os.path.join(
+        current_dir, "data", "molecule_2d_tools.json"
+    ),
+    "visualization_molecule_3d": os.path.join(
+        current_dir, "data", "molecule_3d_tools.json"
     ),
     "software_scientific_computing": os.path.join(
         current_dir, "data", "packages", "scientific_computing_tools.json"
@@ -133,7 +146,9 @@ default_tool_files = {
     ),
     "odphp": os.path.join(current_dir, "data", "odphp_tools.json"),
     "euhealth": os.path.join(current_dir, "data", "euhealth_tools.json"),
-
+    "markitdown": os.path.join(current_dir, "data", "markitdown_tools.json"),
+    # Genomics tools
+    "genomics": os.path.join(current_dir, "data", "genomics_tools.json"),
     # Guideline and health policy tools
     "guidelines": os.path.join(current_dir, "data", "unified_guideline_tools.json"),
 }

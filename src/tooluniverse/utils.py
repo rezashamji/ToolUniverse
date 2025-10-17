@@ -3,6 +3,8 @@ import json
 import re
 import hashlib
 import os
+import time
+import sys
 from typing import Dict, Any, Union, List
 from huggingface_hub import hf_hub_download
 from pydantic._internal._model_construction import ModelMetaclass
@@ -14,11 +16,22 @@ def download_from_hf(tool_config):
     relative_local_path = hf_parameters.get("save_to_local_dir")
 
     # Compute absolute path to save locally
-    if not os.path.isabs(relative_local_path):
-        project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-        absolute_local_dir = os.path.join(project_root, relative_local_path)
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
+    # If not provided, default to user cache directory under datasets
+    is_missing_path = relative_local_path is None
+    is_empty_string = (
+        isinstance(relative_local_path, str) and relative_local_path.strip() == ""
+    )
+    if is_missing_path or is_empty_string:
+        absolute_local_dir = os.path.join(get_user_cache_dir(), "datasets")
     else:
-        absolute_local_dir = relative_local_path
+        # Expand '~' and environment variables
+        expanded_path = os.path.expanduser(os.path.expandvars(relative_local_path))
+        if os.path.isabs(expanded_path):
+            absolute_local_dir = expanded_path
+        else:
+            absolute_local_dir = os.path.join(project_root, expanded_path)
 
     # Ensure the directory exists
     os.makedirs(absolute_local_dir, exist_ok=True)
@@ -59,6 +72,38 @@ def get_md5(input_str):
 
     # Return the hexadecimal MD5 digest
     return md5_hash.hexdigest()
+
+
+def get_user_cache_dir() -> str:
+    """
+    Return a cross-platform user cache directory for ToolUniverse.
+
+    macOS: ~/Library/Caches/ToolUniverse
+    Linux: $XDG_CACHE_HOME or ~/.cache/tooluniverse
+    Windows: %LOCALAPPDATA%\\ToolUniverse\\Cache
+    """
+    # Allow explicit override via environment variable
+    override_dir = os.getenv("TOOLUNIVERSE_TMPDIR")
+    if override_dir and override_dir.strip():
+        return os.path.expanduser(os.path.expandvars(override_dir))
+
+    platform = sys.platform
+    home_dir = os.path.expanduser("~")
+
+    if platform == "darwin":
+        return os.path.join(home_dir, "Library", "Caches", "ToolUniverse")
+
+    if platform.startswith("win"):
+        local_app_data = os.getenv("LOCALAPPDATA") or os.path.join(
+            home_dir, "AppData", "Local"
+        )
+        return os.path.join(local_app_data, "ToolUniverse", "Cache")
+
+    # Default: Linux/Unix
+    xdg_cache = os.getenv("XDG_CACHE_HOME")
+    if xdg_cache and xdg_cache.strip():
+        return os.path.join(xdg_cache, "tooluniverse")
+    return os.path.join(home_dir, ".cache", "tooluniverse")
 
 
 def yaml_to_dict(yaml_file_path):
@@ -137,6 +182,9 @@ def evaluate_function_call(tool_definition, function_call):
     type_mismatches = []
 
     for param, value in function_call["arguments"].items():
+        # Skip validation for special parameters that are handled internally
+        if param == "_tooluniverse_stream":
+            continue
         if param not in valid_params:
             invalid_params.append(param)
         else:
@@ -228,11 +276,23 @@ def compare_function_calls(
 
 
 def extract_function_call_json(lst, return_message=False, verbose=True, format="llama"):
-    if type(lst) is dict:
+    # Handle different input types
+    if isinstance(lst, dict):
         if return_message:
             return lst, ""
         return lst
-    result_str = "".join(lst)
+    elif isinstance(lst, list):
+        # Check if it's a list of function call dictionaries
+        if all(isinstance(item, dict) and "name" in item for item in lst):
+            if return_message:
+                return lst, ""
+            return lst
+        # Otherwise, treat as string list to join
+        result_str = "".join(lst)
+    else:
+        # Single string or other type
+        result_str = str(lst)
+
     if verbose:
         print("\033[1;34mPossible LLM outputs for function call:\033[0m", result_str)
     try:
@@ -279,6 +339,62 @@ def extract_function_call_json(lst, return_message=False, verbose=True, format="
             if return_message:
                 return None, result_str
             return None
+
+
+def format_error_response(
+    error: Exception, tool_name: str = None, context: Dict[str, Any] = None
+) -> Dict[str, Any]:
+    """
+    Format error responses in a consistent structure.
+
+    This function ensures all error responses follow the same format for better
+    error handling and debugging.
+
+    Args:
+        error (Exception): The error that occurred
+        tool_name (str, optional): Name of the tool that failed
+        context (Dict[str, Any], optional): Additional context about the error
+
+    Returns:
+        Dict[str, Any]: Standardized error response
+    """
+    from .exceptions import ToolError
+
+    # If it's already a ToolError, use its structured format
+    if isinstance(error, ToolError):
+        return {
+            "error": str(error),
+            "error_type": error.error_type,
+            "retriable": error.retriable,
+            "next_steps": error.next_steps,
+            "details": error.details,
+            "tool_name": tool_name,
+            "timestamp": time.time(),
+        }
+
+    # For regular exceptions, create a basic structure
+    return {
+        "error": str(error),
+        "error_type": type(error).__name__,
+        "retriable": False,
+        "next_steps": [],
+        "details": context or {},
+        "tool_name": tool_name,
+        "timestamp": time.time(),
+    }
+
+
+def get_parameter_schema(tool_config: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Get parameter schema from tool configuration.
+
+    Args:
+        tool_config (Dict[str, Any]): Tool configuration dictionary
+
+    Returns:
+        Dict[str, Any]: Parameter schema dictionary
+    """
+    return tool_config.get("parameter", {})
 
 
 def validate_query(query: Dict[str, Any]) -> bool:

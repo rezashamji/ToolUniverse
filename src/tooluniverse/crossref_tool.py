@@ -51,15 +51,16 @@ class CrossrefTool(BaseTool):
             # Extract title
             title_list = item.get("title") or []
             title = title_list[0] if title_list else None
-            
+
             # Extract abstract
             abstract = item.get("abstract")
             if abstract and isinstance(abstract, str):
                 # Clean HTML tags
                 import re
-                abstract = re.sub(r'<[^>]+>', '', abstract)
+
+                abstract = re.sub(r"<[^>]+>", "", abstract)
                 abstract = abstract.strip()
-            
+
             # Extract author information
             authors = []
             author_list = item.get("author", [])
@@ -72,21 +73,21 @@ class CrossrefTool(BaseTool):
                             authors.append(f"{given} {family}")
                         elif family:
                             authors.append(family)
-            
+
             # Extract year
             year = None
             issued = item.get("issued", {}).get("date-parts") or []
             if issued and issued[0]:
                 year = issued[0][0]
-            
+
             # Extract URL and DOI
             url = item.get("URL")
             doi = item.get("DOI")
-            
+
             # Extract journal information
             container_title = item.get("container-title") or []
             journal = container_title[0] if container_title else None
-            
+
             # Extract citation count
             citations = item.get("is-referenced-by-count", 0)
             if citations:
@@ -94,54 +95,64 @@ class CrossrefTool(BaseTool):
                     citations = int(citations)
                 except (ValueError, TypeError):
                     citations = 0
-            
+
             # Extract open access status
-            open_access = item.get("is-referenced-by-count", 0)  # This field might not be accurate
+            open_access = item.get(
+                "is-referenced-by-count", 0
+            )  # This field might not be accurate
             # Try to get open access status from license information
             license_info = item.get("license", [])
             if isinstance(license_info, list) and license_info:
-                open_access = True  # If there's license information, it might be open access
-            
+                open_access = (
+                    True  # If there's license information, it might be open access
+                )
+
             # Extract keywords
             keywords = []
             subject_list = item.get("subject", [])
             if isinstance(subject_list, list):
                 keywords.extend(subject_list)
-            
+
             # Extract article type
             article_type = item.get("type", "Unknown")
-            
+
             # Extract publisher
             publisher = item.get("publisher", "Unknown")
-            
+
             # Handle missing abstract
             if not abstract:
                 abstract = "Abstract not available"
-            
-            results.append({
-                "title": title or "Title not available",
-                "abstract": abstract,
-                "authors": authors if authors else "Author information not available",
-                "journal": journal or "Journal information not available",
-                "year": year,
-                "doi": doi or "DOI not available",
-                "url": url or "URL not available",
-                "citations": citations,
-                "open_access": open_access,
-                "keywords": keywords if keywords else "Keywords not available",
-                "article_type": article_type,
-                "publisher": publisher,
-                "source": "Crossref",
-                "data_quality": {
-                    "has_abstract": bool(abstract and abstract != "Abstract not available"),
-                    "has_authors": bool(authors),
-                    "has_journal": bool(journal),
-                    "has_year": bool(year),
-                    "has_doi": bool(doi),
-                    "has_citations": bool(citations and citations > 0),
-                    "has_keywords": bool(keywords),
-                    "has_url": bool(url)
+
+            results.append(
+                {
+                    "title": title or "Title not available",
+                    "abstract": abstract,
+                    "authors": (
+                        authors if authors else "Author information not available"
+                    ),
+                    "journal": journal or "Journal information not available",
+                    "year": year,
+                    "doi": doi or "DOI not available",
+                    "url": url or "URL not available",
+                    "citations": citations,
+                    "open_access": open_access,
+                    "keywords": keywords if keywords else "Keywords not available",
+                    "article_type": article_type,
+                    "publisher": publisher,
+                    "source": "Crossref",
+                    "data_quality": {
+                        "has_abstract": bool(
+                            abstract and abstract != "Abstract not available"
+                        ),
+                        "has_authors": bool(authors),
+                        "has_journal": bool(journal),
+                        "has_year": bool(year),
+                        "has_doi": bool(doi),
+                        "has_citations": bool(citations and citations > 0),
+                        "has_keywords": bool(keywords),
+                        "has_url": bool(url),
+                    },
                 }
-            })
+            )
 
         return results

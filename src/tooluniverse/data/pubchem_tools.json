@@ -10,7 +10,9 @@
           "description": "PubChem compound ID to query, e.g., 2244 (Aspirin)."
         }
       },
-      "required": ["cid"]
+      "required": [
+        "cid"
+      ]
     },
     "fields": {
       "endpoint": "/data/compound/{cid}/JSON?heading=Patents",
@@ -33,14 +35,20 @@
           "description": "PubChem compound ID to query, e.g., 2244 (Aspirin)."
         }
       },
-      "required": ["cid"]
+      "required": [
+        "cid"
+      ]
     },
     "fields": {
       "endpoint": "/compound/cid/{cid}/property/{property_list}/JSON",
       "use_pugview": false,
       "input_description": "Input is a PubChem compound ID (integer).",
       "output_description": "Returns a JSON object with structure example:\n{\n  \"PropertyTable\": {\n    \"Properties\": [\n      {\n        \"CID\": 2244,\n        \"MolecularWeight\": 180.157,\n        \"IUPACName\": \"2-acetyloxybenzoic acid\",\n        \"CanonicalSMILES\": \"CC(=O)OC1=CC=CC=C1C(=O)O\",\n        ...\n      }\n    ]\n  }\n}\n\nWhere:\n- PropertyTable.Properties list: each element contains properties for that CID;\n- Property names determined by {property_list}, example here is [\"MolecularWeight\",\"IUPACName\",\"CanonicalSMILES\"].\nAfter calling, LLM can directly access these important molecular properties for subsequent chemical/pharmacological reasoning.",
-      "property_list": ["MolecularWeight", "IUPACName", "CanonicalSMILES"]
+      "property_list": [
+        "MolecularWeight",
+        "IUPACName",
+        "CanonicalSMILES"
+      ]
     },
     "type": "PubChemRESTTool"
   },
@@ -55,7 +63,9 @@
           "description": "Chemical name (e.g., \"Aspirin\" or IUPAC name)."
         }
       },
-      "required": ["name"]
+      "required": [
+        "name"
+      ]
     },
     "fields": {
       "endpoint": "/compound/name/{name}/cids/JSON",
@@ -77,7 +87,9 @@
           "description": "SMILES expression (e.g., \"CC(=O)OC1=CC=CC=C1C(=O)O\" corresponds to aspirin)."
         }
       },
-      "required": ["smiles"]
+      "required": [
+        "smiles"
+      ]
     },
     "fields": {
       "endpoint": "/compound/smiles/{smiles}/cids/JSON",
@@ -99,7 +111,9 @@
           "description": "SMILES of substructure (e.g., \"c1ccccc1\" corresponds to benzene ring)."
         }
       },
-      "required": ["smiles"]
+      "required": [
+        "smiles"
+      ]
     },
     "fields": {
       "endpoint": "/compound/fastsubstructure/smiles/{smiles}/cids/JSON",
@@ -126,7 +140,10 @@
           "default": 0.9
         }
       },
-      "required": ["smiles"]
+      "required": [
+        "smiles",
+        "threshold"
+      ]
     },
     "fields": {
       "endpoint": "/compound/fastsimilarity_2d/smiles/{smiles}/cids/JSON",
@@ -144,8 +161,8 @@
       "type": "object",
       "properties": {
         "cid": {
-            "type": "integer",
-            "description": "Compound ID to get image for, e.g., 2244."
+          "type": "integer",
+          "description": "Compound ID to get image for, e.g., 2244."
         },
         "image_size": {
           "type": "string",
@@ -153,7 +170,10 @@
           "default": "200x200"
         }
       },
-      "required": ["cid"]
+      "required": [
+        "cid",
+        "image_size"
+      ]
     },
     "fields": {
       "endpoint": "/compound/cid/{cid}/PNG?image_size={image_size}",
@@ -174,7 +194,9 @@
           "description": "Compound ID to query synonyms for, e.g., 2244."
         }
       },
-      "required": ["cid"]
+      "required": [
+        "cid"
+      ]
     },
     "fields": {
       "endpoint": "/compound/cid/{cid}/synonyms/JSON",
@@ -202,7 +224,10 @@
           }
         }
       },
-      "required": ["cid", "xref_types"]
+      "required": [
+        "cid",
+        "xref_types"
+      ]
     },
     "fields": {
       "endpoint": "/compound/cid/{cid}/xrefs/{xref_types}/JSON",

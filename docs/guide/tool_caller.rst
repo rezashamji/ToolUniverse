@@ -1,119 +1,141 @@
 Tool Caller Tutorial
 ==================
 
-The Tool Caller is the primary execution engine in ToolUniverse. It is responsible for instantiating tools, validating requests, and dispatching calls. Upon initialization, the Tool Caller is configured with a manifest of available tools, including their specifications and settings. To mitigate the significant system overhead associated with loading all tools simultaneously, it employs a dynamic loading strategy. A specific tool is loaded into memory only upon its first request and is then cached for a duration to efficiently handle subsequent calls.
+The Tool Caller is ToolUniverse's execution engine that handles tool instantiation, validation, and execution. It uses dynamic loading to efficiently manage hundreds of tools without loading them all at startup.
 
-When a tool execution request is received, the Tool Caller first parses it to extract the tool name and arguments. It then performs a rigorous validation check, ensuring the provided arguments conform to the data types and structural requirements defined in the tool's specification. Once validated, the Tool Caller dispatches the arguments to the tool's primary execution method, such as ``run()``. The resulting output is then returned to the client through ToolUniverse's communication protocols. If any step in this process fails, from loading to validation or execution, the system generates and returns a descriptive error message.
+This guide covers how to use the Tool Caller through ToolUniverse's Python API.
 
-This Tutorial covers the main approaches to using the Tool Caller:
-
-1. **Direct API Usage**: Using ToolUniverse's Python API to call tools programmatically
-2. **MCP Server Integration**: Setting up and using MCP (Model Context Protocol) servers for AI agent integration
-
-Direct API Usage
+Python API Usage
 ----------------
 
-The ToolUniverse class provides the core Tool Caller functionality through its execution methods.
+ToolUniverse provides three ways to call tools through its Python API:
 
-Basic Tool Execution
-~~~~~~~~~~~~~~~~~~~~
+1. **Direct Import** (Simplest)
+2. **Dynamic Access** (Convenient)  
+3. **JSON Format** (Most Flexible)
+
+Direct Import
+~~~~~~~~~~~~~
+
+Import and call tools directly:
 
 .. code-block:: python
 
-   from tooluniverse import ToolUniverse
+    from tooluniverse.tools import UniProt_get_entry_by_accession
+    
+    result = UniProt_get_entry_by_accession(accession="P05067")
+    print(result)
 
-   # Initialize ToolUniverse
-   tu = ToolUniverse()
-   tu.load_tools()
+Dynamic Access
+~~~~~~~~~~~~~~
 
-   # Execute a single tool using the main run method
-   result = tu.run({
-       "name": "UniProt_get_entry_by_accession",
-       "arguments": {"accession": "P05067"}
-   })
+Access tools through the ToolUniverse instance:
 
-   print(result)
+.. code-block:: python
 
-The ``run`` method is the primary execution engine that handles both single and multiple function calls.
+    from tooluniverse import ToolUniverse
+    
+    tu = ToolUniverse()
+    result = tu.tools.UniProt_get_entry_by_accession(accession="P05067")
+    print(result)
 
-.. seealso::
-   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
-
-Tool Initialization and Caching
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Tools are dynamically loaded and cached for performance:
-
-.. seealso::
-   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
-
-Internal Execution Method
+JSON Format (Recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``run`` method internally uses ``run_one_function`` for individual tool execution:
-
-.. seealso::
-   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
-
-.. note::
-   While ``run_one_function`` is available for direct use, the ``run`` method is the recommended interface as it provides better error handling, supports multiple function calls, and offers more flexible input parsing options.
-
-Advanced Tool Execution
-~~~~~~~~~~~~~~~~~~~~~~~
-
-The ``run`` method supports various input formats and execution modes:
+Use the ``run()`` method for maximum flexibility:
 
 .. code-block:: python
 
-   # Execute single function call (dictionary format)
-   result = tu.run({
-       "name": "UniProt_get_entry_by_accession",
-       "arguments": {"accession": "P05067"}
-   })
+    from tooluniverse import ToolUniverse
+    
+    tu = ToolUniverse()
+    
+    # Single tool call
+    result = tu.run({
+        "name": "UniProt_get_entry_by_accession",
+        "arguments": {"accession": "P05067"}
+    })
+    
+    # Multiple tool calls
+    results = tu.run([
+        {
+            "name": "UniProt_get_entry_by_accession",
+            "arguments": {"accession": "P05067"}
+        },
+        {
+            "name": "OpenTargets_get_associated_targets_by_disease_efoId",
+            "arguments": {"efoId": "EFO_0000249"}
+        }
+    ])
+    
+    print(results)
 
-   # Execute multiple function calls (list format)
-   result = tu.run([
-       {
-           "name": "UniProt_get_entry_by_accession",
-           "arguments": {"accession": "P05067"}
-       },
-       {
-           "name": "OpenTargets_get_associated_targets_by_disease_efoId",
-           "arguments": {"efoId": "EFO_0000249"}
-       }
-   ])
+The ``run()`` method is recommended because it:
+- Supports both single and multiple tool calls
+- Provides better error handling
+- Works with AI agent integration formats
+- Handles dynamic tool loading automatically
 
-   # Execute with formatted messages (for AI agent integration)
-   result = tu.run(function_call_data, return_message=True, verbose=True)
+Error Handling
+--------------
 
-   # Execute with different parsing formats
-   result = tu.run(function_call_string, format='llama', verbose=True)
+The Tool Caller provides comprehensive error handling and validation:
 
-Tool Validation
-~~~~~~~~~~~~~~~
+.. code-block:: python
 
-The Tool Caller performs comprehensive validation before execution:
+    from tooluniverse import ToolUniverse
+    
+    tu = ToolUniverse()
+    
+    # Example: Invalid tool name
+    try:
+        result = tu.run({
+            "name": "nonexistent_tool",
+            "arguments": {"param": "value"}
+        })
+    except Exception as e:
+        print(f"Tool execution failed: {e}")
+    
+    # Example: Missing required parameter
+    result = tu.run({
+        "name": "UniProt_get_entry_by_accession",
+        "arguments": {"wrong_param": "value"}  # Missing required 'accession'
+    })
+    # Returns: "Invalid function call: Missing required parameter: accession"
 
-.. seealso::
-   For complete API documentation, see :doc:`api_comprehensive` - ToolUniverse class and methods
+Tool Execution Flow
+-------------------
 
-.. _mcp-server-integration:
+The Tool Caller follows this systematic process:
+
+1. **Parse Request**: Extract tool name and arguments
+2. **Validate Tool**: Check if tool exists and is available
+3. **Validate Arguments**: Ensure arguments match tool's parameter schema
+4. **Load Tool**: Dynamically load tool if not cached
+5. **Execute**: Call the tool's ``run()`` method
+6. **Return Result**: Format and return the output
+
+Performance Features
+--------------------
+
+**Dynamic Loading**: Tools are loaded only when first requested and cached for subsequent calls, minimizing memory usage.
+
+**Thread Safety**: Multiple tools can execute concurrently without conflicts.
+
+**Caching**: Loaded tools are cached to improve performance for repeated calls.
 
 MCP Server Integration
 ----------------------
 
-ToolUniverse provides comprehensive MCP (Model Context Protocol) server capabilities through the SMCP (Scientific Model Context Protocol) implementation. This allows AI agents to discover and execute tools through a standardized protocol.
+ToolUniverse provides MCP (Model Context Protocol) server capabilities for AI agent integration. This allows AI agents to discover and execute tools through a standardized protocol.
 
 SMCP Server Overview
 ~~~~~~~~~~~~~~~~~~~~
 
-The SMCP server extends standard MCP capabilities with scientific domain expertise, intelligent tool discovery, and optimized configurations for research applications. It automatically handles the complex task of exposing hundreds of specialized tools through a consistent, well-documented interface.
-
-.. seealso::
-   For complete SMCP API documentation, see :doc:`api_comprehensive` - SMCP class
+The SMCP (Scientific Model Context Protocol) server extends standard MCP with scientific domain expertise and intelligent tool discovery.
 
 Key Features:
-- **Scientific Tool Integration**: Native access to 350+ specialized tools
+- **Scientific Tool Integration**: Access to 600+ specialized tools
 - **AI-Powered Tool Discovery**: Multi-tiered intelligent search system
 - **Full MCP Protocol Support**: Complete implementation of MCP specification
 - **High-Performance Architecture**: Production-ready features
@@ -162,145 +184,112 @@ Command Line Setup
    # List available categories
    tooluniverse-smcp --list-categories
 
-Complete Parameter Reference
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. dropdown:: Complete SMCP Command Line Parameters
-
-   The ``tooluniverse-smcp`` command supports the following parameters:
-
-   **Tool Selection:**
-   - ``--categories``: Load specific tool categories (e.g., uniprot ChEMBL opentarget)
-   - ``--include-tools``: Load only specific tools by name
-   - ``--exclude-tools``: Exclude specific tools by name
-   - ``--exclude-categories``: Exclude entire tool categories
-   - ``--tools-file``: Load tools from a text file (one tool name per line)
-
-   **Server Configuration:**
-   - ``--transport``: Transport protocol (stdio, http, sse) - default: http
-   - ``--host``: Host to bind to - default: 0.0.0.0
-   - ``--port``: Port to bind to - default: 7000
-   - ``--name``: Server name - default: "ToolUniverse SMCP Server"
-   - ``--max-workers``: Maximum worker threads - default: 5
-   - ``--no-search``: Disable intelligent search functionality
-   - ``--verbose``, ``-v``: Enable verbose logging
-
-   **Information Commands:**
-   - ``--list-tools``: List all available tools and exit
-   - ``--list-categories``: List all available tool categories and exit
-
-.. seealso::
-   For complete SMCP server documentation, see :doc:`../tutorials/aiscientists/adding_mcp_tools_en`
-
-.. _mcp-client-integration:
-
 MCP Client Integration
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. dropdown:: Python MCP Client Examples
+Python MCP Client Examples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   **STDIO Client:**
+**STDIO Client:**
 
-   .. code-block:: python
+.. code-block:: python
 
-      from mcp.client.stdio import stdio_client
-      from mcp.client.session import ClientSession
-      from mcp import StdioServerParameters
-      import asyncio
+   from mcp.client.stdio import stdio_client
+   from mcp.client.session import ClientSession
+   from mcp import StdioServerParameters
+   import asyncio
 
-      async def connect_to_tooluniverse():
-          # Create stdio server parameters
-          server_params = StdioServerParameters(
-              command="tooluniverse-smcp-stdio",
-              args=[]
-          )
+   async def connect_to_tooluniverse():
+       # Create stdio server parameters
+       server_params = StdioServerParameters(
+           command="tooluniverse-smcp-stdio",
+           args=[]
+       )
 
-          # Create stdio client transport
-          async with stdio_client(server_params) as (read, write):
-              # Create client session
-              async with ClientSession(read, write) as session:
-                  # Initialize the session
-                  await session.initialize()
+       # Create stdio client transport
+       async with stdio_client(server_params) as (read, write):
+           # Create client session
+           async with ClientSession(read, write) as session:
+               # Initialize the session
+               await session.initialize()
 
-                  # List available tools
-                  tools_result = await session.list_tools()
-                  print(f"Available tools: {len(tools_result.tools)}")
+               # List available tools
+               tools_result = await session.list_tools()
+               print(f"Available tools: {len(tools_result.tools)}")
 
-                  # Call a tool
-                  result = await session.call_tool(
-                      "UniProt_get_entry_by_accession",
-                      {"accession": "P05067"}
-                  )
+               # Call a tool
+               result = await session.call_tool(
+                   "UniProt_get_entry_by_accession",
+                   {"accession": "P05067"}
+               )
 
-                  return result
+               return result
 
-      # Run the client
-      result = asyncio.run(connect_to_tooluniverse())
+   # Run the client
+   result = asyncio.run(connect_to_tooluniverse())
 
-   **HTTP Client:**
+**HTTP Client:**
 
-   .. code-block:: python
+.. code-block:: python
 
-      from mcp.client.session import ClientSession
-      from mcp.client.streamable_http import streamablehttp_client
-      import asyncio
+   from mcp.client.session import ClientSession
+   from mcp.client.streamable_http import streamablehttp_client
+   import asyncio
 
-      async def connect_via_http():
-          # Connect to HTTP MCP server
-          async with streamablehttp_client("http://localhost:8000/mcp") as (read, write, get_session_id):
-              async with ClientSession(read, write) as session:
-                  await session.initialize()
+   async def connect_via_http():
+       # Connect to HTTP MCP server
+       async with streamablehttp_client("http://localhost:8000/mcp") as (read, write, get_session_id):
+           async with ClientSession(read, write) as session:
+               await session.initialize()
 
-                  # List available tools
-                  tools_result = await session.list_tools()
-                  print(f"Available tools: {len(tools_result.tools)}")
+               # List available tools
+               tools_result = await session.list_tools()
+               print(f"Available tools: {len(tools_result.tools)}")
 
-                  # Call a tool
-                  result = await session.call_tool(
-                      "UniProt_get_entry_by_accession",
-                      {"accession": "P05067"}
-                  )
+               # Call a tool
+               result = await session.call_tool(
+                   "UniProt_get_entry_by_accession",
+                   {"accession": "P05067"}
+               )
 
-                  return result
+               return result
 
-      # Run the client
-      result = asyncio.run(connect_via_http())
+   # Run the client
+   result = asyncio.run(connect_via_http())
 
-.. dropdown:: cURL Client Examples
+cURL Client Examples
+^^^^^^^^^^^^^^^^^^^^^
 
-   You can also interact with ToolUniverse MCP servers directly using cURL commands:
+You can also interact with ToolUniverse MCP servers directly using cURL commands:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      # List available tools
-      curl -X POST http://localhost:8000/mcp \
-        -H "Content-Type: application/json" \
-        -H "Accept: application/json, text/event-stream" \
-        -d '{
-          "jsonrpc": "2.0",
-          "id": 1,
-          "method": "tools/list",
-          "params": {}
-        }'
+   # List available tools
+   curl -X POST http://localhost:8000/mcp \
+     -H "Content-Type: application/json" \
+     -H "Accept: application/json, text/event-stream" \
+     -d '{
+       "jsonrpc": "2.0",
+       "id": 1,
+       "method": "tools/list",
+       "params": {}
+     }'
 
-      # Call a tool
-      curl -X POST http://localhost:8000/mcp \
-        -H "Content-Type: application/json" \
-        -H "Accept: application/json, text/event-stream" \
-        -d '{
-          "jsonrpc": "2.0",
-          "id": 2,
-          "method": "tools/call",
-          "params": {
-            "name": "UniProt_get_entry_by_accession",
-            "arguments": {
-              "accession": "P05067"
-            }
-          }
-        }'
-
-.. seealso::
-   For detailed MCP integration tutorials, see :doc:`../tutorials/aiscientists/adding_mcp_tools_en`
+   # Call a tool
+   curl -X POST http://localhost:8000/mcp \
+     -H "Content-Type: application/json" \
+     -H "Accept: application/json, text/event-stream" \
+     -d '{
+       "jsonrpc": "2.0",
+       "id": 2,
+       "method": "tools/call",
+       "params": {
+         "name": "UniProt_get_entry_by_accession",
+         "arguments": {
+           "accession": "P05067"
+         }
+       }
+     }'
 
 Important Notes for MCP Clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -317,140 +306,30 @@ Important Notes for MCP Clients
 
 3. **Tool Arguments**: When calling tools, arguments must match the tool's parameter schema exactly.
 
-Tool Execution Flow
--------------------
-
-The Tool Caller follows a systematic execution flow:
-
-1. **Request Parsing**: The ``run()`` method parses input and extracts function call data
-2. **Format Detection**: Determines if input is single function call or multiple calls
-3. **Tool Validation**: ``run_one_function()`` validates the tool exists and arguments are valid
-4. **Dynamic Loading**: Load the tool if not already cached using ``init_tool()``
-5. **Configuration Injection**: Inject necessary configurations (API keys, endpoints)
-6. **Execution**: Call the tool's ``run()`` method
-7. **Result Processing**: Format and return the result
-8. **Error Handling**: Generate descriptive error messages if any step fails
-
-For multiple function calls, the ``run()`` method iterates through each call and uses ``run_one_function()`` internally.
-
-.. _error-handling-validation:
-
-Error Handling and Validation
------------------------------
-
-The Tool Caller provides comprehensive error handling:
-
-.. code-block:: python
-
-   # Example error handling
-   try:
-       result = tu.run({
-           "name": "nonexistent_tool",
-           "arguments": {"param": "value"}
-       })
-   except Exception as e:
-       print(f"Tool execution failed: {e}")
-
-   # Validation errors
-   invalid_call = {
-       "name": "UniProt_get_entry_by_accession",
-       "arguments": {"wrong_param": "value"}  # Missing required 'accession' parameter
-   }
-
-   result = tu.run(invalid_call)
-   # Returns: "Invalid function call: Missing required parameter: accession"
-
-.. _performance-optimization:
-
-Performance Optimization
--------------------------
-
-Dynamic Loading Strategy
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-The Tool Caller uses lazy loading to optimize performance:
-
-- Tools are loaded only when first requested
-- Loaded tools are cached for subsequent calls
-- Memory usage is minimized by not loading all tools at startup
-- Cache duration can be configured based on usage patterns
-
-Thread Pool Execution
-~~~~~~~~~~~~~~~~~~~~~
-
-For MCP servers, tools execute in thread pools to prevent blocking:
-
-.. code-block:: python
-
-   # Configure thread pool size
-   server = SMCP(
-       max_workers=20,  # Adjust based on server capacity
-       tool_categories=["uniprot", "opentarget"]
-   )
-
-.. _troubleshooting:
-
-Troubleshooting
----------------
-
-Common Issues
-~~~~~~~~~~~~~
-
-1. **Tool Not Found**: Ensure the tool name is correct and the tool is loaded
-2. **Invalid Arguments**: Check that all required parameters are provided
-3. **API Key Issues**: Verify that necessary API keys are configured
-4. **Network Errors**: Check connectivity to external services
-5. **Memory Issues**: Reduce the number of loaded tools or increase available memory
-
-Debugging Tips
-~~~~~~~~~~~~~~
-
-.. dropdown:: Debugging and Troubleshooting
-
-   **Enable Debug Logging:**
-
-   .. code-block:: python
-
-      # Enable debug logging
-      from tooluniverse.logging_config import set_log_level
-      set_log_level("DEBUG")
-
-      # Check loaded tools
-      print(f"Loaded tools: {len(tu.all_tools)}")
-      print(f"Cached tools: {len(tu.callable_functions)}")
-
-      # Validate tool configuration
-      tool_config = tu.all_tool_dict.get("tool_name")
-      if tool_config:
-          print(f"Tool configuration: {tool_config}")
-
-   **Common Issues and Solutions:**
-
-   1. **Tool Not Found**: Ensure the tool name is correct and the tool is loaded
-   2. **Invalid Arguments**: Check that all required parameters are provided
-   3. **API Key Issues**: Verify that necessary API keys are configured
-   4. **Network Errors**: Check connectivity to external services
-   5. **Memory Issues**: Reduce the number of loaded tools or increase available memory
-
 .. seealso::
-   For comprehensive troubleshooting Tutorial, see :doc:`../help/troubleshooting`
+   For detailed MCP server setup and usage, see :doc:`../tutorials/aiscientists/adding_mcp_tools_en`
 
 Summary
--------
+--------
 
-This comprehensive Tutorial covers both direct API usage and MCP server integration for the Tool Caller. The Tool Caller's dynamic loading strategy, validation system, and error handling make it a robust execution engine for ToolUniverse's extensive collection of scientific tools.
+The Tool Caller is ToolUniverse's execution engine that provides:
 
-**Key Takeaways:**
+- **Three API approaches**: Direct import, dynamic access, and JSON format
+- **Dynamic loading**: Tools are loaded on-demand and cached for performance
+- **Comprehensive validation**: Ensures tool names and arguments are correct
+- **Error handling**: Provides clear error messages for debugging
+- **MCP integration**: Supports AI agent integration through MCP servers
 
-- Use the ``run()`` method for all tool execution needs
-- Tools are dynamically loaded and cached for optimal performance
-- MCP servers provide standardized AI agent integration
-- Comprehensive error handling and validation ensure reliable operation
-- Debug logging and troubleshooting tools help resolve issues quickly
+**Quick Start:**
 
-For more detailed information, refer to the :doc:`api_comprehensive` documentation and :doc:`tutorials/aiscientists/adding_mcp_tools_en` tutorials.
+.. code-block:: python
 
-.. toctree::
-   :hidden:
+    from tooluniverse import ToolUniverse
+    
+    tu = ToolUniverse()
+    result = tu.run({
+        "name": "UniProt_get_entry_by_accession",
+        "arguments": {"accession": "P05067"}
+    })
 
-   tutorials/aiscientists/adding_mcp_tools_en
+For more information, see the :doc:`api_comprehensive` documentation.

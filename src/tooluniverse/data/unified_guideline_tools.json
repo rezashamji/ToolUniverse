@@ -16,7 +16,10 @@
           "default": 10
         }
       },
-      "required": ["query"]
+      "required": [
+        "query",
+        "limit"
+      ]
     },
     "return_schema": {
       "type": "array",
@@ -35,6 +38,10 @@
           "summary": {
             "type": "string",
             "description": "Clinical summary and scope of the guideline"
+          },
+          "content": {
+            "type": "string",
+            "description": "Cleaned clinical content extracted from the guideline page"
           },
           "date": {
             "type": "string",
@@ -81,7 +88,11 @@
           "description": "Optional NCBI API key for higher rate limits. Get your free key at https://www.ncbi.nlm.nih.gov/account/"
         }
       },
-      "required": ["query"]
+      "required": [
+        "query",
+        "limit",
+        "api_key"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -115,7 +126,17 @@
               "publication_types": {
                 "type": "array",
                 "description": "Publication type classifications",
-                "items": {"type": "string"}
+                "items": {
+                  "type": "string"
+                }
+              },
+              "abstract": {
+                "type": "string",
+                "description": "Abstract text returned from PubMed"
+              },
+              "content": {
+                "type": "string",
+                "description": "Cleaned clinical content (mirrors abstract)"
               },
               "is_guideline": {
                 "type": "boolean",
@@ -168,7 +189,10 @@
           "default": 10
         }
       },
-      "required": ["query"]
+      "required": [
+        "query",
+        "limit"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -211,10 +235,14 @@
                 "type": "string",
                 "description": "Type of publication"
               },
-              "abstract": {
-                "type": "string",
-                "description": "Abstract or summary of the guideline"
-              },
+          "abstract": {
+            "type": "string",
+            "description": "Abstract or summary of the guideline"
+          },
+          "content": {
+            "type": "string",
+            "description": "Extended clinical content extracted from Europe PMC when available"
+          },
               "is_guideline": {
                 "type": "boolean",
                 "description": "Indicates if this is a clinical guideline"
@@ -267,7 +295,11 @@
           "default": "guideline"
         }
       },
-      "required": ["query"]
+      "required": [
+        "query",
+        "limit",
+        "search_type"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -293,6 +325,48 @@
               "category": {
                 "type": "string",
                 "description": "Category or type of guideline"
+              },
+              "description": {
+                "type": "string",
+                "description": "Short description provided by TRIP"
+              },
+              "content": {
+                "type": "string",
+                "description": "Detailed clinical content extracted from the guideline page when available"
+              },
+              "key_recommendations": {
+                "type": "array",
+                "description": "Extracted key recommendations (title and summary) when available",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "description": "Heading for the recommendation"
+                    },
+                    "summary": {
+                      "type": "string",
+                      "description": "Summary text of the recommendation"
+                    }
+                  }
+                }
+              },
+              "evidence_strength": {
+                "type": "array",
+                "description": "Strength-of-evidence or grading statements extracted from the guideline",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "section": {
+                      "type": "string",
+                      "description": "Reference section for the strength statement"
+                    },
+                    "strength": {
+                      "type": "string",
+                      "description": "Narrative grading (e.g., 'Strong recommendation')"
+                    }
+                  }
+                }
               },
               "is_guideline": {
                 "type": "boolean",
@@ -341,7 +415,10 @@
           "default": 10
         }
       },
-      "required": ["query"]
+      "required": [
+        "query",
+        "limit"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -428,7 +505,12 @@
           "description": "Filter for guidelines published up to this year (optional)"
         }
       },
-      "required": ["query"]
+      "required": [
+        "query",
+        "limit",
+        "year_from",
+        "year_to"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -524,7 +606,9 @@
           "description": "Full URL of the NICE guideline page (e.g., 'https://www.nice.org.uk/guidance/ng28'). Must be a valid NICE guideline URL."
         }
       },
-      "required": ["url"]
+      "required": [
+        "url"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -602,7 +686,9 @@
           "description": "Full URL of the WHO publication page (e.g., 'https://www.who.int/publications/i/item/9789240113879'). Must be a valid WHO publication URL."
         }
       },
-      "required": ["url"]
+      "required": [
+        "url"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -672,6 +758,150 @@
         "note": {
           "type": "string",
           "description": "Additional notes about content availability"
+        }
+      }
+    }
+  },
+  {
+    "type": "GINGuidelinesTool",
+    "name": "GIN_Guidelines_Search",
+    "description": "Search Guidelines International Network (GIN) guidelines database. GIN maintains the world's largest database of clinical guidelines with over 6400 guidelines from various organizations worldwide.",
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Medical condition, treatment, or clinical topic to search for in GIN guidelines (e.g., 'diabetes management', 'hypertension treatment', 'cancer screening')"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Maximum number of guidelines to return (default: 10)",
+          "default": 10
+        }
+      },
+      "required": [
+        "query",
+        "limit"
+      ]
+    },
+    "return_schema": {
+      "type": "array",
+      "description": "List of GIN clinical guidelines from various international organizations",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the guideline"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to access the guideline"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description or summary of the guideline"
+          },
+          "date": {
+            "type": "string",
+            "description": "Publication or update date"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source organization (GIN)"
+          },
+          "organization": {
+            "type": "string",
+            "description": "Organization that developed the guideline"
+          },
+          "is_guideline": {
+            "type": "boolean",
+            "description": "Indicates this is a clinical guideline"
+          },
+          "official": {
+            "type": "boolean",
+            "description": "Indicates this is an official publication"
+          },
+          "content": {
+            "type": "string",
+            "description": "Full content of the guideline"
+          },
+          "note": {
+            "type": "string",
+            "description": "Additional notes about content availability"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "CMAGuidelinesTool",
+    "name": "CMA_Guidelines_Search",
+    "description": "Search Canadian Medical Association (CMA) Infobase guidelines. Contains over 1200 evidence-based clinical practice guidelines developed or endorsed by Canadian healthcare organizations.",
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Medical condition, treatment, or clinical topic to search for in CMA guidelines (e.g., 'diabetes management', 'hypertension treatment', 'cancer screening')"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Maximum number of guidelines to return (default: 10)",
+          "default": 10
+        }
+      },
+      "required": [
+        "query",
+        "limit"
+      ]
+    },
+    "return_schema": {
+      "type": "array",
+      "description": "List of CMA Infobase clinical practice guidelines",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the guideline"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to access the guideline"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description or summary of the guideline"
+          },
+          "date": {
+            "type": "string",
+            "description": "Publication or update date"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source organization (CMA)"
+          },
+          "organization": {
+            "type": "string",
+            "description": "Canadian healthcare organization that developed the guideline"
+          },
+          "is_guideline": {
+            "type": "boolean",
+            "description": "Indicates this is a clinical guideline"
+          },
+          "official": {
+            "type": "boolean",
+            "description": "Indicates this is an official publication"
+          },
+          "content": {
+            "type": "string",
+            "description": "Full content of the guideline"
+          },
+          "note": {
+            "type": "string",
+            "description": "Additional notes about content availability"
+          }
         }
       }
     }

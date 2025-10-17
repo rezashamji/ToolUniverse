@@ -30,7 +30,7 @@ class WikidataSPARQLTool(BaseTool):
 
         headers = {
             "Accept": "application/sparql-results+json",
-            "User-Agent": "ToolUniverse/1.0 (https://github.com)"
+            "User-Agent": "ToolUniverse/1.0 (https://github.com)",
         }
         try:
             resp = requests.get(
@@ -58,4 +58,3 @@ class WikidataSPARQLTool(BaseTool):
                 row[k] = v.get("value")
             normalized.append(row)
         return normalized
-

@@ -83,18 +83,14 @@ class ArXivTool(BaseTool):
                 link = link_el.get("href")
             else:
                 link = entry.findtext("atom:id", default="", namespaces=ns)
-            published = entry.findtext(
-                "atom:published", default="", namespaces=ns
-            )
+            published = entry.findtext("atom:published", default="", namespaces=ns)
             updated = entry.findtext("atom:updated", default="", namespaces=ns)
             authors = [
                 a.findtext("atom:name", default="", namespaces=ns)
                 for a in entry.findall("atom:author", ns)
             ]
             primary_category = ""
-            cat_el = entry.find(
-                "{http://arxiv.org/schemas/atom}primary_category"
-            )
+            cat_el = entry.find("{http://arxiv.org/schemas/atom}primary_category")
             if cat_el is not None:
                 primary_category = cat_el.get("term", "")
 

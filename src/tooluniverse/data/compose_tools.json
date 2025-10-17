@@ -12,7 +12,10 @@
         },
         "patient_sex": {
           "type": "string",
-          "enum": ["Male", "Female"],
+          "enum": [
+            "Male",
+            "Female"
+          ],
           "description": "Filter by patient sex (optional)"
         },
         "serious_events_only": {
@@ -21,7 +24,11 @@
           "default": false
         }
       },
-      "required": ["drug_name"]
+      "required": [
+        "drug_name",
+        "patient_sex",
+        "serious_events_only"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -64,7 +71,13 @@
           "default": 8
         }
       },
-      "required": ["tool_config"]
+      "required": [
+        "tool_config",
+        "save_to_file",
+        "output_file",
+        "max_iterations",
+        "satisfaction_threshold"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -103,7 +116,12 @@
           "description": "Optional file path to save the generated tool. If not provided, uses auto-generated filename."
         }
       },
-      "required": ["tool_description"]
+      "required": [
+        "tool_description",
+        "max_iterations",
+        "save_to_file",
+        "output_file"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -123,7 +141,9 @@
           "description": "The research topic or query to search for in the literature"
         }
       },
-      "required": ["research_topic"]
+      "required": [
+        "research_topic"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -148,7 +168,9 @@
           "description": "The EFO ID of the disease for drug discovery (e.g., 'EFO_0001074' for Alzheimer's disease)"
         }
       },
-      "required": ["disease_efo_id"]
+      "required": [
+        "disease_efo_id"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -182,7 +204,10 @@
           "default": "blood"
         }
       },
-      "required": ["disease_condition"]
+      "required": [
+        "disease_condition",
+        "sample_type"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -198,8 +223,7 @@
     ],
     "composition_file": "biomarker_discovery.py",
     "composition_function": "compose"
-  }
-  ,
+  },
   {
     "type": "ComposeTool",
     "name": "ToolMetadataGenerationPipeline",
@@ -210,7 +234,9 @@
         "tool_configs": {
           "type": "array",
           "description": "List of raw tool configuration JSON objects to extract and standardize metadata for",
-          "items": {"type": "object"}
+          "items": {
+            "type": "object"
+          }
         },
         "tool_type_mappings": {
           "type": "object",
@@ -228,7 +254,12 @@
           "default": 0
         }
       },
-      "required": ["tool_configs"]
+      "required": [
+        "tool_configs",
+        "tool_type_mappings",
+        "add_existing_tooluniverse_labels",
+        "max_new_tooluniverse_labels"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -247,12 +278,34 @@
     "parameter": {
       "type": "object",
       "properties": {
-        "tool_configs": {"type": "array", "description": "List of tool configuration objects", "items": {"type": "object"}},
-        "max_tools": {"type": "integer", "description": "Optional max number of tools to process (debug)"},
-        "output_path": {"type": "string", "description": "Path for output graph JSON", "default": "./tool_relationship_graph.json"},
-        "save_intermediate_every": {"type": "integer", "description": "Checkpoint every N processed pairs", "default": 5000}
+        "tool_configs": {
+          "type": "array",
+          "description": "List of tool configuration objects",
+          "items": {
+            "type": "object"
+          }
+        },
+        "max_tools": {
+          "type": "integer",
+          "description": "Optional max number of tools to process (debug)"
+        },
+        "output_path": {
+          "type": "string",
+          "description": "Path for output graph JSON",
+          "default": "./tool_relationship_graph.json"
+        },
+        "save_intermediate_every": {
+          "type": "integer",
+          "description": "Checkpoint every N processed pairs",
+          "default": 5000
+        }
       },
-      "required": ["tool_configs"]
+      "required": [
+        "tool_configs",
+        "max_tools",
+        "output_path",
+        "save_intermediate_every"
+      ]
     },
     "auto_load_dependencies": true,
     "fail_on_missing_tools": false,
@@ -260,56 +313,6 @@
       "ToolRelationshipDetector"
     ],
     "composition_file": "tool_graph_generation.py",
-    "composition_function": "compose"
-  },
-  {
-    "type": "ComposeTool",
-    "name": "MultiAgentLiteratureSearch",
-    "description": "Multi-agent literature search system that uses AI agents to analyze intent, extract keywords, execute parallel searches, summarize results, and check quality iteratively",
-    "parameter": {
-      "type": "object",
-      "properties": {
-        "query": {
-          "type": "string",
-          "description": "The research query to search for"
-        },
-        "max_iterations": {
-          "type": "integer",
-          "description": "Maximum number of iterations (default: 3)",
-          "default": 3
-        },
-        "quality_threshold": {
-          "type": "number",
-          "description": "Quality threshold for completion (default: 0.7)",
-          "default": 0.7
-        }
-      },
-      "required": ["query"]
-    },
-    "auto_load_dependencies": true,
-    "fail_on_missing_tools": false,
-    "required_tools": [
-      "IntentAnalyzerAgent",
-      "KeywordExtractorAgent", 
-      "ResultSummarizerAgent",
-      "QualityCheckerAgent",
-      "OverallSummaryAgent",
-      "ArXiv_search_papers",
-      "BioRxiv_search_preprints",
-      "MedRxiv_search_preprints",
-      "HAL_search_archive",
-      "Crossref_search_works",
-      "PubMed_search_articles",
-      "EuropePMC_search_articles",
-      "SemanticScholar_search_papers",
-      "openalex_literature_search",
-      "DBLP_search_publications",
-      "DOAJ_search_articles",
-      "CORE_search_papers",
-      "PMC_search_papers",
-      "Zenodo_search_records"
-    ],
-    "composition_file": "multi_agent_literature_search.py",
     "composition_function": "compose"
   }
 ]

@@ -60,6 +60,44 @@ Adding New Tools
 
 ToolUniverse supports both local and remote tools. Here's how to add a new tool:
 
+**Important**: When adding a new tool, you must modify ``src/tooluniverse/__init__.py`` in four specific locations to ensure the tool is properly exposed and importable. This step is critical and often overlooked by contributors.
+
+Required __init__.py Modifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For every new tool class you add, you must update ``src/tooluniverse/__init__.py`` in these four locations:
+
+1. **Add tool class declarations** (around lines 105-165): Add type annotations for your tool class
+2. **Add import statements** (around lines 173-258): Import your tool class in the non-lazy loading section
+3. **Add lazy import proxies** (around lines 260-360): Create lazy import proxy for your tool class
+4. **Add tool names to __all__ list** (around lines 362-449): Add your tool class name to the ``__all__`` list
+
+Example: Adding a new tool called ``MyNewTool``
+
+.. code-block:: python
+
+   # 1. Add class declaration (around line 165)
+   MyNewTool: Any
+
+   # 2. Add import statement (around line 258, in the non-lazy loading section)
+   from .my_new_tool import MyNewTool
+
+   # 3. Add lazy import proxy (around line 360, in the else block)
+   MyNewTool = _LazyImportProxy("my_new_tool", "MyNewTool")
+
+   # 4. Add to __all__ list (around line 449)
+   __all__ = [
+       # ... existing tools ...
+       "MyNewTool",
+   ]
+
+**Validation Steps**: After making these changes, verify your tool is properly exposed by testing:
+
+.. code-block:: python
+
+   from tooluniverse import MyNewTool  # Should work without errors
+   print(MyNewTool)  # Should show the class or lazy proxy
+
 Local Tool Example
 ^^^^^^^^^^^^^^^^^^
 
@@ -182,6 +220,42 @@ Then create a client configuration file:
        ]
    }
 
+Complete Tool Development Workflow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When adding a new tool, follow this complete workflow to ensure proper integration:
+
+1. **Create your tool file** in ``src/tooluniverse/tools/`` (e.g., ``my_new_tool.py``)
+2. **Implement your tool class** following the BaseTool interface
+3. **Modify __init__.py** (critical step - see Required __init__.py Modifications above)
+4. **Create comprehensive tests** in ``tests/unit/`` or ``tests/integration/``
+5. **Add documentation** in ``docs/tools/``
+6. **Update tool registry** if using custom registration
+7. **Test the complete integration** to ensure your tool is properly exposed
+
+**Step-by-step __init__.py modification checklist**:
+
+.. code-block:: bash
+
+   # 1. Add class declaration (find the section around line 105-165)
+   # Look for: "MonarchTool: Any" and add your tool after similar entries
+   
+   # 2. Add import statement (find the non-lazy loading section around line 173-258)
+   # Look for: "from .restful_tool import MonarchTool" and add your import
+   
+   # 3. Add lazy import proxy (find the else block around line 260-360)
+   # Look for: "MonarchTool = _LazyImportProxy("restful_tool", "MonarchTool")" and add yours
+   
+   # 4. Add to __all__ list (find the __all__ list around line 362-449)
+   # Add your tool name as a string in the list
+
+**Common mistakes to avoid**:
+- Forgetting to add the tool to all four locations
+- Adding the import in the wrong section (lazy vs non-lazy)
+- Incorrect module name in the lazy import proxy
+- Missing quotes around the tool name in the __all__ list
+- Not testing the import after making changes
+
 Testing Your Tool
 ~~~~~~~~~~~~~~~~~
 
@@ -286,6 +360,42 @@ All contributions go through:
 2. **Manual Review**: Maintainers review code quality and design
 3. **Documentation Review**: Ensure docs are clear and complete
 4. **Testing**: Verify functionality works as expected
+
+Troubleshooting Tool Integration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If your tool is not being imported correctly, check these common issues:
+
+**ImportError: cannot import name 'MyTool'**
+- Verify you added the tool to all four locations in ``__init__.py``
+- Check that the module name in the import statement matches your file name
+- Ensure the class name matches exactly (case-sensitive)
+
+**AttributeError: module 'tooluniverse' has no attribute 'MyTool'**
+- Verify the tool name is added to the ``__all__`` list
+- Check that the tool name in ``__all__`` matches the class name exactly
+- Ensure you're importing from the correct module
+
+**LazyImportProxy issues**
+- Verify the module name in ``_LazyImportProxy("module_name", "ClassName")`` matches your file name
+- Check that the class name in the proxy matches your actual class name
+- Ensure the module is in the correct location (``src/tooluniverse/tools/``)
+
+**Testing your integration**:
+
+.. code-block:: python
+
+   # Test 1: Direct import
+   from tooluniverse import MyTool
+   print(f"Tool class: {MyTool}")
+   
+   # Test 2: Check if it's in __all__
+   from tooluniverse import __all__
+   print(f"MyTool in __all__: {'MyTool' in __all__}")
+   
+   # Test 3: Instantiate the tool
+   tool = MyTool()
+   print(f"Tool instance: {tool}")
 
 Getting Help
 ------------

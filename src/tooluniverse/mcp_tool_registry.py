@@ -348,7 +348,10 @@ def _start_server_for_port(port: int, **kwargs):
         try:
             # Enable stateless mode for MCPAutoLoaderTool compatibility
             server.run_simple(
-                transport=config["transport"], host=config["host"], port=port, stateless_http=True
+                transport=config["transport"],
+                host=config["host"],
+                port=port,
+                stateless_http=True,
             )
         except Exception as e:
             print(f"❌ Error running MCP server on port {port}: {e}")

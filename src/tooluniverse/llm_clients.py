@@ -351,110 +351,6 @@ class AzureOpenAIClient(BaseLLMClient):
             return
 
         retries = 0
-        eff_max = (
-            max_tokens
-            if max_tokens is not None
-            else self._resolve_default_max_tokens(self.model_name)
-        )
-
-        while retries < max_retries:
-            try:
-                kwargs: Dict[str, Any] = {
-                    "model": self.model_name,
-                    "messages": messages,
-                    "stream": True,
-                }
-                if temperature is not None:
-                    kwargs["temperature"] = temperature
-                if eff_max is not None:
-                    kwargs["max_tokens"] = eff_max
-
-                stream = self.client.chat.completions.create(**kwargs)
-                for chunk in stream:
-                    text = AzureOpenAIClient._extract_text_from_chunk(chunk)  # type: ignore[attr-defined]
-                    if text:
-                        yield text
-                return
-            except self._openai.RateLimitError:  # type: ignore[attr-defined]
-                self.logger.warning(
-                    f"OpenRouter streaming rate limit hit. Retrying in {retry_delay} seconds..."
-                )
-                retries += 1
-                time.sleep(retry_delay * retries)
-            except Exception as e:  # noqa: BLE001
-                self.logger.error(f"OpenRouter streaming error: {e}")
-                break
-
-        yield from super().infer_stream(
-            messages,
-            temperature,
-            max_tokens,
-            return_json,
-            custom_format,
-            max_retries,
-            retry_delay,
-        )
-
-    @staticmethod
-    def _extract_text_from_chunk(chunk) -> Optional[str]:
-        try:
-            choices = getattr(chunk, "choices", None)
-        except Exception:
-            choices = None
-        if not choices:
-            return None
-
-        first_choice = choices[0]
-        delta = getattr(first_choice, "delta", None)
-        if delta is None and isinstance(first_choice, dict):
-            delta = first_choice.get("delta")
-        if delta is None:
-            return None
-
-        content = getattr(delta, "content", None)
-        if content is None and isinstance(delta, dict):
-            content = delta.get("content")
-        if not content:
-            return None
-
-        if isinstance(content, str):
-            return content
-
-        if isinstance(content, list):
-            fragments: List[str] = []
-            for item in content:
-                text = getattr(item, "text", None)
-                if text is None and isinstance(item, dict):
-                    text = item.get("text")
-                if text:
-                    fragments.append(text)
-            return "".join(fragments) if fragments else None
-
-        return None
-
-    def infer_stream(
-        self,
-        messages: List[Dict[str, str]],
-        temperature: Optional[float],
-        max_tokens: Optional[int],
-        return_json: bool,
-        custom_format: Any = None,
-        max_retries: int = 5,
-        retry_delay: int = 5,
-    ):
-        if return_json or custom_format is not None:
-            yield from super().infer_stream(
-                messages,
-                temperature,
-                max_tokens,
-                return_json,
-                custom_format,
-                max_retries,
-                retry_delay,
-            )
-            return
-
-        retries = 0
         eff_temp = self._normalize_temperature(self.model_name, temperature)
         eff_max = (
             max_tokens
@@ -663,11 +559,14 @@ class OpenRouterClient(BaseLLMClient):
 
     # Default model limits based on latest OpenRouter offerings
     DEFAULT_MODEL_LIMITS: Dict[str, Dict[str, int]] = {
-        "openai/gpt-5": {"max_output": 128_000, "context_window": 400_000},  
+        "openai/gpt-5": {"max_output": 128_000, "context_window": 400_000},
         "openai/gpt-5-codex": {"max_output": 128_000, "context_window": 400_000},
         "google/gemini-2.5-flash": {"max_output": 65_536, "context_window": 1_000_000},
         "google/gemini-2.5-pro": {"max_output": 65_536, "context_window": 1_000_000},
-        "anthropic/claude-sonnet-4.5": {"max_output": 16_384, "context_window": 1_000_000},
+        "anthropic/claude-sonnet-4.5": {
+            "max_output": 16_384,
+            "context_window": 1_000_000,
+        },
     }
 
     def __init__(self, model_id: str, logger):
@@ -676,7 +575,7 @@ class OpenRouterClient(BaseLLMClient):
             import openai as _openai  # type: ignore
         except Exception as e:  # pragma: no cover
             raise RuntimeError("openai client is not available") from e
-        
+
         self._OpenAI = _OpenAI
         self._openai = _openai
         self.model_name = model_id
@@ -685,14 +584,14 @@ class OpenRouterClient(BaseLLMClient):
         api_key = os.getenv("OPENROUTER_API_KEY")
         if not api_key:
             raise ValueError("OPENROUTER_API_KEY not set")
-        
+
         # Optional headers for OpenRouter
         default_headers = {}
         if site_url := os.getenv("OPENROUTER_SITE_URL"):
             default_headers["HTTP-Referer"] = site_url
         if site_name := os.getenv("OPENROUTER_SITE_NAME"):
             default_headers["X-Title"] = site_name
-        
+
         self.client = self._OpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=api_key,
@@ -731,13 +630,13 @@ class OpenRouterClient(BaseLLMClient):
                 mapping = _json.loads(mapping_raw)
             except Exception:
                 mapping = {}
-        
+
         if model_id in mapping:
             try:
                 return int(mapping[model_id])
             except Exception:
                 pass
-        
+
         # Check for prefix match
         for k, v in mapping.items():
             try:
@@ -745,11 +644,11 @@ class OpenRouterClient(BaseLLMClient):
                     return int(v)
             except Exception:
                 continue
-        
+
         # Next: built-in/default-limits map
         if model_id in self._default_limits:
             return int(self._default_limits[model_id].get("max_output", 0)) or None
-        
+
         # Check for prefix match in default limits
         for k, v in self._default_limits.items():
             try:
@@ -757,7 +656,7 @@ class OpenRouterClient(BaseLLMClient):
                     return int(v.get("max_output", 0)) or None
             except Exception:
                 continue
-        
+
         return None
 
     def test_api(self) -> None:
@@ -765,7 +664,7 @@ class OpenRouterClient(BaseLLMClient):
         test_messages = [{"role": "user", "content": "ping"}]
         token_attempts = [1, 4, 16, 32]
         last_error: Optional[Exception] = None
-        
+
         for tok in token_attempts:
             try:
                 self.client.chat.completions.create(
@@ -785,7 +684,7 @@ class OpenRouterClient(BaseLLMClient):
                 ) and tok != token_attempts[-1]:
                     continue
                 break
-        
+
         if last_error:
             raise ValueError(f"OpenRouter API test failed: {last_error}")
         raise ValueError("OpenRouter API test failed: unknown error")
@@ -807,39 +706,39 @@ class OpenRouterClient(BaseLLMClient):
             if custom_format is not None
             else self.client.chat.completions.create
         )
-        
+
         response_format = (
             custom_format
             if custom_format is not None
             else ({"type": "json_object"} if return_json else None)
         )
-        
+
         eff_max = (
             max_tokens
             if max_tokens is not None
             else self._resolve_default_max_tokens(self.model_name)
         )
-        
+
         while retries < max_retries:
             try:
                 kwargs: Dict[str, Any] = {
                     "model": self.model_name,
                     "messages": messages,
                 }
-                
+
                 if response_format is not None:
                     kwargs["response_format"] = response_format
                 if temperature is not None:
                     kwargs["temperature"] = temperature
                 if eff_max is not None:
                     kwargs["max_tokens"] = eff_max
-                
+
                 resp = call_fn(**kwargs)
-                
+
                 if custom_format is not None:
                     return resp.choices[0].message.parsed.model_dump()
                 return resp.choices[0].message.content
-                
+
             except self._openai.RateLimitError:  # type: ignore[attr-defined]
                 self.logger.warning(
                     f"Rate limit exceeded. Retrying in {retry_delay} seconds..."
@@ -849,30 +748,31 @@ class OpenRouterClient(BaseLLMClient):
             except Exception as e:  # noqa: BLE001
                 self.logger.error(f"OpenRouter error: {e}")
                 import traceback
+
                 traceback.print_exc()
                 break
-        
+
         self.logger.error("Max retries exceeded. Unable to complete the request.")
         return None
-    
-    
+
+
 class VLLMClient(BaseLLMClient):
     def __init__(self, model_name: str, server_url: str, logger):
         try:
             from openai import OpenAI
         except Exception as e:
             raise RuntimeError("openai package not available for vLLM client") from e
-        
+
         if not server_url:
             raise ValueError("VLLM_SERVER_URL must be provided")
-        
+
         self.model_name = model_name
         # Ensure server_url ends with /v1 for OpenAI-compatible API
-        if not server_url.endswith('/v1'):
-            server_url = server_url.rstrip('/') + '/v1'
+        if not server_url.endswith("/v1"):
+            server_url = server_url.rstrip("/") + "/v1"
         self.server_url = server_url
         self.logger = logger
-        
+
         self.client = OpenAI(
             api_key="EMPTY",
             base_url=self.server_url,
@@ -902,7 +802,7 @@ class VLLMClient(BaseLLMClient):
     ) -> Optional[str]:
         if custom_format is not None:
             self.logger.warning("vLLM does not support custom format, ignoring")
-        
+
         retries = 0
         while retries < max_retries:
             try:
@@ -910,24 +810,24 @@ class VLLMClient(BaseLLMClient):
                     "model": self.model_name,
                     "messages": messages,
                 }
-                
+
                 if temperature is not None:
                     kwargs["temperature"] = temperature
-                
+
                 if max_tokens is not None:
                     kwargs["max_tokens"] = max_tokens
-                
+
                 if return_json:
                     kwargs["response_format"] = {"type": "json_object"}
-                
+
                 resp = self.client.chat.completions.create(**kwargs)
                 return resp.choices[0].message.content
-                
+
             except Exception as e:
                 self.logger.error(f"vLLM error: {e}")
                 retries += 1
                 if retries < max_retries:
                     time.sleep(retry_delay * retries)
-        
+
         self.logger.error("Max retries exceeded for vLLM request")
         return None

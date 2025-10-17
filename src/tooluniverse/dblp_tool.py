@@ -48,79 +48,85 @@ class DBLPTool(BaseTool):
         results = []
         for hit in hits:
             info = hit.get("info", {})
-            
+
             # Extract title
             title = info.get("title")
-            
+
             # Extract author information
             authors = info.get("authors", {}).get("author", [])
             if isinstance(authors, dict):
                 authors = [authors]
-            
+
             # Extract year
             year = info.get("year")
             if year and isinstance(year, str) and year.isdigit():
                 year = int(year)
-            
+
             # Extract journal/conference information
             venue = info.get("venue")
             if isinstance(venue, list):
                 venue = venue[0] if venue else None
-            
+
             # Extract URL
             url = info.get("url")
-            
+
             # Extract electronic edition link
             ee = info.get("ee")
-            
+
             # Extract DOI (from ee field)
             doi = None
             if ee and isinstance(ee, str) and "doi.org" in ee:
                 doi = ee
-            
+
             # Extract citation count (DBLP usually doesn't provide this)
             citations = 0
-            
+
             # Open access status (DBLP usually doesn't provide this)
             open_access = False
-            
+
             # Extract keywords (DBLP usually doesn't provide this)
             keywords = []
-            
+
             # Extract article type
             article_type = "conference-paper"  # DBLP is mainly conference papers
-            
+
             # Extract publisher
             publisher = "Unknown"
-            
+
             # Handle missing abstract
-            abstract = "Abstract not available"  # DBLP usually doesn't provide abstracts
-            
-            results.append({
-                "title": title or "Title not available",
-                "abstract": abstract,
-                "authors": authors if authors else "Author information not available",
-                "year": year,
-                "venue": venue or "Journal information not available",
-                "url": url or "URL not available",
-                "ee": ee or "Electronic edition not available",
-                "doi": doi or "DOI not available",
-                "citations": citations,
-                "open_access": open_access,
-                "keywords": keywords if keywords else "Keywords not available",
-                "article_type": article_type,
-                "publisher": publisher,
-                "source": "DBLP",
-                "data_quality": {
-                    "has_abstract": False,  # DBLP usually doesn't provide abstracts
-                    "has_authors": bool(authors),
-                    "has_journal": bool(venue),
-                    "has_year": bool(year),
-                    "has_doi": bool(doi),
-                    "has_citations": False,  # DBLP usually doesn't provide citation count
-                    "has_keywords": False,  # DBLP usually doesn't provide keywords
-                    "has_url": bool(url)
+            abstract = (
+                "Abstract not available"  # DBLP usually doesn't provide abstracts
+            )
+
+            results.append(
+                {
+                    "title": title or "Title not available",
+                    "abstract": abstract,
+                    "authors": (
+                        authors if authors else "Author information not available"
+                    ),
+                    "year": year,
+                    "venue": venue or "Journal information not available",
+                    "url": url or "URL not available",
+                    "ee": ee or "Electronic edition not available",
+                    "doi": doi or "DOI not available",
+                    "citations": citations,
+                    "open_access": open_access,
+                    "keywords": keywords if keywords else "Keywords not available",
+                    "article_type": article_type,
+                    "publisher": publisher,
+                    "source": "DBLP",
+                    "data_quality": {
+                        "has_abstract": False,  # DBLP usually doesn't provide abstracts
+                        "has_authors": bool(authors),
+                        "has_journal": bool(venue),
+                        "has_year": bool(year),
+                        "has_doi": bool(doi),
+                        "has_citations": False,  # DBLP usually doesn't provide citation count
+                        "has_keywords": False,  # DBLP usually doesn't provide keywords
+                        "has_url": bool(url),
+                    },
                 }
-            })
+            )
 
         return results

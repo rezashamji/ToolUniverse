@@ -11,17 +11,33 @@
         },
         "db": {
           "type": "string",
-          "enum": ["healthTopics", "healthTopicsSpanish", "drugs", "drugsSpanish", "genetics", "medicalTests", "medicalEncyclopedia"],
+          "enum": [
+            "healthTopics",
+            "healthTopicsSpanish",
+            "drugs",
+            "drugsSpanish",
+            "genetics",
+            "medicalTests",
+            "medicalEncyclopedia"
+          ],
           "description": "Specify the database to search, e.g., healthTopics (English health topics), healthTopicsSpanish (Spanish health topics), drugs (English drugs), etc."
         },
         "rettype": {
           "type": "string",
-          "enum": ["brief", "topic", "all"],
+          "enum": [
+            "brief",
+            "topic",
+            "all"
+          ],
           "description": "Result return format, options: brief (concise information, default), topic (detailed XML record), all (includes all available information).",
           "default": "topic"
         }
       },
-      "required": ["term", "db"]
+      "required": [
+        "term",
+        "db",
+        "rettype"
+      ]
     },
     "fields": {
       "endpoint": "https://wsearch.nlm.nih.gov/ws/query?db={db}&term={term}&rettype={rettype}",
@@ -51,18 +67,30 @@
         },
         "language": {
           "type": "string",
-          "enum": ["en", "es"],
+          "enum": [
+            "en",
+            "es"
+          ],
           "description": "Return information language, \"en\" for English, \"es\" for Spanish, default \"en\".",
           "default": "en"
         },
         "format": {
           "type": "string",
-          "enum": ["json", "xml"],
+          "enum": [
+            "json",
+            "xml"
+          ],
           "description": "Return format, options \"json\" or \"xml\", default \"json\".",
           "default": "json"
         }
       },
-      "required": ["cs", "c"]
+      "required": [
+        "cs",
+        "c",
+        "dn",
+        "language",
+        "format"
+      ]
     },
     "fields": {
       "endpoint": "https://connect.medlineplus.gov/service?mainSearchCriteria.v.cs={cs}&mainSearchCriteria.v.c={c}&informationRecipient.languageCode.c={language}&knowledgeResponseType={format}&mainSearchCriteria.v.dn={dn}",
@@ -83,12 +111,18 @@
         },
         "format": {
           "type": "string",
-          "enum": ["json", "xml"],
+          "enum": [
+            "json",
+            "xml"
+          ],
           "description": "Return format, options \"json\" or \"xml\", default \"json\".",
           "default": "json"
         }
       },
-      "required": ["condition"]
+      "required": [
+        "condition",
+        "format"
+      ]
     },
     "fields": {
       "endpoint": "https://medlineplus.gov/download/genetics/condition/{condition}.{format}",
@@ -109,12 +143,18 @@
         },
         "format": {
           "type": "string",
-          "enum": ["json", "xml"],
+          "enum": [
+            "json",
+            "xml"
+          ],
           "description": "Return format, options \"json\" or \"xml\", default \"json\".",
           "default": "json"
         }
       },
-      "required": ["gene"]
+      "required": [
+        "gene",
+        "format"
+      ]
     },
     "fields": {
       "endpoint": "https://medlineplus.gov/download/genetics/gene/{gene}.{format}",

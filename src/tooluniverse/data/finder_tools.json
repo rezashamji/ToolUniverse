@@ -8,15 +8,17 @@
       "properties": {
         "description": {
           "type": "string",
-          "description": "The description of the tool capability required.",
-          "required": true
+          "description": "The description of the tool capability required."
         },
         "limit": {
           "type": "integer",
-          "description": "The number of tools to retrieve",
-          "required": true
+          "description": "The number of tools to retrieve"
         }
-      }
+      },
+      "required": [
+        "description",
+        "limit"
+      ]
     },
     "required": [
       "description",
@@ -43,36 +45,35 @@
       "properties": {
         "description": {
           "type": "string",
-          "description": "The description of the tool capability required.",
-          "required": true
+          "description": "The description of the tool capability required."
         },
         "limit": {
           "type": "integer",
-          "description": "The number of tools to retrieve",
-          "required": true
+          "description": "The number of tools to retrieve"
         },
         "picked_tool_names": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Pre-selected tool names to process. If provided, tool selection will skip these tools.",
-          "required": false
+          "description": "Pre-selected tool names to process. If provided, tool selection will skip these tools."
         },
         "return_call_result": {
           "type": "boolean",
-          "description": "Whether to return both prompts and tool names. If false, returns only tool prompts.",
-          "required": false
+          "description": "Whether to return both prompts and tool names. If false, returns only tool prompts."
         },
         "categories": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Optional list of tool categories to filter by",
-          "required": false
+          "description": "Optional list of tool categories to filter by"
         }
-      }
+      },
+      "required": [
+        "description",
+        "limit"
+      ]
     },
     "required": [
       "description",
@@ -99,34 +100,29 @@
       "properties": {
         "description": {
           "type": "string",
-          "description": "The description of the tool capability required.",
-          "required": true
+          "description": "The description of the tool capability required."
         },
         "limit": {
           "type": "integer",
-          "description": "The number of tools to retrieve",
-          "required": true
+          "description": "The number of tools to retrieve"
         },
         "picked_tool_names": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Pre-selected tool names to process. If provided, tool selection will skip these tools.",
-          "required": false
+          "description": "Pre-selected tool names to process. If provided, tool selection will skip these tools."
         },
         "return_call_result": {
           "type": "boolean",
-          "description": "Whether to return both prompts and tool names. If false, returns only tool prompts.",
-          "required": false
+          "description": "Whether to return both prompts and tool names. If false, returns only tool prompts."
         },
         "categories": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Optional list of tool categories to filter by",
-          "required": false
+          "description": "Optional list of tool categories to filter by"
         }
       },
       "required": [
@@ -160,36 +156,35 @@
       "properties": {
         "description": {
           "type": "string",
-          "description": "The description of the tool capability required.",
-          "required": true
+          "description": "The description of the tool capability required."
         },
         "limit": {
           "type": "integer",
-          "description": "The number of tools to retrieve",
-          "required": true
+          "description": "The number of tools to retrieve"
         },
         "picked_tool_names": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Pre-selected tool names to process. If provided, tool selection will skip these tools.",
-          "required": false
+          "description": "Pre-selected tool names to process. If provided, tool selection will skip these tools."
         },
         "return_call_result": {
           "type": "boolean",
-          "description": "Whether to return both prompts and tool names. If false, returns only tool prompts.",
-          "required": false
+          "description": "Whether to return both prompts and tool names. If false, returns only tool prompts."
         },
         "categories": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Optional list of tool categories to filter by",
-          "required": false
+          "description": "Optional list of tool categories to filter by"
         }
-      }
+      },
+      "required": [
+        "description",
+        "limit"
+      ]
     },
     "required": [
       "description",

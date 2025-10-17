@@ -38,9 +38,11 @@ class BioRxivTool(BaseTool):
         end_date = datetime.now()
         start_date = end_date - timedelta(days=365)
 
-        url = (f"{self.base_url}/biorxiv/"
-               f"{start_date.strftime('%Y-%m-%d')}/"
-               f"{end_date.strftime('%Y-%m-%d')}/0/json")
+        url = (
+            f"{self.base_url}/biorxiv/"
+            f"{start_date.strftime('%Y-%m-%d')}/"
+            f"{end_date.strftime('%Y-%m-%d')}/0/json"
+        )
 
         try:
             resp = requests.get(url, timeout=20)
@@ -81,26 +83,33 @@ class BioRxivTool(BaseTool):
             # Filter by query if provided - search in both title and abstract
             if query:
                 title_match = query.lower() in (title or "").lower()
-                abstract_match = query.lower() in (item.get("abstract", "") or "").lower()
+                abstract_match = (
+                    query.lower() in (item.get("abstract", "") or "").lower()
+                )
                 if not (title_match or abstract_match):
                     continue
 
             results.append(
                 {
                     "title": title or "Title not available",
-                    "authors": authors if authors else "Author information not available",
+                    "authors": (
+                        authors if authors else "Author information not available"
+                    ),
                     "year": year,
                     "doi": doi or "DOI not available",
                     "url": url or "URL not available",
                     "abstract": item.get("abstract", "Abstract not available"),
                     "source": "bioRxiv",
                     "data_quality": {
-                        "has_abstract": bool(item.get("abstract") and item.get("abstract") != "Abstract not available"),
+                        "has_abstract": bool(
+                            item.get("abstract")
+                            and item.get("abstract") != "Abstract not available"
+                        ),
                         "has_authors": bool(authors),
                         "has_year": bool(year),
                         "has_doi": bool(doi),
-                        "has_url": bool(url)
-                    }
+                        "has_url": bool(url),
+                    },
                 }
             )
 

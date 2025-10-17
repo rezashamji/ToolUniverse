@@ -58,4 +58,6 @@ def download_full_text(query: dict):
 
 
 if __name__ == "__main__":
-    server.run(transport="streamable-http", host="0.0.0.0", port=8081, stateless_http=True)
+    server.run(
+        transport="streamable-http", host="0.0.0.0", port=8081, stateless_http=True
+    )

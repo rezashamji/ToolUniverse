@@ -15,7 +15,10 @@
           "description": "Optional CRC64 checksum of the UniProt sequence."
         }
       },
-      "required": ["qualifier"]
+      "required": [
+        "qualifier",
+        "sequence_checksum"
+      ]
     },
     "fields": {
       "endpoint": "/prediction/{qualifier}",
@@ -26,60 +29,201 @@
       "items": {
         "type": "object",
         "properties": {
-          "toolUsed": { "type": "string" },
-          "providerId": { "type": "string" },
-          "entityType": { "type": "string" },
-          "isUniProt": { "type": "boolean" },
-          "modelEntityId": { "type": "string" },
-          "modelCreatedDate": { "type": "string" },
-          "sequenceVersionDate": { "type": "string" },
-          "globalMetricValue": { "type": "number" },
-          "fractionPlddtVeryLow": { "type": "number" },
-          "fractionPlddtLow": { "type": "number" },
-          "fractionPlddtConfident": { "type": "number" },
-          "fractionPlddtVeryHigh": { "type": "number" },
-          "latestVersion": { "type": "integer" },
-          "allVersions": { "type": "array", "items": { "type": "integer" } },
-          "sequence": { "type": "string" },
-          "sequenceStart": { "type": "integer" },
-          "sequenceEnd": { "type": "integer" },
-          "sequenceChecksum": { "type": "string" },
-          "isUniProtReviewed": { "type": "boolean" },
-          "gene": { "type": "string" },
-          "uniprotAccession": { "type": "string" },
-          "uniprotId": { "type": "string" },
-          "uniprotDescription": { "type": "string" },
-          "taxId": { "type": "integer" },
-          "organismScientificName": { "type": "string" },
-          "isUniProtReferenceProteome": { "type": "boolean" },
-          "organismCommonNames": { "type": "array", "items": { "type": "string" } },
-          "organismSynonyms": { "type": "array", "items": { "type": "string" } },
-          "geneSynonyms": { "type": "array", "items": { "type": "string" } },
-          "proteinFullNames": { "type": "array", "items": { "type": "string" } },
-          "proteinShortNames": { "type": "array", "items": { "type": "string" } },
-          "complexName": { "type": "string" },
-          "stoichiometry": { "type": "number" },
-          "ipTM": { "type": "number" },
-          "ipSAE": { "type": "number" },
-          "keywords": { "type": "array", "items": { "type": "string" } },
-          "taxonomyLineage": { "type": "array", "items": { "type": "string" } },
-          "functions": { "type": "array", "items": { "type": "string" } },
-          "alternativeNames": { "type": "array", "items": { "type": "string" } },
-          "catalyticActivities": { "type": "array", "items": { "type": "string" } },
-          "bcifUrl": { "type": "string" },
-          "cifUrl": { "type": "string" },
-          "pdbUrl": { "type": "string" },
-          "paeImageUrl": { "type": "string" },
-          "paeDocUrl": { "type": "string" },
-          "amAnnotationsUrl": { "type": "string" },
-          "amAnnotationsHg19Url": { "type": "string" },
-          "amAnnotationsHg38Url": { "type": "string" },
-          "entryId": { "type": "string" },
-          "isReviewed": { "type": "boolean" },
-          "isReferenceProteome": { "type": "boolean" },
-          "uniprotStart": { "type": "integer" },
-          "uniprotEnd": { "type": "integer" },
-          "uniprotSequence": { "type": "string" }
+          "toolUsed": {
+            "type": "string"
+          },
+          "providerId": {
+            "type": "string"
+          },
+          "entityType": {
+            "type": "string"
+          },
+          "isUniProt": {
+            "type": "boolean"
+          },
+          "modelEntityId": {
+            "type": "string"
+          },
+          "modelCreatedDate": {
+            "type": "string"
+          },
+          "sequenceVersionDate": {
+            "type": "string"
+          },
+          "globalMetricValue": {
+            "type": "number"
+          },
+          "fractionPlddtVeryLow": {
+            "type": "number"
+          },
+          "fractionPlddtLow": {
+            "type": "number"
+          },
+          "fractionPlddtConfident": {
+            "type": "number"
+          },
+          "fractionPlddtVeryHigh": {
+            "type": "number"
+          },
+          "latestVersion": {
+            "type": "integer"
+          },
+          "allVersions": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "sequence": {
+            "type": "string"
+          },
+          "sequenceStart": {
+            "type": "integer"
+          },
+          "sequenceEnd": {
+            "type": "integer"
+          },
+          "sequenceChecksum": {
+            "type": "string"
+          },
+          "isUniProtReviewed": {
+            "type": "boolean"
+          },
+          "gene": {
+            "type": "string"
+          },
+          "uniprotAccession": {
+            "type": "string"
+          },
+          "uniprotId": {
+            "type": "string"
+          },
+          "uniprotDescription": {
+            "type": "string"
+          },
+          "taxId": {
+            "type": "integer"
+          },
+          "organismScientificName": {
+            "type": "string"
+          },
+          "isUniProtReferenceProteome": {
+            "type": "boolean"
+          },
+          "organismCommonNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "organismSynonyms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "geneSynonyms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proteinFullNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proteinShortNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "complexName": {
+            "type": "string"
+          },
+          "stoichiometry": {
+            "type": "number"
+          },
+          "ipTM": {
+            "type": "number"
+          },
+          "ipSAE": {
+            "type": "number"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "taxonomyLineage": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "functions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "alternativeNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "catalyticActivities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "bcifUrl": {
+            "type": "string"
+          },
+          "cifUrl": {
+            "type": "string"
+          },
+          "pdbUrl": {
+            "type": "string"
+          },
+          "paeImageUrl": {
+            "type": "string"
+          },
+          "paeDocUrl": {
+            "type": "string"
+          },
+          "amAnnotationsUrl": {
+            "type": "string"
+          },
+          "amAnnotationsHg19Url": {
+            "type": "string"
+          },
+          "amAnnotationsHg38Url": {
+            "type": "string"
+          },
+          "entryId": {
+            "type": "string"
+          },
+          "isReviewed": {
+            "type": "boolean"
+          },
+          "isReferenceProteome": {
+            "type": "boolean"
+          },
+          "uniprotStart": {
+            "type": "integer"
+          },
+          "uniprotEnd": {
+            "type": "integer"
+          },
+          "uniprotSequence": {
+            "type": "string"
+          }
         }
       }
     }
@@ -96,7 +240,9 @@
           "description": "Protein identifier: UniProt accession, entry name, or CRC64 checksum."
         }
       },
-      "required": ["qualifier"]
+      "required": [
+        "qualifier"
+      ]
     },
     "fields": {
       "endpoint": "/uniprot/summary/{qualifier}.json",
@@ -108,12 +254,24 @@
         "uniprot_entry": {
           "type": "object",
           "properties": {
-            "ac": { "type": "string" },
-            "id": { "type": "string" },
-            "uniprot_checksum": { "type": "string" },
-            "sequence_length": { "type": "integer" },
-            "segment_start": { "type": "integer" },
-            "segment_end": { "type": "integer" }
+            "ac": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "uniprot_checksum": {
+              "type": "string"
+            },
+            "sequence_length": {
+              "type": "integer"
+            },
+            "segment_start": {
+              "type": "integer"
+            },
+            "segment_end": {
+              "type": "integer"
+            }
           }
         },
         "structures": {
@@ -124,39 +282,98 @@
               "summary": {
                 "type": "object",
                 "properties": {
-                  "model_identifier": { "type": "string" },
-                  "model_category": { "type": "string" },
-                  "model_url": { "type": "string" },
-                  "model_format": { "type": "string" },
-                  "model_type": { "type": "string" },
-                  "model_page_url": { "type": "string" },
-                  "provider": { "type": "string" },
-                  "number_of_conformers": { "type": "integer" },
-                  "ensemble_sample_url": { "type": "string" },
-                  "ensemble_sample_format": { "type": "string" },
-                  "created": { "type": "string" },
-                  "sequence_identity": { "type": "number" },
-                  "uniprot_start": { "type": "integer" },
-                  "uniprot_end": { "type": "integer" },
-                  "coverage": { "type": "number" },
-                  "experimental_method": { "type": "string" },
-                  "resolution": { "type": "number" },
-                  "confidence_type": { "type": "string" },
-                  "confidence_version": { "type": "string" },
-                  "confidence_avg_local_score": { "type": "number" },
-                  "oligomeric_state": { "type": "string" },
-                  "preferred_assembly_id": { "type": "string" },
+                  "model_identifier": {
+                    "type": "string"
+                  },
+                  "model_category": {
+                    "type": "string"
+                  },
+                  "model_url": {
+                    "type": "string"
+                  },
+                  "model_format": {
+                    "type": "string"
+                  },
+                  "model_type": {
+                    "type": "string"
+                  },
+                  "model_page_url": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "number_of_conformers": {
+                    "type": "integer"
+                  },
+                  "ensemble_sample_url": {
+                    "type": "string"
+                  },
+                  "ensemble_sample_format": {
+                    "type": "string"
+                  },
+                  "created": {
+                    "type": "string"
+                  },
+                  "sequence_identity": {
+                    "type": "number"
+                  },
+                  "uniprot_start": {
+                    "type": "integer"
+                  },
+                  "uniprot_end": {
+                    "type": "integer"
+                  },
+                  "coverage": {
+                    "type": "number"
+                  },
+                  "experimental_method": {
+                    "type": "string"
+                  },
+                  "resolution": {
+                    "type": "number"
+                  },
+                  "confidence_type": {
+                    "type": "string"
+                  },
+                  "confidence_version": {
+                    "type": "string"
+                  },
+                  "confidence_avg_local_score": {
+                    "type": "number"
+                  },
+                  "oligomeric_state": {
+                    "type": "string"
+                  },
+                  "preferred_assembly_id": {
+                    "type": "string"
+                  },
                   "entities": {
                     "type": "array",
                     "items": {
                       "type": "object",
                       "properties": {
-                        "entity_type": { "type": "string" },
-                        "entity_poly_type": { "type": "string" },
-                        "identifier": { "type": "string" },
-                        "identifier_category": { "type": "string" },
-                        "description": { "type": "string" },
-                        "chain_ids": { "type": "array", "items": { "type": "string" } }
+                        "entity_type": {
+                          "type": "string"
+                        },
+                        "entity_poly_type": {
+                          "type": "string"
+                        },
+                        "identifier": {
+                          "type": "string"
+                        },
+                        "identifier_category": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "chain_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
                       }
                     }
                   }
@@ -182,10 +399,15 @@
         "type": {
           "type": "string",
           "description": "Annotation type (currently only 'MUTAGEN' is supported).",
-          "enum": ["MUTAGEN"]
+          "enum": [
+            "MUTAGEN"
+          ]
         }
       },
-      "required": ["qualifier", "type"]
+      "required": [
+        "qualifier",
+        "type"
+      ]
     },
     "fields": {
       "endpoint": "/annotations/{qualifier}.json",
@@ -194,29 +416,58 @@
     "return_schema": {
       "type": "object",
       "properties": {
-        "accession": { "type": "string" },
-        "id": { "type": "string" },
-        "sequence": { "type": "string" },
+        "accession": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "sequence": {
+          "type": "string"
+        },
         "annotation": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "type": { "type": "string" },
-              "description": { "type": "string" },
-              "source_name": { "type": "string" },
-              "source_url": { "type": "string" },
-              "evidence": { "type": "string" },
-              "residues": { "type": "array", "items": { "type": "integer" } },
+              "type": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "source_name": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "string"
+              },
+              "residues": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
               "regions": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "start": { "type": "integer" },
-                    "end": { "type": "integer" },
-                    "annotation_value": { "type": "string" },
-                    "unit": { "type": "string" }
+                    "start": {
+                      "type": "integer"
+                    },
+                    "end": {
+                      "type": "integer"
+                    },
+                    "annotation_value": {
+                      "type": "string"
+                    },
+                    "unit": {
+                      "type": "string"
+                    }
                   }
                 }
               }

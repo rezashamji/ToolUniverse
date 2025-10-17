@@ -52,49 +52,43 @@ class DOAJTool(BaseTool):
             for r in results:
                 b = r.get("bibjson", {})
                 title = b.get("title")
-                
+
                 # Extract year
                 year = None
                 try:
                     year = int((b.get("year") or 0))
                 except Exception:
                     year = b.get("year")
-                
+
                 # Extract author information
-                authors = [
-                    a.get("name")
-                    for a in b.get("author", [])
-                    if a.get("name")
-                ]
-                
+                authors = [a.get("name") for a in b.get("author", []) if a.get("name")]
+
                 # Extract DOI
                 doi = None
                 for i in b.get("identifier", []):
                     if i.get("type") == "doi":
                         doi = i.get("id")
                         break
-                
+
                 # Extract URL
                 url = None
                 for link_item in b.get("link", []):
-                    if (
-                        link_item.get("type") == "fulltext"
-                        or link_item.get("url")
-                    ):
+                    if link_item.get("type") == "fulltext" or link_item.get("url"):
                         url = link_item.get("url")
                         break
-                
+
                 # Extract journal information
                 journal = (b.get("journal") or {}).get("title")
-                
+
                 # Extract abstract
                 abstract = b.get("abstract")
                 if abstract and isinstance(abstract, str):
                     # Clean HTML tags
                     import re
-                    abstract = re.sub(r'<[^>]+>', '', abstract)
+
+                    abstract = re.sub(r"<[^>]+>", "", abstract)
                     abstract = abstract.strip()
-                
+
                 # Extract keywords
                 keywords = []
                 subject_list = b.get("subject", [])
@@ -106,48 +100,54 @@ class DOAJTool(BaseTool):
                                 keywords.append(term)
                         elif isinstance(subject, str):
                             keywords.append(subject)
-                
+
                 # Extract citation count (DOAJ usually doesn't provide this)
                 citations = 0
-                
+
                 # Open access status (DOAJ is all open access)
                 open_access = True
-                
+
                 # Extract article type
                 article_type = b.get("type", "journal-article")
-                
+
                 # Extract publisher
                 publisher = (b.get("journal") or {}).get("publisher")
-                
+
                 # Handle missing abstract
                 if not abstract:
                     abstract = "Abstract not available"
-                
-                items.append({
-                    "title": title or "Title not available",
-                    "abstract": abstract,
-                    "authors": authors if authors else "Author information not available",
-                    "year": year,
-                    "doi": doi or "DOI not available",
-                    "venue": journal or "Journal information not available",
-                    "url": url or "URL not available",
-                    "citations": citations,
-                    "open_access": open_access,
-                    "keywords": keywords if keywords else "Keywords not available",
-                    "article_type": article_type,
-                    "publisher": publisher or "Publisher information not available",
-                    "source": "DOAJ",
-                    "data_quality": {
-                        "has_abstract": bool(abstract and abstract != "Abstract not available"),
-                        "has_authors": bool(authors),
-                        "has_journal": bool(journal),
-                        "has_year": bool(year),
-                        "has_doi": bool(doi),
-                        "has_citations": False,  # DOAJ usually doesn't provide citation count
-                        "has_keywords": bool(keywords),
-                        "has_url": bool(url)
+
+                items.append(
+                    {
+                        "title": title or "Title not available",
+                        "abstract": abstract,
+                        "authors": (
+                            authors if authors else "Author information not available"
+                        ),
+                        "year": year,
+                        "doi": doi or "DOI not available",
+                        "venue": journal or "Journal information not available",
+                        "url": url or "URL not available",
+                        "citations": citations,
+                        "open_access": open_access,
+                        "keywords": keywords if keywords else "Keywords not available",
+                        "article_type": article_type,
+                        "publisher": publisher or "Publisher information not available",
+                        "source": "DOAJ",
+                        "data_quality": {
+                            "has_abstract": bool(
+                                abstract and abstract != "Abstract not available"
+                            ),
+                            "has_authors": bool(authors),
+                            "has_journal": bool(journal),
+                            "has_year": bool(year),
+                            "has_doi": bool(doi),
+                            "has_citations": False,  # DOAJ usually doesn't provide citation count
+                            "has_keywords": bool(keywords),
+                            "has_url": bool(url),
+                        },
                     }
-                })
+                )
         else:
             for r in results:
                 b = r.get("bibjson", {})
@@ -166,9 +166,7 @@ class DOAJTool(BaseTool):
                         homepage_url = link_item.get("url")
                         break
                 subjects = [
-                    s.get("term")
-                    for s in b.get("subject", [])
-                    if s.get("term")
+                    s.get("term") for s in b.get("subject", []) if s.get("term")
                 ]
                 items.append(
                     {

@@ -7,6 +7,7 @@ It creates a minimal SMCP server that exposes all ToolUniverse tools as MCP tool
 """
 
 import argparse
+import os
 import sys
 from .smcp import SMCP
 
@@ -134,6 +135,22 @@ def run_stdio_server():
     This function provides compatibility with the original MCP server's run_claude_desktop function.
     It accepts the same arguments as run_smcp_server but forces transport='stdio'.
     """
+    # Set environment variable and reconfigure logging for stdio mode
+    os.environ["TOOLUNIVERSE_STDIO_MODE"] = "1"
+
+    # Import and reconfigure logging to stderr
+    from .logging_config import reconfigure_for_stdio
+
+    reconfigure_for_stdio()
+    # Ensure stdout is line-buffered for immediate JSON-RPC flushing in stdio mode
+    try:
+        import sys as _sys
+
+        if hasattr(_sys.stdout, "reconfigure"):
+            _sys.stdout.reconfigure(line_buffering=True)
+    except Exception:
+        pass
+
     parser = argparse.ArgumentParser(
         description="Start SMCP (Scientific Model Context Protocol) Server with stdio transport",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -297,99 +314,38 @@ Examples:
             from .execute_function import ToolUniverse
 
             tu = ToolUniverse()
-            tool_types = tu.get_tool_types()
+            # Use ToolUniverse API to list categories consistently
+            stats = tu.list_built_in_tools(mode="config", scan_all=False)
 
-            print("Available tool categories:")
-            print("=" * 50)
+            print("Available tool categories:", file=sys.stderr)
+            print("=" * 50, file=sys.stderr)
 
-            # Group categories for better readability
-            scientific_db = []
-            literature = []
-            software = []
-            special = []
-            clinical = []
-            other = []
+            categories = stats.get("categories", {})
+            # Sort by count desc, then name asc
+            sorted_items = sorted(
+                categories.items(), key=lambda kv: (-kv[1].get("count", 0), kv[0])
+            )
+            for key, info in sorted_items:
+                display = key.replace("_", " ").title()
+                count = info.get("count", 0)
+                print(f"  {display}: {count}", file=sys.stderr)
 
-            for category in sorted(tool_types):
-                if category in [
-                    "uniprot",
-                    "ChEMBL",
-                    "opentarget",
-                    "pubchem",
-                    "hpa",
-                    "rcsb_pdb",
-                    "reactome",
-                    "go",
-                ]:
-                    scientific_db.append(category)
-                elif category in [
-                    "EuropePMC",
-                    "semantic_scholar",
-                    "pubtator",
-                    "OpenAlex",
-                ]:
-                    literature.append(category)
-                elif category.startswith("software_"):
-                    software.append(category)
-                elif category in [
-                    "special_tools",
-                    "tool_finder",
-                    "tool_composition",
-                    "agents",
-                ]:
-                    special.append(category)
-                elif category in [
-                    "clinical_trials",
-                    "fda_drug_label",
-                    "fda_drug_adverse_event",
-                    "dailymed",
-                    "medlineplus",
-                ]:
-                    clinical.append(category)
-                else:
-                    other.append(category)
+            print(
+                f"\nTotal categories: {stats.get('total_categories', 0)}",
+                file=sys.stderr,
+            )
+            print(
+                f"Total unique tools: {stats.get('total_tools', 0)}",
+                file=sys.stderr,
+            )
 
-            if scientific_db:
-                print("\n🔬 Scientific Databases:")
-                for cat in scientific_db:
-                    print(f"  {cat}")
-
-            if literature:
-                print("\n📚 Literature & Knowledge:")
-                for cat in literature:
-                    print(f"  {cat}")
-
-            if clinical:
-                print("\n🏥 Clinical & Drug Information:")
-                for cat in clinical:
-                    print(f"  {cat}")
-
-            if software:
-                print("\n💻 Software Tools:")
-                for cat in software[:5]:  # Show first 5
-                    print(f"  {cat}")
-                if len(software) > 5:
-                    print(f"  ... and {len(software) - 5} more software categories")
-
-            if special:
-                print("\n🛠 Special & Meta Tools:")
-                for cat in special:
-                    print(f"  {cat}")
-
-            if other:
-                print("\n📂 Other Categories:")
-                for cat in other:
-                    print(f"  {cat}")
-
-            print(f"\nTotal: {len(tool_types)} categories available")
-            print("\nCommon combinations:")
-            print("  Scientific research: uniprot ChEMBL opentarget pubchem hpa")
-            print("  Drug discovery: ChEMBL fda_drug_label clinical_trials pubchem")
-            print("  Literature analysis: EuropePMC semantic_scholar pubtator")
-            print("  Minimal setup: special_tools tool_finder")
+            print(
+                "\nTip: Use --exclude-categories or --include-tools to customize loading",
+                file=sys.stderr,
+            )
 
         except Exception as e:
-            print(f"❌ Error listing categories: {e}")
+            print(f"❌ Error listing categories: {e}", file=sys.stderr)
             sys.exit(1)
         return
 
@@ -401,50 +357,66 @@ Examples:
             tu = ToolUniverse()
             tu.load_tools()  # Load all tools to list them
 
-            print("Available tools:")
-            print("=" * 50)
+            print("Available tools:", file=sys.stderr)
+            print("=" * 50, file=sys.stderr)
 
-            # Group tools by category
+            # Group tools by category (use ToolUniverse's canonical 'type' field)
             tools_by_category = {}
             for tool in tu.all_tools:
-                tool_type = getattr(tool, "tool_type", "unknown")
+                # Handle both dict and object tool formats
+                if isinstance(tool, dict):
+                    tool_type = tool.get("type", "unknown")
+                    tool_name = tool.get("name", "unknown")
+                else:
+                    tool_type = getattr(tool, "type", "unknown")
+                    tool_name = getattr(tool, "name", "unknown")
+
                 if tool_type not in tools_by_category:
                     tools_by_category[tool_type] = []
-                tools_by_category[tool_type].append(tool.name)
+                tools_by_category[tool_type].append(tool_name)
 
             total_tools = 0
             for category in sorted(tools_by_category.keys()):
                 tools = sorted(tools_by_category[category])
-                print(f"\n📁 {category} ({len(tools)} tools):")
+                print(f"\n📁 {category} ({len(tools)} tools):", file=sys.stderr)
                 for tool in tools[:10]:  # Show first 10 tools per category
-                    print(f"  {tool}")
+                    print(f"  {tool}", file=sys.stderr)
                 if len(tools) > 10:
-                    print(f"  ... and {len(tools) - 10} more tools")
+                    # Print remaining count to stderr
+                    print(f"  ... and {len(tools) - 10} more tools", file=sys.stderr)
                 total_tools += len(tools)
 
-            print(f"\nTotal: {total_tools} tools available")
-            print("\nNote: Use --exclude-tools to exclude specific tools by name")
-            print("      Use --exclude-categories to exclude entire categories")
+            print(f"\nTotal: {total_tools} tools available", file=sys.stderr)
+            print(
+                "\nNote: Use --exclude-tools to exclude specific tools by name",
+                file=sys.stderr,
+            )
+            print(
+                "      Use --exclude-categories to exclude entire categories",
+                file=sys.stderr,
+            )
 
         except Exception as e:
-            print(f"❌ Error listing tools: {e}")
+            print(f"❌ Error listing tools: {e}", file=sys.stderr)
             sys.exit(1)
         return
 
     try:
-        print(f"🚀 Starting {args.name}...")
-        print("📡 Transport: stdio (for Claude Desktop)")
-        print(f"🔍 Search enabled: {not args.no_search}")
+        print(f"🚀 Starting {args.name}...", file=sys.stderr)
+        print("📡 Transport: stdio (for Claude Desktop)", file=sys.stderr)
+        print(f"🔍 Search enabled: {not args.no_search}", file=sys.stderr)
 
         if args.categories is not None:
             if len(args.categories) == 0:
-                print("📂 No categories specified, loading all tools")
+                print("📂 No categories specified, loading all tools", file=sys.stderr)
                 tool_categories = None
             else:
-                print(f"📂 Tool categories: {', '.join(args.categories)}")
+                print(
+                    f"📂 Tool categories: {', '.join(args.categories)}", file=sys.stderr
+                )
                 tool_categories = args.categories
         else:
-            print("📂 Loading all tool categories")
+            print("📂 Loading all tool categories", file=sys.stderr)
             tool_categories = None
 
         # Handle exclusions and inclusions
@@ -463,24 +435,45 @@ Examples:
                     category, path = config_spec.split(":", 1)
                     tool_config_files[category] = path
                 else:
-                    print(f"❌ Invalid tool config file format: {config_spec}")
-                    print("   Expected format: 'category:/path/to/config.json'")
+                    print(
+                        f"❌ Invalid tool config file format: {config_spec}",
+                        file=sys.stderr,
+                    )
+                    print(
+                        "   Expected format: 'category:/path/to/config.json'",
+                        file=sys.stderr,
+                    )
                     sys.exit(1)
 
         if exclude_tools:
-            print(f"🚫 Excluding tools: {', '.join(exclude_tools)}")
+            print(f"🚫 Excluding tools: {', '.join(exclude_tools)}", file=sys.stderr)
         if exclude_categories:
-            print(f"🚫 Excluding categories: {', '.join(exclude_categories)}")
+            print(
+                f"🚫 Excluding categories: {', '.join(exclude_categories)}",
+                file=sys.stderr,
+            )
         if include_tools:
-            print(f"✅ Including only specific tools: {len(include_tools)} tools")
+            print(
+                f"✅ Including only specific tools: {len(include_tools)} tools",
+                file=sys.stderr,
+            )
         if tools_file:
-            print(f"📄 Loading tools from file: {tools_file}")
+            print(f"📄 Loading tools from file: {tools_file}", file=sys.stderr)
         if tool_config_files:
-            print(f"📦 Additional config files: {', '.join(tool_config_files.keys())}")
+            print(
+                f"📦 Additional config files: {', '.join(tool_config_files.keys())}",
+                file=sys.stderr,
+            )
         if include_tool_types:
-            print(f"🎯 Including tool types: {', '.join(include_tool_types)}")
+            print(
+                f"🎯 Including tool types: {', '.join(include_tool_types)}",
+                file=sys.stderr,
+            )
         if exclude_tool_types:
-            print(f"🚫 Excluding tool types: {', '.join(exclude_tool_types)}")
+            print(
+                f"🚫 Excluding tool types: {', '.join(exclude_tool_types)}",
+                file=sys.stderr,
+            )
 
         # Load hook configuration if specified
         hook_config = None
@@ -489,7 +482,9 @@ Examples:
 
             with open(args.hook_config_file, "r") as f:
                 hook_config = json.load(f)
-            print(f"🔗 Hook config loaded from: {args.hook_config_file}")
+            print(
+                f"🔗 Hook config loaded from: {args.hook_config_file}", file=sys.stderr
+            )
 
         # Determine hook settings (default disabled for stdio)
         hooks_enabled = (
@@ -502,17 +497,17 @@ Examples:
             hook_type = "SummarizationHook"
         if hooks_enabled:
             if hook_type:
-                print(f"🔗 Hooks enabled: {hook_type}")
+                print(f"🔗 Hooks enabled: {hook_type}", file=sys.stderr)
             elif hook_config:
                 hook_count = len(hook_config.get("hooks", []))
-                print(f"🔗 Hooks enabled: {hook_count} custom hooks")
+                print(f"🔗 Hooks enabled: {hook_count} custom hooks", file=sys.stderr)
             else:
-                print("🔗 Hooks enabled: default configuration")
+                print("🔗 Hooks enabled: default configuration", file=sys.stderr)
         else:
-            print("🔗 Hooks disabled")
+            print("🔗 Hooks disabled", file=sys.stderr)
 
-        print(f"⚡ Max workers: {args.max_workers}")
-        print()
+        print(f"⚡ Max workers: {args.max_workers}", file=sys.stderr)
+        print(file=sys.stderr)
 
         # Create SMCP server with hook support
         server = SMCP(
@@ -536,10 +531,10 @@ Examples:
         server.run_simple(transport="stdio")
 
     except KeyboardInterrupt:
-        print("\n🛑 Server stopped by user")
+        print("\n🛑 Server stopped by user", file=sys.stderr)
         sys.exit(0)
     except Exception as e:
-        print(f"❌ Error starting server: {e}")
+        print(f"❌ Error starting server: {e}", file=sys.stderr)
         if args.verbose:
             import traceback
 
@@ -727,96 +722,27 @@ Examples:
             from .execute_function import ToolUniverse
 
             tu = ToolUniverse()
-            tool_types = tu.get_tool_types()
+            # Use ToolUniverse API to list categories consistently
+            stats = tu.list_built_in_tools(mode="config", scan_all=False)
 
             print("Available tool categories:")
             print("=" * 50)
 
-            # Group categories for better readability
-            scientific_db = []
-            literature = []
-            software = []
-            special = []
-            clinical = []
-            other = []
+            categories = stats.get("categories", {})
+            # Sort by count desc, then name asc
+            sorted_items = sorted(
+                categories.items(), key=lambda kv: (-kv[1].get("count", 0), kv[0])
+            )
+            for key, info in sorted_items:
+                display = key.replace("_", " ").title()
+                count = info.get("count", 0)
+                print(f"  {display}: {count}")
 
-            for category in sorted(tool_types):
-                if category in [
-                    "uniprot",
-                    "ChEMBL",
-                    "opentarget",
-                    "pubchem",
-                    "hpa",
-                    "rcsb_pdb",
-                    "reactome",
-                    "go",
-                ]:
-                    scientific_db.append(category)
-                elif category in [
-                    "EuropePMC",
-                    "semantic_scholar",
-                    "pubtator",
-                    "OpenAlex",
-                ]:
-                    literature.append(category)
-                elif category.startswith("software_"):
-                    software.append(category)
-                elif category in [
-                    "special_tools",
-                    "tool_finder",
-                    "tool_composition",
-                    "agents",
-                ]:
-                    special.append(category)
-                elif category in [
-                    "clinical_trials",
-                    "fda_drug_label",
-                    "fda_drug_adverse_event",
-                    "dailymed",
-                    "medlineplus",
-                ]:
-                    clinical.append(category)
-                else:
-                    other.append(category)
-
-            if scientific_db:
-                print("\n🔬 Scientific Databases:")
-                for cat in scientific_db:
-                    print(f"  {cat}")
-
-            if literature:
-                print("\n📚 Literature & Knowledge:")
-                for cat in literature:
-                    print(f"  {cat}")
-
-            if clinical:
-                print("\n🏥 Clinical & Drug Information:")
-                for cat in clinical:
-                    print(f"  {cat}")
-
-            if software:
-                print("\n💻 Software Tools:")
-                for cat in software[:5]:  # Show first 5
-                    print(f"  {cat}")
-                if len(software) > 5:
-                    print(f"  ... and {len(software) - 5} more software categories")
-
-            if special:
-                print("\n🛠 Special & Meta Tools:")
-                for cat in special:
-                    print(f"  {cat}")
-
-            if other:
-                print("\n📂 Other Categories:")
-                for cat in other:
-                    print(f"  {cat}")
-
-            print(f"\nTotal: {len(tool_types)} categories available")
-            print("\nCommon combinations:")
-            print("  Scientific research: uniprot ChEMBL opentarget pubchem hpa")
-            print("  Drug discovery: ChEMBL fda_drug_label clinical_trials pubchem")
-            print("  Literature analysis: EuropePMC semantic_scholar pubtator")
-            print("  Minimal setup: special_tools tool_finder")
+            print(f"\nTotal categories: {stats.get('total_categories', 0)}")
+            print(f"Total unique tools: {stats.get('total_tools', 0)}")
+            print(
+                "\nTip: Use --exclude-categories or --include-tools to customize loading"
+            )
 
         except Exception as e:
             print(f"❌ Error listing categories: {e}")
@@ -829,30 +755,37 @@ Examples:
             from .execute_function import ToolUniverse
 
             tu = ToolUniverse()
-            tu.load_tools()  # Load all tools to list them
+            # Reuse ToolUniverse selection logic directly (applies API key skipping internally)
+            tool_config_files = {}
+            if args.tool_config_files:
+                for config_spec in args.tool_config_files:
+                    if ":" in config_spec:
+                        category, path = config_spec.split(":", 1)
+                        tool_config_files[category] = path
 
-            print("Available tools:")
+            tu.load_tools(
+                tool_type=(
+                    args.categories
+                    if args.categories and len(args.categories) > 0
+                    else None
+                ),
+                exclude_tools=args.exclude_tools,
+                exclude_categories=args.exclude_categories,
+                include_tools=args.include_tools,
+                tool_config_files=(tool_config_files or None),
+                tools_file=args.tools_file,
+                include_tool_types=args.include_tool_types,
+                exclude_tool_types=args.exclude_tool_types,
+            )
+
+            # Names of tools that are actually available under current configuration
+            tool_names = tu.get_available_tools(name_only=True)
+
+            print("Available tools (for this server configuration):")
             print("=" * 50)
-
-            # Group tools by category
-            tools_by_category = {}
-            for tool in tu.all_tools:
-                tool_type = getattr(tool, "tool_type", "unknown")
-                if tool_type not in tools_by_category:
-                    tools_by_category[tool_type] = []
-                tools_by_category[tool_type].append(tool.name)
-
-            total_tools = 0
-            for category in sorted(tools_by_category.keys()):
-                tools = sorted(tools_by_category[category])
-                print(f"\n📁 {category} ({len(tools)} tools):")
-                for tool in tools[:10]:  # Show first 10 tools per category
-                    print(f"  {tool}")
-                if len(tools) > 10:
-                    print(f"  ... and {len(tools) - 10} more tools")
-                total_tools += len(tools)
-
-            print(f"\nTotal: {total_tools} tools available")
+            for name in sorted(tool_names)[:200]:  # cap output for readability
+                print(f"  {name}")
+            print(f"\nTotal: {len(tool_names)} tools available")
             print("\nNote: Use --exclude-tools to exclude specific tools by name")
             print("      Use --exclude-categories to exclude entire categories")
 

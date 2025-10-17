@@ -349,9 +349,9 @@ class SMCP(FastMCP):
         Register custom MCP protocol methods for enhanced functionality.
 
         This method extends the standard MCP protocol by registering custom handlers
-        for scientific tool discovery and search operations. It safely patches the
-        FastMCP request handler to support additional methods while maintaining
-        compatibility with standard MCP operations.
+        for scientific tool discovery and search operations. It uses FastMCP's
+        middleware system to handle custom methods while maintaining compatibility
+        with standard MCP operations.
 
         Custom Methods Registered:
         =========================
@@ -360,38 +360,20 @@ class SMCP(FastMCP):
 
         Implementation Details:
         ======================
-        - Preserves original FastMCP request handler for standard methods
-        - Uses method interception pattern to handle custom methods first
-        - Falls back to original handler for unrecognized methods
+        - Uses FastMCP's middleware system instead of request handler patching
+        - Implements custom middleware methods for tools/find and tools/search
+        - Standard MCP methods (tools/list, tools/call) are handled by FastMCP
         - Implements proper error handling and JSON-RPC 2.0 compliance
-
-        Error Handling:
-        ==============
-        - Gracefully handles missing request handlers
-        - Logs warnings for debugging when handler patching fails
-        - Ensures server continues to function even if custom methods fail to register
 
         Notes:
         ======
         This method is called automatically during SMCP initialization and should
-        not be called manually. It uses a guard to prevent double-patching.
+        not be called manually.
         """
         try:
-            # Override the default request handler to support custom methods
-            if hasattr(self, "_original_handle_request"):
-                return  # Already patched
-
-            # Store original handler
-            self._original_handle_request = getattr(self, "_handle_request", None)
-
-            # Replace with custom handler
-            if hasattr(self, "_handle_request"):
-                self._handle_request = self._custom_handle_request
-            elif hasattr(self, "handle_request"):
-                self._original_handle_request = self.handle_request
-                self.handle_request = self._custom_handle_request
-            else:
-                self.logger.warning("Could not find request handler to override")
+            # Add custom middleware for tools/find and tools/search
+            self.add_middleware(self._tools_find_middleware)
+            self.logger.info("✅ Custom MCP methods registered successfully")
 
         except Exception as e:
             self.logger.error(f"Error registering custom MCP methods: {e}")
@@ -415,117 +397,32 @@ class SMCP(FastMCP):
             self.logger.error(f"❌ Error getting valid categories: {e}")
             return set()
 
-    async def _custom_handle_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
+    async def _tools_find_middleware(self, context, call_next):
         """
-        Custom MCP request handler that supports enhanced scientific tool operations.
+        Middleware for handling tools/find and tools/search requests.
 
-        This handler intercepts MCP requests and provides specialized handling for
-        scientific tool discovery methods while maintaining full compatibility with
-        standard MCP protocol operations.
-
-        Parameters:
-        ===========
-        request : dict
-            JSON-RPC 2.0 request object containing:
-            - method: The MCP method being called
-            - id: Request identifier for response correlation
-            - params: Method-specific parameters
-
-        Returns:
-        ========
-        dict
-            JSON-RPC 2.0 response object with either:
-            - result: Successful operation result
-            - error: Error information with code and message
-
-        Supported Custom Methods:
-        ========================
-        tools/find:
-            Search for tools using natural language queries with AI-powered recommendations.
-            Parameters:
-            - query (required): Natural language description of desired functionality
-            - categories (optional): List of tool categories to filter by
-            - limit (optional): Maximum number of results (default: 10)
-            - use_advanced_search (optional): Use AI vs keyword search (default: True)
-            - search_method (optional): Specific search method - 'auto', 'llm', 'embedding', 'keyword' (default: 'auto')
-            - format (optional): Response format - 'detailed' or 'mcp_standard'
-
-        tools/search:
-            Alias for tools/find method with identical parameters and behavior.
-
-        Standard MCP Methods:
-            All other methods are forwarded to the original FastMCP handler,
-            ensuring full compatibility with MCP specification.
-
-        Error Codes:
-        ============
-        - -32601: Method not found (unknown method)
-        - -32602: Invalid params (missing required parameters)
-        - -32603: Internal error (server-side failures)
-
-        Examples:
-        =========
-        Request for tool discovery:
-        ```json
-        {
-            "jsonrpc": "2.0",
-            "id": "search_123",
-            "method": "tools/find",
-            "params": {
-                "query": "protein structure analysis",
-                "limit": 5,
-                "format": "mcp_standard"
-            }
-        }
-        ```
-
-        Successful response:
-        ```json
-        {
-            "jsonrpc": "2.0",
-            "id": "search_123",
-            "result": {
-                "tools": [...],
-                "_meta": {
-                    "search_query": "protein structure analysis",
-                    "search_method": "AI-powered (ToolFinderLLM)",
-                    "total_matches": 5
-                }
-            }
-        }
-        ```
+        This middleware intercepts tools/find and tools/search requests and
+        provides AI-powered tool discovery functionality.
         """
-        try:
-            method = request.get("method")
-            request_id = request.get("id")
-            params = request.get("params", {})
-
-            # Handle custom methods
-            if method == "tools/find":
-                return await self._handle_tools_find(request_id, params)
-            elif method == "tools/search":  # Alternative endpoint name
-                return await self._handle_tools_find(request_id, params)
-
-            # For all other methods, use the original handler
-            if self._original_handle_request:
-                if asyncio.iscoroutinefunction(self._original_handle_request):
-                    return await self._original_handle_request(request)
-                else:
-                    return self._original_handle_request(request)
-            else:
-                # Fallback: return method not found error
+        # Check if this is a tools/find or tools/search request
+        if hasattr(context, "method") and context.method in [
+            "tools/find",
+            "tools/search",
+        ]:
+            try:
+                # Handle the custom method
+                result = await self._handle_tools_find(context.id, context.params)
+                return result
+            except Exception as e:
+                self.logger.error(f"Error in tools/find middleware: {e}")
                 return {
                     "jsonrpc": "2.0",
-                    "id": request_id,
-                    "error": {"code": -32601, "message": f"Method not found: {method}"},
+                    "id": context.id,
+                    "error": {"code": -32603, "message": f"Internal error: {str(e)}"},
                 }
 
-        except Exception as e:
-            return {
-                "jsonrpc": "2.0",
-                "id": request.get("id"),
-                "error": {"code": -32603, "message": f"Internal error: {str(e)}"},
-            }
+        # For all other methods, call the next middleware/handler
+        return await call_next(context)
 
     async def _handle_tools_find(
         self, request_id: str, params: Dict[str, Any]
@@ -645,11 +542,40 @@ class SMCP(FastMCP):
             # Parse the search result
             search_data = json.loads(search_result)
 
+            # Handle different response formats
+            if isinstance(search_data, list):
+                # If search_data is a list, treat it as tools directly
+                tools_list = search_data
+                search_metadata = {
+                    "search_query": query,
+                    "search_method": "unknown",
+                    "total_matches": len(tools_list),
+                    "categories_filtered": categories,
+                }
+            elif isinstance(search_data, dict):
+                # If search_data is a dict, extract tools and metadata
+                tools_list = search_data.get("tools", [])
+                search_metadata = {
+                    "search_query": query,
+                    "search_method": search_data.get("search_method", "unknown"),
+                    "total_matches": search_data.get("total_matches", len(tools_list)),
+                    "categories_filtered": categories,
+                }
+            else:
+                # Fallback for unexpected format
+                tools_list = []
+                search_metadata = {
+                    "search_query": query,
+                    "search_method": "unknown",
+                    "total_matches": 0,
+                    "categories_filtered": categories,
+                }
+
             # Format response based on requested format
             if format_type == "mcp_standard":
                 # Format as standard MCP tools/list style response
-                tools_list = []
-                for tool in search_data.get("tools", []):
+                mcp_tools_list = []
+                for tool in tools_list:
                     mcp_tool = {
                         "name": tool.get("name"),
                         "description": tool.get("description", ""),
@@ -659,16 +585,11 @@ class SMCP(FastMCP):
                             "required": tool.get("required", []),
                         },
                     }
-                    tools_list.append(mcp_tool)
+                    mcp_tools_list.append(mcp_tool)
 
                 result = {
-                    "tools": tools_list,
-                    "_meta": {
-                        "search_query": query,
-                        "search_method": search_data.get("search_method"),
-                        "total_matches": search_data.get("total_matches"),
-                        "categories_filtered": categories,
-                    },
+                    "tools": mcp_tools_list,
+                    "_meta": search_metadata,
                 }
             else:
                 # Return detailed format (default)
@@ -1389,9 +1310,7 @@ class SMCP(FastMCP):
             if "Tool_Finder_LLM" in available_tool_names:
                 self.tool_finder_available = True
                 self.tool_finder_type = "Tool_Finder_LLM"
-                self.logger.info(
-                    "✅ Tool_Finder_LLM available for advanced search"
-                )
+                self.logger.info("✅ Tool_Finder_LLM available for advanced search")
                 return
 
             # Fallback to Tool_RAG (embedding-based)
@@ -1883,30 +1802,30 @@ class SMCP(FastMCP):
     def _print_tooluniverse_banner(self):
         """Print ToolUniverse branding banner after FastMCP banner with dynamic information."""
         # Get transport info if available
-        transport_display = getattr(self, '_transport_type', 'Unknown')
-        server_url = getattr(self, '_server_url', 'N/A')
+        transport_display = getattr(self, "_transport_type", "Unknown")
+        server_url = getattr(self, "_server_url", "N/A")
         tools_count = len(self._exposed_tools)
-        
+
         # Map transport types to display names
         transport_map = {
-            'stdio': 'STDIO',
-            'streamable-http': 'Streamable-HTTP',
-            'http': 'HTTP',
-            'sse': 'SSE'
+            "stdio": "STDIO",
+            "streamable-http": "Streamable-HTTP",
+            "http": "HTTP",
+            "sse": "SSE",
         }
         transport_name = transport_map.get(transport_display, transport_display)
-        
+
         # Format lines with proper alignment (matching FastMCP style)
         # Each line should be exactly 75 characters (emoji takes 2 display widths but counts as 1 in len())
         transport_line = f"                 📦 Transport:       {transport_name}"
         server_line = f"                 🔗 Server URL:      {server_url}"
         tools_line = f"                 🧰 Loaded Tools:    {tools_count}"
-        
+
         # Pad to exactly 75 characters (emoji counts as 1 in len() but displays as 2)
         transport_line = transport_line + " " * (75 - len(transport_line))
         server_line = server_line + " " * (75 - len(server_line))
         tools_line = tools_line + " " * (75 - len(tools_line))
-        
+
         banner = f"""
 ╭────────────────────────────────────────────────────────────────────────────╮
 │                                                                            │
@@ -1923,45 +1842,52 @@ class SMCP(FastMCP):
 │                                                                            │
 ╰────────────────────────────────────────────────────────────────────────────╯
 """
-        print(banner)
+        # In stdio mode, ensure the banner goes to stderr to avoid polluting stdout
+        # which must exclusively carry JSON-RPC messages.
+        import sys as _sys
+
+        if getattr(self, "_transport_type", None) == "stdio":
+            print(banner, file=_sys.stderr)
+        else:
+            print(banner)
 
     def run(self, *args, **kwargs):
         """
         Override run method to display ToolUniverse banner after FastMCP banner.
-        
+
         This method intercepts the parent's run() call to inject our custom banner
         immediately after FastMCP displays its startup banner.
         """
         # Save transport information for banner display
-        transport = kwargs.get('transport', args[0] if args else 'unknown')
-        host = kwargs.get('host', '0.0.0.0')
-        port = kwargs.get('port', 7000)
-        
+        transport = kwargs.get("transport", args[0] if args else "unknown")
+        host = kwargs.get("host", "0.0.0.0")
+        port = kwargs.get("port", 7000)
+
         self._transport_type = transport
-        
+
         # Build server URL based on transport
-        if transport == 'streamable-http' or transport == 'http':
+        if transport == "streamable-http" or transport == "http":
             self._server_url = f"http://{host}:{port}/mcp"
-        elif transport == 'sse':
+        elif transport == "sse":
             self._server_url = f"http://{host}:{port}"
         else:
             self._server_url = "N/A (stdio mode)"
-        
+
         # Use threading to print our banner shortly after FastMCP's banner
         import threading
         import time
-        
+
         def delayed_banner():
             """Print ToolUniverse banner with a small delay to appear after FastMCP banner."""
             time.sleep(1.0)  # Delay to ensure FastMCP banner displays first
             self._print_tooluniverse_banner()
-        
+
         # Start banner thread only on first run
-        if not hasattr(self, '_tooluniverse_banner_shown'):
+        if not hasattr(self, "_tooluniverse_banner_shown"):
             self._tooluniverse_banner_shown = True
             banner_thread = threading.Thread(target=delayed_banner, daemon=True)
             banner_thread.start()
-        
+
         # Call parent's run method (blocking call)
         return super().run(*args, **kwargs)
 
@@ -2109,6 +2035,29 @@ class SMCP(FastMCP):
         else:
             self.logger.info("🔗 Hooks disabled")
 
+        # Configure logger for stdio mode to avoid stdout pollution
+        if transport == "stdio":
+            import logging
+            import sys
+
+            # Redirect all logger output to stderr for stdio mode
+            for handler in self.logger.handlers[:]:
+                self.logger.removeHandler(handler)
+
+            stderr_handler = logging.StreamHandler(sys.stderr)
+            stderr_handler.setLevel(logging.INFO)
+            formatter = logging.Formatter("%(message)s")
+            stderr_handler.setFormatter(formatter)
+            self.logger.addHandler(stderr_handler)
+            self.logger.setLevel(logging.INFO)
+
+            # Also redirect root logger to stderr
+            root_logger = logging.getLogger()
+            for handler in root_logger.handlers[:]:
+                root_logger.removeHandler(handler)
+            root_logger.addHandler(stderr_handler)
+            root_logger.setLevel(logging.INFO)
+
         try:
             if transport == "stdio":
                 self.run(transport="stdio", **kwargs)
@@ -2244,7 +2193,10 @@ class SMCP(FastMCP):
                                 cleaned_props[prop_name] = cleaned_prop
 
                             # Create proper JSON schema for nested object
-                            object_schema = {"type": "object", "properties": cleaned_props}
+                            object_schema = {
+                                "type": "object",
+                                "properties": cleaned_props,
+                            }
 
                             # Add required array at object level if there are required fields
                             if nested_required:
@@ -2308,48 +2260,29 @@ class SMCP(FastMCP):
                 )
             )
 
-            # Optional FastMCP context injection for streaming callbacks
-            try:
-                from fastmcp.server.context import Context as MCPContext  # type: ignore
-            except Exception:  # pragma: no cover - context unavailable
-                MCPContext = None  # type: ignore
-
-            if MCPContext is not None:
-                func_params.append(
-                    inspect.Parameter(
-                        "ctx",
-                        inspect.Parameter.POSITIONAL_OR_KEYWORD,
-                        default=None,
-                        annotation=MCPContext,
-                    )
-                )
+            # Note: ctx parameter removed as it causes Pydantic schema issues
+            # FastMCP context injection is handled internally by FastMCP
 
             async def dynamic_tool_function(**kwargs) -> str:
                 """Execute ToolUniverse tool with provided arguments."""
                 try:
-                    ctx = kwargs.pop("ctx", None)
+                    # Remove ctx if present (legacy support)
+                    ctx = kwargs.pop("ctx", None) if "ctx" in kwargs else None
                     stream_flag = bool(kwargs.get("_tooluniverse_stream"))
 
                     # Filter out None values for optional parameters (preserve streaming flag)
-                    args_dict = {
-                        k: v for k, v in kwargs.items() if v is not None
-                    }
-                    filtered_args = {
-                        k: v
-                        for k, v in args_dict.items()
-                        if k != "_tooluniverse_stream"
-                    }
+                    args_dict = {k: v for k, v in kwargs.items() if v is not None}
 
-                    # Validate required parameters
+                    # Validate required parameters (check against args_dict, not filtered_args)
                     missing_required = [
-                        param for param in required_params if param not in filtered_args
+                        param for param in required_params if param not in args_dict
                     ]
                     if missing_required:
                         return json.dumps(
                             {
                                 "error": f"Missing required parameters: {missing_required}",
                                 "required": required_params,
-                                "provided": list(filtered_args.keys()),
+                                "provided": list(args_dict.keys()),
                             },
                             indent=2,
                         )
@@ -2357,10 +2290,13 @@ class SMCP(FastMCP):
                     function_call = {"name": tool_name, "arguments": args_dict}
 
                     loop = asyncio.get_event_loop()
+
+                    # Initialize stream_callback to None by default
                     stream_callback = None
 
-                    if stream_flag and ctx is not None and MCPContext is not None:
-                        def stream_callback(chunk: str) -> None:
+                    if stream_flag and ctx is not None:
+
+                        def _stream_callback(chunk: str) -> None:
                             if not chunk:
                                 return
                             try:
@@ -2380,6 +2316,9 @@ class SMCP(FastMCP):
                                 self.logger.debug(
                                     f"Failed to dispatch stream chunk for {tool_name}: {cb_error}"
                                 )
+
+                        # Assign the function to stream_callback
+                        stream_callback = _stream_callback
 
                         # Ensure downstream tools see the streaming flag
                         if "_tooluniverse_stream" not in args_dict:
@@ -2433,6 +2372,10 @@ Returns:
 
         except Exception as e:
             self.logger.error(f"Error creating MCP tool from config: {e}")
+            self.logger.error(f"Error type: {type(e)}")
+            import traceback
+
+            self.logger.error(f"Traceback: {traceback.format_exc()}")
             self.logger.debug(f"Tool config: {tool_config}")
             # Don't raise - continue with other tools
             return

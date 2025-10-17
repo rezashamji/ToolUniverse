@@ -32,7 +32,8 @@ class ZenodoTool(BaseTool):
             "size": max(1, min(max_results, 200)),
             "all_versions": 1,
         }
-        if community:
+        # Only add communities filter if community is provided and not empty
+        if community and community.strip():
             params["communities"] = community
 
         try:
@@ -52,9 +53,7 @@ class ZenodoTool(BaseTool):
         for h in hits:
             md = h.get("metadata", {})
             title = md.get("title")
-            creators = [
-                c.get("name") for c in md.get("creators", []) if c.get("name")
-            ]
+            creators = [c.get("name") for c in md.get("creators", []) if c.get("name")]
             publication_date = md.get("publication_date")
             doi = md.get("doi") or h.get("doi")
             url = h.get("links", {}).get("html")

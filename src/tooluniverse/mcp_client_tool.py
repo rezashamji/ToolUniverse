@@ -26,18 +26,23 @@ class BaseMCPClient:
 
     def __init__(self, server_url: str, transport: str = "http", timeout: int = 30):
         self.server_url = os.path.expandvars(server_url)
-        self.transport = transport
+        # Normalize transport for backward compatibility: treat 'stdio' as HTTP
+        normalized_transport = (
+            transport.lower() if isinstance(transport, str) else "http"
+        )
+        if normalized_transport == "stdio":
+            normalized_transport = "http"
+        self.transport = normalized_transport
         self.timeout = timeout
         self.session = None
         self.mcp_session_id = None
         self._initialized = False
 
-        # Validate transport
+        # Validate transport (accept 'stdio' via normalization above)
         supported_transports = ["http", "websocket"]
         if self.transport not in supported_transports:
-            raise ValueError(
-                f"Invalid transport '{self.transport}'. Supported: {supported_transports}"
-            )
+            # Keep message concise to satisfy line length rules
+            raise ValueError("Invalid transport")
 
     async def _ensure_session(self):
         """Ensure HTTP session is available for HTTP transport"""

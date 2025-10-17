@@ -30,9 +30,7 @@ class OpenAIRETool(BaseTool):
         endpoint = self._endpoint_for_type(prod_type)
         if endpoint is None:
             return {
-                "error": (
-                    "Unsupported type. Use publications/datasets/software."
-                ),
+                "error": ("Unsupported type. Use publications/datasets/software."),
             }
 
         params = {
@@ -67,25 +65,15 @@ class OpenAIRETool(BaseTool):
         results = []
         # OpenAIRE JSON has a root 'response' with 'results' → 'result' list
         try:
-            items = (
-                data.get("response", {})
-                .get("results", {})
-                .get("result", [])
-            )
+            items = data.get("response", {}).get("results", {}).get("result", [])
         except Exception:
             items = []
 
         for it in items:
             # header may contain identifiers, not used presently
-            _ = (
-                it.get("header", {})
-                if isinstance(it.get("header"), dict)
-                else {}
-            )
+            _ = it.get("header", {}) if isinstance(it.get("header"), dict) else {}
             metadata = (
-                it.get("metadata", {})
-                if isinstance(it.get("metadata"), dict)
-                else {}
+                it.get("metadata", {}) if isinstance(it.get("metadata"), dict) else {}
             )
             title = None
             authors = []
@@ -111,10 +99,7 @@ class OpenAIRETool(BaseTool):
                             authors.append(name)
 
                 # Year
-                date_obj = (
-                    result_obj.get("dateofacceptance")
-                    or result_obj.get("date")
-                )
+                date_obj = result_obj.get("dateofacceptance") or result_obj.get("date")
                 if isinstance(date_obj, dict):
                     year = date_obj.get("year") or date_obj.get("$")
 

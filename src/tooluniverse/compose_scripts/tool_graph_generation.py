@@ -21,13 +21,13 @@ Arguments:
 Return:
   dict with keys: nodes, edges, stats
 """
+
 from __future__ import annotations
 
 import json
-import math
 import os
 import time
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
 
 DETECTOR_NAME = "ToolRelationshipDetector"
@@ -40,7 +40,7 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
 
     max_tools = arguments.get("max_tools")
     if isinstance(max_tools, int) and max_tools > 0:
-        tool_configs = tool_configs[: max_tools]
+        tool_configs = tool_configs[:max_tools]
 
     output_path = arguments.get("output_path", "./tool_relationship_graph.json")
     checkpoint_every = int(arguments.get("save_intermediate_every", 5000))
@@ -95,28 +95,40 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
 
             # Align the 'names' list order with the loaded graph to ensure correct loop continuation
             if "nodes" in existing_graph and isinstance(existing_graph["nodes"], list):
-                loaded_node_order = [node.get("name") for node in existing_graph.get("nodes", [])]
+                loaded_node_order = [
+                    node.get("name") for node in existing_graph.get("nodes", [])
+                ]
                 if names == loaded_node_order:
                     print("Current tool order matches the loaded graph.")
                 else:
-                    print("Reordering tools to match the loaded graph for correct resume.")
+                    print(
+                        "Reordering tools to match the loaded graph for correct resume."
+                    )
                     # Create a map for quick lookup of current tool positions
                     current_name_pos = {name: i for i, name in enumerate(names)}
                     # Build the new 'names' list and 'minimal_tool_map' based on the loaded order
-                    new_names = [name for name in loaded_node_order if name in current_name_pos]
+                    new_names = [
+                        name for name in loaded_node_order if name in current_name_pos
+                    ]
                     # Find any new tools not in the original graph and append them
-                    new_tools_from_config = [name for name in names if name not in loaded_node_order]
+                    new_tools_from_config = [
+                        name for name in names if name not in loaded_node_order
+                    ]
                     if new_tools_from_config:
-                        print(f"Appending {len(new_tools_from_config)} new tools to the list.")
+                        print(
+                            f"Appending {len(new_tools_from_config)} new tools to the list."
+                        )
                         new_names.extend(new_tools_from_config)
-                    
+
                     names = new_names
-                    assert(n==len(names)) # n should remain the same
+                    assert n == len(names)  # n should remain the same
                     print("Tool order successfully realigned.")
 
         except Exception as e:
-            print(f"Warning: Could not load or parse existing graph at {load_path}. Starting fresh. Error: {e}")
-            edges = [] # Reset edges if loading failed
+            print(
+                f"Warning: Could not load or parse existing graph at {load_path}. Starting fresh. Error: {e}"
+            )
+            edges = []  # Reset edges if loading failed
 
     # Core loop over unique unordered pairs (i<j). We'll batch the 'j' tools.
     for i in range(n):
@@ -125,16 +137,18 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
         # This logic is to skip all tools until a specific one is found,
         # skip that one, and then process all subsequent tools.
         # This is useful for debugging or resuming from a specific point.
-        start_processing_flag_name = 'get_em_3d_fitting_and_reconstruction_details'
-        
+        start_processing_flag_name = "get_em_3d_fitting_and_reconstruction_details"
+
         # Find the index of the tool to start after
         try:
             start_index = names.index(start_processing_flag_name)
         except ValueError:
-            start_index = -1 # Flag tool not found, process all
+            start_index = -1  # Flag tool not found, process all
 
         if start_index != -1 and i <= start_index:
-            print(f"Skipping tool {tool_a['name']} with index {i} (target index is {start_index}).")
+            print(
+                f"Skipping tool {tool_a['name']} with index {i} (target index is {start_index})."
+            )
             continue
 
         # Batch the remaining tools to compare against tool_a
@@ -145,7 +159,9 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
             if not other_tools_batch_names:
                 continue
 
-            other_tools_list = [minimal_tool_map[name] for name in other_tools_batch_names]
+            other_tools_list = [
+                minimal_tool_map[name] for name in other_tools_batch_names
+            ]
             other_tools_json = json.dumps(other_tools_list, ensure_ascii=False)
 
             # Call detector with the batch
@@ -157,14 +173,16 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
                 detector_res = _parse_json(detector_raw)
                 if detector_res and "relationships" in detector_res:
                     break
-            
+
             processed_pairs += len(other_tools_list)
 
             relationships = detector_res.get("relationships", [])
             if not isinstance(relationships, list):
                 relationships = []
 
-            print(f"Tool A: {tool_a['name']} vs {len(other_tools_list)} others => Found {len(relationships)} relationships")
+            print(
+                f"Tool A: {tool_a['name']} vs {len(other_tools_list)} others => Found {len(relationships)} relationships"
+            )
 
             for rel in relationships:
                 tool_b_name = rel.get("tool_b_name")
@@ -175,24 +193,35 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
                     continue
 
                 if direction in ("A->B", "both"):
-                    edges.append({
-                        "source": tool_a["name"],
-                        "target": tool_b_name,
-                        "rationale": rationale,
-                    })
+                    edges.append(
+                        {
+                            "source": tool_a["name"],
+                            "target": tool_b_name,
+                            "rationale": rationale,
+                        }
+                    )
                 if direction in ("B->A", "both"):
-                    edges.append({
-                        "source": tool_b_name,
-                        "target": tool_a["name"],
-                        "rationale": rationale,
-                    })
+                    edges.append(
+                        {
+                            "source": tool_b_name,
+                            "target": tool_a["name"],
+                            "rationale": rationale,
+                        }
+                    )
 
             # Progress reporting and checkpointing
-            if processed_pairs % 1000 < len(other_tools_list): # Heuristic to report near the thousand marks
+            if processed_pairs % 1000 < len(
+                other_tools_list
+            ):  # Heuristic to report near the thousand marks
                 elapsed = time.time() - start_time
                 rate = processed_pairs / elapsed if elapsed > 0 else 0
-                print(f"[progress] pairs={processed_pairs}/{total_pairs} edges={len(edges)} llm_calls={llm_calls} rate={rate:.2f} pairs/s")
-            if processed_pairs // checkpoint_every > (processed_pairs - len(other_tools_list)) // checkpoint_every:
+                print(
+                    f"[progress] pairs={processed_pairs}/{total_pairs} edges={len(edges)} llm_calls={llm_calls} rate={rate:.2f} pairs/s"
+                )
+            if (
+                processed_pairs // checkpoint_every
+                > (processed_pairs - len(other_tools_list)) // checkpoint_every
+            ):
                 _maybe_checkpoint(output_path, nodes, edges)
 
     graph = {
@@ -203,8 +232,8 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
             "pairs_evaluated": processed_pairs,
             "edges": len(edges),
             "llm_calls": llm_calls,
-            "runtime_sec": round(time.time() - start_time, 2)
-        }
+            "runtime_sec": round(time.time() - start_time, 2),
+        },
     }
 
     # Final save
@@ -212,7 +241,11 @@ def compose(arguments, tooluniverse, call_tool):  # noqa: D401
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(graph, f, indent=2)
     except Exception as e:
-        return {"status": "error", "message": f"Failed to write output: {e}", "graph": graph}
+        return {
+            "status": "error",
+            "message": f"Failed to write output: {e}",
+            "graph": graph,
+        }
 
     return {"status": "success", "output_file": output_path, "graph": graph}
 

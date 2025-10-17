@@ -51,7 +51,7 @@ class HALTool(BaseTool):
         docs = data.get("response", {}).get("docs", [])
         results = []
         for d in docs:
-            title = (d.get("title_s") or [None])
+            title = d.get("title_s") or [None]
             if isinstance(title, list):
                 title = title[0]
             authors = d.get("authFullName_s") or []

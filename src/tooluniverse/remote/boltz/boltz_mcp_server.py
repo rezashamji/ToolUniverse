@@ -47,4 +47,6 @@ def run_boltz2(query: dict):
 
 
 if __name__ == "__main__":
-    server.run(transport="streamable-http", host="0.0.0.0", port=8080, stateless_http=True)
+    server.run(
+        transport="streamable-http", host="0.0.0.0", port=8080, stateless_http=True
+    )

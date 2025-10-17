@@ -11,5 +11,6 @@ A concise reference for commonly used classes and functions in ToolUniverse.
    api/tooluniverse
    api/tooluniverse.core_tool
    api/tooluniverse.base_tool
+   api/tooluniverse.exceptions
    api/tooluniverse.tool_registry
    api/tooluniverse.smcp

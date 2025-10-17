@@ -12,9 +12,7 @@ class PubMedTool(BaseTool):
 
     def __init__(self, tool_config):
         super().__init__(tool_config)
-        self.esearch_url = (
-            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
-        )
+        self.esearch_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
         self.esummary_url = (
             "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
         )
@@ -87,7 +85,7 @@ class PubMedTool(BaseTool):
             rec = result.get(uid, {})
             title = rec.get("title")
             journal = rec.get("fulljournalname") or rec.get("source")
-            
+
             # Extract author information
             authors = []
             author_list = rec.get("authors", [])
@@ -97,28 +95,28 @@ class PubMedTool(BaseTool):
                         name = author.get("name", "")
                         if name:
                             authors.append(name)
-            
+
             # Extract year
             year = None
             pubdate = rec.get("pubdate")
             if pubdate and len(pubdate) >= 4 and pubdate[:4].isdigit():
                 year = int(pubdate[:4])
-            
+
             # Extract DOI
             doi = None
             for id_obj in rec.get("articleids", []):
                 if id_obj.get("idtype") == "doi":
                     doi = id_obj.get("value")
                     break
-            
+
             # Extract citation count (PubMed doesn't provide this directly)
             citations = 0
             # PubMed API itself doesn't provide citation count, keeping it as 0
-            
+
             # Extract open access status
             open_access = False
             # PubMed API itself doesn't directly provide open access status
-            
+
             # Extract keywords
             keywords = []
             mesh_terms = rec.get("meshterms", [])
@@ -128,40 +126,48 @@ class PubMedTool(BaseTool):
                         keyword = term.get("term", "")
                         if keyword:
                             keywords.append(keyword)
-            
+
             # Extract article type
             article_type = rec.get("pubtype", [])
             if isinstance(article_type, list) and article_type:
-                article_type = article_type[0] if isinstance(article_type[0], str) else str(article_type[0])
+                article_type = (
+                    article_type[0]
+                    if isinstance(article_type[0], str)
+                    else str(article_type[0])
+                )
             else:
                 article_type = "Unknown"
-            
+
             # Build URL
             url = f"https://pubmed.ncbi.nlm.nih.gov/{uid}/"
-            
-            articles.append({
-                "title": title or "Title not available",
-                "abstract": "Abstract not available",  # PubMed API itself doesn't provide abstracts
-                "authors": authors if authors else "Author information not available",
-                "journal": journal or "Journal information not available",
-                "year": year,
-                "doi": doi or "DOI not available",
-                "url": url,
-                "citations": citations,
-                "open_access": open_access,
-                "keywords": keywords if keywords else "Keywords not available",
-                "article_type": article_type,
-                "source": "PubMed",
-                "data_quality": {
-                    "has_abstract": False,  # PubMed API itself doesn't provide abstracts
-                    "has_authors": bool(authors),
-                    "has_journal": bool(journal),
-                    "has_year": bool(year),
-                    "has_doi": bool(doi),
-                    "has_citations": False,  # PubMed API itself doesn't provide citation count
-                    "has_keywords": bool(keywords),
-                    "has_url": bool(url)
+
+            articles.append(
+                {
+                    "title": title or "Title not available",
+                    "abstract": "Abstract not available",  # PubMed API itself doesn't provide abstracts
+                    "authors": (
+                        authors if authors else "Author information not available"
+                    ),
+                    "journal": journal or "Journal information not available",
+                    "year": year,
+                    "doi": doi or "DOI not available",
+                    "url": url,
+                    "citations": citations,
+                    "open_access": open_access,
+                    "keywords": keywords if keywords else "Keywords not available",
+                    "article_type": article_type,
+                    "source": "PubMed",
+                    "data_quality": {
+                        "has_abstract": False,  # PubMed API itself doesn't provide abstracts
+                        "has_authors": bool(authors),
+                        "has_journal": bool(journal),
+                        "has_year": bool(year),
+                        "has_doi": bool(doi),
+                        "has_citations": False,  # PubMed API itself doesn't provide citation count
+                        "has_keywords": bool(keywords),
+                        "has_url": bool(url),
+                    },
                 }
-            })
+            )
 
         return articles

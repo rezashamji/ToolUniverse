@@ -144,3 +144,8 @@ docs/api/tooluniverse.*.rst
 !docs/api/tools.rst
 !docs/api/modules.rst
 !docs/old_files/
+
+src/tooluniverse/web_tools/
+
+# Auto-generated tool files (moved to temporary folder)
+src/tooluniverse/tools_generated/

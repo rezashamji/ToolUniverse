@@ -63,4 +63,3 @@ class FatcatScholarTool(BaseTool):
             )
 
         return results
-

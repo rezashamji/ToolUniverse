@@ -26,6 +26,11 @@ class CustomTool(BaseTool):
         self.execute_function = None
         if self.code_file and os.path.exists(self.code_file):
             self._load_external_code()
+        elif (
+            "implementation" in tool_config
+            and "source_code" in tool_config["implementation"]
+        ):
+            self._load_embedded_code(tool_config["implementation"])
 
     def _load_external_code(self):
         """Load the execute_tool function from external Python file"""
@@ -45,6 +50,29 @@ class CustomTool(BaseTool):
 
         except Exception as e:
             print(f"Error loading external code from {self.code_file}: {e}")
+
+    def _load_embedded_code(self, implementation: Dict):
+        """Load the execute_tool function from embedded source code"""
+        try:
+            source_code = implementation.get("source_code", "")
+            main_function = implementation.get("main_function", "execute_tool")
+
+            # Create a temporary module to execute the code
+            import types
+
+            module = types.ModuleType("embedded_tool_module")
+
+            # Execute the source code in the module namespace
+            exec(source_code, module.__dict__)
+
+            # Get the main function
+            if hasattr(module, main_function):
+                self.execute_function = getattr(module, main_function)
+            else:
+                print(f"Warning: No {main_function} function found in embedded code")
+
+        except Exception as e:
+            print(f"Error loading embedded code: {e}")
 
     def run(self, arguments: Any = None) -> Dict[str, Any]:
         """

@@ -26,6 +26,9 @@ Choose your path based on your needs:
 **I want to integrate with external services:**
 → Start with :doc:`remote_tool_registration` for API integrations
 
+**I want to learn advanced tool features:**
+→ Start with :doc:`advanced_tool_development` for BaseTool capabilities and advanced patterns
+
 **I want to contribute to the community:**
 → Start with :doc:`comprehensive_tool_guide` for the complete step-by-step contribution process
 
@@ -60,6 +63,22 @@ Learn how to integrate external services, APIs, and tools running on different s
 - Microservice integration patterns
 - Authentication and security
 - Performance optimization
+
+Advanced Tool Development
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:doc:`advanced_tool_development`
+
+Learn how to leverage the full power of BaseTool capabilities for advanced tool development. This guide covers custom validation, error handling, caching, and other advanced features.
+
+**Key Topics:**
+- Enhanced BaseTool capabilities
+- Custom parameter validation
+- Advanced error handling patterns
+- Custom caching strategies
+- Capability declaration
+- Migration from basic tools
+- Best practices and testing
 
 Contributing Tools to ToolUniverse - Complete Tutorial
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -295,6 +314,7 @@ Ready to start? Choose your path:
 
 * 🏠 **Local Tools**: :doc:`local_tool_registration` - Start with local tool development
 * 🔗 **Remote Tools**: :doc:`remote_tool_registration` - Learn about remote integrations
+* 🔧 **Advanced Features**: :doc:`advanced_tool_development` - Learn BaseTool capabilities and advanced patterns
 * 📤 **Contributing**: :doc:`comprehensive_tool_guide` - Complete step-by-step Tutorial for contributing tools to the community
 
 .. tip::

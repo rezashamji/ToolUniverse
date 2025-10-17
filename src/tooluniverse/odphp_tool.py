@@ -86,17 +86,27 @@ class ODPHPMyHealthfinder(ODPHPRESTTool):
         res = self._make_request(params)
 
         # Optional: attach PlainSections if requested
-        if isinstance(res, dict) and not res.get("error") and arguments.get("strip_html"):
+        if (
+            isinstance(res, dict)
+            and not res.get("error")
+            and arguments.get("strip_html")
+        ):
             data = res.get("data") or {}
-            resources = (((data.get("Resources") or {}).get("All") or {}).get("Resource")) or []
+            resources = (
+                ((data.get("Resources") or {}).get("All") or {}).get("Resource")
+            ) or []
             if isinstance(resources, list):
                 for r in resources:
                     plain = []
                     for sec in _sections_array(r):
-                        plain.append({
-                            "Title": sec.get("Title", ""),
-                            "PlainContent": _strip_html_to_text(sec.get("Content", "")),
-                        })
+                        plain.append(
+                            {
+                                "Title": sec.get("Title", ""),
+                                "PlainContent": _strip_html_to_text(
+                                    sec.get("Content", "")
+                                ),
+                            }
+                        )
                     if plain:
                         r["PlainSections"] = plain
         return res
@@ -133,17 +143,25 @@ class ODPHPTopicSearch(ODPHPRESTTool):
         res = self._make_request(params)
 
         # Optional: attach PlainSections if requested
-        if isinstance(res, dict) and not res.get("error") and arguments.get("strip_html"):
+        if (
+            isinstance(res, dict)
+            and not res.get("error")
+            and arguments.get("strip_html")
+        ):
             data = res.get("data") or {}
             resources = ((data.get("Resources") or {}).get("Resource")) or []
             if isinstance(resources, list):
                 for r in resources:
                     plain = []
                     for sec in _sections_array(r):
-                        plain.append({
-                            "Title": sec.get("Title", ""),
-                            "PlainContent": _strip_html_to_text(sec.get("Content", "")),
-                        })
+                        plain.append(
+                            {
+                                "Title": sec.get("Title", ""),
+                                "PlainContent": _strip_html_to_text(
+                                    sec.get("Content", "")
+                                ),
+                            }
+                        )
                     if plain:
                         r["PlainSections"] = plain
         return res
@@ -187,7 +205,11 @@ class ODPHPOutlinkFetch(BaseTool):
         elif soup.title and soup.title.string:
             title = soup.title.string.strip()
 
-        text = candidate.get_text("\n", strip=True) if candidate else soup.get_text("\n", strip=True)
+        text = (
+            candidate.get_text("\n", strip=True)
+            if candidate
+            else soup.get_text("\n", strip=True)
+        )
         text = re.sub(r"\n{2,}", "\n\n", text)
         return {"title": title, "text": text}
 
@@ -204,7 +226,11 @@ class ODPHPOutlinkFetch(BaseTool):
             try:
                 resp = requests.get(u, timeout=self.timeout, allow_redirects=True)
                 ct = resp.headers.get("Content-Type", "")
-                item: Dict[str, Any] = {"url": u, "status": resp.status_code, "content_type": ct}
+                item: Dict[str, Any] = {
+                    "url": u,
+                    "status": resp.status_code,
+                    "content_type": ct,
+                }
 
                 if "text/html" in ct or (not ct and resp.text.startswith("<!")):
                     ex = self._extract_text(resp.text)
@@ -221,6 +247,15 @@ class ODPHPOutlinkFetch(BaseTool):
                     item["text"] = ""
                 out.append(item)
             except requests.exceptions.RequestException as e:
-                out.append({"url": u, "status": 0, "content_type": "", "title": "", "text": "", "error": str(e)})
+                out.append(
+                    {
+                        "url": u,
+                        "status": 0,
+                        "content_type": "",
+                        "title": "",
+                        "text": "",
+                        "error": str(e),
+                    }
+                )
 
         return {"results": out, "metadata": {"source": "ODPHP OutlinkFetch"}}

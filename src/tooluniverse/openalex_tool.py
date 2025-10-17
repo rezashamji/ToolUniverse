@@ -150,7 +150,7 @@ class OpenAlexTool(BaseTool):
         citation_count = work.get("cited_by_count", 0)
         open_access = work.get("open_access", {}).get("is_oa", False)
         pdf_url = work.get("open_access", {}).get("oa_url")
-        
+
         # Extract keywords/concepts
         keywords = []
         concepts = work.get("concepts", [])
@@ -160,12 +160,16 @@ class OpenAlexTool(BaseTool):
                     concept_name = concept.get("display_name", "")
                     if concept_name:
                         keywords.append(concept_name)
-        
+
         # Extract article type
         article_type = work.get("type", "Unknown")
-        
+
         # Extract publisher
-        publisher = work.get("primary_location", {}).get("source", {}).get("publisher", "Unknown")
+        publisher = (
+            work.get("primary_location", {})
+            .get("source", {})
+            .get("publisher", "Unknown")
+        )
 
         return {
             "title": title,
@@ -187,11 +191,13 @@ class OpenAlexTool(BaseTool):
                 "has_abstract": bool(abstract and abstract != "Abstract not available"),
                 "has_authors": bool(authors),
                 "has_venue": bool(venue and venue != "Unknown venue"),
-                "has_year": bool(publication_year and publication_year != "Year not available"),
+                "has_year": bool(
+                    publication_year and publication_year != "Year not available"
+                ),
                 "has_doi": bool(doi and doi != "No DOI"),
                 "has_citation_count": bool(citation_count and citation_count > 0),
-                "has_keywords": bool(keywords)
-            }
+                "has_keywords": bool(keywords),
+            },
         }
 
     def get_paper_by_doi(self, doi):

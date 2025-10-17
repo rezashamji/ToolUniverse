@@ -18,7 +18,7 @@ ChatGPT API integration enables powerful programmatic scientific research throug
              │
    ┌─────────▼───────┐
    │  ToolUniverse   │ ← Tool Registry & Executor
-   │   (Python SDK)  │
+   │   (Python API)  │
    └─────────┬───────┘
              │
    ┌─────────▼───────┐

@@ -21,7 +21,11 @@
           "default": 20
         }
       },
-      "required": ["q"]
+      "required": [
+        "q",
+        "offset",
+        "size"
+      ]
     },
     "return_schema": {
       "type": "object",
@@ -62,8 +66,14 @@
       }
     },
     "test_examples": [
-      {"q": "id:HeLa", "size": 1},
-      {"q": "ox:9606 AND char:cancer", "size": 5}
+      {
+        "q": "id:HeLa",
+        "size": 1
+      },
+      {
+        "q": "ox:9606 AND char:cancer",
+        "size": 5
+      }
     ]
   },
   {
@@ -83,16 +93,34 @@
           "default": true
         }
       },
-      "required": ["query"]
+      "required": [
+        "query",
+        "include_explanation"
+      ]
     },
     "return_schema": {
       "type": "object",
       "properties": {
-        "success": {"type": "boolean", "description": "Whether the conversion was successful"},
-        "original_query": {"type": "string", "description": "The original natural language query"},
-        "solr_query": {"type": "string", "description": "The converted Solr query"},
-        "is_valid": {"type": "boolean", "description": "Whether the generated Solr query is valid"},
-        "validation_message": {"type": "string", "description": "Validation message for the Solr query"},
+        "success": {
+          "type": "boolean",
+          "description": "Whether the conversion was successful"
+        },
+        "original_query": {
+          "type": "string",
+          "description": "The original natural language query"
+        },
+        "solr_query": {
+          "type": "string",
+          "description": "The converted Solr query"
+        },
+        "is_valid": {
+          "type": "boolean",
+          "description": "Whether the generated Solr query is valid"
+        },
+        "validation_message": {
+          "type": "string",
+          "description": "Validation message for the Solr query"
+        },
         "explanation": {
           "type": "object",
           "properties": {
@@ -101,23 +129,56 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "field": {"type": "string", "description": "Mapped field tag"},
-                  "value": {"type": "string", "description": "Extracted value"},
-                  "confidence": {"type": "number", "description": "Confidence score for the mapping"},
-                  "match_reason": {"type": "string", "description": "Reason for the field mapping"}
+                  "field": {
+                    "type": "string",
+                    "description": "Mapped field tag"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "Extracted value"
+                  },
+                  "confidence": {
+                    "type": "number",
+                    "description": "Confidence score for the mapping"
+                  },
+                  "match_reason": {
+                    "type": "string",
+                    "description": "Reason for the field mapping"
+                  }
                 }
               }
             },
-            "transformations_applied": {"type": "array", "items": {"type": "string"}, "description": "List of transformations applied to the query"},
-            "available_fields": {"type": "array", "items": {"type": "string"}, "description": "List of available Cellosaurus field tags"}
+            "transformations_applied": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of transformations applied to the query"
+            },
+            "available_fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of available Cellosaurus field tags"
+            }
           }
         },
-        "error": {"type": "string", "description": "Error message if conversion failed"}
+        "error": {
+          "type": "string",
+          "description": "Error message if conversion failed"
+        }
       }
     },
     "test_examples": [
-      {"query": "human cancer cells", "include_explanation": true},
-      {"query": "HeLa cells AND lung", "include_explanation": false}
+      {
+        "query": "human cancer cells",
+        "include_explanation": true
+      },
+      {
+        "query": "HeLa cells AND lung",
+        "include_explanation": false
+      }
     ]
   },
   {
@@ -135,30 +196,65 @@
         "format": {
           "type": "string",
           "description": "Response format",
-          "enum": ["json", "xml", "txt", "fasta"],
+          "enum": [
+            "json",
+            "xml",
+            "txt",
+            "fasta"
+          ],
           "default": "json"
         },
         "fields": {
           "type": "array",
-          "items": {"type": "string"},
+          "items": {
+            "type": "string"
+          },
           "description": "Specific fields to retrieve (e.g., ['id', 'ox', 'char']). If not specified, all fields are returned."
         }
       },
-      "required": ["accession"]
+      "required": [
+        "accession",
+        "format",
+        "fields"
+      ]
     },
     "return_schema": {
       "type": "object",
       "properties": {
-        "success": {"type": "boolean", "description": "Whether the request was successful"},
-        "accession": {"type": "string", "description": "The requested accession number"},
-        "data": {"type": "object", "description": "Cell line data (structure depends on format and fields requested)"},
-        "format": {"type": "string", "description": "The response format"},
-        "error": {"type": "string", "description": "Error message if request failed"}
+        "success": {
+          "type": "boolean",
+          "description": "Whether the request was successful"
+        },
+        "accession": {
+          "type": "string",
+          "description": "The requested accession number"
+        },
+        "data": {
+          "type": "object",
+          "description": "Cell line data (structure depends on format and fields requested)"
+        },
+        "format": {
+          "type": "string",
+          "description": "The response format"
+        },
+        "error": {
+          "type": "string",
+          "description": "Error message if request failed"
+        }
       }
     },
     "test_examples": [
-      {"accession": "CVCL_0030"},
-      {"accession": "CVCL_0030", "fields": ["id", "ox", "char"]}
+      {
+        "accession": "CVCL_0030"
+      },
+      {
+        "accession": "CVCL_0030",
+        "fields": [
+          "id",
+          "ox",
+          "char"
+        ]
+      }
     ]
   }
 ]
