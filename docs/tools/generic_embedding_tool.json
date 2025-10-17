@@ -1,5 +1,6 @@
 [
   {
+    "_note": "Example only — not a real registered ToolUniverse tool. Shown in the tutorial for reference.",
     "type": "EmbeddingCollectionSearchTool",
     "name": "<your_collection_name>_search",
     "description": "Search the <your_collection_name> datastore by keyword/semantic similarity.",
