@@ -185,6 +185,15 @@ If you’re wiring this into a ToolUniverse agent, configure your tool:
    results = tool.run({"query": "glucose", "method": "hybrid", "top_k": 5})
    print(results)
 
+You can also define this tool directly in JSON form to register it in ToolUniverse.
+
+An example configuration file is provided here:
+``docs/tools/examples/generic_embedding_tool.json``
+
+This example shows how to specify the tool type, collection name, search parameters,
+and required fields for a basic embedding search tool.
+
+
 (Optional) Back up or share online (Hugging Face)
 -------------------------------------------------
 
