@@ -4,7 +4,7 @@ Hugging Face sync utilities for SQLite + FAISS datastore artifacts.
 Artifacts
 ---------
 - <collection>.db     : SQLite content store (docs, FTS5 mirror, metadata)
-- <collection>.faiss  : FAISS index (IndexFlatIP), sibling to the DB under ./data/embeddings
+- <collection>.faiss  : FAISS index (IndexFlatIP), sibling to the DB under the user cache dir (~/.cache/tooluniverse/embeddings)
 
 Public API
 ----------
@@ -15,8 +15,8 @@ upload(collection, repo, private=True, commit_message="Update")
     Create/ensure a HF dataset repo and upload <collection>.db/.faiss.
 
 download(repo, collection, overwrite=False)
-    Download *.db/*.faiss from a HF dataset repo snapshot and restore them
-    under ./data/embeddings as <collection>.db/.faiss.
+    Download *.db/*.faiss from a HF dataset repo snapshot and restores 
+    them under the user cache dir (~/.cache/tooluniverse/embeddings) as <collection>.db/.faiss.
 
 Notes
 -----
@@ -30,11 +30,12 @@ import shutil
 from pathlib import Path
 from dotenv import load_dotenv
 from huggingface_hub import HfApi, HfFolder, snapshot_download
+from tooluniverse.utils import get_user_cache_dir
 
 # Always load .env if present
 load_dotenv()
 
-DATA_DIR = Path("./data/embeddings")
+DATA_DIR = Path(os.environ.get("TU_DATA_DIR", os.path.join(get_user_cache_dir(), "embeddings")))
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -44,7 +45,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def db_path_for_collection(collection: str) -> Path:
-    """Return the absolute path for ``./data/embeddings/<collection>.db``."""
+    """Return the absolute path for the user cache dir (~/.cache/tooluniverse/embeddings/<collection>.db)."""
     return DATA_DIR / f"{collection}.db"
 
 

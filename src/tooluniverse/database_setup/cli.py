@@ -14,6 +14,7 @@ Env & credentials
 -----------------
 EMBED_PROVIDER, EMBED_MODEL and provider-specific keys (OPENAI / AZURE_* / HF_TOKEN).
 HF_TOKEN is required for syncing private repos.
+All local datastore files are stored under the user cache dir (~/.cache/tooluniverse/embeddings) by default.
 
 Exit codes
 ----------
@@ -29,7 +30,7 @@ from .hf.sync_hf import upload as sync_upload
 from .hf.sync_hf import download as sync_download
 from .packager import pack_folder
 from .embed_utils import get_model_dim
-
+from tooluniverse.utils import get_user_cache_dir
 
 def main():
     """Entry point for the `tu-datastore` CLI.
@@ -161,8 +162,10 @@ def main():
 
         # Derive dim automatically
         dim = get_model_dim(provider=provider, model=model)
+        default_db_dir = os.path.join(get_user_cache_dir(), "embeddings")
+        os.makedirs(default_db_dir, exist_ok=True)
         build_collection(
-            db_path="data/embeddings/{}.db".format(args.name),
+            db_path=os.path.join(default_db_dir, f"{args.name}.db"),
             collection=args.name,
             docs=docs,
             embed_provider=provider,

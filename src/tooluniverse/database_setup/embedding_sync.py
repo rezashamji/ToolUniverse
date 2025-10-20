@@ -21,7 +21,7 @@ from tooluniverse.database_setup.hf.sync_hf import (
     db_path_for_collection,
 )
 from tooluniverse.database_setup.sqlite_store import SQLiteStore
-
+from tooluniverse.utils import get_user_cache_dir
 
 def _collection_paths(name: str) -> Tuple[Path, Path]:
     db_path = db_path_for_collection(name)
@@ -75,7 +75,7 @@ class EmbeddingSync(BaseTool):
         self.hf_endpoint = hf_cfg.get("endpoint", "https://huggingface.co")
 
         storage_cfg = tool_config.get("configs", {}).get("storage_config", {})
-        self.data_dir = Path(storage_cfg.get("data_dir", "./data/embeddings"))
+        self.data_dir = Path(storage_cfg.get("data_dir", os.path.join(get_user_cache_dir(), "embeddings")))
         self.data_dir.mkdir(parents=True, exist_ok=True)
 
     def run(self, arguments: Dict[str, Any]):

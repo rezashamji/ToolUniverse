@@ -18,8 +18,8 @@ Inputs & configuration
 
 Outputs
 -------
-- data/embeddings/euhealth.db
-- data/embeddings/euhealth.faiss
+- <user_cache_dir>/embeddings/euhealth.db
+- <user_cache_dir>/embeddings/euhealth.faiss
 
 Notes
 -----
@@ -267,7 +267,7 @@ def build_euhealth_collection(
     Parameters
     ----------
     db_path : Optional[str]
-        Target SQLite path; defaults to ./data/embeddings/<collection>.db.
+        Target SQLite path; defaults to <user_cache_dir>/embeddings/<collection>.db.
     collection : str, default "euhealth"
         Collection name for both SQLite and FAISS files.
     embed : bool, default True

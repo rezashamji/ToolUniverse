@@ -2,7 +2,7 @@
 VectorStore: FAISS index management for per-collection embeddings.
 
 This module encapsulates a single FAISS index per collection:
-- Path convention: data/embeddings/<collection>.faiss (same base path as the SQLite file)
+- Path convention: <user_cache_dir>/embeddings/<collection>.faiss (same base path as the SQLite file)
 - Similarity: IndexFlatIP (inner product). With L2-normalized embeddings, IP ≈ cosine similarity.
 - Mapping: you pass (doc_ids, vectors) in the same order; FAISS IDs are aligned to doc_ids internally.
 
@@ -25,16 +25,17 @@ import numpy as np
 import sqlite3
 from pathlib import Path
 from typing import List, Tuple, Optional, Dict
-
+from tooluniverse.utils import get_user_cache_dir
 
 class VectorStore:
-    """Manage FAISS indices per collection, persisted under ./data/embeddings."""
+    """Manage FAISS indices per collection, persisted under the user cache dir (~/.cache/tooluniverse/embeddings)."""
 
-    def __init__(self, db_path: str, data_dir: str = "./data/embeddings"):
+    def __init__(self, db_path: str, data_dir: str | None = None):
         self.db = sqlite3.connect(db_path)
+        if data_dir is None:
+            data_dir = os.path.join(get_user_cache_dir(), "embeddings")
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(parents=True, exist_ok=True)
-
         # keep active indexes in memory
         self.indexes: Dict[str, faiss.Index] = {}
         self.dimensions: Dict[str, int] = {}
