@@ -2,6 +2,7 @@ ToolUniverse Datastore: the 5-step guide to make your data searchable and incorp
 ==========================================================================================================
 
 Make your own text searchable (by exact words, by meaning, or both) and use it from tools.
+All local collections are stored under `~/.cache/tooluniverse/embeddings/` by default.
 
 What you’ll do
 --------------
@@ -99,14 +100,14 @@ Build:
 
    # choose a name, e.g. "toy" (you can have many collections)
    tu-datastore build \
-   --db data/embeddings/toy.db \
+   --db ~/.cache/tooluniverse/embeddings/toy.db \
    --collection toy \
    --docs-json my.json \
    --provider "$EMBED_PROVIDER" \
    --model "$EMBED_MODEL"
 
-
-What this does: creates a small database (``toy.db``) and a FAISS index (``toy.faiss``) so your texts can be found by words and by meaning.
+What this does: creates a small database (`~/.cache/tooluniverse/embeddings/toy.db`) and a FAISS index (`toy.faiss`) so your texts can be found by words and by meaning.
+The embedding dimension is detected automatically. No extra parameters needed.
 
   Alternative (no JSON): put `.txt`/`.md` files in a folder and run:
 
@@ -119,8 +120,7 @@ What this does: creates a small database (``toy.db``) and a FAISS index (``toy.f
      tu-datastore quickbuild --name toy --from-folder ./my_texts \
        --provider azure --model text-embedding-3-small
 
-  It auto-detects the embedding dimension and builds `data/embeddings/toy.db` + `toy.faiss`.
-
+It automatically detects the embedding dimension and builds `~/.cache/tooluniverse/embeddings/toy.db` + `toy.faiss`.
 
 5) Search your collection
 -------------------------
@@ -130,18 +130,18 @@ Pick one (you can try all three):
 .. code-block:: bash
 
    # exact words
-   tu-datastore search --db data/embeddings/toy.db --collection toy \
-     --query glucose --method keyword
+   tu-datastore search --db ~/.cache/tooluniverse/embeddings/toy.db --collection toy \
+   --query glucose --method keyword
 
    # fuzzy meaning (uses your embedding service)
-   tu-datastore search --db data/embeddings/toy.db --collection toy \
-     --query glucose --method embedding \
-     --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL"
+   tu-datastore search --db ~/.cache/tooluniverse/embeddings/toy.db --collection toy \
+   --query glucose --method embedding \
+   --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL"
 
    # best of both (recommended)
-   tu-datastore search --db data/embeddings/toy.db --collection toy \
-     --query glucose --method hybrid \
-     --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL" --alpha 0.5
+   tu-datastore search --db ~/.cache/tooluniverse/embeddings/toy.db --collection toy \
+   --query glucose --method hybrid \
+   --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL" --alpha 0.5
 
 **Example result:**
 
@@ -165,14 +165,14 @@ If you’re wiring this into a ToolUniverse agent, configure your tool:
 
 * **Tool name**: ``EmbeddingCollectionSearchTool``
 * **fields.collection**: ``toy``
-* **fields.db_path**: ``data/embeddings/toy.db`` (optional; defaults to that path)
+* **fields.db_path**: `~/.cache/tooluniverse/embeddings/toy.db` (optional; defaults to that path)
 
 .. code-block:: python
 
    from tooluniverse.database_setup.generic_embedding_search_tool import EmbeddingCollectionSearchTool
 
    tool = EmbeddingCollectionSearchTool(
-     tool_config={"fields": {"collection": "toy", "db_path": "data/embeddings/toy.db"}}
+      tool_config={"fields": {"collection": "toy", "db_path": "~/.cache/tooluniverse/embeddings/toy.db"}}
    )
    results = tool.run({"query": "glucose", "method": "hybrid", "top_k": 5})
    print(results)
@@ -221,7 +221,7 @@ Mini FAQ
 --------
 
 * **What’s “hybrid” search?** A smart mix of exact words + meaning. Start there.
-* **Where are my files?** In ``data/embeddings/`` (e.g., ``toy.db`` and ``toy.faiss``).
+* **Where are my files?** In `~/.cache/tooluniverse/embeddings/` (e.g., `toy.db` and `toy.faiss`).
 * **Azure tip:** ``EMBED_MODEL`` is your **deployment name**.
 * **Changed model?** Just rebuild — the correct embedding dimension is detected automatically.* **Re-running build:** Safe. Duplicates (same ``doc_key``) are ignored; new text is added.
 * **“No results”** → Try `--method keyword` for exact terms; confirm `--collection` matches what you built.
