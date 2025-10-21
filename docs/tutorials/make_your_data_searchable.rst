@@ -1,4 +1,4 @@
-ToolUniverse Datastore: the 5-step guide to make your data searchable and incorporated as ToolUniverse tool
+ToolUniverse Datastore: the 3 minute guide to make your data searchable and incorporated as ToolUniverse tool
 ==========================================================================================================
 
 Make your own text searchable (by exact words, by meaning, or both) and use it from tools.
@@ -9,10 +9,10 @@ What you’ll do
 --------------
 
 1. Install
-2. Tell us which embedding service to use
-3. Save your data (JSON)
+2. Tell us which embedding service to use (OpenAI, Azure, or Hugging Face)
+3. Save your data (JSON or text files)
 4. Build a “collection” (your searchable library)
-5. Search it, and (optional) use it from a Tool or back it up online
+5. Search and/or use it inside an agent
 
 
 Helpful Terms
@@ -89,7 +89,7 @@ Here is an example, ``my.json``:
      {"doc_key":"d2","text":"Insulin is a hormone regulating glucose.","metadata":{"title":"Endocrine","tags":["Medicine"]}}
    ]
 
-  CSV isn’t a CLI input at the moment. If your data is a spreadsheet, export to CSV and convert to the JSON shape above (keep it simple: ``doc_key``, ``text``, and optional ``metadata``).
+  CSV isn’t supported. e.g. if your data is a spreadsheet, export to CSV and convert to the JSON shape above (keep it simple: ``doc_key``, ``text``, and optional ``metadata``).
 
 
 4) Build your collection
@@ -100,11 +100,7 @@ Build:
 .. code-block:: bash
 
    # choose a name, e.g. "toy" (you can have many collections)
-   tu-datastore build \
-   --collection toy \
-   --docs-json my.json \
-   --provider "$EMBED_PROVIDER" \
-   --model "$EMBED_MODEL"
+   tu-datastore build --collection toy --docs-json my.json
 
 What this does: creates a small database (`<user_cache_dir>/embeddings/toy.db`) and a FAISS index (`<user_cache_dir>/embeddings/toy.faiss`) so your texts can be found by words and by meaning.
 
@@ -114,11 +110,7 @@ What this does: creates a small database (`<user_cache_dir>/embeddings/toy.db`) 
 
      # uses EMBED_PROVIDER and EMBED_MODEL from your .env
      tu-datastore quickbuild --name toy --from-folder ./my_texts
-
-     # or override explicitly
-     tu-datastore quickbuild --name toy --from-folder ./my_texts \
-       --provider azure --model text-embedding-3-small
-
+     
 It automatically detects the embedding dimension and builds `<user_cache_dir>/embeddings/toy.db` + `<user_cache_dir>/embeddings/toy.faiss`.
 
 Tip: If you re-run the build or want to rebuild embeddings from scratch, add the flag --overwrite to the code block above.
@@ -126,23 +118,18 @@ Tip: If you re-run the build or want to rebuild embeddings from scratch, add the
 5) Search your collection
 -------------------------
 
-Pick one (you can try all three):
+Try any of these:
 
 .. code-block:: bash
 
-   # exact words
-   tu-datastore search --collection toy \
-   --query glucose --method keyword
+   # exact keyword match
+   tu-datastore search --collection toy --query glucose --method keyword
 
-   # fuzzy meaning (uses your embedding service)
-   tu-datastore search --collection toy \
-   --query glucose --method embedding \
-   --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL"
+   # Semantic meaning (uses your embedding service for embedding search)
+   tu-datastore search --collection toy --query glucose --method embedding
 
-   # best of both (recommended)
-   tu-datastore search --collection toy \
-   --query glucose --method hybrid \
-   --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL" --alpha 0.5
+   # Hybrid (recommended: combines both), alpha controls the mix (0.0=keyword only, 1.0=embedding only)
+   tu-datastore search --collection toy --query glucose --alpha 0.5
 
 **Example result:**
 
@@ -150,7 +137,6 @@ Pick one (you can try all three):
 
    [
      {
-       "doc_id": 2,
        "doc_key": "d2",
        "text": "Insulin is a hormone regulating glucose.",
        "metadata": {"title":"Endocrine","tags":["Medicine"]},
@@ -172,9 +158,7 @@ If you’re wiring this into a ToolUniverse agent, configure your tool:
 
    from tooluniverse.database_setup.generic_embedding_search_tool import EmbeddingCollectionSearchTool
 
-   tool = EmbeddingCollectionSearchTool(
-      tool_config={"fields": {"collection": "toy"}}
-   )
+   tool = EmbeddingCollectionSearchTool(tool_config={"fields": {"collection": "toy"}})
    results = tool.run({"query": "glucose", "method": "hybrid", "top_k": 5})
    print(results)
 
@@ -187,7 +171,7 @@ This example shows how to specify the tool type, collection name, search paramet
 and required fields for a basic embedding search tool.
 
 
-(Optional) Back up or share online (Hugging Face)
+Back up or share (Hugging Face)
 -------------------------------------------------
 
 Note: Uploading requires a Hugging Face *write token* tied to your account. 
@@ -224,17 +208,15 @@ Mini FAQ
 * **What’s “hybrid” search?** A smart mix of exact words + meaning. Start there.
 * **Azure tip:** ``EMBED_MODEL`` is your **deployment name**.
 * **Changed model?** Just rebuild — the correct embedding dimension is detected automatically.* **Re-running build:** Safe. Duplicates (same ``doc_key``) are ignored; new text is added.
-* **“No results”** → Try `--method keyword` for exact terms; confirm `--collection` matches what you built.
-* **Add more data** → Append to your JSON and re-run the same `build` command (same collection name).
-* **Where does my data upload?** `tu-datastore sync-hf upload` now uploads to **your** Hugging Face account by default, not to AgenticX.
-* **Where are my files?** In `<user_cache_dir>/embeddings/` (e.g., `toy.db` and `toy.faiss`). `<user_cache_dir>` is determined automatically by `get_user_cache_dir()` function.
-.. note::
+* **“No results”** Try `--method keyword` for exact terms; confirm `--collection` matches what you built.
+* **Add more data** Append to your JSON and re-run the same `build` command (same collection name).
+* **Where does my data upload?** `tu-datastore sync-hf upload` uploads to **your** Hugging Face account by default
+* **Where are my files?**
+  In `<user_cache_dir>/embeddings/` (e.g., `toy.db`, `toy.faiss`).
 
-   ``<user_cache_dir>`` is the folder automatically created by ToolUniverse to store all your local data.
-
-   * On macOS: ``~/Library/Caches/ToolUniverse``
-   * On Linux: ``~/.cache/tooluniverse``
-   * On Windows: ``%LOCALAPPDATA%\\ToolUniverse``
+  * macOS → `~/Library/Caches/ToolUniverse`
+  * Linux → `~/.cache/tooluniverse`
+  * Windows → `%LOCALAPPDATA%\ToolUniverse`
 
    You **don’t** need to create this folder manually; it’s created automatically when you run the commands below.
    
