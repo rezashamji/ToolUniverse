@@ -93,26 +93,18 @@ Here is an example, ``my.json``:
 4) Build your collection
 ------------------------
 
-You’ll pass the **embedding dimension** once. If you don’t know it, run this one-liner:
-
-.. code-block:: bash
-
-    DIM=$(python -m tooluniverse.database_setup.embed_utils \
-    --provider "$EMBED_PROVIDER" --model "$EMBED_MODEL")
-    echo "Embedding dimension: $DIM"
-
-Now build:
+Build:
 
 .. code-block:: bash
 
    # choose a name, e.g. "toy" (you can have many collections)
    tu-datastore build \
-     --db data/embeddings/toy.db \
-     --collection toy \
-     --docs-json my.json \
-     --provider "$EMBED_PROVIDER" \
-     --model "$EMBED_MODEL" \
-     --dim $DIM
+   --db data/embeddings/toy.db \
+   --collection toy \
+   --docs-json my.json \
+   --provider "$EMBED_PROVIDER" \
+   --model "$EMBED_MODEL"
+
 
 What this does: creates a small database (``toy.db``) and a FAISS index (``toy.faiss``) so your texts can be found by words and by meaning.
 
@@ -127,7 +119,7 @@ What this does: creates a small database (``toy.db``) and a FAISS index (``toy.f
      tu-datastore quickbuild --name toy --from-folder ./my_texts \
        --provider azure --model text-embedding-3-small
 
-  It auto-detects the correct dimension and builds `data/embeddings/toy.db` + `toy.faiss`.
+  It auto-detects the embedding dimension and builds `data/embeddings/toy.db` + `toy.faiss`.
 
 
 5) Search your collection
@@ -200,54 +192,30 @@ and required fields for a basic embedding search tool.
 Note: Uploading requires a Hugging Face *write token* tied to your account. 
 Downloading from public repos does not require a token.
 
-You have two options for saving and sharing your datastore:
+ You can upload and share your datastore directly through your **own Hugging Face account**.
 
-**1. Use your *own* Hugging Face repo**
+ When you run `tu-datastore sync-hf upload`, it uses your `HF_TOKEN` to determine your username automatically.
+ The data is stored in your personal namespace (e.g., `username/collection`).
 
-You control your repo and can sync your collections locally.
+ **To upload:**
 
-Add these lines to your existing **.env** (the same one you sourced before):
+ ```bash
+ tu-datastore sync-hf upload --collection toy
+ ```
 
-.. code-block:: bash
+ *(Optional)* You can override the repo name or make it private:
 
-   HF_TOKEN=YOUR_WRITE_TOKEN        # get from https://huggingface.co/settings/tokens
-   HF_REPO=your-username/tooluniverse-datastores
+ ```bash
+ tu-datastore sync-hf upload --collection toy --repo "username/my-toy-db" --private
+ ```
 
-Then reload once:
+**To download from any public repo:**
 
-.. code-block:: bash
+```bash
+tu-datastore sync-hf download --repo "username/my-toy-db" --collection toy --overwrite
+```
 
-   source .env
-
-Now you can upload/download:
-
-.. code-block:: bash
-
-   # upload (db + index)
-   tu-datastore sync-hf upload --collection toy --repo "$HF_REPO"
-
-   # download into data/embeddings as <collection>.db/.faiss
-   # (use --overwrite to replace existing files; or choose a new collection name, e.g. "toy2")
-   tu-datastore sync-hf download --repo "$HF_REPO" --collection toy --overwrite # overwrite to overwrite existing files, otherwise can be a new collection name such as toy2
-
-**2. Contribute to the shared AgenticX repo (advanced, community contribution)**
-
-If you’d like your collection included in the official
-``agenticx/tooluniverse-datastores`` repo, request collaborator access
-(e.g. open an issue or contact the maintainers). Once added, you can upload
-using the same command but with the AgenticX repo name:
-
-.. code-block:: bash
-
-   export HF_TOKEN=YOUR_WRITE_TOKEN   # must have write access to AgenticX
-   tu-datastore sync-hf upload \
-     --collection toy \
-     --repo agenticx/tooluniverse-datastores
-
-   # download (works for everyone, no special rights needed)
-   tu-datastore sync-hf download \
-     --repo agenticx/tooluniverse-datastores \
-     --collection toy --overwrite
+**If the repo is private**, only users with permission (or a valid `HF_TOKEN`) can download it.
 
 Mini FAQ
 --------
@@ -255,10 +223,10 @@ Mini FAQ
 * **What’s “hybrid” search?** A smart mix of exact words + meaning. Start there.
 * **Where are my files?** In ``data/embeddings/`` (e.g., ``toy.db`` and ``toy.faiss``).
 * **Azure tip:** ``EMBED_MODEL`` is your **deployment name**.
-* **Changed model?** Create a new collection name (simplest), or delete ``toy.faiss`` before rebuilding so dimensions match.
-* **Re-running build:** Safe. Duplicates (same ``doc_key``) are ignored; new text is added.
+* **Changed model?** Just rebuild — the correct embedding dimension is detected automatically.* **Re-running build:** Safe. Duplicates (same ``doc_key``) are ignored; new text is added.
 * **“No results”** → Try `--method keyword` for exact terms; confirm `--collection` matches what you built.
 * **Add more data** → Append to your JSON and re-run the same `build` command (same collection name).
+* **Where does my data upload?** `tu-datastore sync-hf upload` now uploads to **your** Hugging Face account by default, not to AgenticX.
 
 Want to dig deeper?
 -------------------

@@ -6,7 +6,7 @@ Use these tools to:
 * **Search** public EU health datasets by topic (e.g., cancer, vaccination, obesity, mental health…)
 * **Deep-dive** a dataset’s landing page to surface useful outgoing links (download portals, etc.)
 
-You do **not** need to know about “embeddings,” “dimensions,” or FAISS. We’ve handled it.
+You do **not** need to know about “embeddings,” “dimensions,” or FAISS. Everything is handled automatically.
 
 The tools read from a local library (a small database + index)::
 
@@ -24,16 +24,20 @@ Quick start (recommended): use the prebuilt library
 
 .. code-block:: bash
 
-   export HF_TOKEN=YOUR_HF_TOKEN
-   tu-datastore sync-hf download \
-     --repo agenticx/tooluniverse-datastores \
-     --collection euhealth \
-     --overwrite
+  # download from your own or any public Hugging Face repo
+  export HF_TOKEN=YOUR_HF_TOKEN
+  tu-datastore sync-hf download \
+    --repo "username/euhealth" \
+    --collection euhealth \
+    --overwrite
 
 That’s it. The files land in ``data/embeddings/`` where the tools expect them.
 
   Don’t have a token or prefer not to make an account? Skip to “Build it yourself” below.
 
+Tip:
+If you previously uploaded your own copy of the EUHealth datastore (tu-datastore sync-hf upload --collection euhealth),
+it lives at huggingface.co/<your_username>/euhealth.
 
 Use it
 ------
@@ -98,8 +102,7 @@ Then run:
 This writes the same two files to ``data/embeddings/``.
 Re-running is safe; it adds new items and skips duplicates.
 
-  You never need to figure out any “embedding dimension.” The builder detects what it needs.
-
+  You never need to provide an “embedding dimension” or any extra parameters. It’s automatically detected based on your model and provider.
 
 What each tool returns
 ----------------------
@@ -160,6 +163,10 @@ Common questions
 
   If not, use the **Quick start** download or the **Build it yourself** step.
 
+* **Where does my data upload now?**
+   When you run `tu-datastore sync-hf upload`, it uploads to **your Hugging Face account** (based on your `HF_TOKEN`).
+   The `--repo` flag is optional. If omitted, it defaults to `<username>/<collection>`.
+
 
 (Optional, for maintainers) Keep it fresh weekly
 ------------------------------------------------
@@ -171,9 +178,9 @@ We include a GitHub Actions workflow that rebuilds and uploads the library each 
 
 .. code-block:: bash
 
+  # upload to your own Hugging Face repo by default
    tu-datastore sync-hf upload \
      --collection euhealth \
-     --repo agenticx/tooluniverse-datastores \
      --private
 
 * You’ll need to add secrets for your chosen provider (e.g., ``OPENAI_API_KEY``) and ``HF_TOKEN``.
