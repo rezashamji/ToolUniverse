@@ -10,8 +10,8 @@ You do **not** need to know about “embeddings,” “dimensions,” or FAISS. 
 
 The tools read from a local library (a small database + index)::
 
-  ~/.cache/tooluniverse/embeddings/euhealth.db
-  ~/.cache/tooluniverse/embeddings/euhealth.faiss
+  <user_cache_dir>/embeddings/euhealth.db
+  <user_cache_dir>/embeddings/euhealth.faiss
 
 
 Quick start (recommended): use the prebuilt library
@@ -31,7 +31,7 @@ Quick start (recommended): use the prebuilt library
     --collection euhealth \
     --overwrite
 
-That’s it. The files land in ``~/.cache/tooluniverse/embeddings/`` where the tools expect them.
+That’s it. The files land in ``<user_cache_dir>/embeddings/`` where the tools expect them.
 
   Don’t have a token or prefer not to make an account? Skip to “Build it yourself” below.
 
@@ -68,7 +68,6 @@ If you want to sanity-check from Terminal (no coding):
 
    # Keyword search (works without any API keys)
   tu-datastore search \
-    --db ~/.cache/tooluniverse/embeddings/euhealth.db \
     --collection euhealth \
     --query cancer \
     --method keyword \
@@ -100,7 +99,7 @@ Then run:
    # build (crawl the portal, normalize, embed, index)
    python -m tooluniverse.euhealth.euhealth_live
 
-This writes the same two files to ``~/.cache/tooluniverse/embeddings/``.
+This writes the same two files to ``<user_cache_dir>/embeddings/``.
 Re-running is safe; it adds new items and skips duplicates.
 
   You never need to provide an “embedding dimension” or any extra parameters. It’s automatically detected based on your model and provider.
@@ -148,7 +147,7 @@ Common questions
 ----------------
 
 * **Do I need to configure anything in code?**
-  No. The tools are already registered. If the library exists in ``~/.cache/tooluniverse/embeddings/``, you can just ask the agent.
+  No. The tools are already registered. If the library exists in ``<user_cache_dir>/embeddings/``, you can just ask the agent.
 
 * **Can I filter by country/language?**
   Yes—just say it (“Germany”, “DE”, “English”, “en”). The tools accept both plain names and codes.
@@ -159,8 +158,8 @@ Common questions
 * **My agent says the EUHealth library isn’t found.**
   Make sure the files exist at::
 
-    ~/.cache/tooluniverse/embeddings/euhealth.db
-    ~/.cache/tooluniverse/embeddings/euhealth.faiss
+    <user_cache_dir>/embeddings/euhealth.db
+    <user_cache_dir>/embeddings/euhealth.faiss
 
   If not, use the **Quick start** download or the **Build it yourself** step.
 

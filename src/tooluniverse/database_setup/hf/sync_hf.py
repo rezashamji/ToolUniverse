@@ -4,7 +4,7 @@ Hugging Face sync utilities for SQLite + FAISS datastore artifacts.
 Artifacts
 ---------
 - <collection>.db     : SQLite content store (docs, FTS5 mirror, metadata)
-- <collection>.faiss  : FAISS index (IndexFlatIP), sibling to the DB under the user cache dir (~/.cache/tooluniverse/embeddings)
+- <collection>.faiss  : FAISS index (IndexFlatIP), sibling to the DB under the user cache dir (<user_cache_dir>/embeddings)
 
 Public API
 ----------
@@ -16,7 +16,7 @@ upload(collection, repo, private=True, commit_message="Update")
 
 download(repo, collection, overwrite=False)
     Download *.db/*.faiss from a HF dataset repo snapshot and restores 
-    them under the user cache dir (~/.cache/tooluniverse/embeddings) as <collection>.db/.faiss.
+    them under the user cache dir (<user_cache_dir>/embeddings) as <collection>.db/.faiss.
 
 Notes
 -----
@@ -44,7 +44,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 # ---------------------------
 
 def db_path_for_collection(collection: str) -> Path:
-    """Return the absolute path for the user cache dir (~/.cache/tooluniverse/embeddings/<collection>.db)."""
+    """Return the absolute path for the user cache dir (<user_cache_dir>/embeddings/<collection>.db)."""
     return DATA_DIR / f"{collection}.db"
 
 

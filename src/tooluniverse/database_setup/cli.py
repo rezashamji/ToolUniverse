@@ -14,7 +14,7 @@ Env & credentials
 -----------------
 EMBED_PROVIDER, EMBED_MODEL and provider-specific keys (OPENAI / AZURE_* / HF_TOKEN).
 HF_TOKEN is required for syncing private repos.
-All local datastore files are stored under the user cache dir (~/.cache/tooluniverse/embeddings) by default.
+All local datastore files are stored under the user cache dir (<user_cache_dir>/embeddings) by default.
 
 Exit codes
 ----------
@@ -45,7 +45,11 @@ def main():
 
     # build
     b = sub.add_parser("build", help="Build or extend a collection from docs")
-    b.add_argument("--db", required=True)
+    b.add_argument(
+        "--db",
+        required=False,
+        help="Optional path for the SQLite datastore. Defaults to <user_cache_dir>/embeddings/<collection>.db"
+    )
     b.add_argument("--collection", required=True)
     b.add_argument(
         "--docs-json",
@@ -72,6 +76,11 @@ def main():
         "--provider", help="Provider override (openai|azure|huggingface|local)"
     )
     qb.add_argument("--model", help="Model/deployment override")
+    qb.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Rebuild FAISS index even if collection already exists"
+    )
 
     # search
     s = sub.add_parser("search", help="Search a collection")
@@ -107,7 +116,7 @@ def main():
     down = sh_sub.add_parser("download", help="Download collection artifacts from HF")
     down.add_argument("--repo", required=True)
     down.add_argument("--collection", required=True)
-    down.add_argument("--overwrite", action="store_true")
+    down.add_argument("--overwrite", action="store_true", help="Rebuild FAISS index even if collection already exists")
 
     args = p.parse_args()
 
@@ -129,9 +138,29 @@ def main():
             else:
                 docs.append(tuple(d))
 
+        #build_collection(
+        #    args.db, args.collection, docs, args.provider, args.model, overwrite=args.overwrite
+        #)
+
+        # Determine db path (default to user cache dir if not provided)
+        if args.db:
+            db_path = os.path.expanduser(args.db)
+        else:
+            default_db_dir = os.path.join(get_user_cache_dir(), "embeddings")
+            os.makedirs(default_db_dir, exist_ok=True)
+            db_path = os.path.join(default_db_dir, f"{args.collection}.db")
+
         build_collection(
-            args.db, args.collection, docs, args.provider, args.model, overwrite=args.overwrite
+            db_path=db_path,
+            collection=args.collection,
+            docs=docs,
+            embed_provider=args.provider,
+            embed_model=args.model,
+            overwrite=args.overwrite,
         )
+
+        print(f"[INFO] Collection '{args.collection}' written to {db_path}")
+
 
 
     elif args.cmd == "search":
@@ -182,6 +211,7 @@ def main():
             docs=docs,
             embed_provider=provider,
             embed_model=model,
+            overwrite=args.overwrite,
         )
         print(f"Built collection '{args.name}' with {len(docs)} docs.")
 

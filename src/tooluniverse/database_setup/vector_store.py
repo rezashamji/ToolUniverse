@@ -29,7 +29,7 @@ from tooluniverse.utils import get_user_cache_dir
 import os
 
 class VectorStore:
-    """Manage FAISS indices per collection, persisted under the user cache dir (~/.cache/tooluniverse/embeddings)."""
+    """Manage FAISS indices per collection, persisted under the user cache dir (<user_cache_dir>/embeddings)."""
 
     def __init__(self, db_path: str, data_dir: str | None = None):
         self.db = sqlite3.connect(db_path)

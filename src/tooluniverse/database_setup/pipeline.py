@@ -81,7 +81,7 @@ def build_collection(
     except Exception as e:
         raise RuntimeError(f"Failed to detect embedding dimension: {e}")
 
-    os.makedirs(os.path.dirname(os.path.expanduser(db_path)), exist_ok=True)
+    #os.makedirs(os.path.dirname(os.path.expanduser(db_path)), exist_ok=True)
 
     store = SQLiteStore(db_path)
 
