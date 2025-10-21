@@ -5,16 +5,17 @@ Subcommands
 -----------
 build
     Upsert a collection, insert documents (with de-dup), embed texts, and write FAISS.
+quickbuild
+    Build a collection from a folder of text files (.txt/.md).
 search
-    Run keyword / embedding / hybrid queries against an existing collection.
+    Query an existing collection by keyword, embedding, or hybrid.
 sync-hf upload|download
     Upload/download <collection>.db and <collection>.faiss to/from Hugging Face.
 
-Env & credentials
------------------
-EMBED_PROVIDER, EMBED_MODEL and provider-specific keys (OPENAI / AZURE_* / HF_TOKEN).
-HF_TOKEN is required for syncing private repos.
-All local datastore files are stored under the user cache dir (<user_cache_dir>/embeddings) by default.
+Environment
+-----------
+Set EMBED_PROVIDER, EMBED_MODEL, and provider-specific keys (OPENAI / AZURE_* / HF_TOKEN).
+All datastore files default to <user_cache_dir>/embeddings/<collection>.db unless overridden.
 
 Exit codes
 ----------
@@ -24,196 +25,158 @@ Exit codes
 import argparse
 import json
 import os
-from .pipeline import build_collection
-from .pipeline import search
-from .hf.sync_hf import upload as sync_upload
-from .hf.sync_hf import download as sync_download
+from .pipeline import build_collection, search
+from .hf.sync_hf import upload as sync_upload, download as sync_download
 from .packager import pack_folder
-from .embed_utils import get_model_dim
 from tooluniverse.utils import get_user_cache_dir
 
+
+def resolve_db_path(db_arg, collection):
+    """Return resolved db path (user-specified or default cache dir)."""
+    if db_arg:
+        return os.path.expanduser(db_arg)
+    default_db_dir = os.path.join(get_user_cache_dir(), "embeddings")
+    os.makedirs(default_db_dir, exist_ok=True)
+    return os.path.join(default_db_dir, f"{collection}.db")
+
+
+def resolve_provider_model(provider_arg, model_arg):
+    """Use CLI args or fall back to environment variables."""
+    provider = provider_arg or os.getenv("EMBED_PROVIDER")
+    model = model_arg or os.getenv("EMBED_MODEL")
+    if not provider or not model:
+        raise SystemExit(
+            "Missing embedding provider or model. "
+            "Use --provider/--model or set EMBED_PROVIDER/EMBED_MODEL in your .env."
+        )
+    return provider, model
+
+
 def main():
-    """Entry point for the `tu-datastore` CLI.
-
-    Parses arguments and dispatches to:
-    - pipeline.build_collection / pipeline.search for datastore operations
-    - hf.sync_hf.upload / hf.sync_hf.download for Hugging Face synchronization
-    """
-
-    p = argparse.ArgumentParser("tu-datastore")
+    p = argparse.ArgumentParser("tu-datastore", description="Manage local searchable datastores.")
     sub = p.add_subparsers(dest="cmd")
 
+    # --------------------------------------------------------------------------
     # build
-    b = sub.add_parser("build", help="Build or extend a collection from docs")
-    b.add_argument(
-        "--db",
-        required=False,
-        help="Optional path for the SQLite datastore. Defaults to <user_cache_dir>/embeddings/<collection>.db"
-    )
-    b.add_argument("--collection", required=True)
-    b.add_argument(
-        "--docs-json",
-        required=True,
-        help="Path to JSON list of [doc_key, text, metadata, optional_hash]",
-    )
-    b.add_argument("--provider", required=True)
-    b.add_argument("--model", required=True)
-    b.add_argument(
-    "--overwrite",
-    action="store_true",
-    help="Rebuild FAISS index even if collection already exists"
-    )
+    # --------------------------------------------------------------------------
+    b = sub.add_parser("build", help="Build or extend a collection from JSON docs")
+    b.add_argument("--collection", required=True, help="Collection name (e.g. toy)")
+    b.add_argument("--docs-json", required=True, help="Path to JSON list of docs")
+    b.add_argument("--db", required=False, help="Optional path to SQLite DB")
+    b.add_argument("--provider", help="Embedding provider (openai, azure, huggingface, local)")
+    b.add_argument("--model", help="Embedding model name or deployment")
+    b.add_argument("--overwrite", action="store_true", help="Rebuild FAISS index if exists")
 
+    # --------------------------------------------------------------------------
     # quickbuild
-    qb = sub.add_parser(
-        "quickbuild", help="Build a collection from a folder of .txt/.md"
-    )
-    qb.add_argument(
-        "--name", required=True, help="Collection name (e.g., joe_guidelines)"
-    )
-    qb.add_argument("--from-folder", required=True, help="Folder containing .txt/.md")
-    qb.add_argument(
-        "--provider", help="Provider override (openai|azure|huggingface|local)"
-    )
-    qb.add_argument("--model", help="Model/deployment override")
-    qb.add_argument(
-        "--overwrite",
-        action="store_true",
-        help="Rebuild FAISS index even if collection already exists"
-    )
+    # --------------------------------------------------------------------------
+    qb = sub.add_parser("quickbuild", help="Build from a folder of text files (.txt/.md)")
+    qb.add_argument("--name", required=True, help="Collection name (e.g. mydata)")
+    qb.add_argument("--from-folder", required=True, help="Folder containing text files")
+    qb.add_argument("--provider", help="Embedding provider (openai, azure, huggingface, local)")
+    qb.add_argument("--model", help="Embedding model name or deployment")
+    qb.add_argument("--overwrite", action="store_true", help="Rebuild FAISS index if exists")
 
+    # --------------------------------------------------------------------------
     # search
-    s = sub.add_parser("search", help="Search a collection")
-    s.add_argument("--db", required=True)
-    s.add_argument("--collection", required=True)
-    s.add_argument("--query", required=True)
-    s.add_argument(
-        "--method", default="hybrid", choices=["keyword", "embedding", "hybrid"]
-    )
-    s.add_argument("--top-k", default=10, type=int)
-    s.add_argument("--alpha", default=0.5, type=float)
-    s.add_argument("--provider", help="Provider override for embedding/hybrid")
-    s.add_argument("--model", help="Model override for embedding/hybrid")
+    # --------------------------------------------------------------------------
+    s = sub.add_parser("search", help="Query an existing collection")
+    s.add_argument("--collection", required=True, help="Collection name (e.g. toy)")
+    s.add_argument("--query", required=True, help="Search query text")
+    s.add_argument("--db", required=False, help="Optional path to SQLite DB")
+    s.add_argument("--method", default="hybrid", choices=["keyword", "embedding", "hybrid"], help="Search method")
+    s.add_argument("--top-k", default=10, type=int, help="Number of results")
+    s.add_argument("--alpha", default=0.5, type=float, help="Hybrid mix weight")
+    s.add_argument("--provider", help="Embedding provider (optional)")
+    s.add_argument("--model", help="Embedding model (optional)")
 
+    # --------------------------------------------------------------------------
     # sync-hf
-    sh = sub.add_parser("sync-hf", help="Upload/download collection artifacts to HF")
+    # --------------------------------------------------------------------------
+    sh = sub.add_parser("sync-hf", help="Upload/download datastore artifacts to/from Hugging Face")
     sh_sub = sh.add_subparsers(dest="action", required=True)
 
     up = sh_sub.add_parser("upload", help="Upload collection artifacts to HF")
     up.add_argument("--collection", required=True)
-    up.add_argument(
-        "--repo",
-        required=False,
-        help="HF dataset repo ID. If omitted, defaults to <your_username>/<collection> using your HF_TOKEN."
-    )
-    up.add_argument(
-        "--private",
-        action="store_true",
-        help="Make the dataset private (default False)."
-    )
-
+    up.add_argument("--repo", help="HF dataset repo ID (defaults to <username>/<collection>)")
+    up.add_argument("--private", action="store_true", help="Make dataset private (default False)")
 
     down = sh_sub.add_parser("download", help="Download collection artifacts from HF")
     down.add_argument("--repo", required=True)
     down.add_argument("--collection", required=True)
-    down.add_argument("--overwrite", action="store_true", help="Rebuild FAISS index even if collection already exists")
+    down.add_argument("--overwrite", action="store_true", help="Overwrite existing index")
 
+    # --------------------------------------------------------------------------
+    # Parse
+    # --------------------------------------------------------------------------
     args = p.parse_args()
 
     if args.cmd == "build":
         with open(args.docs_json) as f:
             raw = json.load(f)
-        # Normalize dict-style docs.json into 3–4 tuples
-        docs = []
-        for d in raw:
-            if isinstance(d, dict):
-                docs.append(
-                    (
-                        d["doc_key"],
-                        d["text"],
-                        d.get("metadata", {}),
-                        d.get("text_hash"),  # may be None
-                    )
-                )
-            else:
-                docs.append(tuple(d))
+        docs = [
+            (
+                d.get("doc_key"),
+                d.get("text"),
+                d.get("metadata", {}),
+                d.get("text_hash"),
+            )
+            if isinstance(d, dict)
+            else tuple(d)
+            for d in raw
+        ]
 
-        #build_collection(
-        #    args.db, args.collection, docs, args.provider, args.model, overwrite=args.overwrite
-        #)
-
-        # Determine db path (default to user cache dir if not provided)
-        if args.db:
-            db_path = os.path.expanduser(args.db)
-        else:
-            default_db_dir = os.path.join(get_user_cache_dir(), "embeddings")
-            os.makedirs(default_db_dir, exist_ok=True)
-            db_path = os.path.join(default_db_dir, f"{args.collection}.db")
+        provider, model = resolve_provider_model(args.provider, args.model)
+        db_path = resolve_db_path(args.db, args.collection)
 
         build_collection(
             db_path=db_path,
             collection=args.collection,
             docs=docs,
-            embed_provider=args.provider,
-            embed_model=args.model,
+            embed_provider=provider,
+            embed_model=model,
             overwrite=args.overwrite,
         )
-
         print(f"[INFO] Collection '{args.collection}' written to {db_path}")
-
-
-
-    elif args.cmd == "search":
-        res = search(
-            args.db,
-            args.collection,
-            args.query,
-            method=args.method,
-            top_k=args.top_k,
-            alpha=args.alpha,
-            embed_provider=args.provider,
-            embed_model=args.model,
-        )
-        print(res)
-
-    elif args.cmd == "sync-hf":
-        if args.action == "upload":
-            sync_upload(
-                collection=args.collection, repo=args.repo, private=args.private
-            )
-        elif args.action == "download":
-            sync_download(
-                repo=args.repo,
-                collection=args.collection,
-                overwrite=args.overwrite,
-            )
 
     elif args.cmd == "quickbuild":
         docs = pack_folder(args.from_folder)
         if not docs:
             raise SystemExit("No supported files found. Put .txt or .md in the folder.")
-        
-        # Fall back to environment if args not provided
-        provider = args.provider or os.getenv("EMBED_PROVIDER")
-        model = args.model or os.getenv("EMBED_MODEL")
-        
-        if not provider or not model:
-            raise SystemExit(
-                "Missing embedding provider or model. Please specify --provider and --model, "
-                "or set EMBED_PROVIDER and EMBED_MODEL environment variables."
-            )
 
-        default_db_dir = os.path.join(get_user_cache_dir(), "embeddings")
-        os.makedirs(default_db_dir, exist_ok=True)
+        provider, model = resolve_provider_model(args.provider, args.model)
+        db_path = resolve_db_path(None, args.name)
+
         build_collection(
-            db_path=os.path.join(default_db_dir, f"{args.name}.db"),
+            db_path=db_path,
             collection=args.name,
             docs=docs,
             embed_provider=provider,
             embed_model=model,
             overwrite=args.overwrite,
         )
-        print(f"Built collection '{args.name}' with {len(docs)} docs.")
+        print(f"[INFO] Built collection '{args.name}' with {len(docs)} docs at {db_path}")
+
+    elif args.cmd == "search":
+        db_path = resolve_db_path(args.db, args.collection)
+        provider, model = resolve_provider_model(args.provider, args.model)
+        res = search(
+            db_path=db_path,
+            collection=args.collection,
+            query=args.query,
+            method=args.method,
+            top_k=args.top_k,
+            alpha=args.alpha,
+            embed_provider=provider,
+            embed_model=model,
+        )
+        print(json.dumps(res, indent=2))
+
+    elif args.cmd == "sync-hf":
+        if args.action == "upload":
+            sync_upload(collection=args.collection, repo=args.repo, private=args.private)
+        elif args.action == "download":
+            sync_download(repo=args.repo, collection=args.collection, overwrite=args.overwrite)
 
     else:
         p.print_help()
