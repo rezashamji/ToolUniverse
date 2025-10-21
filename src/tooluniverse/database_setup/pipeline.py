@@ -108,6 +108,7 @@ def build_collection(
     emb = Embedder(provider=embed_provider, model=embed_model)
     vecs = emb.embed(texts).astype("float32")
     vecs = _l2norm(vecs)
+    print(f"Embedded {len(vecs)} docs with shape {vecs.shape}")
 
     vs = VectorStore(db_path)
     # Optionally reset existing FAISS index if overwrite=True

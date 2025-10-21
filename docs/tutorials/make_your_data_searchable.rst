@@ -122,6 +122,8 @@ The embedding dimension is detected automatically. No extra parameters needed.
 
 It automatically detects the embedding dimension and builds `~/.cache/tooluniverse/embeddings/toy.db` + `toy.faiss`.
 
+Tip: If you re-run the build or want to rebuild embeddings from scratch, add the flag --overwrite to the code block above.
+
 5) Search your collection
 -------------------------
 
