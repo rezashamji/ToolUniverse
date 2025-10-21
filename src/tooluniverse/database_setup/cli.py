@@ -54,6 +54,11 @@ def main():
     )
     b.add_argument("--provider", required=True)
     b.add_argument("--model", required=True)
+    b.add_argument(
+    "--overwrite",
+    action="store_true",
+    help="Rebuild FAISS index even if collection already exists"
+    )
 
     # quickbuild
     qb = sub.add_parser(
@@ -125,7 +130,7 @@ def main():
                 docs.append(tuple(d))
 
         build_collection(
-            args.db, args.collection, docs, args.provider, args.model
+            args.db, args.collection, docs, args.provider, args.model, overwrite=args.overwrite
         )
 
 
