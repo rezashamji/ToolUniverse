@@ -15,6 +15,8 @@ from ..base_tool import BaseTool
 from ..tool_registry import register_tool
 from ..logging_config import get_logger
 
+from huggingface_hub import whoami
+
 from tooluniverse.database_setup.hf.sync_hf import (
     upload as hf_upload,
     download as hf_download,  # ensure you pulled the "rename-on-download" fix in sync_hf.py
@@ -97,11 +99,16 @@ class EmbeddingSync(BaseTool):
 
         if not collection:
             return {"error": "database_name is required"}
-        if not repo:
-            return {"error": "repository is required (format: username/repo-name)"}
         if not self.hf_token:
             return {"error": "HF_TOKEN is required in env or tool config"}
-
+        # Default repo to <username>/<collection> if not provided
+        if not repo:
+            try:
+                username = whoami(token=self.hf_token)["name"]
+                repo = f"{username}/{collection}"
+            except Exception as e:
+                return {"error": f"Could not resolve HF username from HF_TOKEN: {e}"}
+            
         db_path, faiss_path = _collection_paths(collection)
         if not db_path.exists():
             return {"error": f"Local DB not found: {db_path}"}

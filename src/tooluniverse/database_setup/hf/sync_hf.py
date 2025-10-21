@@ -21,7 +21,7 @@ download(repo, collection, overwrite=False)
 Notes
 -----
 - Requires HF_TOKEN (env or HfFolder) for private repos or authenticated uploads.
-- Upload streams large files; download uses huggingface_hub.snapshot_download.
+- Upload streams large files; download uses tooluniverse.utils.download_from_hf.
 - Existing local files are preserved unless overwrite=True.
 """
 
@@ -29,8 +29,9 @@ import os
 import shutil
 from pathlib import Path
 from dotenv import load_dotenv
-from huggingface_hub import HfApi, HfFolder, snapshot_download
-from tooluniverse.utils import get_user_cache_dir
+from huggingface_hub import HfApi, HfFolder, whoami
+from tooluniverse.utils import download_from_hf
+from tooluniverse.utils import get_user_cache_dir  # ensure imported for DATA_DIR setup
 
 # Always load .env if present
 load_dotenv()
@@ -38,11 +39,9 @@ load_dotenv()
 DATA_DIR = Path(os.environ.get("TU_DATA_DIR", os.path.join(get_user_cache_dir(), "embeddings")))
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-
 # ---------------------------
 # Helpers
 # ---------------------------
-
 
 def db_path_for_collection(collection: str) -> Path:
     """Return the absolute path for the user cache dir (~/.cache/tooluniverse/embeddings/<collection>.db)."""
@@ -50,14 +49,7 @@ def db_path_for_collection(collection: str) -> Path:
 
 
 def get_hf_api():
-    """Return an authenticated (HfApi, token) tuple.
-
-    Raises
-    ------
-    RuntimeError
-        If no token is available from HF_TOKEN or HfFolder.
-    """
-
+    """Return an authenticated (HfApi, token) tuple."""
     token = os.getenv("HF_TOKEN") or HfFolder.get_token()
     if not token:
         raise RuntimeError("HF_TOKEN not set in environment or .env file")
@@ -68,34 +60,18 @@ def get_hf_api():
 # Upload
 # ---------------------------
 
-
 def upload(
-    collection: str, repo: str, private: bool = True, commit_message: str = "Update"
+    collection: str, repo: str = None, private: bool = True, commit_message: str = "Update"
 ):
-    """Upload a collection’s DB and FAISS index to a HF dataset repo.
-
-    Parameters
-    ----------
-    collection : str
-        Name of the local collection; resolves <collection>.db/.faiss under DATA_DIR.
-    repo : str
-        Dataset repo ID (e.g., "org/name").
-    private : bool, default True
-        Create/use a private repo when True.
-    commit_message : str, default "Update"
-        Commit message for the upload.
-
-    Raises
-    ------
-    FileNotFoundError
-        If <collection>.db does not exist locally.
-    RuntimeError
-        On missing/invalid auth.
-    """
-
+    """Upload a collection’s DB and FAISS index to the user’s own HF account."""
     api, token = get_hf_api()
+    username = whoami(token=token)["name"]
 
-    # Ensure repo exists
+    # Default to user's own namespace if not provided
+    if repo is None:
+        repo = f"{username}/{collection}"
+        print(f"No repo specified — using default: {repo}")
+
     api.create_repo(
         repo_id=repo, repo_type="dataset", private=private, exist_ok=True, token=token
     )
@@ -131,61 +107,62 @@ def upload(
 
 
 # ---------------------------
-# Download
+# Download (via utils.download_from_hf)
 # ---------------------------
 
-def download(repo: str, collection: str, overwrite: bool = False):
-    """Download *.db/*.faiss from a HF dataset repo and restore them locally.
-
-    Parameters
-    ----------
-    repo : str
-        Dataset repo ID to pull from (e.g., "org/name").
-    collection : str
-        Base name to save as: produces <name>.db and <name>.faiss under DATA_DIR.
-    overwrite : bool, default False
-        Replace local files if they already exist.
-
-    Notes
-    -----
-    - Chooses the first *.db and first *.faiss found in the snapshot.
-    - Prints progress to stdout.
+def _download_one(repo: str, filename: str, local_target: Path, overwrite: bool = False):
     """
-    
-    _, token = get_hf_api()
+    Helper to fetch one file (DB or FAISS) using tooluniverse.utils.download_from_hf.
+    """
 
-    snapshot_path = snapshot_download(
-        repo_id=repo,
-        repo_type="dataset",
-        token=token,
-    )
+    token = os.getenv("HF_TOKEN") or HfFolder.get_token() or ""
+    cfg = {
+        "hf_dataset_path": {
+            "repo_id": repo,
+            "path_in_repo": filename,
+            "save_to_local_dir": str(DATA_DIR),
+            "token": token,
+        }
+    }
 
-    snap = Path(snapshot_path)
-    db_candidates = sorted(snap.glob("*.db"))
-    faiss_candidates = sorted(snap.glob("*.faiss"))
 
+    res = download_from_hf(cfg)
+    if not res.get("success"):
+        raise RuntimeError(f"Failed to download {filename}: {res.get('error')}")
+
+    downloaded_path = Path(res["local_path"])
+    if downloaded_path.resolve() == local_target.resolve():
+        return local_target  # already correct location
+
+    if local_target.exists() and not overwrite:
+        print(f" {local_target.name} already exists. Skipping (use --overwrite).")
+        return local_target
+
+    shutil.copyfile(downloaded_path, local_target)
+    return local_target
+
+
+def download(repo: str, collection: str, overwrite: bool = False):
+    """Download <collection>.db and <collection>.faiss using the unified helper."""
     dest_db = db_path_for_collection(collection)
     dest_faiss = DATA_DIR / f"{collection}.faiss"
 
-    if db_candidates:
-        src_db = db_candidates[0]
-        if overwrite or not dest_db.exists():
-            shutil.copy(src_db, dest_db)
-            print(f" Restored {dest_db.name} from {src_db.name}")
-        else:
-            print(f" {dest_db.name} already exists locally. Skipping (use --overwrite).")
-    else:
-        print(" No DB found in HF repo snapshot")
+    print(f"📦 Downloading from {repo} into {DATA_DIR}...")
 
-    if faiss_candidates:
-        src_faiss = faiss_candidates[0]
-        if overwrite or not dest_faiss.exists():
-            shutil.copy(src_faiss, dest_faiss)
-            print(f" Restored {dest_faiss.name} from {src_faiss.name}")
-        else:
-            print(f" {dest_faiss.name} already exists locally. Skipping (use --overwrite).")
-    else:
-        print(" No FAISS index found in HF repo snapshot")
+    # Download DB
+    try:
+        db_path = _download_one(repo, f"{collection}.db", dest_db, overwrite)
+        print(f" Restored {db_path.name} from {repo}")
+    except Exception as e:
+        print(f" Failed to download DB: {e}")
+        return
+
+    # Download FAISS (optional)
+    try:
+        faiss_path = _download_one(repo, f"{collection}.faiss", dest_faiss, overwrite)
+        print(f" Restored {faiss_path.name} from {repo}")
+    except Exception as e:
+        print(f" No FAISS index found or failed to download: {e}")
 
     print(f" Download complete for {collection} from {repo}")
 
@@ -197,33 +174,25 @@ def download(repo: str, collection: str, overwrite: bool = False):
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(
-        description="Sync datastore collections with Hugging Face Hub"
-    )
+    parser = argparse.ArgumentParser(description="Sync datastore collections with Hugging Face Hub")
     subparsers = parser.add_subparsers(dest="command")
 
     # Upload
     up = subparsers.add_parser("upload", help="Upload a collection to HF Hub")
+    up.add_argument("--collection", required=True, help="Collection name (e.g., euhealth, demo)")
     up.add_argument(
-        "--collection", required=True, help="Collection name (e.g., euhealth, demo)"
+        "--repo",
+        required=False,
+        help="HF dataset repo ID (default: <your_username>/<collection> based on HF_TOKEN)"
     )
-    up.add_argument("--repo", required=True, help="HF dataset repo ID")
     up.add_argument("--private", action="store_true", help="Make repo private")
-    up.add_argument(
-        "--commit_message", default="Update", help="Commit message for upload"
-    )
+    up.add_argument("--commit_message", default="Update", help="Commit message for upload")
 
     # Download
     down = subparsers.add_parser("download", help="Download a collection from HF Hub")
     down.add_argument("--repo", required=True, help="HF dataset repo ID")
-    down.add_argument(
-        "--collection",
-        required=True,
-        help="Local collection name (e.g., euhealth, demo)",
-    )
-    down.add_argument(
-        "--overwrite", action="store_true", help="Overwrite existing local DB/FAISS"
-    )
+    down.add_argument("--collection", required=True, help="Local collection name (e.g., euhealth, demo)")
+    down.add_argument("--overwrite", action="store_true", help="Overwrite existing local DB/FAISS")
 
     args = parser.parse_args()
 

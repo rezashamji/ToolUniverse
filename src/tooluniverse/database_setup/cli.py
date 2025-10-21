@@ -54,7 +54,6 @@ def main():
     )
     b.add_argument("--provider", required=True)
     b.add_argument("--model", required=True)
-    b.add_argument("--dim", required=True, type=int)
 
     # quickbuild
     qb = sub.add_parser(
@@ -88,8 +87,17 @@ def main():
 
     up = sh_sub.add_parser("upload", help="Upload collection artifacts to HF")
     up.add_argument("--collection", required=True)
-    up.add_argument("--repo", required=True)
-    up.add_argument("--private", action="store_true")
+    up.add_argument(
+        "--repo",
+        required=False,
+        help="HF dataset repo ID. If omitted, defaults to <your_username>/<collection> using your HF_TOKEN."
+    )
+    up.add_argument(
+        "--private",
+        action="store_true",
+        help="Make the dataset private (default False)."
+    )
+
 
     down = sh_sub.add_parser("download", help="Download collection artifacts from HF")
     down.add_argument("--repo", required=True)
@@ -117,8 +125,9 @@ def main():
                 docs.append(tuple(d))
 
         build_collection(
-            args.db, args.collection, docs, args.provider, args.model, args.dim
+            args.db, args.collection, docs, args.provider, args.model
         )
+
 
     elif args.cmd == "search":
         res = search(
@@ -160,8 +169,6 @@ def main():
                 "or set EMBED_PROVIDER and EMBED_MODEL environment variables."
             )
 
-        # Derive dim automatically
-        dim = get_model_dim(provider=provider, model=model)
         default_db_dir = os.path.join(get_user_cache_dir(), "embeddings")
         os.makedirs(default_db_dir, exist_ok=True)
         build_collection(
@@ -170,7 +177,6 @@ def main():
             docs=docs,
             embed_provider=provider,
             embed_model=model,
-            embed_dim=dim,
         )
         print(f"Built collection '{args.name}' with {len(docs)} docs.")
 

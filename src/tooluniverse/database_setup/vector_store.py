@@ -26,6 +26,7 @@ import sqlite3
 from pathlib import Path
 from typing import List, Tuple, Optional, Dict
 from tooluniverse.utils import get_user_cache_dir
+import os
 
 class VectorStore:
     """Manage FAISS indices per collection, persisted under the user cache dir (~/.cache/tooluniverse/embeddings)."""
