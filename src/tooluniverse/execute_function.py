@@ -385,9 +385,16 @@ class ToolUniverse:
                 tool_config["type"] = name
 
             self.all_tools.append(tool_config)
+            tool_name_in_config = tool_config.get("name", name)
+            self.all_tool_dict[tool_name_in_config] = tool_config
             if "name" in tool_config:
                 self.all_tool_dict[tool_config["name"]] = tool_config
 
+        # Choose the most user-meaningful name for logs/return
+        display_name = tool_name_in_config if tool_config else (tool_name or name)
+
+        self.logger.info(f"Custom tool '{display_name}' (type={tool_class.__name__}) registered successfully!")
+        
         self.logger.info(f"Custom tool '{name}' registered successfully!")
         return name
 

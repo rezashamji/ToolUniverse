@@ -231,21 +231,26 @@ Save as ``toy_search_tool.json``:
 
 .. code-block:: json
 
-   {
-     "name": "toy_search",
-     "type": "EmbeddingCollectionSearchTool",
-     "fields": { "collection": "toy" },
-     "parameter": {
-       "type": "object",
-       "properties": {
-         "query":  { "type": "string",  "description": "Search text" },
-         "method": { "type": "string",  "default": "hybrid", "enum": ["keyword", "embedding", "hybrid"] },
-         "top_k":  { "type": "integer", "default": 5 },
-         "alpha":  { "type": "number",  "default": 0.5, "description": "Hybrid mix (0..1)" }
-       },
-       "required": ["query"]
-     }
-   }
+[
+  {
+    "name": "toy_search",
+    "description": "Search a local embedding collection by keyword, meaning, or hybrid similarity.",
+    "type": "EmbeddingCollectionSearchTool",
+    "fields": { "collection": "toy" },
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "query":  { "type": "string",  "description": "Search text" },
+        "method": { "type": "string",  "default": "hybrid", "enum": ["keyword", "embedding", "hybrid"] },
+        "top_k":  { "type": "integer", "default": 5 },
+        "alpha":  { "type": "number",  "default": 0.5, "description": "Hybrid mix (0..1)" }
+      },
+      "required": ["query"]
+    }
+  }
+]
+
+> **Note:** Tool files must be a JSON **array** of tool objects. Use the array form even for a single tool.
 
 2) Load it and call it
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -284,7 +289,7 @@ Use it when you want to:
 
    tu-datastore sync-hf upload --collection toy
    # or override destination / make public:
-   tu-datastore sync-hf upload --collection toy --repo "username/my-toy-db" --no-private
+   tu-datastore sync-hf upload --collection toy --repo "your_username/my-toy-db" --no-private
    # add tool JSON(s) to the dataset (optional):
    tu-datastore sync-hf upload --collection toy --tool-json toy_search_tool.json
 
@@ -293,10 +298,12 @@ Use it when you want to:
 .. code-block:: bash
 
    # Download DB + FAISS only (preserves existing files unless --overwrite)
-   tu-datastore sync-hf download --repo "username/my-toy-db" --collection toy --overwrite
+   tu-datastore sync-hf download --repo "your_username/my-toy-db" --collection toy --overwrite
    # Download DB + FAISS + tool JSONs (downloads any *.json in the dataset) 
-   tu-datastore sync-hf download --repo "username/my-toy-db" --collection toy --overwrite --include-tools
+   tu-datastore sync-hf download --repo "your_username/my-toy-db" --collection toy --overwrite --include-tools
 
+All files download into your local cache at: ``<user_cache_dir>/embeddings/<collection>/``.
+  
 Advanced: use from Python (developers)
 --------------------------------------
 

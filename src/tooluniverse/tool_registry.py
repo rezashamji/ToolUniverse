@@ -446,3 +446,14 @@ def get_tool_class_lazy(tool_name):
         return _tool_registry.get(tool_name)
 
     return None
+
+# --- Register EmbeddingCollectionSearchTool (lazy import to avoid circular dependency) ---
+try:
+    import importlib
+    EmbeddingCollectionSearchTool = getattr(
+        importlib.import_module("tooluniverse.database_setup.generic_embedding_search_tool"),
+        "EmbeddingCollectionSearchTool",
+    )
+    register_external_tool("EmbeddingCollectionSearchTool", EmbeddingCollectionSearchTool)
+except Exception as e:
+    logger.warning(f"Could not register EmbeddingCollectionSearchTool: {e}")
