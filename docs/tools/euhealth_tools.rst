@@ -28,7 +28,7 @@ The tools read from a local library (a small database + index)::
 
 export HF_TOKEN=YOUR_HF_TOKEN
 tu-datastore sync-hf download 
---repo "username/euhealth" 
+--repo "your_username/euhealth" 
 --collection euhealth 
 --overwrite
 
@@ -170,8 +170,8 @@ You never need to specify an embedding dimension or configuration. ToolUniverse 
   If not, use the **Quick start** download or the **Build it yourself** step.
 
 * **Where does my data upload now?**
-  When you run `tu-datastore sync-hf upload --collection euhealth`, ToolUniverse automatically detects your `HF_TOKEN` and uploads to **your own Hugging Face namespace** (`username/euhealth`).
-  The `--repo` flag is optional; if omitted, it defaults to `<username>/<collection>`.
+  When you run `tu-datastore sync-hf upload --collection euhealth`, ToolUniverse automatically detects your `HF_TOKEN` and uploads to **your own Hugging Face namespace** (`your_username/euhealth`).
+  The `--repo` flag is optional; if omitted, it defaults to `<your_username>/<collection>`.
 
 ---
 
