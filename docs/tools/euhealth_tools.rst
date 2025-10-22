@@ -1,4 +1,5 @@
-# EUHealth tools: find and explore EU public-health datasets
+EUHealth tools: find and explore EU public-health datasets
+=========================================================
 
 Use these tools to:
 
@@ -15,7 +16,8 @@ The tools read from a local library (a small database + index)::
 
 ---
 
-## Quick start (recommended): use the prebuilt library
+Quick start (recommended): use the prebuilt library
+---------------------------------------------------
 
 1. **Get a Hugging Face token** (free account).
    Copy it once (Settings → Access Tokens).
@@ -43,7 +45,8 @@ it lives at `huggingface.co/<your_username>/euhealth`.
 
 ---
 
-## Use it
+Use it
+------
 
 Just talk to your agent in plain English. Examples:
 
@@ -62,7 +65,8 @@ Behind the scenes, the agent uses the tools defined in
 
 ---
 
-## Optional: quick terminal “smoke test”
+Optional: quick terminal “smoke test”
+----------------------------------------
 
 If you want to sanity-check from Terminal (no coding):
 
@@ -81,7 +85,8 @@ You should see a few JSON results (uuid, title, landing_page, etc.).
 
 ---
 
-## Build it yourself (only if you can’t use the prebuilt)
+Build it yourself (only if you can’t use the prebuilt)
+------------------------------------------------------
 
 If you can’t download from Hugging Face, you can build locally. You’ll need any one of:
 
@@ -110,7 +115,8 @@ You never need to specify an embedding dimension or configuration. ToolUniverse 
 
 ---
 
-## What each tool returns
+What each tool returns
+----------------------
 
 **Topic search tools** (e.g., cancer, vaccination, mental health) return a list of:
 
@@ -150,7 +156,8 @@ You never need to specify an embedding dimension or configuration. ToolUniverse 
 
 ---
 
-## Common questions
+Common questions
+-------------------
 
 * **Do I need to configure anything in code?**
   No, the tools are already registered. If the library exists in `<user_cache_dir>/embeddings/`, you can just ask the agent.
@@ -175,11 +182,12 @@ You never need to specify an embedding dimension or configuration. ToolUniverse 
 
 ---
 
-## (Optional, for maintainers) Keep it fresh weekly
+(Optional, for maintainers) Keep it fresh weekly
+------------------------------------------------
 
 We include a GitHub Actions workflow that rebuilds and uploads the library each week.
 
-* File: `.github/workflows/euhealth-cache-weekly-refresh.yml`
+* File: `.github/workflows/euhealth-cache-refresh.yml`
 * It runs the live builder and then:
 
 .. code-block:: bash
@@ -196,7 +204,8 @@ Most users can ignore this; it’s just for keeping the dataset library up to da
 
 ---
 
-## You’re set
+You’re set
+----------
 
 * Prefer the **Quick start** download.
 * Ask the agent normal questions (“Find cancer datasets in Germany”).
@@ -208,4 +217,4 @@ If you later want the nitty-gritty (how we crawl, embed, index), see the develop
 .. note::
 
 Want to build or share your **own** searchable dataset or tool (like EUHealth)?
-See: `docs/tutorials/make_your_data_searchable.rst`: the 3-minute guide to creating and publishing your own ToolUniverse datastore.
+See: `docs/tutorials/build_search_and_share_datastores.rst`: the 3-minute guide to creating and publishing your own ToolUniverse datastore.
