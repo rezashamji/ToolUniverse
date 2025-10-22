@@ -82,57 +82,101 @@ Create a file named **.env** in the repo root. Paste one block below, then run `
    EMBED_PROVIDER=local
    EMBED_MODEL=all-MiniLM-L6-v2  # example local model name
 
-Prepare your data (JSON)
-------------------------
-
-Save as ``.json`` with ``doc_key``, ``text``, and optional ``metadata``.
-
-Example ``my.json``:
-
-.. code-block:: json
-
-   [
-     {"doc_key":"d1","text":"Mitochondria is the powerhouse of the cell.","metadata":{"title":"Cells","tags":["Biology"]}},
-     {"doc_key":"d2","text":"Insulin is a hormone regulating glucose.","metadata":{"title":"Endocrine","tags":["Medicine"]}}
-   ]
-
-CSV isn’t supported. If your data is in a spreadsheet, export to CSV and convert to the JSON shape above.
-   
 Build your collection
 ---------------------
 
-You can create a searchable datastore from either text files or a JSON list of documents.
+Create a searchable datastore from either a **folder of text files** or a **JSON list of documents**.
 
-**Option 1: QuickBuild (recommended)**
-
-.. code-block:: bash
-
-   tu-datastore quickbuild --name toy --from-folder ./my_texts
-
-Automatically:
-- detects your embedding model and dimension from `.env`
-- builds `<user_cache_dir>/embeddings/toy.db` + `toy.faiss`
-
-**Option 2: Build from JSON**
+**Option 1: QuickBuild (recommended) — point at a folder of text files**
 
 .. code-block:: bash
 
-   tu-datastore build --collection toy --docs-json my.json
+tu-datastore quickbuild --name toy --from-folder ./my_texts
 
-Same result, but accepts structured JSON with `doc_key`, `text`, and optional `metadata`.
+What goes in `./my_texts`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* **Supported files:** `.txt` and `.md` (scanned **recursively**).
+* Put whatever **plain text** you want to search inside these files.
+* **Each file becomes one document**:
+
+  * `doc_key` = file’s **relative path** (e.g., `biology/mitochondria.md`)
+  * `text` = file contents
+  * basic `metadata` is auto-filled (title, path, source)
+
+**Example (bio-themed):**
+
+.. code-block:: text
+
+my_texts/
+├── cells_intro.txt
+├── biology/
+│   └── mitochondria.md
+└── endocrine/
+└── insulin.md
+
+**Result of running QuickBuild:**
+
+* **One collection:** `toy`
+* **One DB:** `<user_cache_dir>/embeddings/toy.db`
+* **One FAISS index:** `<user_cache_dir>/embeddings/toy.faiss`
+
+What happens automatically
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Detects your embedding provider/model and **dimension** from `.env` (or CLI flags).
+* Safe to re-run: duplicates by key/content are skipped.
 
 .. note::
-   Advanced users can override provider/model or choose a custom DB path:
+Need other file types (e.g., `.rst`) or richer per-doc metadata/tags? Use **Option 2 (JSON)** or convert to `.txt/.md`.
 
-   .. code-block:: bash
+**Option 2: Build from JSON (structured)**
 
-      tu-datastore build \
-        --collection toy \
-        --docs-json my.json \
-        --provider openai \
-        --model text-embedding-3-small \
-        --db ~/.cache/tooluniverse/embeddings/custom.db
+Use when you want control over IDs and metadata.
 
+.. code-block:: bash
+
+tu-datastore build --collection toy --docs-json my.json
+
+Expected JSON (list of documents):
+
+.. code-block:: json
+
+[
+{"doc_key": "d1", "text": "Mitochondria is the powerhouse of the cell.", "metadata": {"title": "Cells", "tags": ["Biology"]}},
+{"doc_key": "d2", "text": "Insulin regulates glucose.", "metadata": {"title": "Endocrine", "tags": ["Medicine"]}}
+]
+
+* **Required:** `doc_key` (unique per collection), `text`
+* **Optional:** `metadata` (any JSON object), `text_hash` (string)
+* Produces the **same** `.db` and `.faiss` artifacts as QuickBuild.
+* Safe to re-run; duplicates are skipped.
+
+.. tip::
+Have JSONL? Load it and emit the same **list-of-objects** shape before passing to `--docs-json`.
+
+Choosing quickly
+^^^^^^^^^^^^^^^^
+
+* **Use QuickBuild** if you have plain `.txt/.md` files and want the fastest path.
+* **Use JSON** if you need stable IDs, tags/metadata, or non-`.txt/.md` sources.
+
+Advanced options
+^^^^^^^^^^^^^^^^
+
+Override provider/model or set a custom DB path:
+
+.. code-block:: bash
+
+tu-datastore build 
+--collection toy 
+--docs-json my.json 
+--provider openai 
+--model text-embedding-3-small 
+--db ~/.cache/tooluniverse/embeddings/custom.db
+
+.. note::
+`quickbuild` does **not** read JSON files in a folder; use `build --docs-json` for JSON ingestion.
 
 Try a search (CLI)
 ------------------
@@ -160,6 +204,8 @@ Try a search (CLI)
      }
    ]
 
+You only need EMBED_PROVIDER/EMBED_MODEL for building collections or for embedding/hybrid search. ``keyword`` search and ``sync-hf`` do **not** require an embedding provider/model.
+
 Use your collection in ToolUniverse (recommended)
 -------------------------------------------------
 
@@ -168,13 +214,20 @@ You’ll create a small **JSON tool definition** and load it. That’s it.
 
 **Meet the search tool (conceptual)**
    ToolUniverse has a built-in **search tool** that queries a collection you’ve built.
-   Your JSON just tells ToolUniverse **which collection** to use and **what parameters** (query, method, etc.).
-   You don’t need to wire up paths; it looks in ``<user_cache_dir>/embeddings/`` automatically.
+   Your JSON just tells ToolUniverse **which collection** to use and **what search options it supports** (query text, search method, number of results, etc.).
+   Your JSON tells ToolUniverse **which collection** to search and **which search options the tool accepts**
+      - the user’s search text (``query``),
+      - search type (``method``: keyword/embedding/hybrid),
+      - number of results (``top_k``),
+      - You can optionally control the hybrid mix with alpha (``alpha``).
+
+   
+You don’t need to wire up paths; it looks in ``<user_cache_dir>/embeddings/`` automatically.
 
 1) Save a tool definition (example)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save as ``docs/tools/toy_search_tool.json``:
+Save as ``toy_search_tool.json``:
 
 .. code-block:: json
 
@@ -202,7 +255,7 @@ Save as ``docs/tools/toy_search_tool.json``:
    from tooluniverse.tool_universe import ToolUniverse
 
    tu = ToolUniverse()
-   tu.load_tools(tool_config_files={"local": "docs/tools/toy_search_tool.json"})
+   tu.load_tools(tool_config_files={"local": "toy_search_tool.json"})
 
    # Now any agent (or you) can call:
    results = tu.tools.toy_search(query="glucose", method="hybrid", top_k=5)
@@ -230,15 +283,19 @@ Use it when you want to:
 .. code-block:: bash
 
    tu-datastore sync-hf upload --collection toy
-   # or override destination / make private:
-   tu-datastore sync-hf upload --collection toy --repo "username/my-toy-db" --private
+   # or override destination / make public:
+   tu-datastore sync-hf upload --collection toy --repo "username/my-toy-db" --no-private
+   # add tool JSON(s) to the dataset (optional):
+   tu-datastore sync-hf upload --collection toy --tool-json toy_search_tool.json
 
 **Download (works for public repos; private requires permission or a valid HF token):**
 
 .. code-block:: bash
 
+   # Download DB + FAISS only (preserves existing files unless --overwrite)
    tu-datastore sync-hf download --repo "username/my-toy-db" --collection toy --overwrite
-
+   # Download DB + FAISS + tool JSONs (downloads any *.json in the dataset) 
+   tu-datastore sync-hf download --repo "username/my-toy-db" --collection toy --overwrite --include-tools
 
 Advanced: use from Python (developers)
 --------------------------------------
@@ -345,6 +402,9 @@ Mini FAQ
   - Linux → ``~/.cache/tooluniverse``  
   - Windows → ``%LOCALAPPDATA%\\ToolUniverse``  
 - **Where does my data upload?** ``tu-datastore sync-hf upload`` targets your **own** HF account by default (based on your token).  
+- **Can I upload my tool JSON with the datastore?** Yes — pass one or more files via ``--tool-json`` during ``sync-hf upload``; they’re stored at the dataset root.
+- **How do I pull tool JSONs too?** Use ``--include-tools`` with ``sync-hf download`` to download any ``*.json`` in the dataset.
+- **Is upload private by default?** Yes auto upload **private** datasets unless you opt out (CLI: ``--no-private``; tool: set ``"private": false``).
 - **Do I have to pass --db to search/build?**  
   - No — both commands write and read from your cache automatically.  
   - Use `--db` only if you want a **custom output path** (for example, a shared directory).  

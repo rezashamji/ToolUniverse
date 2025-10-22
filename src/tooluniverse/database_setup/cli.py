@@ -10,7 +10,8 @@ quickbuild
 search
     Query an existing collection by keyword, embedding, or hybrid.
 sync-hf upload|download
-    Upload/download <collection>.db and <collection>.faiss to/from Hugging Face.
+    Upload/download <collection>.db and <collection>.faiss to/from Hugging Face and (on upload) optionally include --tool-json <file1.json> [file2.json ...].
+
 
 Environment
 -----------
@@ -99,12 +100,23 @@ def main():
     up = sh_sub.add_parser("upload", help="Upload collection artifacts to HF")
     up.add_argument("--collection", required=True)
     up.add_argument("--repo", help="HF dataset repo ID (defaults to <username>/<collection>)")
-    up.add_argument("--private", action="store_true", help="Make dataset private (default False)")
+    up.add_argument("--private", action=argparse.BooleanOptionalAction, default=True, help="Make dataset private (default True). Use --no-private to make it public.")
+    up.add_argument(
+    "--tool-json",
+    nargs="*",
+    default=None,
+    help="Path(s) to Tool JSON file(s) to upload with the datastore.",
+    )
 
     down = sh_sub.add_parser("download", help="Download collection artifacts from HF")
     down.add_argument("--repo", required=True)
     down.add_argument("--collection", required=True)
     down.add_argument("--overwrite", action="store_true", help="Overwrite existing index")
+    down.add_argument(
+        "--include-tools",
+        action="store_true",
+        help="Also download tool JSON files"
+    )
 
     # --------------------------------------------------------------------------
     # Parse
@@ -159,7 +171,11 @@ def main():
 
     elif args.cmd == "search":
         db_path = resolve_db_path(args.db, args.collection)
-        provider, model = resolve_provider_model(args.provider, args.model)
+        # Only require provider/model when embeddings are needed
+        if args.method == "keyword":
+            provider = model = None
+        else:
+            provider, model = resolve_provider_model(args.provider, args.model)
         res = search(
             db_path=db_path,
             collection=args.collection,
@@ -174,9 +190,9 @@ def main():
 
     elif args.cmd == "sync-hf":
         if args.action == "upload":
-            sync_upload(collection=args.collection, repo=args.repo, private=args.private)
+            sync_upload(collection=args.collection, repo=args.repo, private=args.private, tool_json=args.tool_json,)
         elif args.action == "download":
-            sync_download(repo=args.repo, collection=args.collection, overwrite=args.overwrite)
+            sync_download(repo=args.repo, collection=args.collection, overwrite=args.overwrite, include_tools=args.include_tools)
 
     else:
         p.print_help()

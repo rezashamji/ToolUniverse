@@ -94,8 +94,9 @@ class EmbeddingSync(BaseTool):
         collection = args.get("database_name")
         repo = args.get("repository")
         description = args.get("description", "")
-        private = bool(args.get("private", False))
+        private = bool(args.get("private", True))
         commit_message = args.get("commit_message", f"Upload {collection} datastore")
+        tool_json = args.get("tool_json")
 
         if not collection:
             return {"error": "database_name is required"}
@@ -121,6 +122,7 @@ class EmbeddingSync(BaseTool):
                 repo=repo,
                 private=private,
                 commit_message=commit_message,
+                tool_json=tool_json,
             )
         except Exception as e:
             return {"error": f"Failed to upload: {e}"}
