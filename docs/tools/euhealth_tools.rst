@@ -30,7 +30,7 @@ Quick start (recommended): use the prebuilt library
 
 export HF_TOKEN=YOUR_HF_TOKEN
 tu-datastore sync-hf download 
---repo "your_username/euhealth" 
+--repo "agenticx/tooluniverse-datastores"
 --collection euhealth 
 --overwrite
 
@@ -163,7 +163,7 @@ Common questions
   No, the tools are already registered. If the library exists in `<user_cache_dir>/embeddings/`, you can just ask the agent.
 
 * **Can I filter by country/language?**
-  Yes, just say it (“Germany”, “DE”, “English”, “en”). The tools accept both plain names and codes.
+  Yes, just say ask for it in your query (“Germany”, “DE”, “English”, “en”). The tools accept both plain names and codes.
 
 * **What if some links say `login_or_error`?**
   Some portals require accounts or block automated requests. The tool still shows you what’s there.
@@ -185,23 +185,18 @@ Common questions
 (Optional, for maintainers) Keep it fresh weekly
 ------------------------------------------------
 
-We include a GitHub Actions workflow that rebuilds and uploads the library each week.
+A scheduled GitHub Actions workflow automatically rebuilds and uploads the EUHealth datastore each week.
 
-* File: `.github/workflows/euhealth-cache-refresh.yml`
-* It runs the live builder and then:
+* Workflow file: `.github/workflows/euhealth-cache-refresh.yml`
+* Schedule: Mondays at 06:00 UTC
+* Steps performed:
+  1. Run the live builder (`euhealth_live`) to refresh data and embeddings.
+  2. Upload the new `euhealth.db` and `euhealth.faiss` to the shared Hugging Face dataset:
+     `agenticx/tooluniverse-datastores`.
+    
+You’ll need secrets configured in GitHub (e.g., `OPENAI_API_KEY`, `HF_TOKEN`, etc.) for the job to run successfully.
 
-.. code-block:: bash
-
-# upload to your own Hugging Face repo by default
-
-tu-datastore sync-hf upload 
---collection euhealth 
---private
-
-* You’ll need to add secrets for your chosen provider (e.g., `OPENAI_API_KEY`) and `HF_TOKEN`.
-
-Most users can ignore this; it’s just for keeping the dataset library up to date.
-
+Most users can ignore this section, it’s only to keep the public EUHealth dataset fresh.
 ---
 
 You’re set
