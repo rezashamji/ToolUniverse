@@ -1,5 +1,4 @@
 name: EUHealth Weekly Refresh
-#comment
 on:
   schedule:
     - cron: "0 6 * * 1"   # Mondays 06:00 UTC
