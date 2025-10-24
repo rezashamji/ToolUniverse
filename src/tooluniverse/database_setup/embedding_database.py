@@ -11,7 +11,7 @@ from ..logging_config import get_logger
 from tooluniverse.database_setup.sqlite_store import SQLiteStore
 from tooluniverse.database_setup.vector_store import VectorStore
 from tooluniverse.database_setup.embedder import Embedder
-
+from tooluniverse.utils import get_user_cache_dir
 
 # ---------------------------
 # Resolver helpers (provider/model) — no Azure bias
@@ -123,7 +123,7 @@ class EmbeddingDatabase(BaseTool):
         self.logger = get_logger("EmbeddingDatabase")
 
         storage_config = tool_config.get("configs", {}).get("storage_config", {})
-        self.data_dir = Path(storage_config.get("data_dir", "./data/embeddings"))
+        self.data_dir = Path(storage_config.get("data_dir", os.path.join(get_user_cache_dir(), "embeddings")))
         self.faiss_index_type = storage_config.get("faiss_index_type", "IndexFlatIP")
         self.data_dir.mkdir(parents=True, exist_ok=True)
 

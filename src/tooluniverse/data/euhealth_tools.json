@@ -11,7 +11,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+    "required": []
     },
     "return_schema": {
       "type": "array",
@@ -30,6 +31,7 @@
       }
     }
   },
+  
 
   {
     "type": "EuHealthTopicSearchTool",
@@ -43,7 +45,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": {
@@ -69,7 +72,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -94,7 +98,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -119,7 +124,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -144,7 +150,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -169,7 +176,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -194,7 +202,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -219,7 +228,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -244,7 +254,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -269,7 +280,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -294,7 +306,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -319,7 +332,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -344,7 +358,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -369,7 +384,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -394,7 +410,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -419,7 +436,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -444,7 +462,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -469,7 +488,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },
@@ -494,7 +514,8 @@
         "country": { "type": "string", "description": "Country filter. Accepts full names (e.g., 'Germany') or ISO-3166 codes ('DE', 'DEU'). Case-insensitive; substring/IRI-tail matching allowed." },
         "language": { "type": "string", "description": "Language filter. Accepts ISO 639-1 codes (e.g., 'en') or full names (e.g., 'English'). Case-insensitive; substring/IRI-tail matching allowed." },
         "term_override": { "type": "string", "description": "Override the default topic seed terms with a custom query string." }
-      }
+      },
+      "required": []
     },
     "return_schema": { "type": "array", "items": { "type": "object",
       "properties": { "uuid": { "type": "string" }, "title": { "type": "string" },

@@ -14,7 +14,7 @@ Exports
 
 Assumptions
 -----------
-- The "euhealth" collection exists locally as ./data/embeddings/euhealth.db and euhealth.faiss.
+- The "euhealth" collection exists locally as <user_cache_dir>/embeddings/euhealth.db and euhealth.faiss.
 - Themes are compared case-insensitively (specs may use uppercase ontology prefixes; data is lowercased URIs).
 
 Notes

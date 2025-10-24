@@ -3,7 +3,7 @@ High-level helpers for building and querying collections.
 
 Exposes
 -------
-build_collection(db_path, collection, docs, embed_provider, embed_model, embed_dim, overwrite=False)
+build_collection(db_path, collection, docs, embed_provider, embed_model, overwrite=False)
     Create or extend a collection, insert documents with de-dup, embed texts, and persist a FAISS index.
 search(db_path, collection, query, method="hybrid", top_k=10, alpha=0.5, embed_provider=None, embed_model=None)
     Keyword/embedding/hybrid search over an existing collection.
@@ -19,6 +19,7 @@ from __future__ import annotations
 from typing import List, Dict, Any, Optional, Tuple
 import numpy as np
 import sqlite3
+import os
 
 from .sqlite_store import SQLiteStore
 from .vector_store import VectorStore
@@ -27,6 +28,8 @@ from tooluniverse.database_setup.provider_resolver import (
     resolve_provider,
     resolve_model,
 )
+from tooluniverse.database_setup.embed_utils import get_model_dim
+
 
 
 def _l2norm(x: np.ndarray) -> np.ndarray:
@@ -52,9 +55,10 @@ def build_collection(
     docs: List[tuple[str, str, Dict[str, Any], Optional[str]]],
     embed_provider: str,
     embed_model: str,
-    embed_dim: int,
     overwrite: bool = False,
 ) -> None:
+
+
     """Create/extend a collection, embed docs, and populate FAISS.
 
     Inserts/merges documents (dedupe by (collection, doc_key) and by (collection, text_hash) when present),
@@ -67,19 +71,29 @@ def build_collection(
 
     Side effects
     ------------
-    - Upserts a row in `collections` with embedding_model="precomputed" before embedding,
-      and updates it with the actual model/dimensions after embedding.
+    - Records the true embedding model and dimension in the `collections` table.
+
     """
+    print(f" Detecting embedding dimension for {embed_provider}:{embed_model} ...")
+    try:
+        embed_dim = get_model_dim(embed_provider, embed_model)
+        print(f" Detected embedding dimension: {embed_dim}")
+    except Exception as e:
+        raise RuntimeError(f"Failed to detect embedding dimension: {e}")
+
+    #os.makedirs(os.path.dirname(os.path.expanduser(db_path)), exist_ok=True)
 
     store = SQLiteStore(db_path)
 
     # Upsert collection metadata (safe to call repeatedly)
+
     store.upsert_collection(
-        collection,
-        description=f"Datastore for {collection}",
-        embedding_model="precomputed",  # generic marker
-        embedding_dimensions=embed_dim,
+    collection,
+    description=f"Datastore for {collection}",
+    embedding_model=embed_model,
+    embedding_dimensions=embed_dim,
     )
+
     # Insert/merge docs (dedupe by (collection, doc_key); optional text_hash dedupe if index exists)
     store.insert_docs(collection, docs)
 
@@ -94,9 +108,13 @@ def build_collection(
     emb = Embedder(provider=embed_provider, model=embed_model)
     vecs = emb.embed(texts).astype("float32")
     vecs = _l2norm(vecs)
+    print(f"Embedded {len(vecs)} docs with shape {vecs.shape}")
 
     vs = VectorStore(db_path)
+    # Optionally reset existing FAISS index if overwrite=True
+    vs.load_index(collection, dim=embed_dim, reset=overwrite)
     vs.add_embeddings(collection, doc_ids, vecs, dim=embed_dim)
+
 
 
 # replace the beginning of search(...)

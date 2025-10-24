@@ -4,15 +4,16 @@ EmbeddingCollectionSearchTool — search any datastore collection by name.
 Configuration (tool_config.fields)
 ----------------------------------
 - collection : str   (required)  e.g., "my_collection"
-- db_path    : str   (optional)  e.g., "data/embeddings/my_collection.db"
-                                 If omitted, defaults to: data/embeddings/<collection>.db
+- db_path    : str   (optional)  e.g., "<user_cache_dir>/embeddings/my_collection.db"
+                                 If omitted, defaults to: <user_cache_dir>/embeddings/<collection>.db
 """
 
 from typing import Any, Dict
 from tooluniverse.base_tool import BaseTool
 from tooluniverse.tool_registry import register_tool
 from tooluniverse.database_setup.search import SearchEngine
-
+from tooluniverse.utils import get_user_cache_dir
+import os
 
 @register_tool("EmbeddingCollectionSearchTool")
 class EmbeddingCollectionSearchTool(BaseTool):
@@ -55,8 +56,12 @@ class EmbeddingCollectionSearchTool(BaseTool):
         top_k = int(arguments.get("top_k", 10))
         alpha = float(arguments.get("alpha", 0.5))
 
-        # Allow explicit db path; default to data/embeddings/<collection>.db
-        db_path = fields.get("db_path") or f"data/embeddings/{coll}.db"
+        # Allow explicit db path; default to user cache dir ~/Library/Caches/.../embeddings/<collection>.db
+        if fields.get("db_path"):
+            db_path = fields["db_path"]
+        else:
+            db_path = os.path.join(get_user_cache_dir(), "embeddings", f"{coll}.db")
+
         se = getattr(self, "_se", None) or SearchEngine(db_path=db_path)
 
         try:

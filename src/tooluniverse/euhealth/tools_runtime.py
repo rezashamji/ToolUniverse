@@ -10,7 +10,7 @@ What this module does
 Dependencies
 ------------
 - Assumes the `euhealth` collection (SQLite + FAISS) already exists locally:
-  data/embeddings/euhealth.db and euhealth.faiss.
+  <user_cache_dir>/embeddings/euhealth.db and euhealth.faiss.
   See the general datastore tutorial for building or HF bootstrap.
 
 Result schema (summary)
@@ -60,6 +60,8 @@ from typing import List, Dict, Any, Optional
 from tooluniverse.database_setup.search import SearchEngine
 from tooluniverse.euhealth.euhealth_live import deep_dive_for_datasets
 from tooluniverse.database_setup.sqlite_store import normalize_text
+from tooluniverse.utils import get_user_cache_dir
+import os
 
 # -----------------
 # Topic definitions
@@ -227,11 +229,11 @@ TOPICS: Dict[str, Dict[str, Any]] = {
 # -----------------
 _se: Optional[SearchEngine] = None
 
-
 def _se_singleton() -> SearchEngine:
     global _se
     if _se is None:
-        _se = SearchEngine(db_path="data/embeddings/euhealth.db")
+        default_db = os.path.join(get_user_cache_dir(), "embeddings", "euhealth.db")
+        _se = SearchEngine(db_path=default_db)
     return _se
 
 
