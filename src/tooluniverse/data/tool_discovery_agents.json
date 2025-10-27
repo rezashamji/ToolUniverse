@@ -379,6 +379,11 @@
         "output_file": {
           "type": "string",
           "description": "Optional file path to save the generated tool"
+        },
+        "save_dir": {
+          "type": "string",
+          "description": "Directory path to save the generated tool files (defaults to current working directory)",
+          "default": null
         }
       },
       "required": [
@@ -407,6 +412,10 @@
           "items": {
             "type": "string"
           }
+        },
+        "output_directory": {
+          "type": "string",
+          "description": "Directory where the files were saved"
         }
       },
       "required": [

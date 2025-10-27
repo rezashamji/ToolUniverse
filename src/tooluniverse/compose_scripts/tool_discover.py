@@ -2080,13 +2080,22 @@ def compose(arguments, tooluniverse, call_tool):
     tool_description = arguments["tool_description"]
     max_iterations = arguments.get("max_iterations", 2)
     arguments.get("save_to_file", True)
+    save_dir = arguments.get("save_dir", None)
 
-    # Create temporary folder for generated files
+    # Determine where to save files
     import tempfile
     import shutil
 
+    # If save_dir is provided, use it; otherwise use current working directory
+    if save_dir:
+        output_dir = os.path.abspath(save_dir)
+    else:
+        output_dir = os.getcwd()
+
+    # Also create a temp directory for intermediate files during optimization
     temp_dir = tempfile.mkdtemp(prefix="tool_discover_")
     print(f"📁 Created temporary folder: {temp_dir}", flush=True)
+    print(f"📁 Files will be saved to: {output_dir}", flush=True)
 
     try:
         print(f"🔍 Starting tool discovery: {tool_description}", flush=True)
@@ -2136,13 +2145,28 @@ def compose(arguments, tooluniverse, call_tool):
             f"🎉 Implementation and optimization completed! Final quality score: {score:.2f}/10"
         )
 
-        # 4. Save tool files
+        # 5. Save final tool files to output directory
         print("💾 Saving tool files...")
         base_filename = f"generated_tool_{tool_config['name']}"
-        saved_files = _save_tool_files(
+
+        # First save to temp directory
+        temp_saved_files = _save_tool_files(
             tool_config, base_filename, call_tool, temp_dir, None
         )
-        print(f"Saved: {saved_files}")
+        print(f"Saved to temp: {temp_saved_files}")
+
+        # Then copy to output directory
+        saved_files = []
+        os.makedirs(output_dir, exist_ok=True)
+
+        for temp_file in temp_saved_files:
+            filename = os.path.basename(temp_file)
+            output_file = os.path.join(output_dir, filename)
+            shutil.copy2(temp_file, output_file)
+            saved_files.append(output_file)
+            print(f"💾 Copied to output directory: {output_file}")
+
+        print(f"\n✅ Saved files: {saved_files}")
 
         print("\n🎉 Tool generation completed!")
         print(f"Tool name: {tool_config['name']}")
@@ -2157,7 +2181,7 @@ def compose(arguments, tooluniverse, call_tool):
             "tool_config": tool_config,
             "quality_score": final_quality_score,
             "saved_files": saved_files,
-            "temp_directory": temp_dir,
+            "output_directory": output_dir,
         }
 
     finally:
