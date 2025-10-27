@@ -117,7 +117,7 @@ def yaml_to_dict(yaml_file_path):
         dict: Dictionary representation of the YAML file content.
     """
     try:
-        with open(yaml_file_path, "r") as file:
+        with open(yaml_file_path, "r", encoding="utf-8") as file:
             yaml_dict = yaml.safe_load(file)
             return yaml_dict
     except FileNotFoundError:
@@ -136,7 +136,7 @@ def read_json_list(file_path):
     Returns
     list: A list of dictionaries containing the JSON objects.
     """
-    with open(file_path, "r") as file:
+    with open(file_path, "r", encoding="utf-8") as file:
         data = json.load(file)
     return data
 

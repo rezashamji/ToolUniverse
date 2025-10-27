@@ -110,7 +110,7 @@ Examples:
         if args.hook_config_file:
             import json
 
-            with open(args.hook_config_file, "r") as f:
+            with open(args.hook_config_file, "r", encoding="utf-8") as f:
                 hook_config = json.load(f)
             print(f"🔗 Hook config loaded from: {args.hook_config_file}")
 
@@ -532,7 +532,7 @@ Examples:
         if args.hook_config_file:
             import json
 
-            with open(args.hook_config_file, "r") as f:
+            with open(args.hook_config_file, "r", encoding="utf-8") as f:
                 hook_config = json.load(f)
             print(
                 f"🔗 Hook config loaded from: {args.hook_config_file}", file=sys.stderr
@@ -930,7 +930,7 @@ Examples:
         if args.hook_config_file:
             import json
 
-            with open(args.hook_config_file, "r") as f:
+            with open(args.hook_config_file, "r", encoding="utf-8") as f:
                 hook_config = json.load(f)
             print(f"🔗 Hook config loaded from: {args.hook_config_file}")
 

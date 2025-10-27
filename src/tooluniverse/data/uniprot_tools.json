@@ -207,5 +207,82 @@
         "output_description": "Returns a list containing all isoform ID strings."
       },
       "type": "UniProtRESTTool"
+    },
+    {
+      "name": "UniProt_search",
+      "description": "Search UniProtKB database using flexible query syntax. Supports gene names (e.g., 'gene:TP53'), protein names, organism filters (e.g., 'organism:9606'), and complex queries using AND/OR operators. Returns matching proteins with accession numbers and key information. Use this to find UniProt accessions from gene or protein names.",
+      "parameter": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query. Can be simple (e.g., 'MEIOB') or advanced ('gene:TP53 AND organism:9606'). Keywords: gene, protein_name, organism, reviewed, etc."
+          },
+          "organism": {
+            "type": "string",
+            "description": "Optional organism filter. Can use common name ('human') or taxonomy ID ('9606'). Automatically combined with query using AND."
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Maximum number of results to return (default: 25, max: 500)"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional list of fields to return. Default returns: accession, id, protein_name, gene_names, organism, length"
+          }
+        },
+        "required": ["query"]
+      },
+      "fields": {
+        "endpoint": "https://rest.uniprot.org/uniprotkb/search",
+        "search_type": "search",
+        "format": "json"
+      },
+      "type": "UniProtRESTTool"
+    },
+    {
+      "name": "UniProt_id_mapping",
+      "description": "Map IDs between different databases (e.g., Ensembl to UniProt, Gene Name to UniProt). Supports batch mapping and async task processing. Use this to convert between different database identifiers.",
+      "parameter": {
+        "type": "object",
+        "properties": {
+          "ids": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "description": "ID(s) to map. Can be single string or array of strings, e.g., 'ENSG00000141510' or ['MEIOB', 'TP53']"
+          },
+          "from_db": {
+            "type": "string",
+            "description": "Source database. Examples: 'Ensembl', 'Gene_Name', 'RefSeq_Protein', 'PDB', 'EMBL'"
+          },
+          "to_db": {
+            "type": "string",
+            "description": "Target database (default: 'UniProtKB')"
+          },
+          "max_wait_time": {
+            "type": "integer",
+            "description": "Maximum time to wait for async task completion in seconds (default: 30)"
+          }
+        },
+        "required": ["ids", "from_db"]
+      },
+      "fields": {
+        "endpoint": "https://rest.uniprot.org/idmapping",
+        "mapping_type": "async",
+        "format": "json"
+      },
+      "type": "UniProtRESTTool"
     }
   ]

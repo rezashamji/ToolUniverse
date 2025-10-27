@@ -170,7 +170,7 @@ class Boltz2DockingTool(BaseTool):
                     prediction_folder, f"{input_filename}_model_0.cif"
                 )
                 if os.path.exists(structure_file):
-                    with open(structure_file, "r") as f:
+                    with open(structure_file, "r", encoding="utf-8") as f:
                         results["predicted_structure"] = f.read()
                     results["structure_format"] = "cif"
                 else:
@@ -183,7 +183,7 @@ class Boltz2DockingTool(BaseTool):
                 prediction_folder, f"affinity_{input_filename}.json"
             )
             if os.path.exists(affinity_file):
-                with open(affinity_file, "r") as f:
+                with open(affinity_file, "r", encoding="utf-8") as f:
                     results["affinity_prediction"] = json.load(f)
             else:
                 results["affinity_error"] = f"Missing {os.path.basename(affinity_file)}"

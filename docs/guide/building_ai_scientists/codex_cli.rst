@@ -66,12 +66,13 @@ Step 2: Install UV and ToolUniverse
    # Install UV package manager
    curl -LsSf https://astral.sh/uv/install.sh | sh
 
-   # Create environment and install ToolUniverse
-   mkdir -p ~/tooluniverse-env
-   uv --directory ~/tooluniverse-env pip install tooluniverse
+   # Create working directory for ToolUniverse
+   # uv will automatically create and manage a virtual environment (.venv) inside this directory
+   mkdir -p /path/to/tooluniverse-env
+   uv --directory /path/to/tooluniverse-env pip install tooluniverse
 
    # Verify installation
-   uv --directory ~/tooluniverse-env run python -c "import tooluniverse; print('ToolUniverse installed successfully')"
+   uv --directory /path/to/tooluniverse-env run python -c "import tooluniverse; print('ToolUniverse installed successfully')"
 
 Step 3: Configure Codex CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,7 +92,7 @@ Add the ToolUniverse MCP server configuration:
    command = "uv"
    args = [
      "--directory",
-     "~/tooluniverse-env",
+     "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
      "run",
      "tooluniverse-smcp-stdio"
    ]
@@ -104,7 +105,7 @@ Add the ToolUniverse MCP server configuration:
       command = "uv"
       args = [
         "--directory",
-        "~/tooluniverse-env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio",
         "--exclude-tool-types",
@@ -217,7 +218,7 @@ Load only specific tools for better performance:
    command = "uv"
    args = [
      "--directory",
-     "~/tooluniverse-env",
+     "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
      "run",
      "tooluniverse-smcp-stdio",
      "--include-tools",
@@ -234,13 +235,13 @@ Run different ToolUniverse instances for different purposes:
 
    [mcp_servers.tooluniverse-research]
    command = "uv"
-   args = ["--directory", "~/tooluniverse-env", "run", "tooluniverse-smcp-stdio"]
-   timeout = 30000
+   args = ["--directory", "/Users/username/tooluniverse-env", "run", "tooluniverse-smcp-stdio"]  # Working directory
+   startup_timeout_sec = 60
 
    [mcp_servers.tooluniverse-analysis]
    command = "uv"
-   args = ["--directory", "~/tooluniverse-env", "run", "tooluniverse-smcp-stdio"]
-   timeout = 45000
+   args = ["--directory", "/Users/username/tooluniverse-env", "run", "tooluniverse-smcp-stdio"]  # Working directory
+   startup_timeout_sec = 60
 
 Troubleshooting
 ---------------
@@ -264,7 +265,7 @@ Troubleshooting
 3. **Test MCP Server Manually:**
    .. code-block:: bash
 
-      uv --directory ~/tooluniverse-env run tooluniverse-smcp-stdio
+      uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio
 
    This should start the MCP server directly to check if it works.
 

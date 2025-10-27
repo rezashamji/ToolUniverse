@@ -114,7 +114,7 @@ Add the ToolUniverse MCP server configuration to your `settings.json`:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/gemini_running_env",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
            "tooluniverse-smcp-stdio"
          ]
@@ -132,7 +132,7 @@ Add the ToolUniverse MCP server configuration to your `settings.json`:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/gemini_running_env",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
            "tooluniverse-smcp-stdio",
            "--exclude-tool-types",
@@ -156,7 +156,8 @@ Add the ToolUniverse MCP server configuration to your `settings.json`:
 
 **Important Configuration Notes**:
 
-- Replace `/path/to/your/gemini_running_env` with your actual absolute path to your gemini running folder
+- Replace `/path/to/tooluniverse-env` with your actual ToolUniverse working directory
+- The working directory is where uv will create and manage the virtual environment (`.venv`)
 - The path should point to the directory where your Gemini CLI environment is set up
 - Use absolute paths for better reliability
 
@@ -170,7 +171,7 @@ Add the ToolUniverse MCP server configuration to your `settings.json`:
          "command": "uv",
          "args": [
            "--directory",
-           "/Users/username/gemini_env",
+           "/path/to/tooluniverse-env",  # Working directory
            "run",
            "tooluniverse-smcp-stdio"
          ]
@@ -474,7 +475,7 @@ Optimize tool usage for better performance:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/gemini_running_env",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
            "tooluniverse-smcp-stdio"
          ],
@@ -500,7 +501,7 @@ Create custom tool sets for specific research domains:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/gemini_running_env",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
            "tooluniverse-smcp-stdio"
          ],
@@ -514,7 +515,7 @@ Create custom tool sets for specific research domains:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/gemini_running_env",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
            "tooluniverse-smcp-stdio"
          ],
@@ -540,7 +541,7 @@ Run multiple ToolUniverse instances for different purposes:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/gemini_running_env",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
            "tooluniverse-smcp-stdio"
          ],
@@ -550,7 +551,7 @@ Run multiple ToolUniverse instances for different purposes:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/gemini_running_env",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
            "tooluniverse-smcp-stdio"
          ],

@@ -563,8 +563,9 @@ class ToolUniverse:
             for key in sorted(all_missing_keys):
                 f.write(f"{key}=your_api_key_here\n\n")
 
-        self.logger.info(f"Generated API key template: {output_file}")
-        self.logger.info("Copy this file to .env and fill in your API keys")
+        self.logger.info(
+            f"Generated API key template: {output_file}. Copy this file to .env and fill in your API keys"
+        )
 
     def _create_hook_config_from_type(self, hook_type):
         """
@@ -966,8 +967,10 @@ class ToolUniverse:
 
         # Generate template for missing API keys
         if len(all_missing_keys) > 0:
-            warning(f"\nMissing API keys: {', '.join(all_missing_keys)}")
-            info("Generating .env.template file with missing API keys...")
+            warning(
+                f"Some tools will not be loaded due to missing API keys: {', '.join(all_missing_keys)}"
+            )
+            # info("Generating .env.template file with missing API keys...")
             self.generate_env_template(all_missing_keys)
 
     def _load_auto_discovered_configs(self):
@@ -2137,16 +2140,42 @@ class ToolUniverse:
                         tool_instance, arguments, stream_callback, use_cache, validate
                     )
                 else:
-                    error_msg = f"Tool '{function_name}' not found"
-                    return self._create_dual_format_error(
-                        ToolUnavailableError(
-                            error_msg,
-                            next_steps=[
-                                "Check tool name spelling",
-                                "Run tu.tools.refresh()",
-                            ],
+                    # Try to auto-load tools if dictionary is empty
+                    if not self._auto_load_tools_if_empty(function_name):
+                        error_msg = "Failed to auto-load tools"
+                        return self._create_dual_format_error(
+                            ToolUnavailableError(
+                                error_msg,
+                                next_steps=[
+                                    "Manually run tu.load_tools()",
+                                    "Check tool configuration",
+                                ],
+                            )
                         )
-                    )
+
+                    # Try to get the tool instance again after loading
+                    tool_instance = self._get_tool_instance(function_name, cache=True)
+                    if tool_instance:
+                        result, tool_arguments = self._execute_tool_with_stream(
+                            tool_instance,
+                            arguments,
+                            stream_callback,
+                            use_cache,
+                            validate,
+                        )
+                    else:
+                        error_msg = (
+                            f"Tool '{function_name}' not found even after loading tools"
+                        )
+                        return self._create_dual_format_error(
+                            ToolUnavailableError(
+                                error_msg,
+                                next_steps=[
+                                    "Check tool name spelling",
+                                    "Verify tool is available in loaded categories",
+                                ],
+                            )
+                        )
             except Exception as e:
                 # Classify and return structured error
                 classified_error = self._classify_exception(e, function_name, arguments)
@@ -2356,6 +2385,29 @@ class ToolUniverse:
 
         return None
 
+    def _auto_load_tools_if_empty(self, function_name: str = None) -> bool:
+        """
+        Automatically load tools if the tools dictionary is empty.
+
+        Args:
+            function_name: Optional tool name to check after loading
+
+        Returns:
+            bool: True if tools were loaded successfully, False otherwise
+        """
+        if not self.all_tool_dict:
+            print(
+                "⚠️  Warning: No tools loaded. Automatically running tu.load_tools()..."
+            )
+            try:
+                self.load_tools()
+                print("✅ Tools loaded successfully.")
+                return True
+            except Exception as load_error:
+                print(f"❌ Failed to auto-load tools: {load_error}")
+                return False
+        return True
+
     def _make_cache_key(self, function_name: str, arguments: dict) -> str:
         """Generate cache key by delegating to BaseTool."""
         tool_instance = self._get_tool_instance(function_name, cache=False)
@@ -2374,7 +2426,15 @@ class ToolUniverse:
     ) -> Optional[ToolError]:
         """Validate parameters by delegating to BaseTool."""
         if function_name not in self.all_tool_dict:
-            return ToolUnavailableError(f"Tool '{function_name}' not found")
+            # Try to auto-load tools if dictionary is empty
+            if not self._auto_load_tools_if_empty(function_name):
+                return ToolUnavailableError("Failed to auto-load tools")
+
+            # Check again after loading
+            if function_name not in self.all_tool_dict:
+                return ToolUnavailableError(
+                    f"Tool '{function_name}' not found even after loading tools"
+                )
 
         tool_instance = self._get_tool_instance(function_name, cache=False)
         if not tool_instance:

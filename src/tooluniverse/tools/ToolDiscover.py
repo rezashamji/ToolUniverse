@@ -1,7 +1,7 @@
 """
 ToolDiscover
 
-Generates new ToolUniverse-compliant tools based on short descriptions through an intelligent dis...
+Generates new ToolUniverse-compliant tools based on short descriptions using XML format for simul...
 """
 
 from typing import Any, Optional, Callable
@@ -10,27 +10,27 @@ from ._shared_client import get_shared_client
 
 def ToolDiscover(
     tool_description: str,
-    max_iterations: int,
-    save_to_file: bool,
-    output_file: str,
+    max_iterations: Optional[int] = 2,
+    save_to_file: Optional[bool] = True,
+    output_file: Optional[str] = None,
     *,
     stream_callback: Optional[Callable[[str], None]] = None,
     use_cache: bool = False,
     validate: bool = True,
-) -> Any:
+) -> dict[str, Any]:
     """
-    Generates new ToolUniverse-compliant tools based on short descriptions through an intelligent dis...
+    Generates new ToolUniverse-compliant tools based on short descriptions using XML format for simul...
 
     Parameters
     ----------
     tool_description : str
-        Short description of the desired tool functionality and purpose. Tool Discove...
+        Short description of the desired tool functionality
     max_iterations : int
-        Maximum number of refinement iterations to perform.
+        Maximum number of optimization iterations
     save_to_file : bool
-        Whether to save the generated tool configuration and report to a file.
+        Whether to save the generated tool files
     output_file : str
-        Optional file path to save the generated tool. If not provided, uses auto-gen...
+        Optional file path to save the generated tool
     stream_callback : Callable, optional
         Callback for streaming output
     use_cache : bool, default False
@@ -40,7 +40,7 @@ def ToolDiscover(
 
     Returns
     -------
-    Any
+    dict[str, Any]
     """
     # Handle mutable defaults to avoid B006 linting error
 

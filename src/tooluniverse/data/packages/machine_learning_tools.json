@@ -143,53 +143,6 @@
   },
   {
     "type": "PackageTool",
-    "name": "get_hyperopt_info",
-    "description": "Get comprehensive information about Hyperopt – distributed hyperparameter optimization",
-    "parameter": {
-      "type": "object",
-      "properties": {
-        "include_examples": {
-          "type": "boolean",
-          "description": "Whether to include usage examples and quick start guide",
-          "default": true
-        }
-      },
-      "required": [
-        "include_examples"
-      ]
-    },
-    "package_name": "hyperopt",
-    "local_info": {
-      "name": "Hyperopt",
-      "description": "Python library for hyperparameter optimization using algorithms like random search, Tree of Parzen Estimators (TPE), and adaptive TPE. Supports distributed optimization across multiple cores/machines.",
-      "category": "Machine Learning Optimization",
-      "import_name": "hyperopt",
-      "popularity": 85,
-      "keywords": [
-        "hyperparameter optimization",
-        "Bayesian optimization",
-        "TPE",
-        "distributed computing",
-        "model tuning"
-      ],
-      "documentation": "http://hyperopt.github.io/hyperopt/",
-      "repository": "https://github.com/hyperopt/hyperopt",
-      "installation": {
-        "pip": "pip install hyperopt",
-        "conda": "conda install -c conda-forge hyperopt"
-      },
-      "usage_example": "from hyperopt import fmin, tpe, hp, STATUS_OK, Trials\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import cross_val_score\n\n# Define search space\nspace = {\n    'n_estimators': hp.choice('n_estimators', [10, 50, 100, 200]),\n    'max_depth': hp.choice('max_depth', [3, 5, 10, None])\n}\n\n# Objective function\ndef objective(params):\n    clf = RandomForestClassifier(**params)\n    score = cross_val_score(clf, X, y, cv=3).mean()\n    return {'loss': -score, 'status': STATUS_OK}\n\n# Optimize\ntrials = Trials()\nbest = fmin(objective, space, algo=tpe.suggest, max_evals=100, trials=trials)",
-      "quick_start": [
-        "Install: pip install hyperopt",
-        "Import: from hyperopt import fmin, tpe, hp",
-        "Define space: space = {'param': hp.choice('param', [1, 2, 3])}",
-        "Define objective: def objective(params): return loss",
-        "Optimize: best = fmin(objective, space, algo=tpe.suggest)"
-      ]
-    }
-  },
-  {
-    "type": "PackageTool",
     "name": "get_umap_learn_info",
     "description": "Get comprehensive information about UMAP-learn – dimensionality reduction technique",
     "parameter": {

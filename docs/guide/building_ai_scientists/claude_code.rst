@@ -109,14 +109,15 @@ Set up a dedicated uv environment and install ToolUniverse:
 
 .. code-block:: bash
 
-   # Create a dedicated environment directory
-   mkdir -p /absolute/path/to/claude_toolu_env
+   # Create working directory for ToolUniverse
+   # uv will automatically create and manage a virtual environment (.venv) inside this directory
+   mkdir -p /path/to/tooluniverse-env
 
    # Install ToolUniverse into that uv environment
-   uv --directory /absolute/path/to/claude_toolu_env pip install tooluniverse
+   uv --directory /path/to/tooluniverse-env pip install tooluniverse
 
    # Verify installation
-   uv --directory /absolute/path/to/claude_toolu_env run python -c "import tooluniverse; print('ToolUniverse installed successfully')"
+   uv --directory /path/to/tooluniverse-env run python -c "import tooluniverse; print('ToolUniverse installed successfully')"
 
 Step 2: Test ToolUniverse MCP server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +127,7 @@ Test that the ToolUniverse MCP server works:
 .. code-block:: bash
 
    # Test the MCP server command
-   uv --directory /absolute/path/to/claude_toolu_env run tooluniverse-smcp-stdio --help
+   uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio --help
 
 Step 3: Add ToolUniverse MCP server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -136,7 +137,7 @@ Use Claude Code's built-in command to add ToolUniverse as an MCP server:
 .. code-block:: bash
 
    # Add ToolUniverse MCP server with local scope (recommended for personal use)
-   claude mcp add tooluniverse --scope local --env AZURE_OPENAI_API_KEY=your-key --env AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com -- uv --directory /absolute/path/to/claude_toolu_env run tooluniverse-smcp-stdio
+   claude mcp add tooluniverse --scope local --env AZURE_OPENAI_API_KEY=your-key --env AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com -- uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio
 
 **Alternative scope options:**
 
@@ -151,14 +152,14 @@ Add ``--env`` flags only if you need summarization hooks or tools requiring API 
 .. code-block:: bash
 
    # Minimal setup (no API keys needed for most tools)
-   claude mcp add tooluniverse --scope local -- uv --directory /absolute/path/to/claude_toolu_env run tooluniverse-smcp-stdio
+   claude mcp add tooluniverse --scope local -- uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio
 
 **Optimized Configuration for Research Users (Recommended):**
 
 .. code-block:: bash
 
    # Add ToolUniverse with optimized settings for research
-   claude mcp add tooluniverse --scope local --env AZURE_OPENAI_API_KEY=your-key --env AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com -- uv --directory /absolute/path/to/claude_toolu_env run tooluniverse-smcp-stdio --exclude-tool-types PackageTool --hook-type SummarizationHook
+   claude mcp add tooluniverse --scope local --env AZURE_OPENAI_API_KEY=your-key --env AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com -- uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio --exclude-tool-types PackageTool --hook-type SummarizationHook
 
 **Configuration Benefits:**
 
@@ -293,7 +294,7 @@ Optimize tool usage for better performance:
 .. code-block:: bash
 
    # Add ToolUniverse with specific tool filtering
-   claude mcp add tooluniverse-research --scope local -- uv --directory /absolute/path/to/claude_toolu_env run tooluniverse-smcp-stdio --include-tools EuropePMC_search_articles,ChEMBL_search_similar_molecules,openalex_literature_search,search_clinical_trials
+   claude mcp add tooluniverse-research --scope local -- uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio --include-tools EuropePMC_search_articles,ChEMBL_search_similar_molecules,openalex_literature_search,search_clinical_trials
 
    # Verify the server configuration
    claude mcp get tooluniverse-research
@@ -306,10 +307,10 @@ Run multiple ToolUniverse instances for different purposes:
 .. code-block:: bash
 
    # Add research-focused instance
-   claude mcp add tooluniverse-research --scope local -- uv --directory /absolute/path/to/claude_toolu_env run tooluniverse-smcp-stdio --include-tools EuropePMC_search_articles,openalex_literature_search
+   claude mcp add tooluniverse-research --scope local -- uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio --include-tools EuropePMC_search_articles,openalex_literature_search
 
    # Add analysis-focused instance
-   claude mcp add tooluniverse-analysis --scope local -- uv --directory /absolute/path/to/claude_toolu_env run tooluniverse-smcp-stdio --include-tools ChEMBL_search_similar_molecules,search_clinical_trials
+   claude mcp add tooluniverse-analysis --scope local -- uv --directory /path/to/tooluniverse-env run tooluniverse-smcp-stdio --include-tools ChEMBL_search_similar_molecules,search_clinical_trials
 
    # List all configured servers
    claude mcp list

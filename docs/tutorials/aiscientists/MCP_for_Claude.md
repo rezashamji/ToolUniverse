@@ -31,16 +31,21 @@ Open the configuration file and add the ToolUniverse MCP server configuration:
         "command": "uv",
         "args": [
             "--directory",
-            "Change_this_to_your_path_to_ToolUniverse/src/tooluniverse",
+            "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
             "run",
-            "tooluniverse-mcp-studio"
+            "tooluniverse-smcp-stdio"
         ]
       }
     }
 }
 ```
 
-**Important**: Replace `Change_this_to_your_path_to_ToolUniverse` with your actual ToolUniverse project path.
+**Important Configuration Notes**:
+
+- Replace `/path/to/tooluniverse-env` with your actual ToolUniverse working directory
+- The working directory is where uv will create and manage the virtual environment (`.venv`)
+- Install ToolUniverse first: ``mkdir -p /path/to/tooluniverse-env && uv --directory /path/to/tooluniverse-env pip install tooluniverse``
+- Use absolute paths for better reliability
 
 ### 3. Configuration Explanation
 
@@ -48,9 +53,9 @@ Open the configuration file and add the ToolUniverse MCP server configuration:
 - **tooluniverse**: The name identifier for your ToolUniverse MCP server
 - **command**: Uses `uv` package manager to run the MCP server
 - **args**: Command line arguments passed to uv:
-  - `--directory`: Specifies the working directory for the ToolUniverse project
+  - `--directory`: Specifies the working directory where uv manages the virtual environment (`.venv`)
   - `run`: Tells uv to run a command
-  - `tooluniverse-mcp-studio`: The specific MCP command to execute
+  - `tooluniverse-smcp-stdio`: The specific MCP command to execute
 
 ### 4. Restart Claude Desktop
 

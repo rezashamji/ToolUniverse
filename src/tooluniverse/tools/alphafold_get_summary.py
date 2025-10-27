@@ -1,7 +1,7 @@
 """
 alphafold_get_summary
 
-Retrieve summary details of AlphaFold 3D models for a given protein. Input must be a UniProt acce...
+Retrieve summary details of AlphaFold 3D models for a given protein. IMPORTANT: The qualifier mus...
 """
 
 from typing import Any, Optional, Callable
@@ -16,12 +16,12 @@ def alphafold_get_summary(
     validate: bool = True,
 ) -> dict[str, Any]:
     """
-    Retrieve summary details of AlphaFold 3D models for a given protein. Input must be a UniProt acce...
+    Retrieve summary details of AlphaFold 3D models for a given protein. IMPORTANT: The qualifier mus...
 
     Parameters
     ----------
     qualifier : str
-        Protein identifier: UniProt accession, entry name, or CRC64 checksum.
+        Protein identifier: UniProt ACCESSION (e.g., 'Q5SWX9'). Do NOT use entry name...
     stream_callback : Callable, optional
         Callback for streaming output
     use_cache : bool, default False

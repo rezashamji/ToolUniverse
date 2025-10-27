@@ -451,7 +451,9 @@ class ToolFinderKeyword(BaseTool):
         picked_tool_names = picked_tool_names_no_special[:rag_num]
 
         # Get tool objects and prepare prompts (matching original behavior)
-        picked_tools = self.tooluniverse.get_tool_by_name(picked_tool_names)
+        picked_tools = self.tooluniverse.get_tool_specification_by_names(
+            picked_tool_names
+        )
         picked_tools_prompt = self.tooluniverse.prepare_tool_prompts(picked_tools)
 
         if return_call_result:

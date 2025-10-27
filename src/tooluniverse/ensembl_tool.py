@@ -1,61 +1,154 @@
+"""
+Ensembl REST API Tool
+
+This tool provides access to the Ensembl genome browser database for gene
+lookup, sequence retrieval, variant information, and homology data.
+"""
+
 import requests
+from typing import Dict, Any, Optional
 from .base_tool import BaseTool
 from .tool_registry import register_tool
 
 
-@register_tool("EnsemblTool")
-class EnsemblTool(BaseTool):
-    """
-    Local tool wrapper for Ensembl REST API lookups.
-    Supports symbol→gene lookup (xrefs/symbol) then lookup/id to
-    fetch metadata.
-    """
+class EnsemblRESTTool(BaseTool):
+    """Base class for Ensembl REST API tools."""
 
     def __init__(self, tool_config):
         super().__init__(tool_config)
-        self.base = "https://rest.ensembl.org"
+        self.base_url = "https://rest.ensembl.org"
         self.session = requests.Session()
         self.session.headers.update(
-            {"Accept": "application/json", "Content-Type": "application/json"}
+            {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "User-Agent": "ToolUniverse/1.0",
+            }
         )
+        self.timeout = 30
 
-    def run(self, arguments):
-        species = arguments.get("species", "homo_sapiens")
-        symbol = arguments.get("symbol")
-        if not symbol:
-            return {"error": "Missing required parameter: symbol"}
+    def _make_request(
+        self, endpoint: str, params: Optional[Dict] = None
+    ) -> Dict[str, Any]:
+        """Make a request to the Ensembl API."""
+        url = f"{self.base_url}{endpoint}"
+        try:
+            response = self.session.get(url, params=params, timeout=self.timeout)
+            response.raise_for_status()
 
-        # 1) symbol -> xref(s) to get Ensembl gene ID
-        xref_url = f"{self.base}/xrefs/symbol/{species}/{symbol}"
-        xref_resp = self.session.get(xref_url, timeout=20)
-        xref_resp.raise_for_status()
-        xrefs = xref_resp.json() or []
-        gene_id = None
-        for item in xrefs:
-            if item.get("type") == "gene" and item.get("id"):
-                gene_id = item["id"]
-                break
-        if not gene_id and xrefs:
-            gene_id = xrefs[0].get("id")
+            data = response.json()
+            return {
+                "status": "success",
+                "data": data,
+                "url": url,
+                "content_type": response.headers.get(
+                    "content-type", "application/json"
+                ),
+            }
+
+        except requests.exceptions.RequestException as e:
+            return {
+                "status": "error",
+                "error": f"Ensembl API request failed: {str(e)}",
+                "url": url,
+            }
+
+    def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute the tool with given arguments."""
+        return self._make_request(self.endpoint, arguments)
+
+
+@register_tool("EnsemblLookupGene")
+class EnsemblLookupGene(EnsemblRESTTool):
+    """Lookup gene information by ID or symbol."""
+
+    def __init__(self, tool_config):
+        super().__init__(tool_config)
+        self.endpoint = "/lookup/id"
+
+    def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Lookup gene by ID or symbol."""
+        gene_id = arguments.get("gene_id", "")
         if not gene_id:
-            return {"error": f"No Ensembl gene found for {symbol}"}
+            return {"status": "error", "error": "gene_id is required"}
 
-        # 2) lookup by Ensembl ID (expand=1 to include transcripts)
-        lookup_url = f"{self.base}/lookup/id/{gene_id}?expand=1"
-        look_resp = self.session.get(lookup_url, timeout=30)
-        look_resp.raise_for_status()
-        data = look_resp.json() or {}
+        # Ensembl API requires the ID in the URL path
+        endpoint = f"{self.endpoint}/{gene_id}"
+        params = {"expand": 1}
 
-        transcripts = data.get("Transcript") or []
-        return {
-            "id": data.get("id"),
-            "symbol": symbol,
-            "display_name": data.get("display_name"),
-            "species": data.get("species"),
-            "seq_region_name": data.get("seq_region_name"),
-            "start": data.get("start"),
-            "end": data.get("end"),
-            "strand": data.get("strand"),
-            "biotype": data.get("biotype"),
-            "transcript_count": len(transcripts),
+        # Add species if specified
+        if "species" in arguments:
+            params["species"] = arguments["species"]
+
+        result = self._make_request(endpoint, params)
+
+        # Add gene_id to result for reference
+        if result.get("status") == "success":
+            result["gene_id"] = gene_id
+
+        return result
+
+
+@register_tool("EnsemblGetSequence")
+class EnsemblGetSequence(EnsemblRESTTool):
+    """Get DNA or protein sequences by region or gene ID."""
+
+    def __init__(self, tool_config):
+        super().__init__(tool_config)
+        self.endpoint = "/sequence/id"
+
+    def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Get sequence by gene ID or region."""
+        sequence_id = arguments.get("sequence_id", "")
+        if not sequence_id:
+            return {"status": "error", "error": "sequence_id is required"}
+
+        # Ensembl API requires the ID in the URL path
+        endpoint = f"{self.endpoint}/{sequence_id}"
+        params = {
+            "type": arguments.get("type", "genomic"),  # genomic, cds, protein
+            "multiple_sequences": "true",
         }
+
+        # Add species if specified
+        if "species" in arguments:
+            params["species"] = arguments["species"]
+
+        result = self._make_request(endpoint, params)
+
+        # Add sequence_id to result for reference
+        if result.get("status") == "success":
+            result["sequence_id"] = sequence_id
+
+        return result
+
+
+@register_tool("EnsemblGetVariants")
+class EnsemblGetVariants(EnsemblRESTTool):
+    """Get variant information for a genomic region."""
+
+    def __init__(self, tool_config):
+        super().__init__(tool_config)
+        self.endpoint = "/overlap/id"
+
+    def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Get variants for a region."""
+        region = arguments.get("region", "")
+        if not region:
+            return {
+                "status": "error",
+                "error": "region is required (e.g., '1:1000000..2000000')",
+            }
+
+        # Ensembl API requires the region in the URL path with species
+        species = arguments.get("species", "human")
+        endpoint = f"/overlap/region/{species}/{region}"
+        params = {"feature": "variation", "content-type": "application/json"}
+
+        result = self._make_request(endpoint, params)
+
+        # Add region to result for reference
+        if result.get("status") == "success":
+            result["region"] = region
+
+        return result

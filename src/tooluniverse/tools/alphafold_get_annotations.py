@@ -1,7 +1,7 @@
 """
 alphafold_get_annotations
 
-Retrieve AlphaFold variant annotations (e.g., missense mutations) for a given UniProt accession (...
+Retrieve AlphaFold variant annotations (e.g., missense mutations) for a given UniProt accession. ...
 """
 
 from typing import Any, Optional, Callable
@@ -17,12 +17,12 @@ def alphafold_get_annotations(
     validate: bool = True,
 ) -> dict[str, Any]:
     """
-    Retrieve AlphaFold variant annotations (e.g., missense mutations) for a given UniProt accession (...
+    Retrieve AlphaFold variant annotations (e.g., missense mutations) for a given UniProt accession. ...
 
     Parameters
     ----------
     qualifier : str
-        Protein identifier: UniProt accession, entry name, or CRC64 checksum.
+        Protein identifier: UniProt ACCESSION (e.g., 'P69905'). Do NOT use entry name...
     type : str
         Annotation type (currently only 'MUTAGEN' is supported).
     stream_callback : Callable, optional

@@ -1839,5 +1839,37 @@
         }
       }
     }
+  },
+  {
+    "type": "GWASGeneSearch",
+    "name": "GWAS_search_associations_by_gene",
+    "description": "Search GWAS Catalog associations by gene name (returns strongest risk allele and p-value fields).",
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "gene_name": {"type": "string", "description": "Gene symbol (e.g., BRCA1)."},
+        "size": {"type": "integer", "description": "Max associations to return.", "default": 5}
+      },
+      "required": ["gene_name"]
+    },
+    "return_schema": {
+      "type": "object",
+      "properties": {
+        "gene_name": {"type": "string"},
+        "association_count": {"type": "integer"},
+        "associations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "study": {"type": "string"},
+              "strongestRiskAllele": {"type": "string"},
+              "pvalue": {"type": "number"}
+            }
+          }
+        },
+        "total_found": {"type": "integer"}
+      }
+    }
   }
 ]

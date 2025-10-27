@@ -7,18 +7,15 @@ next-generation sequencing, and other forms of high-throughput functional
 genomics data.
 """
 
-import requests
 from typing import Dict, Any, List
-from .base_tool import BaseTool
+from .ncbi_eutils_tool import NCBIEUtilsTool
 from .tool_registry import register_tool
-
-GEO_BASE_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
 
 @register_tool("GEORESTTool")
-class GEORESTTool(BaseTool):
+class GEORESTTool(NCBIEUtilsTool):
     """
-    GEO Database REST API tool.
+    GEO Database REST API tool with rate limiting.
     Generic wrapper for GEO API endpoints defined in expression_tools.json.
     """
 
@@ -34,7 +31,7 @@ class GEORESTTool(BaseTool):
     def _build_url(self, arguments: Dict[str, Any]) -> str | Dict[str, Any]:
         """Build URL for GEO API request."""
         url_path = self.endpoint_template
-        return GEO_BASE_URL + url_path
+        return self.base_url + url_path
 
     def _build_params(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
         """Build parameters for GEO API request."""
@@ -85,22 +82,6 @@ class GEORESTTool(BaseTool):
 
         return params
 
-    def _make_request(self, url: str, params: Dict[str, Any]) -> Dict[str, Any]:
-        """Perform a GET request and handle common errors."""
-        try:
-            response = requests.get(url, params=params, timeout=30)
-            response.raise_for_status()
-
-            if self.output_format == "JSON":
-                return response.json()
-            else:
-                return {"data": response.text}
-
-        except requests.exceptions.RequestException as e:
-            return {"error": f"Request failed: {str(e)}"}
-        except Exception as e:
-            return {"error": f"Unexpected error: {str(e)}"}
-
     def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
         """Execute the tool with given arguments."""
         # Validate required parameters
@@ -108,9 +89,81 @@ class GEORESTTool(BaseTool):
             if param not in arguments:
                 return {"error": f"Missing required parameter: {param}"}
 
-        url = self._build_url(arguments)
-        if isinstance(url, dict) and "error" in url:
-            return url
-
+        # Set endpoint for the base class
+        self.endpoint = self.endpoint_template
         params = self._build_params(arguments)
-        return self._make_request(url, params)
+
+        # Use the parent class's _make_request with rate limiting
+        return self._make_request(self.endpoint, params)
+
+
+@register_tool("GEOSearchDatasets")
+class GEOSearchDatasets(GEORESTTool):
+    """Search GEO datasets by various criteria."""
+
+    def __init__(self, tool_config):
+        super().__init__(tool_config)
+        self.endpoint_template = "/esearch.fcgi"
+
+    def _build_params(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Build parameters for GEO dataset search."""
+        params = {"db": "gds", "retmode": "json", "retmax": 50}
+
+        # Build search query
+        query_parts = []
+        if "query" in arguments:
+            query_parts.append(arguments["query"])
+
+        if "organism" in arguments:
+            organism = arguments["organism"]
+            query_parts.append(f'"{organism}"[organism]')
+
+        if "study_type" in arguments:
+            study_type = arguments["study_type"]
+            query_parts.append(f'"{study_type}"[study_type]')
+
+        if "platform" in arguments:
+            platform = arguments["platform"]
+            query_parts.append(f'"{platform}"[platform]')
+
+        if query_parts:
+            params["term"] = " AND ".join(query_parts)
+
+        if "limit" in arguments:
+            params["retmax"] = min(arguments["limit"], 500)
+
+        return params
+
+
+@register_tool("GEOGetDatasetInfo")
+class GEOGetDatasetInfo(GEORESTTool):
+    """Get detailed information about a specific GEO dataset."""
+
+    def __init__(self, tool_config):
+        super().__init__(tool_config)
+        self.endpoint_template = "/esummary.fcgi"
+
+    def _build_params(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Build parameters for GEO dataset info retrieval."""
+        dataset_id = arguments.get("dataset_id", "")
+        if not dataset_id:
+            return {"error": "dataset_id is required"}
+
+        return {"db": "gds", "id": dataset_id, "retmode": "json"}
+
+
+@register_tool("GEOGetSampleInfo")
+class GEOGetSampleInfo(GEORESTTool):
+    """Get sample information for a GEO dataset."""
+
+    def __init__(self, tool_config):
+        super().__init__(tool_config)
+        self.endpoint_template = "/esummary.fcgi"
+
+    def _build_params(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Build parameters for GEO sample info retrieval."""
+        dataset_id = arguments.get("dataset_id", "")
+        if not dataset_id:
+            return {"error": "dataset_id is required"}
+
+        return {"db": "gds", "id": dataset_id, "retmode": "json"}

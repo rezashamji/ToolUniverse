@@ -14,12 +14,12 @@ def CodeQualityAnalyzer(
     tool_parameters: str,
     implementation_code: str,
     test_cases: str,
-    test_execution_results: Optional[str] = None,
+    test_execution_results: str,
     *,
     stream_callback: Optional[Callable[[str], None]] = None,
     use_cache: bool = False,
     validate: bool = True,
-) -> Any:
+) -> dict[str, Any]:
     """
     Analyzes code quality from multiple dimensions including algorithmic correctness, functional impl...
 
@@ -46,7 +46,7 @@ def CodeQualityAnalyzer(
 
     Returns
     -------
-    Any
+    dict[str, Any]
     """
     # Handle mutable defaults to avoid B006 linting error
 

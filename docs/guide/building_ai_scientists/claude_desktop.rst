@@ -97,9 +97,9 @@ Add the ToolUniverse MCP server configuration to your Claude Desktop config:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/your/uv/environment",
+           "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
            "run",
-           "tooluniverse-mcp-studio"
+           "tooluniverse-smcp-stdio"
          ]
        }
      }
@@ -107,8 +107,10 @@ Add the ToolUniverse MCP server configuration to your Claude Desktop config:
 
 **Important Configuration Notes**:
 
-- Replace `/path/to/your/uv/environment` with your actual uv environment
+- Replace `/path/to/tooluniverse-env` with your actual ToolUniverse working directory
+- The working directory is where uv will create and manage the virtual environment (`.venv`)
 - Use absolute paths for better reliability
+- Install ToolUniverse first: ``uv --directory /path/to/tooluniverse-env pip install tooluniverse``
 
 **Example Configuration**:
 
@@ -120,9 +122,9 @@ Add the ToolUniverse MCP server configuration to your Claude Desktop config:
          "command": "uv",
          "args": [
            "--directory",
-           "/Users/username/uv/environment",
+           "/path/to/tooluniverse-env",  # Working directory
            "run",
-           "tooluniverse-mcp-studio"
+           "tooluniverse-smcp-stdio"
          ]
        }
      }
@@ -382,7 +384,7 @@ Tool Selection Strategies
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/uv/environment",
+           "/path/to/tooluniverse-env",  # Working directory
            "run",
            "tooluniverse-mcp-stdio",
            "--tools",
@@ -404,7 +406,7 @@ Create custom tool sets for specific research domains:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/uv/environment",
+           "/path/to/tooluniverse-env",  # Working directory
            "run",
            "tooluniverse-mcp-stdio",
            "--toolset",
@@ -415,9 +417,9 @@ Create custom tool sets for specific research domains:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/uv/environment",
+           "/path/to/tooluniverse-env",  # Working directory
            "run",
-           "tooluniverse-mcp-studio",
+           "tooluniverse-smcp-stdio",
            "--toolset",
            "genomics"
          ]
@@ -438,9 +440,9 @@ Run multiple ToolUniverse instances for different purposes:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/uv/environment",
+           "/path/to/tooluniverse-env",  # Working directory
            "run",
-           "tooluniverse-mcp-studio",
+           "tooluniverse-smcp-stdio",
            "--mode",
            "research"
          ]
@@ -449,9 +451,9 @@ Run multiple ToolUniverse instances for different purposes:
          "command": "uv",
          "args": [
            "--directory",
-           "/path/to/uv/environment",
+           "/path/to/tooluniverse-env",  # Working directory
            "run",
-           "tooluniverse-mcp-studio",
+           "tooluniverse-smcp-stdio",
            "--mode",
            "analysis"
          ]

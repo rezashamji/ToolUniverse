@@ -29,7 +29,7 @@ Create or open your `settings.json` file and add the ToolUniverse MCP server con
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio"
       ]
@@ -38,7 +38,12 @@ Create or open your `settings.json` file and add the ToolUniverse MCP server con
 }
 ```
 
-**Important**: Replace `/path/to/your/gemini_running_env` with the actual absolute path to your gemini running folder.
+**Important Configuration Notes**:
+
+- Replace `/path/to/tooluniverse-env` with your actual ToolUniverse working directory
+- The working directory is where uv will create and manage the virtual environment (`.venv`)
+- We recommend using `tooluniverse-env` as the directory name
+- Example: `/path/to/tooluniverse-env`
 
 ### 3. Configuration Explanation
 
@@ -66,11 +71,11 @@ To provide API keys or other secrets to the server, use the `env` block.
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio"
       ],
-      "cwd": "/path/to/your/ToolUniverse",
+      "cwd": "/path/to/tooluniverse-env",  # Working directory
       "env": {
         "PUBMED_API_KEY": "$PUBMED_API_KEY",
         "SEMANTIC_SCHOLAR_API_KEY": "$SEMANTIC_SCHOLAR_API_KEY"
@@ -90,7 +95,7 @@ To provide API keys or other secrets to the server, use the `env` block.
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio",
         "--exclude-tool-types",
@@ -126,7 +131,7 @@ If you want to use only specific ToolUniverse tools to reduce overhead:
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio"
       ],
@@ -151,7 +156,7 @@ To exclude certain tools while keeping the rest:
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio"
       ],
@@ -305,11 +310,11 @@ You can configure multiple ToolUniverse instances, for example, to separate conc
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio"
       ],
-      "cwd": "/path/to/your/ToolUniverse",
+      "cwd": "/path/to/tooluniverse-env",  # Working directory
       "includeTools": ["EuropePMC_search_articles", "openalex_literature_search", "PubTator3_LiteratureSearch"],
       "timeout": 30000
     },
@@ -317,11 +322,11 @@ You can configure multiple ToolUniverse instances, for example, to separate conc
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio"
       ],
-      "cwd": "/path/to/your/ToolUniverse",
+      "cwd": "/path/to/tooluniverse-env",  # Working directory
       "includeTools": ["ChEMBL_search_similar_molecules", "FDA_get_drug_names_by_indication", "drugbank_search"],
       "timeout": 45000
     }
@@ -383,7 +388,7 @@ If you're primarily using ToolUniverse for scientific research without coding ne
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/your/gemini_running_env",
+        "/path/to/tooluniverse-env",  # Working directory: uv manages .venv here
         "run",
         "tooluniverse-smcp-stdio",
         "--exclude-tool-types",

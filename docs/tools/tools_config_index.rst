@@ -1427,7 +1427,6 @@ Tools by Type
   * get_hmmlearn_info (from :doc:`machine_learning_tools`)
   * get_holoviews_info (from :doc:`visualization_tools`)
   * get_htmd_info (from :doc:`structural_biology_tools`)
-  * get_hyperopt_info (from :doc:`machine_learning_tools`)
   * get_igraph_info (from :doc:`visualization_tools`)
   * get_imageio_info (from :doc:`image_processing_tools`)
   * get_imbalanced_learn_info (from :doc:`machine_learning_tools`)

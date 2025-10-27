@@ -1,63 +1,111 @@
+"""
+gnomAD GraphQL API Tool
+
+This tool provides access to the gnomAD (Genome Aggregation Database) for
+population genetics data, variant frequencies, and gene constraint metrics using GraphQL.
+"""
+
 import requests
-import json
+from typing import Dict, Any
 from .base_tool import BaseTool
 from .tool_registry import register_tool
+from .graphql_tool import execute_query
 
 
-@register_tool("GnomadTool")
-class GnomadTool(BaseTool):
-    """
-    Local tool wrapper for gnomAD GraphQL API.
-    Queries variant information including allele frequencies.
-    """
+class gnomADGraphQLTool(BaseTool):
+    """Base class for gnomAD GraphQL API tools."""
 
     def __init__(self, tool_config):
         super().__init__(tool_config)
-        self.base = "https://gnomad.broadinstitute.org/api"
+        self.endpoint_url = "https://gnomad.broadinstitute.org/api"
+        self.query_schema = tool_config.get("query_schema", "")
         self.session = requests.Session()
-        self.session.headers.update({"Content-Type": "application/json"})
-
-    def run(self, arguments):
-        variant_id = arguments.get("variant_id")
-        dataset = arguments.get("dataset", "gnomad_r4")
-
-        if not variant_id:
-            return {"error": "Missing required parameter: variant_id"}
-
-        # GraphQL query for variant with genome frequencies
-        query = """
-        query($variant: String!, $dataset: DatasetId!) {
-            variant(variantId: $variant, dataset: $dataset) {
-                variantId
-                genome {
-                    ac
-                    an
-                    af
-                }
+        self.session.headers.update(
+            {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "User-Agent": "ToolUniverse/1.0",
             }
-        }
-        """
+        )
+        self.timeout = 30
 
-        payload = {
-            "query": query,
-            "variables": {
-                "variant": variant_id,
-                "dataset": dataset,
-            },
-        }
+    def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute GraphQL query with given arguments."""
+        try:
+            result = execute_query(
+                endpoint_url=self.endpoint_url,
+                query=self.query_schema,
+                variables=arguments,
+            )
 
-        resp = self.session.post(self.base, data=json.dumps(payload), timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
+            if result is None:
+                return {
+                    "status": "error",
+                    "error": "No data returned from gnomAD API",
+                    "data": None,
+                }
 
-        if "errors" in data:
-            return {"error": f"GraphQL errors: {data['errors']}"}
+            return {"status": "success", "data": result, "url": self.endpoint_url}
 
-        variant = data.get("data", {}).get("variant")
-        if not variant:
-            return {"error": "Variant not found"}
+        except Exception as e:
+            return {
+                "status": "error",
+                "error": f"gnomAD GraphQL request failed: {str(e)}",
+                "data": None,
+            }
 
-        return {
-            "variantId": variant.get("variantId"),
-            "genome": variant.get("genome", {}),
-        }
+
+@register_tool("gnomADGetGeneConstraints")
+class gnomADGetGeneConstraints(gnomADGraphQLTool):
+    """Get gene constraint metrics from gnomAD."""
+
+    def __init__(self, tool_config):
+        super().__init__(tool_config)
+        # Set default query schema if not provided in config
+        if not self.query_schema:
+            self.query_schema = """
+query GeneConstraints($geneSymbol: String!) {
+  gene(gene_symbol: $geneSymbol, reference_genome: GRCh38) {
+    symbol
+    gene_id
+    exac_constraint {
+      exp_lof
+      obs_lof
+      pLI
+      exp_mis
+      obs_mis
+      exp_syn
+      obs_syn
+    }
+    gnomad_constraint {
+      exp_lof
+      obs_lof
+      oe_lof
+      pLI
+      exp_mis
+      obs_mis
+      oe_mis
+      exp_syn
+      obs_syn
+      oe_syn
+    }
+  }
+}
+"""
+
+    def run(self, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Get gene constraints."""
+        gene_symbol = arguments.get("gene_symbol", "")
+        if not gene_symbol:
+            return {"status": "error", "error": "gene_symbol is required"}
+
+        # Convert gene_symbol to geneSymbol for GraphQL variable
+        graphql_args = {"geneSymbol": gene_symbol}
+
+        result = super().run(graphql_args)
+
+        # Add gene_symbol to result for reference
+        if result.get("status") == "success":
+            result["gene_symbol"] = gene_symbol
+
+        return result

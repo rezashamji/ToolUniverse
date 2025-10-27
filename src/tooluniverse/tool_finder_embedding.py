@@ -225,7 +225,9 @@ class ToolFinderEmbedding(BaseTool):
         picked_tool_names_no_special = picked_tool_names_no_special[:rag_num]
         picked_tool_names = picked_tool_names_no_special[:rag_num]
 
-        picked_tools = self.tooluniverse.get_tool_by_name(picked_tool_names)
+        picked_tools = self.tooluniverse.get_tool_specification_by_names(
+            picked_tool_names
+        )
         picked_tools_prompt = self.tooluniverse.prepare_tool_prompts(picked_tools)
         if return_call_result:
             return picked_tools_prompt, picked_tool_names

@@ -225,37 +225,6 @@ Get comprehensive information about hmmlearn – Hidden Markov Models in Python
       result = tu.run(query)
 
 
-**get_hyperopt_info** (Type: PackageTool)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Get comprehensive information about Hyperopt – distributed hyperparameter optimization
-
-.. dropdown:: get_hyperopt_info tool specification
-
-   **Tool Information:**
-
-   * **Name**: ``get_hyperopt_info``
-   * **Type**: ``PackageTool``
-   * **Description**: Get comprehensive information about Hyperopt – distributed hyperparameter optimization
-
-   **Parameters:**
-
-   * ``include_examples`` (boolean) (required)
-     Whether to include usage examples and quick start guide
-
-   **Example Usage:**
-
-   .. code-block:: python
-
-      query = {
-          "name": "get_hyperopt_info",
-          "arguments": {
-              "include_examples": true
-          }
-      }
-      result = tu.run(query)
-
-
 **get_imbalanced_learn_info** (Type: PackageTool)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

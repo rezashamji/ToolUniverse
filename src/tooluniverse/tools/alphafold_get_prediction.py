@@ -1,7 +1,7 @@
 """
 alphafold_get_prediction
 
-Retrieve full AlphaFold 3D structure predictions for a given protein. Input must be a UniProt acc...
+Retrieve full AlphaFold 3D structure predictions for a given protein. IMPORTANT: The qualifier mu...
 """
 
 from typing import Any, Optional, Callable
@@ -17,12 +17,12 @@ def alphafold_get_prediction(
     validate: bool = True,
 ) -> list[Any]:
     """
-    Retrieve full AlphaFold 3D structure predictions for a given protein. Input must be a UniProt acc...
+    Retrieve full AlphaFold 3D structure predictions for a given protein. IMPORTANT: The qualifier mu...
 
     Parameters
     ----------
     qualifier : str
-        Protein identifier: UniProt accession (e.g., 'P69905'), entry name (e.g., 'HB...
+        Protein identifier: UniProt ACCESSION (e.g., 'P69905'). Do NOT use entry name...
     sequence_checksum : str
         Optional CRC64 checksum of the UniProt sequence.
     stream_callback : Callable, optional

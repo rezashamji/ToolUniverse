@@ -387,7 +387,9 @@ Requirements:
 
             # Get actual tool objects
             if tool_names:
-                selected_tool_objects = self.tooluniverse.get_tool_by_name(tool_names)
+                selected_tool_objects = (
+                    self.tooluniverse.get_tool_specification_by_names(tool_names)
+                )
                 tool_prompts = self.tooluniverse.prepare_tool_prompts(
                     selected_tool_objects
                 )
@@ -495,7 +497,9 @@ Requirements:
         picked_tool_names = picked_tool_names_no_special[:rag_num]
 
         # Get tool objects and prepare prompts (needed for both list and other formats)
-        picked_tools = self.tooluniverse.get_tool_by_name(picked_tool_names)
+        picked_tools = self.tooluniverse.get_tool_specification_by_names(
+            picked_tool_names
+        )
         picked_tools_prompt = self.tooluniverse.prepare_tool_prompts(picked_tools)
 
         # If only list format is requested, return the tool specifications as a list

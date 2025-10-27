@@ -177,6 +177,20 @@ ComposeTool: Any
 CellosaurusSearchTool: Any
 CellosaurusQueryConverterTool: Any
 CellosaurusGetCellLineInfoTool: Any
+# New database tools
+InterProRESTTool: Any
+NCBIBlastTool: Any
+CBioPortalRESTTool: Any
+RegulomeDBRESTTool: Any
+JASPARRESTTool: Any
+ReMapRESTTool: Any
+SCREENRESTTool: Any
+PRIDERESTTool: Any
+EMDBRESTTool: Any
+GtoPdbRESTTool: Any
+MPDRESTTool: Any
+WoRMSRESTTool: Any
+PaleobiologyRESTTool: Any
 if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
     # Import all tool classes immediately (old behavior) with warning suppression  # noqa: E501
     with warnings.catch_warnings():
@@ -185,7 +199,6 @@ if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
         warnings.filterwarnings("ignore", category=UserWarning)
         warnings.filterwarnings("ignore", category=FutureWarning)
         # Suppress specific third-party warnings
-        warnings.filterwarnings("ignore", category=UserWarning, module="hyperopt")
         warnings.filterwarnings(
             "ignore", category=DeprecationWarning, module="pkg_resources"
         )
@@ -235,6 +248,12 @@ if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
         from .embedding_database import EmbeddingDatabase
         from .embedding_sync import EmbeddingSync
         from .rcsb_pdb_tool import RCSBTool
+        from .web_search_tool import (
+            WebSearchTool,
+            WebAPIDocumentationSearchTool,
+        )
+        from .package_discovery_tool import DynamicPackageDiscovery
+        from .pypi_package_inspector_tool import PyPIPackageInspector
         from .gwas_tool import (
             GWASAssociationSearch,
             GWASStudySearch,
@@ -263,6 +282,13 @@ if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
         CellosaurusSearchTool,
         CellosaurusQueryConverterTool,
         CellosaurusGetCellLineInfoTool,
+    )
+
+    # New database tools
+    from .clinvar_tool import (
+        ClinVarSearchVariants,
+        ClinVarGetVariantDetails,
+        ClinVarGetClinicalSignificance,
     )
 
     # Literature search tools
@@ -381,6 +407,16 @@ else:
     CoreTool = _LazyImportProxy("core_tool", "CoreTool")
     PMCTool = _LazyImportProxy("pmc_tool", "PMCTool")
     ZenodoTool = _LazyImportProxy("zenodo_tool", "ZenodoTool")
+    WebSearchTool = _LazyImportProxy("web_search_tool", "WebSearchTool")
+    WebAPIDocumentationSearchTool = _LazyImportProxy(
+        "web_search_tool", "WebAPIDocumentationSearchTool"
+    )
+    DynamicPackageDiscovery = _LazyImportProxy(
+        "package_discovery_tool", "DynamicPackageDiscovery"
+    )
+    PyPIPackageInspector = _LazyImportProxy(
+        "pypi_package_inspector_tool", "PyPIPackageInspector"
+    )
 
 __all__ = [
     "__version__",
@@ -469,4 +505,12 @@ __all__ = [
     "CoreTool",
     "PMCTool",
     "ZenodoTool",
+    "WebSearchTool",
+    "WebAPIDocumentationSearchTool",
+    "DynamicPackageDiscovery",
+    "PyPIPackageInspector",
+    # ClinVar tools
+    "ClinVarSearchVariants",
+    "ClinVarGetVariantDetails",
+    "ClinVarGetClinicalSignificance",
 ]
