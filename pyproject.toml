@@ -80,8 +80,6 @@ embedding = [
     "sentence-transformers>=5.1.0",
     "faiss-cpu>=1.12.0",
     "huggingface_hub>=0.34.0",
-    "openai>=1.107.0",
-    "faiss-cpu>=1.12.0",
 ]
 graph = [
     "flask>=2.0.0",
