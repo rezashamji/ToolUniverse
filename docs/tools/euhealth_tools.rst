@@ -212,4 +212,4 @@ If you later want the nitty-gritty (how we crawl, embed, index), see the develop
 .. note::
 
 Want to build or share your **own** searchable dataset or tool (like EUHealth)?
-See: `docs/tutorials/build_search_and_share_datastores.rst`: the 3-minute guide to creating and publishing your own ToolUniverse datastore.
+See: `docs/tutorials/make_your_data_agent_searchable.rst`: the 3-minute guide to creating and publishing your own ToolUniverse datastore.
