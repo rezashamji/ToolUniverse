@@ -29,7 +29,12 @@
           "snippet": { "type": "string" }
         }
       }
-    }
+    },
+  "test_examples": [
+    { "limit": 5 },
+    { "country": "Germany" },
+    { "term_override": "oncology" }
+  ]
   },
   
 
@@ -57,7 +62,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "France" },
+      { "term_override": "tumor registry" }
+    ]
   },
 
   {
@@ -83,7 +93,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Italy" },
+      { "term_override": "mortality rates" }
+    ]
   },
 
   {
@@ -109,7 +124,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Spain" },
+      { "term_override": "cause specific mortality" }
+    ]
   },
 
   {
@@ -135,7 +155,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Sweden" },
+      { "term_override": "fertility rate" }
+    ]
   },
 
   {
@@ -161,7 +186,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Germany" },
+      { "term_override": "epidemic surveillance" }
+    ]
   },
 
   {
@@ -187,7 +217,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "France" },
+      { "term_override": "vaccination coverage" }
+    ]
   },
 
   {
@@ -213,7 +248,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Italy" },
+      { "term_override": "health spending" }
+    ]
   },
 
   {
@@ -239,7 +279,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Germany" },
+      { "term_override": "type 2 diabetes registry" }
+    ]
   },
 
   {
@@ -265,7 +310,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Sweden" },
+      { "term_override": "hospital admissions" }
+    ]
   },
 
   {
@@ -291,7 +341,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "France" },
+      { "term_override": "health survey 2020" }
+    ]
   },
 
   {
@@ -317,7 +372,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Italy" },
+      { "term_override": "public health indicators" }
+    ]
   },
 
   {
@@ -343,7 +403,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Germany" },
+      { "term_override": "excess mortality" }
+    ]
   },
 
   {
@@ -369,7 +434,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Spain" },
+      { "term_override": "disease monitoring" }
+    ]
   },
 
   {
@@ -395,7 +465,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "France" },
+      { "term_override": "general practitioners" }
+    ]
   },
 
   {
@@ -421,7 +496,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Italy" },
+      { "term_override": "BMI prevalence" }
+    ]
   },
 
   {
@@ -447,7 +527,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Germany" },
+      { "term_override": "measles immunization" }
+    ]
   },
 
   {
@@ -473,7 +558,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Spain" },
+      { "term_override": "depression survey" }
+    ]
   },
 
   {
@@ -499,7 +589,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "France" },
+      { "term_override": "accessibility data" }
+    ]
   },
 
   {
@@ -525,7 +620,12 @@
         "language": { "type": "array", "items": { "type": "string" } },
         "spatial": { "type": "string" }, "snippet": { "type": "string" }
       }
-    }}
+    }},
+    "test_examples": [
+      { "limit": 5 },
+      { "country": "Italy" },
+      { "term_override": "tobacco use" }
+    ]
   },
 
   {
@@ -593,6 +693,10 @@
           }
         }
       }
-    }
+    },
+    "test_examples": [
+      { "topic": "euhealthinfo_search_cancer", "limit": 2, "links_per": 2 },
+      { "topic": "euhealthinfo_search_vaccination", "limit": 1, "links_per": 1 }
+    ]
   }
 ]
