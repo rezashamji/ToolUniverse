@@ -428,7 +428,7 @@ Deeper Reference
 - HF upload/download helpers – ``src/tooluniverse/database_setup/hf/sync_hf.py``  
 - Programmatic build/sync tools – ``src/tooluniverse/database_setup/embedding_database.py`` / ``embedding_sync.py``  (Check these files for support on using `build`, `sync-hf` as first-class ToolUniverse tools, so you can call them programmatically in CI, notebooks, or an agent if you prefer.)
 - Agent search tool – ``src/tooluniverse/database_setup/generic_embedding_search_tool.py``  
-- Example tool JSON – ``docs/tools/generic_embedding_tool.json``  
+- Example tool JSON – ``docs/examples/make_your_agent_searchable_example/make_your_agent_searchable_example_JSON.json``  
 
 ---
 
