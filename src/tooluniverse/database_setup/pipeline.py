@@ -19,7 +19,6 @@ from __future__ import annotations
 from typing import List, Dict, Any, Optional, Tuple
 import numpy as np
 import sqlite3
-import os
 
 from .sqlite_store import SQLiteStore
 from .vector_store import VectorStore
@@ -29,7 +28,6 @@ from tooluniverse.database_setup.provider_resolver import (
     resolve_model,
 )
 from tooluniverse.database_setup.embed_utils import get_model_dim
-
 
 
 def _l2norm(x: np.ndarray) -> np.ndarray:
@@ -57,8 +55,6 @@ def build_collection(
     embed_model: str,
     overwrite: bool = False,
 ) -> None:
-
-
     """Create/extend a collection, embed docs, and populate FAISS.
 
     Inserts/merges documents (dedupe by (collection, doc_key) and by (collection, text_hash) when present),
@@ -81,17 +77,17 @@ def build_collection(
     except Exception as e:
         raise RuntimeError(f"Failed to detect embedding dimension: {e}")
 
-    #os.makedirs(os.path.dirname(os.path.expanduser(db_path)), exist_ok=True)
+    # os.makedirs(os.path.dirname(os.path.expanduser(db_path)), exist_ok=True)
 
     store = SQLiteStore(db_path)
 
     # Upsert collection metadata (safe to call repeatedly)
 
     store.upsert_collection(
-    collection,
-    description=f"Datastore for {collection}",
-    embedding_model=embed_model,
-    embedding_dimensions=embed_dim,
+        collection,
+        description=f"Datastore for {collection}",
+        embedding_model=embed_model,
+        embedding_dimensions=embed_dim,
     )
 
     # Insert/merge docs (dedupe by (collection, doc_key); optional text_hash dedupe if index exists)
@@ -114,7 +110,6 @@ def build_collection(
     # Optionally reset existing FAISS index if overwrite=True
     vs.load_index(collection, dim=embed_dim, reset=overwrite)
     vs.add_embeddings(collection, doc_ids, vecs, dim=embed_dim)
-
 
 
 # replace the beginning of search(...)

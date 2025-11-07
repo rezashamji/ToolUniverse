@@ -15,7 +15,7 @@ upload(collection, repo=None, private=True, commit_message="Update", tool_json=N
     Create/ensure a HF dataset repo and upload <collection>.db/.faiss, plus optional tool JSON file(s).
 
 download(repo, collection, overwrite=False, include_tools=False)
-    Download *.db/*.faiss from a HF dataset repo snapshot (and optionally any *.json tool files) and restores 
+    Download *.db/*.faiss from a HF dataset repo snapshot (and optionally any *.json tool files) and restores
     them under the user cache dir (<user_cache_dir>/embeddings) as <collection>.db/.faiss.
 
 Notes
@@ -36,12 +36,15 @@ from tooluniverse.utils import get_user_cache_dir  # ensure imported for DATA_DI
 # Always load .env if present
 load_dotenv()
 
-DATA_DIR = Path(os.environ.get("TU_DATA_DIR", os.path.join(get_user_cache_dir(), "embeddings")))
+DATA_DIR = Path(
+    os.environ.get("TU_DATA_DIR", os.path.join(get_user_cache_dir(), "embeddings"))
+)
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------
 # Helpers
 # ---------------------------
+
 
 def db_path_for_collection(collection: str) -> Path:
     """Return the absolute path for the user cache dir (<user_cache_dir>/embeddings/<collection>.db)."""
@@ -60,8 +63,13 @@ def get_hf_api():
 # Upload
 # ---------------------------
 
+
 def upload(
-    collection: str, repo: str = None, private: bool = True, commit_message: str = "Update", tool_json: list[str] | None = None,
+    collection: str,
+    repo: str = None,
+    private: bool = True,
+    commit_message: str = "Update",
+    tool_json: list[str] | None = None,
 ):
     """Upload a collection’s DB and FAISS index (and optional tool JSON file(s)) to the user’s own HF account."""
     api, token = get_hf_api()
@@ -103,7 +111,6 @@ def upload(
     else:
         print(f"No FAISS index found for {collection}")
 
-
     # upload tool JSON(s), if provided
     if tool_json:
         for p in tool_json:
@@ -121,11 +128,15 @@ def upload(
 
     print(f"Uploaded {collection} to HF repo {repo}")
 
+
 # ---------------------------
 # Download (via utils.download_from_hf)
 # ---------------------------
 
-def _download_one(repo: str, filename: str, local_target: Path, overwrite: bool = False):
+
+def _download_one(
+    repo: str, filename: str, local_target: Path, overwrite: bool = False
+):
     """
     Helper to fetch one file (DB or FAISS) using tooluniverse.utils.download_from_hf.
     """
@@ -139,7 +150,6 @@ def _download_one(repo: str, filename: str, local_target: Path, overwrite: bool 
             "token": token,
         }
     }
-
 
     res = download_from_hf(cfg)
     if not res.get("success"):
@@ -157,38 +167,41 @@ def _download_one(repo: str, filename: str, local_target: Path, overwrite: bool 
     return local_target
 
 
-#def download(repo: str, collection: str, overwrite: bool = False, include_tools: bool = False):
-    #"""Download <collection>.db and <collection>.faiss using the unified helper."""
-    #dest_db = db_path_for_collection(collection)
-    #dest_faiss = DATA_DIR / f"{collection}.faiss"
-    #dest_tool = anything.json
-    #if include_tools:
-        # Download tool
-       # try:
-          # file_path = _download_one(repo, f"{.endswith}.db", dest_tool, overwrite)
-        #    print(f" Restored {file_path.name} from {repo}")
-       # except Exception as e:
-        #    print(f" Failed to download file: {e}")
-       #     return
-        
-    # Download DB
-    #try:
-     #   db_path = _download_one(repo, f"{collection}.db", dest_db, overwrite)
-      #  print(f" Restored {db_path.name} from {repo}")
-    #except Exception as e:
-      #  print(f" Failed to download DB: {e}")
-      #  return
+# def download(repo: str, collection: str, overwrite: bool = False, include_tools: bool = False):
+# """Download <collection>.db and <collection>.faiss using the unified helper."""
+# dest_db = db_path_for_collection(collection)
+# dest_faiss = DATA_DIR / f"{collection}.faiss"
+# dest_tool = anything.json
+# if include_tools:
+# Download tool
+# try:
+# file_path = _download_one(repo, f"{.endswith}.db", dest_tool, overwrite)
+#    print(f" Restored {file_path.name} from {repo}")
+# except Exception as e:
+#    print(f" Failed to download file: {e}")
+#     return
 
-    # Download FAISS (optional)
-    #try:
-      #  faiss_path = _download_one(repo, f"{collection}.faiss", dest_faiss, overwrite)
-      #  print(f" Restored {faiss_path.name} from {repo}")
-   # except Exception as e:
-    #    print(f" No FAISS index found or failed to download: {e}")
+# Download DB
+# try:
+#   db_path = _download_one(repo, f"{collection}.db", dest_db, overwrite)
+#  print(f" Restored {db_path.name} from {repo}")
+# except Exception as e:
+#  print(f" Failed to download DB: {e}")
+#  return
 
-   # print(f" Download complete for {collection} from {repo}")
+# Download FAISS (optional)
+# try:
+#  faiss_path = _download_one(repo, f"{collection}.faiss", dest_faiss, overwrite)
+#  print(f" Restored {faiss_path.name} from {repo}")
+# except Exception as e:
+#    print(f" No FAISS index found or failed to download: {e}")
 
-def download(repo: str, collection: str, overwrite: bool = False, include_tools: bool = False):
+# print(f" Download complete for {collection} from {repo}")
+
+
+def download(
+    repo: str, collection: str, overwrite: bool = False, include_tools: bool = False
+):
     """Download <collection>.db and <collection>.faiss (and optionally any .json tool files) using the unified helper."""
     dest_db = db_path_for_collection(collection)
     dest_faiss = DATA_DIR / f"{collection}.faiss"
@@ -238,6 +251,7 @@ def download(repo: str, collection: str, overwrite: bool = False, include_tools:
 
     print(f"Download complete for {collection} from {repo}")
 
+
 # ---------------------------
 # Entrypoint
 # ---------------------------
@@ -245,27 +259,53 @@ def download(repo: str, collection: str, overwrite: bool = False, include_tools:
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Sync datastore collections with Hugging Face Hub")
+    parser = argparse.ArgumentParser(
+        description="Sync datastore collections with Hugging Face Hub"
+    )
     subparsers = parser.add_subparsers(dest="command")
 
     # Upload
     up = subparsers.add_parser("upload", help="Upload a collection to HF Hub")
-    up.add_argument("--collection", required=True, help="Collection name (e.g., euhealth, demo)")
+    up.add_argument(
+        "--collection", required=True, help="Collection name (e.g., euhealth, demo)"
+    )
     up.add_argument(
         "--repo",
         required=False,
-        help="HF dataset repo ID (default: <your_username>/<collection> based on HF_TOKEN)"
+        help="HF dataset repo ID (default: <your_username>/<collection> based on HF_TOKEN)",
     )
-    up.add_argument("--private", action=argparse.BooleanOptionalAction, default=True, help="Make repo private (default: True). Use --no-private to make it public.")
-    up.add_argument("--commit_message", default="Update", help="Commit message for upload")
-    up.add_argument("--tool-json", nargs="*", default=None, help="Path(s) to Tool JSON file(s) to upload with the datastore.")
-    
+    up.add_argument(
+        "--private",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Make repo private (default: True). Use --no-private to make it public.",
+    )
+    up.add_argument(
+        "--commit_message", default="Update", help="Commit message for upload"
+    )
+    up.add_argument(
+        "--tool-json",
+        nargs="*",
+        default=None,
+        help="Path(s) to Tool JSON file(s) to upload with the datastore.",
+    )
+
     # Download
     down = subparsers.add_parser("download", help="Download a collection from HF Hub")
     down.add_argument("--repo", required=True, help="HF dataset repo ID")
-    down.add_argument("--collection", required=True, help="Local collection name (e.g., euhealth, demo)")
-    down.add_argument("--overwrite", action="store_true", help="Overwrite existing local DB/FAISS")
-    down.add_argument("--include-tools", action="store_true", help="Also download any *.json tool files")
+    down.add_argument(
+        "--collection",
+        required=True,
+        help="Local collection name (e.g., euhealth, demo)",
+    )
+    down.add_argument(
+        "--overwrite", action="store_true", help="Overwrite existing local DB/FAISS"
+    )
+    down.add_argument(
+        "--include-tools",
+        action="store_true",
+        help="Also download any *.json tool files",
+    )
 
     args = parser.parse_args()
 
@@ -275,7 +315,7 @@ if __name__ == "__main__":
             repo=args.repo,
             private=args.private,
             commit_message=args.commit_message,
-            tool_json=args.tool_json
+            tool_json=args.tool_json,
         )
     elif args.command == "download":
         download(

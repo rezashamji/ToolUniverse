@@ -387,7 +387,7 @@ class ToolUniverse:
             self.all_tools.append(tool_config)
             if "name" in tool_config:
                 self.all_tool_dict[tool_config["name"]] = tool_config
-   
+
         self.logger.info(f"Custom tool '{name}' registered successfully!")
         return name
 

@@ -229,6 +229,7 @@ TOPICS: Dict[str, Dict[str, Any]] = {
 # -----------------
 _se: Optional[SearchEngine] = None
 
+
 def _se_singleton() -> SearchEngine:
     global _se
     if _se is None:

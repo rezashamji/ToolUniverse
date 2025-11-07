@@ -123,7 +123,11 @@ class EmbeddingDatabase(BaseTool):
         self.logger = get_logger("EmbeddingDatabase")
 
         storage_config = tool_config.get("configs", {}).get("storage_config", {})
-        self.data_dir = Path(storage_config.get("data_dir", os.path.join(get_user_cache_dir(), "embeddings")))
+        self.data_dir = Path(
+            storage_config.get(
+                "data_dir", os.path.join(get_user_cache_dir(), "embeddings")
+            )
+        )
         self.faiss_index_type = storage_config.get("faiss_index_type", "IndexFlatIP")
         self.data_dir.mkdir(parents=True, exist_ok=True)
 

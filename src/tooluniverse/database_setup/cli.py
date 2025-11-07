@@ -54,7 +54,9 @@ def resolve_provider_model(provider_arg, model_arg):
 
 
 def main():
-    p = argparse.ArgumentParser("tu-datastore", description="Manage local searchable datastores.")
+    p = argparse.ArgumentParser(
+        "tu-datastore", description="Manage local searchable datastores."
+    )
     sub = p.add_subparsers(dest="cmd")
 
     # --------------------------------------------------------------------------
@@ -64,19 +66,29 @@ def main():
     b.add_argument("--collection", required=True, help="Collection name (e.g. toy)")
     b.add_argument("--docs-json", required=True, help="Path to JSON list of docs")
     b.add_argument("--db", required=False, help="Optional path to SQLite DB")
-    b.add_argument("--provider", help="Embedding provider (openai, azure, huggingface, local)")
+    b.add_argument(
+        "--provider", help="Embedding provider (openai, azure, huggingface, local)"
+    )
     b.add_argument("--model", help="Embedding model name or deployment")
-    b.add_argument("--overwrite", action="store_true", help="Rebuild FAISS index if exists")
+    b.add_argument(
+        "--overwrite", action="store_true", help="Rebuild FAISS index if exists"
+    )
 
     # --------------------------------------------------------------------------
     # quickbuild
     # --------------------------------------------------------------------------
-    qb = sub.add_parser("quickbuild", help="Build from a folder of text files (.txt/.md)")
+    qb = sub.add_parser(
+        "quickbuild", help="Build from a folder of text files (.txt/.md)"
+    )
     qb.add_argument("--name", required=True, help="Collection name (e.g. mydata)")
     qb.add_argument("--from-folder", required=True, help="Folder containing text files")
-    qb.add_argument("--provider", help="Embedding provider (openai, azure, huggingface, local)")
+    qb.add_argument(
+        "--provider", help="Embedding provider (openai, azure, huggingface, local)"
+    )
     qb.add_argument("--model", help="Embedding model name or deployment")
-    qb.add_argument("--overwrite", action="store_true", help="Rebuild FAISS index if exists")
+    qb.add_argument(
+        "--overwrite", action="store_true", help="Rebuild FAISS index if exists"
+    )
 
     # --------------------------------------------------------------------------
     # search
@@ -85,7 +97,12 @@ def main():
     s.add_argument("--collection", required=True, help="Collection name (e.g. toy)")
     s.add_argument("--query", required=True, help="Search query text")
     s.add_argument("--db", required=False, help="Optional path to SQLite DB")
-    s.add_argument("--method", default="hybrid", choices=["keyword", "embedding", "hybrid"], help="Search method")
+    s.add_argument(
+        "--method",
+        default="hybrid",
+        choices=["keyword", "embedding", "hybrid"],
+        help="Search method",
+    )
     s.add_argument("--top-k", default=10, type=int, help="Number of results")
     s.add_argument("--alpha", default=0.5, type=float, help="Hybrid mix weight")
     s.add_argument("--provider", help="Embedding provider (optional)")
@@ -94,28 +111,37 @@ def main():
     # --------------------------------------------------------------------------
     # sync-hf
     # --------------------------------------------------------------------------
-    sh = sub.add_parser("sync-hf", help="Upload/download datastore artifacts to/from Hugging Face")
+    sh = sub.add_parser(
+        "sync-hf", help="Upload/download datastore artifacts to/from Hugging Face"
+    )
     sh_sub = sh.add_subparsers(dest="action", required=True)
 
     up = sh_sub.add_parser("upload", help="Upload collection artifacts to HF")
     up.add_argument("--collection", required=True)
-    up.add_argument("--repo", help="HF dataset repo ID (defaults to <username>/<collection>)")
-    up.add_argument("--private", action=argparse.BooleanOptionalAction, default=True, help="Make dataset private (default True). Use --no-private to make it public.")
     up.add_argument(
-    "--tool-json",
-    nargs="*",
-    default=None,
-    help="Path(s) to Tool JSON file(s) to upload with the datastore.",
+        "--repo", help="HF dataset repo ID (defaults to <username>/<collection>)"
+    )
+    up.add_argument(
+        "--private",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Make dataset private (default True). Use --no-private to make it public.",
+    )
+    up.add_argument(
+        "--tool-json",
+        nargs="*",
+        default=None,
+        help="Path(s) to Tool JSON file(s) to upload with the datastore.",
     )
 
     down = sh_sub.add_parser("download", help="Download collection artifacts from HF")
     down.add_argument("--repo", required=True)
     down.add_argument("--collection", required=True)
-    down.add_argument("--overwrite", action="store_true", help="Overwrite existing index")
     down.add_argument(
-        "--include-tools",
-        action="store_true",
-        help="Also download tool JSON files"
+        "--overwrite", action="store_true", help="Overwrite existing index"
+    )
+    down.add_argument(
+        "--include-tools", action="store_true", help="Also download tool JSON files"
     )
 
     # --------------------------------------------------------------------------
@@ -128,13 +154,15 @@ def main():
             raw = json.load(f)
         docs = [
             (
-                d.get("doc_key"),
-                d.get("text"),
-                d.get("metadata", {}),
-                d.get("text_hash"),
+                (
+                    d.get("doc_key"),
+                    d.get("text"),
+                    d.get("metadata", {}),
+                    d.get("text_hash"),
+                )
+                if isinstance(d, dict)
+                else tuple(d)
             )
-            if isinstance(d, dict)
-            else tuple(d)
             for d in raw
         ]
 
@@ -167,7 +195,9 @@ def main():
             embed_model=model,
             overwrite=args.overwrite,
         )
-        print(f"[INFO] Built collection '{args.name}' with {len(docs)} docs at {db_path}")
+        print(
+            f"[INFO] Built collection '{args.name}' with {len(docs)} docs at {db_path}"
+        )
 
     elif args.cmd == "search":
         db_path = resolve_db_path(args.db, args.collection)
@@ -190,9 +220,19 @@ def main():
 
     elif args.cmd == "sync-hf":
         if args.action == "upload":
-            sync_upload(collection=args.collection, repo=args.repo, private=args.private, tool_json=args.tool_json,)
+            sync_upload(
+                collection=args.collection,
+                repo=args.repo,
+                private=args.private,
+                tool_json=args.tool_json,
+            )
         elif args.action == "download":
-            sync_download(repo=args.repo, collection=args.collection, overwrite=args.overwrite, include_tools=args.include_tools)
+            sync_download(
+                repo=args.repo,
+                collection=args.collection,
+                overwrite=args.overwrite,
+                include_tools=args.include_tools,
+            )
 
     else:
         p.print_help()

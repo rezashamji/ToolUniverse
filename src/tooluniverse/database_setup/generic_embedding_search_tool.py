@@ -15,6 +15,7 @@ from tooluniverse.database_setup.search import SearchEngine
 from tooluniverse.utils import get_user_cache_dir
 import os
 
+
 @register_tool("EmbeddingCollectionSearchTool")
 class EmbeddingCollectionSearchTool(BaseTool):
     """

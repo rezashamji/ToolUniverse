@@ -28,6 +28,7 @@ from typing import List, Tuple, Optional, Dict
 from tooluniverse.utils import get_user_cache_dir
 import os
 
+
 class VectorStore:
     """Manage FAISS indices per collection, persisted under the user cache dir (<user_cache_dir>/embeddings)."""
 
@@ -65,10 +66,10 @@ class VectorStore:
         self.dimensions[collection] = dim
         return index
 
-    #def save_index(self, collection: str):
-     #   """Persist the in-memory FAISS index for `collection` to disk."""
-     #   if collection not in self.indexes:
-     #       raise ValueError(f"No index loaded for {collection}")
+    # def save_index(self, collection: str):
+    #   """Persist the in-memory FAISS index for `collection` to disk."""
+    #   if collection not in self.indexes:
+    #       raise ValueError(f"No index loaded for {collection}")
     #    faiss.write_index(
     #        self.indexes[collection], str(self._get_index_path(collection))
     #    )
@@ -78,10 +79,7 @@ class VectorStore:
         print(f"[DEBUG] Writing FAISS index for '{collection}' to: {path}")
         if collection not in self.indexes:
             raise ValueError(f"No index loaded for {collection}")
-        faiss.write_index(
-            self.indexes[collection], str(path)
-        )
-
+        faiss.write_index(self.indexes[collection], str(path))
 
     def add_embeddings(
         self,

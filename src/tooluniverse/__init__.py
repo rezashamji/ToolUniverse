@@ -367,8 +367,12 @@ else:
     ODPHPMyHealthfinder = _LazyImportProxy("odphp_tool", "ODHPHPMyHealthfinder")
     ODPHPTopicSearch = _LazyImportProxy("odphp_tool", "ODPHPTopicSearch")
     ODPHPOutlinkFetch = _LazyImportProxy("odphp_tool", "ODPHPOutlinkFetch")
-    EuHealthTopicSearchTool = _LazyImportProxy("euhealth.euhealth_tool", "EuHealthTopicSearchTool")
-    EuHealthDeepDiveTool = _LazyImportProxy("euhealth.euhealth_tool", "EuHealthDeepDiveTool")
+    EuHealthTopicSearchTool = _LazyImportProxy(
+        "euhealth.euhealth_tool", "EuHealthTopicSearchTool"
+    )
+    EuHealthDeepDiveTool = _LazyImportProxy(
+        "euhealth.euhealth_tool", "EuHealthDeepDiveTool"
+    )
     CellosaurusSearchTool = _LazyImportProxy(
         "cellosaurus_tool", "CellosaurusSearchTool"
     )
