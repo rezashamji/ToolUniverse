@@ -158,7 +158,7 @@ Note:
 4. Create the agent tool for your collection
 -----------------------------------------
 
-Now tell ToolUniverse how agents should access your dataset by creating a small **tool JSON**.
+Now the last step is to tell ToolUniverse how agents should access your dataset by creating a small **tool JSON**.
 
 Example:
 Save as ``toy_search_tool.json``:
@@ -186,7 +186,9 @@ Save as ``toy_search_tool.json``:
 
 > **Note:** Tool files must be a JSON **array** (even if only one tool).
 
-Agents (or you) can load it directly:
+**You are done! ToolUniverse agents now have access to your data collection and associated tool to use in their work as an AI Scientist!**
+
+Agents (or you) can also load it directly if desired:
 
 .. code-block:: python
 
@@ -212,14 +214,14 @@ How it works
       - You can optionally control the hybrid mix with alpha (``alpha``).
 
 ToolUniverse automatically resolves paths in ``<user_cache_dir>/embeddings/``.  
-* Agents can therefore call ``toy_search`` immediately after loading your JSON — no local setup needed.  
+* Agents can now call ``toy_search`` immediately after loading your JSON — no local setup needed.  
 
 ---
 
 5. Share or back up via Hugging Face (optional)
 --------------------------------------------
 
-After making your agent-searchable datset you can share it publicly. You can also download other's public agent-searchable datasets and their tools so that you can use the community's data and tools in your research!
+After making your agent-searchable dataset you can share it publicly. You can also download other's public agent-searchable datasets and their tools so that you can use the community's data and tools in your research!
 
 This is the **final step for making your collection “public-ready.”**
 Use it when you want to:
