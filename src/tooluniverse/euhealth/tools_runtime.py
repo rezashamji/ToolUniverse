@@ -9,9 +9,27 @@ What this module does
 
 Dependencies
 ------------
-- Assumes the `euhealth` collection (SQLite + FAISS) already exists locally:
+- Assumes the `euhealth` collection (SQLite + FAISS) already exists at:
   <user_cache_dir>/embeddings/euhealth.db and euhealth.faiss.
-  See the general datastore tutorial for building or HF bootstrap.
+  You can either:
+  (a) download the shared/official build, or
+  (b) build your own with any embedding model/provider.
+
+Search method behavior (very important)
+---------------------------------------
+- Public tools accept `method="keyword"|"embedding"|"hybrid"` (default "hybrid").
+- If the local `euhealth` library is the **shared/official build** (embedded with
+  `text-embedding-3-small`) then:
+    * embedding/hybrid are **allowed** only when the caller resolves to **Azure + text-embedding-3-small**,
+    * otherwise we **force `"keyword"`** (no error; tools still return results).
+- If the local `euhealth` library was **built by the user** with any other model/provider,
+  the requested method is **honored** (no forcing).
+
+Practical outcomes
+------------------
+- No `.env` or a non-matching env (not Azure + text-embedding-3-small): tools fall back to keyword automatically.
+- Matching env (Azure + text-embedding-3-small): embedding and hybrid work as requested.
+- Custom local build (any model/provider): embedding/hybrid/keyword all work as requested.
 
 Result schema (summary)
 -----------------------
@@ -47,7 +65,7 @@ Notes
 -----
 - De-duplication by dataset UUID is applied when merging keyword/embedding hits.
 - Network access is required only for `deepdive` (to fetch landing pages).
-- May be helpful to be conservative with request counts; set `links_per` small (2–3) for agents.
+- If someone bypasses these tools and hits `SearchEngine` directly, the fallback rule won’t apply.
 
 See also
 --------
@@ -58,8 +76,12 @@ See also
 from __future__ import annotations
 from typing import List, Dict, Any, Optional
 from tooluniverse.database_setup.search import SearchEngine
+from tooluniverse.database_setup.provider_resolver import (
+    resolve_provider,
+    resolve_model,
+)
 from tooluniverse.euhealth.euhealth_live import deep_dive_for_datasets
-from tooluniverse.database_setup.sqlite_store import normalize_text
+from tooluniverse.database_setup.sqlite_store import SQLiteStore, normalize_text
 from tooluniverse.utils import get_user_cache_dir
 import os
 
@@ -303,7 +325,8 @@ def _topic_search(
     limit : int = 25
         Max number of summaries to return.
     method : str = "hybrid"
-        "keyword" | "embedding" | "hybrid".
+        "keyword" | "embedding" | "hybrid". May be coerced to "keyword" for the shared build
+        when the caller is not Azure + "text-embedding-3-small".
     language : Optional[str]
         Filter by language code ("en", "de", ...), if present in metadata.
     country : Optional[str]
@@ -319,9 +342,12 @@ def _topic_search(
     --------
     - Keyword: FTS5 over text.
     - Embedding: FAISS IP on L2-normalized vectors.
-    - Themes: case-insensitive `startswith` against stored theme URIs to avoid casing mismatches.
+    - Hybrid: convex blend of keyword + embedding (alpha in [0,1]).
+    - Themes: case-insensitive `startswith` against stored theme URIs.
+    - Method may be auto-forced to "keyword" per the shared-build rule (see module docstring).
     """
 
+    method = _maybe_force_keyword(method)  # enforce shared-build rule
     spec = TOPICS[topic]
     se = _se_singleton()
 
@@ -374,6 +400,67 @@ def _topic_search(
     return shaped[:limit]
 
 
+# We consider the "shared/official" euhealth build to be the one embedded with text-embedding-3-small.
+# (Provider is assumed Azure for that build; we only allow emb/hybrid if caller is Azure+that model.)
+_SHARED_MODEL_NAME = "text-embedding-3-small"
+
+
+def _euhealth_db_path() -> str:
+    return os.path.join(get_user_cache_dir(), "embeddings", "euhealth.db")
+
+
+def _read_euhealth_embedding_model() -> str | None:
+    """Read collections.embedding_model for 'euhealth' (None if missing)."""
+    dbp = _euhealth_db_path()
+    if not os.path.exists(dbp):
+        return None
+    try:
+        st = SQLiteStore(dbp)
+        cur = st.conn.execute(
+            "SELECT embedding_model FROM collections WHERE name=? LIMIT 1",
+            ("euhealth",),
+        )
+        row = cur.fetchone()
+        return (row[0] or None) if row else None
+    except Exception:
+        return None
+
+
+def _caller_is_azure_small() -> bool:
+    prov = (resolve_provider(None) or "").strip().lower()
+    mdl = (resolve_model(prov, None) or "").strip().lower()
+    return prov == "azure" and mdl == _SHARED_MODEL_NAME
+
+
+def _maybe_force_keyword(method: str) -> str:
+    """
+    Enforce the shared-build compatibility rule.
+
+    Rule:
+    - If local `euhealth` is the shared/official build (embedding_model == "text-embedding-3-small"):
+        * allow 'embedding' or 'hybrid' ONLY when the resolved caller is Azure + "text-embedding-3-small"
+        * otherwise force 'keyword' (silent fallback)
+    - If local `euhealth` is a custom build (any other model/provider, or missing model tag):
+        * honor the requested method (no forcing)
+
+    This guarantees downloaded builds always work out of the box, while still letting
+    advanced users build with any provider/model and keep full embedding/hybrid functionality.
+    """
+
+    if method == "keyword":
+        return method
+
+    model = (_read_euhealth_embedding_model() or "").strip().lower()
+    is_shared = model == _SHARED_MODEL_NAME
+
+    if not is_shared:
+        # Custom local build — all good, use requested method
+        return method
+
+    # Shared build — only allow if caller is Azure + text-embedding-3-small
+    return method if _caller_is_azure_small() else "keyword"
+
+
 # -----------------
 # Public API
 # -----------------
@@ -402,6 +489,8 @@ def euhealthinfo_deepdive(
         Max number of outgoing links to classify per dataset.
     method:
         Search method used when resolving from `topic` ("keyword" | "embedding" | "hybrid").
+        May be coerced to "keyword" for the shared/official build unless the caller is
+        Azure + "text-embedding-3-small".
     limit:
         Number of seeds to retrieve when `topic` is used.
 
@@ -452,6 +541,7 @@ def euhealthinfo_deepdive(
         )
 
     if topic and topic in TOPICS:
+        method = _maybe_force_keyword(method)  # enforce before resolving seed
         seeds = _topic_search(
             topic,
             limit=limit,
