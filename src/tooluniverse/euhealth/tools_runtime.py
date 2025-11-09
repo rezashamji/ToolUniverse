@@ -365,15 +365,23 @@ def _topic_search(
         )
 
     if spec.get("themes"):
-        results = [
-            r
-            for r in results
-            if any(
-                str(x).lower().startswith(th.lower())
-                for th in spec["themes"]
-                for x in r["metadata"].get("themes", [])
-            )
-        ]
+        filtered = []
+        for r in results:
+            meta = r.get("metadata") or {}
+            if isinstance(meta, str):
+                import json
+
+                try:
+                    meta = json.loads(meta)
+                except Exception:
+                    meta = {}
+            themes = meta.get("themes") or []
+            # keep docs without themes, or with matching substrings
+            if not themes or any(
+                th.lower() in str(x).lower() for x in themes for th in spec["themes"]
+            ):
+                filtered.append(r)
+        results = filtered
 
     # Deduplicate
     seen, out = set(), []
