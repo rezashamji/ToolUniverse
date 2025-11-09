@@ -65,6 +65,24 @@ Behind the scenes, the agent uses the tools defined in
 
 ---
 
+How search methods are chosen
+-----------------------------------
+
+The public tools accept ``method="keyword"|"embedding"|"hybrid"`` (default ``"hybrid"``).
+
+* If your local EUHealth library is the **shared/official build** (embedded with
+  ``text-embedding-3-small``), then:
+  
+  - ``embedding``/``hybrid`` are **allowed** only when the caller resolves to **Azure + text-embedding-3-small**. (e.g. AZURE_OPENAI_DEPLOYMENT=text-embedding-3-small, EMBED_PROVIDER=azure)
+  - Otherwise, we **silently fall back to** ``"keyword"`` (so tools still work without errors).
+
+* If you **built the library yourself** (any provider/model), the requested method is honored
+  (no fallback).
+
+This guarantees the prebuilt library “just works” everywhere, while advanced users still get full embedding/hybrid behavior with their own builds.
+
+---
+
 Optional: quick terminal “smoke test”
 ----------------------------------------
 
