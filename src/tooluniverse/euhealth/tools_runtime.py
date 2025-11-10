@@ -479,6 +479,7 @@ def euhealthinfo_deepdive(
     links_per: int = 3,
     method: str = "hybrid",
     alpha: float = 0.5,
+    top_k: int = 25,
     country: str = "",
     language: str = "",
     term_override: str = "",
@@ -558,6 +559,7 @@ def euhealthinfo_deepdive(
             country=country,
             language=language,
             term_override=term_override,
+            top_k=top_k,
         )
         return deep_dive_for_datasets(
             [
