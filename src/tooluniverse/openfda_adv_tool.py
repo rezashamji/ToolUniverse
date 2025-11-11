@@ -146,20 +146,23 @@ class FDADrugAdverseEventTool(BaseTool):
             fda_fields = self.search_fields.get(
                 param_name, [param_name]
             )  # Map param -> FDA field
+            # Use the first field name for value mapping
+            fda_field = fda_fields[0] if fda_fields else param_name
 
-            # Apply value mapping if needed
-            mapping_error, mapped_value = self._map_value(param_name, value)
+            # Apply value mapping using FDA field name
+            # (for proper enum mapping)
+            mapping_error, mapped_value = self._map_value(fda_field, value)
             if mapping_error:
                 return [{"error": mapping_error}]
             if mapped_value is None:
                 continue  # Skip this field if instructed
 
-            # Build search parts
-            for fda_field in fda_fields:
+            # Build search parts using FDA field name(s)
+            for fda_field_name in fda_fields:
                 if isinstance(mapped_value, str) and " " in mapped_value:
-                    search_parts.append(f'{fda_field}:"{mapped_value}"')
+                    search_parts.append(f'{fda_field_name}:"{mapped_value}"')
                 else:
-                    search_parts.append(f"{fda_field}:{mapped_value}")
+                    search_parts.append(f"{fda_field_name}:{mapped_value}")
 
         # Final search query
         search_query = "+AND+".join(search_parts)
@@ -261,14 +264,14 @@ class FDACountAdditiveReactionsTool(FDADrugAdverseEventTool):
             fda_fields = self.search_fields.get(k, [k])
             # Use the first field name for value mapping
             fda_field = fda_fields[0] if fda_fields else k
-            
+
             # Map value using FDA field name (for proper enum mapping)
             mapping_error, mapped = self._map_value(fda_field, v)
             if mapping_error:
                 return {"error": mapping_error}
             if mapped is None:
                 continue  # Skip this field if instructed
-            
+
             # Use FDA field name(s) in the query
             for fda_field_name in fda_fields:
                 if isinstance(mapped, str) and " " in mapped:
@@ -277,15 +280,23 @@ class FDACountAdditiveReactionsTool(FDADrugAdverseEventTool):
                     filters.append(f"{fda_field_name}:{mapped}")
 
         filter_str = "+AND+".join(filters) if filters else ""
-        search_query = f"({or_clause})" + (f"+AND+{filter_str}" if filter_str else "")
-        # URL encode the search query, preserving +, :, and " as safe characters
+        search_query = (
+            f"({or_clause})" + (f"+AND+{filter_str}" if filter_str else "")
+        )
+        # URL encode the search query, preserving +, :, and " as safe chars
         search_encoded = urllib.parse.quote(search_query, safe='+:"')
 
         # Call API
         if self.api_key:
-            url = f"{self.endpoint_url}?api_key={self.api_key}&search={search_encoded}&count={self.count_field}"
+            url = (
+                f"{self.endpoint_url}?api_key={self.api_key}"
+                f"&search={search_encoded}&count={self.count_field}"
+            )
         else:
-            url = f"{self.endpoint_url}?search={search_encoded}&count={self.count_field}"
+            url = (
+                f"{self.endpoint_url}?search={search_encoded}"
+                f"&count={self.count_field}"
+            )
 
         try:
             resp = requests.get(url)
