@@ -164,6 +164,7 @@ default_tool_files = {
     "file_download": os.path.join(current_dir, "data", "file_download_tools.json"),
     # 'langchain': os.path.join(current_dir, 'data', 'langchain_tools.json'),
     "rcsb_pdb": os.path.join(current_dir, "data", "rcsb_pdb_tools.json"),
+    "rcsb_search": os.path.join(current_dir, "data", "rcsb_search_tools.json"),
     "tool_composition": os.path.join(
         current_dir, "data", "tool_composition_tools.json"
     ),
@@ -198,6 +199,10 @@ default_tool_files = {
     # Ontology tools
     "ols": os.path.join(current_dir, "data", "ols_tools.json"),
     "optimizer": os.path.join(current_dir, "data", "optimizer_tools.json"),
+    # Compact mode core tools
+    "compact_mode": os.path.join(
+        current_dir, "data", "compact_mode_tools.json"
+    ),
 }
 
 

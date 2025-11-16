@@ -356,8 +356,12 @@ class FDADrugLabelTool(FDATool):
                         print(msg)
                         return trade_names[0]
 
-            msg = (f"Warning: Could not convert ChEMBL ID {chembl_id} "
-                   f"to drug name")
+            # No drug name found - the compound may not be approved as a drug
+            msg = (
+                f"Warning: Could not convert ChEMBL ID {chembl_id} "
+                f"to drug name. This compound may not be approved as a drug "
+                f"or may not be available in the OpenTargets database."
+            )
             print(msg)
             return None
         except Exception as e:
@@ -384,10 +388,15 @@ class FDADrugLabelTool(FDATool):
                 if converted_name:
                     arguments["drug_name"] = converted_name
                 else:
-                    # If conversion fails, return error
+                    # If conversion fails, provide helpful error message
                     error_msg = (
                         f"Could not convert ChEMBL ID {drug_name} to drug name. "
-                        f"Please provide a drug name directly."
+                        f"This compound (ChEMBL ID: {drug_name}) may not be "
+                        f"approved as a drug yet, or it may not be available "
+                        f"in the OpenTargets database. Please provide a drug "
+                        f"name directly if you know it, or check if this "
+                        f"compound is actually approved as a pharmaceutical "
+                        f"drug."
                     )
                     return {"error": error_msg}
             else:

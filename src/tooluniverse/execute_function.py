@@ -2405,6 +2405,9 @@ class ToolUniverse:
                     new_tool = tool_class(tool_config=tool, tooluniverse=self)
                 elif "ToolFinderKeyword" == tool_type:
                     new_tool = tool_class(tool_config=tool, tooluniverse=self)
+                elif tool_type in ["ListTools", "GrepTools", "GetToolInfo", "ExecuteTool"]:
+                    # Tool discovery tools need tooluniverse parameter
+                    new_tool = tool_class(tool_config=tool, tooluniverse=self)
                 else:
                     new_tool = tool_class(tool_config=tool)
 

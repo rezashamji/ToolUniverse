@@ -1,7 +1,7 @@
 """
 ToolUniverse Tools
 
-Type-safe Python interface to 740 scientific tools.
+Type-safe Python interface to 746 scientific tools.
 Each tool is in its own module for minimal import overhead.
 
 Usage:
@@ -613,6 +613,9 @@ from .OpenTargets_get_drug_indications_by_chemblId import (
 from .OpenTargets_get_drug_mechanisms_of_action_by_chemblId import (
     OpenTargets_get_drug_mechanisms_of_action_by_chemblId,
 )
+from .OpenTargets_get_drug_names_by_chemblId import (
+    OpenTargets_get_drug_names_by_chemblId,
+)
 from .OpenTargets_get_drug_synonyms_by_chemblId import (
     OpenTargets_get_drug_synonyms_by_chemblId,
 )
@@ -699,6 +702,7 @@ from .OpenTargets_search_category_counts_by_query_string import (
 )
 from .OpenTargets_target_disease_evidence import OpenTargets_target_disease_evidence
 from .OutputSummarizationComposer import OutputSummarizationComposer
+from .PDB_search_similar_structures import PDB_search_similar_structures
 from .PMC_search_papers import PMC_search_papers
 from .PRIDE_search_proteomics import PRIDE_search_proteomics
 from .PackageAnalyzer import PackageAnalyzer
@@ -881,6 +885,7 @@ from .ensembl_lookup_gene import ensembl_lookup_gene
 from .europepmc_disease_target_score import europepmc_disease_target_score
 from .eva_disease_target_score import eva_disease_target_score
 from .eva_somatic_disease_target_score import eva_somatic_disease_target_score
+from .execute_tool import execute_tool
 from .expression_atlas_disease_target_score import expression_atlas_disease_target_score
 from .extract_clinical_trial_adverse_events import extract_clinical_trial_adverse_events
 from .extract_clinical_trial_outcomes import extract_clinical_trial_outcomes
@@ -1110,6 +1115,7 @@ from .get_target_cofactor_info import get_target_cofactor_info
 from .get_taxonomy_by_pdb_id import get_taxonomy_by_pdb_id
 from .get_tiledb_info import get_tiledb_info
 from .get_tiledbsoma_info import get_tiledbsoma_info
+from .get_tool_info import get_tool_info
 from .get_torch_geometric_info import get_torch_geometric_info
 from .get_tqdm_info import get_tqdm_info
 from .get_trackpy_info import get_trackpy_info
@@ -1125,6 +1131,7 @@ from .get_xesmf_info import get_xesmf_info
 from .get_xgboost_info import get_xgboost_info
 from .get_zarr_info import get_zarr_info
 from .gnomad_get_gene_constraints import gnomad_get_gene_constraints
+from .grep_tools import grep_tools
 from .gwas_get_association_by_id import gwas_get_association_by_id
 from .gwas_get_associations_for_snp import gwas_get_associations_for_snp
 from .gwas_get_associations_for_study import gwas_get_associations_for_study
@@ -1143,6 +1150,7 @@ from .kegg_get_gene_info import kegg_get_gene_info
 from .kegg_get_pathway_info import kegg_get_pathway_info
 from .kegg_list_organisms import kegg_list_organisms
 from .kegg_search_pathway import kegg_search_pathway
+from .list_tools import list_tools
 from .mesh_get_subjects_by_pharmacological_action import (
     mesh_get_subjects_by_pharmacological_action,
 )
@@ -1489,6 +1497,7 @@ __all__ = [
     "OpenTargets_get_drug_id_description_by_name",
     "OpenTargets_get_drug_indications_by_chemblId",
     "OpenTargets_get_drug_mechanisms_of_action_by_chemblId",
+    "OpenTargets_get_drug_names_by_chemblId",
     "OpenTargets_get_drug_synonyms_by_chemblId",
     "OpenTargets_get_drug_trade_names_by_chemblId",
     "OpenTargets_get_drug_warnings_by_chemblId",
@@ -1519,6 +1528,7 @@ __all__ = [
     "OpenTargets_search_category_counts_by_query_string",
     "OpenTargets_target_disease_evidence",
     "OutputSummarizationComposer",
+    "PDB_search_similar_structures",
     "PMC_search_papers",
     "PRIDE_search_proteomics",
     "PackageAnalyzer",
@@ -1651,6 +1661,7 @@ __all__ = [
     "europepmc_disease_target_score",
     "eva_disease_target_score",
     "eva_somatic_disease_target_score",
+    "execute_tool",
     "expression_atlas_disease_target_score",
     "extract_clinical_trial_adverse_events",
     "extract_clinical_trial_outcomes",
@@ -1858,6 +1869,7 @@ __all__ = [
     "get_taxonomy_by_pdb_id",
     "get_tiledb_info",
     "get_tiledbsoma_info",
+    "get_tool_info",
     "get_torch_geometric_info",
     "get_tqdm_info",
     "get_trackpy_info",
@@ -1873,6 +1885,7 @@ __all__ = [
     "get_xgboost_info",
     "get_zarr_info",
     "gnomad_get_gene_constraints",
+    "grep_tools",
     "gwas_get_association_by_id",
     "gwas_get_associations_for_snp",
     "gwas_get_associations_for_study",
@@ -1891,6 +1904,7 @@ __all__ = [
     "kegg_get_pathway_info",
     "kegg_list_organisms",
     "kegg_search_pathway",
+    "list_tools",
     "mesh_get_subjects_by_pharmacological_action",
     "mesh_get_subjects_by_subject_id",
     "mesh_get_subjects_by_subject_name",

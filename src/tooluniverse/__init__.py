@@ -157,6 +157,7 @@ ToolFinderLLM: Any
 EmbeddingDatabase: Any
 EmbeddingSync: Any
 RCSBTool: Any
+RCSBSearchTool: Any
 GWASAssociationSearch: Any
 GWASStudySearch: Any
 GWASSNPSearch: Any
@@ -255,6 +256,7 @@ if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
         from .embedding_database import EmbeddingDatabase
         from .embedding_sync import EmbeddingSync
         from .rcsb_pdb_tool import RCSBTool
+        from .rcsb_search_tool import RCSBSearchTool
         from .web_search_tool import (
             WebSearchTool,
             WebAPIDocumentationSearchTool,
@@ -375,6 +377,7 @@ else:
     EmbeddingDatabase = _LazyImportProxy("embedding_database", "EmbeddingDatabase")
     EmbeddingSync = _LazyImportProxy("embedding_sync", "EmbeddingSync")
     RCSBTool = _LazyImportProxy("rcsb_pdb_tool", "RCSBTool")
+    RCSBSearchTool = _LazyImportProxy("rcsb_search_tool", "RCSBSearchTool")
     GWASAssociationSearch = _LazyImportProxy("gwas_tool", "GWASAssociationSearch")
     GWASStudySearch = _LazyImportProxy("gwas_tool", "GWASStudySearch")
     GWASSNPSearch = _LazyImportProxy("gwas_tool", "GWASSNPSearch")
@@ -476,6 +479,7 @@ __all__ = [
     "URLHTMLTagTool",
     "URLToPDFTextTool",
     "RCSBTool",
+    "RCSBSearchTool",
     "GWASAssociationSearch",
     "GWASStudySearch",
     "GWASSNPSearch",
