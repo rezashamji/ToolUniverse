@@ -1,7 +1,7 @@
 """
 ToolUniverse Tools
 
-Type-safe Python interface to 746 scientific tools.
+Type-safe Python interface to 748 scientific tools.
 Each tool is in its own module for minimal import overhead.
 
 Usage:
@@ -281,6 +281,12 @@ from .FDA_get_drug_names_by_general_precautions import (
 from .FDA_get_drug_names_by_geriatric_use import FDA_get_drug_names_by_geriatric_use
 from .FDA_get_drug_names_by_health_claim import FDA_get_drug_names_by_health_claim
 from .FDA_get_drug_names_by_indication import FDA_get_drug_names_by_indication
+from .FDA_get_drug_names_by_indication_aggregated import (
+    FDA_get_drug_names_by_indication_aggregated,
+)
+from .FDA_get_drug_names_by_indication_stats import (
+    FDA_get_drug_names_by_indication_stats,
+)
 from .FDA_get_drug_names_by_info_for_nursing_mothers import (
     FDA_get_drug_names_by_info_for_nursing_mothers,
 )
@@ -1329,6 +1335,8 @@ __all__ = [
     "FDA_get_drug_names_by_geriatric_use",
     "FDA_get_drug_names_by_health_claim",
     "FDA_get_drug_names_by_indication",
+    "FDA_get_drug_names_by_indication_aggregated",
+    "FDA_get_drug_names_by_indication_stats",
     "FDA_get_drug_names_by_info_for_nursing_mothers",
     "FDA_get_drug_names_by_information_for_owners_or_caregivers",
     "FDA_get_drug_names_by_ingredient",

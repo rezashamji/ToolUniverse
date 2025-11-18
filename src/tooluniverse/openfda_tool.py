@@ -279,6 +279,9 @@ def search_openfda(
     results = response_data.get("results", [])
     if return_fields == "ALL":
         return {"meta": meta_info, "results": results}
+    # If count parameter is used, return results directly (count API format)
+    if params.get("count") or count:
+        return {"meta": meta_info, "results": results}
     required_fields = list(search_fields.keys()) + return_fields
     extracted_results = extract_nested_fields(results, required_fields, keywords_list)
     return {"meta": meta_info, "results": extracted_results}
@@ -299,6 +302,9 @@ class FDATool(BaseTool):
 
     def run(self, arguments):
         arguments = copy.deepcopy(arguments)
+        # Set default limit to 100 if not provided
+        if "limit" not in arguments or arguments["limit"] is None:
+            arguments["limit"] = 100
         mapped_arguments = map_properties_to_openfda_fields(
             arguments, self.search_fields
         )
@@ -786,3 +792,267 @@ class FDADrugLabelGetDrugGenericNameTool(FDADrugLabelTool):
             else:
                 drug_info = None
         return drug_info
+
+
+@register_tool("FDADrugLabelAggregated")
+class FDADrugLabelGetDrugNamesByIndicationAggregated(FDADrugLabelTool):
+    """
+    Enhanced version of FDA_get_drug_names_by_indication that:
+    - Iterates through all results in batches of 100 (no limit)
+    - Aggregates results by generic name
+    - Returns one entry per generic name with indication and all brand names
+    """
+
+    def __init__(self, tool_config, api_key=None):
+        super().__init__(tool_config, api_key)
+
+    def run(self, arguments):
+        """
+        Run the aggregated drug names search by indication.
+
+        Iterates through all results in batches of 100, aggregates by
+        generic name, and returns a list where each entry contains:
+        - generic_name: The generic drug name
+        - indication: The indication (from input)
+        - brand_names: List of all brand names for this generic name
+        """
+        arguments = copy.deepcopy(arguments)
+        indication = arguments.get("indication")
+
+        if not indication:
+            return {"error": "indication parameter is required"}
+
+        # Dictionary to aggregate results by generic name
+        # Key: generic_name (normalized), Value: set of brand names
+        aggregated_results = {}
+
+        # Iterate through results in batches of 1000
+        step = 1000
+        skip = 0
+        total_fetched = 0
+        max_iterations = 1000  # Safety limit to prevent infinite loops
+
+        iteration = 0
+        while iteration < max_iterations:
+            iteration += 1
+
+            # Prepare arguments for this batch
+            batch_arguments = {
+                "indication": indication,
+                "limit": step,
+                "skip": skip
+            }
+
+            # Call parent run method to get results
+            batch_result = super().run(batch_arguments)
+
+            # Check for errors
+            if batch_result is None or "error" in batch_result:
+                # If we've already fetched some results, return what we have
+                if total_fetched > 0:
+                    break
+                # Otherwise return the error
+                error_msg = "No results returned"
+                return batch_result if batch_result else {"error": error_msg}
+
+            # Extract results
+            results = batch_result.get("results", [])
+            meta = batch_result.get("meta", {})
+
+            # Process each result
+            for result in results:
+                generic_names = result.get("openfda.generic_name", [])
+                brand_names = result.get("openfda.brand_name", [])
+
+                # Handle both list and single value cases
+                if not isinstance(generic_names, list):
+                    generic_names = [generic_names] if generic_names else []
+                if not isinstance(brand_names, list):
+                    brand_names = [brand_names] if brand_names else []
+
+                # Normalize and process generic names
+                for generic_name in generic_names:
+                    if not generic_name:
+                        continue
+
+                    # Normalize generic name (uppercase, strip whitespace)
+                    normalized_generic = str(generic_name).upper().strip()
+
+                    if normalized_generic:
+                        # Initialize if not exists
+                        if normalized_generic not in aggregated_results:
+                            aggregated_results[normalized_generic] = set()
+
+                        # Add all brand names for this generic name
+                        for brand_name in brand_names:
+                            if brand_name:
+                                normalized_brand = str(brand_name).strip()
+                                if normalized_brand:
+                                    aggregated_results[
+                                        normalized_generic
+                                    ].add(normalized_brand)
+
+            total_fetched += len(results)
+
+            # Check if we've reached the end
+            # If we got fewer results than requested, we've reached the end
+            if len(results) < step:
+                # No more results to fetch
+                break
+
+            # Also check meta for total if available
+            total_available = meta.get("total", None)
+            if total_available is not None:
+                if skip + len(results) >= total_available:
+                    # Reached the total available
+                    break
+
+            # Move to next batch
+            skip += step
+
+        # Convert aggregated results to list format
+        result_list = []
+        for generic_name, brand_names_set in sorted(
+            aggregated_results.items()
+        ):
+            result_list.append({
+                "generic_name": generic_name,
+                "indication": indication,
+                "brand_names": sorted(list(brand_names_set))
+            })
+
+        return {
+            "meta": {
+                "total_generic_names": len(result_list),
+                "total_records_processed": total_fetched,
+                "indication": indication
+            },
+            "results": result_list
+        }
+
+
+@register_tool("FDADrugLabelStats")
+class FDADrugLabelGetDrugNamesByIndicationStats(FDADrugLabelTool):
+    """
+    Enhanced version using FDA count API to efficiently aggregate drug names
+    by indication. Uses count mechanism to get brand_name and generic_name
+    distributions without fetching full records.
+    """
+
+    def __init__(self, tool_config, api_key=None):
+        super().__init__(tool_config, api_key)
+
+    def run(self, arguments):
+        """
+        Run the aggregated drug names search using count API.
+
+        Uses count API to:
+        1. Get all unique generic names for the indication
+        2. For each generic name, get corresponding brand names
+        3. Return aggregated results
+        """
+        arguments = copy.deepcopy(arguments)
+        indication = arguments.get("indication")
+
+        if not indication:
+            return {"error": "indication parameter is required"}
+
+        # Step 1: Get all unique generic names using count API
+        # Build search query for indication
+        # Use the same logic as parent class for building search query
+        indication_processed = indication.replace(" and ", " ")
+        indication_processed = indication_processed.replace(" AND ", " ")
+        indication_processed = " ".join(indication_processed.split())
+        indication_query = indication_processed.replace(" ", "+")
+        search_query = f'indications_and_usage:"{indication_query}"'
+
+        # Get all unique generic names using count API (use large limit)
+        generic_count_params = {
+            "search": search_query,
+            "count": "openfda.generic_name.exact",
+            "limit": 1000  # Large limit to get all results
+        }
+
+        generic_count_result = search_openfda(
+            generic_count_params,
+            endpoint_url=self.endpoint_url,
+            api_key=self.api_key,
+            return_fields=[],
+            exist_option="OR",
+        )
+
+        if generic_count_result is None or "error" in generic_count_result:
+            return generic_count_result if generic_count_result else {
+                "error": "Failed to get generic names"
+            }
+
+        all_generic_names_data = generic_count_result.get("results", [])
+        if not all_generic_names_data:
+            return {
+                "meta": {
+                    "total_generic_names": 0,
+                    "indication": indication
+                },
+                "results": []
+            }
+
+        # Step 2: Get all brand names using count API (only 2 API calls total)
+        brand_count_params = {
+            "search": search_query,
+            "count": "openfda.brand_name.exact",
+            "limit": 1000  # Large limit to get all results
+        }
+
+        brand_count_result = search_openfda(
+            brand_count_params,
+            endpoint_url=self.endpoint_url,
+            api_key=self.api_key,
+            return_fields=[],
+            exist_option="OR",
+        )
+
+        if brand_count_result is None or "error" in brand_count_result:
+            # If brand count fails, still return generic names
+            brand_names_data = []
+        else:
+            brand_names_data = brand_count_result.get("results", [])
+
+        # Format generic names
+        generic_names_list = [
+            {
+                "term": item.get("term", "").strip(),
+                "count": item.get("count", 0)
+            }
+            for item in all_generic_names_data
+            if item.get("term", "").strip()
+        ]
+        generic_names_list = sorted(
+            generic_names_list,
+            key=lambda x: x["term"]
+        )
+
+        # Format brand names
+        brand_names_list = [
+            {
+                "term": item.get("term", "").strip(),
+                "count": item.get("count", 0)
+            }
+            for item in brand_names_data
+            if item.get("term", "").strip()
+        ]
+        brand_names_list = sorted(
+            brand_names_list,
+            key=lambda x: x["term"]
+        )
+
+        return {
+            "meta": {
+                "total_generic_names": len(generic_names_list),
+                "total_brand_names": len(brand_names_list),
+                "indication": indication
+            },
+            "results": {
+                "generic_names": generic_names_list,
+                "brand_names": brand_names_list
+            }
+        }
