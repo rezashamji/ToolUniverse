@@ -275,6 +275,11 @@ if __name__ == "__main__":
         help="HF dataset repo ID (default: <your_username>/<collection> based on HF_TOKEN)",
     )
     up.add_argument(
+        "--repo",
+        required=False,
+        help="HF dataset repo ID (default: <your_username>/<collection> based on HF_TOKEN)",
+    )
+    up.add_argument(
         "--private",
         action=argparse.BooleanOptionalAction,
         default=True,

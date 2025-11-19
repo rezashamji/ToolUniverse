@@ -392,7 +392,7 @@ Mini FAQ
   - Use `--db` only if you want a **custom output path** (for example, a shared directory).  
   - When using the **JSON tool** or agents, no paths are ever needed — everything resolves automatically from the collection name.
 
--**When building my custom datastore what if I want to use different provider(s) and/or model(s) for my embeddings?** You can use a different provider/model when building your searchable datastore like we do in the example below — just make sure that if you want to keep the initial provider/model based datastore, you give this new build's collection a new name or else it will override the initial build.
+- **When building my custom datastore what if I want to use different provider(s) and/or model(s) for my embeddings?** You can use a different provider/model when building your searchable datastore like we do in the example below — just make sure that if you want to keep the initial provider/model based datastore, you give this new build's collection a new name or else it will override the initial build.
 
 .. code-block:: bash
 
