@@ -31,7 +31,6 @@ def test_build_search_roundtrip(tmp_path):
         docs=docs,
         embed_provider=provider,
         embed_model=model,
-        embed_dim=dim,
         overwrite=False,
     )
 

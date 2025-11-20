@@ -3,9 +3,7 @@ import pytest
 from tooluniverse.database_setup.hf.sync_hf import db_path_for_collection
 
 EU_DB = db_path_for_collection("euhealth")
-
 euhealth_present = os.path.exists(EU_DB)
-
 
 @pytest.mark.euhealth
 @pytest.mark.skipif(
@@ -22,7 +20,10 @@ def test_topic_smoke_and_shape():
     names = sorted(rt.TOPICS.keys())[:2]
     for name in names:
         fn = getattr(rt, name)
-        rows = fn(limit=3, method="hybrid")
+
+        # Use *keyword* search to avoid embeddings altogether
+        rows = fn(limit=3, method="keyword")
+
         # shape check
         for r in rows:
             assert {"uuid", "title", "landing_page", "snippet"} <= set(r.keys())
@@ -36,16 +37,24 @@ def test_topic_smoke_and_shape():
 def test_deepdive_minimal():
     from tooluniverse.euhealth import tools_runtime as rt
 
-    seeds = rt.euhealthinfo_search_cancer(limit=1)
+    # keyword search only, no embeddings
+    seeds = rt.euhealthinfo_search_cancer(limit=1, method="keyword")
     if not seeds:
         pytest.skip("No seeds found in cancer search")
+
     uuid = seeds[0]["uuid"]
 
-    out = rt.euhealthinfo_deepdive(uuids=[uuid], links_per=2, limit=1)
+    out = rt.euhealthinfo_deepdive(
+        uuids=[uuid],
+        links_per=2,
+        limit=1,
+        # deepdive never uses embeddings, so method is ignored
+    )
+
     assert isinstance(out, list) and len(out) >= 1
     entry = out[0]
     assert {"uuid", "title", "candidates"} <= set(entry.keys())
-    # candidate shape (no 'preview' in the schema)
+
     if entry["candidates"]:
         c0 = entry["candidates"][0]
         assert {"url", "classification"} <= set(c0.keys())
