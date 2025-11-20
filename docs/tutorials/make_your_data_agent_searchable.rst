@@ -432,6 +432,25 @@ Deeper Reference
 - Agent search tool – ``src/tooluniverse/database_setup/generic_embedding_search_tool.py``  
 - Example tool JSON – ``docs/examples/make_your_agent_searchable_example/make_your_agent_searchable_example_JSON.json``  
 
+**Developer note: database_setup tests**
+
+ToolUniverse includes 8 tests under `tests/test_database_setup/`:
+* **2 core tests** (SQLite + FAISS) always run automatically and require *no* API keys.
+* The **other 6 tests** exercise real embedding pipelines (OpenAI, Azure, HF, or local). These are **skipped by default** unless you export:
+
+  ```bash
+  export EMBED_PROVIDER=azure|openai|huggingface|local
+  export EMBED_MODEL=your-model-or-deployment
+  ```
+
+You can run all embedding-enabled tests with:
+
+```bash
+pytest -m api
+```
+
+These optional tests pass for all supported providers once credentials are set.
+
 ---
 
 With these steps, your data becomes **searchable, agent-ready, and shareable** — powering everything from local testing to public, reproducible ToolUniverse tools.
