@@ -121,13 +121,14 @@ async def use_compact_mode():
             print("\n" + "=" * 60)
             print("✅ All examples completed successfully!")
             print("=" * 60)
-            print("\nCompact mode exposes 4 core tools:")
+            print("\nCompact mode exposes 4-5 core tools:")
             print("  - list_tools: List available tools with different modes")
             print("  - grep_tools: Search tools by text/regex pattern")
             msg = ("  - get_tool_info: Get tool information "
                    "(description or full definition)")
             print(msg)
             print("  - execute_tool: Execute any ToolUniverse tool by name")
+            print("  - find_tools: AI-powered tool discovery (if search enabled, default)")
             print("\nNote: In Claude Desktop, the client is automatically "
                   "created.")
             print("You just need to configure the server and use it through "

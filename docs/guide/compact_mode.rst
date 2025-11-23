@@ -3,25 +3,28 @@
 Compact Mode Guide
 ==================
 
-Compact mode exposes only 4 core tools instead of 750+ tools, reducing context window usage by ~99% while maintaining full functionality.
+Compact mode exposes only 4-5 core tools instead of 750+ tools, reducing context window usage by ~99% while maintaining full functionality.
 
 What is Compact Mode?
 ---------------------
 
-When enabled, compact mode exposes only 4 essential tools instead of all 750+ tools. All tools are still accessible via ``execute_tool``.
+When enabled, compact mode exposes only 4-5 essential tools instead of all 750+ tools. All tools are still accessible via ``execute_tool``.
 
 **Benefits:**
-- 99% reduction in exposed tools (4 vs 750+)
+- 99% reduction in exposed tools (4-5 vs 750+)
 - Full functionality maintained
 - Ideal for AI agents with limited context windows
 
 Core Tools
 ----------
 
+Compact mode exposes 4 core discovery tools, plus optionally ``find_tools`` if search is enabled (default):
+
 1. **``list_tools``** - List available tools (names, categories, etc.)
 2. **``grep_tools``** - Search tools by text/regex pattern
 3. **``get_tool_info``** - Get tool information (description or full definition)
 4. **``execute_tool``** - Execute any ToolUniverse tool by name
+5. **``find_tools``** - AI-powered tool discovery using natural language queries (optional, enabled by default via ``search_enabled=True``)
 
 Quick Start
 -----------
@@ -84,7 +87,7 @@ Comparison
      - Compact Mode
    * - Tools Exposed
      - ~750 tools
-     - 4 tools
+     - 4-5 tools (4 core + find_tools if search enabled)
    * - Context Usage
      - High
      - Low (99% reduction)

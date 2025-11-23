@@ -102,7 +102,7 @@ Examples:
     parser.add_argument(
         "--compact-mode",
         action="store_true",
-        help="Enable compact mode: only expose core tools (~15 tools) to prevent context window overflow. All tools are still loaded in background for execute_tool to work.",
+        help="Enable compact mode: only expose core tools (4 tools) to prevent context window overflow. All tools are still loaded in background for execute_tool to work.",
     )
 
     args = parser.parse_args()
@@ -357,7 +357,7 @@ Examples:
     parser.add_argument(
         "--compact-mode",
         action="store_true",
-        help="Enable compact mode: only expose core tools (~15 tools) to prevent context window overflow. All tools are still loaded in background for execute_tool to work.",
+        help="Enable compact mode: only expose core tools (4 tools) to prevent context window overflow. All tools are still loaded in background for execute_tool to work.",
     )
 
     # Hook configuration options (default disabled for stdio)
@@ -826,7 +826,7 @@ Examples:
     parser.add_argument(
         "--compact-mode",
         action="store_true",
-        help="Enable compact mode: only expose core tools (~15 tools) to prevent context window overflow. All tools are still loaded in background for execute_tool to work.",
+        help="Enable compact mode: only expose core tools (4 tools) to prevent context window overflow. All tools are still loaded in background for execute_tool to work.",
     )
 
     args = parser.parse_args()

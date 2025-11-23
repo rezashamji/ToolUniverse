@@ -1,18 +1,18 @@
 # SMCP Compact Mode
 
-Compact mode is a special configuration for SMCP server that only exposes 4 core tools to prevent context window overflow, while maintaining full functionality through search and execute capabilities.
+Compact mode is a special configuration for SMCP server that only exposes 4-5 core tools to prevent context window overflow, while maintaining full functionality through search and execute capabilities.
 
 ## What is Compact Mode?
 
 When enabled, compact mode:
-- **Only exposes 4 core tools** instead of 750+ tools
+- **Only exposes 4-5 core tools** instead of 750+ tools
 - **Reduces context window usage by ~99%**
 - **Maintains full functionality** - all tools are still accessible via `execute_tool`
 - **Enables progressive disclosure** - start with minimal info, get details when needed
 
 ## Core Tools
 
-Compact mode exposes exactly 4 tools:
+Compact mode exposes 4 core discovery tools, plus optionally `find_tools` if search is enabled (default):
 
 1. **`list_tools`** - List available tools with different modes:
    - `mode="names"` - List only tool names
@@ -31,6 +31,11 @@ Compact mode exposes exactly 4 tools:
 4. **`execute_tool`** - Execute any ToolUniverse tool by name:
    - Pass tool name and arguments as dictionary
    - Returns tool execution result
+
+5. **`find_tools`** - AI-powered tool discovery using natural language queries (optional, enabled by default):
+   - Natural language search for tools
+   - Supports category filtering
+   - Uses AI-powered semantic search when available
 
 ## Usage
 
@@ -99,7 +104,7 @@ Add this to your Claude Desktop settings (`~/Library/Application Support/Claude/
 
 | Feature | Normal Mode | Compact Mode |
 |---------|------------|--------------|
-| Tools Exposed | ~750 tools | 4 tools |
+| Tools Exposed | ~750 tools | 4-5 tools (4 core + find_tools if search enabled) |
 | Context Window Usage | High | Low (~99% reduction) |
 | Functionality | Full | Full (via execute_tool) |
 
