@@ -6,13 +6,22 @@ Use these tools to:
 * **Search** public EU health datasets by topic (e.g., cancer, vaccination, obesity, mental health…)
 * **Deep-dive** a dataset’s landing page to surface useful outgoing links (download portals, etc.)
 
-You do **not** need to know about embeddings, dimensions, or FAISS. Everything is handled automatically.
+You do **not** need to understand embeddings or FAISS. Everything is handled automatically.
 All you need is a Hugging Face token (for downloading or uploading); ToolUniverse handles embedding models, caching, and FAISS indexing under the hood.
 
 The tools read from a local library (a small database + index)::
 
 <user_cache_dir>/embeddings/euhealth.db
 <user_cache_dir>/embeddings/euhealth.faiss
+
+Most users will never open these files — the tools use them behind the scenes.
+
+.. note::
+
+   All search methods (``keyword``, ``embedding``, ``hybrid``) always work.  
+   If your environment does not support vector search,
+   the tools automatically fall back to ``keyword`` with a helpful message.  
+   You will still get correct results.
 
 ---
 
@@ -34,7 +43,7 @@ tu-datastore sync-hf download
 --collection euhealth 
 --overwrite
 
-That’s it — the files land in `<user_cache_dir>/embeddings/` where the tools expect them.
+That’s it — the files land in `<user_cache_dir>/embeddings/` and the tools will now work with the ToolUniverse agent.
 
 Don’t have a token or prefer not to make an account?
 Skip to “Build it yourself” below.
@@ -53,7 +62,7 @@ Just talk to your agent in plain English. Examples:
 * “**Find cancer datasets for Germany**.”
   → The agent uses the *euhealth cancer search* tool and returns a list.
 
-* “**Show vaccination datasets in English**.”
+* “**Show vaccination datasets in English using euhealth vaccination tools.**.”
   → The agent calls the vaccination topic tool with a language filter.
 
 * “**Deep-dive the first 3 results and give me the best download links**.”
@@ -70,16 +79,36 @@ How search methods are chosen
 
 The public tools accept ``method="keyword"|"embedding"|"hybrid"`` (default ``"hybrid"``).
 
-* If your local EUHealth library is the **shared/official build** (embedded with
-  ``text-embedding-3-small``), then:
-  
-  - ``embedding``/``hybrid`` are **allowed** only when the caller resolves to **Azure + text-embedding-3-small**. (e.g. AZURE_OPENAI_DEPLOYMENT=text-embedding-3-small, EMBED_PROVIDER=azure)
-  - Otherwise, we **silently fall back to** ``"keyword"`` (so tools still work without errors).
+The EUHealth library downloaded from Hugging Face is built using:
 
-* If you **built the library yourself** (any provider/model), the requested method is honored
-  (no fallback).
+**Azure OpenAI + text-embedding-3-small**
 
-This guarantees the prebuilt library “just works” everywhere, while advanced users still get full embedding/hybrid behavior with their own builds.
+To keep everything working smoothly:
+
+1. **If your environment resolves to Azure + text-embedding-3-small**  
+   (e.g., you set::
+
+       export EMBED_PROVIDER=azure
+       export EMBED_MODEL=text-embedding-3-small
+       export AZURE_OPENAI_API_KEY=...
+       export AZURE_OPENAI_ENDPOINT=...
+
+   )  
+   → the tools perform **true vector search** (embedding or hybrid).
+
+2. **Otherwise**  
+   → ToolUniverse **automatically falls back to keyword search** so everything keeps working.
+
+   You will see a message like:
+
+   ``Requested 'embedding' is not available without Azure + text-embedding-3-small. Falling back to 'keyword'.``
+
+3. **If you build the EUHealth library yourself**  
+   using any provider/model (OpenAI, Azure, HuggingFace, local),  
+   the requested method is **always honored with no fallback**.
+
+This design ensures the **prebuilt library “just works” everywhere**,  
+while advanced users can opt-in to embedding search.
 
 ---
 
@@ -129,7 +158,11 @@ python -m tooluniverse.euhealth.euhealth_live
 This writes the same two files to `<user_cache_dir>/embeddings/`.
 Re-running is safe; it adds new items and skips duplicates.
 
-You never need to specify an embedding dimension or configuration. ToolUniverse detects your provider and model automatically, using the same backend as `tu-datastore build`.
+.. note::
+
+   A self-built datastore is treated as a **custom build**, so the tools will
+   **honor embedding/hybrid directly** with whichever provider/model you used.
+
 
 ---
 
@@ -194,27 +227,14 @@ Common questions
 
   If not, use the **Quick start** download or the **Build it yourself** step.
 
+* **Why did embedding fall back to keyword?**  
+Because the shared library requires Azure + text-embedding-3-small.  
+If you don’t configure that, the system safely uses keyword.
+
 * **Where does my data upload now?**
   When you run `tu-datastore sync-hf upload --collection euhealth`, ToolUniverse automatically detects your `HF_TOKEN` and uploads to **your own Hugging Face namespace** (`your_username/euhealth`).
   The `--repo` flag is optional; if omitted, it defaults to `<your_username>/<collection>`.
 
----
-
-(Optional, for maintainers) Keep it fresh weekly
-------------------------------------------------
-
-A scheduled GitHub Actions workflow automatically rebuilds and uploads the EUHealth datastore each week.
-
-* Workflow file: `.github/workflows/euhealth-cache-refresh.yml`
-* Schedule: Mondays at 06:00 UTC
-* Steps performed:
-  1. Run the live builder (`euhealth_live`) to refresh data and embeddings.
-  2. Upload the new `euhealth.db` and `euhealth.faiss` to the shared Hugging Face dataset:
-     `agenticx/tooluniverse-datastores`.
-    
-You’ll need secrets configured in GitHub (e.g., `OPENAI_API_KEY`, `HF_TOKEN`, etc.) for the job to run successfully.
-
-Most users can ignore this section, it’s only to keep the public EUHealth dataset fresh.
 ---
 
 You’re set
