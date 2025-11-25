@@ -84,8 +84,6 @@ from tooluniverse.euhealth.euhealth_live import deep_dive_for_datasets
 from tooluniverse.database_setup.sqlite_store import SQLiteStore, normalize_text
 from tooluniverse.utils import get_user_cache_dir
 import os
-import warnings
-
 
 # -----------------
 # Topic definitions
@@ -353,14 +351,11 @@ def _topic_search(
     # Enforce shared-build fallback rule
     actual_method = _maybe_force_keyword(method)
 
-    # Emit a warning ONLY if fallback happened
+    fallback_msg = None
     if actual_method != method:
-        warnings.warn(
-            f"Requested search method '{method}' is not available for the shared EUHealth datastore. "
-            f"Falling back to '{actual_method}'. "
-            "To enable embedding/hybrid, set Azure provider + text-embedding-3-small when using the AgenticX EUHealth.db/FAISS, "
-            "or build your own local EUHealth datastore with any model/provider.",
-            RuntimeWarning,
+        fallback_msg = (
+            f"Requested '{method}' is not available without Azure + text-embedding-3-small. "
+            f"Falling back to '{actual_method}'."
         )
 
 
@@ -423,7 +418,13 @@ def _topic_search(
     if language:
         shaped = [s for s in shaped if _match_language(s.get("language", []), language)]
 
-    return shaped[:limit]
+    result = shaped[:limit]
+    if fallback_msg:
+        return {
+            "warning": fallback_msg,
+            "results": result
+        }
+    return result
 
 
 # We consider the "shared/official" euhealth build to be the one embedded with text-embedding-3-small.
