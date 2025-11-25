@@ -309,7 +309,6 @@ def _match_language(langs: Optional[List[str]], want: str) -> bool:
             return True
     return False
 
-
 def _topic_search(
     topic: str,
     limit: int = 25,
@@ -458,6 +457,14 @@ def _caller_is_azure_small() -> bool:
     mdl = (resolve_model(prov, None) or "").strip().lower()
     return prov == "azure" and mdl == _SHARED_MODEL_NAME
 
+def _env_supports_fts5() -> bool:
+    import sqlite3
+    try:
+        con = sqlite3.connect(":memory:")
+        con.execute("CREATE VIRTUAL TABLE t USING fts5(x)")
+        return True
+    except Exception:
+        return False
 
 def _maybe_force_keyword(method: str) -> str:
     """
@@ -469,10 +476,15 @@ def _maybe_force_keyword(method: str) -> str:
         * otherwise force 'keyword' (silent fallback)
     - If local `euhealth` is a custom build (any other model/provider, or missing model tag):
         * honor the requested method (no forcing)
+    - Enforce runtime FTS5 availability (Codex-safe)
 
     This guarantees downloaded builds always work out of the box, while still letting
     advanced users build with any provider/model and keep full embedding/hybrid functionality.
     """
+
+    # 1. If runtime cannot do FTS5 → embedding/hybrid MUST fall back
+    if method in ("embedding", "hybrid") and not _env_supports_fts5():
+        return "keyword"
 
     if method == "keyword":
         return method
