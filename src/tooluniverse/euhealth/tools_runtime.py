@@ -311,6 +311,7 @@ def _match_language(langs: Optional[List[str]], want: str) -> bool:
 def _topic_search(
     topic: str,
     limit: int = 25,
+    top_k: int = 25,
     method: str = "hybrid",
     alpha: float = 0.5,
     country: str = "",
@@ -324,6 +325,8 @@ def _topic_search(
     -------------------
     limit : int = 25
         Max number of summaries to return.
+    top_k : int = 25
+        how many hits per seed term to pull from SearchEngine before dedupe.
     method : str = "hybrid"
         "keyword" | "embedding" | "hybrid". May be coerced to "keyword" for the shared build
         when the caller is not Azure + "text-embedding-3-small".
