@@ -84,6 +84,8 @@ from tooluniverse.euhealth.euhealth_live import deep_dive_for_datasets
 from tooluniverse.database_setup.sqlite_store import SQLiteStore, normalize_text
 from tooluniverse.utils import get_user_cache_dir
 import os
+import warnings
+
 
 # -----------------
 # Topic definitions
@@ -349,8 +351,22 @@ def _topic_search(
     - Themes: case-insensitive `startswith` against stored theme URIs.
     - Method may be auto-forced to "keyword" per the shared-build rule (see module docstring).
     """
+    # Enforce shared-build fallback rule
+    actual_method = _maybe_force_keyword(method)
 
-    method = _maybe_force_keyword(method)  # enforce shared-build rule
+    # Emit a warning ONLY if fallback happened
+    if actual_method != method:
+        warnings.warn(
+            f"Requested search method '{method}' is not available for the shared EUHealth datastore. "
+            f"Falling back to '{actual_method}'. "
+            "To enable embedding/hybrid, set Azure provider + text-embedding-3-small when using the AgenticX EUHealth.db/FAISS, "
+            "or build your own local EUHealth datastore with any model/provider.",
+            RuntimeWarning,
+        )
+
+
+    method = actual_method
+
     spec = TOPICS[topic]
     se = _se_singleton()
 
@@ -364,7 +380,7 @@ def _topic_search(
     results = []
     for t in terms:
         results.extend(
-            se.search_collection("euhealth", t, method=method, top_k=limit, alpha=alpha)
+            se.search_collection("euhealth", t, method=method, top_k=top_k, alpha=alpha)
         )
 
     if spec.get("themes"):
