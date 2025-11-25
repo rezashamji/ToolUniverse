@@ -351,14 +351,6 @@ def _topic_search(
     # Enforce shared-build fallback rule
     actual_method = _maybe_force_keyword(method)
 
-    fallback_msg = None
-    if actual_method != method:
-        fallback_msg = (
-            f"Requested '{method}' is not available without Azure + text-embedding-3-small. "
-            f"Falling back to '{actual_method}'."
-        )
-
-
     method = actual_method
 
     spec = TOPICS[topic]
@@ -419,11 +411,6 @@ def _topic_search(
         shaped = [s for s in shaped if _match_language(s.get("language", []), language)]
 
     result = shaped[:limit]
-    if fallback_msg:
-        return {
-            "warning": fallback_msg,
-            "results": result
-        }
     return result
 
 
@@ -624,6 +611,30 @@ for _fname in TOPICS.keys():
             language: str = "",
             term_override: str = "",
         ):
+
+            # --- enforce fallback BEFORE SearchEngine is ever touched ---
+            actual_method = _maybe_force_keyword(method)
+
+            if actual_method != method:
+                # run keyword version
+                results = _topic_search(
+                    name,
+                    limit=limit,
+                    method=actual_method,
+                    alpha=alpha,
+                    country=country,
+                    language=language,
+                    term_override=term_override,
+                )
+                return {
+                    "warning": (
+                        f"Requested '{method}' is not available without Azure + text-embedding-3-small. "
+                        f"Falling back to '{actual_method}'."
+                    ),
+                    "results": results,
+                }
+
+            # Normal case (no fallback)
             return _topic_search(
                 name,
                 limit=limit,
