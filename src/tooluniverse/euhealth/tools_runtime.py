@@ -465,11 +465,14 @@ def _maybe_force_keyword(method: str) -> str:
     - If local `euhealth` is a custom build (any other model/provider, or missing model tag):
         * honor the requested method (no forcing)
     - Enforce runtime FTS5 availability (Codex-safe)
+    - If euhealth.db is missing, all topic tools return a warning with empty results.
 
     This guarantees downloaded builds always work out of the box, while still letting
     advanced users build with any provider/model and keep full embedding/hybrid functionality.
     """
-
+    if not os.path.exists(_euhealth_db_path()):
+        return "missing_db"
+    
     # 1. If runtime cannot do FTS5 → embedding/hybrid MUST fall back
     if method in ("embedding", "hybrid") and not _env_supports_fts5():
         return "keyword"
@@ -570,6 +573,16 @@ def euhealthinfo_deepdive(
 
     if topic and topic in TOPICS:
         method = _maybe_force_keyword(method)  # enforce before resolving seed
+        if method == "missing_db":
+            return {
+                "warning": (
+                    "EUHealth datastore not found locally (euhealth.db missing).\n"
+                    "Please download or build the euhealth collection.\n"
+                    "To install the official datastore:\n"
+                    "  tu-datastore download euhealth\n"
+                ),
+                "results": [],
+            }
         seeds = _topic_search(
             topic,
             limit=limit,
@@ -615,7 +628,18 @@ for _fname in TOPICS.keys():
 
             # --- enforce fallback BEFORE SearchEngine is ever touched ---
             actual_method = _maybe_force_keyword(method)
+            if actual_method == "missing_db":
+                return {
+                    "warning": (
+                        "EUHealth datastore not found locally (euhealth.db missing).\n"
+                        "Please download or build the euhealth collection.\n"
+                        "To install the official datastore:\n"
+                        "  tu-datastore download euhealth\n"
+                    ),
+                    "results": [],
+                }
 
+            
             if actual_method != method:
                 # run keyword version
                 results = _topic_search(
