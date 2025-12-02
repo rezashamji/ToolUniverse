@@ -579,7 +579,8 @@ def euhealthinfo_deepdive(
                     "EUHealth datastore not found locally (euhealth.db missing).\n"
                     "Please download or build the euhealth collection.\n"
                     "To install the official datastore:\n"
-                    "  tu-datastore download euhealth\n"
+                    "  export HF_TOKEN=YOUR_HF_TOKEN\n"
+                    "  tu-datastore sync-hf download --repo \"agenticx/tooluniverse-datastores\" --collection euhealth --overwrite\n"
                 ),
                 "results": [],
             }
@@ -634,7 +635,8 @@ for _fname in TOPICS.keys():
                         "EUHealth datastore not found locally (euhealth.db missing).\n"
                         "Please download or build the euhealth collection.\n"
                         "To install the official datastore:\n"
-                        "  tu-datastore download euhealth\n"
+                        "  export HF_TOKEN=YOUR_HF_TOKEN\n"
+                        "  tu-datastore sync-hf download --repo \"agenticx/tooluniverse-datastores\" --collection euhealth --overwrite\n"
                     ),
                     "results": [],
                 }

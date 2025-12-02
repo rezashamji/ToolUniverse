@@ -182,7 +182,7 @@ Save as ``toy_search_tool.json``:
        "name": "toy_search", # choose an appropriate name for your tool 
        "description": "Provides biology data on cells, mitochondria, endocrine topics, and insulin.",  # make sure "description" is as detailed as possible so the agent gets a good explanation of what your data is
        "type": "EmbeddingCollectionSearchTool",
-       "fields": {"collection": "toy"} # name of the data collection this tool will look into,
+       "fields": {"collection": "toy"}, # name of the data collection this tool will look into
        "parameter": {
          "type": "object",
          "properties": {
@@ -339,9 +339,13 @@ If you’re prototyping in a notebook or wiring custom logic, you can directly s
      }
    ]
 
+   
+
+Optional (for developers):
+--------------------------
+
 Programmatic use of customized tools (rather than agent use)
 ------------------------------------------------------------------
-
 
 **A) Create and run your tool directly in Python (no agent)**
 
@@ -357,7 +361,7 @@ Programmatic use of customized tools (rather than agent use)
 
 .. code-block:: python
 
-   from tooluniverse.tool_universe import ToolUniverse
+   from tooluniverse import ToolUniverse
    from tooluniverse.database_setup.generic_embedding_search_tool import EmbeddingCollectionSearchTool
 
    tu = ToolUniverse()
@@ -388,7 +392,7 @@ This lets you interact with your tool exactly the way an agent would but directl
 
 .. code-block:: python
 
-   from tooluniverse.tool_universe import ToolUniverse
+   from tooluniverse import ToolUniverse
 
    tu = ToolUniverse()
    tu.load_tools(tool_config_files={"local": "toy_search_tool.json"})
@@ -446,11 +450,7 @@ Mini FAQ
 
 .. code-block:: bash
 
-    tu-datastore build 
-    --collection toy 
-    --docs-json my.json 
-    --provider openai 
-    --model text-embedding-3-small 
+    tu-datastore build --collection toy --docs-json my.json --provider openai --model text-embedding-3-small 
 
 - **Can I have JSON files in a folder I use with 'quickbuild'?** `quickbuild` does **not** read JSON files in a folder; use `build --docs-json` for JSON ingestion.
 

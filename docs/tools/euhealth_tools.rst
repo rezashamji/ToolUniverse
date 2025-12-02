@@ -38,10 +38,7 @@ Quick start (recommended): use the prebuilt library
 # download from your own or any public Hugging Face repo
 
 export HF_TOKEN=YOUR_HF_TOKEN
-tu-datastore sync-hf download 
---repo "agenticx/tooluniverse-datastores"
---collection euhealth 
---overwrite
+tu-datastore sync-hf download --repo "agenticx/tooluniverse-datastores" --collection euhealth --overwrite
 
 That’s it — the files land in `<user_cache_dir>/embeddings/` and the tools will now work with the ToolUniverse agent.
 
@@ -57,13 +54,16 @@ it lives at `huggingface.co/<your_username>/euhealth`.
 Use it
 ------
 
-Just talk to your agent in plain English. Examples:
+With ToolUniverse
+-----------------
+
+In codex, just talk to your agent in plain English. Examples:
 
 * “**Find cancer datasets for Germany**.”
-  → The agent uses the *euhealth cancer search* tool and returns a list.
+  → The agent may use the *euhealth cancer search* tool and returns a list.
 
 * “**Show vaccination datasets in English using euhealth vaccination tools.**.”
-  → The agent calls the vaccination topic tool with a language filter.
+  → The agent can call the vaccination topic tool with a language filter.
 
 * “**Deep-dive the first 3 results and give me the best download links**.”
   → The agent calls the deep-dive tool to classify links from each dataset’s landing page (e.g., `html_portal`, `login_or_error`, etc.).
@@ -72,7 +72,63 @@ Behind the scenes, the agent uses the tools defined in
 `src/tooluniverse/data/euhealth_tools.json`
 (20 topics are pre-wired; you don’t have to touch this).
 
+**OR**
+
+Non-agent use
+-------------
+
+If you want to sanity-check from Terminal (no coding):
+
+.. code-block:: bash
+
+# Keyword search (works without any API keys)
+
+tu-datastore search --collection euhealth --query cancer --method keyword --top-k 5
+
+You should see a few JSON results (uuid, title, landing_page, etc.).
+(Inside the agent you’ll get nicely formatted results. This is just a quick check.)
+
+**That's it!!**
 ---
+
+Advanced:
+---------
+
+Build it yourself (only if you can’t use the prebuilt)
+------------------------------------------------------
+
+If you can’t download from Hugging Face, you can build locally. You’ll need any one of:
+
+* **OpenAI** (simplest): `OPENAI_API_KEY`, `EMBED_PROVIDER=openai`, `EMBED_MODEL=text-embedding-3-small`
+* **Azure OpenAI**: `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `OPENAI_API_VERSION`
+* **Hugging Face**: `HF_TOKEN`, `EMBED_PROVIDER=huggingface`, `EMBED_MODEL=sentence-transformers/all-MiniLM-L6-v2`
+
+Then run:
+
+.. code-block:: bash
+
+# pick one provider, for example OpenAI:
+
+export EMBED_PROVIDER=openai
+export EMBED_MODEL=text-embedding-3-small
+export OPENAI_API_KEY=YOUR_KEY
+
+# build (crawl the portal, normalize, embed, index)
+
+python -m tooluniverse.euhealth.euhealth_live
+
+This writes the same two files to `<user_cache_dir>/embeddings/`.
+Re-running is safe; it adds new items and skips duplicates.
+
+.. note::
+
+   A self-built datastore is treated as a **custom build**, so the tools will
+   **honor embedding/hybrid directly** with whichever provider/model you used.
+
+---
+
+Optional (for understanding):
+-----------------------------
 
 How search methods are chosen
 -----------------------------------
@@ -109,62 +165,6 @@ To keep everything working smoothly:
 
 This design ensures the **prebuilt library “just works” everywhere**,  
 while advanced users can opt-in to embedding search.
-
----
-
-Optional: quick terminal “smoke test”
-----------------------------------------
-
-If you want to sanity-check from Terminal (no coding):
-
-.. code-block:: bash
-
-# Keyword search (works without any API keys)
-
-tu-datastore search 
---collection euhealth 
---query cancer 
---method keyword 
---top-k 5
-
-You should see a few JSON results (uuid, title, landing_page, etc.).
-(Inside the agent you’ll get nicely formatted results. This is just a quick check.)
-
----
-
-Build it yourself (only if you can’t use the prebuilt)
-------------------------------------------------------
-
-If you can’t download from Hugging Face, you can build locally. You’ll need any one of:
-
-* **OpenAI** (simplest): `OPENAI_API_KEY`, `EMBED_PROVIDER=openai`, `EMBED_MODEL=text-embedding-3-small`
-* **Azure OpenAI**: `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `OPENAI_API_VERSION`
-* **Hugging Face**: `HF_TOKEN`, `EMBED_PROVIDER=huggingface`, `EMBED_MODEL=sentence-transformers/all-MiniLM-L6-v2`
-
-Then run:
-
-.. code-block:: bash
-
-# pick one provider, for example OpenAI:
-
-export EMBED_PROVIDER=openai
-export EMBED_MODEL=text-embedding-3-small
-export OPENAI_API_KEY=YOUR_KEY
-
-# build (crawl the portal, normalize, embed, index)
-
-python -m tooluniverse.euhealth.euhealth_live
-
-This writes the same two files to `<user_cache_dir>/embeddings/`.
-Re-running is safe; it adds new items and skips duplicates.
-
-.. note::
-
-   A self-built datastore is treated as a **custom build**, so the tools will
-   **honor embedding/hybrid directly** with whichever provider/model you used.
-
-
----
 
 What each tool returns
 ----------------------
@@ -241,7 +241,7 @@ You’re set
 ----------
 
 * Prefer the **Quick start** download.
-* Ask the agent normal questions (“Find cancer datasets in Germany”).
+* Ask the agent normal questions (“Find cancer datasets in Germany”). Or use tu-datastore search from Terminal if you don't want to use agents.
 * Use **deep-dive** when you want the actual outgoing links.
 
 If you later want the nitty-gritty (how we crawl, embed, index), see the developer notes in:
