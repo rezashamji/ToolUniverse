@@ -1,7 +1,7 @@
 """
 ToolUniverse Tools
 
-Type-safe Python interface to 773 scientific tools.
+Type-safe Python interface to 780 scientific tools.
 Each tool is in its own module for minimal import overhead.
 
 Usage:
@@ -1195,12 +1195,14 @@ from .gwas_search_associations import gwas_search_associations
 from .gwas_search_snps import gwas_search_snps
 from .gwas_search_studies import gwas_search_studies
 from .humanbase_ppi_analysis import humanbase_ppi_analysis
+from .icd_search_codes import icd_search_codes
 from .kegg_find_genes import kegg_find_genes
 from .kegg_get_gene_info import kegg_get_gene_info
 from .kegg_get_pathway_info import kegg_get_pathway_info
 from .kegg_list_organisms import kegg_list_organisms
 from .kegg_search_pathway import kegg_search_pathway
 from .list_tools import list_tools
+from .loinc_search_codes import loinc_search_codes
 from .mesh_get_subjects_by_pharmacological_action import (
     mesh_get_subjects_by_pharmacological_action,
 )
@@ -1226,11 +1228,16 @@ from .python_code_executor import python_code_executor
 from .python_script_runner import python_script_runner
 from .reactome_disease_target_score import reactome_disease_target_score
 from .search_clinical_trials import search_clinical_trials
+from .snomed_search_concepts import snomed_search_concepts
+from .umls_get_concept_details import umls_get_concept_details
+from .umls_search_concepts import umls_search_concepts
 from .visualize_molecule_2d import visualize_molecule_2d
 from .visualize_molecule_3d import visualize_molecule_3d
 from .visualize_protein_structure_3d import visualize_protein_structure_3d
 from .web_api_documentation_search import web_api_documentation_search
 from .web_search import web_search
+from .who_gho_get_data import who_gho_get_data
+from .who_gho_query_health_data import who_gho_query_health_data
 
 __all__ = [
     "get_shared_client",
@@ -1976,12 +1983,14 @@ __all__ = [
     "gwas_search_snps",
     "gwas_search_studies",
     "humanbase_ppi_analysis",
+    "icd_search_codes",
     "kegg_find_genes",
     "kegg_get_gene_info",
     "kegg_get_pathway_info",
     "kegg_list_organisms",
     "kegg_search_pathway",
     "list_tools",
+    "loinc_search_codes",
     "mesh_get_subjects_by_pharmacological_action",
     "mesh_get_subjects_by_subject_id",
     "mesh_get_subjects_by_subject_name",
@@ -2003,9 +2012,14 @@ __all__ = [
     "python_script_runner",
     "reactome_disease_target_score",
     "search_clinical_trials",
+    "snomed_search_concepts",
+    "umls_get_concept_details",
+    "umls_search_concepts",
     "visualize_molecule_2d",
     "visualize_molecule_3d",
     "visualize_protein_structure_3d",
     "web_api_documentation_search",
     "web_search",
+    "who_gho_get_data",
+    "who_gho_query_health_data",
 ]

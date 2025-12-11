@@ -1,30 +1,33 @@
 """
-ensembl_lookup_gene
+umls_get_concept_details
 
-Lookup gene information by Ensembl gene ID or symbol. Returns gene details including location, de...
+Get detailed information about a UMLS concept by its CUI (Concept Unique Identifier). Returns con...
 """
 
 from typing import Any, Optional, Callable
 from ._shared_client import get_shared_client
 
 
-def ensembl_lookup_gene(
-    gene_id: str,
-    species: Optional[str] = None,
+def umls_get_concept_details(
+    cui: str,
+    pageNumber: Optional[int] = 1,
+    pageSize: Optional[int] = 25,
     *,
     stream_callback: Optional[Callable[[str], None]] = None,
     use_cache: bool = False,
     validate: bool = True,
 ) -> dict[str, Any]:
     """
-    Lookup gene information by Ensembl gene ID or symbol. Returns gene details including location, de...
+    Get detailed information about a UMLS concept by its CUI (Concept Unique Identifier). Returns con...
 
     Parameters
     ----------
-    gene_id : str
-        Ensembl gene ID or symbol (e.g., 'ENSG00000139618' or 'BRCA1')
-    species : str
-        Species name required for gene symbols (default 'homo_sapiens')
+    cui : str
+        UMLS Concept Unique Identifier (CUI, e.g., 'C0004096')
+    pageNumber : int
+        Page number for pagination (default: 1)
+    pageSize : int
+        Number of results per page (default: 25)
     stream_callback : Callable, optional
         Callback for streaming output
     use_cache : bool, default False
@@ -40,8 +43,8 @@ def ensembl_lookup_gene(
 
     return get_shared_client().run_one_function(
         {
-            "name": "ensembl_lookup_gene",
-            "arguments": {"gene_id": gene_id, "species": species},
+            "name": "umls_get_concept_details",
+            "arguments": {"cui": cui, "pageNumber": pageNumber, "pageSize": pageSize},
         },
         stream_callback=stream_callback,
         use_cache=use_cache,
@@ -49,4 +52,4 @@ def ensembl_lookup_gene(
     )
 
 
-__all__ = ["ensembl_lookup_gene"]
+__all__ = ["umls_get_concept_details"]

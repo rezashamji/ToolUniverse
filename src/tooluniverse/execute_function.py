@@ -560,16 +560,21 @@ class ToolUniverse:
         self, all_missing_keys, output_file: str = ".env.template"
     ):
         """Generate a template .env file with all required API keys"""
-        with open(output_file, "w") as f:
-            f.write("# API Keys for ToolUniverse\n")
-            f.write("# Copy this file to .env and fill in your actual API keys\n\n")
+        try:
+            with open(output_file, "w") as f:
+                f.write("# API Keys for ToolUniverse\n")
+                f.write("# Copy this file to .env and fill in your actual API keys\n\n")
 
-            for key in sorted(all_missing_keys):
-                f.write(f"{key}=your_api_key_here\n\n")
+                for key in sorted(all_missing_keys):
+                    f.write(f"{key}=your_api_key_here\n\n")
 
-        self.logger.info(
-            f"Generated API key template: {output_file}. Copy this file to .env and fill in your API keys"
-        )
+            self.logger.info(
+                f"Generated API key template: {output_file}. Copy this file to .env and fill in your API keys"
+            )
+        except OSError as e:
+            self.logger.warning(
+                f"Could not generate {output_file} (likely read-only file system): {e}"
+            )
 
     def _create_hook_config_from_type(self, hook_type):
         """

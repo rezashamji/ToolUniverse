@@ -294,6 +294,13 @@ if not _LIGHT_IMPORT and not LAZY_LOADING_ENABLED:
         ODPHPTopicSearch,
         ODPHPOutlinkFetch,
     )
+    from .who_gho_tool import (
+        WHOGHORESTTool,
+        WHOGHOQueryTool,
+        WHOGHOTopicTool,
+        WHOGHOStatisticTool,
+    )
+    from .umls_tool import UMLSRESTTool
     from .euhealth.euhealth_tool import EuHealthTopicSearchTool, EuHealthDeepDiveTool
 
     from .cellosaurus_tool import (
@@ -408,6 +415,11 @@ else:
     ODPHPMyHealthfinder = _LazyImportProxy("odphp_tool", "ODHPHPMyHealthfinder")
     ODPHPTopicSearch = _LazyImportProxy("odphp_tool", "ODPHPTopicSearch")
     ODPHPOutlinkFetch = _LazyImportProxy("odphp_tool", "ODPHPOutlinkFetch")
+    WHOGHORESTTool = _LazyImportProxy("who_gho_tool", "WHOGHORESTTool")
+    WHOGHOQueryTool = _LazyImportProxy("who_gho_tool", "WHOGHOQueryTool")
+    WHOGHOTopicTool = _LazyImportProxy("who_gho_tool", "WHOGHOTopicTool")
+    WHOGHOStatisticTool = _LazyImportProxy("who_gho_tool", "WHOGHOStatisticTool")
+    UMLSRESTTool = _LazyImportProxy("umls_tool", "UMLSRESTTool")
     EuHealthTopicSearchTool = _LazyImportProxy(
         "euhealth.euhealth_tool", "EuHealthTopicSearchTool"
     )
@@ -521,6 +533,11 @@ __all__ = [
     "ODPHPItemList",
     "ODPHPTopicSearch",
     "ODPHPOutlinkFetch",
+    "WHOGHORESTTool",
+    "WHOGHOQueryTool",
+    "WHOGHOTopicTool",
+    "WHOGHOStatisticTool",
+    "UMLSRESTTool",
     "EuHealthTopicSearchTool",
     "EuHealthDeepDiveTool",
     "CellosaurusSearchTool",

@@ -35,7 +35,7 @@ dependencies = [
     "setuptools>=70.0.0,<81.0.0", # Fix pkg_resources deprecation warnings
     "pdfplumber>=0.11.0",
     "playwright>=1.55.0",
-    "faiss-cpu>=1.12.0",
+    "faiss-cpu==1.12.0",
     "flask>=2.0.0",
     "aiohttp",
     "beautifulsoup4>=4.12.0",
@@ -82,13 +82,13 @@ docs = [
 ]
 embedding = [
     "sentence-transformers>=5.1.0",
-    "faiss-cpu>=1.12.0",
+    "faiss-cpu==1.12.0",
     "huggingface_hub>=0.34.0",
 ]
 ml = [
     "admet-ai>=1.2.0",
     "sentence-transformers>=5.1.0",
-    "faiss-cpu>=1.12.0",
+    "faiss-cpu==1.12.0",
     "huggingface_hub>=0.34.0",
 ]
 graph = [

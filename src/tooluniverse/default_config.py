@@ -180,6 +180,8 @@ default_tool_files = {
         current_dir, "data", "output_summarization_tools.json"
     ),
     "odphp": os.path.join(current_dir, "data", "odphp_tools.json"),
+    "who_gho": os.path.join(current_dir, "data", "who_gho_tools.json"),
+    "umls": os.path.join(current_dir, "data", "umls_tools.json"),
     "euhealth": os.path.join(current_dir, "data", "euhealth_tools.json"),
     "markitdown": os.path.join(current_dir, "data", "markitdown_tools.json"),
     # Guideline and health policy tools
