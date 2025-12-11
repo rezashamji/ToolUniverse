@@ -177,6 +177,9 @@ Please join our [Slack Channel](https://join.slack.com/t/tooluniversehq/shared_i
 - **Contribute**: See our [Contributing Tutorial](https://zitniklab.hms.harvard.edu/ToolUniverse/expand_tooluniverse/comprehensive_tool_guide.html)
 
 
+### Leaders 
+- **[Shanghua Gao](https://shgao.site)**
+- **[Marinka Zitnik](https://zitniklab.hms.harvard.edu/)**
 
 ### Contributors
 
