@@ -1386,7 +1386,14 @@ class SMCP(FastMCP):
             self.logger.info("🚫 Skipping 'find_tools' registration (tool_finder excluded)")
             return
 
-        @self.tool()
+        from mcp.types import ToolAnnotations
+
+        @self.tool(
+            annotations=ToolAnnotations(
+                readOnlyHint=True,  # Search tool is read-only
+                destructiveHint=False,
+            )
+        )
         async def find_tools(
             query: str,
             categories: Optional[List[str]] = None,
@@ -1548,8 +1555,19 @@ class SMCP(FastMCP):
             self.logger.warning(f"⚠️ Failed to check for tool finders: {e}")
 
         # Try to load tool finder tools if not already loaded
+        try:
+            # Respect exclude_categories - don't load if explicitly excluded
+            if "tool_finder" in (self.exclude_categories or []):
+                self.logger.debug("tool_finder category is excluded, skipping load")
+            elif not self.tool_finder_available:
+                # Only load if search tools aren't already available
+                self.logger.info("Attempting to load tool_finder category for search functionality")
+                try:
+                    self.tooluniverse.load_tools(tool_type=["tool_finder"])
+                except Exception as e:
+                    self.logger.debug(f"Could not load tool_finder category: {e}")
 
-            # Re-check availability
+            # Re-check availability after potential loading
             all_tools = self.tooluniverse.return_all_loaded_tools()
             available_tool_names = [tool.get("name", "") for tool in all_tools]
 
@@ -1788,6 +1806,33 @@ class SMCP(FastMCP):
         # Use FastMCP's tool decorator
         decorated_function = self.tool(name=name, **kwargs)(function)
         return decorated_function
+
+    def _get_tool_annotations(self, tool_config: Dict[str, Any]) -> Dict[str, bool]:
+        """
+        Get MCP tool annotations from tool config.
+
+        Annotations should already be computed and stored in tool_config['mcp_annotations']
+        during tool registration. This method simply retrieves them, with a fallback
+        to compute them if they're missing (for backward compatibility).
+
+        Parameters
+        ----------
+        tool_config : dict
+            Tool configuration dictionary
+
+        Returns
+        -------
+        dict
+            Dictionary with readOnlyHint and destructiveHint boolean values
+        """
+        # Check if annotations are already in tool_config (preferred)
+        if "mcp_annotations" in tool_config:
+            return tool_config["mcp_annotations"]
+
+        # Fallback: compute annotations if not present (backward compatibility)
+        from .tool_defaults import get_annotations_for_tool
+
+        return get_annotations_for_tool(tool_config=tool_config)
 
     async def close(self):
         """
@@ -2490,8 +2535,21 @@ Returns:
     str: Tool execution result
 """
 
-            # Register with FastMCP using explicit description (clean, without parameter list)
-            self.tool(description=description)(dynamic_tool_function)
+            # Get tool annotations (with defaults and overrides)
+            annotations_dict = self._get_tool_annotations(tool_config)
+
+            # Convert to MCP ToolAnnotations object
+            from mcp.types import ToolAnnotations
+
+            tool_annotations = ToolAnnotations(
+                readOnlyHint=annotations_dict.get("readOnlyHint"),
+                destructiveHint=annotations_dict.get("destructiveHint"),
+            )
+
+            # Register with FastMCP using explicit description and annotations
+            self.tool(description=description, annotations=tool_annotations)(
+                dynamic_tool_function
+            )
 
         except Exception as e:
             self.logger.error(f"Error creating MCP tool from config: {e}")

@@ -62,6 +62,15 @@ def register_tool(tool_type_name=None, config=None):
         _tool_registry[name] = cls
 
         if config:
+            # Add MCP annotations to config if it's a dict
+            if isinstance(config, dict):
+                from .tool_defaults import add_annotations_to_tool_config
+
+                # Ensure config has type field for annotation calculation
+                if "type" not in config:
+                    config["type"] = name
+                add_annotations_to_tool_config(config)
+
             _config_registry[name] = config
             logger.info(f"Registered tool with config: {name}")
         else:
@@ -80,6 +89,15 @@ def register_external_tool(tool_name, tool_class):
 
 def register_config(tool_type_name, config):
     """Register a config for a tool type."""
+    # Add MCP annotations to config if it's a dict
+    if isinstance(config, dict):
+        from .tool_defaults import add_annotations_to_tool_config
+
+        # Ensure config has type field for annotation calculation
+        if "type" not in config:
+            config["type"] = tool_type_name
+        add_annotations_to_tool_config(config)
+
     _config_registry[tool_type_name] = config
     logger.info(f"Registered config for: {tool_type_name}")
 

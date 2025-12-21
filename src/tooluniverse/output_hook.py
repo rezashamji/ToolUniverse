@@ -459,6 +459,8 @@ class HookManager:
         self.hooks_enabled = self.enabled
         self.config_path = config.get("config_path", "template/hook_config.json")
         self._pending_tools_to_load: List[str] = []
+        # Cache excluded patterns for performance
+        self._excluded_patterns_cache = None
         self._load_hook_config()
 
         # Validate LLM API keys before loading hooks
@@ -630,6 +632,7 @@ class HookManager:
         """
         if config_path:
             self.config_path = config_path
+        self._excluded_patterns_cache = None  # Clear cache on reload
         self._load_hook_config()
         self._load_hooks()
         _logger.info("Reloaded hook configuration")
@@ -667,14 +670,13 @@ class HookManager:
 
         try:
             config_file = self._get_config_file_path()
-
-            if hasattr(config_file, "read_text"):
-                content = config_file.read_text(encoding="utf-8")
-            else:
-                with open(config_file, "r", encoding="utf-8") as f:
-                    content = f.read()
-
+            content = (
+                config_file.read_text(encoding="utf-8")
+                if hasattr(config_file, "read_text")
+                else Path(config_file).read_text(encoding="utf-8")
+            )
             self.config = json.loads(content)
+            self._excluded_patterns_cache = None  # Clear cache on reload
         except Exception as e:
             print(f"Warning: Could not load hook config: {e}")
             if not self.config:
@@ -937,12 +939,24 @@ class HookManager:
         Returns
             bool: True if the tool is a hook tool and should be excluded from hook processing
         """
-        hook_tool_names = [
-            "ToolOutputSummarizer",
-            "OutputSummarizationComposer",
-            # Add more hook tool names as needed
-        ]
-        return tool_name in hook_tool_names
+        # Cache excluded patterns for performance
+        if self._excluded_patterns_cache is None:
+            hook_tool_names = [
+                "ToolOutputSummarizer",
+                "OutputSummarizationComposer",
+            ]
+            exclude_tools = self.config.get("exclude_tools", [])
+            self._excluded_patterns_cache = hook_tool_names + exclude_tools
+
+        # Check for exact match or wildcard pattern match
+        for pattern in self._excluded_patterns_cache:
+            if pattern.endswith("*"):
+                if tool_name.startswith(pattern[:-1]):
+                    return True
+            elif tool_name == pattern:
+                return True
+
+        return False
 
     def _create_hook_instance(
         self, hook_config: Dict[str, Any]

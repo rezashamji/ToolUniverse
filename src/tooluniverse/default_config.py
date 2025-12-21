@@ -6,6 +6,8 @@ It's separated from __init__.py to avoid circular imports.
 """
 
 import os
+import json
+from pathlib import Path
 
 # Get the current directory where this file is located
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -219,50 +221,95 @@ if os.path.exists(user_tools_dir):
             default_tool_files[key] = os.path.join(user_tools_dir, filename)
 
 
+def _get_hook_config_file_path():
+    """
+    Get the path to the hook configuration file.
+
+    This function uses the same logic as HookManager._get_config_file_path()
+    to ensure consistent path resolution across different installation scenarios.
+
+    Returns
+        Path: Path to the hook_config.json file
+    """
+    try:
+        import importlib.resources as pkg_resources
+    except ImportError:
+        import importlib_resources as pkg_resources
+
+    try:
+        data_files = pkg_resources.files("tooluniverse.template")
+        return data_files / "hook_config.json"
+    except Exception:
+        return Path(__file__).parent / "template" / "hook_config.json"
+
+
 def get_default_hook_config():
     """
-    Get default hook configuration.
+    Get default hook configuration from hook_config.json.
+
+    This function loads the default hook configuration from the hook_config.json
+    template file, providing a single source of truth for default hook settings.
+    If the file cannot be loaded, it falls back to a minimal configuration.
 
     Returns
         dict: Default hook configuration with basic settings
     """
-    return {
-        "global_settings": {
-            "default_timeout": 30,
-            "max_hook_depth": 3,
-            "enable_hook_caching": True,
-            "hook_execution_order": "priority_desc",
-        },
-        "hook_type_defaults": {
-            "SummarizationHook": {
-                "default_output_length_threshold": 5000,
-                "default_chunk_size": 32000,
-                "default_focus_areas": "key_findings_and_results",
-                "default_max_summary_length": 3000,
+    try:
+        config_file = _get_hook_config_file_path()
+        content = (
+            config_file.read_text(encoding="utf-8")
+            if hasattr(config_file, "read_text")
+            else Path(config_file).read_text(encoding="utf-8")
+        )
+        return json.loads(content)
+    except Exception:
+        # Fallback to minimal configuration if file cannot be loaded
+        # This ensures the system continues to work even if the config file
+        # is missing or corrupted
+        return {
+            "global_settings": {
+                "default_timeout": 30,
+                "max_hook_depth": 3,
+                "enable_hook_caching": True,
+                "hook_execution_order": "priority_desc",
             },
-            "FileSaveHook": {
-                "default_temp_dir": None,
-                "default_file_prefix": "tool_output",
-                "default_include_metadata": True,
-                "default_auto_cleanup": False,
-                "default_cleanup_age_hours": 24,
-            },
-        },
-        "hooks": [
-            {
-                "name": "default_summarization_hook",
-                "type": "SummarizationHook",
-                "enabled": True,
-                "priority": 1,
-                "conditions": {"output_length": {"operator": ">", "threshold": 5000}},
-                "hook_config": {
-                    "composer_tool": "OutputSummarizationComposer",
-                    "chunk_size": 32000,
-                    "focus_areas": "key_findings_and_results",
-                    "max_summary_length": 3000,
+            "exclude_tools": [
+                "Tool_RAG",
+                "ToolFinderEmbedding",
+                "ToolFinderLLM",
+            ],
+            "hook_type_defaults": {
+                "SummarizationHook": {
+                    "default_output_length_threshold": 5000,
+                    "default_chunk_size": 32000,
+                    "default_focus_areas": "key_findings_and_results",
+                    "default_max_summary_length": 3000,
                 },
-            }
-        ],
-        "tool_specific_hooks": {},
-        "category_hooks": {},
-    }
+                "FileSaveHook": {
+                    "default_temp_dir": None,
+                    "default_file_prefix": "tool_output",
+                    "default_include_metadata": True,
+                    "default_auto_cleanup": False,
+                    "default_cleanup_age_hours": 24,
+                },
+            },
+            "hooks": [
+                {
+                    "name": "default_summarization_hook",
+                    "type": "SummarizationHook",
+                    "enabled": True,
+                    "priority": 1,
+                    "conditions": {
+                        "output_length": {"operator": ">", "threshold": 5000}
+                    },
+                    "hook_config": {
+                        "composer_tool": "OutputSummarizationComposer",
+                        "chunk_size": 32000,
+                        "focus_areas": "key_findings_and_results",
+                        "max_summary_length": 3000,
+                    },
+                }
+            ],
+            "tool_specific_hooks": {},
+            "category_hooks": {},
+        }

@@ -418,6 +418,11 @@ class ToolUniverse:
             if "type" not in tool_config:
                 tool_config["type"] = name
 
+            # Add MCP annotations to tool config
+            from .tool_defaults import add_annotations_to_tool_config
+
+            add_annotations_to_tool_config(tool_config)
+
             self.all_tools.append(tool_config)
             tool_name_in_config = tool_config.get("name", name)
             self.all_tool_dict[tool_name_in_config] = tool_config
@@ -807,6 +812,18 @@ class ToolUniverse:
                         )
                         continue
 
+                    # Add MCP annotations to each tool config
+                    from .tool_defaults import add_annotations_to_tool_config
+
+                    for tool in loaded_tool_list:
+                        if isinstance(tool, dict):
+                            # Set source_file and category for proper annotation derivation
+                            if "source_file" not in tool:
+                                tool["source_file"] = all_tool_files[each]
+                            if "category" not in tool:
+                                tool["category"] = each
+                            add_annotations_to_tool_config(tool)
+
                     self.all_tools += loaded_tool_list
                     self.tool_category_dicts[each] = loaded_tool_list
                     self.logger.debug(
@@ -1050,19 +1067,42 @@ class ToolUniverse:
         for loader_config in auto_loaders:
             self.logger.debug(f"Processing loader: {loader_config['name']}")
             try:
+                # Validate required fields before creating instance
+                if not loader_config.get("server_url"):
+                    error_msg = f"MCPAutoLoaderTool '{loader_config['name']}' is missing required field 'server_url'"
+                    self.logger.error(error_msg)
+                    warning(error_msg)
+                    continue
+
                 # Create auto loader instance
                 self.logger.debug("Creating auto loader instance...")
                 auto_loader = tool_type_mappings["MCPAutoLoaderTool"](loader_config)
                 self.logger.debug("Auto loader instance created")
 
-                # Run auto-load process with proper session cleanup
+                # Run auto-load process with proper session cleanup and timeout
                 self.logger.debug("Starting auto-load process...")
 
                 async def _run_auto_load(loader):
                     """Run auto-load with proper cleanup"""
                     try:
-                        result = await loader.auto_load_and_register(self)
+                        # Get timeout from loader config or use default (30 seconds)
+                        timeout = loader_config.get("timeout", 30)
+                        result = await asyncio.wait_for(
+                            loader.auto_load_and_register(self),
+                            timeout=timeout
+                        )
                         return result
+                    except asyncio.TimeoutError:
+                        error_msg = f"MCP Auto Loader '{loader_config['name']}' timed out after {timeout} seconds"
+                        self.logger.warning(error_msg)
+                        warning(error_msg)
+                        return {
+                            "discovered_count": 0,
+                            "registered_count": 0,
+                            "tools": [],
+                            "registered_tools": [],
+                            "error": "timeout"
+                        }
                     finally:
                         # Ensure session cleanup
                         await loader._close_session()

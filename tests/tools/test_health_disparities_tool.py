@@ -13,7 +13,8 @@ def tu():
     """Create ToolUniverse instance for testing."""
     tu = ToolUniverse()
     tu.load_tools()
-    return tu
+    yield tu
+    tu.close()
 
 
 @pytest.mark.unit
