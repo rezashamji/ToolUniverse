@@ -279,37 +279,37 @@ def get_default_hook_config():
                 "ToolFinderLLM",
             ],
             "hook_type_defaults": {
-                "SummarizationHook": {
-                    "default_output_length_threshold": 5000,
-                    "default_chunk_size": 32000,
-                    "default_focus_areas": "key_findings_and_results",
-                    "default_max_summary_length": 3000,
-                },
-                "FileSaveHook": {
-                    "default_temp_dir": None,
-                    "default_file_prefix": "tool_output",
-                    "default_include_metadata": True,
-                    "default_auto_cleanup": False,
-                    "default_cleanup_age_hours": 24,
-                },
+            "SummarizationHook": {
+                "default_output_length_threshold": 5000,
+                "default_chunk_size": 32000,
+                "default_focus_areas": "key_findings_and_results",
+                "default_max_summary_length": 3000,
             },
-            "hooks": [
-                {
-                    "name": "default_summarization_hook",
-                    "type": "SummarizationHook",
-                    "enabled": True,
-                    "priority": 1,
-                    "conditions": {
-                        "output_length": {"operator": ">", "threshold": 5000}
-                    },
-                    "hook_config": {
-                        "composer_tool": "OutputSummarizationComposer",
-                        "chunk_size": 32000,
-                        "focus_areas": "key_findings_and_results",
-                        "max_summary_length": 3000,
-                    },
-                }
-            ],
-            "tool_specific_hooks": {},
-            "category_hooks": {},
+            "FileSaveHook": {
+                "default_temp_dir": None,
+                "default_file_prefix": "tool_output",
+                "default_include_metadata": True,
+                "default_auto_cleanup": False,
+                "default_cleanup_age_hours": 24,
+            },
+        },
+        "hooks": [
+            {
+                "name": "default_summarization_hook",
+                "type": "SummarizationHook",
+                "enabled": True,
+                "priority": 1,
+                "conditions": {
+                    "output_length": {"operator": ">", "threshold": 5000}
+                },
+                "hook_config": {
+                    "composer_tool": "OutputSummarizationComposer",
+                    "chunk_size": 32000,
+                    "focus_areas": "key_findings_and_results",
+                    "max_summary_length": 3000,
+                },
+            }
+        ],
+        "tool_specific_hooks": {},
+        "category_hooks": {},
         }
