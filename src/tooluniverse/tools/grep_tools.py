@@ -14,7 +14,7 @@ def grep_tools(
     search_mode: Optional[str] = "text",
     limit: Optional[int] = 100,
     offset: Optional[int] = 0,
-    categories: Optional[list[Any]] = None,
+    categories: Optional[list[str]] = None,
     *,
     stream_callback: Optional[Callable[[str], None]] = None,
     use_cache: bool = False,
@@ -35,7 +35,7 @@ def grep_tools(
         Maximum number of tools to return (default: 100)
     offset : int
         Number of tools to skip (optional, for pagination, default: 0)
-    categories : list[Any]
+    categories : list[str]
         Optional list of tool categories to filter by
     stream_callback : Callable, optional
         Callback for streaming output

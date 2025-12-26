@@ -44,6 +44,12 @@ Building AI Scientists
   * **⚡ Codex CLI** → :doc:`building_ai_scientists/codex_cli` - Terminal-based AI scientist with Codex CLI
   * **🎯 ChatGPT API** → :doc:`building_ai_scientists/chatgpt_api` - Programmatic scientific research with ChatGPT function calling
 
+LLM Providers
+-------------
+
+* **🚀 vLLM Support** → :doc:`vllm_support` - Use self-hosted LLM models with vLLM for high-performance inference
+* **🌐 OpenRouter Support** → :doc:`openrouter_support` - Access multiple LLM providers through OpenRouter API
+
 Advanced Features
 -----------------
 

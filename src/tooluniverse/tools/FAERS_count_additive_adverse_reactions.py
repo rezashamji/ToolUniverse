@@ -9,7 +9,7 @@ from ._shared_client import get_shared_client
 
 
 def FAERS_count_additive_adverse_reactions(
-    medicinalproducts: list[Any],
+    medicinalproducts: list[str],
     patientsex: Optional[str] = None,
     patientagegroup: Optional[str] = None,
     occurcountry: Optional[str] = None,
@@ -25,7 +25,7 @@ def FAERS_count_additive_adverse_reactions(
 
     Parameters
     ----------
-    medicinalproducts : list[Any]
+    medicinalproducts : list[str]
         Array of medicinal product names.
     patientsex : str
         Optional: Filter by patient sex. Omit this parameter if you don't want to fil...

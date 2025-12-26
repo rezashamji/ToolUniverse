@@ -9,7 +9,7 @@ from ._shared_client import get_shared_client
 
 
 def FAERS_count_additive_reaction_outcomes(
-    medicinalproducts: list[Any],
+    medicinalproducts: list[str],
     patientsex: Optional[str] = None,
     patientagegroup: Optional[str] = None,
     occurcountry: Optional[str] = None,
@@ -23,7 +23,7 @@ def FAERS_count_additive_reaction_outcomes(
 
     Parameters
     ----------
-    medicinalproducts : list[Any]
+    medicinalproducts : list[str]
         Array of medicinal product names.
     patientsex : str
 

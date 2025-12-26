@@ -9,7 +9,7 @@ from ._shared_client import get_shared_client
 
 
 def get_tool_info(
-    tool_names: str,
+    tool_names: str | list[str],
     detail_level: Optional[str] = "full",
     *,
     stream_callback: Optional[Callable[[str], None]] = None,
@@ -21,7 +21,7 @@ def get_tool_info(
 
     Parameters
     ----------
-    tool_names : str
+    tool_names : str | list[str]
         Single tool name (string) or list of tool names (max 20 tools)
     detail_level : str
         Detail level: 'description' returns only the description field (complete, not...

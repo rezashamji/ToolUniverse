@@ -10,7 +10,7 @@ from ._shared_client import get_shared_client
 
 def embedding_database_create(
     database_name: str,
-    documents: list[Any],
+    documents: list[str],
     action: Optional[str] = None,
     metadata: Optional[list[Any]] = None,
     provider: Optional[str] = None,
@@ -30,7 +30,7 @@ def embedding_database_create(
 
     database_name : str
         Collection/database name (produces <name>.db and <name>.faiss)
-    documents : list[Any]
+    documents : list[str]
         List of document texts to embed and store
     metadata : list[Any]
         Optional metadata for each document (must match length of documents if provided)

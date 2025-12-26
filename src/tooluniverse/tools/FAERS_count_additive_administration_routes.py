@@ -9,7 +9,7 @@ from ._shared_client import get_shared_client
 
 
 def FAERS_count_additive_administration_routes(
-    medicinalproducts: list[Any],
+    medicinalproducts: list[str],
     serious: Optional[str] = None,
     *,
     stream_callback: Optional[Callable[[str], None]] = None,
@@ -21,7 +21,7 @@ def FAERS_count_additive_administration_routes(
 
     Parameters
     ----------
-    medicinalproducts : list[Any]
+    medicinalproducts : list[str]
         Array of medicinal product names.
     serious : str
         Optional: Filter by event seriousness. Omit this parameter if you don't want ...

@@ -9,7 +9,7 @@ from ._shared_client import get_shared_client
 
 
 def euhealthinfo_deepdive(
-    uuids: Optional[list[Any]] = None,
+    uuids: Optional[list[str]] = None,
     topic: Optional[str] = None,
     limit: Optional[int] = 10,
     links_per: Optional[int] = 3,
@@ -29,7 +29,7 @@ def euhealthinfo_deepdive(
 
     Parameters
     ----------
-    uuids : list[Any]
+    uuids : list[str]
         Dataset UUIDs to deep-dive (format 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'). I...
     topic : str
         Topic name to resolve seeds from (e.g., 'euhealthinfo_search_cancer'). Used w...

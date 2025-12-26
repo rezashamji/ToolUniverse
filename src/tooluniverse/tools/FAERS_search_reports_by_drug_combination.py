@@ -9,7 +9,7 @@ from ._shared_client import get_shared_client
 
 
 def FAERS_search_reports_by_drug_combination(
-    medicinalproducts: list[Any],
+    medicinalproducts: list[str],
     limit: Optional[int] = 10,
     skip: Optional[int] = 0,
     patientsex: Optional[str] = None,
@@ -25,7 +25,7 @@ def FAERS_search_reports_by_drug_combination(
 
     Parameters
     ----------
-    medicinalproducts : list[Any]
+    medicinalproducts : list[str]
         List of at least 2 drug names (required). Reports will include cases where al...
     limit : int
         Maximum number of reports to return. Must be between 1 and 100.
