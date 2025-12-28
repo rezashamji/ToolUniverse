@@ -68,7 +68,7 @@ Create a file named **.env** and paste one block below, then run ``source .env``
    AZURE_OPENAI_API_KEY=YOUR_KEY
    AZURE_OPENAI_ENDPOINT=https://YOUR_RESOURCE.openai.azure.com/
    AZURE_OPENAI_DEPLOYMENT=text-embedding-3-small
-   OPENAI_API_VERSION=2024-12-02 # example 
+   OPENAI_API_VERSION=2024-06-01 # example 
    EMBED_MODEL=text-embedding-3-small # your *deployment* name
 
 **OpenAI**
