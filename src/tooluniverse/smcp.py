@@ -2261,7 +2261,62 @@ class SMCP(FastMCP):
                     # Map JSON schema types to Python types and create appropriate Field
                     field_kwargs = {"description": param_description}
 
-                    if param_type == "string":
+                    # Handle oneOf schemas (e.g., string or array)
+                    if "oneOf" in param_info:
+                        one_of_types = []
+                        one_of_schemas = []
+                        for one_of_item in param_info["oneOf"]:
+                            item_type = one_of_item.get("type")
+                            if item_type == "string":
+                                one_of_types.append(str)
+                                one_of_schemas.append({"type": "string"})
+                            elif item_type == "array":
+                                # Check if it's an array of strings
+                                items = one_of_item.get("items", {})
+                                if items.get("type") == "string":
+                                    one_of_types.append(list[str])
+                                    one_of_schemas.append(
+                                        {"type": "array", "items": {"type": "string"}}
+                                    )
+                                else:
+                                    one_of_types.append(list)
+                                    one_of_schemas.append(
+                                        {"type": "array", "items": items}
+                                    )
+                            elif item_type == "integer":
+                                one_of_types.append(int)
+                                one_of_schemas.append({"type": "integer"})
+                            elif item_type == "number":
+                                one_of_types.append(float)
+                                one_of_schemas.append({"type": "number"})
+                            elif item_type == "boolean":
+                                one_of_types.append(bool)
+                                one_of_schemas.append({"type": "boolean"})
+                            elif item_type == "object":
+                                one_of_types.append(dict)
+                                one_of_schemas.append(one_of_item)
+
+                        if len(one_of_types) == 1:
+                            python_type = one_of_types[0]
+                        elif len(one_of_types) > 1:
+                            # Create Union type from oneOf types
+                            # Union requires unpacking the types, so we construct it properly
+                            if len(one_of_types) == 2:
+                                python_type = Union[one_of_types[0], one_of_types[1]]
+                            elif len(one_of_types) == 3:
+                                python_type = Union[
+                                    one_of_types[0], one_of_types[1], one_of_types[2]
+                                ]
+                            else:
+                                # For more than 3 types, use __getitem__ to construct Union
+                                python_type = Union.__getitem__(tuple(one_of_types))
+                        else:
+                            # Fallback to string if no valid types found
+                            python_type = str
+
+                        # Add oneOf schema information to json_schema_extra for Pydantic
+                        field_kwargs["json_schema_extra"] = {"oneOf": one_of_schemas}
+                    elif param_type == "string":
                         python_type = str
                         # For string type, don't add json_schema_extra - let Pydantic handle it
                     elif param_type == "integer":
