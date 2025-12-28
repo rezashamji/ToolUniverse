@@ -67,6 +67,7 @@ Create a file named **.env** and paste one block below, then run ``source .env``
    EMBED_PROVIDER=azure
    AZURE_OPENAI_API_KEY=YOUR_KEY
    AZURE_OPENAI_ENDPOINT=https://YOUR_RESOURCE.openai.azure.com/
+   AZURE_OPENAI_DEPLOYMENT=text-embedding-3-small
    OPENAI_API_VERSION=2024-12-02 # example 
    EMBED_MODEL=text-embedding-3-small # your *deployment* name
 
@@ -251,7 +252,7 @@ tu.tools.toy_search(...)
 How it works
 ------------
 
-* ToolUniverse has a built-in **search tool** (`EmbeddingCollectionSearchTool`) that queries a the agent-searchable dataset you’ve built from your raw data. `
+* ToolUniverse has a built-in **search tool** (`EmbeddingCollectionSearchTool`) that queries the agent-searchable dataset you’ve built from your raw data. `
 * Your JSON simply tells ToolUniverse **which collection** to open and **which search options it supports**:
       - the user’s search text (``query``),
       - search type (``method``: keyword/embedding/hybrid),

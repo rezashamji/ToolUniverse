@@ -72,6 +72,7 @@ class Embedder:
 
             api_key = os.getenv("AZURE_OPENAI_API_KEY")
             endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+            deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT")
             if not (api_key and endpoint):
                 raise RuntimeError(
                     "Missing AZURE_OPENAI_API_KEY or AZURE_OPENAI_ENDPOINT"
@@ -80,6 +81,7 @@ class Embedder:
                 api_key=api_key,
                 azure_endpoint=endpoint,
                 api_version=os.getenv("OPENAI_API_VERSION", "2024-12-01-preview"),
+                azure_deployment=deployment,
             )
 
         elif provider == "huggingface":
@@ -99,23 +101,11 @@ class Embedder:
             raise ValueError(f"Unknown provider: {provider}")
 
     def embed(self, texts: List[str]) -> np.ndarray:
-        """Return embeddings for a list of UTF-8 strings.
+        """Return embeddings for a list of UTF-8 strings."""
 
-        Returns
-        -------
-        np.ndarray
-            Shape (N, D), dtype float32.
-
-        Notes
-        -----
-        - Upstream code typically L2-normalizes before adding to FAISS.
-        - Very long inputs should be pre-chunked by the caller.
-        """
-        # normalize and sanitize inputs
         if isinstance(texts, (bytes, str)):
-            texts = [texts]  # accept a single str/bytes
+            texts = [texts]
 
-        # ensure every item is a plain str (not numpy types etc.)
         texts = [t.decode("utf-8") if isinstance(t, bytes) else str(t) for t in texts]
 
         all_vectors: List[List[float]] = []
@@ -123,25 +113,40 @@ class Embedder:
         for start in range(0, len(texts), self.batch_size):
             batch = texts[start : start + self.batch_size]
 
-            if self.provider in ("openai", "azure"):
+            if self.provider == "openai":
+                # OpenAI supports true batching
                 retries = 0
                 while True:
                     try:
                         resp = self.client.embeddings.create(
-                            input=batch, model=self.model
+                            model=self.model,
+                            input=batch,
                         )
-                        vecs = [d.embedding for d in resp.data]
-                        all_vectors.extend(vecs)
+                        all_vectors.extend([d.embedding for d in resp.data])
                         break
                     except Exception as e:
                         retries += 1
                         if retries > self.max_retries:
                             raise
-                        wait = 2**retries
-                        print(
-                            f"Embed retry {retries} after error: {e} (waiting {wait}s)"
-                        )
-                        time.sleep(wait)
+                        time.sleep(2**retries)
+
+            elif self.provider == "azure":
+                # Azure DOES NOT support batched inputs — must loop
+                for text in batch:
+                    retries = 0
+                    while True:
+                        try:
+                            resp = self.client.embeddings.create(
+                                model=self.model,  # deployment name
+                                input=text,       # SINGLE STRING ONLY
+                            )
+                            all_vectors.append(resp.data[0].embedding)
+                            break
+                        except Exception as e:
+                            retries += 1
+                            if retries > self.max_retries:
+                                raise
+                            time.sleep(2**retries)
 
             elif self.provider == "huggingface":
                 for text in batch:
@@ -152,7 +157,7 @@ class Embedder:
 
             elif self.provider == "local":
                 vecs = self.client.encode(batch, convert_to_numpy=True)
-                if vecs.ndim == 1:  # single vector
+                if vecs.ndim == 1:
                     vecs = np.expand_dims(vecs, 0)
                 all_vectors.extend(vecs.tolist())
 
@@ -160,7 +165,6 @@ class Embedder:
                 raise ValueError(f"Unsupported provider: {self.provider}")
 
         return np.array(all_vectors, dtype="float32")
-
 
 if __name__ == "__main__":
     store = SQLiteStore("embeddings.db")
